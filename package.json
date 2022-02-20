@@ -1,5 +1,5 @@
 {
-  "name": "busesesteli",
+  "name": "estelibuses",
   "version": "0.0.0",
   "private": true,
   "license": "UNLICENSED",
@@ -11,7 +11,7 @@
   "scripts": {
     "analysis": "windicss-analysis",
     "build": "run-s -l -n pug windicss compress copyfiles compress:br",
-    "build:test": "run-s -l -n build:local serve:test analysis",
+    "build:test": "run-s -l -n build serve:test analysis",
     "clear": "rimraf public",
     "compress": "run-s -l -n compress:html postcss compress:js compress:img",
     "compress:br": "node brotli.js",
@@ -97,7 +97,7 @@
     "windicss-analysis": "^0.3.5"
   },
   "engines": {
-    "node": "^16.x",
+    "node": "^14.x",
     "npm": "^8.x"
   }
 }
