@@ -17,13 +17,6 @@ const cpy = require('cpy')
     console.log(data)
   })
 
-  await cpy('build/favicons/favicon.ico', 'public/favicons/').on(
-    'progress',
-    data => {
-      console.log(data)
-    }
-  )
-
   await cpy('build/img/**/*.avif', 'public/img/').on('progress', data => {
     console.log(data)
   })
