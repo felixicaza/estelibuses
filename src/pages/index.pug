@@ -1,0 +1,117 @@
+extends ../templates/template.pug
+
+block append variables
+  - const CURRENT_PAGE = "inicio"
+  - const URL = "https://estelibuses.web.app"
+  - const ASSETS_PATH = ""
+  - const HAS_CRITICAL_CSS = false
+  - const APPLICATION_NAME = "Esteli Buses"
+  - const META_DESCRIPTION = "Conoce todos los horarios de los buses de la Terminal Norte y de la Terminal Sur de la ciudad de Estelí."
+  - const META_ROBOTS = "index, follow"
+  - const LANGUAGE = "es"
+  - const CURRENT_URL = URL
+  - const SOCIAL_TITLE = "Horarios de las terminales de buses de la ciudad de Estelí"
+  - const SOCIAL_DESCRIPTION = META_DESCRIPTION
+  - const SOCIAL_IMAGE = ""
+  - const SOCIAL_IMAGE_ALT = SOCIAL_TITLE
+  - const OPEN_GRAPH_SITE_NAME = ""
+  - const TWITTER_CARD = "summary_large_image"
+
+block append title
+  title= SOCIAL_TITLE
+
+block append preconnect
+  script.
+    let i = new Image();
+    i.onload = i.onerror = _ => {
+      document.documentElement.classList.add(i.height > 0 ? "avif" : "no-avif");
+    };
+    i.src = "data:image/avif;base64,AAAAIGZ0eXBhdmlmAAAAAGF2aWZtaWYxbWlhZk1BMUIAAADybWV0YQAAAAAAAAAoaGRscgAAAAAAAAAAcGljdAAAAAAAAAAAAAAAAGxpYmF2aWYAAAAADnBpdG0AAAAAAAEAAAAeaWxvYwAAAABEAAABAAEAAAABAAABGgAAAB0AAAAoaWluZgAAAAAAAQAAABppbmZlAgAAAAABAABhdjAxQ29sb3IAAAAAamlwcnAAAABLaXBjbwAAABRpc3BlAAAAAAAAAAIAAAACAAAAEHBpeGkAAAAAAwgICAAAAAxhdjFDgQ0MAAAAABNjb2xybmNseAACAAIAAYAAAAAXaXBtYQAAAAAAAAABAAEEAQKDBAAAACVtZGF0EgAKCBgANogQEAwgMg8f8D///8WfhwB8+ErK42A=";
+
+block append async-scripts
+
+block append critical-css
+  link(
+    type="image/avif"
+    as="image"
+    href="img/esteli-buses-bg-mobile-felix-icaza.avif"
+    importance="high"
+    rel="preload"
+  )/
+  link(
+    type="image/avif"
+    as="image"
+    href="img/esteli-buses-bg-felix-icaza.avif"
+    importance="high"
+    rel="preload"
+  )/
+  link(
+    type="image/webp"
+    as="image"
+    href="img/esteli-buses-bg-mobile-felix-icaza.webp"
+    importance="high"
+    rel="preload"
+  )/
+  link(
+    type="image/webp"
+    as="image"
+    href="img/esteli-buses-bg-felix-icaza.webp"
+    importance="high"
+    rel="preload"
+  )/
+  link(
+    type="image/avif"
+    as="image"
+    href="img/esteli-buses-bg-dark-mobile-felix-icaza.avif"
+    importance="high"
+    rel="preload"
+  )/
+  link(
+    type="image/avif"
+    as="image"
+    href="img/esteli-buses-bg-dark-felix-icaza.avif"
+    importance="high"
+    rel="preload"
+  )/
+  link(
+    type="image/webp"
+    as="image"
+    href="img/esteli-buses-bg-dark-mobile-felix-icaza.webp"
+    importance="high"
+    rel="preload"
+  )/
+  link(
+    type="image/webp"
+    as="image"
+    href="img/esteli-buses-bg-dark-felix-icaza.webp"
+    importance="high"
+    rel="preload"
+  )/
+
+block append stylesheets
+  link(href=`${ASSETS_PATH}css/style.css` rel="stylesheet")/
+
+block append preload
+  link(
+    type="image/webp"
+    as="image"
+    href="img/esteli-buses-logo-black-felix-icaza.webp"
+    importance="highest"
+    rel="preload"
+  )/
+  link(
+    type="image/webp"
+    as="image"
+    href="img/esteli-buses-logo-white-felix-icaza.webp"
+    importance="highest"
+    rel="preload"
+  )/
+
+block append defer-scripts
+  script(src=`${ASSETS_PATH}js/lazy-bg.js` defer importance="low")
+
+block append content
+  include ../content/header
+  main
+    include ../content/terminal-norte
+    include ../content/terminal-sur

@@ -1,0 +1,36 @@
+block currentPage
+
+- const ACTIVE_MOBILE = PAGE
+
+- const inicioMobile = `${ACTIVE_MOBILE === "inicio" ? "text-white" : "active:text-white any-hover:text-white text-orange-900 transition-colors"} flex flex-col items-center p-2`
+- const terminalNorteMobile = `${ACTIVE_MOBILE === "terminal-norte" ? "text-white" : "active:text-white any-hover:text-white text-orange-900 transition-colors"} flex flex-col items-center p-2`
+- const terminalSurMobile = `${ACTIVE_MOBILE === "terminal-sur" ? "text-white" : "active:text-white any-hover:text-white text-orange-900 transition-colors"} flex flex-col items-center p-2`
+- const acercaMobile = `${ACTIVE_MOBILE === "acerca" ? "text-white" : "active:text-white any-hover:text-white text-orange-900 transition-colors"} flex flex-col items-center p-2`
+
+nav(
+  class="sticky z-10 bottom-0 w-full bg-orange-400 grid grid-cols-4 md:gap-12 sm:gap-6 text-center items-center lg:hidden"
+)
+  a(class=inicioMobile href="/")
+    svg(class="fill-current w-6 h-6 sm:w-9 sm:h-9" viewBox="0 0 24 24")
+      path(d="M10 20v-6h4v6h5v-8h3L12 3 2 12h3v8h5Z")/
+    span(class="text-xs font-bold sm:text-base") Inicio
+  a(class=terminalNorteMobile href="/terminal-norte-esteli")
+    svg(class="fill-current w-6 h-6 sm:w-9 sm:h-9" viewBox="0 0 24 24")
+      path(
+        d="M18 11H6V6h12m-1.5 11a1.5 1.5 0 0 1-1.5-1.5 1.5 1.5 0 0 1 1.5-1.5 1.5 1.5 0 0 1 1.5 1.5 1.5 1.5 0 0 1-1.5 1.5m-9 0A1.5 1.5 0 0 1 6 15.5 1.5 1.5 0 0 1 7.5 14 1.5 1.5 0 0 1 9 15.5 1.5 1.5 0 0 1 7.5 17M4 16a3 3 0 0 0 1 2.2V20a1 1 0 0 0 1 1h1a1 1 0 0 0 1-1v-1h8v1a1 1 0 0 0 1 1h1a1 1 0 0 0 1-1v-1.8a3 3 0 0 0 1-2.2V6c0-3.5-3.6-4-8-4s-8 .5-8 4v10Z"
+      )/
+    span(class="text-xs font-bold sm:text-base whitespace-nowrap xs:hidden") Cotrán norte
+    span(class="text-xs font-bold sm:text-base whitespace-nowrap hidden xs:inline") Terminal norte
+  a(class=terminalSurMobile href="/terminal-sur-esteli")
+    svg(class="fill-current w-6 h-6 sm:w-9 sm:h-9" viewBox="0 0 24 24")
+      path(
+        d="M18 11H6V6h12m-1.5 11a1.5 1.5 0 0 1-1.5-1.5 1.5 1.5 0 0 1 1.5-1.5 1.5 1.5 0 0 1 1.5 1.5 1.5 1.5 0 0 1-1.5 1.5m-9 0A1.5 1.5 0 0 1 6 15.5 1.5 1.5 0 0 1 7.5 14 1.5 1.5 0 0 1 9 15.5 1.5 1.5 0 0 1 7.5 17M4 16a3 3 0 0 0 1 2.2V20a1 1 0 0 0 1 1h1a1 1 0 0 0 1-1v-1h8v1a1 1 0 0 0 1 1h1a1 1 0 0 0 1-1v-1.8a3 3 0 0 0 1-2.2V6c0-3.5-3.6-4-8-4s-8 .5-8 4v10Z"
+      )/
+    span(class="text-xs font-bold sm:text-base whitespace-nowrap xs:hidden") Cotrán sur
+    span(class="text-xs font-bold sm:text-base whitespace-nowrap hidden xs:inline") Terminal sur
+  a(class=acercaMobile href="/acerca-de-busesesteli")
+    svg(class="fill-current w-6 h-6 sm:w-9 sm:h-9" viewBox="0 0 24 24")
+      path(
+        d="M13 9h-2V7h2m0 10h-2v-6h2m-1-9A10 10 0 0 0 2 12a10 10 0 0 0 10 10 10 10 0 0 0 10-10A10 10 0 0 0 12 2Z"
+      )/
+    span(class="text-xs font-bold sm:text-base") Acerca

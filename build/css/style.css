@@ -1,0 +1,328 @@
+:root {
+  --orange-100: #ffedd5;
+  --orange-300: #fdba74;
+  --orange-400: #fb923c;
+}
+
+::-webkit-scrollbar {
+  width: 7px;
+  height: 7px;
+  background-color: var(--orange-100);
+  border-radius: 0;
+  transition: background-color 100ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--orange-300);
+  border-radius: 4px;
+  transition: all 300ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--orange-400);
+  transition: all 150ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+::selection {
+  background: var(--orange-100);
+  color: var(--orange-400);
+}
+
+* {
+  scrollbar-color: var(--orange-300) var(--orange-100);
+  scrollbar-width: thin;
+}
+
+html {
+  color-scheme: light dark;
+}
+
+.avif #mainPage {
+  background: url('../img/esteli-buses-bg-mobile-felix-icaza.avif') no-repeat;
+  background-size: cover;
+}
+
+.no-avif #mainPage {
+  background: url('../img/esteli-buses-bg-mobile-felix-icaza.webp') no-repeat;
+  background-size: cover;
+}
+
+#terminal-norte {
+  background: #dcfce7;
+}
+
+#terminal-sur {
+  background: #ffedd5;
+}
+
+#jinotega {
+  background: #e0e7ff;
+}
+
+#somoto {
+  background: #ecfccb;
+}
+
+#ocotal {
+  background: #fae8ff;
+}
+
+#yali {
+  background: #ede9fe;
+}
+
+#quilali {
+  background: #e0f2fe;
+}
+
+#san-juan-de-limay {
+  background: #ccfbf1;
+}
+
+#managua {
+  background: #e0e7ff;
+}
+
+#matagalpa {
+  background: #ecfccb;
+}
+
+#leon {
+  background: #fae8ff;
+}
+
+#murra {
+  background: #ede9fe;
+}
+
+#achuapa {
+  background: #e0f2fe;
+}
+
+#san-nicolas {
+  background: #ccfbf1;
+}
+
+@media (min-width: 1200px) {
+  .avif #mainPage {
+    background: url('../img/esteli-buses-bg-felix-icaza.avif') no-repeat;
+    background-attachment: fixed;
+  }
+
+  .no-avif #mainPage {
+    background: url('../img/esteli-buses-bg-felix-icaza.webp') no-repeat;
+    background-attachment: fixed;
+  }
+}
+
+@media (prefers-color-scheme: dark) {
+  .avif #mainPage {
+    background: url('../img/esteli-buses-bg-dark-mobile-felix-icaza.avif')
+      no-repeat;
+    background-size: cover;
+    position: relative;
+  }
+
+  .no-avif #mainPage {
+    background: url('../img/esteli-buses-bg-dark-mobile-felix-icaza.webp')
+      no-repeat;
+    background-size: cover;
+    position: relative;
+  }
+
+  .wave::before {
+    background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1440 280'%3E%3Cpath fill='%23111827' fill-opacity='1' d='M0,192L48,197.3C96,203,192,213,288,229.3C384,245,480,267,576,250.7C672,235,768,181,864,181.3C960,181,1056,235,1152,234.7C1248,235,1344,181,1392,154.7L1440,128L1440,320L1392,320C1344,320,1248,320,1152,320C1056,320,960,320,864,320C768,320,672,320,576,320C480,320,384,320,288,320C192,320,96,320,48,320L0,320Z'%3E%3C/path%3E%3C/svg%3E")
+      no-repeat !important;
+    background-position-y: bottom !important;
+  }
+}
+
+@media (min-width: 992px) and (prefers-color-scheme: dark) {
+  .avif #mainPage {
+    background: url('../img/esteli-buses-bg-dark-felix-icaza.avif') no-repeat;
+    background-attachment: fixed;
+  }
+
+  .no-avif #mainPage {
+    background: url('../img/esteli-buses-bg-dark-felix-icaza.webp') no-repeat;
+    background-attachment: fixed;
+  }
+}
+
+.wave {
+  position: relative;
+}
+
+.wave::before {
+  content: '';
+  width: 100%;
+  height: 250px;
+  background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1440 280'%3E%3Cpath fill='%23ffffff' fill-opacity='1' d='M0,192L48,197.3C96,203,192,213,288,229.3C384,245,480,267,576,250.7C672,235,768,181,864,181.3C960,181,1056,235,1152,234.7C1248,235,1344,181,1392,154.7L1440,128L1440,320L1392,320C1344,320,1248,320,1152,320C1056,320,960,320,864,320C768,320,672,320,576,320C480,320,384,320,288,320C192,320,96,320,48,320L0,320Z'%3E%3C/path%3E%3C/svg%3E")
+    no-repeat;
+  background-size: contain;
+  background-position-y: bottom;
+  bottom: 0;
+  left: 0;
+  position: absolute;
+  z-index: 1;
+  transform: translateY(1px);
+  pointer-events: none;
+  touch-action: none;
+}
+
+@media (min-width: 992px) {
+  .wave::before {
+    transform: translateY(15px);
+  }
+}
+
+@media (min-width: 1440px) {
+  .wave::before {
+    background-size: cover;
+  }
+}
+
+@media (min-width: 1440px) and (prefers-color-scheme: dark) {
+  .wave::before {
+    background-size: cover !important;
+  }
+}
+
+.avif #mainPage::after,
+.no-avif #mainPage::after {
+  content: '';
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(180deg, transparent, rgba(0, 0, 0, 0.194));
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.card-city {
+  background-size: cover;
+  background-position: center center;
+}
+
+.jinotega.visible {
+  background: url('../img/terminal-norte/horarios-esteli-jinotega-estelibuses-felix-icaza-card.jpg');
+}
+
+.somoto.visible {
+  background: url('../img/terminal-norte/horarios-esteli-somoto-estelibuses-felix-icaza-card.jpg');
+}
+
+.ocotal.visible {
+  background: url('../img/terminal-norte/horarios-esteli-ocotal-estelibuses-felix-icaza-card.jpg');
+}
+
+.yali.visible {
+  background: url('../img/terminal-norte/horarios-esteli-yali-estelibuses-felix-icaza-card.jpg');
+}
+
+.quilali.visible {
+  background: url('../img/terminal-norte/horarios-esteli-quilali-estelibuses-felix-icaza-card.jpg');
+}
+
+.san-juan-de-limay.visible {
+  background: url('../img/terminal-norte/horarios-esteli-san-juan-de-limay-estelibuses-felix-icaza-card.jpg');
+}
+
+.pueblo-nuevo.visible {
+  background: url('../img/terminal-norte/horarios-esteli-pueblo-nuevo-estelibuses-felix-icaza-card.jpg');
+}
+
+.wiwili.visible {
+  background: url('../img/terminal-norte/horarios-esteli-wiwili-estelibuses-felix-icaza-card.jpg');
+}
+
+.el-sauce.visible {
+  background: url('../img/terminal-norte/horarios-esteli-el-sauce-estelibuses-felix-icaza-card.jpg');
+}
+
+.san-juan-del-rio-coco.visible {
+  background: url('../img/terminal-norte/horarios-esteli-san-juan-del-rio-coco-estelibuses-felix-icaza-card.jpg');
+}
+
+.el-regadio.visible {
+  background: url('../img/terminal-norte/horarios-esteli-el-regadio-estelibuses-felix-icaza-card.jpg');
+}
+
+/* .la-rica {
+  background: url('../img/terminal-norte/horarios-esteli-la-rica-estelibuses-felix-icaza-card.jpg');
+  background-size: cover;
+}
+
+.guasuyuca {
+  background: url('../img/terminal-norte/horarios-esteli-guasuyuca-estelibuses-felix-icaza-card.jpg');
+  background-size: cover;
+} */
+
+.leon.visible {
+  background: url('../img/terminal-sur/horarios-esteli-leon-estelibuses-felix-icaza-card.jpg');
+}
+
+.managua.visible {
+  background: url('../img/terminal-sur/horarios-esteli-managua-estelibuses-felix-icaza-card.jpg');
+}
+
+.masaya.visible {
+  background: url('../img/terminal-sur/horarios-esteli-masaya-estelibuses-felix-icaza-card.jpg');
+}
+
+.achuapa.visible {
+  background: url('../img/terminal-norte/horarios-esteli-achuapa-estelibuses-felix-icaza-card.jpg');
+}
+
+.jalapa.visible {
+  background: url('../img/terminal-norte/horarios-esteli-jalapa-estelibuses-felix-icaza-card.jpg');
+}
+
+.miraflor.visible {
+  background: url('../img/terminal-norte/horarios-esteli-miraflor-estelibuses-felix-icaza-card.jpg');
+}
+
+/* .san-marcos-sunis {
+  background: url('../img/terminal-norte/horarios-esteli-san-marcos-sunis-estelibuses-felix-icaza-card.jpg');
+  background-size: cover;
+} */
+
+.miraflor.visible {
+  background: url('../img/terminal-norte/horarios-esteli-miraflor-estelibuses-felix-icaza-card.jpg');
+}
+
+.san-rafael-del-norte.visible {
+  background: url('../img/terminal-norte/horarios-esteli-san-rafael-del-norte-estelibuses-felix-icaza-card.jpg');
+}
+
+.matagalpa.visible {
+  background: url('../img/terminal-sur/horarios-esteli-matagalpa-estelibuses-felix-icaza-card.jpg');
+}
+
+.murra.visible {
+  background: url('../img/terminal-sur/horarios-esteli-murra-estelibuses-felix-icaza-card.jpg');
+}
+
+.san-nicolas.visible {
+  background: url('../img/terminal-sur/horarios-esteli-san-nicolas-estelibuses-felix-icaza-card.jpg');
+}
+
+.la-tejera.visible {
+  background: url('../img/terminal-sur/horarios-esteli-la-tejera-estelibuses-felix-icaza-card.jpg');
+}
+
+/* .san-rafael {
+  background: url('../img/terminal-sur/horarios-esteli-san-rafael-estelibuses-felix-icaza-card.jpg');
+  background-size: cover;
+} */
+
+.bg-after::after {
+  content: '';
+  z-index: 1;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.4);
+}

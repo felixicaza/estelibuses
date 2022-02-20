@@ -1,0 +1,137 @@
+block variables
+
+- const LANG = LANGUAGE
+
+block append currentPage
+  - const PAGE = CURRENT_PAGE
+
+doctype html
+html(class="scroll-smooth" dir="ltr" lang=`${LANG}` prefix="og: https://ogp.me/ns#")
+  head
+    meta(charset="UTF-8")/
+
+    meta(name="viewport" content="width=device-width, initial-scale=1.0")/
+
+    block title
+
+    link(crossorigin href="//www.googletagmanager.com/" rel="preconnect")/
+    link(crossorigin href="//www.google-analytics.com/" rel="preconnect")/
+    block preconnect
+
+    script(
+      src="https://www.googletagmanager.com/gtag/js"
+      async
+      crossorigin
+      importance="low"
+    )
+    block async-scripts
+
+    block critical-css
+
+    if HAS_CRITICAL_CSS
+      link(
+        as="style"
+        href=`${ASSETS_PATH}css/lib/windi.css`
+        importance="low"
+        onload="this.onload=null;this.rel='stylesheet'"
+        rel="preload"
+      )/
+    else
+      link(href=`${ASSETS_PATH}css/lib/windi.css` rel="stylesheet")/
+    block stylesheets
+
+    block preload
+
+    script(src=`${ASSETS_PATH}js/lib/quicklink.umd.js` defer importance="low")
+    script(type="module" src=`${ASSETS_PATH}js/app.js` importance="low")
+    block defer-scripts
+
+    meta(name="robots" content=`${META_ROBOTS}`)/
+    if META_DESCRIPTION !== ""
+      meta(name="description" content=`${META_DESCRIPTION}`)/
+    if !SERVER_PAGE
+      link(href=`${CURRENT_URL}` rel="canonical")/
+      link(href=`${CURRENT_URL}` hreflang=`${LANG}` rel="alternate")/
+
+    link(
+      type="image/png"
+      href=`${ASSETS_PATH}favicons/favicon-16x16.png`
+      rel="icon"
+      sizes="16x16"
+    )/
+    link(
+      type="image/png"
+      href=`${ASSETS_PATH}favicons/favicon-32x32.png`
+      rel="icon"
+      sizes="32x32"
+    )/
+    link(
+      type="image/png"
+      href=`${ASSETS_PATH}favicons/favicon-48x48.png`
+      rel="icon"
+      sizes="48x48"
+    )/
+    link(
+      href=`${ASSETS_PATH}favicons/apple-touch-icon-167x167.png`
+      rel="apple-touch-icon"
+      sizes="167x167"
+    )/
+    link(
+      href=`${ASSETS_PATH}favicons/apple-touch-icon-180x180.png`
+      rel="apple-touch-icon"
+      sizes="180x180"
+    )/
+    link(
+      type="image/png"
+      href=`${ASSETS_PATH}favicons/android-chrome-192x192.png`
+      rel="icon"
+      sizes="192x192"
+    )/
+
+    meta(name="color-scheme" content="light dark")/
+    meta(name="theme-color" content="#fb923c")/
+    link(href=`${ASSETS_PATH}manifest.json` rel="manifest")/
+
+    meta(name="format-detection" content="telephone=no")/
+    meta(name="application-name" content=`${APPLICATION_NAME}`)
+    meta(name="mobile-web-app-capable" content="yes")/
+    meta(name="apple-mobile-web-app-capable" content="yes")/
+    meta(
+      name="apple-mobile-web-app-status-bar-style"
+      content="black-translucent"
+    )/
+    meta(name="apple-mobile-web-app-title" content=`${APPLICATION_NAME}`)/
+
+    if SOCIAL_TITLE !== ""
+      meta(content=`${SOCIAL_TITLE}` property="og:title")/
+    if SOCIAL_DESCRIPTION !== ""
+      meta(content=`${SOCIAL_DESCRIPTION}` property="og:description")/
+    if SOCIAL_IMAGE !== ""
+      meta(content=`${SOCIAL_IMAGE}` property="og:image")/
+    if SOCIAL_IMAGE_ALT !== ""
+      meta(content=`${SOCIAL_IMAGE_ALT}` property="og:image:alt")/
+      meta(content="website" property="og:type")/
+    if OPEN_GRAPH_SITE_NAME !== ""
+      meta(content=`${OPEN_GRAPH_SITE_NAME}` property="og:site_name")/
+      meta(content=`${CURRENT_URL}` property="og:url")/
+      meta(content=`${LANG}` property="og:locale")/
+
+    if TWITTER_CARD !== ""
+      meta(name="twitter:card" content=`${TWITTER_CARD}`)/
+    if SOCIAL_TITLE !== ""
+      meta(name="twitter:title" content=`${SOCIAL_TITLE}`)/
+    if SOCIAL_DESCRIPTION !== ""
+      meta(name="twitter:description" content=`${SOCIAL_DESCRIPTION}`)/
+    if SOCIAL_IMAGE !== ""
+      meta(name="twitter:image" content=`${SOCIAL_IMAGE}`)/
+    if SOCIAL_IMAGE_ALT !== ""
+      meta(name="twitter:image:alt" content=`${SOCIAL_IMAGE_ALT}`)/
+
+  body(
+    class="bg-white text-cool-gray-700 dark:bg-cool-gray-900 dark:text-white transition-colors duration-150"
+  )
+    block content
+
+    include ../components/footer
+
+    include ../components/navbarMobile

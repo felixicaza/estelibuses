@@ -1,0 +1,93 @@
+include cardCity
+
+mixin pageTerminal(idHeader, title, description, location, phone, titleContent, content, altImage, isNorth, ...cities)
+  header(class="wave" id=idHeader)
+    div(class="container mx-auto px-4")
+      include ../components/navbar
+
+      section(
+        class="flex flex-col justify-center items-center pt-18 pb-18 md:pb-26 lg:pt-28 lg:pb-34 xl:pb-56 text-center"
+      )
+        h1(class="text-4xl sm:text-5xl font-bold mb-8 max-w-screen-lg z-2")= title
+        p(class="text-base sm:text-lg max-w-screen-lg z-2 font-semibold")= description
+
+        section(
+          class="flex flex-col md:flex-row md:items-center gap-8 justify-center z-2 mt-6 text-left px-4 xs:px-16 md:px-0"
+        )
+          section(class="flex items-start md:items-center gap-2 font-semibold")
+            div(class="mt-0.8 sm:mt-0")
+              svg(class="fill-current" viewBox="0 0 24 24" width="24" height="24")
+                path(
+                  d="M12 11.5A2.5 2.5 0 0 1 9.5 9 2.5 2.5 0 0 1 12 6.5 2.5 2.5 0 0 1 14.5 9a2.5 2.5 0 0 1-2.5 2.5M12 2a7 7 0 0 0-7 7c0 5.3 7 13 7 13s7-7.8 7-13a7 7 0 0 0-7-7Z"
+                )/
+            p= location
+          section(class="flex items-center gap-2")
+            div
+              svg(class="fill-current" viewBox="0 0 24 24" width="24" height="24")
+                path(
+                  d="M6.6 10.8c1.5 2.8 3.8 5.1 6.6 6.6l2.2-2.2a1 1 0 0 1 1-.3c1.2.4 2.4.6 3.6.6a1 1 0 0 1 1 1V20a1 1 0 0 1-1 1A17 17 0 0 1 3 4a1 1 0 0 1 1-1h3.5a1 1 0 0 1 1 1c0 1.3.2 2.5.6 3.6 0 .3 0 .7-.3 1l-2.2 2.2Z"
+                )/
+            a(
+              class="active:underline any-hover:underline font-semibold"
+              href="tel:27141111"
+            )= phone
+
+  main(class="py-12 sm:py-16 md:py-20 xl:py-28")
+    div(class="container mx-auto px-4")
+      article(class="text-center mb-16 md:mb-20 xl:mb-28")
+        form#search-form(
+          autocomplet="on"
+          class="w-full max-w-xl mx-auto transition-colors space-y-4"
+        )
+          label(class="text-2xl block" for="search") ¿A dónde vas a viajar?
+          section(
+            class="grid grid-cols-[1fr,100px] shadow-lg shadow-orange-500/10 any-hover:shadow-orange-600/10"
+          )
+            input#search(
+              type="search"
+              placeholder="Busca tu ciudad..."
+              class="border border-orange-400 bg-light-100 py-2.5 px-4 w-full block outline-none focus:ring-4 focus:ring-orange-400 focus:ring-opacity-50 focus:border-orange-500 rounded rounded-r-none caret-orange-500 placeholder-orange-900 placeholder-opacity-40"
+            )/
+            button#search-button(
+              type="button"
+              class="rounded rounded-l-none font-semibold py-2.5 px-5 transition-colors any-hover:bg-orange-500 bg-orange-400 text-white basis-30 inline-flex justify-center items-center active:outline-none active:ring-4 active:ring-orange-400 active:ring-opacity-75"
+            )
+              svg(
+                aria-hidden="true"
+                class="w-4"
+                focusable="false"
+                role="img"
+                viewBox="0 0 512 512"
+              )
+                path(
+                  d="M505 442.7L405.3 343c-4.5-4.5-10.6-7-17-7H372c27.6-35.3 44-79.7 44-128C416 93.1 322.9 0 208 0S0 93.1 0 208s93.1 208 208 208c48.3 0 92.7-16.4 128-44v16.3c0 6.4 2.5 12.5 7 17l99.7 99.7c9.4 9.4 24.6 9.4 33.9 0l28.3-28.3c9.4-9.4 9.4-24.6.1-34zM208 336c-70.7 0-128-57.2-128-128 0-70.7 57.2-128 128-128 70.7 0 128 57.2 128 128 0 70.7-57.2 128-128 128z"
+                  fill="currentColor"
+                )/
+
+      article(class="flex flex-wrap justify-center gap-16")
+        each city in cities
+          +cardCity(city, isNorth)
+        p#no-city(class="hidden text-2xl text-cool-gray-400 text-center") Por favor intenta otra busqueda, lo que estás buscando no está disponible.
+
+  article(class="py-12 sm:py-16 md:py-20 xl:py-28 text-center bg-light-100")
+    div(class="container mx-auto px-4")
+      h2(class="text-3xl sm:text-4xl font-bold mb-8")= titleContent
+      p(class="mx-auto mt-5 text-base sm:text-lg md:max-w-5xl lg:max-w-6xl mb-4")= content
+      figure
+        picture
+          source(
+            type="image/avif"
+            srcset=`/img/${idHeader}-estelibuses-mobile-felix-icaza.avif 912w, /img/${idHeader}-estelibuses-felix-icaza.avif`
+          )/
+          source(
+            type="image/webp"
+            srcset=`/img/${idHeader}-estelibuses-mobile-felix-icaza.webp 912w, /img/${idHeader}-estelibuses-felix-icaza.webp`
+          )/
+          img(
+            alt="Terminal sur de la ciudad de Estelí"
+            class="h-auto rounded object-cover object-center w-full max-w-5xl mx-auto"
+            decoding="async"
+            importance="high"
+            srcset=`/img/${idHeader}-estelibuses-felix-icaza.jpg`
+          )/
+        figcaption(class="text-sm text-gray-400 mt-3")= altImage

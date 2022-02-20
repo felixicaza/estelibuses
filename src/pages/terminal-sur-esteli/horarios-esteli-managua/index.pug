@@ -1,0 +1,43 @@
+extends ../../../templates/template.pug
+include ../../../utils/pageCity
+include ../../../utils/cardTransportInfo
+
+block append variables
+  - const CURRENT_PAGE = "terminal-sur"
+  - const URL = "https://estelibuses.web.app"
+  - const ASSETS_PATH = "../../"
+  - const HAS_CRITICAL_CSS = false
+  - const APPLICATION_NAME = "Esteli Buses"
+  - const META_DESCRIPTION = "Conoce todos los horarios de los buses que salen desde Estelí hacía Managua."
+  - const META_ROBOTS = "index, follow"
+  - const LANGUAGE = "es"
+  - const CURRENT_URL = URL
+  - const SOCIAL_TITLE = "Horarios de los Buses de Estelí hacía Managua"
+  - const SOCIAL_DESCRIPTION = META_DESCRIPTION
+  - const SOCIAL_IMAGE = ""
+  - const SOCIAL_IMAGE_ALT = SOCIAL_TITLE
+  - const OPEN_GRAPH_SITE_NAME = ""
+  - const TWITTER_CARD = "summary_large_image"
+
+block append title
+  title= SOCIAL_TITLE
+
+block append preconnect
+
+block append async-scripts
+
+block append critical-css
+
+block append stylesheets
+  link(href=`${ASSETS_PATH}css/style.css` rel="stylesheet")/
+
+block append preload
+
+block append defer-scripts
+
+block append content
+  - const hours = ["03:30 am", "04:00 am", "04:30 am", "04:45 am", "05:00 am", "05:30 am", "05:45 am", "06:00 am", "06:30 am", "06:45 am", "07:00 am", "07:15 am", "07:30 am", "08:00 am", "08:30 am", "08:45 am", "09:00 am", "09:30 am", "09:45 am", "10:00 am", "10:30 am", "11:00 am", "11:30 am", "12:00 pm", "12:30 pm", "12:45 pm", "01:00 pm", "01:15 pm", "01:30 pm", "02:00 pm", "02:15 pm", "02:30 pm", "03:00 pm", "03:15 pm", "03:30 pm", "04:00 pm", "04:30 pm", "05:00 pm", "06:00 pm"]
+
+  +pageCity('Managua', 'Terminal sur', 'https://www.google.com/maps/embed?pb=!1m28!1m12!1m3!1d498405.29840783053!2d-86.63682125307196!3d12.59599569586619!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!4m13!3e6!4m5!1s0x8f718c42c00bc1ad%3A0x90de1ab352954a6f!2zRXN0ZWzDrQ!3m2!1d13.0851139!2d-86.3630197!4m5!1s0x8f71560dd907880b%3A0x6c5ef4a2144f4c6a!2sManagua!3m2!1d12.114992599999999!2d-86.2361744!5e0!3m2!1ses-419!2sni!4v1645377152323!5m2!1ses-419!2sni', 'Terminal El Mayoreo')
+    each hour, index in hours
+      +cardTransportInfo(`Horario #${index+1}`, hour, 'Ruteado', '100', '2.30')

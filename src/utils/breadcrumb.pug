@@ -1,0 +1,26 @@
+mixin breadcrumb(terminalName, city)
+  - const convertTerminalName = terminalName.toLowerCase().normalize('NFD').replace(/[\u0300-\u036f]/g, "").replace(/\s/g, "-")
+
+  nav(aria-label="breadcrumb" class="py-2")
+    ol(class="flex items-center space-x-2")
+      li(style="width: 24px; height: 24px")
+        a(
+          class="any-hover:text-gray-900 active:text-gray-900 transition-colors"
+          href="/"
+          title="Inicio"
+        )
+          svg(fill="currentColor" viewBox="0 0 24 24" width="24" height="24")
+            path(d="M10 20v-6h4v6h5v-8h3L12 3 2 12h3v8h5Z")/
+      li
+        svg(fill="currentColor" viewBox="0 0 24 24" width="24" height="24")
+          path(d="m8.6 16.6 4.6-4.6-4.6-4.6L10 6l6 6-6 6-1.4-1.4Z")/
+      li
+        a(
+          class="font-medium text-gray-700 any-hover:text-gray-900 active:text-gray-900 transition-colors"
+          href=`/${convertTerminalName}-esteli`
+        )= terminalName
+      li
+        svg(fill="currentColor" viewBox="0 0 24 24" width="24" height="24")
+          path(d="m8.6 16.6 4.6-4.6-4.6-4.6L10 6l6 6-6 6-1.4-1.4Z")/
+      li(aria-current="page")
+        p(class="font-medium text-gray-500 dark:text-gray-600")= city

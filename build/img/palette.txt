@@ -1,0 +1,23 @@
+/* Coolors Exported Palette - https://coolors.co/ffbe86-ffe156-db5461 */
+
+/* CSV */
+ffbe86,ffe156,db5461
+
+/* With # */
+#ffbe86, #ffe156, #db5461
+
+/* Array */
+["ffbe86","ffe156","db5461"]
+
+/* Object */
+{"Macaroni And Cheese":"ffbe86","Mustard":"ffe156","Indian Red":"db5461"}
+
+/* Extended Array */
+[{"name":"Macaroni And Cheese","hex":"ffbe86","rgb":[255,190,134],"cmyk":[0,25,47,0],"hsb":[28,47,100],"hsl":[28,100,76],"lab":[82,17,37]},{"name":"Mustard","hex":"ffe156","rgb":[255,225,86],"cmyk":[0,12,66,0],"hsb":[49,66,100],"hsl":[49,100,67],"lab":[90,-5,69]},{"name":"Indian Red","hex":"db5461","rgb":[219,84,97],"cmyk":[0,62,56,14],"hsb":[354,62,86],"hsl":[354,65,59],"lab":[54,54,21]}]
+
+/* XML */
+<palette>
+  <color name="Macaroni And Cheese" hex="ffbe86" r="255" g="190" b="134" />
+  <color name="Mustard" hex="ffe156" r="255" g="225" b="86" />
+  <color name="Indian Red" hex="db5461" r="219" g="84" b="97" />
+</palette>

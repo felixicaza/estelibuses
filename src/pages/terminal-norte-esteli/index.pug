@@ -1,0 +1,69 @@
+extends ../../templates/template.pug
+include ../../utils/pageTerminal
+
+block append variables
+  - const CURRENT_PAGE = "terminal-norte"
+  - const URL = "https://estelibuses.web.app"
+  - const ASSETS_PATH = "../"
+  - const HAS_CRITICAL_CSS = false
+  - const APPLICATION_NAME = "Esteli Buses"
+  - const META_DESCRIPTION = "Conoce todos los horarios de los buses de la Terminal Norte de la ciudad de Estelí."
+  - const META_ROBOTS = "index, follow"
+  - const LANGUAGE = "es"
+  - const CURRENT_URL = URL
+  - const SOCIAL_TITLE = "Horarios de la Terminal Norte de Buses de Estelí"
+  - const SOCIAL_DESCRIPTION = META_DESCRIPTION
+  - const SOCIAL_IMAGE = ""
+  - const SOCIAL_IMAGE_ALT = SOCIAL_TITLE
+  - const OPEN_GRAPH_SITE_NAME = ""
+  - const TWITTER_CARD = "summary_large_image"
+
+block append title
+  title= SOCIAL_TITLE
+
+block append preconnect
+
+block append async-scripts
+
+block append critical-css
+  link(
+    type="image/avif"
+    as="image"
+    href=`${ASSETS_PATH}img/terminal-norte-estelibuses-mobile-felix-icaza.avif`
+    importance="highest"
+    rel="preload"
+  )/
+  link(
+    type="image/webp"
+    as="image"
+    href=`${ASSETS_PATH}img/terminal-norte-estelibuses-mobile-felix-icaza.webp`
+    importance="high"
+    rel="preload"
+  )/
+  link(
+    type="image/avif"
+    as="image"
+    href=`${ASSETS_PATH}img/terminal-norte-estelibuses-felix-icaza.avif`
+    importance="highest"
+    rel="preload"
+  )/
+  link(
+    type="image/webp"
+    as="image"
+    href=`${ASSETS_PATH}img/terminal-norte-estelibuses-felix-icaza.webp`
+    importance="high"
+    rel="preload"
+  )/
+
+block append stylesheets
+  link(href=`${ASSETS_PATH}css/style.css` rel="stylesheet")/
+
+block append preload
+
+block append defer-scripts
+  script(src=`${ASSETS_PATH}js/lazy-bg.js` defer importance="low")
+  script(src=`${ASSETS_PATH}js/search.js` defer importance="high")
+
+block append content
+  +pageTerminal('terminal-norte', 'Horarios de la terminal norte de Estelí', 'Conoce todos los horarios de la terminal norte de Estelí, elige la ciudad a la que deseas viajar.', 'Del centro comercial Erwin 30 metros al sur', '1234-5678', 'Conoce sobre la Terminal Norte de Estelí', 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.', 'Fachada de la Terminal Norte de Estelí.', true, 'Jinotega', 'Somoto', 'Ocotal', 'Yalí', 'Quilalí', 'San Juan de Limay')
+  //- +pageTerminal('terminal-norte', 'Horarios de la terminal norte de Estelí', 'Conoce todos los horarios de la terminal norte de Estelí, elige la ciudad a la que deseas viajar.', 'Del centro comercial Erwin 30 metros al sur', '1234-5678', 'Conoce sobre la Terminal Norte de Estelí', 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.', 'Fachada de la Terminal Norte de Estelí.', true, 'Jinotega', 'Somoto', 'Ocotal', 'Yalí', 'Quilalí', 'San Juan de Limay', 'Pueblo Nuevo', 'Wiwilí', 'El Sauce', 'San Juan del Río Coco', 'El Regadío', 'La Rica', 'Guasuyuca', 'León', 'Managua', 'Masaya', 'Achuapa', 'Jalapa', 'Miraflor', 'San Marcos Sunís', 'San Rafael del Norte')
