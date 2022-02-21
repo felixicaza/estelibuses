@@ -1,6 +1,6 @@
 include breadcrumb
 
-mixin pageCity(city, terminalName, map, destiny)
+mixin pageCity(city, terminalName, destiny, map)
   - const cityLowerCase = city.toLowerCase().normalize('NFD').replace(/[\u0300-\u036f]/g, "").replace(/\s/g, "-")
   - const sanitizeTerminalName = terminalName.toLowerCase().normalize('NFD').replace(/[\u0300-\u036f]/g, "").replace(/\s/g, "-")
 
@@ -91,4 +91,4 @@ mixin pageCity(city, terminalName, map, destiny)
                 path(
                   d="M12 11.5A2.5 2.5 0 0 1 9.5 9 2.5 2.5 0 0 1 12 6.5 2.5 2.5 0 0 1 14.5 9a2.5 2.5 0 0 1-2.5 2.5M12 2a7 7 0 0 0-7 7c0 5.3 7 13 7 13s7-7.8 7-13a7 7 0 0 0-7-7Z"
                 )/
-            p= destiny
+            p(class="font-bold")= destiny
