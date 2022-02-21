@@ -49,4 +49,15 @@
   terminalSurImages.forEach(image =>
     console.log('Converted:', image.destinationPath)
   )
+
+  const ogImages = await imagemin(['build/img/og/*.{jpg,jpeg}'], {
+    destination: 'public/img/og',
+    plugins: [
+      imageminMozjpeg({
+        quality: 75
+      })
+    ]
+  })
+
+  ogImages.forEach(image => console.log('Converted:', image.destinationPath))
 })()
