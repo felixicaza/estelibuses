@@ -884,7 +884,7 @@ function isVersionServiceProvider(provider) {
     return (component === null || component === void 0 ? void 0 : component.type) === "VERSION" /* VERSION */;
 }
 
-const name$o = "https://www.gstatic.com/firebasejs/9.6.5/firebase-app.js";
+const name$o = "./firebase-app.js";
 const version$1 = "0.7.15";
 
 /**
@@ -903,17 +903,17 @@ const version$1 = "0.7.15";
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-const logger = new Logger('https://www.gstatic.com/firebasejs/9.6.5/firebase-app.js');
+const logger = new Logger('./firebase-app.js');
 
-const name$n = "https://www.gstatic.com/firebasejs/9.6.5/firebase-app.js-compat";
+const name$n = "./firebase-app.js-compat";
 
 const name$m = "@firebase/analytics-compat";
 
 const name$l = "@firebase/analytics";
 
-const name$k = "https://www.gstatic.com/firebasejs/9.6.5/firebase-app.js-check-compat";
+const name$k = "./firebase-app.js-check-compat";
 
-const name$j = "https://www.gstatic.com/firebasejs/9.6.5/firebase-app.js-check";
+const name$j = "./firebase-app.js-check";
 
 const name$i = "@firebase/auth";
 
