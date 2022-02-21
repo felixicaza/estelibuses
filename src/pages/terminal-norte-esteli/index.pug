@@ -26,34 +26,6 @@ block append preconnect
 block append async-scripts
 
 block append critical-css
-  link(
-    type="image/avif"
-    as="image"
-    href=`${ASSETS_PATH}img/terminal-norte-estelibuses-mobile-felix-icaza.avif`
-    importance="highest"
-    rel="preload"
-  )/
-  link(
-    type="image/webp"
-    as="image"
-    href=`${ASSETS_PATH}img/terminal-norte-estelibuses-mobile-felix-icaza.webp`
-    importance="high"
-    rel="preload"
-  )/
-  link(
-    type="image/avif"
-    as="image"
-    href=`${ASSETS_PATH}img/terminal-norte-estelibuses-felix-icaza.avif`
-    importance="highest"
-    rel="preload"
-  )/
-  link(
-    type="image/webp"
-    as="image"
-    href=`${ASSETS_PATH}img/terminal-norte-estelibuses-felix-icaza.webp`
-    importance="high"
-    rel="preload"
-  )/
 
 block append stylesheets
   link(href=`${ASSETS_PATH}css/style.css` rel="stylesheet")/
