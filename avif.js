@@ -12,7 +12,7 @@
     plugins: [imageminAvif({ quality: 30, speed: 4 })]
   })
 
-  files.forEach(file => console.log('Converted:', file.destinationPath))
+  files.forEach(file => console.log('Converted AVIF:', file.destinationPath))
 
   const terminalNorteImages = await imagemin(
     ['build/img/terminal-norte/*.{jpg,jpeg,png}'],
@@ -23,7 +23,7 @@
   )
 
   terminalNorteImages.forEach(image =>
-    console.log('Converted:', image.destinationPath)
+    console.log('Converted AVIF:', image.destinationPath)
   )
 
   const terminalSurImages = await imagemin(
@@ -35,6 +35,6 @@
   )
 
   terminalSurImages.forEach(image =>
-    console.log('Converted:', image.destinationPath)
+    console.log('Converted AVIF:', image.destinationPath)
   )
 })()

@@ -14,7 +14,7 @@ const env = process.env.NODE_ENV === 'production'
     plugins: [imageminWebp({ quality: 75 })]
   })
 
-  files.forEach(file => console.log('Converted:', file.destinationPath))
+  files.forEach(file => console.log('Converted WEBP:', file.destinationPath))
 
   const terminalNorteImages = await imagemin(
     ['build/img/terminal-norte/*.{jpg,jpeg,png}'],
@@ -27,7 +27,7 @@ const env = process.env.NODE_ENV === 'production'
   )
 
   terminalNorteImages.forEach(image =>
-    console.log('Converted:', image.destinationPath)
+    console.log('Converted WEBP:', image.destinationPath)
   )
 
   const terminalSurImages = await imagemin(
@@ -39,6 +39,6 @@ const env = process.env.NODE_ENV === 'production'
   )
 
   terminalSurImages.forEach(image =>
-    console.log('Converted:', image.destinationPath)
+    console.log('Converted WEBP:', image.destinationPath)
   )
 })()
