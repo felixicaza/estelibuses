@@ -176,13 +176,13 @@ html {
   }
 }
 
-@media (min-width: 1440px) {
+@media (min-width: 1200px) {
   .wave::before {
     background-size: cover;
   }
 }
 
-@media (min-width: 1440px) and (prefers-color-scheme: dark) {
+@media (min-width: 1200px) and (prefers-color-scheme: dark) {
   .wave::before {
     background-size: cover !important;
   }
