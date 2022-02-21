@@ -103,11 +103,15 @@ html(class="scroll-smooth" dir="ltr" lang=`${LANG}` prefix="og: https://ogp.me/n
     meta(name="apple-mobile-web-app-title" content=`${APPLICATION_NAME}`)/
 
     if SOCIAL_TITLE !== ""
-      meta(content=`${SOCIAL_TITLE}` property="og:title")/
+      meta(name="title" content=`${SOCIAL_TITLE}` property="og:title")/
     if SOCIAL_DESCRIPTION !== ""
-      meta(content=`${SOCIAL_DESCRIPTION}` property="og:description")/
+      meta(
+        name="description"
+        content=`${SOCIAL_DESCRIPTION}`
+        property="og:description"
+      )/
     if SOCIAL_IMAGE !== ""
-      meta(content=`${SOCIAL_IMAGE}` property="og:image")/
+      meta(name="image" content=`${SOCIAL_IMAGE}` property="og:image")/
     if SOCIAL_IMAGE_ALT !== ""
       meta(content=`${SOCIAL_IMAGE_ALT}` property="og:image:alt")/
       meta(content="website" property="og:type")/
