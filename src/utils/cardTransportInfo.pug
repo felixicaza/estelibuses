@@ -1,4 +1,4 @@
-mixin cardTransportInfo(transportName, time, transportType, price, tripTime)
+mixin cardTransportInfo(transportName, time, transportType, price, tripTime, unverifiedHour, unverifiedType, unverifiedPrice)
   article(class="space-y-5")
     h2(class="text-3xl sm:text-4xl font-bold")= transportName
     section(class="overflow-x-scroll md:overflow-x-hidden pb-2")
@@ -6,40 +6,52 @@ mixin cardTransportInfo(transportName, time, transportType, price, tripTime)
         tbody
           tr(class="group")
             td(
-              class="px-3 py-2 flex items-center group-hover:bg-light-400 transition-colors rounded-l"
+              class="px-3 py-2 flex items-center group-hover:bg-light-600 transition-colors rounded-l"
             )
               svg(class="fill-current mr-2" viewBox="0 0 24 24" width="24" height="24")
                 path(
                   d="M12 2A10 10 0 0 0 2 12a10 10 0 0 0 10 10 10 10 0 0 0 10-10A10 10 0 0 0 12 2m4.2 14.2L11 13V7h1.5v5.2l4.5 2.7-.8 1.3Z"
                 )/
-              strong Hora de salida
-            td(class="px-3 py-2 group-hover:bg-light-400 transition-colors rounded-r")
+              if unverifiedHour
+                strong Hora de salida
+                  span(class="text-red-500") *
+              else
+                strong Hora de salida
+            td(class="px-3 py-2 group-hover:bg-light-600 transition-colors rounded-r")
               span(class="px-2 py-1 text-green-700 bg-green-100 rounded font-bold")= time
           tr(class="group")
             td(
-              class="px-3 py-2 flex items-center group-hover:bg-light-400 transition-colors rounded-l"
+              class="px-3 py-2 flex items-center group-hover:bg-light-600 transition-colors rounded-l"
             )
               svg(class="fill-current mr-2" viewBox="0 0 24 24" width="24" height="24")
                 path(
                   d="M18 11H6V6h12m-1.5 11a1.5 1.5 0 0 1-1.5-1.5 1.5 1.5 0 0 1 1.5-1.5 1.5 1.5 0 0 1 1.5 1.5 1.5 1.5 0 0 1-1.5 1.5m-9 0A1.5 1.5 0 0 1 6 15.5 1.5 1.5 0 0 1 7.5 14 1.5 1.5 0 0 1 9 15.5 1.5 1.5 0 0 1 7.5 17M4 16a3 3 0 0 0 1 2.2V20a1 1 0 0 0 1 1h1a1 1 0 0 0 1-1v-1h8v1a1 1 0 0 0 1 1h1a1 1 0 0 0 1-1v-1.8a3 3 0 0 0 1-2.2V6c0-3.5-3.6-4-8-4s-8 .5-8 4v10Z"
                 )/
-              strong Tipo de transporte
-            td(class="px-3 py-2 group-hover:bg-light-400 transition-colors rounded-r")
+              if unverifiedType
+                strong Tipo de transporte
+                  span(class="text-red-500") *
+              else
+                strong Tipo de transporte
+            td(class="px-3 py-2 group-hover:bg-light-600 transition-colors rounded-r")
               span(class="px-2 py-1 text-green-700 bg-green-100 rounded font-bold")= transportType
           tr(class="group")
             td(
-              class="px-3 py-2 flex items-center group-hover:bg-light-400 transition-colors rounded-l"
+              class="px-3 py-2 flex items-center group-hover:bg-light-600 transition-colors rounded-l"
             )
               svg(class="fill-current mr-2" viewBox="0 0 24 24" width="24" height="24")
                 path(
                   d="M11 8a4 4 0 1 1-8 0 4 4 0 0 1 8 0m0 6.7V20H0v-2c0-2.2 3.1-4 7-4 1.5 0 2.9.3 4 .7M24 20H13V3h11v17m-8-8.5a2.5 2.5 0 1 1 5 0 2.5 2.5 0 0 1-5 0M22 7a2 2 0 0 1-2-2h-3a2 2 0 0 1-2 2v9a2 2 0 0 1 2 2h3c0-1.1.9-2 2-2V7Z"
                 )/
-              strong Precio del pasaje
-            td(class="px-3 py-2 group-hover:bg-light-400 transition-colors rounded-r")
+              if unverifiedPrice
+                strong Precio de pasaje
+                  span(class="text-red-500") *
+              else
+                strong Precio del pasaje
+            td(class="px-3 py-2 group-hover:bg-light-600 transition-colors rounded-r")
               span(class="px-2 py-1 text-green-700 bg-green-100 rounded font-bold") C$ #{ price } por persona
           tr(class="group")
             td(
-              class="px-3 py-2 flex items-center group-hover:bg-light-400 transition-colors rounded-l"
+              class="px-3 py-2 flex items-center group-hover:bg-light-600 transition-colors rounded-l"
             )
               svg(class="fill-current mr-2" viewBox="0 0 24 24" width="24" height="24")
                 path(
@@ -47,4 +59,6 @@ mixin cardTransportInfo(transportName, time, transportType, price, tripTime)
                 )/
               strong Duración del viaje
             td(class="px-3 py-2 group-hover:bg-light-400 transition-colors rounded-r")
-              span(class="px-2 py-1 text-green-700 bg-green-100 rounded font-bold") #{ tripTime } horas (apróximadamente)
+              span(class="px-2 py-1 text-green-700 bg-green-100 rounded font-bold") #{ tripTime } (aproximadamente)
+      if unverifiedHour || unverifiedType || unverifiedPrice
+        p(class="px-2 py-1 text-red-700 bg-red-100 rounded text-xs inline mt-2") * Información no verificada
