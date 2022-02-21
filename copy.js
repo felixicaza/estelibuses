@@ -20,8 +20,4 @@ const cpy = require('cpy')
   await cpy('build/img/**/*.avif', 'public/img/').on('progress', data => {
     console.log(data)
   })
-
-  await cpy('build/img/**/*.webp', 'public/img/').on('progress', data => {
-    console.log(data)
-  })
 })()
