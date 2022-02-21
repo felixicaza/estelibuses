@@ -7,7 +7,7 @@
   const imagemin = (await import('imagemin')).default
   const imageminMozjpeg = (await import('imagemin-mozjpeg')).default
 
-  const files = await imagemin(['build/img/**/*.{jpg,jpeg}'], {
+  const files = await imagemin(['build/img/*.{jpg,jpeg}'], {
     destination: 'public/img',
     plugins: [
       imageminMozjpeg({
@@ -17,4 +17,36 @@
   })
 
   files.forEach(file => console.log('Converted:', file.destinationPath))
+
+  const terminalNorteImages = await imagemin(
+    ['build/img/terminal-norte/*.{jpg,jpeg}'],
+    {
+      destination: 'public/img/terminal-norte',
+      plugins: [
+        imageminMozjpeg({
+          quality: 75
+        })
+      ]
+    }
+  )
+
+  terminalNorteImages.forEach(image =>
+    console.log('Converted:', image.destinationPath)
+  )
+
+  const terminalSurImages = await imagemin(
+    ['build/img/terminal-sur/*.{jpg,jpeg}'],
+    {
+      destination: 'public/img/terminal-sur',
+      plugins: [
+        imageminMozjpeg({
+          quality: 75
+        })
+      ]
+    }
+  )
+
+  terminalSurImages.forEach(image =>
+    console.log('Converted:', image.destinationPath)
+  )
 })()
