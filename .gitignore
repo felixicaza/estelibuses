@@ -257,6 +257,7 @@ build/css/lib/windi.css
 
 # Generated HTML files
 build/**/*.html
+!build/google4ed26fc938fd8294.html
 
 # Ignore WEBP images
 build/img/**/*.webp
