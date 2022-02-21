@@ -17,6 +17,13 @@ const cpy = require('cpy')
     console.log(data)
   })
 
+  await cpy('build/google4ed26fc938fd8294.html', 'public/').on(
+    'progress',
+    data => {
+      console.log(data)
+    }
+  )
+
   await cpy('build/img/**/*.avif', 'public/img/').on('progress', data => {
     console.log(data)
   })
