@@ -111,7 +111,7 @@ html(class="scroll-smooth" dir="ltr" lang=`${LANG}` prefix="og: https://ogp.me/n
         property="og:description"
       )/
     if SOCIAL_IMAGE !== ""
-      meta(name="image" content=`${SOCIAL_IMAGE}` property="og:image")/
+      meta(name="image" content=`${URL}${SOCIAL_IMAGE}` property="og:image")/
     if SOCIAL_IMAGE_ALT !== ""
       meta(content=`${SOCIAL_IMAGE_ALT}` property="og:image:alt")/
       meta(content="website" property="og:type")/
@@ -127,7 +127,7 @@ html(class="scroll-smooth" dir="ltr" lang=`${LANG}` prefix="og: https://ogp.me/n
     if SOCIAL_DESCRIPTION !== ""
       meta(name="twitter:description" content=`${SOCIAL_DESCRIPTION}`)/
     if SOCIAL_IMAGE !== ""
-      meta(name="twitter:image" content=`${SOCIAL_IMAGE}`)/
+      meta(name="twitter:image" content=`${URL}${SOCIAL_IMAGE}`)/
     if SOCIAL_IMAGE_ALT !== ""
       meta(name="twitter:image:alt" content=`${SOCIAL_IMAGE_ALT}`)/
 
