@@ -38,10 +38,48 @@ block append defer-scripts
   script(src=`${ASSETS_PATH}js/search.js` defer importance="high")
 
 block append content
-  +pageTerminal('terminal-sur', 'Horarios de la terminal sur de Estelí', 'Conoce todos los horarios de la terminal sur de Estelí y elige la ciudad a la que deseas viajar.', 'Lorem ipsum dolor sit amet, consectetur adipiscing elit', '1234-5678', 'Conoce sobre la Terminal Sur de Estelí', 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.', 'Fachada de la Terminal Sur de Estelí.')
+  +pageTerminal('terminal-sur', 'Horarios de la terminal sur de Estelí', 'Conoce todos los horarios de la terminal sur de Estelí y elige la ciudad a la que deseas viajar.', 'Lorem ipsum dolor sit amet, consectetur adipiscing elit', '1234-5678')
     +cardCity('Managua', 'sur', 'data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAoAAAAGCAYAAAD68A/GAAAAAklEQVR4AewaftIAAADNSURBVAXBS06DUBiA0e+HC7TAoKnVVkdNTFyGC3UJjlyCAx01OjAaY2IZ1JqGaEAriBfuw3Pk8ubVZ7GgjSeNhCiEjx/DV2cZh5AoIVaCavoBbUNEoGwsn7+GtneEQKYgCeFvcKjr54JpnhMFCvCICIEzeIHg5Zbv03O0ExT1BW0dgU8Z2jHzScw8maBHCTbo6TZXFOUOdeQ8q2JNlhv2usey5L565/gkp9F7FtkZh1NQD29blosDNts1VdWR8shsZinrmgjDbljxdDfiHzXGWeYErh0SAAAAAElFTkSuQmCC')
     +cardCity('Matagalpa', 'sur', 'data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAoAAAAGCAYAAAD68A/GAAAAAklEQVR4AewaftIAAADQSURBVAXB21KCQACA4R9YKBaUlE4Yjc7Y4TV7id6il+gNumzGu2Q0R0NdGGU5LH2f9f7x2ffYSBemtxFS+pQqZ1P02EZTqTVfixXiUkA08PG6ErVf41kxwpxJQpemblCt5HU2wc5Wv2yKFse2GEoPT4AvA+5vRjymE67HVzi0iHyb8TyfciF6PFdwPpVoXVOUisNREYQRWmucqty93cURL09zjOnId3/k+yNpmvIwSRiPYlrTI7rqxCFbsPwOGIYh2+UPBpsmGaAKQdPU1ErxD8RhXNMpHuGqAAAAAElFTkSuQmCC')
     +cardCity('León', 'sur', 'data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAoAAAAGCAYAAAD68A/GAAAAAklEQVR4AewaftIAAADWSURBVAXBzVKCUACA0e8CJmg4mApZMSrTj8207kF6m3Y9TS/juGhbTi1cSF7JQQuBe8HOEU/Pr8fpqIfSGrnL4aj5UzAauERdwVf8ywEbK2hr6tWcIBiiqow2ezLRxM5d3ucfIAy60SNWOHAw9zZeo8DpG8h1wa3fYSFTzv0eCIF5UmPlOwl5idYapRRlqcgOJZ5Z0mi6JD9bTjsaIzxzGF8NSeIVD/dT3mYzbq4jlp8LxuEFQd/DtyvMu8nlSyJjtCqQmzWtlk2abrGo2SSSShV8x0v+AfDfXVGAYAnGAAAAAElFTkSuQmCC')
     +cardCity('San Nicolás', 'sur', 'data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAoAAAAGCAYAAAD68A/GAAAAAklEQVR4AewaftIAAADfSURBVAXBS07CUABA0VtahIJNGzFUywDESCIMWEAnbIHtuA5nLsIFOHBOooHgzC/QKtBoA+YJ/T7PUa5HucwlxJmkYUiWArZ70AoKIFFQcMoSza15jF99Xj6+GE2f6PV7GIZJIuYs/TWr2ZxH8Yt2e3PF5MFjEYSYdYv78R1nbYdTu0gqQkpxwuV5Dc17XmM3dC7cLn/+DzLLsUoRUa4SCxNkkelkS6HdtHEHQxbvPtWyyl4GZOo34SrAsir0WzbdThMtsCAK3kg3MZVjnUN0krRKp+VwclRnd7Bj8znjH8ImX6wQg+7GAAAAAElFTkSuQmCC')
     +cardCity('Achuapa', 'sur', 'data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAoAAAAGCAYAAAD68A/GAAAAAklEQVR4AewaftIAAADrSURBVAXBTy/DYADA4V/nXdFtpQvZhUzSLHZxJxIH4uQjOfoKLuLmJuLgTyzxARyIREaWJRJ0Gm1jWGm3l3Xv63mM7yTVpYKF1oqLsyPu7m/phAFB2ENjkWnJ/u4eotV+wMgE/vMrgfdGiVnqZZuao0CNyLTB8cEh4vLknIptMUgSBv0UqfIwTDGF5m+oyIkxPt875ORIMjEpeLy6ZmV9g6JbZ2l1jXJlDu/FZ3lzC2tqBhF5Ee2bJlkY0Tht8NFLacpfulFAEPg8be8Qx18I160RF4r0px3iqEtOaWxh4sxXWawukDfH+ZEp/0lxabqfB5o8AAAAAElFTkSuQmCC')
     +cardCity('Murra', 'sur', 'data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAoAAAAGCAYAAAD68A/GAAAAAklEQVR4AewaftIAAADeSURBVAXBXUvCUACA4Xc7Bz/OJmvtxjKIJIwo+gNdd9dt/8f/Fd1HgojsQhv0YbIywbFYHnOenZ7HeRw92HgS8zQYY6oNnifY8zvc3twRhfs0G4oSiXCU7ifJDCl3BC2Hyhg224xRPKbQJV4rJPB9hMh++uWuot2JqNcFpqpwrEU1DavvV4bxPc+TIfL6/Jjfms90MKV70cWVloaqoQuNlQVrnfOSfSE9L6B3ecVpWfGWvlPqFVHUYzFfkhvLxzzDWpBCSKR0OYxC/tySA3VC++iMmUr4XKSs0xy9FfwDnJZg5vHLKqgAAAAASUVORK5CYII=')
+
+  article(class="py-12 sm:py-16 md:py-20 xl:py-28 text-center bg-light-100")
+    div(class="container mx-auto px-4")
+      h2(class="text-3xl sm:text-4xl font-bold mb-8") Conoce sobre la Terminal Sur de Estelí
+      p(class="mx-auto mt-5 text-base sm:text-lg md:max-w-5xl lg:max-w-6xl mb-4") Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
+      style.
+        .aspect-ratio-ts {
+          aspect-ratio: 736/982;
+        }
+        @media (min-width: 992px) {
+          .aspect-ratio-ts {
+            aspect-ratio: 1024/576;
+          }
+        }
+      figure
+        picture
+          source(
+            type="image/avif"
+            data-srcset="/img/terminal-sur-estelibuses-mobile-felix-icaza.avif 912w, /img/terminal-sur-estelibuses-felix-icaza.avif"
+          )/
+          source(
+            type="image/webp"
+            data-srcset="/img/terminal-sur-estelibuses-mobile-felix-icaza.webp 912w, /img/terminal-sur-estelibuses-felix-icaza.webp"
+          )/
+          source(
+            type="image/jpeg"
+            data-srcset="/img/terminal-sur-estelibuses-mobile-felix-icaza.webp 912w, /img/terminal-sur-estelibuses-felix-icaza.jpg"
+          )/
+          img(
+            alt="Terminal sur de la ciudad de Estelí"
+            class="h-auto rounded object-cover object-center w-full max-w-5xl mx-auto lazyload aspect-ratio-ts"
+            decoding="async"
+            importance="low"
+            loading="lazy"
+            srcset="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAoAAAANCAYAAACQN/8FAAAAAklEQVR4AewaftIAAAFqSURBVF3BTWsTURSA4fece5OxcVIjjYZCdSEWwYULf6j/wbU/Qty4cCGlFTXFWulHbBJNHMh0JrkfR7oQxeeRnLNlM1QEEeFfZsYfaoCKICL8z8y4ISL4KgqlZpwagmBmqCo3VJVqkzioMv5HFWlcZntLuNVxqMLk+pyjX3NOLoZsDo55tfcYP59WzGzFIp2y0DO+1O+4PLvi07hleviU6/Ex1c8Z/uWbF3z+eshyMmN5WVFfJKQNSMpoPqIjjn5Y49v3Nc2HFYtv5zx7NGLiF8xTTdEveb7/hI7v8n1yil+OX7OTWow5D31iq1QWtbHpGydrz+zjW/bvP8D3BruEtuZeb8CVBJpu4HYvEJqSNkxpbchOEfG7wwExb9NuAiEE7uTAaJTYhEjdRvbuFqxthRdLdNVwhSN3lJg8yaDImX6ZkZxw9PAhNKhTRAQVoeiAmWEogiMlR4wOH2PAm0O9AzMQRZ3jL0HF8xuaur2IzCrX5wAAAABJRU5ErkJggg== 912w, data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAoAAAAGCAYAAAD68A/GAAAAAklEQVR4AewaftIAAADcSURBVAXBy07CQABA0TvTaXi0FQU1BI07oyYmhu9l48q4cKG/oHsVQ3gsxASJGMFCtTKljxnPEVGSWd+VSCkxxmCtJbeCp8jQW+Z0XmPkeICahAVN3+KVNwx/59w/r7nqT3nrdon7L3jhBwe7FdT13Q2zRY/B6IHZaIkKXVbRAkcU7GC5aLc5PDlDDW8v+f56pyE1K1PDrSQcp5+0AkhTS6s0peYfofYbAc29c3SiKf9p8izFqSvG8QZH/OClBaePHZQwCVJIgqpDUN2iKCx5vk3dZMhCU9JzJuuAfxueaDVYwy/MAAAAAElFTkSuQmCC"
+            data-srcset="/img/terminal-sur-estelibuses-mobile-felix-icaza.jpg 912w, /img/terminal-sur-estelibuses-felix-icaza.jpg"
+          )/
+        figcaption(class="text-sm text-gray-400 mt-3") Fachada de la Terminal Sur de Estelí.
