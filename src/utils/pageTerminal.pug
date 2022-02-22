@@ -1,6 +1,6 @@
 include cardCity
 
-mixin pageTerminal(idHeader, title, description, location, phone, titleContent, content, altImage, isNorth, ...cities)
+mixin pageTerminal(idHeader, title, description, location, phone, titleContent, content, altImage, origin, ...cities)
   header(class="wave" id=idHeader)
     div(class="container mx-auto px-4")
       include ../components/navbar
@@ -64,9 +64,9 @@ mixin pageTerminal(idHeader, title, description, location, phone, titleContent, 
                   fill="currentColor"
                 )/
 
-      article(class="flex flex-wrap justify-center gap-16")
+      article(class="flex flex-wrap justify-center gap-20")
         each city in cities
-          +cardCity(city, isNorth)
+          +cardCity(city, origin)
         p#no-city(class="hidden text-2xl text-cool-gray-400 text-center") Por favor intenta otra busqueda, lo que estás buscando no está disponible.
 
   article(class="py-12 sm:py-16 md:py-20 xl:py-28 text-center bg-light-100")
