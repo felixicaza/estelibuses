@@ -36,8 +36,11 @@ block append preload
 block append defer-scripts
 
 block append content
-  - const hours = ["07:00 am", "03:00 pm", "04:30 pm"]
-
   +pageCity('San Nicolás', 'Terminal sur', 'Terminal de San Nicolás', 'https://www.google.com/maps/embed?pb=!1m28!1m12!1m3!1d124397.75822966325!2d-86.40444900766707!3d13.008270261238557!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!4m13!3e6!4m5!1s0x8f718c42c00bc1ad%3A0x90de1ab352954a6f!2zRXN0ZWzDrQ!3m2!1d13.0851139!2d-86.3630197!4m5!1s0x8f7185db24e6dbd1%3A0x7c9d9004fb28fd11!2sSan%20Nicol%C3%A1s!3m2!1d12.933934599999999!2d-86.3465478!5e0!3m2!1ses-419!2sni!4v1645377864327!5m2!1ses-419!2sni')
-    each hour, index in hours
-      +cardTransportInfo(`Horario #${index+1}`, hour, 'Ruteado', '100', '39 minutos', true, true, true)
+    +cardTransportInfo('Horario #1', '07:00 am', 'Ruteado', '100', '39 minutos', false, false, true)
+    +cardTransportInfo('Horario #2', '09:00 am', 'Ruteado', '100', '39 minutos', false, false, true)
+    +cardTransportInfo('Horario #3', '12:00 pm', 'Ruteado', '100', '39 minutos', false, false, true)
+    +cardTransportInfo('Horario #4', '02:00 pm', 'Ruteado', '100', '39 minutos', false, false, true)
+    +cardTransportInfo('Horario #5', '03:00 pm', 'Ruteado', '100', '39 minutos', false, false, true)
+    +cardTransportInfo('Horario #6', '04:30 pm', 'Ruteado', '100', '39 minutos', false, false, true)
+    +cardTransportInfo('Horario #7', '06:00 pm', 'Ruteado', '100', '39 minutos', false, false, true)
