@@ -1,21 +1,31 @@
-mixin cardCity(city, isNorth)
+mixin cardCity(city, origin)
   - const convertCityName = city.toLowerCase().normalize('NFD').replace(/[\u0300-\u036f]/g, "").replace(/\s/g, "-")
 
-  //- prettier-ignore
-  section(
-    class=`relative text-center p-6 rounded shadow-md overflow-hidden space-y-6 h-max-content w-full sm:max-w-full sm:w-md sm:h-65 flex flex-col justify-center items-center bg-after ${convertCityName} lazy-bg card-city`
+  article(
+    class="card-city bg-light-100 rounded flex flex-col shadow transition-shadow duration-300 w-full max-w-lg lg:max-w-md overflow-hidden dark:bg-black-500 any-hover:shadow-md"
   )
-    h3(class="text-2xl z-2 text-white font-semibold city-name")= city
-    p(class="text-base text-white z-2 sm:px-4") Conoce todos los horarios de los buses que viajan&nbsp;
-      span(class="underline") desde Estelí hacia #{ city }
-      | .
-    if isNorth
+    a(
+      class="group block overflow-hidden"
+      href=`/terminal-${origin}-esteli/horarios-esteli-${convertCityName}`
+    )
+      img(
+        class="h-auto object-cover object-center w-full aspect-video any-hover:scale-101 transform origin-center transition-transform"
+        decoding="async"
+        importance="low"
+        loading="lazy"
+        srcset=`/img/terminal-${origin}/horarios-esteli-${convertCityName}-estelibuses-felix-icaza-card.jpg`
+      )/
+    section(class="p-5 flex flex-col justify-between gap-7 flex-1")
+      article(class="text-center")
+        h3(class="mb-2.5 text-2xl font-bold")
+          a(
+            class="city-name any-hover:text-orange-400 active:text-orange-400 transition-colors"
+            href=`/terminal-${origin}-esteli/horarios-esteli-${convertCityName}`
+          )= city
+        p Conoce todos los horarios de los buses que viajan&nbsp;
+          span(class="underline font-semibold") desde Estelí hacia #{ city }
+          | .
       a(
-        class="rounded font-semibold space-x-2.5 py-2.5 px-5 transition-colors duration-300 inline-flex items-center focus:outline-none focus:ring-4 focus:ring-yellow-400 focus:ring-opacity-75 bg-yellow-200 text-orange-800 any-hover:bg-yellow-300 active:bg-yellow-300 z-2"
-        href=`/terminal-norte-esteli/horarios-esteli-${convertCityName}`
-      ) Mira los horarios
-    else
-      a(
-        class="rounded font-semibold space-x-2.5 py-2.5 px-5 transition-colors duration-300 inline-flex items-center focus:outline-none focus:ring-4 focus:ring-yellow-400 focus:ring-opacity-75 bg-yellow-200 text-orange-800 any-hover:bg-yellow-300 active:bg-yellow-300 z-2"
-        href=`/terminal-sur-esteli/horarios-esteli-${convertCityName}`
+        class="rounded font-semibold py-2.5 transition-colors text-center bg-yellow-200 text-orange-800 any-hover:bg-yellow-300 active:bg-yellow-300 focus:outline-none"
+        href=`/terminal-${origin}-esteli/horarios-esteli-${convertCityName}`
       ) Mira los horarios
