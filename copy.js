@@ -24,18 +24,18 @@ const cpy = require('cpy')
     }
   )
 
-  await cpy('build/img/**/*.avif', 'public/img/').on('progress', data => {
+  await cpy('build/img/*.avif', 'public/img/').on('progress', data => {
     console.log(data)
   })
 
   await cpy(
     'build/img/terminal-norte/**/*.avif',
-    'public/img/terminal-norte'
+    'public/img/terminal-norte/'
   ).on('progress', data => {
     console.log(data)
   })
 
-  await cpy('build/img/terminal-sur/**/*.avif', 'public/img/terminal-sur').on(
+  await cpy('build/img/terminal-sur/**/*.avif', 'public/img/terminal-sur/').on(
     'progress',
     data => {
       console.log(data)
