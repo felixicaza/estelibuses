@@ -16,7 +16,7 @@
     "compress": "run-s -l -n compress:html postcss compress:js compress:img",
     "compress:br": "node brotli.js",
     "compress:html": "node html-minifier-terser.js",
-    "compress:img": "node pngquant.js && node mozjpeg.js && cross-env NODE_ENV=production node webp.js && node avif.js",
+    "compress:img": "node pngquant.js && node mozjpeg.js && cross-env NODE_ENV=production node webp.js",
     "compress:js": "node terser.js",
     "copyfiles": "node copy.js",
     "format": "run-s -l -n format:all format:pug format:xml",
