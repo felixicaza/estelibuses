@@ -1,0 +1,44 @@
+extends ../../../templates/template.pug
+include ../../../utils/pageCity
+include ../../../utils/cardTransportInfo
+
+block append variables
+  - const CURRENT_PAGE = "terminal-sur"
+  - const URL = "https://estelibuses.web.app"
+  - const ASSETS_PATH = "../../"
+  - const HAS_CRITICAL_CSS = false
+  - const APPLICATION_NAME = "Esteli Buses"
+  - const META_DESCRIPTION = "Conoce todos los horarios de los buses que salen desde Estelí hacia El Espinal."
+  - const META_ROBOTS = "index, follow"
+  - const LANGUAGE = "es"
+  - const CURRENT_URL = URL
+  - const SOCIAL_TITLE = "Horarios de los Buses de Estelí hacía El Espinal"
+  - const SOCIAL_DESCRIPTION = META_DESCRIPTION
+  - const SOCIAL_IMAGE = ""
+  - const SOCIAL_IMAGE_ALT = SOCIAL_TITLE
+  - const OPEN_GRAPH_SITE_NAME = ""
+  - const TWITTER_CARD = "summary_large_image"
+
+block append title
+  title= SOCIAL_TITLE
+
+block append preconnect
+
+block append async-scripts
+
+block append critical-css
+
+block append stylesheets
+  link(href=`${ASSETS_PATH}css/style.css` rel="stylesheet")/
+
+block append preload
+
+block append defer-scripts
+
+block append content
+  +pageCity('El Espinal', 'Terminal sur', 'Terminal de El Espinal', '')
+    +cardTransportInfo('Horario #1', '05:15 pm', 'Ruteado', '100', '30 minutos', false, false, true)
+    +cardTransportInfo('Horario #2', '05:30 pm', 'Ruteado', '100', '30 minutos', false, false, true)
+    +cardTransportInfo('Horario #3', '06:20 pm', 'Ruteado', '100', '30 minutos', false, false, true)
+    +cardTransportInfo('Horario #4', '06:30 pm', 'Ruteado', '100', '30 minutos', false, false, true)
+    +cardTransportInfo('Horario #5', '07:00 pm', 'Ruteado', '100', '30 minutos', false, false, true)
