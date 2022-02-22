@@ -1,6 +1,4 @@
-include cardCity
-
-mixin pageTerminal(idHeader, title, description, location, phone, titleContent, content, altImage, origin, ...cities)
+mixin pageTerminal(idHeader, title, description, location, phone)
   header(class="wave" id=idHeader)
     div(class="container mx-auto px-4")
       include ../components/navbar
@@ -65,29 +63,6 @@ mixin pageTerminal(idHeader, title, description, location, phone, titleContent, 
                 )/
 
       article(class="flex flex-wrap justify-center gap-20")
-        each city in cities
-          +cardCity(city, origin)
+        if block
+          block
         p#no-city(class="hidden text-2xl text-cool-gray-400 text-center") Por favor intenta otra busqueda, lo que estás buscando no está disponible.
-
-  article(class="py-12 sm:py-16 md:py-20 xl:py-28 text-center bg-light-100")
-    div(class="container mx-auto px-4")
-      h2(class="text-3xl sm:text-4xl font-bold mb-8")= titleContent
-      p(class="mx-auto mt-5 text-base sm:text-lg md:max-w-5xl lg:max-w-6xl mb-4")= content
-      figure
-        picture
-          source(
-            type="image/avif"
-            srcset=`/img/${idHeader}-estelibuses-mobile-felix-icaza.avif 912w, /img/${idHeader}-estelibuses-felix-icaza.avif`
-          )/
-          source(
-            type="image/webp"
-            srcset=`/img/${idHeader}-estelibuses-mobile-felix-icaza.webp 912w, /img/${idHeader}-estelibuses-felix-icaza.webp`
-          )/
-          img(
-            alt="Terminal sur de la ciudad de Estelí"
-            class="h-auto rounded object-cover object-center w-full max-w-5xl mx-auto"
-            decoding="async"
-            importance="high"
-            srcset=`/img/${idHeader}-estelibuses-felix-icaza.jpg`
-          )/
-        figcaption(class="text-sm text-gray-400 mt-3")= altImage
