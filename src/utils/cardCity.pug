@@ -1,5 +1,8 @@
 mixin cardCity(city, origin, lqip)
-  - const convertCityName = city.toLowerCase().normalize('NFD').replace(/[\u0300-\u036f]/g, "").replace(/\s/g, "-")
+  - let convertCityName = city.toLowerCase().normalize('NFD').replace(/[\u0300-\u036f]/g, "").replace(/\s/g, "-")
+  - if (convertCityName === 'tisey---la-estanzuela') {
+  - convertCityName = "tisey-la-estanzuela"
+  - }
 
   article(
     class="card-city bg-light-100 rounded flex flex-col shadow transition-shadow duration-300 w-full max-w-lg lg:max-w-md overflow-hidden dark:bg-black-500 any-hover:shadow-md"
