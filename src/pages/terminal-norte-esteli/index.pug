@@ -1,5 +1,6 @@
 extends ../../templates/template.pug
 include ../../utils/pageTerminal
+include ../../utils/cardCity
 
 block append variables
   - const CURRENT_PAGE = "terminal-norte"
@@ -33,8 +34,57 @@ block append stylesheets
 block append preload
 
 block append defer-scripts
+  script(src=`${ASSETS_PATH}js/polyfill-lazyload.js` defer importance="low")
   script(src=`${ASSETS_PATH}js/search.js` defer importance="high")
 
 block append content
-  +pageTerminal('terminal-norte', 'Horarios de la terminal norte de Estelí', 'Conoce todos los horarios de la terminal norte de Estelí y elige la ciudad a la que deseas viajar.', 'Del centro comercial Erwin 30 metros al sur', '1234-5678', 'Conoce sobre la Terminal Norte de Estelí', 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.', 'Fachada de la Terminal Norte de Estelí.', 'norte', 'Jinotega', 'Somoto', 'Ocotal', 'Yalí', 'Quilalí', 'San Juan de Limay')
-  //- +pageTerminal('terminal-norte', 'Horarios de la terminal norte de Estelí', 'Conoce todos los horarios de la terminal norte de Estelí, elige la ciudad a la que deseas viajar.', 'Del centro comercial Erwin 30 metros al sur', '1234-5678', 'Conoce sobre la Terminal Norte de Estelí', 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.', 'Fachada de la Terminal Norte de Estelí.', true, 'Jinotega', 'Somoto', 'Ocotal', 'Yalí', 'Quilalí', 'San Juan de Limay', 'Pueblo Nuevo', 'Wiwilí', 'El Sauce', 'San Juan del Río Coco', 'El Regadío', 'La Rica', 'Guasuyuca', 'León', 'Managua', 'Masaya', 'Achuapa', 'Jalapa', 'Miraflor', 'San Marcos Sunís', 'San Rafael del Norte')
+  +pageTerminal('terminal-norte', 'Horarios de la terminal norte de Estelí', 'Conoce todos los horarios de la terminal norte de Estelí y elige la ciudad a la que deseas viajar.', 'Del centro comercial Erwin 30 metros al sur', '1234-5678')
+    +cardCity('Jinotega', 'norte', 'data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAoAAAAGCAYAAAD68A/GAAAAAklEQVR4AewaftIAAADNSURBVBXBPUvDQACA4fe+rzW1taJoUBCXjs7SybWLf9fN4l/QQVTQoVYIJdhwiW3N5cTnEXcvIU1OPf8eXhvK0HI+toQt7NoOpwT7fYM+G3vey47LQ8XNZI/PqkMLsFqwbiIyRbKeQc/n9xjXo85PyI9GFMUamVq+q5qDzPL8+MT1dIq4mt2miMU7S0IRoyBJi7EWJQVeRn7R6IvhAGcc4afGOMnia0USCm08UsEuFGySQi8/3hgMM/LjHOf6bG1J0omqXlEsF2yaFmUUfx9+TTarspExAAAAAElFTkSuQmCC')
+
+    +cardCity('Somoto', 'norte', 'data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAoAAAAGCAYAAAD68A/GAAAAAklEQVR4AewaftIAAADmSURBVAXBu07CUACA4b/llBZBgUCBYOJQ7SDxMpgoA25iHB31/XwEJwdXphodjMEL6iAmxjagUnqAnuP3GWfnW/oxf0hYPcWybKRpMplr4kTSzV5Ql31qwkb4rs80ukZGZeLSPrYQgEOnfEU9vMfOZFgyc4h07nCye0zwETAY9HCcAqrg0F5dIKouRpql5W0jtDKZjRd0/Q439ivB8wvtjTxHO3tIw6TRbKFTC5HIhLuHb5q1Cn6xAp7mYNMjiosYYoXP4Yi/8Q9i+BWSKsVlr4+bU9z+zpgKWFse8fb0znqjxERp/gGtW1S4/iR4jQAAAABJRU5ErkJggg==')
+
+    +cardCity('Ocotal', 'norte', 'data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAoAAAAGCAYAAAD68A/GAAAAAklEQVR4AewaftIAAADoSURBVAXBvU7CUACA0a+F0gttsQZ/B9TJweikicZXcPMhHHwOR1/GyZXEkCgSEqwhIqllMAYVSJQi5XJ76znG29c0e+kN+Hx/5XFwzPBHseQ7HK5HeEafo5NTRFGQv2v/0a7fsFZZgd8HNqdNzKzKWLu0woDdvQPqjQBzf2vGXEr6UQ8rbjCLJ1iLbz6ie4pOgVrtluurSwxv1c3Ozi8wM00Sj1BzSbnsY9s5lDbohgHPT03y1e0dkmQC2kQrSacTUBI2Vk4xGg8xChbCtsmrNCXstlALje84+J5AKY0ybdzKBjKVLIsS/66oZHYPNJRaAAAAAElFTkSuQmCC')
+
+    +cardCity('Yalí', 'norte', 'data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAoAAAAGCAYAAAD68A/GAAAAAklEQVR4AewaftIAAADpSURBVAXBTS/DAACA4befW2W1z8QkRpYsDpwcnEn8MfED/Ag3Z4kDN4ctEXNgQWmWaYeG0ZV+bl3reYT+dT//9EXGXwme98OTkyHY93yXWoQLgSiekQQ+YqVaQ9cKbLUrpJHLdktno5lQXdis1nV22mWajTJyUSuwtiJQb1SxjTn7B5t0z3oo2YTdvSZCFpHOdWRJzMmlnIfBHZb1ysfI4PG2x/DdY73TQS0tY5ovyOcXl8yCXwY3V4yGz4y7p1hvU5I05eT4iGJNw53GSLnvHMaOwSKLUVQVy/nDnIQEooY7V3BDkSVB5h8pUWnOK09yrAAAAABJRU5ErkJggg==')
+
+    +cardCity('Quilalí', 'norte', 'data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAoAAAAGCAYAAAD68A/GAAAAAklEQVR4AewaftIAAADdSURBVAXBS06DUABA0Vse8iuWtqiJQcPEmYk7aOLIGRtwC+7ATRiX1bk2wU/TiDYK1QIiH+GJ5wwur6772fkFzw93GBqEi5AgCNhzHVbRI00t8Q481OX9nDp7wss77ArO6oa3m1tWsmM9Nni1BFlro+5GLzifGYmlEPaSbqSh6oJqk9IvW/xfhaFroHK4zzxPyIuCtugxSx3LMok/vmibjvfJlNOjYxRTj0m2KX/VgLaRfKclbdnhOlM0odDLH7psgSqVEUNDYIgea0fBGduc+D7rTYwhBHlRE20n/AOxc2GK8ORBHgAAAABJRU5ErkJggg==')
+
+    +cardCity('San Juan de Limay', 'norte', 'data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAoAAAAGCAYAAAD68A/GAAAAAklEQVR4AewaftIAAADgSURBVAXBu0rDUACA4T85J2kuhBgMrajgVAdHB3ehCE6OToLgK/hgPkBddPEF6lZQSgVj4yVpTk5Pksbvs27urvrLyYTs/YM0Tjg7vyZNU2zLwrQdtWnJqxq5/Jvx9PhGkRkiV/Iym3N6cUsYxdSmoa4URi2QiRVxnBzxa2mcQY9q5kwf7tkITeDUNLTEm33kWtR8/SyJ/AB/4DHaHRLojG+5ptr2CMvGUQa5txOQDg8QnU3+uWC1yukCFycSFHpL4vnoUiFPxodMn18ZBSGxG1MWisovGbchntOiG4FUkn+qf1rJP6L68AAAAABJRU5ErkJggg==')
+
+  article(class="py-12 sm:py-16 md:py-20 xl:py-28 text-center bg-light-100")
+    div(class="container mx-auto px-4")
+      h2(class="text-3xl sm:text-4xl font-bold mb-8") Conoce sobre la Terminal Norte de Estelí
+      p(class="mx-auto mt-5 text-base sm:text-lg md:max-w-5xl lg:max-w-6xl mb-4") Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
+      style.
+        .aspect-ratio-tn {
+          aspect-ratio: 736/982;
+        }
+        @media (min-width: 992px) {
+          .aspect-ratio-tn {
+            aspect-ratio: 1024/576;
+          }
+        }
+      figure
+        picture
+          source(
+            type="image/avif"
+            data-srcset="/img/terminal-norte-estelibuses-mobile-felix-icaza.avif 912w, /img/terminal-norte-estelibuses-felix-icaza.avif"
+          )/
+          source(
+            type="image/webp"
+            data-srcset="/img/terminal-norte-estelibuses-mobile-felix-icaza.webp 912w, /img/terminal-norte-estelibuses-felix-icaza.webp"
+          )/
+          source(
+            type="image/jpeg"
+            data-srcset="/img/terminal-norte-estelibuses-mobile-felix-icaza.webp 912w, /img/terminal-norte-estelibuses-felix-icaza.jpg"
+          )/
+          img(
+            alt="Terminal norte de la ciudad de Estelí"
+            class="h-auto rounded object-cover object-center w-full max-w-5xl mx-auto lazyload aspect-ratio-tn"
+            decoding="async"
+            importance="low"
+            loading="lazy"
+            srcset
+            data-srcset="/img/terminal-norte-estelibuses-mobile-felix-icaza.jpg 912w, /img/terminal-norte-estelibuses-felix-icaza.jpg"
+          )/
+        figcaption(class="text-sm text-gray-400 mt-3") Fachada de la Terminal Norte de Estelí.
