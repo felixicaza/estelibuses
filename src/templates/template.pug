@@ -44,6 +44,7 @@ html(class="scroll-smooth" dir="ltr" lang=`${LANG}` prefix="og: https://ogp.me/n
 
     script(src=`${ASSETS_PATH}js/lib/quicklink.umd.js` defer importance="low")
     script(type="module" src=`${ASSETS_PATH}js/app.js` importance="low")
+    script(src=`${ASSETS_PATH}js/polyfill-lazyload.js` defer importance="low")
     block defer-scripts
 
     meta(name="robots" content=`${META_ROBOTS}`)/
