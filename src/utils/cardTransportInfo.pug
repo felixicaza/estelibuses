@@ -1,6 +1,8 @@
 mixin cardTransportInfo(transportName, time, transportType, price, tripTime, unverifiedHour, unverifiedType, unverifiedPrice)
-  article(class="space-y-5")
-    h2(class="text-3xl sm:text-4xl font-bold")= transportName
+  - const transportTypeToLowerCase = transportType.toLowerCase()
+
+  article(class="space-y-5 ${transportTypeToLowerCase}")
+    h2(class="titles text-3xl sm:text-4xl font-bold")= transportName
     section(class="overflow-x-scroll md:overflow-x-hidden pb-2")
       table(class="whitespace-nowrap border-separate")
         tbody
