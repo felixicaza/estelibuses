@@ -77,7 +77,7 @@ mixin pageCity(city, terminalName, destiny, map, addFilter)
         section(class="space-y-3 row-span-1 mt-6 lg:mt-0 order-1 lg:order-0")
           p(class="font-semibold") Elige el tipo de transporte:
             form#filter(class="flex gap-6")
-              section(class="group")
+              section(class="group flex items-center")
                 input#all(
                   name="bus"
                   type="radio"
@@ -88,7 +88,7 @@ mixin pageCity(city, terminalName, destiny, map, addFilter)
                   class="group-any-hover:text-orange-600 transition-colors cursor-pointer"
                   for="all"
                 ) &nbsp;Todos
-              section(class="group")
+              section(class="group flex items-center")
                 input#express(
                   name="bus"
                   type="radio"
@@ -98,7 +98,7 @@ mixin pageCity(city, terminalName, destiny, map, addFilter)
                   class="group-any-hover:text-orange-600 transition-colors cursor-pointer"
                   for="express"
                 ) &nbsp;Expresos
-              section(class="group")
+              section(class="group flex items-center")
                 input#routed(
                   name="bus"
                   type="radio"
