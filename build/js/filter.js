@@ -32,7 +32,7 @@ formFilter.addEventListener('change', e => {
     // TODO: Borrar cuándo sea necesario
     // Actualizar el número del título de los buses expresos cuándo éstos sean visibles
     for (let i = 0; i < expressTitles.length; i++) {
-      expressTitles[i].textContent = `Horario Expresos #${i + 1}`
+      expressTitles[i].textContent = `Horario Expreso #${i + 1}`
     }
 
     expressBuses.forEach(express => express.classList.remove('hidden'))
@@ -43,7 +43,7 @@ formFilter.addEventListener('change', e => {
     // TODO: Borrar cuándo sea necesario
     // Actualizar el número del título de los buses ruteados cuándo éstos sean visibles
     for (let i = 0; i < routedTitles.length; i++) {
-      routedTitles[i].textContent = `Horario Ruteados #${i + 1}`
+      routedTitles[i].textContent = `Horario Ruteado #${i + 1}`
     }
 
     routedBuses.forEach(routed => routed.classList.remove('hidden'))
