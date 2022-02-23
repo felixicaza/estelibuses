@@ -103,6 +103,18 @@ html {
   background: #ccfbf1;
 }
 
+#la-trinidad {
+  background: #ccfbf1;
+}
+
+#tisey-la-estanzuela {
+  background: #e0f2fe;
+}
+
+#el-espinal {
+  background: #ede9fe;
+}
+
 @media (min-width: 1200px) {
   .avif #mainPage {
     background: url('../img/esteli-buses-bg-felix-icaza.avif') no-repeat;
