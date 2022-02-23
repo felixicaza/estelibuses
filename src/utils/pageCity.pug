@@ -1,7 +1,10 @@
 include breadcrumb
 
-mixin pageCity(city, terminalName, destiny, map)
-  - const cityLowerCase = city.toLowerCase().normalize('NFD').replace(/[\u0300-\u036f]/g, "").replace(/\s/g, "-")
+mixin pageCity(city, terminalName, destiny, map, addFilter)
+  - let cityLowerCase = city.toLowerCase().normalize('NFD').replace(/[\u0300-\u036f]/g, "").replace(/\s/g, "-")
+  - if (cityLowerCase === 'tisey---la-estanzuela') {
+  - cityLowerCase = "tisey-la-estanzuela"
+  - }
   - const sanitizeTerminalName = terminalName.toLowerCase().normalize('NFD').replace(/[\u0300-\u036f]/g, "").replace(/\s/g, "-")
 
   header(class="wave" id=cityLowerCase)
@@ -66,13 +69,57 @@ mixin pageCity(city, terminalName, destiny, map)
                 )/
 
   section(class="py-12 sm:py-16 md:py-20 xl:py-28")
+    //- prettier-ignore
     div(
-      class="container mx-auto px-4 flex flex-col gap-8 lg:grid lg:grid-cols-2 lg:items-start"
+      class=`container mx-auto px-4 flex flex-col gap-8 lg:grid lg:grid-cols-2 lg:items-start ${addFilter === true ? 'lg:grid-rows-[70px,1fr]' : ''}`
     )
-      section(class="flex flex-col gap-16 order-1 lg:order-0 lg:sticky lg:top-8")
+      if addFilter
+        section(class="space-y-3 row-span-1 mt-6 lg:mt-0 order-1 lg:order-0")
+          p(class="font-semibold") Elige el tipo de transporte:
+            form#filter(class="flex gap-6")
+              section(class="group")
+                input#all(
+                  name="bus"
+                  type="radio"
+                  checked
+                  class="accent-orange-600 cursor-pointer sibling:checked:text-orange-600"
+                )/
+                label(
+                  class="group-any-hover:text-orange-600 transition-colors cursor-pointer"
+                  for="all"
+                ) Todos
+              section(class="group")
+                input#express(
+                  name="bus"
+                  type="radio"
+                  class="accent-orange-600 cursor-pointer sibling:checked:text-orange-600"
+                )/
+                label(
+                  class="group-any-hover:text-orange-600 transition-colors cursor-pointer"
+                  for="express"
+                ) Expresos
+              section(class="group")
+                input#routed(
+                  name="bus"
+                  type="radio"
+                  class="accent-orange-600 cursor-pointer sibling:checked:text-orange-600"
+                )/
+                label(
+                  class="group-any-hover:text-orange-600 transition-colors cursor-pointer"
+                  for="routed"
+                ) Ruteados
+
+      //- prettier-ignore
+      section(
+        class=`flex flex-col gap-16 lg:sticky lg:top-8 ${addFilter === true ? 'col-start-1 col-end-2 order-2 lg:order-1' : 'order-1 lg:order-0'}`
+      )
         if block
           block
-      section(class="space-y-5 lg:sticky lg:top-8 order-0 lg:order-1")
+
+      //- prettier-ignore
+      section(
+        class=`space-y-5 lg:sticky lg:top-8 ${addFilter === true ? 'row-start-1 row-end-3 col-start-2 col-span-2 order-0 lg:order-2' : 'order-0 lg:order-1'}`
+      )
         h2(class="text-3xl sm:text-4xl font-bold") Datos generales
         section
           iframe(
