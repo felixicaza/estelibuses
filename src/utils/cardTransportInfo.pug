@@ -2,9 +2,19 @@ mixin cardTransportInfo(transportName, time, transportType, price, tripTime, unv
   - const transportTypeToLowerCase = transportType.toLowerCase()
 
   //- prettier-ignore
-  article(class=`space-y-5 ${transportTypeToLowerCase}`)
+  article(class=`space-y-5 bg-light-50 shadow rounded p-4 any-hover:shadow-md transition-shadow ${transportTypeToLowerCase}`)
     h2(class="titles text-3xl sm:text-4xl font-bold")= transportName
-    section(class="overflow-x-scroll md:overflow-x-hidden pb-2")
+
+    style.
+      .scrolltable {
+        scrollbar-width: none;
+      }
+
+      .scrolltable::-webkit-scrollbar {
+        display: none;
+      }
+
+    section(class="overflow-x-scroll md:overflow-x-hidden pb-2 scrolltable")
       table(class="whitespace-nowrap border-separate")
         tbody
           tr(class="group")
