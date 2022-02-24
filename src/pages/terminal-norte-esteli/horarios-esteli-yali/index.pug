@@ -1,6 +1,6 @@
 extends ../../../templates/template.pug
 include ../../../utils/pageCity
-include ../../../utils/cardTransportInfo
+include ../../../utils/cardTransportInfoNorth
 
 block append variables
   - const CURRENT_PAGE = "terminal-norte"
@@ -12,7 +12,7 @@ block append variables
   - const META_ROBOTS = "index, follow"
   - const LANGUAGE = "es"
   - const CURRENT_URL = URL
-  - const SOCIAL_TITLE = "Horarios de los Buses de Estelí hacía Yalí"
+  - const SOCIAL_TITLE = "Horarios de los Buses de Estelí hacia Yalí"
   - const SOCIAL_DESCRIPTION = META_DESCRIPTION
   - const SOCIAL_IMAGE = ""
   - const SOCIAL_IMAGE_ALT = SOCIAL_TITLE
@@ -36,8 +36,41 @@ block append preload
 block append defer-scripts
 
 block append content
-  - const hours = ["04:15 am", "05:15 am", "07:15 am", "08:15 am", "09:15 am", "12:45 pm"]
-
   +pageCity('Yalí', 'Terminal norte', 'Terminal de Yalí', 'https://www.google.com/maps/embed?pb=!1m28!1m12!1m3!1d124303.59799141149!2d-86.30650160600135!3d13.194685286269712!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!4m13!3e6!4m5!1s0x8f718c42c00bc1ad%3A0x90de1ab352954a6f!2zRXN0ZWzDrQ!3m2!1d13.0851139!2d-86.3630197!4m5!1s0x8f721c99b5db1c39%3A0x442ab63560c952a0!2sSan%20Sebasti%C3%A1n%20de%20Yal%C3%AD!3m2!1d13.304214499999999!2d-86.18280469999999!5e0!3m2!1ses-419!2sni!4v1645375132669!5m2!1ses-419!2sni')
-    each hour, index in hours
-      +cardTransportInfo(`Horario #${index+1}`, hour, 'Ruteado', '100', '1.3 horas', true, true, true)
+    section(class="bg-red-100 p-4 rounded")
+      svg(
+        class="fill-current text-red-600 float-left mr-4 mt-0.8"
+        viewBox="0 0 24 24"
+        width="34"
+        height="34"
+      )
+        path(d="M13 14h-2V9h2m0 9h-2v-2h2M1 21h22L12 2 1 21Z")/
+      p(class="text-red-600") Hay información inconsistente con los horarios hacia Yalí,&nbsp;
+        a(
+          class="underline"
+          href="/terminal-norte-esteli/horarios-esteli-san-rafael-del-norte"
+        ) San Rafael del Norte
+        | &nbsp;y&nbsp;
+        a(class="underline" href="/terminal-norte-esteli/horarios-esteli-la-rica") La Rica
+        | , la cuál no se me fue aclarada.
+      figure(class="my-4 text-center")
+        img(
+          src="/img/error-horarios.jpg"
+          alt="Inconsistencia con los horarios de Yalí, San Rafael del Norte y La Rica"
+          class="object-cover object-center aspect-video lazyload rounded mx-auto"
+          decoding="async"
+          importance="low"
+        )/
+      p(class="text-red-600") Por favor revisa estos horarios y envía información verificada, para actualizarla lo antes posible. Lee la&nbsp;
+        a(class="underline" href="/guia-de-contribucion") guía de contribución
+        | &nbsp;para envíar la información necesaria.
+    +cardTransportInfoNorth('Horario #1', '05:15 am', 'Ruteado', 'Gonzáles', '100', '1.3 horas', false, false, true)
+    +cardTransportInfoNorth('Horario #2 (Miraflor)', '06:00 am', 'Ruteado', 'Rodríguez', '100', '1.3 horas', false, false, true)
+    +cardTransportInfoNorth('Horario #3', '07:15 am', 'Ruteado', 'Caballero', '100', '1.3 horas', false, false, true)
+    +cardTransportInfoNorth('Horario #4', '08:15 am', 'Ruteado', 'Caballero', '100', '1.3 horas', false, false, true)
+    +cardTransportInfoNorth('Horario #5', '11:15 am', 'Ruteado', 'El Chavalo del Norte', '100', '1.3 horas', false, false, true)
+    +cardTransportInfoNorth('Horario #6', '12:00 pm', 'Ruteado', 'Centeno', '100', '1.3 horas', false, false, true)
+    +cardTransportInfoNorth('Horario #7', '12:45 pm', 'Ruteado', 'San Miguel', '100', '1.3 horas', false, false, true)
+    +cardTransportInfoNorth('Horario #8', '02:10 pm', 'Ruteado', 'Milagros', '100', '1.3 horas', false, false, true)
+    +cardTransportInfoNorth('Horario #9', '03:45 pm', 'Ruteado', 'El Chavalo del Norte', '100', '1.3 horas', false, false, true)
+    +cardTransportInfoNorth('Horario #10', '03:30 pm', 'Ruteado', 'El Chavalo del Norte', '100', '1.3 horas', false, false, true)
