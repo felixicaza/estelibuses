@@ -6,20 +6,23 @@ mixin pageTerminal(idHeader, title, description, location, phone)
       section(
         class="flex flex-col justify-center items-center pt-18 pb-18 md:pb-26 lg:pt-28 lg:pb-34 xl:pb-56 text-center"
       )
-        h1(class="text-4xl sm:text-5xl font-bold mb-8 max-w-screen-lg z-2")= title
-        p(class="text-base sm:text-lg max-w-screen-lg z-2 font-semibold")= description
+        h1(class="text-4xl sm:text-5xl font-bold mb-8 max-w-4xl")= title
+        p(class="text-base sm:text-lg max-w-2xl lg:max-w-4xl")= description
 
         section(
-          class="flex flex-col md:flex-row md:items-center gap-8 justify-center z-2 mt-6 text-left px-4 xs:px-16 md:px-0"
+          class="flex flex-col md:flex-row md:items-start gap-8 justify-center mt-6 text-left max-w-xs sm:max-w-md md:max-w-xl mx-auto"
         )
-          section(class="flex items-start md:items-center gap-2 font-semibold")
-            div(class="mt-0.8 sm:mt-0")
+          section(class="flex items-start gap-2 font-semibold md:basis-3/5")
+            div(class="mt-0.8")
               svg(class="fill-current" viewBox="0 0 24 24" width="24" height="24")
                 path(
                   d="M12 11.5A2.5 2.5 0 0 1 9.5 9 2.5 2.5 0 0 1 12 6.5 2.5 2.5 0 0 1 14.5 9a2.5 2.5 0 0 1-2.5 2.5M12 2a7 7 0 0 0-7 7c0 5.3 7 13 7 13s7-7.8 7-13a7 7 0 0 0-7-7Z"
                 )/
-            p= location
-          section(class="flex items-center gap-2")
+            a(
+              class="active:underline any-hover:underline"
+              href=`/${idHeader}-esteli#mapa`
+            )= location
+          section(class="flex items-center gap-2 md:basis-2/5")
             div
               svg(class="fill-current" viewBox="0 0 24 24" width="24" height="24")
                 path(
@@ -27,7 +30,7 @@ mixin pageTerminal(idHeader, title, description, location, phone)
                 )/
             a(
               class="active:underline any-hover:underline font-semibold"
-              href="tel:27141111"
+              href=`tel:+505 ${phone}`
             )= phone
 
   main(class="py-12 sm:py-16 md:py-20 xl:py-28")
