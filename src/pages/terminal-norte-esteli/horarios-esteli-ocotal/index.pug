@@ -1,6 +1,6 @@
 extends ../../../templates/template.pug
 include ../../../utils/pageCity
-include ../../../utils/cardTransportInfo
+include ../../../utils/cardTransportInfoNorth
 
 block append variables
   - const CURRENT_PAGE = "terminal-norte"
@@ -12,7 +12,7 @@ block append variables
   - const META_ROBOTS = "index, follow"
   - const LANGUAGE = "es"
   - const CURRENT_URL = URL
-  - const SOCIAL_TITLE = "Horarios de los Buses de Estelí hacía Ocotal"
+  - const SOCIAL_TITLE = "Horarios de los Buses de Estelí hacia Ocotal"
   - const SOCIAL_DESCRIPTION = META_DESCRIPTION
   - const SOCIAL_IMAGE = ""
   - const SOCIAL_IMAGE_ALT = SOCIAL_TITLE
@@ -36,8 +36,16 @@ block append preload
 block append defer-scripts
 
 block append content
-  - const hours = ["06:00 am", "07:00 am", "07:35 am", "08:00 am", "09:00 am", "10:00 am", "11:00 am", "12:00 pm", "01:00 pm", "02:00 pm", "02:45 pm", "03:40 pm"]
-
-  +pageCity('Ocotal', 'Terminal norte', 'Terminal de Ocotal', 'https://www.google.com/maps/embed?pb=!1m28!1m12!1m3!1d248437.95528209035!2d-86.56386614354437!3d13.360033450620184!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!4m13!3e6!4m5!1s0x8f718c42c00bc1ad%3A0x90de1ab352954a6f!2zRXN0ZWzDrQ!3m2!1d13.0851139!2d-86.3630197!4m5!1s0x8f6e1b957ceb1eb1%3A0xe52002201e5329bf!2sOcotal!3m2!1d13.6289038!2d-86.4844914!5e0!3m2!1ses-419!2sni!4v1645374828013!5m2!1ses-419!2sni')
-    each hour, index in hours
-      +cardTransportInfo(`Horario #${index+1}`, hour, 'Ruteado', '100', '2.35 horas', true, true, true)
+  +pageCity('Ocotal', 'Terminal norte', 'Terminal de Ocotal', 'https://www.google.com/maps/embed?pb=!1m28!1m12!1m3!1d248439.74577833415!2d-86.56386614361054!3d13.358294655262233!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!4m13!3e6!4m5!1s0x8f718c6c8f2298e7%3A0x855d282eb62cfeed!2sCotran%20Norte%2C%20Estel%C3%AD!3m2!1d13.0816363!2d-86.352126!4m5!1s0x8f6e1b957ceb1eb1%3A0xe52002201e5329bf!2sOcotal!3m2!1d13.6289038!2d-86.4844914!5e0!3m2!1ses-419!2sni!4v1645741703628!5m2!1ses-419!2sni')
+    +cardTransportInfoNorth('Horario #1', '06:00 am', 'Ruteado', 'Arellano', '100', '1.35 horas', false, false, true)
+    +cardTransportInfoNorth('Horario #2', '07:00 am', 'Ruteado', 'Ernesto José', '100', '1.35 horas', false, false, true)
+    +cardTransportInfoNorth('Horario #3', '08:00 am', 'Ruteado', 'El Águila del Norte', '100', '1.35 horas', false, false, true)
+    +cardTransportInfoNorth('Horario #4', '09:00 am', 'Ruteado', 'Mi Bus', '100', '2.35 horas', false, false, true)
+    +cardTransportInfoNorth('Horario #5', '10:00 am', 'Ruteado', 'Águila del Norte', '100', '1.35 horas', false, false, true)
+    +cardTransportInfoNorth('Horario #6', '11:00 am', 'Ruteado', 'Gámez', '100', '2.35 horas', false, false, true)
+    +cardTransportInfoNorth('Horario #7', '01:00 pm', 'Ruteado', 'Arellano', '100', '1.35 horas', false, false, true)
+    +cardTransportInfoNorth('Horario #8', '02:00 pm', 'Ruteado', 'Ernesto José', '100', '1.35 horas', false, false, true)
+    +cardTransportInfoNorth('Horario #9', '02:45 pm', 'Ruteado', 'El Águila del Norte', '100', '1.35 horas', false, false, true)
+    +cardTransportInfoNorth('Horario #10', '03:40 pm', 'Ruteado', 'Mi Bus', '100', '2.35 horas', false, false, true)
+    +cardTransportInfoNorth('Horario #11', '04:20 pm', 'Ruteado', 'Águila del Norte', '100', '1.35 horas', false, false, true)
+    +cardTransportInfoNorth('Horario #12', '05:40 pm', 'Ruteado', 'Gámez', '100', '1.35 horas', false, false, true)
