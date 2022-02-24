@@ -37,6 +37,11 @@ html {
   color-scheme: light dark;
 }
 
+html,
+body {
+  scroll-padding-top: 130px;
+}
+
 .avif #mainPage {
   background: url('../img/esteli-buses-bg-mobile-felix-icaza.avif') no-repeat;
   background-size: cover;
