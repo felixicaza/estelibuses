@@ -1,8 +1,35 @@
 footer(class="bg-blue-gray-800 text-white text-center")
-  div(class="container px-4 pt-16 pb-8 mx-auto")
+  div(class="container px-4 pt-16 pb-8 mx-auto space-y-14")
+    article(class="text-center max-w-xl mx-auto space-y-4")
+      a(class="inline-block" href="/")
+        picture
+          source(
+            type="image/webp"
+            srcset="/img/esteli-buses-logo-white-felix-icaza.webp"
+            data-srcset="/img/esteli-buses-logo-white-felix-icaza.webp"
+          )/
+          source(
+            type="image/png"
+            srcset="/img/esteli-buses-logo-white-felix-icaza.png"
+            data-srcset="/img/esteli-buses-logo-white-felix-icaza.png"
+          )/
+          img(
+            alt="Estelí Buses"
+            class="object-cover object-center mx-auto"
+            decoding="async"
+            importance="high"
+            srcset="/img/esteli-buses-logo-white-felix-icaza.png"
+            width="150"
+            height="60"
+            data-srcset="/img/esteli-buses-logo-white-felix-icaza.png"
+          )/
+      nav(class="hidden lg:flex lg:justify-center lg:gap-8")
+        a(href="/terminal-norte-esteli") Terminal norte
+        a(href="/terminal-sur-esteli") Terminal sur
+        a(href="/acerca-de-estelibuses") Acerca de Estelí Buses
     article(class="max-w-xl mx-auto space-y-4")
-      h3(class="text-xl font-semibold") ¡Comparte esta aplicación web!
-      p Compártela en tus redes sociales y ayuda a tus amigos a conocer de manera eficiente, todos los horarios de las terminales de buses de Estelí.
+      h3(class="text-xl font-semibold") ¡Comparte este sitio web!
+      p Compártelo en tus redes sociales y ayuda a tus amigos a conocer de manera eficiente, todos los horarios de las terminales de buses de Estelí.
       section(class="flex flex-wrap justify-center items-center gap-8")
         a#whatsapp(
           class="any-hover:text-orange-200 active:text-orange-200 transition-colors"
@@ -51,7 +78,7 @@ footer(class="bg-blue-gray-800 text-white text-center")
               d="M18 16a3 3 0 0 0-2 .9l-7-4.2v-1.4l7-4.1a3 3 0 0 0 2 .8 3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3v.7L8 9.8A3 3 0 0 0 6 9a3 3 0 0 0-3 3 3 3 0 0 0 3 3 3 3 0 0 0 2-.8l7.2 4.1-.1.7a3 3 0 0 0 5.8 0 3 3 0 0 0-2.9-3Z"
             )/
 
-    article(class="space-y-4 mt-14")
+    article(class="space-y-4")
       p Hecho con ❤️ en Estelí para todos los Estelianos
       p &copy; Estelí Buses 2022, desarrollado por&nbsp;
         a(
