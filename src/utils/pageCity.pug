@@ -78,14 +78,21 @@ mixin pageCity(city, terminalName, destiny, distance, map)
 
       section(class="space-y-5 lg:sticky lg:top-8 order-0 lg:order-1")
         section
-          iframe(
-            src=map
-            class="rounded w-full"
-            loading="lazy"
-            style="border: 0; background: #eee"
-            height="450"
-          )
-          p(class="text-xs mt-3") Previsualización de mapa proporcionada por Google Maps.
+          if map === 'Información no disponible'
+            section(
+              class="rounded w-full flex items-center justify-center"
+              style="background: #eee; height: 450px"
+            )
+              p(class="text-lg") Vista previa de mapa no disponible
+          else
+            iframe(
+              src=map
+              class="rounded w-full"
+              loading="lazy"
+              style="border: 0; background: #eee"
+              height="450"
+            )
+            p(class="text-xs mt-3") Previsualización de mapa proporcionada por Google Maps.
         article(class="flex flex-col gap-8 md:flex-row")
           section(class="space-y-2")
             p(class="font-bold") Lugar de destino:
@@ -104,4 +111,7 @@ mixin pageCity(city, terminalName, destiny, distance, map)
                   path(
                     d="M6.5 8.1c-.9 0-1.6-.7-1.6-1.6a1.6 1.6 0 0 1 1.6-1.6c.9 0 1.6.7 1.6 1.6a1.6 1.6 0 0 1-1.6 1.6m0-6.1C4 2 2 4 2 6.5c0 3.4 4.5 8.4 4.5 8.4s4.5-5 4.5-8.4C11 4 9 2 6.5 2m11 6.1a1.6 1.6 0 0 1-1.6-1.6 1.6 1.6 0 1 1 3.2 0 1.6 1.6 0 0 1-1.6 1.6m0-6.1C15 2 13 4 13 6.5c0 3.4 4.5 8.4 4.5 8.4s4.5-5 4.5-8.4C22 4 20 2 17.5 2m0 14a3 3 0 0 0-2.8 2H9.3a3 3 0 1 0 0 2h5.4a3 3 0 1 0 2.8-4m0 4.5A1.5 1.5 0 0 1 16 19a1.5 1.5 0 0 1 1.5-1.5A1.5 1.5 0 0 1 19 19a1.5 1.5 0 0 1-1.5 1.5Z"
                   )/
-              p(class="font-bold") #{ distance } (aproximadamente)
+              if distance === 'Información no disponible'
+                p(class="font-bold") #{ distance }
+              else
+                p(class="font-bold") #{ distance } (aproximadamente)
