@@ -61,7 +61,10 @@ mixin cardTransportInfo(transportName, time, transportType, price, tripTime, unv
               else
                 strong Precio del pasaje
             td(class="px-3 py-2 group-hover:bg-light-600 transition-colors rounded-r")
-              span(class="px-2 py-1 text-green-700 bg-green-100 rounded font-bold") C$ #{ price } por persona
+              if price === 'Información no disponible'
+                span(class="px-2 py-1 text-red-700 bg-red-100 rounded font-bold") #{ price }
+              else
+                span(class="px-2 py-1 text-green-700 bg-green-100 rounded font-bold") C$ #{ price } por persona
           tr(class="group")
             td(
               class="px-3 py-2 flex items-center group-hover:bg-light-600 transition-colors rounded-l"
