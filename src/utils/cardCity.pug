@@ -1,4 +1,4 @@
-mixin cardCity(city, origin, lqip)
+mixin cardCity(city, origin, lqip, noImage)
   - let convertCityName = city.toLowerCase().normalize('NFD').replace(/[\u0300-\u036f]/g, "").replace(/\s/g, "-")
   - if (convertCityName === 'tisey---la-estanzuela') {
   - convertCityName = "tisey-la-estanzuela"
@@ -12,27 +12,50 @@ mixin cardCity(city, origin, lqip)
       href=`/terminal-${origin}-esteli/horarios-esteli-${convertCityName}`
     )
       picture
-        source(
-          type="image/avif"
-          data-srcset=`/img/terminal-${origin}/horarios-esteli-${convertCityName}-estelibuses-felix-icaza-card.avif`
-        )/
-        source(
-          type="image/webp"
-          data-srcset=`/img/terminal-${origin}/horarios-esteli-${convertCityName}-estelibuses-felix-icaza-card.webp`
-        )/
-        source(
-          type="image/jpeg"
-          data-srcset=`/img/terminal-${origin}/horarios-esteli-${convertCityName}-estelibuses-felix-icaza-card.jpg`
-        )/
-        img(
-          alt=`Horarios de la ciudad de ${city}`
-          class="h-auto object-cover object-center w-full aspect-video any-hover:scale-101 transform origin-center transition-transform lazyload"
-          decoding="async"
-          importance="low"
-          loading="lazy"
-          srcset=lqip
-          data-srcset=`/img/terminal-${origin}/horarios-esteli-${convertCityName}-estelibuses-felix-icaza-card.jpg`
-        )/
+        if noImage === 'no-image'
+          source(
+            type="image/avif"
+            data-srcset=`/img/terminal-${origin}/horarios-esteli-estelibuses-felix-icaza-card.avif`
+          )/
+          source(
+            type="image/webp"
+            data-srcset=`/img/terminal-${origin}/horarios-esteli-estelibuses-felix-icaza-card.webp`
+          )/
+          source(
+            type="image/jpeg"
+            data-srcset=`/img/terminal-${origin}/horarios-esteli-estelibuses-felix-icaza-card.jpg`
+          )/
+          img(
+            alt=`Horarios de la ciudad de ${city}`
+            class="h-auto object-cover object-center w-full aspect-video any-hover:scale-101 transform origin-center transition-transform lazyload"
+            decoding="async"
+            importance="low"
+            loading="lazy"
+            srcset="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAoAAAAGCAYAAAD68A/GAAAAAklEQVR4AewaftIAAADZSURBVAXBPUvDQACA4fe+kl4uNiEW4+CmiJOjg4ub7g7+RkcXB1HQwX9gKYJQirS20oI0NZVoc+fziP5kFYwSBL8h0ooid6zqhvFszvRjyuPNNd+/Lfrp/pasm3Jxdkoca9pNy2LxxaD/wvPDHePhKzLpIkwUh+1yl8vzKxJn2CtbBsMJs8+KInHUlefgaB+d90ryLGM+e0NZzbJySKnpFRmpEfjQMHofoU+OD0ndFs6lGGPQSmI7EVoKvPfsWMuyqtG2Y0FIfAgIqUAqfpo/RPCs1zVSCoSAf7nFTe15qU/xAAAAAElFTkSuQmCC"
+            data-srcset=`/img/terminal-${origin}/horarios-esteli-estelibuses-felix-icaza-card.jpg`
+          )/
+        else
+          source(
+            type="image/avif"
+            data-srcset=`/img/terminal-${origin}/horarios-esteli-${convertCityName}-estelibuses-felix-icaza-card.avif`
+          )/
+          source(
+            type="image/webp"
+            data-srcset=`/img/terminal-${origin}/horarios-esteli-${convertCityName}-estelibuses-felix-icaza-card.webp`
+          )/
+          source(
+            type="image/jpeg"
+            data-srcset=`/img/terminal-${origin}/horarios-esteli-${convertCityName}-estelibuses-felix-icaza-card.jpg`
+          )/
+          img(
+            alt=`Horarios de la ciudad de ${city}`
+            class="h-auto object-cover object-center w-full aspect-video any-hover:scale-101 transform origin-center transition-transform lazyload"
+            decoding="async"
+            importance="low"
+            loading="lazy"
+            srcset=lqip
+            data-srcset=`/img/terminal-${origin}/horarios-esteli-${convertCityName}-estelibuses-felix-icaza-card.jpg`
+          )/
     section(class="p-5 flex flex-col justify-between gap-7 flex-1")
       article(class="text-center")
         h3(class="mb-2.5 text-2xl font-bold")
