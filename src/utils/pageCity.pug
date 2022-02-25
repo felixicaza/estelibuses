@@ -1,6 +1,6 @@
 include breadcrumb
 
-mixin pageCity(city, terminalName, destiny, map, addFilter)
+mixin pageCity(city, terminalName, destiny, map)
   - let cityLowerCase = city.toLowerCase().normalize('NFD').replace(/[\u0300-\u036f]/g, "").replace(/\s/g, "-")
   - if (cityLowerCase === 'tisey---la-estanzuela') {
   - cityLowerCase = "tisey-la-estanzuela"
@@ -69,57 +69,14 @@ mixin pageCity(city, terminalName, destiny, map, addFilter)
                 )/
 
   section(class="py-12 sm:py-16 md:py-20 xl:py-28")
-    //- prettier-ignore
     div(
-      class=`container mx-auto px-4 flex flex-col gap-16 lg:grid lg:grid-cols-2 lg:items-start ${addFilter === true ? 'lg:grid-rows-[70px,1fr]' : ''}`
+      class="container mx-auto px-4 flex flex-col gap-16 lg:grid lg:grid-cols-2 lg:items-start"
     )
-      if addFilter
-        section(class="space-y-3 row-span-1 mt-6 lg:mt-0 order-1 lg:order-0")
-          p(class="font-semibold") Elige el tipo de transporte:
-            form#filter(class="flex gap-6")
-              section(class="group flex items-center")
-                input#all(
-                  name="bus"
-                  type="radio"
-                  checked
-                  class="accent-orange-600 cursor-pointer sibling:checked:text-orange-600"
-                )/
-                label(
-                  class="group-any-hover:text-orange-600 transition-colors cursor-pointer"
-                  for="all"
-                ) &nbsp;Todos
-              section(class="group flex items-center")
-                input#express(
-                  name="bus"
-                  type="radio"
-                  class="accent-orange-600 cursor-pointer sibling:checked:text-orange-600"
-                )/
-                label(
-                  class="group-any-hover:text-orange-600 transition-colors cursor-pointer"
-                  for="express"
-                ) &nbsp;Expresos
-              section(class="group flex items-center")
-                input#routed(
-                  name="bus"
-                  type="radio"
-                  class="accent-orange-600 cursor-pointer sibling:checked:text-orange-600"
-                )/
-                label(
-                  class="group-any-hover:text-orange-600 transition-colors cursor-pointer"
-                  for="routed"
-                ) &nbsp;Ruteados
-
-      //- prettier-ignore
-      section(
-        class=`flex flex-col gap-16 lg:sticky lg:top-8 ${addFilter === true ? 'col-start-1 col-end-2 order-2 lg:order-1' : 'order-1 lg:order-0'}`
-      )
+      section(class="flex flex-col gap-16 lg:sticky lg:top-8 order-1 lg:order-0")
         if block
           block
 
-      //- prettier-ignore
-      section(
-        class=`space-y-5 lg:sticky lg:top-8 ${addFilter === true ? 'row-start-1 row-end-3 col-start-2 col-span-2 order-0 lg:order-2' : 'order-0 lg:order-1'}`
-      )
+      section(class="space-y-5 lg:sticky lg:top-8 order-0 lg:order-1")
         section
           iframe(
             src=map
@@ -129,12 +86,13 @@ mixin pageCity(city, terminalName, destiny, map, addFilter)
             height="450"
           )
           p(class="text-xs mt-3") Previsualización de mapa proporcionada por Google Maps.
-        section(class="space-y-2")
-          p(class="font-bold") Lugar de destino:
-          section(class="flex items-center gap-2")
-            div
-              svg(class="fill-current" viewBox="0 0 24 24" width="24" height="24")
-                path(
-                  d="M12 11.5A2.5 2.5 0 0 1 9.5 9 2.5 2.5 0 0 1 12 6.5 2.5 2.5 0 0 1 14.5 9a2.5 2.5 0 0 1-2.5 2.5M12 2a7 7 0 0 0-7 7c0 5.3 7 13 7 13s7-7.8 7-13a7 7 0 0 0-7-7Z"
-                )/
-            p(class="font-bold")= destiny
+        article(class="flex gap-8")
+          section(class="space-y-2")
+            p(class="font-bold") Lugar de destino:
+            section(class="flex items-center gap-2")
+              div
+                svg(class="fill-current" viewBox="0 0 24 24" width="24" height="24")
+                  path(
+                    d="M12 11.5A2.5 2.5 0 0 1 9.5 9 2.5 2.5 0 0 1 12 6.5 2.5 2.5 0 0 1 14.5 9a2.5 2.5 0 0 1-2.5 2.5M12 2a7 7 0 0 0-7 7c0 5.3 7 13 7 13s7-7.8 7-13a7 7 0 0 0-7-7Z"
+                  )/
+              p(class="font-bold")= destiny
