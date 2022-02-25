@@ -1,6 +1,6 @@
 include breadcrumb
 
-mixin pageCity(city, terminalName, destiny, map)
+mixin pageCity(city, terminalName, destiny, distance, map)
   - let cityLowerCase = city.toLowerCase().normalize('NFD').replace(/[\u0300-\u036f]/g, "").replace(/\s/g, "-")
   - if (cityLowerCase === 'tisey---la-estanzuela') {
   - cityLowerCase = "tisey-la-estanzuela"
@@ -86,7 +86,7 @@ mixin pageCity(city, terminalName, destiny, map)
             height="450"
           )
           p(class="text-xs mt-3") Previsualización de mapa proporcionada por Google Maps.
-        article(class="flex gap-8")
+        article(class="flex flex-col gap-8 md:flex-row")
           section(class="space-y-2")
             p(class="font-bold") Lugar de destino:
             section(class="flex items-center gap-2")
@@ -96,3 +96,12 @@ mixin pageCity(city, terminalName, destiny, map)
                     d="M12 11.5A2.5 2.5 0 0 1 9.5 9 2.5 2.5 0 0 1 12 6.5 2.5 2.5 0 0 1 14.5 9a2.5 2.5 0 0 1-2.5 2.5M12 2a7 7 0 0 0-7 7c0 5.3 7 13 7 13s7-7.8 7-13a7 7 0 0 0-7-7Z"
                   )/
               p(class="font-bold")= destiny
+          section(class="space-y-2")
+            p(class="font-bold") Distancia de viaje:
+            section(class="flex items-center gap-2")
+              div
+                svg(class="fill-current" viewBox="0 0 24 24" width="24" height="24")
+                  path(
+                    d="M6.5 8.1c-.9 0-1.6-.7-1.6-1.6a1.6 1.6 0 0 1 1.6-1.6c.9 0 1.6.7 1.6 1.6a1.6 1.6 0 0 1-1.6 1.6m0-6.1C4 2 2 4 2 6.5c0 3.4 4.5 8.4 4.5 8.4s4.5-5 4.5-8.4C11 4 9 2 6.5 2m11 6.1a1.6 1.6 0 0 1-1.6-1.6 1.6 1.6 0 1 1 3.2 0 1.6 1.6 0 0 1-1.6 1.6m0-6.1C15 2 13 4 13 6.5c0 3.4 4.5 8.4 4.5 8.4s4.5-5 4.5-8.4C22 4 20 2 17.5 2m0 14a3 3 0 0 0-2.8 2H9.3a3 3 0 1 0 0 2h5.4a3 3 0 1 0 2.8-4m0 4.5A1.5 1.5 0 0 1 16 19a1.5 1.5 0 0 1 1.5-1.5A1.5 1.5 0 0 1 19 19a1.5 1.5 0 0 1-1.5 1.5Z"
+                  )/
+              p(class="font-bold") #{ distance } (aproximadamente)
