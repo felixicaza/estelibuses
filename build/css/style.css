@@ -60,64 +60,107 @@ body {
   background: #ffedd5;
 }
 
-#jinotega {
+#jinotega,
+#managua,
+#pueblo-nuevo,
+#el-sauce,
+#san-marcos-de-colon {
   background: #e0e7ff;
 }
 
-#somoto {
+#somoto,
+#matagalpa,
+#san-juan-del-rio-coco,
+#la-concordia,
+#oro-verde {
   background: #ecfccb;
 }
 
-#ocotal {
+#ocotal,
+#leon,
+#san-rafael-del-norte,
+#jalapa {
   background: #fae8ff;
 }
 
-#yali {
+#yali,
+#murra,
+#el-espinal,
+#masaya {
   background: #ede9fe;
 }
 
-#quilali {
+#quilali,
+#achuapa,
+#tisey-la-estanzuela,
+#el-regadio,
+#la-pita {
   background: #e0f2fe;
 }
 
-#san-juan-de-limay {
+#san-juan-de-limay,
+#san-nicolas,
+#la-trinidad,
+#wiwili,
+#la-rica {
   background: #ccfbf1;
 }
 
-#managua {
-  background: #e0e7ff;
-}
+@media (prefers-color-scheme: dark) {
+  #terminal-norte {
+    background: #95c6a6;
+  }
 
-#matagalpa {
-  background: #ecfccb;
-}
+  #terminal-sur {
+    background: #d6bc99;
+  }
 
-#leon {
-  background: #fae8ff;
-}
+  #jinotega,
+  #managua,
+  #pueblo-nuevo,
+  #el-sauce,
+  #san-marcos-de-colon {
+    background: #abb7de;
+  }
 
-#murra {
-  background: #ede9fe;
-}
+  #somoto,
+  #matagalpa,
+  #san-juan-del-rio-coco,
+  ,
+  #la-concordia,
+  #oro-verde {
+    background: #b5c88d;
+  }
 
-#achuapa {
-  background: #e0f2fe;
-}
+  #ocotal,
+  #leon,
+  #san-rafael-del-norte,
+  #jalapa {
+    background: #bb95c6;
+  }
 
-#san-nicolas {
-  background: #ccfbf1;
-}
+  #yali,
+  #murra,
+  #el-espinal,
+  #masaya {
+    background: #ada4d6;
+  }
 
-#la-trinidad {
-  background: #ccfbf1;
-}
+  #quilali,
+  #achuapa,
+  #tisey-la-estanzuela,
+  #el-regadio,
+  #la-pita {
+    background: #97b8ce;
+  }
 
-#tisey-la-estanzuela {
-  background: #e0f2fe;
-}
-
-#el-espinal {
-  background: #ede9fe;
+  #san-juan-de-limay,
+  #san-nicolas,
+  #la-trinidad,
+  #wiwili,
+  #la-rica {
+    background: #8dc9bc;
+  }
 }
 
 @media (min-width: 1200px) {

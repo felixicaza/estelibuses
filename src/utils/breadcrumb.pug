@@ -1,11 +1,23 @@
 mixin breadcrumb(terminalName, city)
   - const convertTerminalName = terminalName.toLowerCase().normalize('NFD').replace(/[\u0300-\u036f]/g, "").replace(/\s/g, "-")
 
-  nav(aria-label="breadcrumb" class="py-2")
+  style.
+    .breadcrumb {
+      scrollbar-width: none;
+    }
+
+    .breadcrumb::-webkit-scrollbar {
+      display: none;
+    }
+
+  nav(
+    aria-label="breadcrumb"
+    class="py-2 whitespace-nowrap overflow-x-scroll breadcrumb"
+  )
     ol(class="flex items-center space-x-2")
       li(style="width: 24px; height: 24px")
         a(
-          class="any-hover:text-gray-900 active:text-gray-900 transition-colors"
+          class="any-hover:text-gray-900 active:text-gray-900 transition-colors dark:any-hover:text-light-700 dark:active:text-light-700"
           href="/"
           title="Inicio"
         )
@@ -16,11 +28,11 @@ mixin breadcrumb(terminalName, city)
           path(d="m8.6 16.6 4.6-4.6-4.6-4.6L10 6l6 6-6 6-1.4-1.4Z")/
       li
         a(
-          class="font-medium text-gray-700 any-hover:text-gray-900 active:text-gray-900 transition-colors"
+          class="font-medium text-gray-700 any-hover:text-gray-900 active:text-gray-900 transition-colors dark:text-white dark:any-hover:text-light-700 dark:active:text-light-700"
           href=`/${convertTerminalName}-esteli`
         )= terminalName
       li
         svg(fill="currentColor" viewBox="0 0 24 24" width="24" height="24")
           path(d="m8.6 16.6 4.6-4.6-4.6-4.6L10 6l6 6-6 6-1.4-1.4Z")/
       li(aria-current="page")
-        p(class="font-medium text-gray-500 dark:text-gray-600")= city
+        p(class="font-medium text-gray-500 dark:text-light-500")= city

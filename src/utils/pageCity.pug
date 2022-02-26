@@ -79,17 +79,38 @@ mixin pageCity(city, terminalName, destiny, distance, map)
       section(class="space-y-5 lg:sticky lg:top-8 order-0 lg:order-1")
         section
           if map === 'Información no disponible'
+            style.
+              .map {
+                background: #eee;
+              }
+
+              @media (prefers-color-scheme: dark) {
+                .map {
+                  background: #1f2937;
+                }
+              }
             section(
-              class="rounded w-full flex items-center justify-center"
-              style="background: #eee; height: 450px"
+              class="rounded w-full flex items-center justify-center map"
+              style="height: 450px"
             )
               p(class="text-lg") Vista previa del mapa no disponible
           else
+            style.
+              .map {
+                background: #eee;
+              }
+
+              @media (prefers-color-scheme: dark) {
+                .map {
+                  background: #1f2937;
+                }
+              }
+
             iframe(
               src=map
-              class="rounded w-full"
+              class="rounded w-full map"
               loading="lazy"
-              style="border: 0; background: #eee"
+              style="border: 0"
               height="450"
             )
             p(class="text-xs mt-3") Previsualización de mapa proporcionada por Google Maps.

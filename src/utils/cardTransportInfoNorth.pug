@@ -2,7 +2,7 @@ mixin cardTransportInfoNorth(transport, time, transportType, transportName, pric
   - const transportTypeToLowerCase = transportType.toLowerCase()
 
   //- prettier-ignore
-  article(class=`space-y-5 bg-light-50 shadow rounded p-4 any-hover:shadow-md transition-shadow ${transportTypeToLowerCase}`)
+  article(class=`space-y-5 bg-light-50 shadow rounded p-4 any-hover:shadow-md transition-shadow dark:bg-cool-gray-800 ${transportTypeToLowerCase}`)
     h2(class="titles text-3xl sm:text-4xl font-bold")= transport
 
     style.
