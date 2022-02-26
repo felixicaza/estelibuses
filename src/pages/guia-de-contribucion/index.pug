@@ -32,7 +32,6 @@ block append stylesheets
 block append preload
 
 block append defer-scripts
-  script(src=`${ASSETS_PATH}js/lazy-bg.js` defer importance="low")
 
 block append content
   header(class="wave")
@@ -40,6 +39,25 @@ block append content
       include ../../components/navbar
 
       section(
-        class="flex flex-col justify-center items-center pt-18 pb-26 xs:pb-36 lg:pt-28 lg:pb-34 xl:pb-44 2xl:pb-54 text-center"
+        class="flex flex-col justify-center items-center pt-18 pb-26 xs:pb-36 lg:pt-28 lg:pb-34 xl:pb-44 2xl:pb-54 text-center max-w-6xl mx-auto space-y-6"
       )
         h1(class="text-4xl sm:text-5xl font-bold mb-8 max-w-screen-lg z-2") ¿Te gustaría contribuir a este proyecto?
+        p(class="text-base text-black-200 sm:text-lg dark:text-light-700") Esta es una guía para que con tu ayuda este proyecto pueda crecer y llegar a ayudar a muchas personas de la ciudad de Estelí o que estén visitando ésta ciudad.
+        p(class="text-base text-black-200 sm:text-lg dark:text-light-700") Cómo bien es conocido, en algunos casos puede haber algún tipo de problemas con las unidades de transporte (lo cuál no es muy recurrente pero puede llegar a pasar), es por eso que en suceder este caso cualquier persona que tenga información de primera mano (si eres un usuario del transporte, ayudante, chófer, etc.) y sea totalmente verificada, ayude a notificada a través de este medio.
+        p(class="text-base text-black-200 sm:text-lg dark:text-light-700") Por lo tanto, te agradecería mucho que compartas esta aplicación web para que ayudes a muchas más personas a estar al tanto de la ruta de transporte que van abordar.
+        h2(class="text-3xl sm:text-4xl font-bold !mt-14") ¿Qué información puedes contribuir?
+        p(class="text-base text-black-200 sm:text-lg dark:text-light-700") Estás son algunas de las opciones que puedes tomar en cuenta para envíarme dicha información:
+        ul(class="space-y-4 list-disc text-left max-w-4xl mx-auto px-5")
+          li Cambio de buses, es decir, en caso de que la unidad original tenga problemas y sea reemplazada por una unidad emergente.
+          li A portar fotos de las unidades de transporte así cómo su nombre, esto para subirlas a esta aplicación web y las personas las reconozcan fácilmente.
+          li Información relacionada al precio del pasaje, en caso de que el precio cambie también notificarlo.
+          li Información del destino de las unidades de transporte, como el nombre de las terminales.
+          li A portar el número de teléfono de los buses, necesario para las personas que necesitan envíar o recibir encomiendas.
+          li Para los buses ruteados, compartir el nombre de las paradas principales y su hora apróximada de parada, para que las personas puedan abordar sin ninguna dificultad dicha unidad de transporte.
+          li Cualquier otra información que consideres relevante que se debería agregar a este proyecto.
+        h2(class="text-3xl sm:text-4xl font-bold !mt-14") ¿Cómo contribuir?
+        p(class="text-base text-black-200 sm:text-lg dark:text-light-700") Para poder contribuir a este proyecto, debes ponerte en contacto conmigo (Félix Icaza, quién es el responsable de este proyecto web) y envíarme toda la información necesaria para actualizarla lo antes posible.
+        p(class="text-base text-black-200 sm:text-lg dark:text-light-700") Para contactame puedes hacerlo a través de mi número de teléfono,&nbsp;
+          a(class="text-orange-600 underline" href="https://wa.me/50557279567") 57279567
+          | &nbsp;(puedes hacer click en el número para envíarme un mensaje a través de WhatsApp).
+        p(class="text-base text-black-200 sm:text-lg dark:text-light-700") Esta ha sido una pequeña guía para que conozcas la información que puedes compartir conmigo para este proyecto. Como ya he mencinado antes, sería de mucha ayuda que compartas este proyecto en tus redes sociales. Ya que este sitio/aplicación web estará en constante actualización para mejorar la experiencia de navegación, el diseño y la usabilidad para que sea fácil de usar para cualquier persona.
