@@ -6,11 +6,11 @@ block append variables
   - const ASSETS_PATH = "../"
   - const HAS_CRITICAL_CSS = false
   - const APPLICATION_NAME = "Estelí Buses"
-  - const META_DESCRIPTION = "Conoce todos los horarios de los buses de la Terminal Norte y de la Terminal Sur de la ciudad de Estelí."
+  - const META_DESCRIPTION = "Conoce sobre Buses Estelí, un proyecto del desarrollador web Félix Icaza."
   - const META_ROBOTS = "noindex, nofollow"
   - const LANGUAGE = "es"
   - const CURRENT_URL = URL
-  - const SOCIAL_TITLE = "Horarios de las terminales de buses de la ciudad de Estelí"
+  - const SOCIAL_TITLE = "Acerca de Buses Estelí"
   - const SOCIAL_DESCRIPTION = META_DESCRIPTION
   - const SOCIAL_IMAGE = ""
   - const SOCIAL_IMAGE_ALT = SOCIAL_TITLE
@@ -32,7 +32,6 @@ block append stylesheets
 block append preload
 
 block append defer-scripts
-  script(src=`${ASSETS_PATH}js/lazy-bg.js` defer importance="low")
 
 block append content
   header(class="wave")
@@ -40,6 +39,46 @@ block append content
       include ../../components/navbar
 
       section(
-        class="flex flex-col justify-center items-center pt-18 pb-26 xs:pb-36 lg:pt-28 lg:pb-34 xl:pb-44 2xl:pb-54 text-center"
+        class="flex flex-col justify-center items-center pt-18 pb-26 xs:pb-36 lg:pt-28 lg:pb-34 xl:pb-44 2xl:pb-54 text-center max-w-6xl mx-auto space-y-6"
       )
-        h1(class="text-4xl sm:text-5xl font-bold mb-8 max-w-screen-lg z-2") Conoce sobre este proyecto Buses Estelí
+        h1(class="text-4xl sm:text-5xl font-bold mb-8 max-w-screen-lg z-2") Conoce sobre este proyecto, Buses Estelí
+        p(class="text-base text-black-200 sm:text-lg dark:text-light-700")
+          strong Buses Estelí es un proyecto personal y totalmente voluntario
+          | diseñado, desarrollado y mantenido en su totalidad por el desarrollador web&nbsp;
+          a(
+            class="text-orange-600 underline"
+            href="https://felixicaza.com/?utm_source=estelibuses&utm_medium=website&utm_campaign=estelibuses_users&utm_content=about_project"
+            target="_blank"
+          ) Félix Icaza
+          | , quién no está asociado ni relacionado con niguna cooperativa o transportista de las terminales de buses de Estelí.
+        h2(class="text-3xl sm:text-4xl font-bold !mt-14") ¿Porqué existe este proyecto?
+        p(class="text-base text-black-200 sm:text-lg dark:text-light-700") A lo largo de los años,&nbsp;
+          strong los Estelianos siempre hemos tenido la dificultad de conocer con exactitud la hora de salida de los buses
+          | &nbsp;de la terminal norte y de la terminal sur. La única forma es llamando por teléfono directamente a las terminales, pero también algunas personas no tienen el acceso a conocer el número de teléfono de cada terminal, inclusive tener que ir personalmente a las terminales para solicitar dicha información.
+        p(class="text-base text-black-200 sm:text-lg dark:text-light-700") Así que decidí crear este proyecto, con la idea principal&nbsp;
+          strong para intentar de solventar esa problemática o dificultad que existe en relación a los horarios de las terminales de buses
+          | , así, todas las personas que recidan en Estelí o cualquier turista que desee viajar desde Estelí hacia el interior del país,&nbsp;
+          strong puedan conocer fácilmente los horarios y todos los destinos de dichas terminales y esté accesible para todos.
+        p(class="text-base text-black-200 sm:text-lg dark:text-light-700") Ya que de ésta forma cualquier información que la población de Estelí necesite estará a su alcance y hará mucho más fácil, conocer la información relacionada a cada terminal de buses.
+        p(class="text-base text-black-200 sm:text-lg dark:text-light-700") Es por eso que es importante, que&nbsp;
+          strong al conocer este proyecto lo compartas con todos tus familiares, amigos y conocidos, para así ayudar a más personas
+          | &nbsp;y poder constuir una base sólida de información para este proyecto, con la cooperación de todos quiénes deseen aportar.
+        h2(class="text-3xl sm:text-4xl font-bold !mt-14") Contribución
+        p(class="text-base text-black-200 sm:text-lg dark:text-light-700")
+          strong Este es un proyecto voluntario realizado por una sola persona
+          | , por lo que obtener toda la información necesaria más allá de los horarios de salida de los buses, sería enormemente complicado. Es por eso, que me gustaría invitarte a contribuir en este proyecto, por lo que puedes leer la&nbsp;
+          a(class="text-orange-600 underline" href="/guia-de-contribucion") guía de contribución
+          | &nbsp;para que conozcas más detalladamente cómo contribuir.
+        p(class="text-base text-black-200 sm:text-lg dark:text-light-700") Hay muchas ideas que me gustaría agregar, como por ejemplo:
+        ul(class="space-y-4 list-disc text-left max-w-4xl mx-auto px-5")
+          li Obtener una foto y el número de cada bahía de espera de cada bus para que las personas reconozcan fácilmente dicha unidad de transporte.
+          li Conocer el precio del pasaje de cada bus.
+          li Obtener el número directo de cada transporte (esto sería útil para las personas que envían y reciben encomiendas).
+          li Conocer el destino exacto de cada bus, para así mejorar la precisión del mapa que puedes visualizar en los horarios de cada ciudad.
+        p(class="text-base text-black-200 sm:text-lg dark:text-light-700") Éstas son sólo algunas ideas que por el momento me gustaría agregar, pero no dudes en ponerte en contacto conmigo envíandome un mensaje&nbsp;
+          a(class="text-orange-600 underline" href="https://wa.me/50557279567") a través de WhatsApp
+          | &nbsp;(haz click en el texto de color naranja) para que me puedas proponer otras ideas que puedas tener.
+        h2(class="text-3xl sm:text-4xl font-bold !mt-14") Agradecimientos
+        p(class="text-base text-black-200 sm:text-lg dark:text-light-700") Por último, quiero agradecer enormemente a Daysi Cruz, por toda su amable y atenta contribución para ayudarme a recopilar la información necesaria de las salidas de buses de la terminal sur (Cotrán sur), ya que de otra forma hubiese sido complicada haberla obtenido por mi propia cuenta.
+        h3(class="text-2xl font-bold") ¿Cómo obtuve la información de la terminal norte?
+        p(class="text-base text-black-200 sm:text-lg dark:text-light-700") En la Cotrán Norte, la única forma de obtener información relacionada a los horarios de salida de los buses, es a través del rótulo que se encuentra en el pasillo de la entrada principal.
