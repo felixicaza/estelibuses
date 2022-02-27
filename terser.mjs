@@ -1,10 +1,10 @@
 /* eslint-disable import/no-extraneous-dependencies */
 /* eslint-disable no-console */
 
-import {readFileSync, mkdir, writeFileSync} from 'fs'
-import {relative, dirname} from 'path'
+import { readFileSync, mkdir, writeFileSync } from 'fs'
+import { relative, dirname } from 'path'
 
-import {globbySync} from 'globby'
+import { globbySync } from 'globby'
 import { minify } from 'terser'
 
 const files = globbySync(['build/js/**/*.js'])
