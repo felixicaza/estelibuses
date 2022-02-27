@@ -126,7 +126,6 @@ body {
   #somoto,
   #matagalpa,
   #san-juan-del-rio-coco,
-  ,
   #la-concordia,
   #oro-verde {
     background: #b5c88d;
@@ -257,4 +256,10 @@ body {
   position: absolute;
   top: 0;
   left: 0;
+  pointer-events: none;
+  touch-action: none;
+}
+
+.-translate-x-8 {
+  --tw-translate-x: -2rem;
 }
