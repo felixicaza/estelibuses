@@ -3,7 +3,7 @@
   "short_name": "Estelí Buses",
   "description": "Conoce todos los horarios de los buses de la Terminal Norte y de la Terminal Sur de la ciudad de Estelí",
   "id": "esteli-buses",
-  "start_url": "/",
+  "start_url": "/?homescreen=1",
   "lang": "es",
   "display": "standalone",
   "orientation": "portrait",
