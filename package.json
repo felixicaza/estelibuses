@@ -42,9 +42,9 @@
     "windicss:build": "windicss build/**/*.{html,js} -tdo build/css/lib/windi.css -f windi.config.js"
   },
   "lint-staged": {
-    "./**/*.js": [
+    "./**/*.{js,mjs}": [
       "pnpm lint",
-      "prettier --write \"./**/*.js\""
+      "prettier --write \"./**/*.{js,mjs}\""
     ],
     "./**/*.pug": "pnpm format:pug",
     "./build/css/*.css": "prettier --write \"./build/css/*.css\"",
