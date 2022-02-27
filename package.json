@@ -17,7 +17,7 @@
     "compress:br": "node brotli.js",
     "compress:html": "node html-minifier-terser.js",
     "compress:img": "node pngquant.js && node mozjpeg.js && cross-env NODE_ENV=production node webp.js",
-    "compress:js": "node terser.js",
+    "compress:js": "node terser.mjs",
     "copyfiles": "node copy.js",
     "format": "run-s -l -n format:all format:pug format:xml",
     "format:all": "prettier --write \"./**/*.{js,json,md,yml}\"",
