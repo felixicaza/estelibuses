@@ -73,6 +73,7 @@
     "eslint-config-prettier": "8.4.0",
     "eslint-plugin-import": "2.25.2",
     "fast-glob": "3.2.11",
+    "globby": "13.1.1",
     "html-minifier-terser": "6.1.0",
     "husky": "7.0.4",
     "imagemin": "8.0.1",

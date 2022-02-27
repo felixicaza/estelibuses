@@ -15,6 +15,7 @@ specifiers:
   eslint-config-prettier: 8.4.0
   eslint-plugin-import: 2.25.2
   fast-glob: 3.2.11
+  globby: 13.1.1
   html-minifier-terser: 6.1.0
   husky: 7.0.4
   imagemin: 8.0.1
@@ -63,6 +64,7 @@ devDependencies:
   eslint-config-prettier: 8.4.0_eslint@8.2.0
   eslint-plugin-import: 2.25.2_eslint@8.2.0
   fast-glob: 3.2.11
+  globby: 13.1.1
   html-minifier-terser: 6.1.0
   husky: 7.0.4
   imagemin: 8.0.1
@@ -2401,6 +2403,17 @@ packages:
     engines: {node: ^12.20.0 || ^14.13.1 || >=16.0.0}
     dependencies:
       array-union: 3.0.1
+      dir-glob: 3.0.1
+      fast-glob: 3.2.11
+      ignore: 5.2.0
+      merge2: 1.4.1
+      slash: 4.0.0
+    dev: true
+
+  /globby/13.1.1:
+    resolution: {integrity: sha512-XMzoDZbGZ37tufiv7g0N4F/zp3zkwdFtVbV3EHsVl1KQr4RPLfNoT068/97RPshz2J5xYNEjLKKBKaGHifBd3Q==}
+    engines: {node: ^12.20.0 || ^14.13.1 || >=16.0.0}
+    dependencies:
       dir-glob: 3.0.1
       fast-glob: 3.2.11
       ignore: 5.2.0
