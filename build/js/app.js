@@ -61,7 +61,7 @@ if (document.getElementById('whatsapp-city')) {
 
   const shareDataCity = {
     title: 'Estelí Buses',
-    text: `¡Conoce todos los ${documentTitle}`,
+    text: `¡Conoce todos los ${documentTitle}!`,
     url: `https://estelibuses.web.app${window.location.pathname}?utm_source=sharebtncity&utm_medium=webapp&utm_campaign=social_share_city&utm_content=header`
   }
 
