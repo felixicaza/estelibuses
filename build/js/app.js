@@ -2,15 +2,15 @@
 /* eslint-disable no-undef */
 
 /**
- * Share
- */
-
-/**
- * Firebase Configuration
+ * Firebase Import Analytics
  */
 
 import { initializeApp } from './lib/firebase-app.js'
 import { getAnalytics } from './lib/firebase-analytics.js'
+
+/**
+ * Share
+ */
 
 const whatsappBtn = document.getElementById('whatsapp')
 const telegramBtn = document.getElementById('telegram')
@@ -51,20 +51,17 @@ if (isMobile) {
  * Share icons for city
  */
 
-function capitalize(str) {
-  return str[0].toUpperCase() + str.slice(1)
-}
-
 if (document.getElementById('whatsapp-city')) {
   const whatsappCity = document.getElementById('whatsapp-city')
   const telegramCity = document.getElementById('telegram-city')
   const shareCity = document.getElementById('share-city')
 
+  const documentTitle =
+    document.title[0].toLocaleLowerCase() + document.title.substr(1)
+
   const shareDataCity = {
     title: 'Estelí Buses',
-    text: `¡Conoce todos los horarios de los buses de Estelí hacia ${capitalize(
-      document.querySelector('body header').id
-    )}`,
+    text: `¡Conoce todos los ${documentTitle}`,
     url: `https://estelibuses.web.app${window.location.pathname}?utm_source=sharebtncity&utm_medium=webapp&utm_campaign=social_share_city&utm_content=header`
   }
 
@@ -77,22 +74,18 @@ if (document.getElementById('whatsapp-city')) {
   }
 
   if (isMobile) {
+    const documentTitleLinks =
+      document.title[0].toLocaleLowerCase() + document.title.substr(1)
+    const documentTitleURL = documentTitleLinks.replace(/\s/g, '%20')
+
     whatsappCity.setAttribute(
       'href',
-      `whatsapp://send?text=%C2%A1Conoce%20todos%20los%20horarios%20de%20los%20buses%20de%20Estel%C3%AD%20hacia%20${capitalize(
-        document.querySelector('body header').id
-      )}!%0ahttps://estelibuses.web.app${
-        window.location.pathname
-      }?utm_source=whatsappmobile&utm_medium=webapp&utm_campaign=social_share_city&utm_content=header`
+      `whatsapp://send?text=%C2%A1Conoce%20todos%20los%20${documentTitleURL}!%0ahttps://estelibuses.web.app${window.location.pathname}?utm_source=whatsappmobile&utm_medium=webapp&utm_campaign=social_share_city&utm_content=header`
     )
     whatsappCity.removeAttribute('target')
     telegramCity.setAttribute(
       'href',
-      `tg://msg?text=%C2%A1Conoce%20todos%20los%20horarios%20de%20los%20buses%20de%20Estel%C3%AD%20hacia%20${capitalize(
-        document.querySelector('body header').id
-      )}!%0ahttps://estelibuses.web.app${
-        window.location.pathname
-      }?utm_source=telegrammobile&utm_medium=webapp&utm_campaign=social_share_city&utm_content=header`
+      `tg://msg?text=%C2%A1Conoce%20todos%20los%20${documentTitleURL}!%0ahttps://estelibuses.web.app${window.location.pathname}?utm_source=telegrammobile&utm_medium=webapp&utm_campaign=social_share_city&utm_content=header`
     )
     telegramCity.removeAttribute('target')
   }
@@ -104,6 +97,10 @@ if (document.getElementById('whatsapp-city')) {
 window.addEventListener('load', () => {
   quicklink.listen()
 })
+
+/**
+ * Firebase Configuration
+ */
 
 if (window.location.hostname === 'estelibuses.web.app') {
   const firebaseConfig = {

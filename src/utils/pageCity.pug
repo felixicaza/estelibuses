@@ -6,6 +6,7 @@ mixin pageCity(city, terminalName, destiny, distance, map)
   - cityLowerCase = "tisey-la-estanzuela"
   - }
   - const sanitizeTerminalName = terminalName.toLowerCase().normalize('NFD').replace(/[\u0300-\u036f]/g, "").replace(/\s/g, "-")
+  - const citySafeUrl = city.replace(/\s/g, "%20")
 
   header(class="wave" id=cityLowerCase)
     div(class="container mx-auto px-4")
@@ -23,7 +24,7 @@ mixin pageCity(city, terminalName, destiny, distance, map)
           section(class="flex flex-wrap justify-center items-center gap-8")
             a#whatsapp-city(
               class="any-hover:text-orange-200 active:text-orange-200 transition-colors"
-              href=`https://api.whatsapp.com/send?text=%C2%A1Conoce%20todos%20los%20horarios%20de%20los%20buses%20de%20Estel%C3%AD%20hacia%20${city}!%0ahttps://estelibuses.web.app/${sanitizeTerminalName}-esteli/horarios-esteli-${cityLowerCase}?utm_source=whatsapp&utm_medium=webapp&utm_campaign=social_share_city&utm_content=header`
+              href=`https://api.whatsapp.com/send?text=%C2%A1Conoce%20todos%20los%20horarios%20de%20los%20buses%20de%20Estel%C3%AD%20hacia%20${citySafeUrl}!%0ahttps://estelibuses.web.app/${sanitizeTerminalName}-esteli/horarios-esteli-${cityLowerCase}?utm_source=whatsapp&utm_medium=webapp&utm_campaign=social_share_city&utm_content=header`
               target="_blank"
             )
               svg(class="fill-current" viewBox="0 0 24 24" width="33" height="33")
@@ -32,7 +33,7 @@ mixin pageCity(city, terminalName, destiny, distance, map)
                 )/
             a#telegram-city(
               class="any-hover:text-orange-200 active:text-orange-200 transition-colors"
-              href=`https://telegram.me/share/url?url=%C2%A1Conoce%20todos%20los%20horarios%20de%20los%20buses%20de%20Estel%C3%AD%20hacia%20${city}!%0ahttps://estelibuses.web.app/${sanitizeTerminalName}-esteli/horarios-esteli-${cityLowerCase}?utm_source=telegram&utm_medium=webapp&utm_campaign=social_share_city&utm_content=header`
+              href=`https://telegram.me/share/url?url=%C2%A1Conoce%20todos%20los%20horarios%20de%20los%20buses%20de%20Estel%C3%AD%20hacia%20${citySafeUrl}!%0ahttps://estelibuses.web.app/${sanitizeTerminalName}-esteli/horarios-esteli-${cityLowerCase}?utm_source=telegram&utm_medium=webapp&utm_campaign=social_share_city&utm_content=header`
               target="_blank"
             )
               svg(class="fill-current" viewBox="0 0 24 24" width="30" height="30")
@@ -52,7 +53,7 @@ mixin pageCity(city, terminalName, destiny, distance, map)
                 )/
             a(
               class="any-hover:text-orange-200 active:text-orange-200 transition-colors"
-              href=`https://twitter.com/intent/tweet?url=https://estelibuses.web.app/${sanitizeTerminalName}-esteli/horarios-esteli-${cityLowerCase}?utm_source=twitter&utm_medium=webapp&utm_campaign=social_share_city&utm_content=header&text=%C2%A1Conoce%20todos%20los%20horarios%20de%20los%20buses%20de%20Estel%C3%AD%20hacia%20${city}!`
+              href=`https://twitter.com/intent/tweet?url=https://estelibuses.web.app/${sanitizeTerminalName}-esteli/horarios-esteli-${cityLowerCase}?utm_source=twitter&utm_medium=webapp&utm_campaign=social_share_city&utm_content=header&text=%C2%A1Conoce%20todos%20los%20horarios%20de%20los%20buses%20de%20Estel%C3%AD%20hacia%20${citySafeUrl}!`
               target="_blank"
             )
               svg(class="fill-current" viewBox="0 0 24 24" width="33" height="33")
