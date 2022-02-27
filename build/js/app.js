@@ -116,3 +116,11 @@ if (window.location.hostname === 'estelibuses.web.app') {
   const app = initializeApp(firebaseConfig)
   getAnalytics(app)
 }
+
+/**
+ * Install Service Worker
+ */
+
+window.addEventListener('load', () => {
+  navigator.serviceWorker.register('/sw.js')
+})
