@@ -124,3 +124,55 @@ if (window.location.hostname === 'estelibuses.web.app') {
 window.addEventListener('load', () => {
   navigator.serviceWorker.register('/sw.js')
 })
+
+/**
+ * Custom button install PWA
+ */
+
+const installBtn = document.getElementById('install')
+const installBtnMobileIcon = document.querySelector('#install .mobile')
+const installBtnDesktopIcon = document.querySelector('#install .desktop')
+let deferredPrompt
+
+window.addEventListener('beforeinstallprompt', e => {
+  e.preventDefault()
+
+  deferredPrompt = e
+
+  if (!isMobile) {
+    installBtnMobileIcon.classList.add('hidden')
+    installBtnDesktopIcon.classList.remove('hidden')
+  }
+
+  installBtn.classList.replace('opacity-0', 'opacity-100')
+
+  setTimeout(() => {
+    if (isMobile) {
+      installBtn.classList.replace('translate-y-18', '-translate-y-18')
+    } else {
+      installBtn.classList.replace('left-0', 'right-0')
+      installBtn.classList.replace('translate-x-4', '-translate-x-8')
+      installBtn.classList.replace('translate-y-18', '-translate-y-12')
+    }
+  }, 3000)
+})
+
+window.addEventListener('appinstalled', () => {
+  deferredPrompt = null
+
+  installBtn.classList.add('opacity-0')
+  installBtn.classList.add('translate-y-18')
+})
+
+installBtn.addEventListener('click', async () => {
+  deferredPrompt.prompt()
+
+  const { outcome } = await deferredPrompt.userChoice
+
+  if (outcome === 'accepted') {
+    deferredPrompt = null
+
+    installBtn.classList.add('opacity-0')
+    installBtn.classList.add('translate-y-18')
+  }
+})
