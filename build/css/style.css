@@ -40,6 +40,9 @@ html {
 html,
 body {
   scroll-padding-top: 130px;
+  overscroll-behavior-y: contain;
+  -webkit-tap-highlight-color: transparent;
+  -webkit-touch-callout: none;
 }
 
 .avif #mainPage {
