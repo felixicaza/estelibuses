@@ -11,6 +11,12 @@
   "orientation": "portrait",
   "background_color": "#fb923c",
   "theme_color": "#fb923c",
+  "related_applications": [
+    {
+      "platform": "webapp",
+      "url": "https://estelibuses.web.app/manifest.json"
+    }
+  ],
   "shortcuts": [
     {
       "name": "Horarios Terminal Norte",
