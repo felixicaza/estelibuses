@@ -6,7 +6,7 @@
  */
 
 import { initializeApp } from './lib/firebase-app.js'
-import { getAnalytics } from './lib/firebase-analytics.js'
+import { getAnalytics, logEvent } from './lib/firebase-analytics.js'
 
 /**
  * Share
@@ -102,17 +102,17 @@ window.addEventListener('load', () => {
  * Firebase Configuration
  */
 
-if (window.location.hostname === 'estelibuses.web.app') {
-  const firebaseConfig = {
-    apiKey: 'AIzaSyAqPF5z2zeJCAXKmnAV6gfapspOK4joCEs',
-    authDomain: 'buses-esteli-d2d5e.firebaseapp.com',
-    projectId: 'buses-esteli-d2d5e',
-    storageBucket: 'buses-esteli-d2d5e.appspot.com',
-    messagingSenderId: '47347043568',
-    appId: '1:47347043568:web:e1b9a83b88c35fe1a0c635',
-    measurementId: 'G-4QFJH1D53Q'
-  }
+const firebaseConfig = {
+  apiKey: 'AIzaSyAqPF5z2zeJCAXKmnAV6gfapspOK4joCEs',
+  authDomain: 'buses-esteli-d2d5e.firebaseapp.com',
+  projectId: 'buses-esteli-d2d5e',
+  storageBucket: 'buses-esteli-d2d5e.appspot.com',
+  messagingSenderId: '47347043568',
+  appId: '1:47347043568:web:e1b9a83b88c35fe1a0c635',
+  measurementId: 'G-4QFJH1D53Q'
+}
 
+if (window.location.hostname === 'estelibuses.web.app') {
   const app = initializeApp(firebaseConfig)
   getAnalytics(app)
 }
@@ -162,6 +162,19 @@ window.addEventListener('appinstalled', () => {
 
   installBtn.classList.add('opacity-0')
   installBtn.classList.add('translate-y-18')
+
+  /**
+   * Track if pwa is installed
+   */
+
+  if (window.location.hostname === 'estelibuses.web.app') {
+    const appTrackInstall = initializeApp(firebaseConfig)
+    const analytics = getAnalytics(appTrackInstall)
+
+    logEvent(analytics, 'installed_estelibuses', {
+      name: 'Estelí Buses fue instalado'
+    })
+  }
 })
 
 installBtn.addEventListener('click', async () => {
