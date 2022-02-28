@@ -15,7 +15,7 @@ mixin pageTerminal(idHeader, title, description, location, phone, origin, ...cit
           class="flex flex-col md:flex-row md:items-start gap-8 justify-center mt-6 text-left max-w-xs sm:max-w-md md:max-w-xl mx-auto"
         )
           //- prettier-ignore
-          section(class=`flex gap-2 font-semibold ${phone !== '' ? 'md:basis-3/5 items-start' : 'items-center'}`)
+          section(class=`flex gap-2 font-semibold ${phone !== '' ? 'md:basis-3/5 items-start' : 'items-start md:items-center'}`)
             div(class="mt-0.8")
               svg(class="fill-current" viewBox="0 0 24 24" width="24" height="24")
                 path(
