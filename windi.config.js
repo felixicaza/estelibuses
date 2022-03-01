@@ -2,6 +2,9 @@
 
 module.exports = {
   darkMode: 'media',
+  extract: {
+    exclude: ['build/sw.js', 'build/js/sw-app-shell.js']
+  },
   theme: {
     screens: {
       xs: '412px',
