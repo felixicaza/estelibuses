@@ -189,3 +189,33 @@ installBtn.addEventListener('click', async () => {
     installBtn.classList.add('translate-y-18')
   }
 })
+
+/**
+ * Close notification
+ */
+
+const containerNotification = document.getElementById('container-notification')
+const closeNotification = document.getElementById('notification-close')
+const linkNotification = document.getElementById('link-notification')
+
+window.addEventListener('load', () => {
+  if (localStorage.getItem('hide-notification') !== 'true') {
+    containerNotification.style.opacity = '1'
+
+    setTimeout(() => {
+      containerNotification.style.transform = 'translate(-0.75rem, 1.5rem)'
+    }, 3800)
+  }
+})
+
+linkNotification.addEventListener('click', () => {
+  localStorage.setItem('hide-notification', true)
+  containerNotification.style.transform = 'translateY(-100%)'
+  containerNotification.style.opacity = '0'
+})
+
+closeNotification.addEventListener('click', () => {
+  localStorage.setItem('hide-notification', true)
+  containerNotification.style.transform = 'translateY(-100%)'
+  containerNotification.style.opacity = '0'
+})
