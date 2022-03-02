@@ -196,10 +196,9 @@ installBtn.addEventListener('click', async () => {
 
 const containerNotification = document.getElementById('container-notification')
 const closeNotification = document.getElementById('notification-close')
-const linkNotification = document.getElementById('link-notification')
 
 window.addEventListener('load', () => {
-  if (localStorage.getItem('hide-notification') !== 'true') {
+  if (localStorage.getItem('hidden-notification') !== 'true') {
     containerNotification.style.opacity = '1'
 
     setTimeout(() => {
@@ -208,14 +207,8 @@ window.addEventListener('load', () => {
   }
 })
 
-linkNotification.addEventListener('click', () => {
-  localStorage.setItem('hide-notification', true)
-  containerNotification.style.transform = 'translateY(-100%)'
-  containerNotification.style.opacity = '0'
-})
-
 closeNotification.addEventListener('click', () => {
-  localStorage.setItem('hide-notification', true)
+  localStorage.setItem('hidden-notification', true)
   containerNotification.style.transform = 'translateY(-100%)'
   containerNotification.style.opacity = '0'
 })
