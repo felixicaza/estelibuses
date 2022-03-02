@@ -2,7 +2,7 @@ extends ../../../templates/template.pug
 include ../../../utils/pageBlog
 
 block append variables
-  - const CURRENT_PAGE = "inicio"
+  - const CURRENT_PAGE = ""
   - const URL = "https://estelibuses.web.app"
   - const ASSETS_PATH = "../../"
   - const HAS_CRITICAL_CSS = false
@@ -34,14 +34,14 @@ block append preload
   link(
     type="image/webp"
     as="image"
-    href="img/esteli-buses-logo-black-felix-icaza.webp"
+    href="/img/esteli-buses-logo-black-felix-icaza.webp"
     importance="highest"
     rel="preload"
   )/
   link(
     type="image/webp"
     as="image"
-    href="img/esteli-buses-logo-white-felix-icaza.webp"
+    href="/img/esteli-buses-logo-white-felix-icaza.webp"
     importance="highest"
     rel="preload"
   )/
