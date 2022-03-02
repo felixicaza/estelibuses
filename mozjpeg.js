@@ -60,4 +60,15 @@
   })
 
   ogImages.forEach(image => console.log('Converted:', image.destinationPath))
+
+  const blogImages = await imagemin(['build/img/blog/*.{jpg,jpeg}'], {
+    destination: 'public/img/og',
+    plugins: [
+      imageminMozjpeg({
+        quality: 75
+      })
+    ]
+  })
+
+  blogImages.forEach(image => console.log('Converted:', image.destinationPath))
 })()
