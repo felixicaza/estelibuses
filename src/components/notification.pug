@@ -1,0 +1,13 @@
+section#container-notification(
+  class="fixed top-0 right-0 bg-orange-500 text-white max-w-68 sm:max-w-sm p-4 rounded shadow transform -translate-y-full -translate-x-3 z-20 flex items-start transition-transform transition-opacity opacity-0"
+)
+  div
+    h3(class="font-bold mb-2 text-2xl") Novedades
+    p !He creado un blog en el que iré anunciando las novedades que añadiré en Buses Estelí!
+    a#link-notification(
+      class="block mt-4 underline font-bold"
+      href="/blog/instalar-estelibuses-en-tu-dispositivo"
+    ) Mira la primera novedad
+  button#notification-close(
+    class="transition-colors font-bold text-4xl any-hover:text-orange-900 active:text-orange-900"
+  ) &times;
