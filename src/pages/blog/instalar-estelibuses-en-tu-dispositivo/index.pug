@@ -80,11 +80,17 @@ block append content
           aspect-ratio: 1152/736;
         }
       }
-    img(
-      alt
-      class="img-install object-cover object-center"
-      srcset="/img/blog/instalar-estelibuses-desde-un-celular-y-una-computadora-mobile-felix-icaza.jpg 960w, /img/blog/instalar-estelibuses-desde-un-celular-y-una-computadora-felix-icaza.jpg"
-    )/
+    picture(class="w-full h-auto")
+      source(
+        type="image/jpeg"
+        srcset="/img/blog/instalar-estelibuses-desde-un-celular-y-una-computadora-mobile-felix-icaza.jpg 960w, /img/blog/instalar-estelibuses-desde-un-celular-y-una-computadora-felix-icaza.jpg"
+        data-srcset="/img/blog/instalar-estelibuses-desde-un-celular-y-una-computadora-mobile-felix-icaza.jpg 960w, /img/blog/instalar-estelibuses-desde-un-celular-y-una-computadora-felix-icaza.jpg"
+      )/
+      img(
+        alt
+        class="img-install w-full h-auto object-cover object-center"
+        srcset="/img/blog/instalar-estelibuses-desde-un-celular-y-una-computadora-mobile-felix-icaza.jpg 960w, /img/blog/instalar-estelibuses-desde-un-celular-y-una-computadora-felix-icaza.jpg"
+      )/
 
     p(class="text-base text-black-200 sm:text-lg dark:text-light-700") Aunque lástimosamente esta funcionalidad solo está limitada a algunos navegadores, como Google Chrome, Chromium, Microsoft Edge, Brave, entre otros. Navegadores como Firefox, Safari y navegadores para celulares denominados como&nbsp;
       em 'Lite' o 'Light' (livianos)
@@ -100,11 +106,18 @@ block append content
         strong 'Instalar aplicación'
       | .
 
-    img(
-      src="/img/blog/instalar-estelibuses-desde-un-celular-chrome-android-felix-icaza.jpg"
-      alt
-      class="object-cover object-center"
-    )/
+    picture(class="w-full h-auto")
+      source(
+        type="image/jpeg"
+        srcset="/img/blog/instalar-estelibuses-desde-un-celular-chrome-android-mobile-felix-icaza.jpg 960w, /img/blog/instalar-estelibuses-desde-un-celular-chrome-android-felix-icaza.jpg"
+        data-srcset="/img/blog/instalar-estelibuses-desde-un-celular-chrome-android-mobile-felix-icaza.jpg 960w, /img/blog/instalar-estelibuses-desde-un-celular-chrome-android-felix-icaza.jpg"
+      )/
+      img(
+        alt
+        class="img-install w-full h-auto object-cover object-center"
+        srcset="/img/blog/instalar-estelibuses-desde-un-celular-chrome-android-mobile-felix-icaza.jpg 960w, /img/blog/instalar-estelibuses-desde-un-celular-chrome-android-felix-icaza.jpg"
+      )/
+    img(src alt class="object-cover object-center")/
 
     p(class="text-base text-black-200 sm:text-lg dark:text-light-700")
       em Esta opción puede estar en otra ubicación o tener otro nombre en algunos navegadores.
