@@ -47,3 +47,19 @@ searchForm.addEventListener('input', e => {
 })
 
 searchForm.addEventListener('submit', e => e.preventDefault())
+
+/**
+ * Fix Accesibility mobile navbar when keyboard is open
+ */
+
+const navbarMobile = document.getElementById('navbar-mobile')
+
+const isMobile = navigator.userAgent.match(/Android|iPhone|iPad|iPod/i)
+
+search.addEventListener('focus', () => {
+  if (isMobile) navbarMobile.classList.remove('bottom-0')
+})
+
+search.addEventListener('blur', () => {
+  if (isMobile) navbarMobile.classList.add('bottom-0')
+})

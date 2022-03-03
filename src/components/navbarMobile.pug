@@ -7,7 +7,7 @@ block currentPage
 - const terminalSurMobile = `${ACTIVE_MOBILE === "terminal-sur" ? "text-white" : "active:text-white any-hover:text-white text-orange-900 transition-colors"} flex flex-col items-center p-2`
 - const acercaMobile = `${ACTIVE_MOBILE === "acerca" ? "text-white" : "active:text-white any-hover:text-white text-orange-900 transition-colors"} flex flex-col items-center p-2`
 
-nav(
+nav#navbar-mobile(
   class="sticky z-10 bottom-0 w-full bg-orange-400 grid grid-cols-4 md:gap-12 sm:gap-6 text-center items-center lg:hidden"
 )
   a(class=inicioMobile href="/")
