@@ -6,15 +6,29 @@ mixin cardTransportInfoNorth(transport, time, transportType, transportName, pric
     h2(class="titles text-3xl sm:text-4xl font-bold")= transport
 
     style.
-      .scrolltable {
-        scrollbar-width: none;
+      @media (max-width: 991.98px) {
+        .scrolltable {
+          scrollbar-width: none;
+          overflow: scroll hidden;
+        }
+
+        .scrolltable::-webkit-scrollbar {
+          display: none;
+          overflow: scroll hidden;
+        }
       }
 
-      .scrolltable::-webkit-scrollbar {
-        display: none;
+      @media (min-width: 992px) and (max-width: 1199.98px) {
+        .scrolltable {
+          overflow: scroll hidden;
+        }
+
+        .scrolltable::-webkit-scrollbar {
+          overflow: scroll hidden;
+        }
       }
 
-    section(class="overflow-x-scroll md:overflow-x-hidden pb-2 scrolltable")
+    section(class="pb-2 scrolltable")
       table(class="whitespace-nowrap border-separate")
         tbody
           tr(class="group")
