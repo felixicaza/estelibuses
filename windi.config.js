@@ -3,7 +3,7 @@
 module.exports = {
   darkMode: 'media',
   extract: {
-    exclude: ['build/sw.js', 'build/js/sw-app-shell.js']
+    exclude: ['build/sw.js', 'build/js/**/*.js']
   },
   theme: {
     screens: {
