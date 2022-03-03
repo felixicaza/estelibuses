@@ -1,6 +1,7 @@
 extends ../../../templates/template.pug
 include ../../../utils/pageCity
 include ../../../utils/cardTransportInfo
+include ../../../utils/cardTransportInfoExtended
 include ../../../utils/cardCity
 
 block append variables
@@ -95,9 +96,9 @@ block append content
     +cardTransportInfo('Horario #11', '07:00 am', 'Ruteado', ruteadoPrice, '3.3 horas', false, false, false)
     +cardTransportInfo('Horario #12', '07:15 am', 'Expreso', expresoPrice, '2.4 horas', false, false, fals)
     +cardTransportInfo('Horario #13', '07:30 am', 'Ruteado', ruteadoPrice, '3.3 horas', false, false, false)
-    +cardTransportInfo('Horario #14', '08:00 am', 'Ruteado', ruteadoPrice, '3.3 horas', false, false, false)
+    +cardTransportInfoExtended('Horario #14', 'Hora de salida de Estelí', '08:00 am', 'Hora de salida de Managua', '03:00 pm', 'Ruteado', 'Moreno', 'ES 268', ruteadoPrice, '3.3 horas', false, false, false)
     +cardTransportInfo('Horario #15', '08:30 am', 'Ruteado', ruteadoPrice, '3.3 horas', false, false, false)
-    +cardTransportInfo('Horario #16', '08:45 am', 'Expreso', expresoPrice, '2.4 horas', false, false, false)
+    +cardTransportInfoExtended('Horario #16', 'Hora de salida de Estelí', '08:45 am', 'Hora de salida de Managua', '01:40 pm', 'Expreso', 'Moreno', 'ES 228', expresoPrice, '2.4 horas', false, false, false)
     +cardTransportInfo('Horario #17', '09:00 am', 'Ruteado', ruteadoPrice, '3.3 horas', false, false, false)
     +cardTransportInfo('Horario #18', '09:30 am', 'Ruteado', ruteadoPrice, '3.3 horas', false, false, false)
     +cardTransportInfo('Horario #19', '09:45 am', 'Expreso', expresoPrice, '2.4 horas', false, false, false)
