@@ -198,7 +198,7 @@ const containerNotification = document.getElementById('container-notification')
 const closeNotification = document.getElementById('notification-close')
 
 window.addEventListener('load', () => {
-  if (localStorage.getItem('hidden-notification-new') !== 'true') {
+  if (localStorage.getItem('hide-banner') !== 'true') {
     containerNotification.style.opacity = '1'
 
     setTimeout(() => {
@@ -208,7 +208,7 @@ window.addEventListener('load', () => {
 })
 
 closeNotification.addEventListener('click', () => {
-  localStorage.setItem('hidden-notification-new', true)
+  localStorage.setItem('hide-banner', true)
   containerNotification.style.transform = 'translateY(-100%)'
   containerNotification.style.opacity = '0'
 })
