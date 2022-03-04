@@ -1,0 +1,66 @@
+extends ../../templates/template.pug
+
+block append variables
+  - const CURRENT_PAGE = "acerca"
+  - const URL = "https://estelibuses.web.app"
+  - const ASSETS_PATH = "../"
+  - const HAS_CRITICAL_CSS = false
+  - const APPLICATION_NAME = "Estelí Buses"
+  - const META_DESCRIPTION = "Publicita tu negocio ahora mismo y empieza a atraer más clientes potenciales."
+  - const META_ROBOTS = "index, follow"
+  - const LANGUAGE = "es"
+  - const CURRENT_URL = URL
+  - const SOCIAL_TITLE = "Aviso para negocios | Estelí Buses - Horarios de las Terminales de Estelí"
+  - const SOCIAL_DESCRIPTION = META_DESCRIPTION
+  - const SOCIAL_IMAGE = ""
+  - const SOCIAL_IMAGE_ALT = SOCIAL_TITLE
+  - const OPEN_GRAPH_SITE_NAME = ""
+  - const TWITTER_CARD = "summary_large_image"
+
+block append title
+  title= SOCIAL_TITLE
+
+block append preconnect
+
+block append async-scripts
+
+block append critical-css
+
+block append stylesheets
+  link(href=`${ASSETS_PATH}css/style.css` rel="stylesheet")/
+
+block append preload
+
+block append defer-scripts
+
+block append content
+  header(class="wave")
+    div(class="container mx-auto px-4")
+      include ../../components/navbar
+
+      section(
+        class="flex flex-col justify-center items-center pt-18 pb-26 xs:pb-36 lg:pt-28 lg:pb-34 xl:pb-44 2xl:pb-54 text-center max-w-6xl mx-auto space-y-6"
+      )
+        h1(class="text-4xl sm:text-5xl font-bold mb-8 max-w-screen-lg z-2") Aviso para negocios
+        p(class="text-base text-black-200 sm:text-lg dark:text-light-700") ¡Bienvenido a Estelí Buses!, la aplicación web dónde los Estelianos conocerán fácilmente todos los horarios de las terminales de buses de Estelí.
+
+        p(class="text-base text-black-200 sm:text-lg dark:text-light-700")
+          strong El principal objetivo de esta aplicación web es que siempre sea gratuita y accesible para todos
+          | , es por eso que me gustaría invitarte como dueño de algún negocio que empieces a publicitarlo, para así invertir en esta aplicación web y seguir ayudando a muchas personas a través de este proyecto que iré mejorando constántemente y que seguramente podría generar clientes potenciales para tu negocio al ver tu anuncio publicado acá.
+
+        h2(class="text-3xl sm:text-4xl font-bold !mt-14") Cualquier tipo de negocios
+        p(class="text-base text-black-200 sm:text-lg dark:text-light-700") No importa si eres un negocio grande o pequeño, cualquiera puede empezar a publicitarse, es por eso que he creado planes totalmente ajustados a tu presupuesto, así que tu negocio puede aparecer fácilmente y estar visible para muchas personas en todo momento.
+
+        p(class="text-base text-black-200 sm:text-lg dark:text-light-700") Si quieres conocer más sobre los planes puedes contáctarme&nbsp;
+          a(
+            class="text-orange-600 underline dark:text-orange-300"
+            href="https://wa.me/50557279567"
+          ) a través de WhatsApp
+          | &nbsp;o&nbsp;
+          a(
+            class="text-orange-600 underline dark:text-orange-300"
+            href="https://t.me/felixicaza"
+          ) a través de Telegram
+          | , dónde puedo estar más disponible si no te puedo responder por WhatsApp (haz click en el texto de color naranja).
+
+        p(class="text-base text-black-200 sm:text-lg dark:text-light-700") Te invito a formar parte de esta maravillosa causa, hecha con cariño para todos los Estelianos.
