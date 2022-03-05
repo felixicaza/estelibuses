@@ -48,27 +48,49 @@ mixin pageTerminal(idHeader, title, description, location, phone, origin, ...cit
         }
       }
 
-    picture
+    picture(class="lg:hidden")
       source(
         type="image/avif"
-        data-srcset="/img/anuncios/real-estate-mobile.avif 960w, /img/anuncios/real-state-desktop.avif"
+        data-srcset="/img/anuncios/real-estate-mobile.avif"
       )/
       source(
         type="image/webp"
-        data-srcset="/img/anuncios/real-estate-mobile.webp 960w, /img/anuncios/real-state-desktop.webp"
+        data-srcset="/img/anuncios/real-estate-mobile.webp"
       )/
       source(
         type="image/jpeg"
-        data-srcset="/img/anuncios/real-estate-mobile.jpg 960w, /img/anuncios/real-state-desktop.jpg"
+        data-srcset="/img/anuncios/real-estate-mobile.jpg"
       )/
       img(
-        alt=`Horarios de la ciudad de ${city}`
+        alt
         class="h-auto object-cover object-center w-full lazyload rounded banner shadow"
         decoding="async"
         importance="low"
         loading="lazy"
         srcset="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAoAAAABCAYAAADn9T9+AAAAAklEQVR4AewaftIAAAAySURBVAEpANb/AYyVlP/p5uMAKyL9AEdAHgC80hQAycHIANDIvwAEBQMAUk9FAConKwB8nQ8QgcG9BQAAAABJRU5ErkJggg=="
-        data-srcset="/img/anuncios/real-estate-mobile.jpg 960w, /img/anuncios/real-state-desktop.jpg"
+        data-srcset="/img/anuncios/real-estate-mobile.jpg"
+      )/
+    picture(class="hidden lg:block")
+      source(
+        type="image/avif"
+        data-srcset="/img/anuncios/real-state-desktop.avif"
+      )/
+      source(
+        type="image/webp"
+        data-srcset="/img/anuncios/real-state-desktop.webp"
+      )/
+      source(
+        type="image/jpeg"
+        data-srcset="/img/anuncios/real-state-desktop.jpg"
+      )/
+      img(
+        alt
+        class="h-auto object-cover object-center w-full lazyload rounded banner shadow"
+        decoding="async"
+        importance="low"
+        loading="lazy"
+        srcset="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAoAAAABCAYAAADn9T9+AAAAAklEQVR4AewaftIAAAAySURBVAEpANb/AYyVlP/p5uMAKyL9AEdAHgC80hQAycHIANDIvwAEBQMAUk9FAConKwB8nQ8QgcG9BQAAAABJRU5ErkJggg=="
+        data-srcset="/img/anuncios/real-state-desktop.jpg"
       )/
 
   main(class="py-12 sm:py-16 md:py-20 xl:py-28")
