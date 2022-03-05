@@ -112,6 +112,40 @@ block append defer-scripts
 
 block append content
   include ../content/header
+  section(class="container mx-auto px-4 mt-22 mb-8")
+    style.
+      .banner {
+        aspect-ratio: 1/1;
+      }
+      @media (min-width: 992px) {
+        .banner {
+          aspect-ratio: 960/120;
+        }
+      }
+
+    picture
+      source(
+        type="image/avif"
+        data-srcset="/img/anuncios/real-estate-mobile.avif 960w, /img/anuncios/real-state-desktop.avif"
+      )/
+      source(
+        type="image/webp"
+        data-srcset="/img/anuncios/real-estate-mobile.webp 960w, /img/anuncios/real-state-desktop.webp"
+      )/
+      source(
+        type="image/jpeg"
+        data-srcset="/img/anuncios/real-estate-mobile.jpg 960w, /img/anuncios/real-state-desktop.jpg"
+      )/
+      img(
+        alt=`Horarios de la ciudad de ${city}`
+        class="h-auto object-cover object-center w-full lazyload rounded banner shadow"
+        decoding="async"
+        importance="low"
+        loading="lazy"
+        srcset="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAoAAAABCAYAAADn9T9+AAAAAklEQVR4AewaftIAAAAySURBVAEpANb/AYyVlP/p5uMAKyL9AEdAHgC80hQAycHIANDIvwAEBQMAUk9FAConKwB8nQ8QgcG9BQAAAABJRU5ErkJggg=="
+        data-srcset="/img/anuncios/real-estate-mobile.jpg 960w, /img/anuncios/real-state-desktop.jpg"
+      )/
+
   main
     include ../content/terminal-norte
     include ../content/terminal-sur
