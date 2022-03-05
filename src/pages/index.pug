@@ -123,50 +123,77 @@ block append content
         }
       }
 
-    picture(class="lg:hidden")
-      source(
-        type="image/avif"
-        data-srcset="/img/anuncios/real-estate-mobile.avif"
-      )/
-      source(
-        type="image/webp"
-        data-srcset="/img/anuncios/real-estate-mobile.webp"
-      )/
-      source(
-        type="image/jpeg"
-        data-srcset="/img/anuncios/real-estate-mobile.jpg"
-      )/
-      img(
-        alt
-        class="h-auto object-cover object-center w-full lazyload rounded banner shadow"
-        decoding="async"
-        importance="low"
-        loading="lazy"
-        srcset="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAoAAAABCAYAAADn9T9+AAAAAklEQVR4AewaftIAAAAySURBVAEpANb/AYyVlP/p5uMAKyL9AEdAHgC80hQAycHIANDIvwAEBQMAUk9FAConKwB8nQ8QgcG9BQAAAABJRU5ErkJggg=="
-        data-srcset="/img/anuncios/real-estate-mobile.jpg"
-      )/
-    picture(class="hidden lg:block")
-      source(
-        type="image/avif"
-        data-srcset="/img/anuncios/real-state-desktop.avif"
-      )/
-      source(
-        type="image/webp"
-        data-srcset="/img/anuncios/real-state-desktop.webp"
-      )/
-      source(
-        type="image/jpeg"
-        data-srcset="/img/anuncios/real-state-desktop.jpg"
-      )/
-      img(
-        alt
-        class="h-auto object-cover object-center w-full lazyload rounded banner shadow"
-        decoding="async"
-        importance="low"
-        loading="lazy"
-        srcset="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAoAAAABCAYAAADn9T9+AAAAAklEQVR4AewaftIAAAAySURBVAEpANb/AYyVlP/p5uMAKyL9AEdAHgC80hQAycHIANDIvwAEBQMAUk9FAConKwB8nQ8QgcG9BQAAAABJRU5ErkJggg=="
-        data-srcset="/img/anuncios/real-state-desktop.jpg"
-      )/
+    figure(class="lg:hidden")
+      picture
+        source(
+          type="image/avif"
+          data-srcset="/img/anuncios/real-estate-mobile.avif"
+        )/
+        source(
+          type="image/webp"
+          data-srcset="/img/anuncios/real-estate-mobile.webp"
+        )/
+        source(
+          type="image/jpeg"
+          data-srcset="/img/anuncios/real-estate-mobile.jpg"
+        )/
+        img(
+          alt
+          class="h-auto object-cover object-center w-full lazyload rounded banner shadow"
+          decoding="async"
+          importance="low"
+          loading="lazy"
+          srcset="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAoAAAABCAYAAADn9T9+AAAAAklEQVR4AewaftIAAAAySURBVAEpANb/AYyVlP/p5uMAKyL9AEdAHgC80hQAycHIANDIvwAEBQMAUk9FAConKwB8nQ8QgcG9BQAAAABJRU5ErkJggg=="
+          data-srcset="/img/anuncios/real-estate-mobile.jpg"
+        )/
+      figcaption(
+        class="text-sm text-gray-400 mt-2 flex items-start gap-1 lg:items-center justify-end"
+      )
+        svg(class="fill-current -mt-0.2" viewBox="0 0 24 24" width="24" height="24")
+          path(
+            d="M13 9h-2V7h2m0 10h-2v-6h2m-1-9A10 10 0 0 0 2 12a10 10 0 0 0 10 10 10 10 0 0 0 10-10A10 10 0 0 0 12 2Z"
+          )/
+        p Publicidad - ¿Quieres aparecer acá? Contáctame&nbsp;
+          a(class="underline" href="https://t.me/felixicaza") Telegram
+          | &nbsp;o&nbsp;
+          a(class="underline" href="https://wa.me/50557279567") WhatsApp
+          | .
+
+    figure(class="hidden lg:block")
+      picture
+        source(
+          type="image/avif"
+          data-srcset="/img/anuncios/real-state-desktop.avif"
+        )/
+        source(
+          type="image/webp"
+          data-srcset="/img/anuncios/real-state-desktop.webp"
+        )/
+        source(
+          type="image/jpeg"
+          data-srcset="/img/anuncios/real-state-desktop.jpg"
+        )/
+        img(
+          alt
+          class="h-auto object-cover object-center w-full lazyload rounded banner shadow"
+          decoding="async"
+          importance="low"
+          loading="lazy"
+          srcset="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAoAAAABCAYAAADn9T9+AAAAAklEQVR4AewaftIAAAAySURBVAEpANb/AYyVlP/p5uMAKyL9AEdAHgC80hQAycHIANDIvwAEBQMAUk9FAConKwB8nQ8QgcG9BQAAAABJRU5ErkJggg=="
+          data-srcset="/img/anuncios/real-state-desktop.jpg"
+        )/
+      figcaption(
+        class="text-sm text-gray-400 mt-2 flex items-start gap-1 lg:items-center lg:justify-end"
+      )
+        svg(class="fill-current -mt-0.2" viewBox="0 0 24 24" width="17" height="17")
+          path(
+            d="M13 9h-2V7h2m0 10h-2v-6h2m-1-9A10 10 0 0 0 2 12a10 10 0 0 0 10 10 10 10 0 0 0 10-10A10 10 0 0 0 12 2Z"
+          )/
+        p Publicidad - ¿Quieres aparecer acá? Contáctame&nbsp;
+          a(class="underline" href="https://t.me/felixicaza") Telegram
+          | &nbsp;o&nbsp;
+          a(class="underline" href="https://wa.me/50557279567") WhatsApp
+          | .
 
   main
     include ../content/terminal-norte
