@@ -41,4 +41,16 @@ const env = process.env.NODE_ENV === 'production'
   terminalSurImages.forEach(image =>
     console.log('Converted WEBP:', image.destinationPath)
   )
+
+  const anuncioImages = await imagemin(
+    ['build/img/anuncios/*.{jpg,jpeg,png}'],
+    {
+      destination: env ? 'public/img/anuncios' : 'build/img/anuncios',
+      plugins: [imageminWebp({ quality: 75 })]
+    }
+  )
+
+  anuncioImages.forEach(image =>
+    console.log('Converted WEBP:', image.destinationPath)
+  )
 })()

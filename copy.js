@@ -41,4 +41,11 @@ const cpy = require('cpy')
       console.log(data)
     }
   )
+
+  await cpy('build/img/anuncios/**/*.avif', 'public/img/anuncios/').on(
+    'progress',
+    data => {
+      console.log(data)
+    }
+  )
 })()
