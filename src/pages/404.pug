@@ -27,9 +27,57 @@ block append async-scripts
 block append critical-css
 
 block append stylesheets
+  link(href=`${ASSETS_PATH}css/style.css` rel="stylesheet")/
 
 block append preload
 
 block append defer-scripts
 
 block append content
+  header(class="wave")
+    div(class="container mx-auto px-4")
+      include ../components/navbar
+
+      section(
+        class="flex flex-col justify-center items-center pt-18 pb-26 xs:pb-36 lg:pt-28 lg:pb-34 xl:pb-44 2xl:pb-54 text-center max-w-6xl mx-auto space-y-6"
+      )
+        h1(class="text-4xl sm:text-5xl font-bold mb-8 max-w-screen-lg z-2") Ups, la página que estás buscando no existe.
+        p(class="text-base text-black-200 sm:text-lg dark:text-light-700") Conoce los horarios de las terminales de Estelí, y planea con exactitud la hora de tu próximo viaje.
+        ul(class="space-y-4")
+          li
+            a(
+              class="text-orange-600 underline dark:text-orange-300"
+              href="/terminal-norte-esteli"
+            ) Horarios de la terminal norte
+          li
+            a(
+              class="text-orange-600 underline dark:text-orange-300"
+              href="/terminal-sur-esteli"
+            ) Horarios de la terminal sur
+        section
+          style.
+            .not-found {
+              width: 380px;
+              height: 255px;
+            }
+
+            @media (min-width: 992px) {
+              .not-found {
+                aspect-ratio: 740/496;
+                width: 740px;
+                height: 496px;
+              }
+            }
+          picture
+            source(type="image/avif" data-srcset="/img/404.avif")/
+            source(type="image/webp" data-srcset="/img/404.webp")/
+            source(type="image/jpeg" data-srcset="/img/404.jpg")/
+            img(
+              alt="Imágen 404"
+              class="h-auto object-cover object-center w-full lazyload not-found"
+              decoding="async"
+              importance="low"
+              loading="lazy"
+              srcset="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAoAAAAHCAYAAAAxrNxjAAAAAklEQVR4AewaftIAAADMSURBVDXBPU4CURSA0e/9+ITR0UiisbTTxlha2LhS98AmKI3uAAujJEgyEHnDvLn3OiR4jrMBB2aKSQdmuJBwPvAvcqAlI3kDweOcR9uGkE4IxzV7noFJQdoNrukwKchuC2aYFLRk9iID0wIO7CKxeJtytr6mvcpM7p5R6fBHY7xpj3SZz9kL2+Wc9WrB9+8rsmowFUx6tGSiqcJOqep7vt6n9D8fmDeWec7p+pFqcoMLiehChPGI84cnUnOLmuJ9REom1Zf0XSaMKv4AILZvQxJLKhQAAAAASUVORK5CYII="
+              data-srcset="/img/404.jpg"
+            )/
