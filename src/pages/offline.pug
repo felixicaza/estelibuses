@@ -1,0 +1,85 @@
+extends ../templates/template.pug
+
+block append variables
+  - const CURRENT_PAGE = ""
+  - const URL = "https://busesesteli.web.app"
+  - const ASSETS_PATH = "/"
+  - const SERVER_PAGE = true
+  - const APPLICATION_NAME = "Estelí Buses"
+  - const META_DESCRIPTION = ""
+  - const META_ROBOTS = "noindex, nofollow"
+  - const LANGUAGE = "es"
+  - const CURRENT_URL = URL
+  - const SOCIAL_TITLE = ""
+  - const SOCIAL_DESCRIPTION = META_DESCRIPTION
+  - const SOCIAL_IMAGE = ""
+  - const SOCIAL_IMAGE_ALT = SOCIAL_TITLE
+  - const OPEN_GRAPH_SITE_NAME = ""
+  - const TWITTER_CARD = ""
+
+block append title
+  title Sin conexión a internet | Estelí Buses
+
+block append preconnect
+
+block append async-scripts
+
+block append critical-css
+
+block append stylesheets
+  link(href=`${ASSETS_PATH}css/style.css` rel="stylesheet")/
+
+block append preload
+
+block append defer-scripts
+
+block append content
+  header(class="wave")
+    div(class="container mx-auto px-4")
+      include ../components/navbar
+
+      section(
+        class="flex flex-col justify-center items-center pt-18 pb-26 xs:pb-36 lg:pt-28 lg:pb-34 xl:pb-44 2xl:pb-54 text-center max-w-6xl mx-auto space-y-6"
+      )
+        h1(class="text-4xl sm:text-5xl font-bold mb-8 max-w-screen-lg z-2") No tienes conexión a internet
+        p(class="text-base text-black-200 sm:text-lg dark:text-light-700") Por favor vuelve cuánto tengas conexión o intenta recargar manualmente si ha sido un poblema temporal.
+        button#reload(
+          type="button"
+          class="py-2.5 px-3 sm:px-6 bg-orange-400 any-hover:bg-orange-500 active:bg-orange-500 transition-colors text-white rounded text-xs xs:text-sm sm:text-base z-2"
+        ) Recargar
+        section
+          style.
+            .offline-img {
+              width: 380px;
+              height: 250px;
+            }
+
+            @media (min-width: 992px) {
+              .offline-img {
+                width: 916px;
+                height: 603px;
+              }
+            }
+
+          picture
+            source(type="image/avif" data-srcset="/img/offline.avif")/
+            source(type="image/webp" data-srcset="/img/offline.webp")/
+            source(type="image/jpeg" data-srcset="/img/offline.jpg")/
+            img(
+              alt="Imágen Offline"
+              class="h-auto object-cover object-center w-full lazyload offline-img"
+              decoding="async"
+              importance="low"
+              loading="lazy"
+              srcset="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAoAAAAHCAYAAAAxrNxjAAAAAklEQVR4AewaftIAAADSSURBVDXBwU6DMACA4b9QIAwIE4wJxoMHPXrxZJbsvGf1LXwNT8boRZ3MyAYtpa3M6PcJP+PP1H9h2leOouoCuVjyTzJzeo+3Bv3+RKgMXg0M+kCYZMiyIS5qAjsZTPeJ2j4TL8/hxSK6nKhscLsDjHvwHmlVh357RABTfkZ8c42IImygmPoBPwYgBNIrDR8DDrDZDtfxy1Yp0/0Dbt0iNzkyOW0Ib+9wumP83mL6FhD4rGZaXVKu1oSLEySzIKtxMiVJK1w1gAdkTLG5IkgLjn4AiQpchdur0OAAAAAASUVORK5CYII="
+              data-srcset="/img/offline.jpg"
+            )/
+
+      script.
+        document.getElementById("reload").addEventListener("click", () => {
+          window.location.reload();
+        });
+
+        window.addEventListener("online", () => {
+          window.location.reload();
+        });
