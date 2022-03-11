@@ -72,7 +72,7 @@
 
   blogImages.forEach(image => console.log('Converted:', image.destinationPath))
 
-  const anunciosImages = await imagemin(['build/img/blog/*.{jpg,jpeg}'], {
+  const anunciosImages = await imagemin(['build/img/anuncios/*.{jpg,jpeg}'], {
     destination: 'public/img/anuncios',
     plugins: [
       imageminMozjpeg({
