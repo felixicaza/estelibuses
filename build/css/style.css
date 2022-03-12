@@ -330,3 +330,21 @@ body {
     width: 360%;
   }
 }
+
+.card-city-img {
+  aspect-ratio: 16/9;
+}
+
+@supports not (aspect-ratio: 1/1) {
+  .card-city-img::before {
+    float: left;
+    padding-top: 56.25%;
+    content: '';
+  }
+
+  .card-city-img::after {
+    display: block;
+    content: '';
+    clear: both;
+  }
+}
