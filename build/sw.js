@@ -5,11 +5,13 @@
 importScripts('/js/sw-app-shell.js')
 importScripts('/js/sw-app-shell-media.js')
 
-const CACHE_CORE = 'core-v1'
-const CACHE_MEDIA = 'media-v1'
+const CACHE_CORE = 'core-v1.1'
+const CACHE_MEDIA = 'media-v1.1'
 const CACHE_DYNAMIC = 'dynamic-v1'
 
 self.addEventListener('install', e => {
+  self.skipWaiting()
+
   const setCacheCore = caches
     .open(CACHE_CORE)
     .then(coreCache => coreCache.addAll(APP_SHELL))
@@ -25,6 +27,9 @@ self.addEventListener('activate', () => {
   caches.keys().then(keys => {
     keys.forEach(key => {
       if (key !== CACHE_CORE && key.includes('core')) {
+        return caches.delete(key)
+      }
+      if (key !== CACHE_MEDIA && key.includes('media')) {
         return caches.delete(key)
       }
     })
