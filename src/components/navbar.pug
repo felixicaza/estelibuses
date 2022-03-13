@@ -10,7 +10,7 @@ block currentPage
 
 nav(class="py-2 flex justify-between items-center")
   a(class="inline-block" href="/")
-    picture
+    picture#logo-main
       source(
         type="image/webp"
         media="(prefers-color-scheme: light)"
@@ -45,6 +45,23 @@ nav(class="py-2 flex justify-between items-center")
         height="60"
         data-srcset="/img/esteli-buses-logo-black-felix-icaza.png"
       )/
+  script.
+    const logoMain = document.querySelectorAll("#logo-main > source");
+    logoMain.forEach(logo => {
+      if (localStorage.getItem("darkmode") === "true") {
+        if (logo.srcset.includes(".webp")) {
+          logo.srcset = "/img/esteli-buses-logo-white-felix-icaza.webp";
+        } else {
+          logo.srcset = "/img/esteli-buses-logo-white-felix-icaza.png";
+        }
+      } else {
+        if (logo.srcset.includes(".webp")) {
+          logo.srcset = "/img/esteli-buses-logo-black-felix-icaza.webp";
+        } else {
+          logo.srcset = "/img/esteli-buses-logo-black-felix-icaza.png";
+        }
+      }
+    });
   section(class="flex items-center space-x-4 font-medium whitespace-nowrap")
     a(class=inicio href="/") Inicio
     a(class=terminalNorte href="/terminal-norte-esteli") Terminal norte

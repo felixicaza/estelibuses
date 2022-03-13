@@ -21,6 +21,8 @@ html(class="scroll-smooth" dir="ltr" lang=`${LANG}` prefix="og: https://ogp.me/n
     link(crossorigin href="//www.google-analytics.com/" rel="preconnect")/
     block preconnect
 
+    script.
+      if (localStorage.getItem("darkmode") === "true") document.documentElement.classList.add("dark");
     script(
       src="https://www.googletagmanager.com/gtag/js"
       async

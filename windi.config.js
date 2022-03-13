@@ -1,7 +1,7 @@
 /* eslint-disable global-require */
 
 module.exports = {
-  darkMode: 'media',
+  darkMode: 'class',
   extract: {
     exclude: ['build/sw.js', 'build/js/**/*.js']
   },

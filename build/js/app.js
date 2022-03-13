@@ -1,4 +1,5 @@
 /* eslint-disable import/extensions */
+/* eslint-disable no-param-reassign */
 /* eslint-disable no-undef */
 
 /**
@@ -7,6 +8,90 @@
 
 import { initializeApp } from './lib/firebase-app.js'
 import { getAnalytics, logEvent } from './lib/firebase-analytics.js'
+
+/**
+ * Darkmode
+ */
+
+const logoMain = document.querySelectorAll('#logo-main > source')
+
+const colorSchemeDark = window.matchMedia('(prefers-color-scheme: dark)')
+let darkModeState = false
+
+function toggleDarkMode(state) {
+  document.documentElement.classList.toggle('dark', state)
+  darkModeState = state
+
+  logoMain.forEach(logo => {
+    if (state) {
+      if (logo.srcset.includes('.webp')) {
+        logo.srcset = '/img/esteli-buses-logo-white-felix-icaza.webp'
+      } else {
+        logo.srcset = '/img/esteli-buses-logo-white-felix-icaza.png'
+      }
+    } else if (logo.srcset.includes('.webp')) {
+      logo.srcset = '/img/esteli-buses-logo-black-felix-icaza.webp'
+    } else {
+      logo.srcset = '/img/esteli-buses-logo-black-felix-icaza.png'
+    }
+  })
+}
+
+function setDarkModeLocalStorage(state) {
+  localStorage.setItem('darkmode', state)
+}
+
+toggleDarkMode(localStorage.getItem('darkmode') === 'true')
+
+colorSchemeDark.addListener(e => toggleDarkMode(e.matches))
+
+let timeTouch
+
+window.addEventListener('touchstart', e => {
+  const now = new Date().getTime()
+  const timeSince = now - timeTouch
+
+  // Detectar 2 toques dentro de 300 milisegundos y omitir el uso de ambos
+  // dedos con la propiedad touches.length del evento, para evitar efectos
+  // secundarios de cambio del tema al hacer zoom en el sitio
+  if (timeSince < 300 && timeSince > 0 && e.touches.length === 1) {
+    darkModeState = !darkModeState
+
+    toggleDarkMode(darkModeState)
+    setDarkModeLocalStorage(darkModeState)
+  }
+
+  timeTouch = new Date().getTime()
+})
+
+// Desactivar el evento de desplazamiento para evitar efectos secundarios
+// de cambios del tema
+window.addEventListener('touchmove', e => e.preventDefault())
+
+window.addEventListener('DOMContentLoaded', () => {
+  logoMain.forEach(logo => {
+    if (localStorage.getItem('darkmode') === 'true') {
+      if (logo.srcset.includes('.webp')) {
+        logo.srcset = '/img/esteli-buses-logo-white-felix-icaza.webp'
+      } else {
+        logo.srcset = '/img/esteli-buses-logo-white-felix-icaza.png'
+      }
+    } else if (logo.srcset.includes('.webp')) {
+      logo.srcset = '/img/esteli-buses-logo-black-felix-icaza.webp'
+    } else {
+      logo.srcset = '/img/esteli-buses-logo-black-felix-icaza.png'
+    }
+  })
+})
+
+window.addEventListener('keydown', e => {
+  if (e.altKey === true && e.shiftKey === true && e.key === 'D') {
+    darkModeState = !darkModeState
+
+    toggleDarkMode(darkModeState)
+    setDarkModeLocalStorage(darkModeState)
+  }
+})
 
 /**
  * Share

@@ -109,60 +109,58 @@ body {
   background: #ccfbf1;
 }
 
-@media (prefers-color-scheme: dark) {
-  #terminal-norte {
-    background: #95c6a6;
-  }
+.dark #terminal-norte {
+  background: #95c6a6;
+}
 
-  #terminal-sur {
-    background: #d6bc99;
-  }
+.dark #terminal-sur {
+  background: #d6bc99;
+}
 
-  #jinotega,
-  #managua,
-  #pueblo-nuevo,
-  #el-sauce,
-  #san-marcos-de-colon {
-    background: #abb7de;
-  }
+.dark #jinotega,
+.dark #managua,
+.dark #pueblo-nuevo,
+.dark #el-sauce,
+.dark #san-marcos-de-colon {
+  background: #abb7de;
+}
 
-  #somoto,
-  #matagalpa,
-  #san-juan-del-rio-coco,
-  #la-concordia,
-  #oro-verde {
-    background: #b5c88d;
-  }
+.dark #somoto,
+.dark #matagalpa,
+.dark #san-juan-del-rio-coco,
+.dark #la-concordia,
+.dark #oro-verde {
+  background: #b5c88d;
+}
 
-  #ocotal,
-  #leon,
-  #san-rafael-del-norte,
-  #jalapa {
-    background: #bb95c6;
-  }
+.dark #ocotal,
+.dark #leon,
+.dark #san-rafael-del-norte,
+.dark #jalapa {
+  background: #bb95c6;
+}
 
-  #yali,
-  #murra,
-  #el-espinal,
-  #masaya {
-    background: #ada4d6;
-  }
+.dark #yali,
+.dark #murra,
+.dark #el-espinal,
+.dark #masaya {
+  background: #ada4d6;
+}
 
-  #quilali,
-  #achuapa,
-  #tisey-la-estanzuela,
-  #el-regadio,
-  #la-pita {
-    background: #97b8ce;
-  }
+.dark #quilali,
+.dark #achuapa,
+.dark #tisey-la-estanzuela,
+.dark #el-regadio,
+.dark #la-pita {
+  background: #97b8ce;
+}
 
-  #san-juan-de-limay,
-  #san-nicolas,
-  #la-trinidad,
-  #wiwili,
-  #la-rica {
-    background: #8dc9bc;
-  }
+.dark #san-juan-de-limay,
+.dark #san-nicolas,
+.dark #la-trinidad,
+.dark #wiwili,
+.dark #la-rica {
+  background: #8dc9bc;
 }
 
 @media (min-width: 1200px) {
@@ -177,35 +175,33 @@ body {
   }
 }
 
-@media (prefers-color-scheme: dark) {
-  .avif #mainPage {
-    background: url('../img/esteli-buses-bg-dark-mobile-felix-icaza.avif')
-      no-repeat;
-    background-size: cover;
-    position: relative;
-  }
-
-  .no-avif #mainPage {
-    background: url('../img/esteli-buses-bg-dark-mobile-felix-icaza.webp')
-      no-repeat;
-    background-size: cover;
-    position: relative;
-  }
-
-  .wave::before {
-    background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1440 280'%3E%3Cpath fill='%23111827' fill-opacity='1' d='M0,192L48,197.3C96,203,192,213,288,229.3C384,245,480,267,576,250.7C672,235,768,181,864,181.3C960,181,1056,235,1152,234.7C1248,235,1344,181,1392,154.7L1440,128L1440,320L1392,320C1344,320,1248,320,1152,320C1056,320,960,320,864,320C768,320,672,320,576,320C480,320,384,320,288,320C192,320,96,320,48,320L0,320Z'%3E%3C/path%3E%3C/svg%3E")
-      no-repeat !important;
-    background-position-y: bottom !important;
-  }
+.dark.avif #mainPage {
+  background: url('../img/esteli-buses-bg-dark-mobile-felix-icaza.avif')
+    no-repeat;
+  background-size: cover;
+  position: relative;
 }
 
-@media (min-width: 992px) and (prefers-color-scheme: dark) {
-  .avif #mainPage {
+.dark.no-avif #mainPage {
+  background: url('../img/esteli-buses-bg-dark-mobile-felix-icaza.webp')
+    no-repeat;
+  background-size: cover;
+  position: relative;
+}
+
+.dark .wave::before {
+  background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1440 280'%3E%3Cpath fill='%23111827' fill-opacity='1' d='M0,192L48,197.3C96,203,192,213,288,229.3C384,245,480,267,576,250.7C672,235,768,181,864,181.3C960,181,1056,235,1152,234.7C1248,235,1344,181,1392,154.7L1440,128L1440,320L1392,320C1344,320,1248,320,1152,320C1056,320,960,320,864,320C768,320,672,320,576,320C480,320,384,320,288,320C192,320,96,320,48,320L0,320Z'%3E%3C/path%3E%3C/svg%3E")
+    no-repeat !important;
+  background-position-y: bottom !important;
+}
+
+@media (min-width: 992px) {
+  .dark.avif #mainPage {
     background: url('../img/esteli-buses-bg-dark-felix-icaza.avif') no-repeat;
     background-attachment: fixed;
   }
 
-  .no-avif #mainPage {
+  .dark.no-avif #mainPage {
     background: url('../img/esteli-buses-bg-dark-felix-icaza.webp') no-repeat;
     background-attachment: fixed;
   }
@@ -244,8 +240,8 @@ body {
   }
 }
 
-@media (min-width: 1200px) and (prefers-color-scheme: dark) {
-  .wave::before {
+@media (min-width: 1200px) {
+  .dark .wave::before {
     background-size: cover !important;
   }
 }
