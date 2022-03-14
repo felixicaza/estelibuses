@@ -36,3 +36,20 @@ const imageminPngquant = require('imagemin-pngquant')
 
   console.log(filesImg)
 })()
+
+// eslint-disable-next-line import/newline-after-import
+;(async () => {
+  const imageminImg = (await import('imagemin')).default
+
+  const filesImg = await imageminImg(['build/img/blog/*.png'], {
+    destination: 'public/img/blog',
+    plugins: [
+      imageminPngquant({
+        strip: true,
+        quality: [0.65, 0.75]
+      })
+    ]
+  })
+
+  console.log(filesImg)
+})()
