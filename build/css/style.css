@@ -75,7 +75,8 @@ body {
 #matagalpa,
 #san-juan-del-rio-coco,
 #la-concordia,
-#oro-verde {
+#oro-verde,
+#santa-cruz---la-ceiba {
   background: #ecfccb;
 }
 
@@ -129,7 +130,8 @@ body {
 .dark #matagalpa,
 .dark #san-juan-del-rio-coco,
 .dark #la-concordia,
-.dark #oro-verde {
+.dark #oro-verde,
+.dark #santa-cruz---la-ceiba {
   background: #b5c88d;
 }
 
