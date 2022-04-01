@@ -283,7 +283,7 @@ const containerNotification = document.getElementById('container-notification')
 const closeNotification = document.getElementById('notification-close')
 
 window.addEventListener('load', () => {
-  if (localStorage.getItem('updates') !== 'true') {
+  if (localStorage.getItem('poll') !== 'true') {
     containerNotification.style.opacity = '1'
 
     setTimeout(() => {
@@ -293,7 +293,7 @@ window.addEventListener('load', () => {
 })
 
 closeNotification.addEventListener('click', () => {
-  localStorage.setItem('updates', true)
+  localStorage.setItem('poll', true)
   containerNotification.style.transform = 'translateY(-100%)'
   containerNotification.style.opacity = '0'
 })
