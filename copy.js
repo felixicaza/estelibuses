@@ -48,4 +48,11 @@ const cpy = require('cpy')
       console.log(data)
     }
   )
+
+  await cpy(
+    'build/img/san-juan-de-limay/*.avif',
+    'public/img/san-juan-de-limay/'
+  ).on('progress', data => {
+    console.log(data)
+  })
 })()
