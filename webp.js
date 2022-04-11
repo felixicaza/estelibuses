@@ -53,4 +53,18 @@ const env = process.env.NODE_ENV === 'production'
   anuncioImages.forEach(image =>
     console.log('Converted WEBP:', image.destinationPath)
   )
+
+  const sanJuanDeLimay = await imagemin(
+    ['build/img/san-juan-de-limay/*.{jpg,jpeg,png}'],
+    {
+      destination: env
+        ? 'public/img/san-juan-de-limay'
+        : 'build/img/san-juan-de-limay',
+      plugins: [imageminWebp({ quality: 75 })]
+    }
+  )
+
+  sanJuanDeLimay.forEach(image =>
+    console.log('Converted WEBP:', image.destinationPath)
+  )
 })()

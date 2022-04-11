@@ -84,4 +84,20 @@
   anunciosImages.forEach(image =>
     console.log('Converted:', image.destinationPath)
   )
+
+  const sanJuanDeLimay = await imagemin(
+    ['build/img/san-juan-de-limay/*.{jpg,jpeg}'],
+    {
+      destination: 'public/img/san-juan-de-limay',
+      plugins: [
+        imageminMozjpeg({
+          quality: 75
+        })
+      ]
+    }
+  )
+
+  sanJuanDeLimay.forEach(image =>
+    console.log('Converted:', image.destinationPath)
+  )
 })()
