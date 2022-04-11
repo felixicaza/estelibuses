@@ -5,9 +5,9 @@
 importScripts('/js/sw-app-shell.js')
 importScripts('/js/sw-app-shell-media.js')
 
-const CACHE_CORE = 'core-v2.14'
-const CACHE_MEDIA = 'media-v2.14'
-const CACHE_DYNAMIC = 'dynamic-v1'
+const CACHE_CORE = 'core-v2.15'
+const CACHE_MEDIA = 'media-v2.15'
+const CACHE_DYNAMIC = 'dynamic-v2.15'
 
 self.addEventListener('install', e => {
   self.skipWaiting()
@@ -29,7 +29,12 @@ self.addEventListener('activate', () => {
       if (key !== CACHE_CORE && key.includes('core')) {
         return caches.delete(key)
       }
+
       if (key !== CACHE_MEDIA && key.includes('media')) {
+        return caches.delete(key)
+      }
+
+      if (key !== CACHE_DYNAMIC && key.includes('dynamic')) {
         return caches.delete(key)
       }
     })
