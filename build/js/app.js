@@ -51,10 +51,10 @@ window.addEventListener('touchstart', e => {
   const now = new Date().getTime()
   const timeSince = now - timeTouch
 
-  // Detectar 2 toques dentro de 300 milisegundos y omitir el uso de ambos
+  // Detectar 2 toques dentro de 185 milisegundos y omitir el uso de ambos
   // dedos con la propiedad touches.length del evento, para evitar efectos
   // secundarios de cambio del tema al hacer zoom en el sitio
-  if (timeSince < 300 && timeSince > 0 && e.touches.length === 1) {
+  if (timeSince < 185 && timeSince > 0 && e.touches.length === 1) {
     darkModeState = !darkModeState
 
     toggleDarkMode(darkModeState)
