@@ -1,13 +1,6 @@
 /* eslint-disable no-unused-vars */
 
 const IMAGES_APP_SHELL = [
-  '/img/anuncios/real-estate-mobile.avif',
-  '/img/anuncios/real-estate-mobile.webp',
-  '/img/anuncios/real-estate-mobile.jpg',
-  '/img/anuncios/real-state-desktop.avif',
-  '/img/anuncios/real-estate-desktop.webp',
-  '/img/anuncios/real-estate-desktop.jpg',
-
   '/favicons/favicon-16x16.png',
   '/favicons/favicon-32x32.png',
   '/favicons/favicon-48x48.png',
@@ -37,8 +30,6 @@ const IMAGES_APP_SHELL = [
   '/img/terminal-sur-estelibuses-felix-icaza.webp',
   '/img/terminal-sur-estelibuses-mobile-felix-icaza.avif',
   '/img/terminal-sur-estelibuses-mobile-felix-icaza.webp',
-
-  '/img/error-horarios.jpg',
 
   '/img/404.avif',
   '/img/404.webp',
@@ -133,5 +124,8 @@ const IMAGES_APP_SHELL = [
   '/img/terminal-sur/horarios-esteli-tisey-la-estanzuela-estelibuses-felix-icaza-card.webp',
 
   '/img/terminal-sur/horarios-esteli-yali-estelibuses-felix-icaza-card.avif',
-  '/img/terminal-sur/horarios-esteli-yali-estelibuses-felix-icaza-card.webp'
+  '/img/terminal-sur/horarios-esteli-yali-estelibuses-felix-icaza-card.webp',
+
+  '/img/san-juan-de-limay/transporte-el-fugitivo.avif',
+  '/img/san-juan-de-limay/transporte-el-fugitivo.webp'
 ]
