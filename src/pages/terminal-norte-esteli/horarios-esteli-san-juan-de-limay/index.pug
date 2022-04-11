@@ -1,6 +1,7 @@
 extends ../../../templates/template.pug
 include ../../../utils/pageCity
 include ../../../utils/cardTransportInfoNorth
+include ../../../utils/cardTransportInfoWithImage
 include ../../../utils/cardCity
 
 block append variables
@@ -43,7 +44,7 @@ block append content
   +pageCity('San Juan de Limay', 'Terminal norte', 'Terminal de San Juan de Limay', '48.9 km', 'https://www.google.com/maps/embed?pb=!1m28!1m12!1m3!1d124328.82174400949!2d-86.55601615644754!3d13.145002919536607!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!4m13!3e6!4m5!1s0x8f718c6c8f2298e7%3A0x855d282eb62cfeed!2sCotran%20Norte%2C%20Estel%C3%AD!3m2!1d13.0816363!2d-86.352126!4m5!1s0x8f71c0680422ae6b%3A0xf61a244cb6ea5b37!2sSan%20Juan%20de%20Limay!3m2!1d13.177742199999999!2d-86.6132317!5e0!3m2!1ses-419!2sni!4v1645748465779!5m2!1ses-419!2sni')
     +cardTransportInfoNorth('Horario #1', '05:30 am', 'Ruteado', 'Paquita', '50', '2 horas', false, false, false)
     +cardTransportInfoNorth('Horario #2', '07:00 am', 'Ruteado', 'López Rodríguez', '50', '2 horas', false, false, false)
-    +cardTransportInfoNorth('Horario #3', '10:00 am', 'Ruteado', 'El Fugitivo', '50', '2 horas', false, false, false)
+    +cardTransportInfoWithImage('Horario #3', '10:00 am', 'Ruteado', 'El Fugitivo', '50', '2 horas', false, false, false, '/img/san-juan-de-limay/transporte-el-fugitivo', 'Transporte El Fugitivo', 'Foto proporcionada por Roberto Reyes.', 'ES 016', 'data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAoAAAAHCAYAAAAxrNxjAAAAAklEQVR4AewaftIAAAEKSURBVAXBTUoCYQCA4VebSiL/vwH/hZTaGGaLWtSiE9gNWrjrFl2hrhIEtbADGCVGESoohjb+jzNojjP29Tyu27tr+fpTQ1/90umsWOrgEbsQ1hH2NlLuEVTzKJ6Zj9P4JYZ3gYjqWBNJa9wmZwsCqo+1y83H5yNK1Zny9VZlc2HjLHfQvruMjSnhYoneymIxWfJnjlCcdYZQ5ADvdIhlDNgKWPTbGo3yAzM1iT3QUKWDcpQS3D8/Ecll0eY23eGMQDJNsXRFq9nCjAdJRFWUmOrnIl+gUnmh12gSSyR472mUG3XGzTp+x0GaBhvnZyc3itvNfjbDcSHPZDSEuYlH6yOkQ1qEOMym+AeA+3fxhYE/2QAAAABJRU5ErkJggg==')
     +cardTransportInfoNorth('Horario #4', '12:15 pm', 'Ruteado', 'Sandoval', '50', '2 horas', false, false, false)
     +cardTransportInfoNorth('Horario #5', '02:00 pm', 'Ruteado', 'Rodríguez', '50', '2 horas', false, false, false)
     +cardTransportInfoNorth('Horario #6', '03:00 pm', 'Ruteado', 'López Rodríguez', '50', '2 horas', false, false, false)
