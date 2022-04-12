@@ -144,5 +144,8 @@ const APP_SHELL = [
   '/js/filter.js',
   '/js/polyfill-lazyload.js',
   '/js/search.js',
-  '/js/sw-app-shell.js'
+  '/js/header-search.js',
+  '/manifest.json',
+  '/js/sw-app-shell.js',
+  '/js/sw-app-shell-media.js'
 ]
