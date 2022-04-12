@@ -96,6 +96,9 @@ const IMAGES_APP_SHELL = [
   '/img/terminal-norte/horarios-esteli-yali-estelibuses-felix-icaza-card.avif',
   '/img/terminal-norte/horarios-esteli-yali-estelibuses-felix-icaza-card.webp',
 
+  '/img/terminal-norte/horarios-esteli-san-marcos-de-colon-estelibuses-felix-icaza-card.avif',
+  '/img/terminal-norte/horarios-esteli-san-marcos-de-colon-estelibuses-felix-icaza-card.webp',
+
   '/img/terminal-sur/horarios-esteli-achuapa-estelibuses-felix-icaza-card.avif',
   '/img/terminal-sur/horarios-esteli-achuapa-estelibuses-felix-icaza-card.webp',
 
