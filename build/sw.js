@@ -5,9 +5,9 @@
 importScripts('/js/sw-app-shell.js')
 importScripts('/js/sw-app-shell-media.js')
 
-const CACHE_CORE = 'core-v2.19'
-const CACHE_MEDIA = 'media-v2.19'
-const CACHE_DYNAMIC = 'dynamic-v2.19'
+const CACHE_CORE = 'core-v2.20'
+const CACHE_MEDIA = 'media-v2.20'
+const CACHE_DYNAMIC = 'dynamic-v2.20'
 
 self.addEventListener('install', e => {
   self.skipWaiting()
