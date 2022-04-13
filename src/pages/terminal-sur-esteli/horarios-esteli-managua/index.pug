@@ -45,6 +45,18 @@ block append content
   - const ruteadoPrice = "85"
   - const expresoPrice = "105"
 
+  mixin paradas
+    - const destinos = ["El Naranjo", "Santa Cruz", "La Trinidad", "San Isidro", "Sébaco", "Ciudad Darío", "Las Calabazas", "Puertas Viejas", "La Curva", "San Agustín", "El Madroño", "Casa Sola", "Las Lajas", "San Blas", "Chirimollo", "Maderas", "San Francisco", "El Matadero", "San Francisco", "San Jacinto", "San Benito", "Colonia Roque", "Chilamatillo", "Timal", "Ciudadela", "Tipitapa", "Mercado El Mayoreo"]
+
+    details(class="text-orange-500 dark:text-orange-400")
+      summary(
+        class="cursor-pointer any-hover:bg-orange-100 px-3 py-2 rounded transition transition-colors"
+      ) Conoce las principales paradas
+      section(class="border border-orange-100 rounded-b p-2")
+        ul(class="list-disc space-y-2 ml-7")
+          each destino in destinos
+            li= destino
+
   //- Último valor true es para añadir el filtro para los buses ruteados y expresos
   //- NO añadir en otras páginas que no lo necesiten
   +pageCity('Managua', 'Terminal sur', 'Terminal del mercado El Mayoreo', '141 km', 'https://www.google.com/maps/embed?pb=!1m28!1m12!1m3!1d498388.78471134027!2d-86.47613190174431!3d12.604488553983789!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!4m13!3e6!4m5!1s0x8f718c13825dde4b%3A0x69c6340e0429bb84!2sCotran%20Sur%2C%20Estel%C3%AD!3m2!1d13.0762386!2d-86.3524291!4m5!1s0x8f73fe9fb4b9ad8d%3A0xd5de57613e46dc8e!2sTerminal%20de%20Buses%20El%20Mayoreo%2C%20Pista%20del%20Mayoreo%2C%20Managua!3m2!1d12.133970699999999!2d-86.19335919999999!5e0!3m2!1ses-419!2sni!4v1645555468808!5m2!1ses-419!2sni')
@@ -84,44 +96,111 @@ block append content
             ) &nbsp;Ruteados
 
     +cardTransportInfo('Horario #1', '03:30 am', 'Ruteado', ruteadoPrice, '3.3 horas', false, false, false)
+      +paradas
+
     +cardTransportInfo('Horario #2', '04:00 am', 'Ruteado', ruteadoPrice, '3.3 horas', false, false, false)
+      +paradas
+
     +cardTransportInfo('Horario #3', '04:30 am', 'Ruteado', ruteadoPrice, '3.3 horas', false, false, false)
+      +paradas
+
     +cardTransportInfo('Horario #4', '04:45 am', 'Expreso', expresoPrice, '2.4 horas', false, false, false)
+
     +cardTransportInfo('Horario #5', '05:00 am', 'Ruteado', ruteadoPrice, '3.3 horas', false, false, false)
+      +paradas
+
     +cardTransportInfo('Horario #6', '05:30 am', 'Ruteado', ruteadoPrice, '3.3 horas', false, false, false)
+      +paradas
+
     +cardTransportInfo('Horario #7', '05:45 am', 'Expreso', expresoPrice, '2.4 horas', false, false, false)
+
     +cardTransportInfo('Horario #8', '06:00 am', 'Ruteado', ruteadoPrice, '3.3 horas', false, false, false)
+      +paradas
+
     +cardTransportInfo('Horario #9', '06:30 am', 'Ruteado', ruteadoPrice, '3.3 horas', false, false, false)
+      +paradas
+
     +cardTransportInfo('Horario #10', '06:45 am', 'Expreso', expresoPrice, '2.4 horas', false, false, false)
+
     +cardTransportInfo('Horario #11', '07:00 am', 'Ruteado', ruteadoPrice, '3.3 horas', false, false, false)
-    +cardTransportInfo('Horario #12', '07:15 am', 'Expreso', expresoPrice, '2.4 horas', false, false, fals)
+      +paradas
+
+    +cardTransportInfo('Horario #12', '07:15 am', 'Expreso', expresoPrice, '2.4 horas', false, false, false)
+
     +cardTransportInfo('Horario #13', '07:30 am', 'Ruteado', ruteadoPrice, '3.3 horas', false, false, false)
+      +paradas
+
     +cardTransportInfoExtended('Horario #14', 'Hora de salida de Estelí', '08:00 am', 'Hora de salida de Managua', '03:00 pm', 'Ruteado', 'Moreno', 'ES 268', ruteadoPrice, '3.3 horas', false, false, false)
+      +paradas
+
     +cardTransportInfo('Horario #15', '08:30 am', 'Ruteado', ruteadoPrice, '3.3 horas', false, false, false)
+      +paradas
+
     +cardTransportInfoExtended('Horario #16', 'Hora de salida de Estelí', '08:45 am', 'Hora de salida de Managua', '01:40 pm', 'Expreso', 'Moreno', 'ES 228', expresoPrice, '2.4 horas', false, false, false)
+
     +cardTransportInfo('Horario #17', '09:00 am', 'Ruteado', ruteadoPrice, '3.3 horas', false, false, false)
+      +paradas
+
     +cardTransportInfo('Horario #18', '09:30 am', 'Ruteado', ruteadoPrice, '3.3 horas', false, false, false)
+      +paradas
+
     +cardTransportInfo('Horario #19', '09:45 am', 'Expreso', expresoPrice, '2.4 horas', false, false, false)
+
     +cardTransportInfo('Horario #20', '10:00 am', 'Ruteado', ruteadoPrice, '3.3 horas', false, false, false)
+      +paradas
+
     +cardTransportInfo('Horario #21', '10:30 am', 'Ruteado', ruteadoPrice, '3.3 horas', false, false, false)
+      +paradas
+
     +cardTransportInfo('Horario #22', '11:00 am', 'Ruteado', ruteadoPrice, '3.3 horas', false, false, false)
+      +paradas
+
     +cardTransportInfo('Horario #23', '11:30 am', 'Ruteado', ruteadoPrice, '3.3 horas', false, false, false)
+      +paradas
+
     +cardTransportInfo('Horario #24', '12:00 pm', 'Ruteado', ruteadoPrice, '3.3 horas', false, false, false)
+      +paradas
+
     +cardTransportInfo('Horario #25', '12:15 pm', 'Expreso', expresoPrice, '2.4 horas', false, false, false)
+
     +cardTransportInfo('Horario #26', '12:30 pm', 'Ruteado', ruteadoPrice, '3.3 horas', false, false, false)
+      +paradas
+
     +cardTransportInfo('Horario #27', '01:00 pm', 'Ruteado', ruteadoPrice, '3.3 horas', false, false, false)
+      +paradas
+
     +cardTransportInfo('Horario #28', '01:15 pm', 'Expreso', expresoPrice, '2.4 horas', false, false, false)
+
     +cardTransportInfo('Horario #29', '01:30 pm', 'Ruteado', ruteadoPrice, '3.3 horas', false, false, false)
+      +paradas
+
     +cardTransportInfo('Horario #30', '02:00 pm', 'Ruteado', ruteadoPrice, '3.3 horas', false, false, false)
+      +paradas
+
     +cardTransportInfo('Horario #31', '02:15 pm', 'Expreso', expresoPrice, '2.4 horas', false, false, false)
+
     +cardTransportInfo('Horario #32', '02:30 pm', 'Ruteado', ruteadoPrice, '3.3 horas', false, false, false)
+      +paradas
+
     +cardTransportInfo('Horario #33', '03:00 pm', 'Ruteado', ruteadoPrice, '3.3 horas', false, false, false)
+      +paradas
+
     +cardTransportInfo('Horario #34', '03:15 pm', 'Expreso', expresoPrice, '2.4 horas', false, false, false)
+
     +cardTransportInfo('Horario #35', '03:30 pm', 'Ruteado', ruteadoPrice, '3.3 horas', false, false, false)
+      +paradas
+
     +cardTransportInfo('Horario #36', '04:00 pm', 'Ruteado', ruteadoPrice, '3.3 horas', false, false, false)
+      +paradas
+
     +cardTransportInfo('Horario #37', '04:30 pm', 'Ruteado', ruteadoPrice, '3.3 horas', false, false, false)
+      +paradas
+
     +cardTransportInfo('Horario #38', '05:00 pm', 'Ruteado', ruteadoPrice, '3.3 horas', false, false, false)
+      +paradas
+
     +cardTransportInfo('Horario #39', '06:00 pm', 'Ruteado', ruteadoPrice, '3.3 horas', false, false, false)
+      +paradas
 
   article(class="py-12 sm:py-16 md:py-20 xl:py-28 bg-light-50 dark:bg-cool-gray-700")
     div(class="container mx-auto px-4 space-y-12 lg:space-y-16")
