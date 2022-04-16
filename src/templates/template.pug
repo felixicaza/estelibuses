@@ -19,6 +19,7 @@ html(class="scroll-smooth" dir="ltr" lang=`${LANG}` prefix="og: https://ogp.me/n
 
     link(crossorigin href="//www.googletagmanager.com/" rel="preconnect")/
     link(crossorigin href="//www.google-analytics.com/" rel="preconnect")/
+    link(crossorigin href="//pagead2.googlesyndication.com/" rel="preconnect")/
     block preconnect
 
     script.
@@ -27,6 +28,12 @@ html(class="scroll-smooth" dir="ltr" lang=`${LANG}` prefix="og: https://ogp.me/n
       src="https://www.googletagmanager.com/gtag/js"
       async
       crossorigin
+      importance="low"
+    )
+    script(
+      src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4534198821642047"
+      async
+      crossorigin="anonymous"
       importance="low"
     )
     block async-scripts
