@@ -39,7 +39,18 @@ mixin pageTerminal(idHeader, title, description, location, phone, origin, ...cit
 
   main(class="py-12 sm:py-16 md:py-20 xl:py-28")
     div(class="container mx-auto px-4")
-      article(class="text-center mb-16 md:mb-20 xl:mb-28")
+      ins(
+        class="adsbygoogle"
+        style="display: block"
+        data-ad-client="ca-pub-4534198821642047"
+        data-ad-format="auto"
+        data-ad-slot="2659594376"
+        data-full-width-responsive="true"
+      )
+      script.
+        (adsbygoogle = window.adsbygoogle || []).push({});
+
+      article(class="text-center my-16 md:my-20 xl:my-28")
         form#search-form(
           autocomplete="on"
           class="w-full max-w-xl mx-auto transition-colors space-y-4"
