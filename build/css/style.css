@@ -368,3 +368,7 @@ details[open] summary {
     transform: translateY(0);
   }
 }
+
+.adsbygoogle {
+  text-align: center !important;
+}
