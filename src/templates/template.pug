@@ -30,12 +30,6 @@ html(class="scroll-smooth" dir="ltr" lang=`${LANG}` prefix="og: https://ogp.me/n
       crossorigin
       importance="low"
     )
-    script(
-      src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4534198821642047"
-      async
-      crossorigin="anonymous"
-      importance="low"
-    )
     block async-scripts
 
     block critical-css
@@ -57,6 +51,12 @@ html(class="scroll-smooth" dir="ltr" lang=`${LANG}` prefix="og: https://ogp.me/n
     script(src=`${ASSETS_PATH}js/lib/quicklink.umd.js` defer importance="low")
     script(type="module" src=`${ASSETS_PATH}js/app.js` importance="low")
     script(src=`${ASSETS_PATH}js/polyfill-lazyload.js` defer importance="low")
+    script(
+      src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4534198821642047"
+      crossorigin="anonymous"
+      defer
+      importance="low"
+    )
     block defer-scripts
 
     meta(name="robots" content=`${META_ROBOTS}`)/

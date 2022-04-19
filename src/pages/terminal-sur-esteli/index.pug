@@ -72,7 +72,9 @@ block append content
           data-full-width-responsive="true"
         )
         script.
-          (adsbygoogle = window.adsbygoogle || []).push({});
+          window.onload = function () {
+            (adsbygoogle = window.adsbygoogle || []).push({});
+          };
 
       h2(class="text-3xl sm:text-4xl font-bold mb-8") Conoce sobre la Terminal Sur de Estelí
       div(class="space-y-4")
@@ -136,7 +138,7 @@ block append content
         )
         p(class="text-sm text-gray-400 !mt-3") Ubicación de la Terminal Sur de la ciudad de Estelí.
 
-      div(class="mb-10 lg:mb-16")
+      div(class="mt-10 lg:mt-16")
         ins(
           class="adsbygoogle"
           style="display: block"
@@ -146,4 +148,6 @@ block append content
           data-full-width-responsive="true"
         )
         script.
-          (adsbygoogle = window.adsbygoogle || []).push({});
+          window.onload = function () {
+            (adsbygoogle = window.adsbygoogle || []).push({});
+          };

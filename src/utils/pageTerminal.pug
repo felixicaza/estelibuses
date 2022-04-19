@@ -48,7 +48,9 @@ mixin pageTerminal(idHeader, title, description, location, phone, origin, ...cit
         data-full-width-responsive="true"
       )
       script.
-        (adsbygoogle = window.adsbygoogle || []).push({});
+        window.onload = function () {
+          (adsbygoogle = window.adsbygoogle || []).push({});
+        };
 
       article(class="text-center my-16 md:my-20 xl:my-28")
         form#search-form(
