@@ -55,4 +55,8 @@ const cpy = require('cpy')
   ).on('progress', data => {
     console.log(data)
   })
+
+  await cpy('build/ads.txt', 'public/ads.txt').on('progress', data => {
+    console.log(data)
+  })
 })()
