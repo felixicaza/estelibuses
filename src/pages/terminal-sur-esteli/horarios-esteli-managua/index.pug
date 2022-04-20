@@ -42,20 +42,29 @@ block append defer-scripts
   script(src=`${ASSETS_PATH}js/filter.js` defer importance="high")
 
 block append content
-  - const ruteadoPrice = "85"
+  - const ruteadoPrice = "90"
   - const expresoPrice = "110"
 
   mixin paradas
-    - const destinos = ["El Naranjo", "Santa Cruz", "La Trinidad", "San Isidro", "Sébaco", "Ciudad Darío", "Las Calabazas", "Puertas Viejas", "La Curva", "San Agustín", "El Madroño", "Casa Sola", "Las Lajas", "San Blas", "Chirimollo", "Maderas", "San Francisco", "El Matadero", "San Francisco", "San Jacinto", "San Benito", "Colonia Roque", "Chilamatillo", "Timal", "Ciudadela", "Tipitapa", "Mercado El Mayoreo"]
+    - const destinos = ["El Naranjo", "Santa Cruz", "Empalme San Nicolás", "La Concepción", "La Trinidad", "San Isidro", "Sébaco", "El Jobo", "Ciudad Darío", "Calabazas", "Puertas Viejas", "La Curva", "El Madroño", "Las Maderas", "San Benito", "Tipitapa", "Managua"]
+    - const destinosPrecios = ["C$ 13", "C$ 15", "C$ 15", "C$ 20", "C$ 22", "C$ 30", "C$ 40", "C$ 45", "C$ 45", "C$ 50", "C$ 55", "C$ 55", "C$ 55", "C$ 75", "C$ 80", "C$ 85", "C$ 90"]
 
     details(class="text-orange-500 dark:text-orange-400")
       summary(
-        class="cursor-pointer any-hover:bg-orange-100 px-3 py-2 rounded transition transition-colors"
+        class="cursor-pointer any-hover:bg-orange-100 dark:any-hover:bg-hex-2F3A49 px-3 py-2 rounded transition transition-colors"
       ) Conoce las principales paradas
-      section(class="border border-orange-100 rounded-b p-2")
-        ul(class="list-disc space-y-2 ml-7")
-          each destino in destinos
-            li= destino
+      section(class="border border-orange-100 dark:border-hex-2F3A49 rounded-b p-2")
+        table(class="w-full")
+          thead
+            tr
+              th(class="text-left px-2 py-1") Destino
+              th(class="text-left px-2 py-1") Pasaje
+          tbody
+            each destino, index in destinos
+              //- prettier-ignore
+              tr(class=`${index % 2 === 0 ? 'bg-orange-50 dark:bg-hex-373F4A' : ''}`)
+                td(class="px-2 py-1")= destino
+                td(class="px-2 py-1")= destinosPrecios[index]
 
   //- Último valor true es para añadir el filtro para los buses ruteados y expresos
   //- NO añadir en otras páginas que no lo necesiten
