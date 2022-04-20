@@ -36,6 +36,18 @@ block append preload
 block append defer-scripts
   script(src=`${ASSETS_PATH}js/search.js` defer importance="high")
 
+block append seo
+  script(type="application/ld+json").
+    {
+      "@context": "https://schema.org",
+      "@type": "FAQPage",
+      "mainEntity": [
+        { "@type": "Question", "inLanguage": "es", "name": "¿Cuál es el número de teléfono de la terminal sur?", "acceptedAnswer": { "@type": "Answer", "text": "El número de teléfono de la terminal sur de Estelí es el <a href='tel:+50527136162'>2713-6162</a>. <a href='https://estelibuses.web.app/terminal-sur-esteli?utm_source=google&utm_content=faq&utm_medium=organic&utm_campaign=faqgoogle'>Obtén más información.</a>" } },
+        { "@type": "Question", "inLanguage": "es", "name": "¿Dónde está ubicada la terminal sur de Estelí?", "acceptedAnswer": { "@type": "Answer", "text": "La terminal sur o mejor conocida como cotrán sur, está ubicada contiguo al déposito de Restaurantes Tip-Top, Km 148 1/2 carretera panamericana. <a href='https://estelibuses.web.app/terminal-sur-esteli?utm_source=google&utm_content=faq&utm_medium=organic&utm_campaign=faqgoogle'>Obtén más información.</a>" } },
+        { "@type": "Question", "inLanguage": "es", "name": "¿Cómo puedo conocer los horarios de los buses de la terminal sur de Estelí?", "acceptedAnswer": { "@type": "Answer", "text": "Para conocer todos los horarios de la terminal sur de Estelí, puedes hacer uso de la plataforma Estelí Buses. <a href='https://estelibuses.web.app/terminal-sur-esteli?utm_source=google&utm_content=faq&utm_medium=organic&utm_campaign=faqgoogle'>Obtén más información.</a>" } }
+      ]
+    }
+
 block append content
   +pageTerminal('terminal-sur', 'Horarios de la Terminal Sur de Buses de Estelí', 'Conoce todos los horarios de la Terminal Sur de Estelí y elige la ciudad a la que deseas viajar.', 'Contiguo al déposito de Restaurantes Tip-Top, Km 148 ½ Carretera Panamericana', '2713-6162', 'sur', 'Managua', 'Matagalpa', 'León', 'La Trinidad', 'San Nicolás', 'Tisey - La Estanzuela', 'Achuapa', 'Murra', 'El Espinal', 'Yalí')
     +cardCity('Managua', 'sur', 'data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAoAAAAGCAYAAAD68A/GAAAAAklEQVR4AewaftIAAADNSURBVAXBS06DUBiA0e+HC7TAoKnVVkdNTFyGC3UJjlyCAx01OjAaY2IZ1JqGaEAriBfuw3Pk8ubVZ7GgjSeNhCiEjx/DV2cZh5AoIVaCavoBbUNEoGwsn7+GtneEQKYgCeFvcKjr54JpnhMFCvCICIEzeIHg5Zbv03O0ExT1BW0dgU8Z2jHzScw8maBHCTbo6TZXFOUOdeQ8q2JNlhv2usey5L565/gkp9F7FtkZh1NQD29blosDNts1VdWR8shsZinrmgjDbljxdDfiHzXGWeYErh0SAAAAAElFTkSuQmCC')
