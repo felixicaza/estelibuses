@@ -41,39 +41,104 @@ block append preload
 block append defer-scripts
 
 block append content
+  - const precioPasaje = "45"
+
+  mixin paradas
+    - const destinos = ["El Naranjo", "Santa Cruz", "Empalme San Nicolás", "La Concepción", "La Trinidad", "Las Cañas", "San Isidro", "Sébaco", "Chagüitillo", "Las Palomas", "Los Cardones", "Cerro Largo", "El Palacio", "Quebrada Honda", "Guayacán", "Las Tres M", "Las Tejas", "Matagalpa"]
+    - const destinosPrecios = ["C$ 13", "C$ 15", "C$ 15", "C$ 20", "C$ 22", "C$ 22", "C$ 30", "C$ 40", "C$ 40", "C$ 40", "C$ 40", "C$ 40", "C$ 40", "C$ 40", "C$ 42", "C$ 45", "C$ 45", "C$ 45"]
+
+    details(class="text-orange-500 dark:text-orange-400")
+      summary(
+        class="cursor-pointer any-hover:bg-orange-100 dark:any-hover:bg-hex-2F3A49 px-3 py-2 rounded transition transition-colors"
+      ) Conoce las principales paradas
+      section(class="border border-orange-100 dark:border-hex-2F3A49 rounded-b p-2")
+        table(class="w-full")
+          thead
+            tr
+              th(class="text-left px-2 py-1") Destino
+              th(class="text-left px-2 py-1") Pasaje
+          tbody
+            each destino, index in destinos
+              //- prettier-ignore
+              tr(class=`${index % 2 === 0 ? 'bg-orange-50 dark:bg-hex-373F4A' : ''}`)
+                td(class="px-2 py-1")= destino
+                td(class="px-2 py-1")= destinosPrecios[index]
+
   +pageCity('Matagalpa', 'Terminal sur', 'Terminal de Matagalpa', '69.5 km', 'https://www.google.com/maps/embed?pb=!1m28!1m12!1m3!1d124419.2712839066!2d-86.20375010804754!3d12.965309940094839!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!4m13!3e6!4m5!1s0x8f718c13825dde4b%3A0x69c6340e0429bb84!2sCotran%20Sur%2C%20Estel%C3%AD!3m2!1d13.0762386!2d-86.3524291!4m5!1s0x8f724830f9561d2f%3A0x1793a46db7ccdb99!2sMatagalpa!3m2!1d12.9290069!2d-85.9151211!5e0!3m2!1ses-419!2sni!4v1645555676814!5m2!1ses-419!2sni')
-    +cardTransportInfo('Horario #1', '05:15 am', 'Ruteado', 'Información no disponible', '1.3 horas', false, false, false)
-    +cardTransportInfo('Horario #2', '05:45 am', 'Ruteado', 'Información no disponible', '1.3 horas', false, false, false)
-    +cardTransportInfo('Horario #3', '06:15 am', 'Ruteado', 'Información no disponible', '1.3 horas', false, false, false)
-    +cardTransportInfo('Horario #4', '06:45 am', 'Ruteado', 'Información no disponible', '1.3 horas', false, false, false)
-    +cardTransportInfo('Horario #5', '07:15 am', 'Ruteado', 'Información no disponible', '1.3 horas', false, false, false)
-    +cardTransportInfo('Horario #6', '07:45 am', 'Ruteado', 'Información no disponible', '1.3 horas', false, false, false)
-    +cardTransportInfo('Horario #7', '08:15 am', 'Ruteado', 'Información no disponible', '1.3 horas', false, false, false)
-    +cardTransportInfo('Horario #8', '08:45 am', 'Ruteado', 'Información no disponible', '1.3 horas', false, false, false)
-    +cardTransportInfo('Horario #9', '09:15 am', 'Ruteado', 'Información no disponible', '1.3 horas', false, false, false)
-    +cardTransportInfo('Horario #10', '09:45 am', 'Ruteado', 'Información no disponible', '1.3 horas', false, false, false)
-    +cardTransportInfoExtended('Horario #11', 'Hora de salida de Matagalpa', '06:50 am', 'Hora de salida de Estelí', '10:15 am', 'Ruteado', 'Moreno', 'ES 057', 'Información no disponible', '1.3 horas', false, false, false)
+    +cardTransportInfo('Horario #1', '05:15 am', 'Ruteado', precioPasaje, '1.3 horas', false, false, false)
+      +paradas
 
-    +cardTransportInfo('Horario #12', '10:45 am', 'Ruteado', 'Información no disponible', '1.3 horas', false, false, false)
+    +cardTransportInfo('Horario #2', '05:45 am', 'Ruteado', precioPasaje, '1.3 horas', false, false, false)
+      +paradas
 
-    +cardTransportInfoExtended('Horario #13', 'Hora de salida de Matagalpa', '07:50 am', 'Hora de salida de Estelí', '11:15 am', 'Ruteado', 'Moreno', 'ES 222', 'Información no disponible', '1.3 horas', false, false, false)
+    +cardTransportInfo('Horario #3', '06:15 am', 'Ruteado', precioPasaje, '1.3 horas', false, false, false)
+      +paradas
 
-    +cardTransportInfo('Horario #14', '11:45 am', 'Ruteado', 'Información no disponible', '1.3 horas', false, false, false)
-    +cardTransportInfo('Horario #15', '12:15 pm', 'Ruteado', 'Información no disponible', '1.3 horas', false, false, false)
-    +cardTransportInfo('Horario #16', '12:45 pm', 'Ruteado', 'Información no disponible', '1.3 horas', false, false, false)
-    +cardTransportInfo('Horario #17', '01:15 pm', 'Ruteado', 'Información no disponible', '1.3 horas', false, false, false)
-    +cardTransportInfo('Horario #18', '01:45 pm', 'Ruteado', 'Información no disponible', '1.3 horas', false, false, false)
-    +cardTransportInfo('Horario #19', '02:15 pm', 'Ruteado', 'Información no disponible', '1.3 horas', false, false, false)
-    +cardTransportInfo('Horario #20', '02:45 pm', 'Ruteado', 'Información no disponible', '1.3 horas', false, false, false)
+    +cardTransportInfo('Horario #4', '06:45 am', 'Ruteado', precioPasaje, '1.3 horas', false, false, false)
+      +paradas
 
-    +cardTransportInfoExtended('Horario #21', 'Hora de salida de Matagalpa', '05:00 am', 'Hora de salida de Estelí', '03:15 pm', 'Ruteado', 'Moreno', 'ES 244', 'Información no disponible', '1.3 horas', false, false, false)
+    +cardTransportInfo('Horario #5', '07:15 am', 'Ruteado', precioPasaje, '1.3 horas', false, false, false)
+      +paradas
 
-    +cardTransportInfo('Horario #22', '03:45 pm', 'Ruteado', 'Información no disponible', '1.3 horas', false, false, false)
+    +cardTransportInfo('Horario #6', '07:45 am', 'Ruteado', precioPasaje, '1.3 horas', false, false, false)
+      +paradas
 
-    +cardTransportInfoExtended('Horario #23', 'Hora de salida de Matagalpa', '12:50 pm', 'Hora de salida de Estelí', '04:15 pm', 'Ruteado', 'Moreno', 'ES 057', 'Información no disponible', '1.3 horas', false, false, false)
+    +cardTransportInfo('Horario #7', '08:15 am', 'Ruteado', precioPasaje, '1.3 horas', false, false, false)
+      +paradas
 
-    +cardTransportInfo('Horario #24', '04:45 pm', 'Ruteado', 'Información no disponible', '1.3 horas', false, false, false)
-    +cardTransportInfo('Horario #25', '05:45 pm', 'Ruteado', 'Información no disponible', '1.3 horas', false, false, false)
+    +cardTransportInfo('Horario #8', '08:45 am', 'Ruteado', precioPasaje, '1.3 horas', false, false, false)
+      +paradas
+
+    +cardTransportInfo('Horario #9', '09:15 am', 'Ruteado', precioPasaje, '1.3 horas', false, false, false)
+      +paradas
+
+    +cardTransportInfo('Horario #10', '09:45 am', 'Ruteado', precioPasaje, '1.3 horas', false, false, false)
+      +paradas
+
+    +cardTransportInfoExtended('Horario #11', 'Hora de salida de Matagalpa', '06:50 am', 'Hora de salida de Estelí', '10:15 am', 'Ruteado', 'Moreno', 'ES 057', precioPasaje, '1.3 horas', false, false, false)
+      +paradas
+
+    +cardTransportInfo('Horario #12', '10:45 am', 'Ruteado', precioPasaje, '1.3 horas', false, false, false)
+      +paradas
+
+    +cardTransportInfoExtended('Horario #13', 'Hora de salida de Matagalpa', '07:50 am', 'Hora de salida de Estelí', '11:15 am', 'Ruteado', 'Moreno', 'ES 222', precioPasaje, '1.3 horas', false, false, false)
+      +paradas
+
+    +cardTransportInfo('Horario #14', '11:45 am', 'Ruteado', precioPasaje, '1.3 horas', false, false, false)
+      +paradas
+
+    +cardTransportInfo('Horario #15', '12:15 pm', 'Ruteado', precioPasaje, '1.3 horas', false, false, false)
+      +paradas
+
+    +cardTransportInfo('Horario #16', '12:45 pm', 'Ruteado', precioPasaje, '1.3 horas', false, false, false)
+      +paradas
+
+    +cardTransportInfo('Horario #17', '01:15 pm', 'Ruteado', precioPasaje, '1.3 horas', false, false, false)
+      +paradas
+
+    +cardTransportInfo('Horario #18', '01:45 pm', 'Ruteado', precioPasaje, '1.3 horas', false, false, false)
+      +paradas
+
+    +cardTransportInfo('Horario #19', '02:15 pm', 'Ruteado', precioPasaje, '1.3 horas', false, false, false)
+      +paradas
+
+    +cardTransportInfo('Horario #20', '02:45 pm', 'Ruteado', precioPasaje, '1.3 horas', false, false, false)
+      +paradas
+
+    +cardTransportInfoExtended('Horario #21', 'Hora de salida de Matagalpa', '05:00 am', 'Hora de salida de Estelí', '03:15 pm', 'Ruteado', 'Moreno', 'ES 244', precioPasaje, '1.3 horas', false, false, false)
+      +paradas
+
+    +cardTransportInfo('Horario #22', '03:45 pm', 'Ruteado', precioPasaje, '1.3 horas', false, false, false)
+      +paradas
+
+    +cardTransportInfoExtended('Horario #23', 'Hora de salida de Matagalpa', '12:50 pm', 'Hora de salida de Estelí', '04:15 pm', 'Ruteado', 'Moreno', 'ES 057', precioPasaje, '1.3 horas', false, false, false)
+      +paradas
+
+    +cardTransportInfo('Horario #24', '04:45 pm', 'Ruteado', precioPasaje, '1.3 horas', false, false, false)
+      +paradas
+
+    +cardTransportInfo('Horario #25', '05:45 pm', 'Ruteado', precioPasaje, '1.3 horas', false, false, false)
+      +paradas
 
   article(class="py-12 sm:py-16 md:py-20 xl:py-28 bg-light-50 dark:bg-cool-gray-700")
     div(class="container mx-auto px-4 space-y-12 lg:space-y-16")
