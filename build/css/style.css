@@ -358,6 +358,10 @@ details[open] summary {
   background-color: rgba(255, 237, 213, var(--tw-bg-opacity));
 }
 
+.dark details[open] summary {
+  background-color: #2f3a49;
+}
+
 @keyframes sweep {
   0% {
     opacity: 0;
