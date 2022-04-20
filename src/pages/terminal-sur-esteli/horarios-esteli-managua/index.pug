@@ -41,6 +41,25 @@ block append preload
 block append defer-scripts
   script(src=`${ASSETS_PATH}js/filter.js` defer importance="high")
 
+block append seo
+  script(type="application/ld+json").
+    {
+      "@context": "https://schema.org",
+      "@type": "FAQPage",
+      "mainEntity": [
+        { "@type": "Question", "inLanguage": "es", "name": "¿Cuál es la hora del primer bus Expreso hacia Managua?", "acceptedAnswer": { "@type": "Answer", "text": "El primer bus expreso hacia Managua desde la terminal sur sale a las 04:45 am. <a href='https://estelibuses.web.app/terminal-sur-esteli/horarios-esteli-managua?utm_source=google&utm_content=faq&utm_medium=organic&utm_campaign=faqgoogle'>Mira más horarios.</a>" } },
+        { "@type": "Question", "inLanguage": "es", "name": "¿Cuánto cuesta el pasaje hacia Managua?", "acceptedAnswer": { "@type": "Answer", "text": "Para viajar a Managua los buses expresos cuestan C$ 110 córdobas y los buses ruteados cuestan C$ 90 córdobas. <a href='https://estelibuses.web.app/terminal-sur-esteli/horarios-esteli-managua?utm_source=google&utm_content=faq&utm_medium=organic&utm_campaign=faqgoogle'>Obtén más información.</a>" } },
+        { "@type": "Question", "inLanguage": "es", "name": "¿Cuál es la manera más barata de llegar de Estelí a Managua?", "acceptedAnswer": { "@type": "Answer", "text": "La forma más barata de ir desde Estelí hacia Managua es abordando un bus ruteado que salen desde la terminal sur y el pasaje vale C$ 90 córdobas. <a href='https://estelibuses.web.app/terminal-sur-esteli/horarios-esteli-managua?utm_source=google&utm_content=faq&utm_medium=organic&utm_campaign=faqgoogle'>Obtén más información</a>" } },
+        { "@type": "Question", "inLanguage": "es", "name": "¿Cuál es la manera más rápida de llegar desde Estelí hasta Managua?", "acceptedAnswer": { "@type": "Answer", "text": "La forma más rápida de ir desde Estelí hacia Managua es abordando un bus expreso, estos salen desde la terminal sur y el viaje dura apróximadamente 2.4 horas. <a href='https://estelibuses.web.app/terminal-sur-esteli/horarios-esteli-managua?utm_source=google&utm_content=faq&utm_medium=organic&utm_campaign=faqgoogle'>Obtén más información</a>" } },
+        { "@type": "Question", "inLanguage": "es", "name": "¿Hay un bus directo de Estelí a Managua?", "acceptedAnswer": { "@type": "Answer", "text": "Sí, los buses directos que salen desde Estelí y llegan a Managua, son los buses expresos, estos salen desde la terminal sur y dura 2.4 horas el viaje. <a href='https://estelibuses.web.app/terminal-sur-esteli/horarios-esteli-managua?utm_source=google&utm_content=faq&utm_medium=organic&utm_campaign=faqgoogle'>Obtén más información</a>" } },
+        { "@type": "Question", "inLanguage": "es", "name": "¿A cuánta distancia está Estelí de Managua?", "acceptedAnswer": { "@type": "Answer", "text": "La distancia por carretera es de 141 Km. <a href='https://estelibuses.web.app/terminal-sur-esteli/horarios-esteli-managua?utm_source=google&utm_content=faq&utm_medium=organic&utm_campaign=faqgoogle'>Obtén indicaciones para viajar</a>" } },
+        { "@type": "Question", "inLanguage": "es", "name": "¿Cómo viajo desde Estelí a Managua sin un coche?", "acceptedAnswer": { "@type": "Answer", "text": "La mejor manera de ir desde Estelí a Managua sin un coche es abordando los buses que salen desde la terminal sur. <a href='https://estelibuses.web.app/terminal-sur-esteli/horarios-esteli-managua?utm_source=google&utm_content=faq&utm_medium=organic&utm_campaign=faqgoogle'>Mira los Horarios</a>" } },
+        { "@type": "Question", "inLanguage": "es", "name": "¿Cuánto se tarda en llegar desde Estelí a Managua?", "acceptedAnswer": { "@type": "Answer", "text": "Los buses expresos desde Estelí hacia Managua duran 2.4 horas de viaje y los buses ruteados duran 3 horas de viaje apróximadamente. <a href='https://estelibuses.web.app/terminal-sur-esteli/horarios-esteli-managua?utm_source=google&utm_content=faq&utm_medium=organic&utm_campaign=faqgoogle'>Obtén más información</a>" } },
+        { "@type": "Question", "inLanguage": "es", "name": "¿Dónde tomo el bus de Estelí a Managua?", "acceptedAnswer": { "@type": "Answer", "text": "Los buses que salen desde Estelí hacia Managua, se pueden abordar desde la terminal sur o cotrán sur. <a href='https://estelibuses.web.app/terminal-sur-esteli/horarios-esteli-managua?utm_source=google&utm_content=faq&utm_medium=organic&utm_campaign=faqgoogle'>Conoce los horarios</a>" } },
+        { "@type": "Question", "inLanguage": "es", "name": "¿A dónde llega el autobús de Estelí a Managua?", "acceptedAnswer": { "@type": "Answer", "text": "Los buses que viajan desde Estelí hacia Managua llegan a la terminal del Mercado El Mayoreo de Managua. <a href='https://estelibuses.web.app/terminal-sur-esteli/horarios-esteli-managua?utm_source=google&utm_content=faq&utm_medium=organic&utm_campaign=faqgoogle'>Obtén más información</a>" } }
+      ]
+    }
+
 block append content
   - const ruteadoPrice = "90"
   - const expresoPrice = "110"
