@@ -14,12 +14,20 @@ import { getAnalytics, logEvent } from './lib/firebase-analytics.js'
  */
 
 const logoMain = document.querySelectorAll('#logo-main > source')
+const switchSchemeBtn = document.getElementById('switch-scheme')
+const darkIcon = document.getElementById('dark-icon')
+const lightIcon = document.getElementById('light-icon')
 
 const colorSchemeDark = window.matchMedia('(prefers-color-scheme: dark)')
 let darkModeState = false
 
+const lightModeText = 'Activa el modo claro (Alt+Shift D)'
+const darkModeText = 'Activa el modo oscuro (Alt+Shift D)'
+
 function toggleDarkMode(state) {
   document.documentElement.classList.toggle('dark', state)
+  lightIcon.classList.toggle('hidden', !state)
+  darkIcon.classList.toggle('hidden', state)
   darkModeState = state
 
   logoMain.forEach(logo => {
@@ -45,28 +53,18 @@ toggleDarkMode(localStorage.getItem('darkmode') === 'true')
 
 colorSchemeDark.addListener(e => toggleDarkMode(e.matches))
 
-let timeTouch
+switchSchemeBtn.addEventListener('click', () => {
+  darkModeState = !darkModeState
 
-window.addEventListener('touchstart', e => {
-  const now = new Date().getTime()
-  const timeSince = now - timeTouch
+  toggleDarkMode(darkModeState)
+  setDarkModeLocalStorage(darkModeState)
 
-  // Detectar 2 toques dentro de 185 milisegundos y omitir el uso de ambos
-  // dedos con la propiedad touches.length del evento, para evitar efectos
-  // secundarios de cambio del tema al hacer zoom en el sitio
-  if (timeSince < 185 && timeSince > 0 && e.touches.length === 1) {
-    darkModeState = !darkModeState
-
-    toggleDarkMode(darkModeState)
-    setDarkModeLocalStorage(darkModeState)
+  if (localStorage.getItem('darkmode') === 'true') {
+    switchSchemeBtn.setAttribute('title', lightModeText)
+  } else {
+    switchSchemeBtn.setAttribute('title', darkModeText)
   }
-
-  timeTouch = new Date().getTime()
 })
-
-// Desactivar el evento de desplazamiento para evitar efectos secundarios
-// de cambios del tema
-window.addEventListener('touchmove', e => e.preventDefault())
 
 window.addEventListener('DOMContentLoaded', () => {
   logoMain.forEach(logo => {
@@ -90,6 +88,20 @@ window.addEventListener('keydown', e => {
 
     toggleDarkMode(darkModeState)
     setDarkModeLocalStorage(darkModeState)
+
+    if (localStorage.getItem('darkmode') === 'true') {
+      switchSchemeBtn.setAttribute('title', lightModeText)
+    }
+
+    if (localStorage.getItem('darkmode') !== 'true') {
+      switchSchemeBtn.setAttribute('title', darkModeText)
+    }
+
+    if (localStorage.getItem('darkmode') === 'true') {
+      switchSchemeBtn.setAttribute('title', lightModeText)
+    } else {
+      switchSchemeBtn.setAttribute('title', darkModeText)
+    }
   }
 })
 
