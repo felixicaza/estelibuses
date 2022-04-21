@@ -2,13 +2,11 @@ block currentPage
 
 - const ACTIVE = PAGE
 
-- const inicio = `${ACTIVE === "inicio" ? "text-white" : "any-hover:text-cool-gray-500 active:text-cool-gray-500 transition-colors"} py-2.5 px-6 hidden z-2`
 - const terminalNorte = `${ACTIVE === "terminal-norte" ? "text-cool-gray-500" : "any-hover:text-cool-gray-500 active:text-cool-gray-500 transition-colors"} py-2.5 px-6 hidden lg:inline z-2`
 - const terminalSur = `${ACTIVE === "terminal-sur" ? "text-cool-gray-500" : "any-hover:text-cool-gray-500 active:text-cool-gray-500 transition-colors"} py-2.5 px-6 hidden lg:inline z-2`
-- const negocios = `${ACTIVE === "negocios" ? "text-cool-gray-500" : "any-hover:text-cool-gray-500 active:text-cool-gray-500 transition-colors"} py-2.5 px-6 hidden lg:inline z-2`
 - const acerca = `${ACTIVE === "acerca" ? "text-cool-gray-500" : "any-hover:text-cool-gray-500 active:text-cool-gray-500 transition-colors"} py-2.5 px-6 hidden lg:inline z-2`
 
-nav(class="py-2 flex justify-between items-center")
+nav(class="py-2 flex justify-center lg:justify-between items-center")
   a(class="inline-block" href="/")
     picture#logo-main
       source(
@@ -63,12 +61,6 @@ nav(class="py-2 flex justify-between items-center")
       }
     });
   section(class="flex items-center space-x-4 font-medium whitespace-nowrap")
-    a(class=inicio href="/") Inicio
     a(class=terminalNorte href="/terminal-norte-esteli") Terminal norte
     a(class=terminalSur href="/terminal-sur-esteli") Terminal sur
     a(class=acerca href="/acerca-de-estelibuses") Acerca
-    a(class=negocios href="/negocios") Negocios
-    a(
-      class="py-2.5 px-3 sm:px-6 bg-orange-400 any-hover:bg-orange-500 any-hover:shadow-orange-600/30 active:bg-orange-500 active:shadow-orange-600/30 transition-colors text-white rounded-full shadow-lg shadow-orange-500/30 text-xs xs:text-sm sm:text-base z-2"
-      href="/guia-de-contribucion"
-    ) ¿Deseas contribuir?
