@@ -145,6 +145,7 @@ const APP_SHELL = [
   '/js/polyfill-lazyload.js',
   '/js/search.js',
   '/js/header-search.js',
+  '/js/lib/quicklink.umd.js',
   '/manifest.json',
   '/js/sw-app-shell.js',
   '/js/sw-app-shell-media.js'
