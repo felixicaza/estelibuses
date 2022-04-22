@@ -265,6 +265,10 @@ body {
   --tw-translate-x: -2rem;
 }
 
+.translate-x-8 {
+  --tw-translate-x: 2rem;
+}
+
 .-translate-y-12 {
   --tw-translate-y: -3rem;
 }

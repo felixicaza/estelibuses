@@ -5,13 +5,11 @@
 importScripts('/js/sw-app-shell.js')
 importScripts('/js/sw-app-shell-media.js')
 
-const CACHE_CORE = 'core-v2.38'
-const CACHE_MEDIA = 'media-v2.38'
-const CACHE_DYNAMIC = 'dynamic-v2.38'
+const CACHE_CORE = 'core-v2.40'
+const CACHE_MEDIA = 'media-v2.40'
+const CACHE_DYNAMIC = 'dynamic-v2.40'
 
 self.addEventListener('install', e => {
-  self.skipWaiting()
-
   const setCacheCore = caches
     .open(CACHE_CORE)
     .then(coreCache => coreCache.addAll(APP_SHELL))
@@ -53,4 +51,10 @@ self.addEventListener('fetch', e => {
   })
 
   e.respondWith(fetchResponse)
+})
+
+self.addEventListener('message', e => {
+  if (e.data === 'SKIP_WAITING') {
+    self.skipWaiting()
+  }
 })

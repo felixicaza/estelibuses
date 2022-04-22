@@ -215,11 +215,79 @@ if (window.location.hostname === 'estelibuses.web.app') {
 }
 
 /**
+ * Reload Button
+ */
+
+const reloadBtn = document.getElementById('reload')
+
+function showUpdateFounded(registration) {
+  reloadBtn.classList.replace('opacity-0', 'opacity-100')
+
+  setTimeout(() => {
+    if (isMobile) {
+      reloadBtn.classList.replace('translate-y-18', '-translate-y-18')
+    } else {
+      reloadBtn.classList.replace('right-0', 'left-0')
+      reloadBtn.classList.replace('-translate-x-4', 'translate-x-8')
+      reloadBtn.classList.replace('translate-y-18', '-translate-y-12')
+    }
+  }, 500)
+
+  reloadBtn.addEventListener('click', () => {
+    if (registration.waiting) {
+      registration.waiting.postMessage('SKIP_WAITING')
+    }
+
+    /**
+     * Track if pwa is updated
+     */
+
+    if (window.location.hostname === 'estelibuses.web.app') {
+      const appTrackUpdate = initializeApp(firebaseConfig)
+      const analytics = getAnalytics(appTrackUpdate)
+
+      logEvent(analytics, 'estelibuses_updated', {
+        name: 'Estelí Buses fue actualizado'
+      })
+    }
+  })
+}
+
+/**
  * Install Service Worker
  */
 
-window.addEventListener('load', () => {
-  navigator.serviceWorker.register('/sw.js')
+window.addEventListener('load', async () => {
+  const registration = await navigator.serviceWorker.register('/sw.js')
+
+  if (registration.waiting) {
+    showUpdateFounded(registration)
+  }
+
+  registration.addEventListener('updatefound', () => {
+    if (registration.installing) {
+      registration.installing.addEventListener('statechange', () => {
+        if (registration.waiting) {
+          if (navigator.serviceWorker.controller) {
+            showUpdateFounded(registration)
+          }
+        }
+      })
+    }
+  })
+})
+
+/**
+ * Reload
+ */
+
+let refreshing
+
+navigator.serviceWorker.addEventListener('controllerchange', () => {
+  if (!refreshing) {
+    window.location.reload()
+    refreshing = true
+  }
 })
 
 /**
