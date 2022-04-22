@@ -5,9 +5,9 @@
 importScripts('/js/sw-app-shell.js')
 importScripts('/js/sw-app-shell-media.js')
 
-const CACHE_CORE = 'core-v2.36'
-const CACHE_MEDIA = 'media-v2.36'
-const CACHE_DYNAMIC = 'dynamic-v2.36'
+const CACHE_CORE = 'core-v2.37'
+const CACHE_MEDIA = 'media-v2.37'
+const CACHE_DYNAMIC = 'dynamic-v2.37'
 
 self.addEventListener('install', e => {
   self.skipWaiting()
@@ -45,19 +45,11 @@ self.addEventListener('fetch', e => {
   const fetchResponse = caches.match(e.request).then(response => {
     if (response) return response
 
-    return fetch(e.request)
-      .then(newResponse => {
-        caches.open(CACHE_DYNAMIC).then(cache => {
-          cache.put(e.request, newResponse)
-        })
-
-        return newResponse.clone()
-      })
-      .catch(() => {
-        if (e.request.headers.get('accept').includes('text/html')) {
-          return caches.match('/offline.html')
-        }
-      })
+    return fetch(e.request).catch(() => {
+      if (e.request.headers.get('accept').includes('text/html')) {
+        return caches.match('/offline.html')
+      }
+    })
   })
 
   e.respondWith(fetchResponse)
