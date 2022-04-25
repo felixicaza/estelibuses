@@ -1,6 +1,6 @@
-- const citiesNorth = ["Managua (Terminal Norte)", "Jinotega", "Somoto", "Ocotal", "San Juan de Limay", "Pueblo Nuevo", "Quilalí", "Yalí (Terminal Norte)", "San Juan del Río Coco", "San Rafael del Norte", "El Regadío", "Wiwilí", "El Sauce", "Achuapa (Terminal Norte)", "La Concordia", "Jalapa", "Masaya", "La Pita", "La Rica", "San Marcos de Colón", "Oro Verde"]
+- const citiesNorth = ["Managua (Terminal Norte)", "Jinotega", "Somoto", "Ocotal", "San Juan de Limay", "Pueblo Nuevo", "Quilalí", "Yalí (Terminal Norte)", "San Juan del Río Coco", "San Rafael del Norte", "El Regadío", "Wiwilí", "El Sauce", "Achuapa (Terminal Norte)", "La Concordia", "Jalapa", "Masaya", "La Pita", "La Rica", "San Marcos de Colón", "Oro Verde", "Santa Cruz - La Ceiba"]
 - const convertCitiesNorth = citiesNorth.map(city => city.toLowerCase().normalize('NFD').replace(/[\u0300-\u036f]/g, "").replace(/\s\(\w{8}\s\w{5}\)/, "").replace(/\s/g, "-"))
-- const citiesSouth = ["Managua (Terminal Sur)", "Matagalpa", "León", "La Trinidad", "San Nicolás", "Tisey - La Estanzuela", "Achuapa (Terminal Sur)", "Murra", "El Espinal", "Yalí (Terminal Sur)"]
+- const citiesSouth = ["Managua (Terminal Sur)", "Matagalpa", "León", "La Trinidad", "San Nicolás", "Tisey - La Estanzuela", "Achuapa (Terminal Sur)", "Murra", "El Espinal", "Yalí (Terminal Sur)", "El Naranjo", "Santa Cruz (Terminal Sur)", "Empalme San Nicolás", "La Concepción", "San Isidro", "Sébaco"]
 - const convertCitiesSouth = citiesSouth.map(city => city.toLowerCase().normalize('NFD').replace(/[\u0300-\u036f]/g, "").replace(/\s\(\w{8}\s\w{3}\)/, "").replace(/\s/g, "-"))
 
 header#mainPage(class="wave")
@@ -53,9 +53,15 @@ header#mainPage(class="wave")
             ul(class="space-y-2 pb-2 px-4")
               each cityNorth, index in citiesNorth
                 li(class="cities text-left hidden")
+                  - let fixNameNorth = null
+
+                  - if (convertCitiesNorth[index] === 'santa-cruz---la-ceiba') {
+                  - fixNameNorth = "santa-cruz-la-ceiba"
+                  - }
+
                   a(
                     class="group py-2 px-4 w-full block flex gap-2 mt-2 font-semibold transition-colors active:bg-orange-100 rounded"
-                    href=`/terminal-norte-esteli/horarios-esteli-${convertCitiesNorth[index]}`
+                    href=`/terminal-norte-esteli/horarios-esteli-${fixNameNorth || convertCitiesNorth[index]}`
                   )
                     svg(
                       class="fill-current w-6 h-6 group-any-hover:text-orange-500 transition-colors"
@@ -68,9 +74,15 @@ header#mainPage(class="wave")
 
               each citySouth, index in citiesSouth
                 li(class="cities text-left hidden")
+                  - let fixNameSouth = null
+
+                  - if (convertCitiesSouth[index] === 'tisey---la-estanzuela') {
+                  - fixNameSouth = "tisey-la-estanzuela"
+                  - }
+
                   a(
                     class="group py-2 px-4 w-full block flex gap-2 mt-2 font-semibold transition-colors active:bg-orange-100 rounded"
-                    href=`/terminal-sur-esteli/horarios-esteli-${convertCitiesSouth[index] === 'tisey---la-estanzuela' ? 'tisey-la-estanzuela' : convertCitiesSouth[index]}`
+                    href=`/terminal-sur-esteli/horarios-esteli-${fixNameSouth || convertCitiesSouth[index]}`
                   )
                     svg(
                       class="fill-current w-6 h-6 group-any-hover:text-orange-500 transition-colors"
