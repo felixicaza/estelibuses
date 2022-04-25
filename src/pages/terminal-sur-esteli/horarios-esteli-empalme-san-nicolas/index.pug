@@ -37,7 +37,11 @@ block append stylesheets
 block append preload
 
 block append defer-scripts
-  script(src=`${ASSETS_PATH}js/filter-others.js` defer importance="high")
+  script(
+    type="module"
+    src=`${ASSETS_PATH}js/filter-others.js`
+    importance="high"
+  )
 
 block append content
   +pageCity('Empalme San Nicolás', 'Terminal sur', 'Empalme San Nicolás', '11.2 km', 'https://www.google.com/maps/embed?pb=!1m28!1m12!1m3!1d62191.22662011131!2d-86.36382739680779!3d13.038748747767261!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!4m13!3e6!4m5!1s0x8f718c13825dde4b%3A0x69c6340e0429bb84!2sCotran%20Sur%2C%20Estel%C3%AD!3m2!1d13.0762386!2d-86.3524291!4m5!1s0x8f71899a64db56c5%3A0x2750c83c52383160!2sEmpalme%20San%20Nicol%C3%A1s%20Estel%C3%AD%2C%20NN-45%2C%20La%20Ceiba!3m2!1d13.000516699999999!2d-86.305069!5e0!3m2!1ses-419!2sni!4v1650851213700!5m2!1ses-419!2sni')

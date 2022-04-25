@@ -1,6 +1,28 @@
 /* eslint-disable no-param-reassign */
+/* eslint-disable import/extensions */
 /* eslint-disable no-return-assign */
 /* eslint-disable no-plusplus */
+
+/**
+ * Firebase Import Analytics
+ */
+
+import { initializeApp } from './lib/firebase-app.js'
+import { getAnalytics, logEvent } from './lib/firebase-analytics.js'
+
+/**
+ * Firebase Configuration
+ */
+
+const firebaseConfig = {
+  apiKey: 'AIzaSyAqPF5z2zeJCAXKmnAV6gfapspOK4joCEs',
+  authDomain: 'buses-esteli-d2d5e.firebaseapp.com',
+  projectId: 'buses-esteli-d2d5e',
+  storageBucket: 'buses-esteli-d2d5e.appspot.com',
+  messagingSenderId: '47347043568',
+  appId: '1:47347043568:web:e1b9a83b88c35fe1a0c635',
+  measurementId: 'G-4QFJH1D53Q'
+}
 
 const formFilter = document.getElementById('filter')
 const radioAll = document.getElementById('all')
@@ -26,6 +48,15 @@ formFilter.addEventListener('change', e => {
 
     expressBuses.forEach(express => express.classList.remove('hidden'))
     routedBuses.forEach(routed => routed.classList.remove('hidden'))
+
+    if (window.location.hostname === 'estelibuses.web.app') {
+      const appTrackChangeTransportAll = initializeApp(firebaseConfig)
+      const analytics = getAnalytics(appTrackChangeTransportAll)
+
+      logEvent(analytics, 'all_change_transport', {
+        name: 'Todos los buses'
+      })
+    }
   }
 
   if (e.target.id === 'express' && radioExpress.checked) {
@@ -37,6 +68,15 @@ formFilter.addEventListener('change', e => {
 
     expressBuses.forEach(express => express.classList.remove('hidden'))
     routedBuses.forEach(routed => routed.classList.add('hidden'))
+
+    if (window.location.hostname === 'estelibuses.web.app') {
+      const appTrackChangeTransportExpress = initializeApp(firebaseConfig)
+      const analytics = getAnalytics(appTrackChangeTransportExpress)
+
+      logEvent(analytics, 'express_change_transport', {
+        name: 'Buses expresos'
+      })
+    }
   }
 
   if (e.target.id === 'routed' && radioRouted.checked) {
@@ -48,5 +88,14 @@ formFilter.addEventListener('change', e => {
 
     routedBuses.forEach(routed => routed.classList.remove('hidden'))
     expressBuses.forEach(express => express.classList.add('hidden'))
+
+    if (window.location.hostname === 'estelibuses.web.app') {
+      const appTrackChangeTransportRouted = initializeApp(firebaseConfig)
+      const analytics = getAnalytics(appTrackChangeTransportRouted)
+
+      logEvent(analytics, 'routed_change_transport', {
+        name: 'Buses ruteados'
+      })
+    }
   }
 })

@@ -39,7 +39,7 @@ block append stylesheets
 block append preload
 
 block append defer-scripts
-  script(src=`${ASSETS_PATH}js/filter.js` defer importance="high")
+  script(type="module" src=`${ASSETS_PATH}js/filter.js` importance="high")
 
 block append seo
   script(type="application/ld+json").

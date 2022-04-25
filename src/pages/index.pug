@@ -108,7 +108,11 @@ block append preload
   )/
 
 block append defer-scripts
-  script(src=`${ASSETS_PATH}js/header-search.js` defer importance="highest")
+  script(
+    type="module"
+    src=`${ASSETS_PATH}js/header-search.js`
+    importance="highest"
+  )
 
 block append content
   include ../content/header

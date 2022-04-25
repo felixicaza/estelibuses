@@ -1,4 +1,26 @@
+/* eslint-disable import/extensions */
 /* eslint-disable no-plusplus */
+
+/**
+ * Firebase Import Analytics
+ */
+
+import { initializeApp } from './lib/firebase-app.js'
+import { getAnalytics, logEvent } from './lib/firebase-analytics.js'
+
+/**
+ * Firebase Configuration
+ */
+
+const firebaseConfig = {
+  apiKey: 'AIzaSyAqPF5z2zeJCAXKmnAV6gfapspOK4joCEs',
+  authDomain: 'buses-esteli-d2d5e.firebaseapp.com',
+  projectId: 'buses-esteli-d2d5e',
+  storageBucket: 'buses-esteli-d2d5e.appspot.com',
+  messagingSenderId: '47347043568',
+  appId: '1:47347043568:web:e1b9a83b88c35fe1a0c635',
+  measurementId: 'G-4QFJH1D53Q'
+}
 
 const mainSearch = document.getElementById('main-search')
 const citiesSearch = document.getElementById('cities-search')
@@ -64,8 +86,26 @@ const isMobile = navigator.userAgent.match(/Android|iPhone|iPad|iPod/i)
 
 citiesSearch.addEventListener('focus', () => {
   if (isMobile) navbarMobile.classList.remove('bottom-0')
+
+  if (window.location.hostname === 'estelibuses.web.app') {
+    const appTrackUseHeaderSearch = initializeApp(firebaseConfig)
+    const analytics = getAnalytics(appTrackUseHeaderSearch)
+
+    logEvent(analytics, 'use_header_search', {
+      name: 'Buscador de la página de inicio'
+    })
+  }
 })
 
 citiesSearch.addEventListener('blur', () => {
   if (isMobile) navbarMobile.classList.add('bottom-0')
+
+  if (window.location.hostname === 'estelibuses.web.app') {
+    const appTrackUseHeaderSearch = initializeApp(firebaseConfig)
+    const analytics = getAnalytics(appTrackUseHeaderSearch)
+
+    logEvent(analytics, 'not_use_header_search', {
+      name: 'Desactivado buscador de la página de inicio'
+    })
+  }
 })
