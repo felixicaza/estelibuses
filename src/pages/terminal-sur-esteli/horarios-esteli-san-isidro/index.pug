@@ -1,0 +1,128 @@
+extends ../../../templates/template.pug
+include ../../../utils/pageCity
+include ../../../utils/cardCity
+
+block append variables
+  - const CURRENT_PAGE = "terminal-sur"
+  - const URL = "https://estelibuses.web.app"
+  - const ASSETS_PATH = "../../"
+  - const HAS_CRITICAL_CSS = false
+  - const APPLICATION_NAME = "Estelí Buses"
+  - const META_DESCRIPTION = "Conoce todos los horarios de los buses que salen desde Estelí hacia San Isidro."
+  - const META_ROBOTS = "index, follow"
+  - const LANGUAGE = "es"
+  - const CURRENT_URL = `${URL}/terminal-sur-esteli/horarios-esteli-san-isidro`
+  - const SOCIAL_TITLE = "Horarios de los Buses de Estelí hacia San Isidro | Estelí Buses"
+  - const SOCIAL_DESCRIPTION = META_DESCRIPTION
+  - const SOCIAL_IMAGE = ""
+  - const SOCIAL_IMAGE_ALT = SOCIAL_TITLE
+  - const OPEN_GRAPH_SITE_NAME = ""
+  - const TWITTER_CARD = "summary_large_image"
+
+block append title
+  title= SOCIAL_TITLE
+
+block append preconnect
+  link(crossorigin href="//www.google.com/" rel="preconnect")/
+  link(crossorigin href="//maps.googleapis.com/" rel="preconnect")/
+  link(crossorigin href="//maps.gstatic.com/" rel="preconnect")/
+
+block append async-scripts
+
+block append critical-css
+
+block append stylesheets
+  link(href=`${ASSETS_PATH}css/style.css` rel="stylesheet")/
+
+block append preload
+
+block append defer-scripts
+  script(src=`${ASSETS_PATH}js/filter-others.js` defer importance="high")
+
+block append content
+  +pageCity('San Isidro', 'Terminal sur', 'Empalme San Isidro', '29 km', 'https://www.google.com/maps/embed?pb=!1m28!1m12!1m3!1d124400.08419725526!2d-86.34267715319903!3d13.003632164354148!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!4m13!3e6!4m5!1s0x8f718c13825dde4b%3A0x69c6340e0429bb84!2sCotran%20Sur%2C%20Estel%C3%AD!3m2!1d13.0762386!2d-86.3524291!4m5!1s0x8f7228c29d8b68db%3A0x4864ad7318652850!2sSan%20Isidro%2C%20Matagalpa!3m2!1d12.930314099999999!2d-86.1929747!5e0!3m2!1ses-419!2sni!4v1650852514930!5m2!1ses-419!2sni')
+    section(class="space-y-3 mt-6 lg:mt-0 -mb-8")
+      p(class="font-semibold") Elige el bus que deseas abordar:
+        form#filter(class="flex flex-col xs:flex-row gap-6")
+          section(class="group flex items-center")
+            input#city-one(
+              name="bus"
+              type="radio"
+              checked
+              class="accent-orange-600 cursor-pointer sibling:checked:text-orange-600"
+            )/
+            label(
+              class="group-any-hover:text-orange-600 transition-colors cursor-pointer"
+              for="city-one"
+            ) &nbsp;Buses de Managua
+          section(class="group flex items-center")
+            input#city-two(
+              name="bus"
+              type="radio"
+              class="accent-orange-600 cursor-pointer sibling:checked:text-orange-600"
+            )/
+            label(
+              class="group-any-hover:text-orange-600 transition-colors cursor-pointer"
+              for="city-two"
+            ) &nbsp;Buses de Matagalpa
+
+    include managua
+
+    include matagalpa
+
+  article(class="py-12 sm:py-16 md:py-20 xl:py-28 bg-light-50 dark:bg-hex-151D2D")
+    div(class="container mx-auto px-4 space-y-12 lg:space-y-16")
+      h3(class="text-3xl sm:text-4xl font-bold text-center") ¿Buscas conocer otros horarios?
+      section
+        h4(class="text-xl sm:text-2xl font-bold text-center mb-10 lg:mb-16") Otros horarios de la Terminal Sur
+        article(
+          class="flex flex-col gap-y-14 items-center lg:grid lg:grid-cols-2 xl:grid-cols-3 lg:gap-22"
+        )
+          +cardCity('Managua', 'sur', 'data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAoAAAAGCAYAAAD68A/GAAAAAklEQVR4AewaftIAAADNSURBVAXBS06DUBiA0e+HC7TAoKnVVkdNTFyGC3UJjlyCAx01OjAaY2IZ1JqGaEAriBfuw3Pk8ubVZ7GgjSeNhCiEjx/DV2cZh5AoIVaCavoBbUNEoGwsn7+GtneEQKYgCeFvcKjr54JpnhMFCvCICIEzeIHg5Zbv03O0ExT1BW0dgU8Z2jHzScw8maBHCTbo6TZXFOUOdeQ8q2JNlhv2usey5L565/gkp9F7FtkZh1NQD29blosDNts1VdWR8shsZinrmgjDbljxdDfiHzXGWeYErh0SAAAAAElFTkSuQmCC')
+
+          +cardCity('León', 'sur', 'data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAoAAAAGCAYAAAD68A/GAAAAAklEQVR4AewaftIAAADWSURBVAXBzVKCUACA0e8CJmg4mApZMSrTj8207kF6m3Y9TS/juGhbTi1cSF7JQQuBe8HOEU/Pr8fpqIfSGrnL4aj5UzAauERdwVf8ywEbK2hr6tWcIBiiqow2ezLRxM5d3ucfIAy60SNWOHAw9zZeo8DpG8h1wa3fYSFTzv0eCIF5UmPlOwl5idYapRRlqcgOJZ5Z0mi6JD9bTjsaIzxzGF8NSeIVD/dT3mYzbq4jlp8LxuEFQd/DtyvMu8nlSyJjtCqQmzWtlk2abrGo2SSSShV8x0v+AfDfXVGAYAnGAAAAAElFTkSuQmCC')
+
+          +cardCity('La Trinidad', 'sur', 'data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAoAAAAGCAYAAAD68A/GAAAAAklEQVR4AewaftIAAADoSURBVAXB30rCUADA4d85m5abs00XKQsq6CJml1H0LEH0KD5DD9FN9AJdB1FEF0ImaZaaomDNP5WbubO+T1xdPybFdZvRWx2ZsfDLPum0zvQ7JIpCTDPLIhZoJXetkrMdvtotpJJs7fkshcaKlhBMZuTMDO/tBlrBiSv1xg1uqUi3+UT/Y8D93S2LREAc0eu8cnF5jm5kHT7VhIdYI4iHHFVfmKZ2UPMAxkOMZQ86ffTnWgtlpTg49hiLJspYpWBvkHddpKEzH8zY9gT62ckptVFI9SfgV20SWB77+RApANPG2j3E+Av5B/2XWtOuL5SIAAAAAElFTkSuQmCC')
+
+          +cardCity('San Nicolás', 'sur', 'data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAoAAAAGCAYAAAD68A/GAAAAAklEQVR4AewaftIAAAD2SURBVAXBu0rDYACA0S/kDw69kBCqtqTGilKoYMVNRMVJENwEVydBxHfwKVwcxUnwgmuH4lY7OMSIuMTGViGaBlpprebiOZI4vE+StEo2DtFeauxsrzPz2+ItzmHJJn7XZ38tjzDzKoWMQnHksuKc0HoV6M9nDJaPGKbm2DKe6P1MIA6m2yh6CTVd5sFZJJYCTj98NjXBblkiGiyhiBDRaV6SjT08Mc5dW2c1eGTenOWzeYtVv0KOQzSjimwrC8delGXDbpBxLaphSL/TpfIXERglbhyJmhsjLvam+BqNcX1uY1YmafT6DKOEVE7nO5IpJAFF3vkHnNFeeDtzHrAAAAAASUVORK5CYII=')
+
+          +cardCity('Tisey - La Estanzuela', 'sur', 'data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAoAAAAGCAYAAAD68A/GAAAAAklEQVR4AewaftIAAADXSURBVAXBv07CQADA4d9d25RisS1agolxYCDRgTCoz+DqG+ibOPt6DiY6OBkoCtc/lGstvfP7xOJ6Zl0sTdvQ6pa75ZzZ8p7b51eSQPCRG4aewLmaTl6+V2vOxhESiTGWKluR9z6Lmzlxl/H5/oZ4enywujtSFgWb7Y74NMSRECQxcuDQdC2qWePqes8oGSOs4VcVCMcjPY/pTY/qvvjTlmJT41bqB0dadmWNkJLLacpJMCCvtuQqYF9m9K3AHUURSncIx+MiHXI4aELfw+Dja8lRhMQTyz+4tl0rJVSFpQAAAABJRU5ErkJggg==')
+
+          +cardCity('Achuapa', 'sur', 'data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAoAAAAGCAYAAAD68A/GAAAAAklEQVR4AewaftIAAADrSURBVAXBTy/DYADA4V/nXdFtpQvZhUzSLHZxJxIH4uQjOfoKLuLmJuLgTyzxARyIREaWJRJ0Gm1jWGm3l3Xv63mM7yTVpYKF1oqLsyPu7m/phAFB2ENjkWnJ/u4eotV+wMgE/vMrgfdGiVnqZZuao0CNyLTB8cEh4vLknIptMUgSBv0UqfIwTDGF5m+oyIkxPt875ORIMjEpeLy6ZmV9g6JbZ2l1jXJlDu/FZ3lzC2tqBhF5Ee2bJlkY0Tht8NFLacpfulFAEPg8be8Qx18I160RF4r0px3iqEtOaWxh4sxXWawukDfH+ZEp/0lxabqfB5o8AAAAAElFTkSuQmCC')
+
+        section(class="text-center mt-20")
+          a(
+            class="rounded font-semibold space-x-2.5 py-2.5 px-5 transition-colors inline-flex items-center any-hover:bg-orange-500 active:outline-none active:ring-4 active:ring-orange-400 active:ring-opacity-75 bg-orange-400 text-white shadow-lg shadow-orange-500/30 any-hover:shadow-orange-600/30 active:shadow-orange-600/30"
+            href="/terminal-sur-esteli"
+          )
+            span Mira todos los destinos
+            span
+              svg(class="fill-current" width="26" height="26")
+                path(d="M16 11H4v2h12v3l4-4-4-4z")/
+
+      section(class="!mt-24")
+        h4(class="text-xl sm:text-2xl font-bold text-center mb-10 lg:mb-16") Horarios de la Terminal Norte
+        article(
+          class="flex flex-col gap-y-14 items-center lg:grid lg:grid-cols-2 xl:grid-cols-3 lg:gap-22"
+        )
+          +cardCity('Managua', 'norte', 'data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAoAAAAGCAYAAAD68A/GAAAAAklEQVR4AewaftIAAADNSURBVAXBS06DUBiA0e+HC7TAoKnVVkdNTFyGC3UJjlyCAx01OjAaY2IZ1JqGaEAriBfuw3Pk8ubVZ7GgjSeNhCiEjx/DV2cZh5AoIVaCavoBbUNEoGwsn7+GtneEQKYgCeFvcKjr54JpnhMFCvCICIEzeIHg5Zbv03O0ExT1BW0dgU8Z2jHzScw8maBHCTbo6TZXFOUOdeQ8q2JNlhv2usey5L565/gkp9F7FtkZh1NQD29blosDNts1VdWR8shsZinrmgjDbljxdDfiHzXGWeYErh0SAAAAAElFTkSuQmCC')
+
+          +cardCity('Jinotega', 'norte', 'data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAoAAAAGCAYAAAD68A/GAAAAAklEQVR4AewaftIAAADNSURBVBXBPUvDQACA4fe+rzW1taJoUBCXjs7SybWLf9fN4l/QQVTQoVYIJdhwiW3N5cTnEXcvIU1OPf8eXhvK0HI+toQt7NoOpwT7fYM+G3vey47LQ8XNZI/PqkMLsFqwbiIyRbKeQc/n9xjXo85PyI9GFMUamVq+q5qDzPL8+MT1dIq4mt2miMU7S0IRoyBJi7EWJQVeRn7R6IvhAGcc4afGOMnia0USCm08UsEuFGySQi8/3hgMM/LjHOf6bG1J0omqXlEsF2yaFmUUfx9+TTarspExAAAAAElFTkSuQmCC')
+
+          +cardCity('Somoto', 'norte', 'data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAoAAAAGCAYAAAD68A/GAAAAAklEQVR4AewaftIAAADmSURBVAXBu07CUACA4b/llBZBgUCBYOJQ7SDxMpgoA25iHB31/XwEJwdXphodjMEL6iAmxjagUnqAnuP3GWfnW/oxf0hYPcWybKRpMplr4kTSzV5Ql31qwkb4rs80ukZGZeLSPrYQgEOnfEU9vMfOZFgyc4h07nCye0zwETAY9HCcAqrg0F5dIKouRpql5W0jtDKZjRd0/Q439ivB8wvtjTxHO3tIw6TRbKFTC5HIhLuHb5q1Cn6xAp7mYNMjiosYYoXP4Yi/8Q9i+BWSKsVlr4+bU9z+zpgKWFse8fb0znqjxERp/gGtW1S4/iR4jQAAAABJRU5ErkJggg==')
+
+          +cardCity('Ocotal', 'norte', 'data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAoAAAAGCAYAAAD68A/GAAAAAklEQVR4AewaftIAAADoSURBVAXBvU7CUACA0a+F0gttsQZ/B9TJweikicZXcPMhHHwOR1/GyZXEkCgSEqwhIqllMAYVSJQi5XJ76znG29c0e+kN+Hx/5XFwzPBHseQ7HK5HeEafo5NTRFGQv2v/0a7fsFZZgd8HNqdNzKzKWLu0woDdvQPqjQBzf2vGXEr6UQ8rbjCLJ1iLbz6ie4pOgVrtluurSwxv1c3Ozi8wM00Sj1BzSbnsY9s5lDbohgHPT03y1e0dkmQC2kQrSacTUBI2Vk4xGg8xChbCtsmrNCXstlALje84+J5AKY0ybdzKBjKVLIsS/66oZHYPNJRaAAAAAElFTkSuQmCC')
+
+          +cardCity('San Juan de Limay', 'norte', 'data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAoAAAAGCAYAAAD68A/GAAAAAklEQVR4AewaftIAAADgSURBVAXBu0rDUACA4T85J2kuhBgMrajgVAdHB3ehCE6OToLgK/hgPkBddPEF6lZQSgVj4yVpTk5Pksbvs27urvrLyYTs/YM0Tjg7vyZNU2zLwrQdtWnJqxq5/Jvx9PhGkRkiV/Iym3N6cUsYxdSmoa4URi2QiRVxnBzxa2mcQY9q5kwf7tkITeDUNLTEm33kWtR8/SyJ/AB/4DHaHRLojG+5ptr2CMvGUQa5txOQDg8QnU3+uWC1yukCFycSFHpL4vnoUiFPxodMn18ZBSGxG1MWisovGbchntOiG4FUkn+qf1rJP6L68AAAAABJRU5ErkJggg==')
+
+          +cardCity('Pueblo Nuevo', 'norte', 'data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAoAAAAGCAYAAAD68A/GAAAAAklEQVR4AewaftIAAADpSURBVAXBz0rCcADA8e/Wz003laVghhRJCfNSh7oIQnSs5+kVeoDepkOd8hRZBKXFbA4lM5cy0JXtj+vzkc4vL5JGfZ/T5gl/UcRV65qnbpf1rM7hXo3qrsnrm4WwRy0Sd8jCHRP4HpuVDabzDv0xTJwXjBsN2UgQ788DlK2EqB1QzGkUUgtSUYQew9QdEMo6GU9C1HIl0j6oeQlVWXHXeyQQDgflMlEc4oU+99YnIlNYoikCu99hllNpNs5ofwyZGyPktMz26oe6WUGUvC9mxW+Od3Qkxcd6uOWoapKd/OK4NvYyT7gW8w9M7l+OB2kEdwAAAABJRU5ErkJggg==')
+
+        section(class="text-center mt-20")
+          a(
+            class="rounded font-semibold space-x-2.5 py-2.5 px-5 transition-colors inline-flex items-center any-hover:bg-orange-500 active:outline-none active:ring-4 active:ring-orange-400 active:ring-opacity-75 bg-orange-400 text-white shadow-lg shadow-orange-500/30 any-hover:shadow-orange-600/30 active:shadow-orange-600/30"
+            href="/terminal-norte-esteli"
+          )
+            span Mira todos los destinos
+            span
+              svg(class="fill-current" width="26" height="26")
+                path(d="M16 11H4v2h12v3l4-4-4-4z")/
