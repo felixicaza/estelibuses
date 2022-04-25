@@ -94,3 +94,6 @@ mixin pageTerminal(idHeader, title, description, location, phone, origin, ...cit
                     class="text-orange-500 any-hover:underline active:underline"
                     href=`/terminal-${origin}-esteli/horarios-esteli-${convertCityName[index] === 'tisey---la-estanzuela' ? 'tisey-la-estanzuela' : convertCityName[index]}`
                   )= city
+
+  if origin === 'sur'
+    include others
