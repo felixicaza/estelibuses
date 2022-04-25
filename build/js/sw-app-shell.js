@@ -138,9 +138,34 @@ const APP_SHELL = [
   '/terminal-sur-esteli/horarios-esteli-yali/',
   '/terminal-sur-esteli/horarios-esteli-yali/index.html',
 
+  '/terminal-sur-esteli/horarios-esteli-el-naranjo',
+  '/terminal-sur-esteli/horarios-esteli-el-naranjo/',
+  '/terminal-sur-esteli/horarios-esteli-el-naranjo/index.html',
+
+  '/terminal-sur-esteli/horarios-esteli-santa-cruz',
+  '/terminal-sur-esteli/horarios-esteli-santa-cruz/',
+  '/terminal-sur-esteli/horarios-esteli-santa-cruz/index.html',
+
+  '/terminal-sur-esteli/horarios-esteli-empalme-san-nicolas',
+  '/terminal-sur-esteli/horarios-esteli-empalme-san-nicolas/',
+  '/terminal-sur-esteli/horarios-esteli-empalme-san-nicolas/index.html',
+
+  '/terminal-sur-esteli/horarios-esteli-la-concepcion',
+  '/terminal-sur-esteli/horarios-esteli-la-concepcion/',
+  '/terminal-sur-esteli/horarios-esteli-la-concepcion/index.html',
+
+  '/terminal-sur-esteli/horarios-esteli-san-isidro',
+  '/terminal-sur-esteli/horarios-esteli-san-isidro/',
+  '/terminal-sur-esteli/horarios-esteli-san-isidro/index.html',
+
+  '/terminal-sur-esteli/horarios-esteli-sebaco',
+  '/terminal-sur-esteli/horarios-esteli-sebaco/',
+  '/terminal-sur-esteli/horarios-esteli-sebaco/index.html',
+
   '/css/lib/windi.css',
   '/css/style.css',
   '/js/app.js',
+  '/js/filter-others.js',
   '/js/filter.js',
   '/js/polyfill-lazyload.js',
   '/js/search.js',

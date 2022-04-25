@@ -129,6 +129,24 @@ const IMAGES_APP_SHELL = [
   '/img/terminal-sur/horarios-esteli-yali-estelibuses-felix-icaza-card.avif',
   '/img/terminal-sur/horarios-esteli-yali-estelibuses-felix-icaza-card.webp',
 
+  '/img/terminal-sur/horarios-esteli-el-naranjo-estelibuses-felix-icaza-card.avif',
+  '/img/terminal-sur/horarios-esteli-el-naranjo-estelibuses-felix-icaza-card.webp',
+
+  '/img/terminal-sur/horarios-esteli-santa-cruz-estelibuses-felix-icaza-card.avif',
+  '/img/terminal-sur/horarios-esteli-santa-cruz-estelibuses-felix-icaza-card.webp',
+
+  '/img/terminal-sur/horarios-esteli-empalme-san-nicolas-estelibuses-felix-icaza-card.avif',
+  '/img/terminal-sur/horarios-esteli-empalme-san-nicolas-estelibuses-felix-icaza-card.webp',
+
+  '/img/terminal-sur/horarios-esteli-la-concepcion-estelibuses-felix-icaza-card.avif',
+  '/img/terminal-sur/horarios-esteli-la-concepcion-estelibuses-felix-icaza-card.webp',
+
+  '/img/terminal-sur/horarios-esteli-san-isidro-estelibuses-felix-icaza-card.avif',
+  '/img/terminal-sur/horarios-esteli-san-isidro-estelibuses-felix-icaza-card.webp',
+
+  '/img/terminal-sur/horarios-esteli-sebaco-estelibuses-felix-icaza-card.avif',
+  '/img/terminal-sur/horarios-esteli-sebaco-estelibuses-felix-icaza-card.webp',
+
   '/img/san-juan-de-limay/transporte-el-fugitivo.avif',
   '/img/san-juan-de-limay/transporte-el-fugitivo.webp'
 ]
