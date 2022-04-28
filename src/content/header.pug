@@ -3,96 +3,128 @@
 - const citiesSouth = ["Managua (Terminal Sur)", "Matagalpa", "León", "La Trinidad", "San Nicolás", "Tisey - La Estanzuela", "Achuapa (Terminal Sur)", "Murra", "El Espinal", "Yalí (Terminal Sur)", "El Naranjo", "Santa Cruz (Terminal Sur)", "Empalme San Nicolás", "La Concepción", "San Isidro", "Sébaco"]
 - const convertCitiesSouth = citiesSouth.map(city => city.toLowerCase().normalize('NFD').replace(/[\u0300-\u036f]/g, "").replace(/\s\(\w{8}\s\w{3}\)/, "").replace(/\s/g, "-"))
 
-header#mainPage(class="wave")
+header(
+  class="relative bg-gradient-to-t to-hex-ffecdb from-hex-fff4eb dark:to-hex-2D231B dark:from-hex-2D231B"
+)
   div(class="container mx-auto px-4")
     include ../components/navbar
 
     section(
-      class="flex flex-col justify-center items-center pt-18 pb-26 xs:pb-36 lg:pt-28 lg:pb-34 xl:pb-44 2xl:pb-54 text-center"
+      class="grid lg:grid-cols-2 items-center gap-18 lg:gap-0 pt-18 pb-26 xs:pb-36 lg:pt-28 lg:pb-34 xl:pb-44 2xl:pb-54"
     )
-      h1(
-        class="text-4xl sm:text-5xl font-bold mb-8 max-w-screen-lg text-white text-shadow-sm z-2"
-      ) Horarios de las terminales de buses de la ciudad de Estelí
-      p(
-        class="text-base sm:text-lg max-w-screen-lg text-white text-shadow-sm z-2 font-semibold"
-      ) ¡Planea con exactitud la hora de tu próximo viaje!
-      section(class="text-center mt-8 mb-8 z-2")
-        form#main-search(
-          autocomplete="on"
-          class="w-full max-w-xl mx-auto transition-colors space-y-4"
-        )
-          label(class="text-xl block text-white font-semibold" for="cities-search") Busca tu ciudad de destino
-          section(
-            class="grid grid-cols-[1fr,100px] shadow-lg shadow-orange-500/10 any-hover:shadow-orange-600/10"
+      div(class="space-y-8")
+        article(class="space-y-3")
+          h1(
+            class="text-4xl text-center lg:text-left sm:text-5xl font-bold mb-8 md:max-w-2xl text-hex-3b0d15 dark:text-orange-50"
+          ) Horarios de las terminales de buses de Estelí
+          p(
+            class="text-base text-center lg:text-left sm:text-lg md:max-w-2xl lg:max-w-lg"
+          ) Conoce fácilmente todos los horarios de los buses de las terminales de la ciudad de Estelí y ¡planea con exactitud la hora de tu próximo viaje!
+
+        section(class="mt-8 mb-8")
+          form#main-search(
+            autocomplete="on"
+            class="w-full max-w-md transition-colors space-y-3"
           )
-            input#cities-search(
-              type="search"
-              placeholder="Busca tu ciudad..."
-              class="border border-orange-400 py-2.5 px-4 w-full block outline-none focus:ring-4 focus:ring-orange-400 focus:ring-opacity-50 focus:border-orange-500 rounded rounded-r-none caret-orange-500 placeholder-orange-900 placeholder-opacity-40 bg-white dark:bg-cool-gray-800 dark:placeholder-orange-100 transition-colors shadow-lg shadow-orange-500/30"
-            )/
-            button#search-citities-button(
-              type="button"
-              class="rounded rounded-l-none font-semibold py-2.5 px-5 transition-colors any-hover:bg-orange-500 bg-orange-400 text-white basis-30 inline-flex justify-center items-center active:outline-none active:ring-4 active:ring-orange-400 active:ring-opacity-75 shadow-lg shadow-orange-500/30"
-            )
-              svg(
-                aria-hidden="true"
-                class="w-4"
-                focusable="false"
-                role="img"
-                viewBox="0 0 512 512"
+            label(class="text-xl block text-center lg:text-left" for="cities-search") Busca tu ciudad de destino
+            section(class="grid grid-cols-[1fr,100px] any-hover:shadow-orange-600/10")
+              input#cities-search(
+                type="search"
+                placeholder="Busca tu ciudad..."
+                class="border border-orange-100 py-2.5 px-4 w-full block outline-none focus:ring-4 focus:ring-orange-400 focus:ring-opacity-50 focus:border-orange-500 rounded rounded-r-none caret-orange-500 bg-white dark:bg-hex-292018 dark:placeholder-orange-100 transition-colors shadow-lg shadow-orange-500/7"
+              )/
+              button#search-citities-button(
+                type="button"
+                class="rounded rounded-l-none font-semibold py-2.5 px-5 transition-colors any-hover:bg-orange-500 bg-orange-400 text-white basis-30 inline-flex justify-center items-center active:outline-none active:ring-4 active:ring-orange-400 active:ring-opacity-75 shadow-lg shadow-orange-500/7"
               )
-                path(
-                  d="M505 442.7L405.3 343c-4.5-4.5-10.6-7-17-7H372c27.6-35.3 44-79.7 44-128C416 93.1 322.9 0 208 0S0 93.1 0 208s93.1 208 208 208c48.3 0 92.7-16.4 128-44v16.3c0 6.4 2.5 12.5 7 17l99.7 99.7c9.4 9.4 24.6 9.4 33.9 0l28.3-28.3c9.4-9.4 9.4-24.6.1-34zM208 336c-70.7 0-128-57.2-128-128 0-70.7 57.2-128 128-128 70.7 0 128 57.2 128 128 0 70.7-57.2 128-128 128z"
-                  fill="currentColor"
-                )/
+                svg(
+                  aria-hidden="true"
+                  class="w-4"
+                  focusable="false"
+                  role="img"
+                  viewBox="0 0 512 512"
+                )
+                  path(
+                    d="M505 442.7L405.3 343c-4.5-4.5-10.6-7-17-7H372c27.6-35.3 44-79.7 44-128C416 93.1 322.9 0 208 0S0 93.1 0 208s93.1 208 208 208c48.3 0 92.7-16.4 128-44v16.3c0 6.4 2.5 12.5 7 17l99.7 99.7c9.4 9.4 24.6 9.4 33.9 0l28.3-28.3c9.4-9.4 9.4-24.6.1-34zM208 336c-70.7 0-128-57.2-128-128 0-70.7 57.2-128 128-128 70.7 0 128 57.2 128 128 0 70.7-57.2 128-128 128z"
+                    fill="currentColor"
+                  )/
 
-        section(class="relative w-full h-1px")
-          section#container-cities(
-            class="absolute pointer-events-none rounded-b top-0 transform bg-white transform translate-y-full transition transition-transform opacity-0 transition-opacity shadow-md w-full max-w-xl mx-auto dark:bg-cool-gray-800"
-          )
-            ul(class="space-y-2 pb-2 px-4")
-              each cityNorth, index in citiesNorth
-                li(class="cities text-left hidden")
-                  - let fixNameNorth = null
+          section(class="relative w-full h-1px")
+            section#container-cities(
+              class="absolute pointer-events-none rounded-b top-0 transform bg-white transform translate-y-full transition transition-transform opacity-0 transition-opacity shadow-md w-full max-w-md mx-auto dark:bg-cool-gray-800 z-2"
+            )
+              ul(class="space-y-2 pb-2 px-4")
+                each cityNorth, index in citiesNorth
+                  li(class="cities text-left hidden")
+                    - let fixNameNorth = null
 
-                  - if (convertCitiesNorth[index] === 'santa-cruz---la-ceiba') {
-                  - fixNameNorth = "santa-cruz-la-ceiba"
-                  - }
+                    - if (convertCitiesNorth[index] === 'santa-cruz---la-ceiba') {
+                    - fixNameNorth = "santa-cruz-la-ceiba"
+                    - }
 
-                  a(
-                    class="group py-2 px-4 w-full block flex gap-2 mt-2 font-semibold transition-colors active:bg-orange-100 rounded"
-                    href=`/terminal-norte-esteli/horarios-esteli-${fixNameNorth || convertCitiesNorth[index]}`
-                  )
-                    svg(
-                      class="fill-current w-6 h-6 group-any-hover:text-orange-500 transition-colors"
-                      viewBox="0 0 24 24"
+                    a(
+                      class="group py-2 px-4 w-full block flex gap-2 mt-2 font-semibold transition-colors active:bg-orange-100 rounded"
+                      href=`/terminal-norte-esteli/horarios-esteli-${fixNameNorth || convertCitiesNorth[index]}`
                     )
-                      path(
-                        d="M18 11H6V6h12m-1.5 11a1.5 1.5 0 0 1-1.5-1.5 1.5 1.5 0 0 1 1.5-1.5 1.5 1.5 0 0 1 1.5 1.5 1.5 1.5 0 0 1-1.5 1.5m-9 0A1.5 1.5 0 0 1 6 15.5 1.5 1.5 0 0 1 7.5 14 1.5 1.5 0 0 1 9 15.5 1.5 1.5 0 0 1 7.5 17M4 16a3 3 0 0 0 1 2.2V20a1 1 0 0 0 1 1h1a1 1 0 0 0 1-1v-1h8v1a1 1 0 0 0 1 1h1a1 1 0 0 0 1-1v-1.8a3 3 0 0 0 1-2.2V6c0-3.5-3.6-4-8-4s-8 .5-8 4v10Z"
-                      )/
-                    span(class="group-any-hover:text-orange-500 transition-colors")= cityNorth
+                      svg(
+                        class="fill-current group-any-hover:text-orange-500 transition-colors"
+                        viewBox="0 0 24 24"
+                        width="24"
+                        height="24"
+                      )
+                        path(
+                          d="M18 11H6V6h12m-1.5 11a1.5 1.5 0 0 1-1.5-1.5 1.5 1.5 0 0 1 1.5-1.5 1.5 1.5 0 0 1 1.5 1.5 1.5 1.5 0 0 1-1.5 1.5m-9 0A1.5 1.5 0 0 1 6 15.5 1.5 1.5 0 0 1 7.5 14 1.5 1.5 0 0 1 9 15.5 1.5 1.5 0 0 1 7.5 17M4 16a3 3 0 0 0 1 2.2V20a1 1 0 0 0 1 1h1a1 1 0 0 0 1-1v-1h8v1a1 1 0 0 0 1 1h1a1 1 0 0 0 1-1v-1.8a3 3 0 0 0 1-2.2V6c0-3.5-3.6-4-8-4s-8 .5-8 4v10Z"
+                        )/
+                      span(class="group-any-hover:text-orange-500 transition-colors")= cityNorth
 
-              each citySouth, index in citiesSouth
-                li(class="cities text-left hidden")
-                  - let fixNameSouth = null
+                each citySouth, index in citiesSouth
+                  li(class="cities text-left hidden")
+                    - let fixNameSouth = null
 
-                  - if (convertCitiesSouth[index] === 'tisey---la-estanzuela') {
-                  - fixNameSouth = "tisey-la-estanzuela"
-                  - }
+                    - if (convertCitiesSouth[index] === 'tisey---la-estanzuela') {
+                    - fixNameSouth = "tisey-la-estanzuela"
+                    - }
 
-                  a(
-                    class="group py-2 px-4 w-full block flex gap-2 mt-2 font-semibold transition-colors active:bg-orange-100 rounded"
-                    href=`/terminal-sur-esteli/horarios-esteli-${fixNameSouth || convertCitiesSouth[index]}`
-                  )
-                    svg(
-                      class="fill-current w-6 h-6 group-any-hover:text-orange-500 transition-colors"
-                      viewBox="0 0 24 24"
+                    a(
+                      class="group py-2 px-4 w-full block flex gap-2 mt-2 font-semibold transition-colors active:bg-orange-100 rounded"
+                      href=`/terminal-sur-esteli/horarios-esteli-${fixNameSouth || convertCitiesSouth[index]}`
                     )
-                      path(
-                        d="M18 11H6V6h12m-1.5 11a1.5 1.5 0 0 1-1.5-1.5 1.5 1.5 0 0 1 1.5-1.5 1.5 1.5 0 0 1 1.5 1.5 1.5 1.5 0 0 1-1.5 1.5m-9 0A1.5 1.5 0 0 1 6 15.5 1.5 1.5 0 0 1 7.5 14 1.5 1.5 0 0 1 9 15.5 1.5 1.5 0 0 1 7.5 17M4 16a3 3 0 0 0 1 2.2V20a1 1 0 0 0 1 1h1a1 1 0 0 0 1-1v-1h8v1a1 1 0 0 0 1 1h1a1 1 0 0 0 1-1v-1.8a3 3 0 0 0 1-2.2V6c0-3.5-3.6-4-8-4s-8 .5-8 4v10Z"
-                      )/
-                    span(class="group-any-hover:text-orange-500 transition-colors")= citySouth
+                      svg(
+                        class="fill-current group-any-hover:text-orange-500 transition-colors"
+                        viewBox="0 0 24 24"
+                        width="24"
+                        height="24"
+                      )
+                        path(
+                          d="M18 11H6V6h12m-1.5 11a1.5 1.5 0 0 1-1.5-1.5 1.5 1.5 0 0 1 1.5-1.5 1.5 1.5 0 0 1 1.5 1.5 1.5 1.5 0 0 1-1.5 1.5m-9 0A1.5 1.5 0 0 1 6 15.5 1.5 1.5 0 0 1 7.5 14 1.5 1.5 0 0 1 9 15.5 1.5 1.5 0 0 1 7.5 17M4 16a3 3 0 0 0 1 2.2V20a1 1 0 0 0 1 1h1a1 1 0 0 0 1-1v-1h8v1a1 1 0 0 0 1 1h1a1 1 0 0 0 1-1v-1.8a3 3 0 0 0 1-2.2V6c0-3.5-3.6-4-8-4s-8 .5-8 4v10Z"
+                        )/
+                      span(class="group-any-hover:text-orange-500 transition-colors")= citySouth
 
-              li#unknown-city(
-                class="hidden py-2 px-4 font-semibold text-left !border-0"
-              ) No está disponible tu búsqueda 😔
+                li#unknown-city(
+                  class="hidden py-2 px-4 font-semibold text-left !border-0"
+                ) No está disponible tu búsqueda 😔
+
+      section(class="relative overflow-hidden" style="aspect-ratio: 752/586")
+        picture
+          source(
+            type="image/avif"
+            data-srcset="img/estelibuses-horarios-de-esteli.avif"
+          )/
+          source(
+            type="image/webp"
+            data-srcset="img/estelibuses-horarios-de-esteli.webp"
+          )/
+          img(
+            src="img/estelibuses-horarios-de-esteli.png"
+            alt="Estelí Buses: Horarios de las terminales de Estelí"
+            class="relative z-1 h-auto object-cover object-center w-full lazyload"
+            decoding="async"
+            importance="low"
+            loading="lazy"
+            srcset="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAoAAAAICAYAAADA+m62AAAAAklEQVR4AewaftIAAAE8SURBVF3BzUvCYAAH4N+7vdtsc7PAsCQjC9IQJAiK6FSWSCcRunTq0L1Lf0Af0DHoXvegJEIIPBS71KmIlAgMWWEWgqGmNpu5N889D8E/LJd2wao/txW/QaQei1ZyURKKmxRd7PFsEcxeB+EMxosHjRYjQqcwLcjObzCbRxdhuXQc6mDSPrnnuJVJXKUurGv9jkusLu+GwhMKozIjqueYQunfAetw3JIXzeon5hdmRL9VQup0f9sXOIKdPIcrFo1T8DTQzrxDGHOjVswjm9HxW8kjpr7g60nHUCICCI5RDpJWbLUNMO4HHqcMWq3BQ0zorwr6TBNo1YD8ZZnf2ljzSqo4R7QBECrALVYgSQ64JKDgnIJPbQCisknx8bAHqx5E77CfKJqdvdGFbFnjI+Fx+dZ4a84GR0oIJQ7/APCbcyF8el05AAAAAElFTkSuQmCC"
+            style="aspect-ratio: 752/586"
+            data-srcset="img/estelibuses-horarios-de-esteli.png"
+          )/
+        div(class="blob absolute top-0 left-0")
+
+  div(class="wave")
