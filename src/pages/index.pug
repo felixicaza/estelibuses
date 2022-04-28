@@ -31,62 +31,6 @@ block append preconnect
 block append async-scripts
 
 block append critical-css
-  link(
-    type="image/avif"
-    as="image"
-    href="img/esteli-buses-bg-mobile-felix-icaza.avif"
-    importance="high"
-    rel="preload"
-  )/
-  link(
-    type="image/avif"
-    as="image"
-    href="img/esteli-buses-bg-felix-icaza.avif"
-    importance="high"
-    rel="preload"
-  )/
-  link(
-    type="image/webp"
-    as="image"
-    href="img/esteli-buses-bg-mobile-felix-icaza.webp"
-    importance="high"
-    rel="preload"
-  )/
-  link(
-    type="image/webp"
-    as="image"
-    href="img/esteli-buses-bg-felix-icaza.webp"
-    importance="high"
-    rel="preload"
-  )/
-  link(
-    type="image/avif"
-    as="image"
-    href="img/esteli-buses-bg-dark-mobile-felix-icaza.avif"
-    importance="high"
-    rel="preload"
-  )/
-  link(
-    type="image/avif"
-    as="image"
-    href="img/esteli-buses-bg-dark-felix-icaza.avif"
-    importance="high"
-    rel="preload"
-  )/
-  link(
-    type="image/webp"
-    as="image"
-    href="img/esteli-buses-bg-dark-mobile-felix-icaza.webp"
-    importance="high"
-    rel="preload"
-  )/
-  link(
-    type="image/webp"
-    as="image"
-    href="img/esteli-buses-bg-dark-felix-icaza.webp"
-    importance="high"
-    rel="preload"
-  )/
 
 block append stylesheets
   link(href=`${ASSETS_PATH}css/style.css` rel="stylesheet")/
@@ -150,4 +94,4 @@ block append content
       script.
         (adsbygoogle = window.adsbygoogle || []).push({});
 
-    include ../content/novedades
+    //- include ../content/novedades

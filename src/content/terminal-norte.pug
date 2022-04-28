@@ -2,18 +2,20 @@ include ../utils/cardCity
 
 article(class="py-12 sm:py-16 md:py-20 xl:py-28 container mx-auto px-4")
   section(class="space-y-6 mb-10 lg:mb-16 lg:text-center")
-    h2(class="text-3xl sm:text-4xl font-bold text-center") Destinos populares de la terminal norte
-    p(class="mx-auto mt-5 text-base text-center sm:text-lg md:max-w-5xl lg:max-w-6xl") Elige la ciudad de tu destino para ver los horarios.
+    h2(
+      class="text-3xl sm:text-4xl font-bold text-center text-hex-3b0d15 dark:text-orange-50"
+    ) Destinos populares de la terminal norte
+    p(class="mx-auto mt-5 text-base text-center sm:text-lg md:max-w-5xl lg:max-w-6xl") Elige la ciudad para ver los horarios de los destinos más populares de la terminal norte.
   article(
     class="flex flex-col gap-y-14 items-center lg:grid lg:grid-cols-2 xl:grid-cols-3 lg:gap-22"
   )
     +cardCity('Managua', 'norte', 'data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAoAAAAGCAYAAAD68A/GAAAAAklEQVR4AewaftIAAADNSURBVAXBS06DUBiA0e+HC7TAoKnVVkdNTFyGC3UJjlyCAx01OjAaY2IZ1JqGaEAriBfuw3Pk8ubVZ7GgjSeNhCiEjx/DV2cZh5AoIVaCavoBbUNEoGwsn7+GtneEQKYgCeFvcKjr54JpnhMFCvCICIEzeIHg5Zbv03O0ExT1BW0dgU8Z2jHzScw8maBHCTbo6TZXFOUOdeQ8q2JNlhv2usey5L565/gkp9F7FtkZh1NQD29blosDNts1VdWR8shsZinrmgjDbljxdDfiHzXGWeYErh0SAAAAAElFTkSuQmCC')
 
-    +cardCity('Jinotega', 'norte', 'data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAoAAAAGCAYAAAD68A/GAAAAAklEQVR4AewaftIAAADNSURBVBXBPUvDQACA4fe+rzW1taJoUBCXjs7SybWLf9fN4l/QQVTQoVYIJdhwiW3N5cTnEXcvIU1OPf8eXhvK0HI+toQt7NoOpwT7fYM+G3vey47LQ8XNZI/PqkMLsFqwbiIyRbKeQc/n9xjXo85PyI9GFMUamVq+q5qDzPL8+MT1dIq4mt2miMU7S0IRoyBJi7EWJQVeRn7R6IvhAGcc4afGOMnia0USCm08UsEuFGySQi8/3hgMM/LjHOf6bG1J0omqXlEsF2yaFmUUfx9+TTarspExAAAAAElFTkSuQmCC')
+    +cardCity('Ocotal', 'norte', 'data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAoAAAAGCAYAAAD68A/GAAAAAklEQVR4AewaftIAAADoSURBVAXBvU7CUACA0a+F0gttsQZ/B9TJweikicZXcPMhHHwOR1/GyZXEkCgSEqwhIqllMAYVSJQi5XJ76znG29c0e+kN+Hx/5XFwzPBHseQ7HK5HeEafo5NTRFGQv2v/0a7fsFZZgd8HNqdNzKzKWLu0woDdvQPqjQBzf2vGXEr6UQ8rbjCLJ1iLbz6ie4pOgVrtluurSwxv1c3Ozi8wM00Sj1BzSbnsY9s5lDbohgHPT03y1e0dkmQC2kQrSacTUBI2Vk4xGg8xChbCtsmrNCXstlALje84+J5AKY0ybdzKBjKVLIsS/66oZHYPNJRaAAAAAElFTkSuQmCC')
 
     +cardCity('Somoto', 'norte', 'data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAoAAAAGCAYAAAD68A/GAAAAAklEQVR4AewaftIAAADmSURBVAXBu07CUACA4b/llBZBgUCBYOJQ7SDxMpgoA25iHB31/XwEJwdXphodjMEL6iAmxjagUnqAnuP3GWfnW/oxf0hYPcWybKRpMplr4kTSzV5Ql31qwkb4rs80ukZGZeLSPrYQgEOnfEU9vMfOZFgyc4h07nCye0zwETAY9HCcAqrg0F5dIKouRpql5W0jtDKZjRd0/Q439ivB8wvtjTxHO3tIw6TRbKFTC5HIhLuHb5q1Cn6xAp7mYNMjiosYYoXP4Yi/8Q9i+BWSKsVlr4+bU9z+zpgKWFse8fb0znqjxERp/gGtW1S4/iR4jQAAAABJRU5ErkJggg==')
 
-    +cardCity('Ocotal', 'norte', 'data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAoAAAAGCAYAAAD68A/GAAAAAklEQVR4AewaftIAAADoSURBVAXBvU7CUACA0a+F0gttsQZ/B9TJweikicZXcPMhHHwOR1/GyZXEkCgSEqwhIqllMAYVSJQi5XJ76znG29c0e+kN+Hx/5XFwzPBHseQ7HK5HeEafo5NTRFGQv2v/0a7fsFZZgd8HNqdNzKzKWLu0woDdvQPqjQBzf2vGXEr6UQ8rbjCLJ1iLbz6ie4pOgVrtluurSwxv1c3Ozi8wM00Sj1BzSbnsY9s5lDbohgHPT03y1e0dkmQC2kQrSacTUBI2Vk4xGg8xChbCtsmrNCXstlALje84+J5AKY0ybdzKBjKVLIsS/66oZHYPNJRaAAAAAElFTkSuQmCC')
+    +cardCity('Jinotega', 'norte', 'data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAoAAAAGCAYAAAD68A/GAAAAAklEQVR4AewaftIAAADNSURBVBXBPUvDQACA4fe+rzW1taJoUBCXjs7SybWLf9fN4l/QQVTQoVYIJdhwiW3N5cTnEXcvIU1OPf8eXhvK0HI+toQt7NoOpwT7fYM+G3vey47LQ8XNZI/PqkMLsFqwbiIyRbKeQc/n9xjXo85PyI9GFMUamVq+q5qDzPL8+MT1dIq4mt2miMU7S0IRoyBJi7EWJQVeRn7R6IvhAGcc4afGOMnia0USCm08UsEuFGySQi8/3hgMM/LjHOf6bG1J0omqXlEsF2yaFmUUfx9+TTarspExAAAAAElFTkSuQmCC')
 
     +cardCity('San Juan de Limay', 'norte', 'data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAoAAAAGCAYAAAD68A/GAAAAAklEQVR4AewaftIAAADgSURBVAXBu0rDUACA4T85J2kuhBgMrajgVAdHB3ehCE6OToLgK/hgPkBddPEF6lZQSgVj4yVpTk5Pksbvs27urvrLyYTs/YM0Tjg7vyZNU2zLwrQdtWnJqxq5/Jvx9PhGkRkiV/Iym3N6cUsYxdSmoa4URi2QiRVxnBzxa2mcQY9q5kwf7tkITeDUNLTEm33kWtR8/SyJ/AB/4DHaHRLojG+5ptr2CMvGUQa5txOQDg8QnU3+uWC1yukCFycSFHpL4vnoUiFPxodMn18ZBSGxG1MWisovGbchntOiG4FUkn+qf1rJP6L68AAAAABJRU5ErkJggg==')
 

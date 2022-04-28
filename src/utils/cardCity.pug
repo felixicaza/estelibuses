@@ -8,7 +8,7 @@ mixin cardCity(city, origin, lqip, noImage)
   - }
 
   article(
-    class="card-city bg-light-100 rounded flex flex-col shadow transition-shadow duration-300 w-full max-w-lg lg:max-w-md overflow-hidden any-hover:shadow-md dark:bg-cool-gray-800"
+    class="card-city bg-light-100 rounded flex flex-col shadow transition-shadow duration-300 w-full max-w-lg lg:max-w-md overflow-hidden any-hover:shadow-md dark:bg-hex-362d25"
   )
     a(
       class="group block overflow-hidden"
@@ -59,6 +59,7 @@ mixin cardCity(city, origin, lqip, noImage)
             srcset=lqip
             data-srcset=`/img/terminal-${origin}/horarios-esteli-${convertCityName}-estelibuses-felix-icaza-card.jpg`
           )/
+
     section(class="p-5 flex flex-col justify-between gap-7 flex-1")
       article(class="text-center")
         h3(class="mb-2.5 text-2xl font-bold")
@@ -70,6 +71,10 @@ mixin cardCity(city, origin, lqip, noImage)
           span(class="underline font-semibold") desde Estelí hacia #{ city }
           | .
       a(
-        class="rounded font-semibold py-2.5 transition-colors text-center bg-yellow-200 text-orange-800 any-hover:bg-yellow-300 active:bg-yellow-300 focus:outline-none"
+        class="rounded font-semibold space-x-1 py-2.5 px-5 transition-colors inline-flex items-center justify-center text-orange-400 any-hover:bg-orange-100 any-hover:text-orange-500 active:bg-orange-100 active:text-orange-500 transition-colors focus:outline-none"
         href=`/terminal-${origin}-esteli/horarios-esteli-${convertCityName}`
-      ) Mira los horarios
+      )
+        span Mira los horarios
+        span
+          svg(class="fill-current mt-0.65" width="26" height="26")
+            path(d="m8.6 16.6 4.6-4.6-4.6-4.6L10 6l6 6-6 6-1.4-1.4Z")/
