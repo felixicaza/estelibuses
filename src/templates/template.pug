@@ -5,6 +5,16 @@ block variables
 block append currentPage
   - const PAGE = CURRENT_PAGE
 
+- let themeColor = "#fb923c"
+
+- if (PAGE === 'terminal-norte') {
+- themeColor = "#34d399"
+- }
+
+- if (PAGE === 'terminal-sur') {
+- themeColor = "#fbbf24"
+- }
+
 doctype html
 html(class="scroll-smooth" dir="ltr" lang=`${LANG}` prefix="og: https://ogp.me/ns#")
   head#h
@@ -120,7 +130,7 @@ html(class="scroll-smooth" dir="ltr" lang=`${LANG}` prefix="og: https://ogp.me/n
     )/
 
     meta(name="color-scheme" content="light dark")/
-    meta(name="theme-color" content="#fb923c")/
+    meta(name="theme-color" content=themeColor)/
     meta(name="msapplication-TileColor" content="#fb923c")/
     link(href=`${ASSETS_PATH}manifest.json` rel="manifest")/
     meta(
@@ -218,8 +228,9 @@ html(class="scroll-smooth" dir="ltr" lang=`${LANG}` prefix="og: https://ogp.me/n
     if SOCIAL_IMAGE_ALT !== ""
       meta(name="twitter:image:alt" content=`${SOCIAL_IMAGE_ALT}`)/
 
+  //- prettier-ignore
   body(
-    class="bg-white text-cool-gray-700 dark:bg-hex-292018 dark:text-white transition-colors duration-150"
+    class='bg-white text-cool-gray-700 dark:bg-hex-292018 dark:text-white transition-colors duration-150'
   )
     block content
 
