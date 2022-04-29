@@ -59,4 +59,25 @@ const cpy = require('cpy')
   await cpy('build/ads.txt', 'public/').on('progress', data => {
     console.log(data)
   })
+
+  await cpy('build/favicons/favicon.ico', 'public/favicons/').on(
+    'progress',
+    data => {
+      console.log(data)
+    }
+  )
+
+  await cpy('build/favicons/safari-pinned-tab.svg', 'public/favicons/').on(
+    'progress',
+    data => {
+      console.log(data)
+    }
+  )
+
+  await cpy('build/favicons/browserconfig.xml', 'public/favicons/').on(
+    'progress',
+    data => {
+      console.log(data)
+    }
+  )
 })()
