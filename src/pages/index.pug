@@ -21,12 +21,6 @@ block append title
   title= SOCIAL_TITLE
 
 block append preconnect
-  script.
-    let i = new Image();
-    i.onload = i.onerror = _ => {
-      document.documentElement.classList.add(i.height > 0 ? "avif" : "no-avif");
-    };
-    i.src = "data:image/avif;base64,AAAAIGZ0eXBhdmlmAAAAAGF2aWZtaWYxbWlhZk1BMUIAAADybWV0YQAAAAAAAAAoaGRscgAAAAAAAAAAcGljdAAAAAAAAAAAAAAAAGxpYmF2aWYAAAAADnBpdG0AAAAAAAEAAAAeaWxvYwAAAABEAAABAAEAAAABAAABGgAAAB0AAAAoaWluZgAAAAAAAQAAABppbmZlAgAAAAABAABhdjAxQ29sb3IAAAAAamlwcnAAAABLaXBjbwAAABRpc3BlAAAAAAAAAAIAAAACAAAAEHBpeGkAAAAAAwgICAAAAAxhdjFDgQ0MAAAAABNjb2xybmNseAACAAIAAYAAAAAXaXBtYQAAAAAAAAABAAEEAQKDBAAAACVtZGF0EgAKCBgANogQEAwgMg8f8D///8WfhwB8+ErK42A=";
 
 block append async-scripts
 
@@ -36,20 +30,6 @@ block append stylesheets
   link(href=`${ASSETS_PATH}css/style.css` rel="stylesheet")/
 
 block append preload
-  link(
-    type="image/webp"
-    as="image"
-    href="img/esteli-buses-logo-black-felix-icaza.webp"
-    importance="highest"
-    rel="preload"
-  )/
-  link(
-    type="image/webp"
-    as="image"
-    href="img/esteli-buses-logo-white-felix-icaza.webp"
-    importance="highest"
-    rel="preload"
-  )/
 
 block append defer-scripts
   script(
