@@ -18,6 +18,19 @@
 
   files.forEach(file => console.log('Converted:', file.destinationPath))
 
+  const manifest = await imagemin(['build/manifest/*.{jpg,jpeg}'], {
+    destination: 'public/manifest',
+    plugins: [
+      imageminMozjpeg({
+        quality: 75
+      })
+    ]
+  })
+
+  manifest.forEach(manifestImage =>
+    console.log('Converted:', manifestImage.destinationPath)
+  )
+
   const terminalNorteImages = await imagemin(
     ['build/img/terminal-norte/*.{jpg,jpeg}'],
     {
