@@ -6,21 +6,6 @@ const IMAGES_APP_SHELL = [
   '/favicons/favicon-48x48.png',
   '/favicons/android-chrome-144x144.png',
 
-  '/img/esteli-buses-logo-black-felix-icaza.webp',
-  '/img/esteli-buses-logo-black-felix-icaza.png',
-  '/img/esteli-buses-logo-white-felix-icaza.webp',
-  '/img/esteli-buses-logo-white-felix-icaza.png',
-
-  '/img/esteli-buses-bg-dark-felix-icaza.avif',
-  '/img/esteli-buses-bg-dark-felix-icaza.webp',
-  '/img/esteli-buses-bg-dark-mobile-felix-icaza.avif',
-  '/img/esteli-buses-bg-dark-mobile-felix-icaza.webp',
-
-  '/img/esteli-buses-bg-felix-icaza.avif',
-  '/img/esteli-buses-bg-felix-icaza.webp',
-  '/img/esteli-buses-bg-mobile-felix-icaza.avif',
-  '/img/esteli-buses-bg-mobile-felix-icaza.webp',
-
   '/img/terminal-norte-estelibuses-felix-icaza.avif',
   '/img/terminal-norte-estelibuses-felix-icaza.webp',
   '/img/terminal-norte-estelibuses-mobile-felix-icaza.avif',
@@ -30,6 +15,12 @@ const IMAGES_APP_SHELL = [
   '/img/terminal-sur-estelibuses-felix-icaza.webp',
   '/img/terminal-sur-estelibuses-mobile-felix-icaza.avif',
   '/img/terminal-sur-estelibuses-mobile-felix-icaza.webp',
+
+  '/img/estelibuses-logo.avif',
+  '/img/estelibuses-logo.webp',
+
+  '/img/estelibuses-horarios-de-esteli.avif',
+  '/img/estelibuses-horarios-de-esteli.webp',
 
   '/img/404.avif',
   '/img/404.webp',
