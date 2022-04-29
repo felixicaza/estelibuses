@@ -3,8 +3,6 @@
 const IMAGES_APP_SHELL = [
   '/favicons/favicon-16x16.png',
   '/favicons/favicon-32x32.png',
-  '/favicons/favicon-48x48.png',
-  '/favicons/android-chrome-144x144.png',
 
   '/img/terminal-norte-estelibuses-felix-icaza.avif',
   '/img/terminal-norte-estelibuses-felix-icaza.webp',
