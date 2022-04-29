@@ -89,11 +89,19 @@ body {
 }
 
 #terminal-norte {
-  background: #dcfce7;
+  background: linear-gradient(to top, #eeffeb, #dbffdc);
+}
+
+.dark #terminal-norte {
+  background: linear-gradient(to top, #1b2d1f, #1b2d1f);
 }
 
 #terminal-sur {
-  background: #ffedd5;
+  background: linear-gradient(to top, #feffeb, #feffdb);
+}
+
+.dark #terminal-sur {
+  background: linear-gradient(to top, #2d2d1b, #2d2d1b);
 }
 
 #jinotega,
@@ -147,14 +155,6 @@ body {
 #la-rica,
 #sebaco {
   background: #ccfbf1;
-}
-
-.dark #terminal-norte {
-  background: #95c6a6;
-}
-
-.dark #terminal-sur {
-  background: #d6bc99;
 }
 
 .dark #jinotega,
