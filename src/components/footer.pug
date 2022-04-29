@@ -3,25 +3,17 @@ footer(class="bg-hex-1c1611 text-white text-center")
     article(class="text-center max-w-xl mx-auto space-y-4")
       a(class="inline-block" href="/")
         picture
-          source(
-            type="image/webp"
-            srcset="/img/esteli-buses-logo-white-felix-icaza.webp"
-            data-srcset="/img/esteli-buses-logo-white-felix-icaza.webp"
-          )/
-          source(
-            type="image/png"
-            srcset="/img/esteli-buses-logo-white-felix-icaza.png"
-            data-srcset="/img/esteli-buses-logo-white-felix-icaza.png"
-          )/
+          source(type="image/avif" data-srcset="/img/estelibuses-logo.avif")/
+          source(type="image/webp" data-srcset="/img/estelibuses-logo.webp")/
           img(
             alt="Estelí Buses"
             class="object-cover object-center mx-auto"
             decoding="async"
-            importance="high"
-            srcset="/img/esteli-buses-logo-white-felix-icaza.png"
+            importance="low"
+            srcset="/img/estelibuses-logo.webp"
             width="150"
             height="60"
-            data-srcset="/img/esteli-buses-logo-white-felix-icaza.png"
+            data-srcset="/img/estelibuses-logo.png"
           )/
       nav(class="hidden md:flex md:justify-center md:gap-8")
         a(
