@@ -46,6 +46,20 @@ html(class="scroll-smooth" dir="ltr" lang=`${LANG}` prefix="og: https://ogp.me/n
       link(href=`${ASSETS_PATH}css/lib/windi.css` rel="stylesheet")/
     block stylesheets
 
+    link(
+      type="image/avif"
+      as="image"
+      href="/img/estelibuses-logo.avif"
+      importance="highest"
+      rel="preload"
+    )/
+    link(
+      type="image/webp"
+      as="image"
+      href="/img/estelibuses-logo.webp"
+      importance="highest"
+      rel="preload"
+    )/
     block preload
 
     script(src=`${ASSETS_PATH}js/lib/quicklink.umd.js` defer importance="low")
