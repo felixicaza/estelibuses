@@ -2,68 +2,52 @@ block currentPage
 
 - const ACTIVE = PAGE
 
-- const terminalNorte = `${ACTIVE === "terminal-norte" ? "text-cool-gray-500" : "any-hover:text-cool-gray-500 active:text-cool-gray-500 transition-colors"} py-2.5 px-6 hidden lg:inline z-2`
-- const terminalSur = `${ACTIVE === "terminal-sur" ? "text-cool-gray-500" : "any-hover:text-cool-gray-500 active:text-cool-gray-500 transition-colors"} py-2.5 px-6 hidden lg:inline z-2`
-- const acerca = `${ACTIVE === "acerca" ? "text-cool-gray-500" : "any-hover:text-cool-gray-500 active:text-cool-gray-500 transition-colors"} py-2.5 px-6 hidden lg:inline z-2`
+- const terminalNorte = `${ACTIVE === "terminal-norte" ? "text-emerald-500" : "any-hover:text-emerald-500 active:text-emerald-500 transition-colors"} space-x-1 inline-flex items-center justify-center py-2.5 px-6`
+- const terminalSur = `${ACTIVE === "terminal-sur" ? "text-yellow-500" : "any-hover:text-yellow-500 active:text-yellow-500 transition-colors"} space-x-1 inline-flex items-center justify-center py-2.5 px-6`
+- const acerca = `${ACTIVE === "acerca" ? "text-rose-500" : "any-hover:text-rose-500 active:text-rose-500 transition-colors"} space-x-1 inline-flex items-center justify-center py-2.5 px-6`
 
 nav(class="py-2 flex justify-between items-center")
   a(class="inline-block" href="/")
-    picture#logo-main
-      source(
-        type="image/webp"
-        media="(prefers-color-scheme: light)"
-        srcset="/img/esteli-buses-logo-black-felix-icaza.webp"
-        data-srcset="/img/esteli-buses-logo-black-felix-icaza.webp"
-      )/
-      source(
-        type="image/webp"
-        media="(prefers-color-scheme: dark)"
-        srcset="/img/esteli-buses-logo-white-felix-icaza.webp"
-        data-srcset="/img/esteli-buses-logo-white-felix-icaza.webp"
-      )/
-      source(
-        type="image/png"
-        media="(prefers-color-scheme: light)"
-        srcset="/img/esteli-buses-logo-black-felix-icaza.png"
-        data-srcset="/img/esteli-buses-logo-black-felix-icaza.png"
-      )/
-      source(
-        type="image/png"
-        media="(prefers-color-scheme: dark)"
-        srcset="/img/esteli-buses-logo-white-felix-icaza.png"
-        data-srcset="/img/esteli-buses-logo-white-felix-icaza.png"
-      )/
+    picture
+      source(type="image/avif" data-srcset="/img/estelibuses-logo.avif")/
+      source(type="image/webp" data-srcset="/img/estelibuses-logo.webp")/
       img(
         alt="Estelí Buses"
         class="object-cover object-center"
         decoding="async"
-        importance="high"
-        srcset="/img/esteli-buses-logo-black-felix-icaza.png"
+        importance="highest"
+        srcset="/img/estelibuses-logo.webp"
         width="150"
         height="60"
-        data-srcset="/img/esteli-buses-logo-black-felix-icaza.png"
+        data-srcset="/img/estelibuses-logo.png"
       )/
-  script.
-    const logoMain = document.querySelectorAll("#logo-main > source");
-    logoMain.forEach(logo => {
-      if (localStorage.getItem("darkmode") === "true") {
-        if (logo.srcset.includes(".webp")) {
-          logo.srcset = "/img/esteli-buses-logo-white-felix-icaza.webp";
-        } else {
-          logo.srcset = "/img/esteli-buses-logo-white-felix-icaza.png";
-        }
-      } else {
-        if (logo.srcset.includes(".webp")) {
-          logo.srcset = "/img/esteli-buses-logo-black-felix-icaza.webp";
-        } else {
-          logo.srcset = "/img/esteli-buses-logo-black-felix-icaza.png";
-        }
-      }
-    });
-  section(class="flex items-center space-x-4 font-medium whitespace-nowrap")
-    a(class=terminalNorte href="/terminal-norte-esteli") Terminal norte
-    a(class=terminalSur href="/terminal-sur-esteli") Terminal sur
-    a(class=acerca href="/acerca-de-estelibuses") Acerca
+
+  section(
+    class="lg:flex lg:items-center lg:space-x-4 lg:font-medium lg:justify-center lg:gap-4 hidden"
+  )
+    a(class=terminalNorte href="/terminal-norte-esteli")
+      span
+        svg(class="fill-current" viewBox="0 0 24 24" width="22" height="22")
+          path(
+            d="M18 11H6V6h12m-1.5 11a1.5 1.5 0 0 1-1.5-1.5 1.5 1.5 0 0 1 1.5-1.5 1.5 1.5 0 0 1 1.5 1.5 1.5 1.5 0 0 1-1.5 1.5m-9 0A1.5 1.5 0 0 1 6 15.5 1.5 1.5 0 0 1 7.5 14 1.5 1.5 0 0 1 9 15.5 1.5 1.5 0 0 1 7.5 17M4 16a3 3 0 0 0 1 2.2V20a1 1 0 0 0 1 1h1a1 1 0 0 0 1-1v-1h8v1a1 1 0 0 0 1 1h1a1 1 0 0 0 1-1v-1.8a3 3 0 0 0 1-2.2V6c0-3.5-3.6-4-8-4s-8 .5-8 4v10Z"
+          )/
+      span Terminal norte
+    a(class=terminalSur href="/terminal-sur-esteli")
+      span
+        svg(class="fill-current" viewBox="0 0 24 24" width="22" height="22")
+          path(
+            d="M18 11H6V6h12m-1.5 11a1.5 1.5 0 0 1-1.5-1.5 1.5 1.5 0 0 1 1.5-1.5 1.5 1.5 0 0 1 1.5 1.5 1.5 1.5 0 0 1-1.5 1.5m-9 0A1.5 1.5 0 0 1 6 15.5 1.5 1.5 0 0 1 7.5 14 1.5 1.5 0 0 1 9 15.5 1.5 1.5 0 0 1 7.5 17M4 16a3 3 0 0 0 1 2.2V20a1 1 0 0 0 1 1h1a1 1 0 0 0 1-1v-1h8v1a1 1 0 0 0 1 1h1a1 1 0 0 0 1-1v-1.8a3 3 0 0 0 1-2.2V6c0-3.5-3.6-4-8-4s-8 .5-8 4v10Z"
+          )/
+      span Terminal sur
+    a(class=acerca href="/acerca-de-estelibuses")
+      span
+        svg(class="fill-current" viewBox="0 0 24 24" width="22" height="22")
+          path(
+            d="M13 9h-2V7h2m0 10h-2v-6h2m-1-9A10 10 0 0 0 2 12a10 10 0 0 0 10 10 10 10 0 0 0 10-10A10 10 0 0 0 12 2Z"
+          )/
+      span Acerca
+
+  section
     button#switch-scheme(
       type="button"
       class="focus:outline-none"
