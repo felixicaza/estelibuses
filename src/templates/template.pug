@@ -85,6 +85,7 @@ html(class="scroll-smooth" dir="ltr" lang=`${LANG}` prefix="og: https://ogp.me/n
 
     block seo
 
+    link(href=`${ASSETS_PATH}favicons/favicon.ico` rel="shortcut icon")/
     link(
       type="image/png"
       href=`${ASSETS_PATH}favicons/favicon-16x16.png`
@@ -98,31 +99,24 @@ html(class="scroll-smooth" dir="ltr" lang=`${LANG}` prefix="og: https://ogp.me/n
       sizes="32x32"
     )/
     link(
-      type="image/png"
-      href=`${ASSETS_PATH}favicons/favicon-48x48.png`
-      rel="icon"
-      sizes="48x48"
-    )/
-    link(
-      href=`${ASSETS_PATH}favicons/apple-touch-icon-167x167.png`
-      rel="apple-touch-icon"
-      sizes="167x167"
-    )/
-    link(
-      href=`${ASSETS_PATH}favicons/apple-touch-icon-180x180.png`
+      href=`${ASSETS_PATH}favicons/apple-touch-icon.png`
       rel="apple-touch-icon"
       sizes="180x180"
     )/
     link(
-      type="image/png"
-      href=`${ASSETS_PATH}favicons/android-chrome-192x192.png`
-      rel="icon"
-      sizes="192x192"
+      color="#fb923c"
+      href=`${ASSETS_PATH}/favicons/safari-pinned-tab.svg`
+      rel="mask-icon"
     )/
 
     meta(name="color-scheme" content="light dark")/
     meta(name="theme-color" content="#fb923c")/
+    meta(name="msapplication-TileColor" content="#fb923c")/
     link(href=`${ASSETS_PATH}manifest.json` rel="manifest")/
+    meta(
+      name="msapplication-config"
+      content=`${ASSETS_PATH}/favicons/browserconfig.xml`
+    )/
 
     meta(name="format-detection" content="telephone=no")/
     meta(name="application-name" content=`${APPLICATION_NAME}`)
@@ -133,6 +127,57 @@ html(class="scroll-smooth" dir="ltr" lang=`${LANG}` prefix="og: https://ogp.me/n
       content="black-translucent"
     )/
     meta(name="apple-mobile-web-app-title" content=`${APPLICATION_NAME}`)/
+
+    link(
+      href=`${ASSETS_PATH}splashscreens/iphone5_splash.png`
+      media="(device-width: 320px) and (device-height: 568px) and (-webkit-device-pixel-ratio: 2)"
+      rel="apple-touch-startup-image"
+    )/
+    link(
+      href=`${ASSETS_PATH}splashscreens/iphone6_splash.png`
+      media="(device-width: 375px) and (device-height: 667px) and (-webkit-device-pixel-ratio: 2)"
+      rel="apple-touch-startup-image"
+    )/
+    link(
+      href=`${ASSETS_PATH}splashscreens/iphoneplus_splash.png`
+      media="(device-width: 621px) and (device-height: 1104px) and (-webkit-device-pixel-ratio: 3)"
+      rel="apple-touch-startup-image"
+    )/
+    link(
+      href=`${ASSETS_PATH}splashscreens/iphonex_splash.png`
+      media="(device-width: 375px) and (device-height: 812px) and (-webkit-device-pixel-ratio: 3)"
+      rel="apple-touch-startup-image"
+    )/
+    link(
+      href=`${ASSETS_PATH}splashscreens/iphonexr_splash.png`
+      media="(device-width: 414px) and (device-height: 896px) and (-webkit-device-pixel-ratio: 2)"
+      rel="apple-touch-startup-image"
+    )/
+    link(
+      href=`${ASSETS_PATH}splashscreens/iphonexsmax_splash.png`
+      media="(device-width: 414px) and (device-height: 896px) and (-webkit-device-pixel-ratio: 3)"
+      rel="apple-touch-startup-image"
+    )/
+    link(
+      href=`${ASSETS_PATH}splashscreens/ipad_splash.png`
+      media="(device-width: 768px) and (device-height: 1024px) and (-webkit-device-pixel-ratio: 2)"
+      rel="apple-touch-startup-image"
+    )/
+    link(
+      href=`${ASSETS_PATH}splashscreens/ipadpro1_splash.png`
+      media="(device-width: 834px) and (device-height: 1112px) and (-webkit-device-pixel-ratio: 2)"
+      rel="apple-touch-startup-image"
+    )/
+    link(
+      href=`${ASSETS_PATH}splashscreens/ipadpro3_splash.png`
+      media="(device-width: 834px) and (device-height: 1194px) and (-webkit-device-pixel-ratio: 2)"
+      rel="apple-touch-startup-image"
+    )/
+    link(
+      href=`${ASSETS_PATH}splashscreens/ipadpro2_splash.png`
+      media="(device-width: 1024px) and (device-height: 1366px) and (-webkit-device-pixel-ratio: 2)"
+      rel="apple-touch-startup-image"
+    )/
 
     if SOCIAL_TITLE !== ""
       meta(name="title" content=`${SOCIAL_TITLE}` property="og:title")/
