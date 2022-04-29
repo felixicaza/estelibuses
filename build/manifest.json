@@ -25,7 +25,7 @@
       "url": "/terminal-norte-esteli?utm_source=web_app",
       "icons": [
         {
-          "src": "favicons/android-chrome-96x96.png",
+          "src": "manifest/icon-terminal-norte.png",
           "sizes": "96x96",
           "type": "image/png"
         }
@@ -38,58 +38,153 @@
       "url": "/terminal-sur-esteli?utm_source=web_app",
       "icons": [
         {
-          "src": "favicons/android-chrome-96x96.png",
+          "src": "manifest/icon-terminal-sur.png",
           "sizes": "96x96",
           "type": "image/png"
         }
       ]
     }
   ],
+  "screenshots": [
+    {
+      "src": "manifest/screenshot-01.jpg",
+      "sizes": "586x1041",
+      "type": "image/jpeg",
+      "label": "Estelí Buses"
+    },
+    {
+      "src": "manifest/screenshot-02.jpg",
+      "sizes": "586x1041",
+      "type": "image/jpeg",
+      "label": "Terminal norte"
+    },
+    {
+      "src": "manifest/screenshot-03.jpg",
+      "sizes": "586x1041",
+      "type": "image/jpeg",
+      "label": "Terminal sur"
+    }
+  ],
   "icons": [
     {
-      "src": "favicons/android-chrome-36x36.png",
-      "sizes": "36x36",
-      "type": "image/png"
-    },
-    {
-      "src": "favicons/android-chrome-48x48.png",
+      "src": "manifest/icon-48x48.png",
       "sizes": "48x48",
-      "type": "image/png"
+      "type": "image/png",
+      "purpose": "any"
     },
     {
-      "src": "favicons/android-chrome-72x72.png",
+      "src": "manifest/maskable-icon-48x48.png",
+      "sizes": "48x48",
+      "type": "image/png",
+      "purpose": "maskable"
+    },
+    {
+      "src": "manifest/icon-72x72.png",
       "sizes": "72x72",
-      "type": "image/png"
+      "type": "image/png",
+      "purpose": "any"
     },
     {
-      "src": "favicons/android-chrome-96x96.png",
+      "src": "manifest/maskable-icon-72x72.png",
+      "sizes": "72x72",
+      "type": "image/png",
+      "purpose": "maskable"
+    },
+    {
+      "src": "manifest/icon-96x96.png",
       "sizes": "96x96",
-      "type": "image/png"
+      "type": "image/png",
+      "purpose": "any"
     },
     {
-      "src": "favicons/android-chrome-144x144.png",
+      "src": "manifest/maskable-icon-96x96.png",
+      "sizes": "96x96",
+      "type": "image/png",
+      "purpose": "maskable"
+    },
+    {
+      "src": "manifest/icon-128x128.png",
+      "sizes": "128x128",
+      "type": "image/png",
+      "purpose": "any"
+    },
+    {
+      "src": "manifest/maskable-icon-128x128.png",
+      "sizes": "128x128",
+      "type": "image/png",
+      "purpose": "maskable"
+    },
+    {
+      "src": "manifest/icon-144x144.png",
       "sizes": "144x144",
-      "type": "image/png"
+      "type": "image/png",
+      "purpose": "any"
     },
     {
-      "src": "favicons/android-chrome-192x192.png",
+      "src": "manifest/maskable-icon-144x144.png",
+      "sizes": "144x144",
+      "type": "image/png",
+      "purpose": "maskable"
+    },
+    {
+      "src": "manifest/icon-152x152.png",
+      "sizes": "152x152",
+      "type": "image/png",
+      "purpose": "any"
+    },
+    {
+      "src": "manifest/maskable-icon-152x152.png",
+      "sizes": "152x152",
+      "type": "image/png",
+      "purpose": "maskable"
+    },
+    {
+      "src": "manifest/icon-192x192.png",
       "sizes": "192x192",
-      "type": "image/png"
+      "type": "image/png",
+      "purpose": "any"
     },
     {
-      "src": "favicons/android-chrome-256x256.png",
+      "src": "manifest/maskable-icon-192x192.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "maskable"
+    },
+    {
+      "src": "manifest/icon-256x256.png",
       "sizes": "256x256",
-      "type": "image/png"
+      "type": "image/png",
+      "purpose": "any"
     },
     {
-      "src": "favicons/android-chrome-384x384.png",
+      "src": "manifest/maskable-icon-256x256.png",
+      "sizes": "256x256",
+      "type": "image/png",
+      "purpose": "maskable"
+    },
+    {
+      "src": "manifest/icon-384x384.png",
       "sizes": "384x384",
-      "type": "image/png"
+      "type": "image/png",
+      "purpose": "any"
     },
     {
-      "src": "favicons/android-chrome-512x512.png",
+      "src": "manifest/maskable-icon-384x384.png",
+      "sizes": "384x384",
+      "type": "image/png",
+      "purpose": "maskable"
+    },
+    {
+      "src": "manifest/icon-512x512.png",
       "sizes": "512x512",
-      "type": "image/png"
+      "type": "image/png",
+      "purpose": "any"
+    },
+    {
+      "src": "manifest/maskable-icon-512x512.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "maskable"
     }
   ]
 }
