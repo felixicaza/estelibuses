@@ -16,6 +16,7 @@ mixin breadcrumb(terminalName, city)
   )
     ol(class="flex items-center space-x-2")
       li(style="width: 24px; height: 24px")
+        //- pretier-ignore
         a(
           class="${convertTerminalName === 'terminal-norte' ? 'any-hover:text-emerald-500 active:text-emerald-500' : 'any-hover:text-yellow-500 active:text-yellow-500'} transition-colors"
           href="/"
@@ -27,14 +28,16 @@ mixin breadcrumb(terminalName, city)
         svg(fill="currentColor" viewBox="0 0 24 24" width="24" height="24")
           path(d="m8.6 16.6 4.6-4.6-4.6-4.6L10 6l6 6-6 6-1.4-1.4Z")/
       li
+        //- prettier-ignore
         a(
-          class="${convertTerminalName === 'terminal-norte' ? 'any-hover:text-emerald-500 active:text-emerald-500' : 'any-hover:text-yellow-500 active:text-yellow-500'} transition-colors font-medium"
+          class=`${convertTerminalName === 'terminal-norte' ? 'any-hover:text-emerald-500 active:text-emerald-500' : 'any-hover:text-yellow-500 active:text-yellow-500'} transition-colors font-medium`
           href=`/${convertTerminalName}-esteli`
         )= terminalName
       li
         svg(fill="currentColor" viewBox="0 0 24 24" width="24" height="24")
           path(d="m8.6 16.6 4.6-4.6-4.6-4.6L10 6l6 6-6 6-1.4-1.4Z")/
       li(aria-current="page")
+        //- pretier-ignore
         p(
           class="${convertTerminalName === 'terminal-norte' ? 'text-emerald-500 dark:text-emerald-500' : 'text-yellow-500 dark:text-yellow-500'}"
         )= city
