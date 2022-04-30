@@ -2,7 +2,7 @@ name: Deploy preview project
 
 'on':
   push:
-    branches: [dev]
+    branches: [newdev]
 
 jobs:
   build_preview:
