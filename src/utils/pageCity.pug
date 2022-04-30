@@ -8,7 +8,7 @@ mixin pageCity(city, terminalName, destiny, distance, map)
   - const sanitizeTerminalName = terminalName.toLowerCase().normalize('NFD').replace(/[\u0300-\u036f]/g, "").replace(/\s/g, "-")
   - const citySafeUrl = city.replace(/\s/g, "%20")
 
-  header(class="wave" id=cityLowerCase)
+  header(class="relative" id=sanitizeTerminalName)
     div(class="container mx-auto px-4")
       include ../components/navbar
 
@@ -18,12 +18,14 @@ mixin pageCity(city, terminalName, destiny, distance, map)
       section(
         class="flex flex-col justify-center items-center pt-18 pb-18 md:pb-26 lg:pt-28 lg:pb-34 xl:pb-56 text-center"
       )
-        h1(class="text-4xl sm:text-5xl mb-8 max-w-screen-md font-bold") Horarios de los Buses de Estelí hacia #{ city }
+        h1(
+          class="${sanitizeTerminalName === 'terminal-norte' ? 'text-hex-0D3B12 dark:text-emerald-50' : 'text-hex-3B3B0D dark:text-yellow-50'} text-4xl sm:text-5xl mb-8 max-w-screen-md font-bold"
+        ) Horarios de los Buses de Estelí hacia #{ city }
         section(class="space-y-2")
           p(class="font-semibold") ¡Comparte este horario en tus redes sociales!
           section(class="flex flex-wrap justify-center items-center gap-8")
             a#whatsapp-city(
-              class="any-hover:text-cool-gray-500 active:text-cool-gray-500 dark:any-hover:text-light-500 dark:active:text-light-500 transition-colors"
+              class="${sanitizeTerminalName === 'terminal-norte' ? 'text-emerald-500 any-hover:text-emerald-600 active:text-emerald-600' : 'text-yellow-500 any-hover:text-yellow-600 active:text-yellow-600'} transition-colors"
               href=`https://api.whatsapp.com/send?text=%C2%A1Conoce%20todos%20los%20horarios%20de%20los%20buses%20de%20Estel%C3%AD%20hacia%20${citySafeUrl}!%0ahttps://estelibuses.web.app/${sanitizeTerminalName}-esteli/horarios-esteli-${cityLowerCase}?utm_source=whatsapp&utm_medium=webapp&utm_campaign=social_share_city&utm_content=header`
               target="_blank"
             )
@@ -32,7 +34,7 @@ mixin pageCity(city, terminalName, destiny, distance, map)
                   d="M12 2a10 10 0 0 0-8.6 14.9L2 22l5.3-1.4A10 10 0 1 0 12 2m0 1.7A8.2 8.2 0 1 1 7.9 19l-.2-.2-3.2.8.9-3-.2-.3a8.3 8.3 0 0 1 7-12.6M8.5 7.3a1 1 0 0 0-.6.3c-.3.3-.9.9-.9 2.1 0 1.2.9 2.4 1 2.6.1.1 1.8 2.6 4.3 3.7.5.3 1 .4 1.4.5.6.2 1 .2 1.5.1.5 0 1.5-.6 1.7-1.2.2-.5.2-1 .1-1.1l-.4-.3-1.7-.8c-.3-.1-.4-.1-.6.1l-.8 1c-.1.1-.3.2-.5 0-.3 0-1-.4-2-1.2a7.6 7.6 0 0 1-1.4-1.7c-.1-.3 0-.4.1-.5l.4-.5.3-.4v-.4l-.8-1.8c-.2-.5-.4-.5-.6-.5h-.5Z"
                 )/
             a#telegram-city(
-              class="any-hover:text-cool-gray-500 active:text-cool-gray-500 dark:any-hover:text-light-500 dark:active:text-light-500 transition-colors"
+              class="${sanitizeTerminalName === 'terminal-norte' ? 'text-emerald-500 any-hover:text-emerald-600 active:text-emerald-600' : 'text-yellow-500 any-hover:text-yellow-600 active:text-yellow-600'} transition-colors"
               href=`https://telegram.me/share/url?url=%C2%A1Conoce%20todos%20los%20horarios%20de%20los%20buses%20de%20Estel%C3%AD%20hacia%20${citySafeUrl}!%0ahttps://estelibuses.web.app/${sanitizeTerminalName}-esteli/horarios-esteli-${cityLowerCase}?utm_source=telegram&utm_medium=webapp&utm_campaign=social_share_city&utm_content=header`
               target="_blank"
             )
@@ -43,7 +45,7 @@ mixin pageCity(city, terminalName, destiny, distance, map)
                   fill-rule="evenodd"
                 )/
             a(
-              class="any-hover:text-cool-gray-500 active:text-cool-gray-500 dark:any-hover:text-light-500 dark:active:text-light-500 transition-colors"
+              class="${sanitizeTerminalName === 'terminal-norte' ? 'text-emerald-500 any-hover:text-emerald-600 active:text-emerald-600' : 'text-yellow-500 any-hover:text-yellow-600 active:text-yellow-600'} transition-colors"
               href=`https://www.facebook.com/sharer/sharer.php?u=https://estelibuses.web.app/${sanitizeTerminalName}-esteli/horarios-esteli-${cityLowerCase}?utm_source=facebook&utm_medium=webapp&utm_campaign=social_share_city&utm_content=header`
               target="_blank"
             )
@@ -52,7 +54,7 @@ mixin pageCity(city, terminalName, destiny, distance, map)
                   d="M12 2.04a10.03 10.03 0 0 0-1.56 19.92v-7H7.9v-2.9h2.54V9.85c0-2.51 1.49-3.89 3.78-3.89 1.09 0 2.23.19 2.23.19v2.47h-1.26c-1.24 0-1.63.77-1.63 1.56v1.88h2.78l-.45 2.9h-2.33v7a10 10 0 0 0 8.44-9.9c0-5.53-4.5-10.02-10-10.02Z"
                 )/
             a(
-              class="any-hover:text-cool-gray-500 active:text-cool-gray-500 dark:any-hover:text-light-500 dark:active:text-light-500 transition-colors"
+              class="${sanitizeTerminalName === 'terminal-norte' ? 'text-emerald-500 any-hover:text-emerald-600 active:text-emerald-600' : 'text-yellow-500 any-hover:text-yellow-600 active:text-yellow-600'} transition-colors"
               href=`https://twitter.com/intent/tweet?url=https://estelibuses.web.app/${sanitizeTerminalName}-esteli/horarios-esteli-${cityLowerCase}?utm_source=twitter&utm_medium=webapp&utm_campaign=social_share_city&utm_content=header&text=%C2%A1Conoce%20todos%20los%20horarios%20de%20los%20buses%20de%20Estel%C3%AD%20hacia%20${citySafeUrl}!`
               target="_blank"
             )
@@ -62,12 +64,14 @@ mixin pageCity(city, terminalName, destiny, distance, map)
                 )/
             button#share-city(
               type="button"
-              class="any-hover:text-cool-gray-500 active:text-cool-gray-500 dark:any-hover:text-light-500 dark:active:text-light-500 transition-colors hidden"
+              class="${sanitizeTerminalName === 'terminal-norte' ? 'text-emerald-500 any-hover:text-emerald-600 active:text-emerald-600' : 'text-yellow-500 any-hover:text-yellow-600 active:text-yellow-600'} transition-colors hidden"
             )
               svg(class="fill-current" viewBox="0 0 24 24" width="33" height="33")
                 path(
                   d="M18 16a3 3 0 0 0-2 .9l-7-4.2v-1.4l7-4.1a3 3 0 0 0 2 .8 3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3v.7L8 9.8A3 3 0 0 0 6 9a3 3 0 0 0-3 3 3 3 0 0 0 3 3 3 3 0 0 0 2-.8l7.2 4.1-.1.7a3 3 0 0 0 5.8 0 3 3 0 0 0-2.9-3Z"
                 )/
+
+    div(class="wave")
 
   section(class="py-12 sm:py-16 md:py-20 xl:py-28")
     div(class="container mx-auto px-4 mb-10 lg:mb-16")
