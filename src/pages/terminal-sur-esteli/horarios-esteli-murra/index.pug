@@ -43,11 +43,15 @@ block append content
   +pageCity('Murra', 'Terminal sur', 'Terminal de Murra', '151 km', 'https://www.google.com/maps/embed?pb=!1m28!1m12!1m3!1d496751.0158723327!2d-86.54056717010924!3d13.420539236318264!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!4m13!3e6!4m5!1s0x8f718c13825dde4b%3A0x69c6340e0429bb84!2sCotran%20Sur%2C%20Estel%C3%AD!3m2!1d13.0762386!2d-86.3524291!4m5!1s0x8f6deea1fcb9bf79%3A0xff995dcee497cac0!2sMurra!3m2!1d13.759181!2d-86.01853489999999!5e0!3m2!1ses-419!2sni!4v1645555829134!5m2!1ses-419!2sni')
     +cardTransportInfo('Horario #1', '04:45 am', 'Ruteado', 'Información no disponible', '3.14 horas', false, false, false)
 
-  article(class="py-12 sm:py-16 md:py-20 xl:py-28 bg-light-50 dark:bg-hex-151D2D")
+  article(class="py-12 sm:py-16 md:py-20 xl:py-28 bg-hex-FFFDF9 dark:bg-hex-2D231B")
     div(class="container mx-auto px-4 space-y-12 lg:space-y-16")
-      h3(class="text-3xl sm:text-4xl font-bold text-center") ¿Buscas conocer otros horarios?
+      h3(
+        class="text-3xl sm:text-4xl font-bold text-center text-hex-3b0d15 dark:text-orange-50"
+      ) ¿Buscas conocer otros horarios?
       section
-        h4(class="text-xl sm:text-2xl font-bold text-center mb-10 lg:mb-16") Otros horarios de la Terminal Sur
+        h4(
+          class="text-xl sm:text-2xl font-bold text-center mb-10 lg:mb-16 text-hex-3b0d15 dark:text-orange-50"
+        ) Horarios más populares de la Terminal Sur
         article(
           class="flex flex-col gap-y-14 items-center lg:grid lg:grid-cols-2 xl:grid-cols-3 lg:gap-22"
         )
@@ -74,7 +78,9 @@ block append content
                 path(d="M16 11H4v2h12v3l4-4-4-4z")/
 
       section(class="!mt-24")
-        h4(class="text-xl sm:text-2xl font-bold text-center mb-10 lg:mb-16") Horarios de la Terminal Norte
+        h4(
+          class="text-xl sm:text-2xl font-bold text-center mb-10 lg:mb-16 text-hex-3b0d15 dark:text-orange-50"
+        ) Horarios más populares de la Terminal Norte
         article(
           class="flex flex-col gap-y-14 items-center lg:grid lg:grid-cols-2 xl:grid-cols-3 lg:gap-22"
         )
