@@ -104,112 +104,6 @@ body {
   background: linear-gradient(to top, #2d2d1b, #2d2d1b);
 }
 
-#jinotega,
-#managua,
-#pueblo-nuevo,
-#el-sauce,
-#san-marcos-de-colon,
-#el-naranjo {
-  background: #e0e7ff;
-}
-
-#somoto,
-#matagalpa,
-#san-juan-del-rio-coco,
-#la-concordia,
-#oro-verde,
-#santa-cruz---la-ceiba,
-#santa-cruz {
-  background: #ecfccb;
-}
-
-#ocotal,
-#leon,
-#san-rafael-del-norte,
-#jalapa,
-#empalme-san-nicolas {
-  background: #fae8ff;
-}
-
-#yali,
-#murra,
-#el-espinal,
-#masaya,
-#la-concepcion {
-  background: #ede9fe;
-}
-
-#quilali,
-#achuapa,
-#tisey-la-estanzuela,
-#el-regadio,
-#la-pita,
-#san-isidro {
-  background: #e0f2fe;
-}
-
-#san-juan-de-limay,
-#san-nicolas,
-#la-trinidad,
-#wiwili,
-#la-rica,
-#sebaco {
-  background: #ccfbf1;
-}
-
-.dark #jinotega,
-.dark #managua,
-.dark #pueblo-nuevo,
-.dark #el-sauce,
-.dark #san-marcos-de-colon,
-.dark #el-naranjo {
-  background: #abb7de;
-}
-
-.dark #somoto,
-.dark #matagalpa,
-.dark #san-juan-del-rio-coco,
-.dark #la-concordia,
-.dark #oro-verde,
-.dark #santa-cruz---la-ceiba,
-.dark #santa-cruz {
-  background: #b5c88d;
-}
-
-.dark #ocotal,
-.dark #leon,
-.dark #san-rafael-del-norte,
-.dark #jalapa,
-.dark #empalme-san-nicolas {
-  background: #bb95c6;
-}
-
-.dark #yali,
-.dark #murra,
-.dark #el-espinal,
-.dark #masaya,
-.dark #la-concepcion {
-  background: #ada4d6;
-}
-
-.dark #quilali,
-.dark #achuapa,
-.dark #tisey-la-estanzuela,
-.dark #el-regadio,
-.dark #la-pita,
-.dark #san-isidro {
-  background: #97b8ce;
-}
-
-.dark #san-juan-de-limay,
-.dark #san-nicolas,
-.dark #la-trinidad,
-.dark #wiwili,
-.dark #la-rica,
-.dark #sebaco {
-  background: #8dc9bc;
-}
-
 .wave {
   position: absolute;
   bottom: 0;
@@ -222,6 +116,8 @@ body {
   background-size: contain;
   background-position-y: bottom;
   transform: translateY(1px);
+  pointer-events: none;
+  touch-action: none;
 }
 
 .dark .wave {
@@ -236,6 +132,8 @@ body {
   background-size: contain;
   background-position-y: bottom;
   transform: translateY(1px);
+  pointer-events: none;
+  touch-action: none;
 }
 
 @media (min-width: 1200px) {
