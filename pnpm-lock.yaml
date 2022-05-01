@@ -23,6 +23,7 @@ specifiers:
   imagemin-pngquant: 9.0.2
   imagemin-webp: 7.0.0
   lint-staged: 12.4.1
+  minify-json: 1.0.0
   npm-run-all: 4.1.5
   postcss: 8.4.13
   postcss-cli: 9.1.0
@@ -72,6 +73,7 @@ devDependencies:
   imagemin-pngquant: 9.0.2
   imagemin-webp: 7.0.0
   lint-staged: 12.4.1
+  minify-json: 1.0.0
   npm-run-all: 4.1.5
   postcss: 8.4.13
   postcss-cli: 9.1.0_postcss@8.4.13
@@ -727,6 +729,10 @@ packages:
     dependencies:
       readable-stream: 2.3.7
       safe-buffer: 5.2.1
+    dev: true
+
+  /bluebird/3.7.2:
+    resolution: {integrity: sha512-XpNj6GDQzdfW+r2Wnn7xiSAd7TM3jzkxGXBGTtWKuSXv1xUV+azxAm8jdWZN06QTQk+2N2XB9jRDkvbmQmcRtg==}
     dev: true
 
   /boolbase/1.0.0:
@@ -3413,6 +3419,13 @@ packages:
   /mimic-response/1.0.1:
     resolution: {integrity: sha512-j5EctnkH7amfV/q5Hgmoal1g2QHFJRraOtmx0JpIqkxhBhI/lJSl1nMpQ45hVarwNETOoWEimndZ4QK0RHxuxQ==}
     engines: {node: '>=4'}
+    dev: true
+
+  /minify-json/1.0.0:
+    resolution: {integrity: sha1-tVufoZmNViO4za/L2+UQQvs+TGw=}
+    hasBin: true
+    dependencies:
+      bluebird: 3.7.2
     dev: true
 
   /minimatch/3.1.2:
