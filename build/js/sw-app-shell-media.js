@@ -22,11 +22,9 @@ const IMAGES_APP_SHELL = [
 
   '/img/404.avif',
   '/img/404.webp',
-  '/img/404.jpg',
 
   '/img/offline.avif',
   '/img/offline.webp',
-  '/img/offline.jpg',
 
   '/img/terminal-norte/horarios-esteli-achuapa-estelibuses-felix-icaza-card.avif',
   '/img/terminal-norte/horarios-esteli-achuapa-estelibuses-felix-icaza-card.webp',
