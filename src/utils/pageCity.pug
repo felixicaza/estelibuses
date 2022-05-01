@@ -79,21 +79,9 @@ mixin pageCity(city, terminalName, destiny, distance, map)
 
     div(class="wave")
 
+  include ../components/ad-banner
+
   section(class="py-12 sm:py-16 md:py-20 xl:py-28")
-    include ../components/ad-banner
-
-    div(class="container mx-auto px-4 mb-10 lg:mb-16")
-      ins(
-        class="adsbygoogle"
-        style="display: block"
-        data-ad-client="ca-pub-4534198821642047"
-        data-ad-format="auto"
-        data-ad-slot="2659594376"
-        data-full-width-responsive="true"
-      )
-      script.
-        (adsbygoogle = window.adsbygoogle || []).push({});
-
     div(
       class="container mx-auto px-4 flex flex-col gap-16 lg:grid lg:grid-cols-2 lg:items-start"
     )
