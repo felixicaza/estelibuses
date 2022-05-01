@@ -13,7 +13,6 @@ import { getAnalytics, logEvent } from './lib/firebase-analytics.js'
  * Darkmode
  */
 
-const logoMain = document.querySelectorAll('#logo-main > source')
 const switchSchemeBtn = document.getElementById('switch-scheme')
 const darkIcon = document.getElementById('dark-icon')
 const lightIcon = document.getElementById('light-icon')
@@ -29,20 +28,6 @@ function toggleDarkMode(state) {
   lightIcon.classList.toggle('hidden', !state)
   darkIcon.classList.toggle('hidden', state)
   darkModeState = state
-
-  logoMain.forEach(logo => {
-    if (state) {
-      if (logo.srcset.includes('.webp')) {
-        logo.srcset = '/img/esteli-buses-logo-white-felix-icaza.webp'
-      } else {
-        logo.srcset = '/img/esteli-buses-logo-white-felix-icaza.png'
-      }
-    } else if (logo.srcset.includes('.webp')) {
-      logo.srcset = '/img/esteli-buses-logo-black-felix-icaza.webp'
-    } else {
-      logo.srcset = '/img/esteli-buses-logo-black-felix-icaza.png'
-    }
-  })
 }
 
 function setDarkModeLocalStorage(state) {
@@ -64,22 +49,6 @@ switchSchemeBtn.addEventListener('click', () => {
   } else {
     switchSchemeBtn.setAttribute('title', darkModeText)
   }
-})
-
-window.addEventListener('DOMContentLoaded', () => {
-  logoMain.forEach(logo => {
-    if (localStorage.getItem('darkmode') === 'true') {
-      if (logo.srcset.includes('.webp')) {
-        logo.srcset = '/img/esteli-buses-logo-white-felix-icaza.webp'
-      } else {
-        logo.srcset = '/img/esteli-buses-logo-white-felix-icaza.png'
-      }
-    } else if (logo.srcset.includes('.webp')) {
-      logo.srcset = '/img/esteli-buses-logo-black-felix-icaza.webp'
-    } else {
-      logo.srcset = '/img/esteli-buses-logo-black-felix-icaza.png'
-    }
-  })
 })
 
 window.addEventListener('keydown', e => {
