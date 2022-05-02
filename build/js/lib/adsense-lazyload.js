@@ -2,7 +2,7 @@
 * lazyadsense v 1.0.7
 * Lazyload Adsense Ads with Intersection Observer.
 * Niresh . Build date: 29-08-2021
-* Facebook.com/Niresh 
+* Facebook.com/Niresh
 */
 
 /**
@@ -65,7 +65,7 @@ function removeClass(el, className) {
     var reg = new RegExp('(\\s|^)' + className + '(\\s|$)')
     el.className=el.className.replace(reg, ' ')
   }
-}	
+}
 
 
 function removeAttributes(el) {
@@ -95,9 +95,9 @@ function removeAttributes(el) {
     txt = txt + x.attributes[i].name + '=' +'"'+ x.attributes[i].value + '" ';
 
   }
-  
 
-  
+
+
 
 var inscode = txt.replace("lazyadsense", "adsbygoogle");
         var scriptcode = '(adsbygoogle = window.adsbygoogle || []).push({ google_ad_slot: ' + adslot + ' });';
@@ -119,6 +119,4 @@ postscribe( entry.target, '<ins ' + inscode + '></ins>'+ scriptcode);
   };
 
   adunits.forEach(lazyAdsenseLoad);
-
-console.log("Powered by Lazyload Adsense: https://github.com/Niresh12495/LazyAdsense");
 })
