@@ -47,13 +47,19 @@ html(class="scroll-smooth" dir="ltr" lang=`${LANG}` prefix="og: https://ogp.me/n
     if HAS_CRITICAL_CSS
       link(
         as="style"
+        fetchpriority="low"
         href=`${ASSETS_PATH}css/lib/windi.css`
         importance="low"
         onload="this.onload=null;this.rel='stylesheet'"
         rel="preload"
       )/
     else
-      link(href=`${ASSETS_PATH}css/lib/windi.css` rel="stylesheet")/
+      link(
+        fetchpriority="highest"
+        href=`${ASSETS_PATH}css/lib/windi.css`
+        impotance="highest"
+        rel="stylesheet"
+      )/
     block stylesheets
 
     link(
@@ -74,19 +80,6 @@ html(class="scroll-smooth" dir="ltr" lang=`${LANG}` prefix="og: https://ogp.me/n
     )/
     block preload
 
-    script(
-      src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4534198821642047"
-      crossorigin
-      defer
-      fetchpriority="low"
-      importance="low"
-    )
-    script(
-      src=`${ASSETS_PATH}js/lib/adsense-lazyload.js`
-      defer
-      fetchpriority="low"
-      importance="low"
-    )
     script(
       src=`${ASSETS_PATH}js/lib/quicklink.umd.js`
       defer
