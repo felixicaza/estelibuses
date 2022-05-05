@@ -1,0 +1,99 @@
+extends ../../templates/template.pug
+
+block append variables
+  - const CURRENT_PAGE = "anuncios"
+  - const URL = "https://estelibuses.web.app"
+  - const ASSETS_PATH = "../"
+  - const HAS_CRITICAL_CSS = false
+  - const APPLICATION_NAME = "Estelí Buses"
+  - const META_DESCRIPTION = "Publicita tu negocio en la plataforma para que des a conocer ante los usuarios."
+  - const META_ROBOTS = "noindex, nofollow"
+  - const LANGUAGE = "es"
+  - const CURRENT_URL = `${URL}/anuncios`
+  - const SOCIAL_TITLE = "Anuncios | Estelí Buses"
+  - const SOCIAL_DESCRIPTION = META_DESCRIPTION
+  - const SOCIAL_IMAGE = ""
+  - const SOCIAL_IMAGE_ALT = SOCIAL_TITLE
+  - const OPEN_GRAPH_SITE_NAME = ""
+  - const TWITTER_CARD = "summary_large_image"
+
+block append title
+  title= SOCIAL_TITLE
+
+block append preconnect
+  link(crossorigin href="//pagead2.googlesyndication.com/" rel="preconnect")/
+
+block append async-scripts
+  script(
+    src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4534198821642047"
+    async
+    crossorigin
+    fetchpriority="high"
+    importance="high"
+  )
+
+block append critical-css
+
+block append stylesheets
+  link(href=`${ASSETS_PATH}css/style.css` rel="stylesheet")/
+
+block append preload
+
+block append defer-scripts
+
+block append content
+  header
+    div(class="container mx-auto px-4")
+      include ../../components/navbar
+
+  section(class="container mx-auto px-4")
+    section(
+      class="flex flex-col justify-center items-center pt-18 pb-26 xs:pb-36 lg:pt-28 lg:pb-34 xl:pb-44 2xl:pb-54 text-center max-w-6xl mx-auto space-y-6"
+    )
+      h1(
+        class="text-4xl sm:text-5xl font-bold mb-8 max-w-screen-lg text-hex-3b0d15 dark:text-orange-50"
+      ) Anuncios
+      p(class="text-base text-black-200 sm:text-lg dark:text-light-700") Esta es una página dedicada a mostrar&nbsp;
+        strong anuncios automatizados
+        | , para no incluir publicidad que entorpezca o vaya a ralentizar la navegación de la plataforma y tu experiencia de usuario al utilizarla.
+      p(class="text-base text-black-200 sm:text-lg dark:text-light-700") Esto me ayuda mucho a que la plataforma esté siempre disponible para todos, es una pequeña forma de demostrar tu apoyo a este proyecto y me compromete a seguir mejorándolo. Otra forma de demostrar tu apoyo es compartir la plataforma en tus redes sociales.
+      p(class="text-base text-black-200 sm:text-lg dark:text-light-700") Sin embargo, dentro de la plataforma se pueden incluir anuncios de negocios locales (de Estelí), esto con la idea de ayudarte a dar a conocer tu local o negocio ante los usuarios de la plataforma y de la ciudad de Estelí.
+
+      h2(
+        class="text-3xl sm:text-4xl font-bold !mt-14 text-hex-3b0d15 dark:text-orange-50"
+      ) ¿Cómo puedo publicitar mi negocio?
+      p(class="text-base text-black-200 sm:text-lg dark:text-light-700") Si quieres apoyar o invertir en este proyecto publicitándote, existen 4 planes de coste mensual:
+      ol(class="text-left space-y-4")
+        li
+          strong Patrocinador:&nbsp;
+          span El logo del negocio aparecerá como patrocinador de la plataforma.
+        li
+          strong Básico:&nbsp;
+          ul(class="list-disc ml-8 space-y-2")
+            li Un anuncio banner del negocio, que aparecerá en la vista de&nbsp;
+              a(class="underline text-orange-500" href="/") Inicio
+              | ,&nbsp;
+              a(class="underline text-orange-500" href="/terminal-norte-esteli") terminal norte
+              | &nbsp;y&nbsp;
+              a(class="underline text-orange-500" href="/terminal-sur-esteli") terminal sur
+              | , ya que son las más visitadas por los usuarios.
+            li Máximo 1 actualización del diseño del banner.
+        li
+          strong Intermedio:&nbsp;
+          ul(class="list-disc ml-8 space-y-2")
+            li Un anuncio banner del negocio, que aparecerá en todas las vistas de la plataforma (+30 vistas).
+            li Máximo 3 actualizaciones del diseño del banner.
+        li
+          strong Avanzado:&nbsp;
+          span Una vista dedicada del negocio con toda la información necesaria (imágenes, descripciones, mapa de ubicación, etc.) para hacerse destacar ante los potenciales clientes.
+      p(class="text-base text-black-200 sm:text-lg dark:text-light-700")
+        a(class="underline text-orange-500" href="/contacto") Contáctame
+        | &nbsp;y cotizá tu plan preferido.
+
+      include ../../components/adsense
+      include ../../components/adsense
+      include ../../components/adsense
+      include ../../components/adsense
+      include ../../components/adsense
+      include ../../components/adsense
+      include ../../components/adsense

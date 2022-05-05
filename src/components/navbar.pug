@@ -4,6 +4,7 @@ block currentPage
 
 - const terminalNorte = `${ACTIVE === "terminal-norte" ? "text-emerald-500" : "any-hover:text-emerald-500 active:text-emerald-500 transition-colors"} space-x-1 inline-flex items-center justify-center py-2.5 px-6`
 - const terminalSur = `${ACTIVE === "terminal-sur" ? "text-yellow-500" : "any-hover:text-yellow-500 active:text-yellow-500 transition-colors"} space-x-1 inline-flex items-center justify-center py-2.5 px-6`
+- const anuncios = `${ACTIVE === "anuncios" ? "text-orange-500" : "any-hover:text-orange-500 active:text-orange-500 transition-colors"} space-x-1 inline-flex items-center justify-center py-2.5 px-6`
 - const acerca = `${ACTIVE === "acerca" ? "text-orange-500" : "any-hover:text-orange-500 active:text-orange-500 transition-colors"} space-x-1 inline-flex items-center justify-center py-2.5 px-6`
 
 nav(class="py-2 flex justify-between items-center")
@@ -32,6 +33,7 @@ nav(class="py-2 flex justify-between items-center")
             d="M18 11H6V6h12m-1.5 11a1.5 1.5 0 0 1-1.5-1.5 1.5 1.5 0 0 1 1.5-1.5 1.5 1.5 0 0 1 1.5 1.5 1.5 1.5 0 0 1-1.5 1.5m-9 0A1.5 1.5 0 0 1 6 15.5 1.5 1.5 0 0 1 7.5 14 1.5 1.5 0 0 1 9 15.5 1.5 1.5 0 0 1 7.5 17M4 16a3 3 0 0 0 1 2.2V20a1 1 0 0 0 1 1h1a1 1 0 0 0 1-1v-1h8v1a1 1 0 0 0 1 1h1a1 1 0 0 0 1-1v-1.8a3 3 0 0 0 1-2.2V6c0-3.5-3.6-4-8-4s-8 .5-8 4v10Z"
           )/
       span Terminal norte
+
     a(class=terminalSur href="/terminal-sur-esteli")
       span
         svg(class="fill-current" viewBox="0 0 24 24" width="22" height="22")
@@ -39,6 +41,15 @@ nav(class="py-2 flex justify-between items-center")
             d="M18 11H6V6h12m-1.5 11a1.5 1.5 0 0 1-1.5-1.5 1.5 1.5 0 0 1 1.5-1.5 1.5 1.5 0 0 1 1.5 1.5 1.5 1.5 0 0 1-1.5 1.5m-9 0A1.5 1.5 0 0 1 6 15.5 1.5 1.5 0 0 1 7.5 14 1.5 1.5 0 0 1 9 15.5 1.5 1.5 0 0 1 7.5 17M4 16a3 3 0 0 0 1 2.2V20a1 1 0 0 0 1 1h1a1 1 0 0 0 1-1v-1h8v1a1 1 0 0 0 1 1h1a1 1 0 0 0 1-1v-1.8a3 3 0 0 0 1-2.2V6c0-3.5-3.6-4-8-4s-8 .5-8 4v10Z"
           )/
       span Terminal sur
+
+    a(class=anuncios href="/anuncios")
+      span
+        svg(class="fill-current" viewBox="0 0 24 24" width="22" height="22")
+          path(
+            d="M19 7a2 2 0 0 0-2 2v2c0 1.1.9 2 2 2h2v2h-4v2h4a2 2 0 0 0 2-2v-2a2 2 0 0 0-2-2h-2V9h4V7h-4M9 7v10h4a2 2 0 0 0 2-2V9a2 2 0 0 0-2-2H9m2 2h2v6h-2V9M3 7a2 2 0 0 0-2 2v8h2v-4h2v4h2V9a2 2 0 0 0-2-2H3m0 2h2v2H3V9Z"
+          )/
+      span Anuncios
+
     a(class=acerca href="/acerca-de-estelibuses")
       span
         svg(class="fill-current" viewBox="0 0 24 24" width="22" height="22")
