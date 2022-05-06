@@ -1,0 +1,170 @@
+extends ../../templates/template.pug
+
+block append variables
+  - const CURRENT_PAGE = "contacto"
+  - const URL = "https://estelibuses.web.app"
+  - const ASSETS_PATH = "../"
+  - const HAS_CRITICAL_CSS = false
+  - const APPLICATION_NAME = "Estelí Buses"
+  - const META_DESCRIPTION = "Contacta con Estelí Buses, la plataforma dónde conocerás todos los horarios de las terminales de la ciudad de Estelí."
+  - const META_ROBOTS = "index, follow"
+  - const LANGUAGE = "es"
+  - const CURRENT_URL = `${URL}/contacto`
+  - const SOCIAL_TITLE = "Contacto | Estelí Buses"
+  - const SOCIAL_DESCRIPTION = META_DESCRIPTION
+  - const SOCIAL_IMAGE = ""
+  - const SOCIAL_IMAGE_ALT = SOCIAL_TITLE
+  - const OPEN_GRAPH_SITE_NAME = ""
+  - const TWITTER_CARD = "summary_large_image"
+
+block append title
+  title= SOCIAL_TITLE
+
+block append preconnect
+
+block append async-scripts
+
+block append critical-css
+
+block append stylesheets
+  link(href=`${ASSETS_PATH}css/style.css` rel="stylesheet")/
+
+block append preload
+
+block append defer-scripts
+  script(
+    src=`${ASSETS_PATH}js/contact.js`
+    defer
+    fetchpriority="highest"
+    importance="highest"
+  )
+
+block append content
+  header
+    div(class="container mx-auto px-4")
+      include ../../components/navbar
+
+  section(class="container mx-auto px-4")
+    section(
+      class="flex flex-col justify-center items-center pt-18 pb-26 xs:pb-36 lg:pt-28 lg:pb-34 xl:pb-44 2xl:pb-54 text-center max-w-6xl mx-auto space-y-6"
+    )
+      h1(
+        class="text-4xl sm:text-5xl font-bold mb-8 max-w-screen-lg text-hex-3b0d15 dark:text-orange-50"
+      ) Contacto
+      p(class="text-base text-black-200 sm:text-lg dark:text-light-700") Envíame un mensaje a través del siguiente formulario.
+
+      form#form(
+        name="form"
+        autocomplete="off"
+        class="rounded space-y-5 shadow w-full p-8 lg:mx-auto lg:w-3/5 text-left bg-hex-FFFDF9 dark:bg-hex-362d25"
+      )
+        section(class="space-y-2")
+          label(
+            class="after:content-['*'] after:ml-0.5 after:text-orange-500 block"
+            for="name"
+          )
+            | Escribe tu nombre y apellido
+          input#name(
+            name="name"
+            type="text"
+            placeholder="Juan Peréz"
+            class="border border-orange-100 dark:border-orange-900 rounded outline-none w-full py-2 px-4 block caret-orange-500 dark:placeholder-orange-50 dark:bg-hex-2D231B focus:border-transparent focus:outline-none focus:ring-2 focus:ring-orange-500 dark:focus:ring-orange-400"
+            maxlength="50"
+            minlength="4"
+            pattern="[A-Za-z?ÁáÉéÍíÓóÚúÑñ\\s]+"
+            required
+          )/
+
+        section(class="space-y-2")
+          label(
+            class="after:content-['*'] after:ml-0.5 after:text-orange-500 block"
+            for="email"
+          )
+            | Escribe tu correo electrónico
+          input#email(
+            name="email"
+            type="email"
+            placeholder="ejemplo@correo.com"
+            class="border border-orange-100 dark:border-orange-900 rounded outline-none w-full py-2 px-4 block caret-orange-500 dark:placeholder-orange-50 dark:bg-hex-2D231B focus:border-transparent focus:outline-none focus:ring-2 focus:ring-orange-500 dark:focus:ring-orange-400"
+            maxlength="60"
+            minlength="4"
+            required
+          )/
+
+        section(class="space-y-2")
+          label(class="block" for="subject")
+            | Asunto
+          select#subject(
+            name="subject"
+            class="border border-orange-100 dark:border-orange-900 rounded outline-none bg-white dark:bg-hex-2D231B w-full py-2 px-4 block focus:border-transparent focus:outline-none focus:ring-2 focus:ring-orange-500 dark:focus:ring-orange-400"
+          )
+            option Selecciona una opción
+            optgroup(label="Planes publicitarios")
+              option(value="Plan patrocinador") Plan patrocinador
+              option(value="Plan básico") Plan básico
+              option(value="Plan intermedio") Plan intermedio
+              option(value="Plan avanzado") Plan avanzado
+            optgroup(label="Otras opciones")
+              option(value="Consulta") Consulta
+              option(value="Recomendación") Recomendación
+              option(value="Otro") Otro
+
+        section(class="space-y-2")
+          section(class="flex items-center justify-between")
+            label(
+              class="after:content-['*'] after:ml-0.5 after:text-orange-500 block"
+              for="message"
+            )
+              | Escribe tu mensaje
+            output#limit-message(class="text-xs text-gray-400 select-none") 850
+          textarea#message(
+            name="message"
+            placeholder!="¡Hola!, quiero hacer una consulta..."
+            class="border border-orange-100 dark:border-orange-900 rounded outline-none h-80 w-full py-2 px-4 resize-none block caret-orange-500 md:h-60 dark:bg-hex-2D231B dark:placeholder-orange-50 focus:border-transparent focus:outline-none focus:ring-2 focus:ring-orange-500 dark:focus:ring-orange-400"
+            maxlength="850"
+            minlength="20"
+            required
+          )
+
+        button#submit(
+          type="submit"
+          class="rounded flex font-semibold bg-orange-500 text-center text-white w-full py-2.5 px-5 transition-colors duration-300 items-center justify-center hover:bg-orange-600 focus:outline-none focus:ring-4 focus:ring-orange-400 focus:ring-opacity-75 disabled:bg-orange-600/50"
+        )
+          svg#spinner(
+            class="animate-spin hidden mr-3 text-white"
+            fill="none"
+            viewBox="0 0 24 24"
+            width="16"
+            height="16"
+          )
+            circle(
+              class="opacity-25"
+              cx="12"
+              cy="12"
+              r="10"
+              stroke="currentColor"
+              stroke-width="4"
+            )/
+            path(
+              class="opacity-75"
+              d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z"
+              fill="currentColor"
+            )/
+          span#submitText Enviar mensaje
+        p(class="text-xs text-gray-500 dark:text-gray-300") Tu correo electrónico será tratado únicamente por Estelí Buses, con la finalidad de enviar información. Al envíar el formulario aceptas la&nbsp;
+          a(
+            class="transition-colors text-orange-500 dark:text-orange-400 hover:text-orange-600 hover:underline dark:hover:text-orange-500"
+            href="/politica-de-privacidad"
+          ) política de privacidad
+          | .
+
+      p(class="text-base text-black-200 sm:text-lg dark:text-light-700") ¿Quiéres enviar un mensaje directamente?
+      p(class="text-base text-black-200 sm:text-lg dark:text-light-700") Escríbeme a través de la&nbsp;
+        a(
+          class="underline text-orange-500"
+          href="https://www.facebook.com/estelibuses"
+          target="_blank"
+        ) página de Facebook de Estelí Buses
+        | .
+
+  include ../../components/snackbar

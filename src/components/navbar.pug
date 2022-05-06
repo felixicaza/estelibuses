@@ -6,6 +6,7 @@ block currentPage
 - const terminalSur = `${ACTIVE === "terminal-sur" ? "text-yellow-500" : "any-hover:text-yellow-500 active:text-yellow-500 transition-colors"} space-x-1 inline-flex items-center justify-center py-2.5 px-6`
 - const anuncios = `${ACTIVE === "anuncios" ? "text-orange-500" : "any-hover:text-orange-500 active:text-orange-500 transition-colors"} space-x-1 inline-flex items-center justify-center py-2.5 px-6`
 - const acerca = `${ACTIVE === "acerca" ? "text-orange-500" : "any-hover:text-orange-500 active:text-orange-500 transition-colors"} space-x-1 inline-flex items-center justify-center py-2.5 px-6`
+- const contacto = `${ACTIVE === "contacto" ? "text-orange-500" : "any-hover:text-orange-500 active:text-orange-500 transition-colors"} space-x-1 inline-flex items-center justify-center py-2.5 px-6`
 
 nav(class="py-2 flex justify-between items-center")
   a(class="inline-block" href="/")
@@ -57,6 +58,14 @@ nav(class="py-2 flex justify-between items-center")
             d="M13 9h-2V7h2m0 10h-2v-6h2m-1-9A10 10 0 0 0 2 12a10 10 0 0 0 10 10 10 10 0 0 0 10-10A10 10 0 0 0 12 2Z"
           )/
       span Acerca
+
+    a(class=contacto href="/contacto")
+      span
+        svg(class="fill-current" viewBox="0 0 24 24" width="22" height="22")
+          path(
+            d="M20 20H7a2 2 0 0 1-2-2V9L2.2 5.5A1 1 0 0 1 2 5a1 1 0 0 1 1-1h17a2 2 0 0 1 2 2v12a2 2 0 0 1-2 2M8.5 7a.5.5 0 0 0-.5.5v1a.5.5 0 0 0 .5.5h10a.5.5 0 0 0 .5-.5v-1a.5.5 0 0 0-.5-.5h-10m0 4a.5.5 0 0 0-.5.5v1a.5.5 0 0 0 .5.5h10a.5.5 0 0 0 .5-.5v-1a.5.5 0 0 0-.5-.5h-10m0 4a.5.5 0 0 0-.5.5v1a.5.5 0 0 0 .5.5h5a.5.5 0 0 0 .5-.5v-1a.5.5 0 0 0-.5-.5h-5Z"
+          )/
+      span Contacto
 
   section
     button#switch-scheme(
