@@ -24,7 +24,7 @@
     "format:pug": "prettier --write \"./**/*.pug\" --plugin @prettier/plugin-pug",
     "format:xml": "prettier --write \"./**/*.xml\" --plugin @prettier/plugin-xml",
     "functions:deploy": "pnpm -r run deploy",
-    "functions:emulators:start": "pnpm -r run emulators:start",
+    "functions:serve": "pnpm -r run serve",
     "functions:logs": "pnpm -r run logs",
     "functions:shell": "pnpm -r run shell",
     "functions:start": "pnpm -r run start",
