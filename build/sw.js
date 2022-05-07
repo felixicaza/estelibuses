@@ -5,9 +5,9 @@
 importScripts('/js/sw-app-shell.js')
 importScripts('/js/sw-app-shell-media.js')
 
-const CACHE_CORE = 'core-v2.47'
-const CACHE_MEDIA = 'media-v2.47'
-const CACHE_DYNAMIC = 'dynamic-v2.47'
+const CACHE_CORE = 'core-v2.48'
+const CACHE_MEDIA = 'media-v2.48'
+const CACHE_DYNAMIC = 'dynamic-v2.48'
 
 self.addEventListener('install', e => {
   const setCacheCore = caches
