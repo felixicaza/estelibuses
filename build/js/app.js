@@ -225,6 +225,21 @@ if (document.getElementById('whatsapp-city')) {
  */
 window.addEventListener('load', () => {
   quicklink.listen()
+
+  /**
+   * Track if esteli buses is open from app
+   */
+
+  if (window.location.hostname === 'estelibuses.web.app') {
+    if (window.location.search === '?utm_source=web_app') {
+      const appTrackInstall = initializeApp(firebaseConfig)
+      const analytics = getAnalytics(appTrackInstall)
+
+      logEvent(analytics, 'estelibuses_app_open', {
+        name: 'Esteli Buses abierto desde la app'
+      })
+    }
+  }
 })
 
 /**
