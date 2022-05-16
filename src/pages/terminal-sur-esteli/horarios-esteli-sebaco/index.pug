@@ -74,6 +74,22 @@ block append content
 
     include matagalpa
 
+    script.
+      const cityOneBuses = document.querySelectorAll(".city-one");
+      const cityTwoBuses = document.querySelectorAll(".city-two");
+
+      if (localStorage.getItem("managua_matagalpa_stops") === "managua") {
+        document.getElementById("city-one").setAttribute("checked", "true");
+        cityOneBuses.forEach(cityOne => cityOne.classList.remove("hidden"));
+        cityTwoBuses.forEach(cityTwo => cityTwo.classList.add("hidden"));
+      }
+
+      if (localStorage.getItem("managua_matagalpa_stops") === "matagalpa") {
+        document.getElementById("city-two").setAttribute("checked", "true");
+        cityTwoBuses.forEach(cityTwo => cityTwo.classList.remove("hidden"));
+        cityOneBuses.forEach(cityOne => cityOne.classList.add("hidden"));
+      }
+
   article(class="py-12 sm:py-16 md:py-20 xl:py-28 bg-hex-FFFDF9 dark:bg-hex-2D231B")
     div(class="container mx-auto px-4 space-y-12 lg:space-y-16")
       h3(

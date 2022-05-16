@@ -33,8 +33,14 @@ const cityTwoBuses = document.querySelectorAll('.city-two')
 
 formFilter.addEventListener('change', e => {
   if (e.target.id === 'city-one' && radioCityOne.checked) {
+    localStorage.setItem('managua_matagalpa_stops', 'managua')
+
     cityOneBuses.forEach(cityOne => cityOne.classList.remove('hidden'))
     cityTwoBuses.forEach(cityTwo => cityTwo.classList.add('hidden'))
+
+    /**
+     * Track select city one
+     */
 
     if (window.location.hostname === 'estelibuses.web.app') {
       const appTrackChangeTransportCityOne = initializeApp(firebaseConfig)
@@ -47,8 +53,14 @@ formFilter.addEventListener('change', e => {
   }
 
   if (e.target.id === 'city-two' && radioCityTwo.checked) {
+    localStorage.setItem('managua_matagalpa_stops', 'matagalpa')
+
     cityTwoBuses.forEach(cityTwo => cityTwo.classList.remove('hidden'))
     cityOneBuses.forEach(cityOne => cityOne.classList.add('hidden'))
+
+    /**
+     * Track select city two
+     */
 
     if (window.location.hostname === 'estelibuses.web.app') {
       const appTrackChangeTransportCityTwo = initializeApp(firebaseConfig)
