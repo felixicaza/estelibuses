@@ -10,6 +10,25 @@ import { initializeApp } from './lib/firebase-app.js'
 import { getAnalytics, logEvent } from './lib/firebase-analytics.js'
 
 /**
+ * Firebase Configuration
+ */
+
+const firebaseConfig = {
+  apiKey: 'AIzaSyAqPF5z2zeJCAXKmnAV6gfapspOK4joCEs',
+  authDomain: 'buses-esteli-d2d5e.firebaseapp.com',
+  projectId: 'buses-esteli-d2d5e',
+  storageBucket: 'buses-esteli-d2d5e.appspot.com',
+  messagingSenderId: '47347043568',
+  appId: '1:47347043568:web:e1b9a83b88c35fe1a0c635',
+  measurementId: 'G-4QFJH1D53Q'
+}
+
+if (window.location.hostname === 'estelibuses.web.app') {
+  const app = initializeApp(firebaseConfig)
+  getAnalytics(app)
+}
+
+/**
  * Darkmode
  */
 
@@ -46,8 +65,34 @@ switchSchemeBtn.addEventListener('click', () => {
 
   if (localStorage.getItem('darkmode') === 'true') {
     switchSchemeBtn.setAttribute('title', lightModeText)
+
+    /**
+     * Track if darmode is disabled
+     */
+
+    if (window.location.hostname === 'estelibuses.web.app') {
+      const appTrackInstall = initializeApp(firebaseConfig)
+      const analytics = getAnalytics(appTrackInstall)
+
+      logEvent(analytics, 'darkmode_disabled', {
+        name: 'Modo oscuro desactivado'
+      })
+    }
   } else {
     switchSchemeBtn.setAttribute('title', darkModeText)
+
+    /**
+     * Track if darkmode is enabled
+     */
+
+    if (window.location.hostname === 'estelibuses.web.app') {
+      const appTrackInstall = initializeApp(firebaseConfig)
+      const analytics = getAnalytics(appTrackInstall)
+
+      logEvent(analytics, 'darkmode_enabled', {
+        name: 'Modo oscuro activado'
+      })
+    }
   }
 })
 
@@ -60,16 +105,34 @@ window.addEventListener('keydown', e => {
 
     if (localStorage.getItem('darkmode') === 'true') {
       switchSchemeBtn.setAttribute('title', lightModeText)
-    }
 
-    if (localStorage.getItem('darkmode') !== 'true') {
-      switchSchemeBtn.setAttribute('title', darkModeText)
-    }
+      /**
+       * Track if darmode is disabled with keyboard
+       */
 
-    if (localStorage.getItem('darkmode') === 'true') {
-      switchSchemeBtn.setAttribute('title', lightModeText)
+      if (window.location.hostname === 'estelibuses.web.app') {
+        const appTrackInstall = initializeApp(firebaseConfig)
+        const analytics = getAnalytics(appTrackInstall)
+
+        logEvent(analytics, 'darkmode_disabled_keyboard', {
+          name: 'Modo oscuro desactivado con el teclado'
+        })
+      }
     } else {
       switchSchemeBtn.setAttribute('title', darkModeText)
+
+      /**
+       * Track if darkmode is enabled
+       */
+
+      if (window.location.hostname === 'estelibuses.web.app') {
+        const appTrackInstall = initializeApp(firebaseConfig)
+        const analytics = getAnalytics(appTrackInstall)
+
+        logEvent(analytics, 'darkmode_enabled_keyboard', {
+          name: 'Modo oscuro activado con el teclado'
+        })
+      }
     }
   }
 })
@@ -163,25 +226,6 @@ if (document.getElementById('whatsapp-city')) {
 window.addEventListener('load', () => {
   quicklink.listen()
 })
-
-/**
- * Firebase Configuration
- */
-
-const firebaseConfig = {
-  apiKey: 'AIzaSyAqPF5z2zeJCAXKmnAV6gfapspOK4joCEs',
-  authDomain: 'buses-esteli-d2d5e.firebaseapp.com',
-  projectId: 'buses-esteli-d2d5e',
-  storageBucket: 'buses-esteli-d2d5e.appspot.com',
-  messagingSenderId: '47347043568',
-  appId: '1:47347043568:web:e1b9a83b88c35fe1a0c635',
-  measurementId: 'G-4QFJH1D53Q'
-}
-
-if (window.location.hostname === 'estelibuses.web.app') {
-  const app = initializeApp(firebaseConfig)
-  getAnalytics(app)
-}
 
 /**
  * Reload Button
