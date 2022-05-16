@@ -286,6 +286,23 @@ function showUpdateFounded(registration) {
  */
 
 window.addEventListener('load', async () => {
+  /**
+   * Track serviceWorker unsupported
+   */
+
+  if (window.location.hostname === 'estelibuses.web.app') {
+    const swSupport = 'serviceWorker' in navigator
+
+    if (!swSupport) {
+      const appTrackUpdate = initializeApp(firebaseConfig)
+      const analytics = getAnalytics(appTrackUpdate)
+
+      logEvent(analytics, 'service_worker_unsupported', {
+        name: 'Service Worker no soportado'
+      })
+    }
+  }
+
   const registration = await navigator.serviceWorker.register('/sw.js')
 
   if (registration.waiting) {
