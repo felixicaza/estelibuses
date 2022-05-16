@@ -40,6 +40,8 @@ const routedTitles = document.querySelectorAll('.ruteado > .titles')
 
 formFilter.addEventListener('change', e => {
   if (e.target.id === 'all' && radioAll.checked) {
+    localStorage.setItem('managua_transport_type', 'all')
+
     // TODO: Borrar cuándo sea necesario
     // Actualizar el número del título de todos los buses cuándo sean visibles
     transportTitles.forEach(
@@ -48,6 +50,10 @@ formFilter.addEventListener('change', e => {
 
     expressBuses.forEach(express => express.classList.remove('hidden'))
     routedBuses.forEach(routed => routed.classList.remove('hidden'))
+
+    /**
+     * Track select all
+     */
 
     if (window.location.hostname === 'estelibuses.web.app') {
       const appTrackChangeTransportAll = initializeApp(firebaseConfig)
@@ -60,6 +66,8 @@ formFilter.addEventListener('change', e => {
   }
 
   if (e.target.id === 'express' && radioExpress.checked) {
+    localStorage.setItem('managua_transport_type', 'express')
+
     // TODO: Borrar cuándo sea necesario
     // Actualizar el número del título de los buses expresos cuándo éstos sean visibles
     for (let i = 0; i < expressTitles.length; i++) {
@@ -68,6 +76,10 @@ formFilter.addEventListener('change', e => {
 
     expressBuses.forEach(express => express.classList.remove('hidden'))
     routedBuses.forEach(routed => routed.classList.add('hidden'))
+
+    /**
+     * Track select expresos
+     */
 
     if (window.location.hostname === 'estelibuses.web.app') {
       const appTrackChangeTransportExpress = initializeApp(firebaseConfig)
@@ -80,6 +92,8 @@ formFilter.addEventListener('change', e => {
   }
 
   if (e.target.id === 'routed' && radioRouted.checked) {
+    localStorage.setItem('managua_transport_type', 'routed')
+
     // TODO: Borrar cuándo sea necesario
     // Actualizar el número del título de los buses ruteados cuándo éstos sean visibles
     for (let i = 0; i < routedTitles.length; i++) {
@@ -88,6 +102,10 @@ formFilter.addEventListener('change', e => {
 
     routedBuses.forEach(routed => routed.classList.remove('hidden'))
     expressBuses.forEach(express => express.classList.add('hidden'))
+
+    /**
+     * Track select ruteados
+     */
 
     if (window.location.hostname === 'estelibuses.web.app') {
       const appTrackChangeTransportRouted = initializeApp(firebaseConfig)
