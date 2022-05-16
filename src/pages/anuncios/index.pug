@@ -71,11 +71,20 @@ block append content
           strong Básico:&nbsp;
           ul(class="list-disc ml-8 space-y-2")
             li Un anuncio banner del negocio, que aparecerá en la vista de&nbsp;
-              a(class="underline text-orange-500" href="/") Inicio
+              a(
+                class="transition-colors text-orange-500 dark:text-orange-400 hover:text-orange-600 hover:underline dark:hover:text-orange-500"
+                href="/"
+              ) Inicio
               | ,&nbsp;
-              a(class="underline text-orange-500" href="/terminal-norte-esteli") terminal norte
+              a(
+                class="transition-colors text-orange-500 dark:text-orange-400 hover:text-orange-600 hover:underline dark:hover:text-orange-500"
+                href="/terminal-norte-esteli"
+              ) terminal norte
               | &nbsp;y&nbsp;
-              a(class="underline text-orange-500" href="/terminal-sur-esteli") terminal sur
+              a(
+                class="transition-colors text-orange-500 dark:text-orange-400 hover:text-orange-600 hover:underline dark:hover:text-orange-500"
+                href="/terminal-sur-esteli"
+              ) terminal sur
               | , ya que son las más visitadas por los usuarios.
             li Máximo 1 actualización del diseño del banner.
         li
@@ -87,8 +96,12 @@ block append content
           strong Avanzado:&nbsp;
           span Una vista dedicada del negocio con toda la información necesaria (imágenes, descripciones, mapa de ubicación, etc.) para hacerse destacar ante los potenciales clientes.
       p(class="text-base text-black-200 sm:text-lg dark:text-light-700")
-        a(class="underline text-orange-500" href="/contacto") Contáctame
-        | &nbsp;y cotizá tu plan preferido.
+        | ¿Quiéres cotizar los planes?
+      section
+        a(
+          class="rounded font-semibold py-2.5 px-5 transition-colors any-hover:bg-orange-500 active:outline-none active:ring-4 active:ring-orange-400 active:ring-opacity-75 bg-orange-400 text-white shadow-lg shadow-orange-500/30 any-hover:shadow-orange-600/30 active:shadow-orange-600/30"
+          href="/contacto"
+        ) Contáctame
 
       include ../../components/adsense
       include ../../components/adsense
