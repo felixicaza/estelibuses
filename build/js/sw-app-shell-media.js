@@ -17,6 +17,9 @@ const IMAGES_APP_SHELL = [
   '/img/estelibuses-horarios-de-esteli.avif',
   '/img/estelibuses-horarios-de-esteli.webp',
 
+  '/img/soporte-offline-estelibuses.avif',
+  '/img/soporte-offline-estelibuses.webp',
+
   '/img/404.avif',
   '/img/404.webp',
 
