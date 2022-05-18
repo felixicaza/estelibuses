@@ -35,6 +35,7 @@ block append defer-scripts
   script(
     type="module"
     src=`${ASSETS_PATH}js/header-search.js`
+    fetchpriority="highest"
     importance="highest"
   )
 
@@ -51,5 +52,7 @@ block append content
     include ../content/terminal-norte
 
     include ../content/terminal-sur
+
+    include ../content/offline
 
     include ../content/faq
