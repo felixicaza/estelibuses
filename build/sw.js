@@ -5,9 +5,15 @@
 importScripts('/js/sw-app-shell.js')
 importScripts('/js/sw-app-shell-media.js')
 
-const CACHE_CORE = 'core-v2.48'
-const CACHE_MEDIA = 'media-v2.48'
-const CACHE_DYNAMIC = 'dynamic-v2.48'
+importScripts(
+  'https://storage.googleapis.com/workbox-cdn/releases/6.5.3/workbox-sw.js'
+)
+workbox.setConfig({ debug: false })
+workbox.googleAnalytics.initialize()
+
+const CACHE_CORE = 'core-v2.49'
+const CACHE_MEDIA = 'media-v2.49'
+const CACHE_DYNAMIC = 'dynamic-v2.49'
 
 self.addEventListener('install', e => {
   const setCacheCore = caches
