@@ -24,12 +24,11 @@ const APP_SHELL = [
   '/manifest/icon-128x128.png',
   '/manifest/icon-144x144.png',
   '/manifest/icon-192x192.png',
-  '/manifest/screenshot-estelibuses.jpg',
-  '/manifest/screenshot-estelibuses-terminal-norte.jpg',
-  '/manifest/screenshot-estelibuses-terminal-sur.jpg',
 
   '/',
   '/index.html',
+  '/?utm_source=web_app',
+  '/index.html?utm_source=web_app',
 
   '/offline.html',
 
