@@ -31,9 +31,14 @@ const radioCityTwo = document.getElementById('city-two')
 const cityOneBuses = document.querySelectorAll('.city-one')
 const cityTwoBuses = document.querySelectorAll('.city-two')
 
+const setItemName = window.location.pathname
+  .replace('/', '')
+  .replace(/\//g, '_')
+  .replace(/-/g, '_')
+
 formFilter.addEventListener('change', e => {
   if (e.target.id === 'city-one' && radioCityOne.checked) {
-    localStorage.setItem('managua_matagalpa_stops', 'managua')
+    localStorage.setItem(setItemName, 'managua')
 
     cityOneBuses.forEach(cityOne => cityOne.classList.remove('hidden'))
     cityTwoBuses.forEach(cityTwo => cityTwo.classList.add('hidden'))
@@ -53,7 +58,7 @@ formFilter.addEventListener('change', e => {
   }
 
   if (e.target.id === 'city-two' && radioCityTwo.checked) {
-    localStorage.setItem('managua_matagalpa_stops', 'matagalpa')
+    localStorage.setItem(setItemName, 'matagalpa')
 
     cityTwoBuses.forEach(cityTwo => cityTwo.classList.remove('hidden'))
     cityOneBuses.forEach(cityOne => cityOne.classList.add('hidden'))
