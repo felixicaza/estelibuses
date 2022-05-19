@@ -38,46 +38,81 @@ block append content
     div(class="container mx-auto px-4")
       include ../components/navbar
 
-  section(
-    class="flex flex-col justify-center items-center pt-18 pb-26 xs:pb-36 lg:pt-28 lg:pb-34 xl:pb-44 2xl:pb-54 text-center max-w-6xl mx-auto space-y-6"
-  )
-    h1(class="text-4xl sm:text-5xl font-bold mb-8 max-w-screen-lg z-2") Ups, la página que estás buscando no existe.
-    p(class="text-base text-black-200 sm:text-lg dark:text-light-700") Conoce los horarios de las terminales de Estelí, y planea con exactitud la hora de tu próximo viaje.
-    ul(class="space-y-4")
-      li
-        a(
-          class="text-orange-600 underline dark:text-orange-300"
-          href="/terminal-norte-esteli"
-        ) Horarios de la terminal norte
-      li
-        a(
-          class="text-orange-600 underline dark:text-orange-300"
-          href="/terminal-sur-esteli"
-        ) Horarios de la terminal sur
-    section
-      style.
-        .not-found {
-          width: 380px;
-          height: 255px;
-        }
+  section(class="pt-18 pb-26 xs:pb-36 lg:pt-28 lg:pb-34 xl:pb-44 2xl:pb-54 text-center")
+    div(class="container mx-auto px-4 space-y-6")
+      h1(class="text-4xl sm:text-5xl font-bold mb-8 max-w-screen-lg mx-auto") Ups, la página que estás buscando no existe.
+      p(class="text-base text-black-200 sm:text-lg dark:text-light-700") Conoce los horarios de las terminales de Estelí, y planea con exactitud la hora de tu próximo viaje.
+      article(
+        class="flex flex-col md:flex-row items-center justify-center gap-16 text-center"
+      )
+        section
+          div(class="mb-4")
+            div(class="rounded-full bg-emerald-100 p-3 w-max h-max mx-auto")
+              svg(
+                class="fill-current text-emerald-400"
+                viewBox="0 0 24 24"
+                width="40"
+                height="40"
+              )
+                path(
+                  d="M18 11H6V6h12m-1.5 11a1.5 1.5 0 0 1-1.5-1.5 1.5 1.5 0 0 1 1.5-1.5 1.5 1.5 0 0 1 1.5 1.5 1.5 1.5 0 0 1-1.5 1.5m-9 0A1.5 1.5 0 0 1 6 15.5 1.5 1.5 0 0 1 7.5 14 1.5 1.5 0 0 1 9 15.5 1.5 1.5 0 0 1 7.5 17M4 16a3 3 0 0 0 1 2.2V20a1 1 0 0 0 1 1h1a1 1 0 0 0 1-1v-1h8v1a1 1 0 0 0 1 1h1a1 1 0 0 0 1-1v-1.8a3 3 0 0 0 1-2.2V6c0-3.5-3.6-4-8-4s-8 .5-8 4v10Z"
+                )/
+          h3(class="mb-2 text-2xl font-bold text-emerald-500") Terminal norte
+          p(class="max-w-sm mx-auto px-4") La terminal norte cuenta con 22 destinos principales.
+          a(
+            class="mt-4 mt-4 rounded font-semibold space-x-1 py-2.5 px-5 transition-colors inline-flex items-center text-emerald-500 any-hover:text-emerald-700 active:text-emerald-700 any-hover:bg-emerald-100 active:bg-emerald-100 active:outline-none"
+            href="/terminal-norte-esteli"
+          )
+            span Conoce los destinos
+            span
+              svg(class="fill-current mt-0.65" width="26" height="26")
+                path(d="m8.6 16.6 4.6-4.6-4.6-4.6L10 6l6 6-6 6-1.4-1.4Z")/
 
-        @media (min-width: 992px) {
+        section
+          div(class="mb-4")
+            div(class="rounded-full bg-yellow-100 p-3 p-3 w-max h-max mx-auto")
+              svg(
+                class="fill-current text-yellow-400"
+                viewBox="0 0 24 24"
+                width="40"
+                height="40"
+              )
+                path(
+                  d="M18 11H6V6h12m-1.5 11a1.5 1.5 0 0 1-1.5-1.5 1.5 1.5 0 0 1 1.5-1.5 1.5 1.5 0 0 1 1.5 1.5 1.5 1.5 0 0 1-1.5 1.5m-9 0A1.5 1.5 0 0 1 6 15.5 1.5 1.5 0 0 1 7.5 14 1.5 1.5 0 0 1 9 15.5 1.5 1.5 0 0 1 7.5 17M4 16a3 3 0 0 0 1 2.2V20a1 1 0 0 0 1 1h1a1 1 0 0 0 1-1v-1h8v1a1 1 0 0 0 1 1h1a1 1 0 0 0 1-1v-1.8a3 3 0 0 0 1-2.2V6c0-3.5-3.6-4-8-4s-8 .5-8 4v10Z"
+                )/
+          h3(class="mb-2 text-2xl font-bold text-yellow-500") Terminal sur
+          p(class="max-w-sm mx-auto px-4") La terminal sur cuenta con 10 destinos principales.
+          a(
+            class="mt-4 rounded font-semibold space-x-1 py-2.5 px-5 transition-colors inline-flex items-center text-yellow-500 any-hover:text-yellow-700 active:text-yellow-700 any-hover:bg-yellow-100 active:bg-yellow-100 active:outline-none"
+            href="/terminal-sur-esteli"
+          )
+            span Conoce los destinos
+            span
+              svg(class="fill-current mt-0.65" width="26" height="26")
+                path(d="m8.6 16.6 4.6-4.6-4.6-4.6L10 6l6 6-6 6-1.4-1.4Z")/
+      section
+        style.
           .not-found {
-            aspect-ratio: 740/496;
-            width: 740px;
-            height: 496px;
+            width: 380px;
+            height: 255px;
           }
-        }
-      picture
-        source(type="image/avif" data-srcset="/img/404.avif")/
-        source(type="image/webp" data-srcset="/img/404.webp")/
-        source(type="image/jpeg" data-srcset="/img/404.jpg")/
-        img(
-          alt="Imágen 404"
-          class="h-auto object-cover object-center w-full lazyload not-found rounded"
-          decoding="async"
-          importance="low"
-          loading="lazy"
-          srcset="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAoAAAAHCAYAAAAxrNxjAAAAAklEQVR4AewaftIAAADMSURBVDXBPU4CURSA0e/9+ITR0UiisbTTxlha2LhS98AmKI3uAAujJEgyEHnDvLn3OiR4jrMBB2aKSQdmuJBwPvAvcqAlI3kDweOcR9uGkE4IxzV7noFJQdoNrukwKchuC2aYFLRk9iID0wIO7CKxeJtytr6mvcpM7p5R6fBHY7xpj3SZz9kL2+Wc9WrB9+8rsmowFUx6tGSiqcJOqep7vt6n9D8fmDeWec7p+pFqcoMLiehChPGI84cnUnOLmuJ9REom1Zf0XSaMKv4AILZvQxJLKhQAAAAASUVORK5CYII="
-          data-srcset="/img/404.jpg"
-        )/
+
+          @media (min-width: 992px) {
+            .not-found {
+              width: 740px;
+              height: 496px;
+            }
+          }
+        picture
+          source(type="image/avif" data-srcset="/img/404.avif")/
+          source(type="image/webp" data-srcset="/img/404.webp")/
+          source(type="image/jpeg" data-srcset="/img/404.jpg")/
+          img(
+            alt="Imágen 404"
+            class="object-cover object-center rounded mx-auto filter saturate-150 lazyload not-found"
+            decoding="async"
+            importance="low"
+            loading="lazy"
+            srcset="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAoAAAAHCAYAAAAxrNxjAAAAAklEQVR4AewaftIAAADMSURBVDXBPU4CURSA0e/9+ITR0UiisbTTxlha2LhS98AmKI3uAAujJEgyEHnDvLn3OiR4jrMBB2aKSQdmuJBwPvAvcqAlI3kDweOcR9uGkE4IxzV7noFJQdoNrukwKchuC2aYFLRk9iID0wIO7CKxeJtytr6mvcpM7p5R6fBHY7xpj3SZz9kL2+Wc9WrB9+8rsmowFUx6tGSiqcJOqep7vt6n9D8fmDeWec7p+pFqcoMLiehChPGI84cnUnOLmuJ9REom1Zf0XSaMKv4AILZvQxJLKhQAAAAASUVORK5CYII="
+            data-srcset="/img/404.jpg"
+          )/
