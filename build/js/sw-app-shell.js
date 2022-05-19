@@ -1,6 +1,33 @@
 /* eslint-disable no-unused-vars */
 
 const APP_SHELL = [
+  '/manifest.json',
+
+  '/css/lib/windi.css',
+  '/css/style.css',
+
+  '/js/app.js',
+  '/js/filter-others.js',
+  '/js/filter.js',
+  '/js/polyfill-lazyload.js',
+  '/js/search.js',
+  '/js/header-search.js',
+
+  '/js/lib/quicklink.umd.js',
+  '/js/lib/firebase-app.js',
+  '/js/lib/firebase-analytics.js',
+
+  '/favicons/favicon.ico',
+  '/favicons/favicon-16x16.png',
+  '/favicons/favicon-32x32.png',
+
+  '/manifest/icon-128x128.png',
+  '/manifest/icon-144x144.png',
+  '/manifest/icon-192x192.png',
+  '/manifest/screenshot-estelibuses.jpg',
+  '/manifest/screenshot-estelibuses-terminal-norte.jpg',
+  '/manifest/screenshot-estelibuses-terminal-sur.jpg',
+
   '/',
   '/index.html',
 
@@ -160,15 +187,5 @@ const APP_SHELL = [
 
   '/terminal-sur-esteli/horarios-esteli-sebaco',
   '/terminal-sur-esteli/horarios-esteli-sebaco/',
-  '/terminal-sur-esteli/horarios-esteli-sebaco/index.html',
-
-  '/css/lib/windi.css',
-  '/css/style.css',
-  '/js/app.js',
-  '/js/filter-others.js',
-  '/js/filter.js',
-  '/js/polyfill-lazyload.js',
-  '/js/search.js',
-  '/js/header-search.js',
-  '/js/lib/quicklink.umd.js'
+  '/terminal-sur-esteli/horarios-esteli-sebaco/index.html'
 ]
