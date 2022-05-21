@@ -5,6 +5,8 @@ block variables
 block append currentPage
   - const PAGE = CURRENT_PAGE
 
+- const bodyId = `${PAGE}-pages`
+
 - let themeColor = "#fb923c"
 
 - if (PAGE === 'terminal-norte') {
@@ -247,6 +249,7 @@ html(class="scroll-smooth" dir="ltr" lang=`${LANG}` prefix="og: https://ogp.me/n
 
   //- prettier-ignore
   body(
+    id=bodyId
     class='bg-white text-cool-gray-700 dark:bg-hex-292018 dark:text-white transition-colors duration-150'
   )
     block content

@@ -240,3 +240,63 @@ details[open] summary {
 .adsbygoogle {
   text-align: center !important;
 }
+
+/* Animations */
+
+body {
+  animation: page 700ms ease;
+}
+
+@keyframes page {
+  from {
+    transform: translateY(6%);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+body#terminal-sur-pages {
+  animation: surPages 700ms ease;
+}
+
+@keyframes surPages {
+  from {
+    transform: translateX(-6%);
+    opacity: 0;
+  }
+  to {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+body#terminal-norte-pages {
+  animation: nortePages 700ms ease;
+}
+
+@keyframes nortePages {
+  from {
+    transform: translateX(6%);
+    opacity: 0;
+  }
+  to {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+#navbar-mobile {
+  animation: tabbar 300ms ease;
+}
+
+@keyframes tabbar {
+  from {
+    transform: translateY(100%);
+  }
+  to {
+    transform: translateY(0);
+  }
+}
