@@ -2,38 +2,80 @@ block currentPage
 
 - const ACTIVE_MOBILE = PAGE
 
-- const inicioMobile = `${ACTIVE_MOBILE === "inicio" ? "text-white" : "active:text-white any-hover:text-white text-orange-900 transition-colors"} flex flex-col items-center p-2`
-- const terminalNorteMobile = `${ACTIVE_MOBILE === "terminal-norte" ? "text-white" : "active:text-white any-hover:text-white text-orange-900 transition-colors"} flex flex-col items-center p-2`
-- const terminalSurMobile = `${ACTIVE_MOBILE === "terminal-sur" ? "text-white" : "active:text-white any-hover:text-white text-orange-900 transition-colors"} flex flex-col items-center p-2`
-- const anunciosMobile = `${ACTIVE_MOBILE === "anuncios" ? "text-white" : "active:text-white any-hover:text-white text-orange-900 transition-colors"} flex flex-col items-center p-2`
+- const currentPageMain = "invisible pointer-events-none"
+- const notCurrentPageMain = "active:text-white any-hover:text-white text-orange-700 dark:text-hex-b15300 dark:any-hover:text-hex-b15300 dark:active:text-hex-b15300 transition-colors flex flex-col items-center p-2 transition-colors duration-150"
 
-nav#navbar-mobile(
-  class="sticky z-10 bottom-0 w-full bg-orange-400 grid grid-cols-4 md:gap-12 sm:gap-6 text-center items-center xl:hidden"
-)
-  a(class=inicioMobile href="/")
-    svg(class="fill-current w-6 h-6 sm:w-9 sm:h-9" viewBox="0 0 24 24")
-      path(d="M10 20v-6h4v6h5v-8h3L12 3 2 12h3v8h5Z")/
-    span(class="text-xs font-bold sm:text-base") Inicio
+- const inicioMobileMain = `${ACTIVE_MOBILE === "inicio" ? currentPageMain : notCurrentPageMain}`
+- const terminalNorteMobileMain = `${ACTIVE_MOBILE === "terminal-norte" ? currentPageMain : notCurrentPageMain}`
+- const terminalSurMobileMain = `${ACTIVE_MOBILE === "terminal-sur" ? currentPageMain : notCurrentPageMain}`
+- const anunciosMobileMain = `${ACTIVE_MOBILE === "anuncios" ? currentPageMain : notCurrentPageMain}`
 
-  a(class=terminalNorteMobile href="/terminal-norte-esteli")
-    svg(class="fill-current w-6 h-6 sm:w-9 sm:h-9" viewBox="0 0 24 24")
-      path(
-        d="M18 11H6V6h12m-1.5 11a1.5 1.5 0 0 1-1.5-1.5 1.5 1.5 0 0 1 1.5-1.5 1.5 1.5 0 0 1 1.5 1.5 1.5 1.5 0 0 1-1.5 1.5m-9 0A1.5 1.5 0 0 1 6 15.5 1.5 1.5 0 0 1 7.5 14 1.5 1.5 0 0 1 9 15.5 1.5 1.5 0 0 1 7.5 17M4 16a3 3 0 0 0 1 2.2V20a1 1 0 0 0 1 1h1a1 1 0 0 0 1-1v-1h8v1a1 1 0 0 0 1 1h1a1 1 0 0 0 1-1v-1.8a3 3 0 0 0 1-2.2V6c0-3.5-3.6-4-8-4s-8 .5-8 4v10Z"
-      )/
-    span(class="text-xs font-bold sm:text-base whitespace-nowrap xs:hidden") Cotrán norte
-    span(class="text-xs font-bold sm:text-base whitespace-nowrap hidden xs:inline") Terminal norte
+- const currentPage = "text-orange-900 dark:text-orange-600 bg-hex-f58021 dark:bg-hex-26190b mx-auto rounded-full w-18 sm:w-25 h-18 sm:h-25 shadow-md shadow-orange-900/20 flex flex-col items-center justify-center p-2 transform -translate-y-1 scale-90 transition-colors duration-150"
 
-  a(class=terminalSurMobile href="/terminal-sur-esteli")
-    svg(class="fill-current w-6 h-6 sm:w-9 sm:h-9" viewBox="0 0 24 24")
-      path(
-        d="M18 11H6V6h12m-1.5 11a1.5 1.5 0 0 1-1.5-1.5 1.5 1.5 0 0 1 1.5-1.5 1.5 1.5 0 0 1 1.5 1.5 1.5 1.5 0 0 1-1.5 1.5m-9 0A1.5 1.5 0 0 1 6 15.5 1.5 1.5 0 0 1 7.5 14 1.5 1.5 0 0 1 9 15.5 1.5 1.5 0 0 1 7.5 17M4 16a3 3 0 0 0 1 2.2V20a1 1 0 0 0 1 1h1a1 1 0 0 0 1-1v-1h8v1a1 1 0 0 0 1 1h1a1 1 0 0 0 1-1v-1.8a3 3 0 0 0 1-2.2V6c0-3.5-3.6-4-8-4s-8 .5-8 4v10Z"
-      )/
-    span(class="text-xs font-bold sm:text-base whitespace-nowrap xs:hidden") Cotrán sur
-    span(class="text-xs font-bold sm:text-base whitespace-nowrap hidden xs:inline") Terminal sur
+- const inicioMobile = `${ACTIVE_MOBILE === "inicio" ? currentPage : "invisible"}`
+- const terminalNorteMobile = `${ACTIVE_MOBILE === "terminal-norte" ? currentPage : "invisible"}`
+- const terminalSurMobile = `${ACTIVE_MOBILE === "terminal-sur" ? currentPage : "invisible"}`
+- const anunciosMobile = `${ACTIVE_MOBILE === "anuncios" ? currentPage : "invisible"}`
 
-  a(class=anunciosMobile href="/anuncios")
-    svg(class="fill-current w-6 h-6 sm:w-9 sm:h-9" viewBox="0 0 24 24")
-      path(
-        d="M19 7a2 2 0 0 0-2 2v2c0 1.1.9 2 2 2h2v2h-4v2h4a2 2 0 0 0 2-2v-2a2 2 0 0 0-2-2h-2V9h4V7h-4M9 7v10h4a2 2 0 0 0 2-2V9a2 2 0 0 0-2-2H9m2 2h2v6h-2V9M3 7a2 2 0 0 0-2 2v8h2v-4h2v4h2V9a2 2 0 0 0-2-2H3m0 2h2v2H3V9Z"
-      )/
-    span(class="text-xs font-bold sm:text-base") Anuncios
+section(class="sticky z-10 -bottom-px xl:hidden")
+  nav#navbar-mobile(
+    class="bg-orange-400 dark:bg-hex-180f06 grid grid-cols-4 md:gap-12 sm:gap-6 items-center justify-center"
+  )
+    a(class=inicioMobileMain href="/")
+      svg(class="fill-current w-6 h-6 sm:w-9 sm:h-9" viewBox="0 0 24 24")
+        path(d="M10 20v-6h4v6h5v-8h3L12 3 2 12h3v8h5Z")/
+      span(class="text-xs font-bold sm:text-base") Inicio
+
+    a(class=terminalNorteMobileMain href="/terminal-norte-esteli")
+      svg(class="fill-current w-6 h-6 sm:w-9 sm:h-9" viewBox="0 0 24 24")
+        path(
+          d="M18 11H6V6h12m-1.5 11a1.5 1.5 0 0 1-1.5-1.5 1.5 1.5 0 0 1 1.5-1.5 1.5 1.5 0 0 1 1.5 1.5 1.5 1.5 0 0 1-1.5 1.5m-9 0A1.5 1.5 0 0 1 6 15.5 1.5 1.5 0 0 1 7.5 14 1.5 1.5 0 0 1 9 15.5 1.5 1.5 0 0 1 7.5 17M4 16a3 3 0 0 0 1 2.2V20a1 1 0 0 0 1 1h1a1 1 0 0 0 1-1v-1h8v1a1 1 0 0 0 1 1h1a1 1 0 0 0 1-1v-1.8a3 3 0 0 0 1-2.2V6c0-3.5-3.6-4-8-4s-8 .5-8 4v10Z"
+        )/
+      span(class="text-xs font-bold sm:text-base whitespace-nowrap") Cotrán norte
+
+    a(class=terminalSurMobileMain href="/terminal-sur-esteli")
+      svg(class="fill-current w-6 h-6 sm:w-9 sm:h-9" viewBox="0 0 24 24")
+        path(
+          d="M18 11H6V6h12m-1.5 11a1.5 1.5 0 0 1-1.5-1.5 1.5 1.5 0 0 1 1.5-1.5 1.5 1.5 0 0 1 1.5 1.5 1.5 1.5 0 0 1-1.5 1.5m-9 0A1.5 1.5 0 0 1 6 15.5 1.5 1.5 0 0 1 7.5 14 1.5 1.5 0 0 1 9 15.5 1.5 1.5 0 0 1 7.5 17M4 16a3 3 0 0 0 1 2.2V20a1 1 0 0 0 1 1h1a1 1 0 0 0 1-1v-1h8v1a1 1 0 0 0 1 1h1a1 1 0 0 0 1-1v-1.8a3 3 0 0 0 1-2.2V6c0-3.5-3.6-4-8-4s-8 .5-8 4v10Z"
+        )/
+      span(class="text-xs font-bold sm:text-base whitespace-nowrap") Cotrán sur
+
+    a(class=anunciosMobileMain href="/anuncios")
+      svg(class="fill-current w-6 h-6 sm:w-9 sm:h-9" viewBox="0 0 24 24")
+        path(
+          d="M19 7a2 2 0 0 0-2 2v2c0 1.1.9 2 2 2h2v2h-4v2h4a2 2 0 0 0 2-2v-2a2 2 0 0 0-2-2h-2V9h4V7h-4M9 7v10h4a2 2 0 0 0 2-2V9a2 2 0 0 0-2-2H9m2 2h2v6h-2V9M3 7a2 2 0 0 0-2 2v8h2v-4h2v4h2V9a2 2 0 0 0-2-2H3m0 2h2v2H3V9Z"
+        )/
+      span(class="text-xs font-bold sm:text-base") Anuncios
+
+  ul(
+    class="w-full grid grid-cols-4 md:gap-12 sm:gap-6 text-center items-center xl:hidden absolute bottom-0 left-0 pointer-events-none pt-4 overflow-hidden"
+  )
+    li(class=inicioMobile)
+      svg(class="fill-current w-6 h-6 sm:w-9 sm:h-9" viewBox="0 0 24 24")
+        path(d="M10 20v-6h4v6h5v-8h3L12 3 2 12h3v8h5Z")/
+      span(class="text-xs font-bold sm:text-base") Inicio
+
+    li(class=terminalNorteMobile)
+      svg(class="fill-current w-6 h-6 sm:w-9 sm:h-9" viewBox="0 0 24 24")
+        path(
+          d="M18 11H6V6h12m-1.5 11a1.5 1.5 0 0 1-1.5-1.5 1.5 1.5 0 0 1 1.5-1.5 1.5 1.5 0 0 1 1.5 1.5 1.5 1.5 0 0 1-1.5 1.5m-9 0A1.5 1.5 0 0 1 6 15.5 1.5 1.5 0 0 1 7.5 14 1.5 1.5 0 0 1 9 15.5 1.5 1.5 0 0 1 7.5 17M4 16a3 3 0 0 0 1 2.2V20a1 1 0 0 0 1 1h1a1 1 0 0 0 1-1v-1h8v1a1 1 0 0 0 1 1h1a1 1 0 0 0 1-1v-1.8a3 3 0 0 0 1-2.2V6c0-3.5-3.6-4-8-4s-8 .5-8 4v10Z"
+        )/
+      div(class="inline-flex flex-col justify-center items-center")
+        span(class="text-xs font-bold sm:text-base") Cotrán
+        span(class="text-xs font-bold sm:text-base") norte
+
+    li(class=terminalSurMobile)
+      svg(class="fill-current w-6 h-6 sm:w-9 sm:h-9" viewBox="0 0 24 24")
+        path(
+          d="M18 11H6V6h12m-1.5 11a1.5 1.5 0 0 1-1.5-1.5 1.5 1.5 0 0 1 1.5-1.5 1.5 1.5 0 0 1 1.5 1.5 1.5 1.5 0 0 1-1.5 1.5m-9 0A1.5 1.5 0 0 1 6 15.5 1.5 1.5 0 0 1 7.5 14 1.5 1.5 0 0 1 9 15.5 1.5 1.5 0 0 1 7.5 17M4 16a3 3 0 0 0 1 2.2V20a1 1 0 0 0 1 1h1a1 1 0 0 0 1-1v-1h8v1a1 1 0 0 0 1 1h1a1 1 0 0 0 1-1v-1.8a3 3 0 0 0 1-2.2V6c0-3.5-3.6-4-8-4s-8 .5-8 4v10Z"
+        )/
+      div(class="inline-flex flex-col justify-center items-center")
+        span(class="text-xs font-bold sm:text-base") Cotrán
+        span(class="text-xs font-bold sm:text-base") sur
+
+    li(class=anunciosMobile)
+      svg(class="fill-current w-6 h-6 sm:w-9 sm:h-9" viewBox="0 0 24 24")
+        path(
+          d="M19 7a2 2 0 0 0-2 2v2c0 1.1.9 2 2 2h2v2h-4v2h4a2 2 0 0 0 2-2v-2a2 2 0 0 0-2-2h-2V9h4V7h-4M9 7v10h4a2 2 0 0 0 2-2V9a2 2 0 0 0-2-2H9m2 2h2v6h-2V9M3 7a2 2 0 0 0-2 2v8h2v-4h2v4h2V9a2 2 0 0 0-2-2H3m0 2h2v2H3V9Z"
+        )/
+      span(class="text-xs font-bold sm:text-base") Anuncios
