@@ -26,12 +26,12 @@ header(
             autocomplete="on"
             class="w-full md:max-w-md md:mx-auto lg:mx-0 transition-colors space-y-3"
           )
-            label(class="text-xl block text-center lg:text-left" for="cities-search") Busca tu ciudad de destino
+            label(class="text-xl block text-center lg:text-left" for="cities-search") Busca tu ciudad de destino:
             section(class="grid grid-cols-[1fr,100px] any-hover:shadow-orange-600/10")
               input#cities-search(
                 type="search"
                 placeholder="Busca tu ciudad..."
-                class="border border-orange-100 py-2.5 px-4 w-full block outline-none focus:ring-4 focus:ring-orange-400 focus:ring-opacity-50 focus:border-orange-500 rounded rounded-r-none caret-orange-500 bg-white dark:bg-hex-292018 dark:placeholder-orange-100 transition-colors shadow-lg shadow-orange-500/7"
+                class="border border-orange-100 py-2.5 px-4 w-full block outline-none focus:ring-4 focus:ring-orange-400 focus:ring-opacity-50 focus:border-orange-500 rounded rounded-r-none caret-orange-500 bg-white dark:bg-hex-292018 dark:placeholder-orange-100 transition-colors duration-150 shadow-lg shadow-orange-500/7"
               )/
               button#search-citities-button(
                 type="button"
@@ -63,11 +63,11 @@ header(
                     - }
 
                     a(
-                      class="group py-2 px-4 w-full block flex gap-2 mt-2 font-semibold transition-colors active:bg-orange-100 rounded"
+                      class="py-2 px-4 w-full block flex gap-2 mt-2 font-semibold transition-colors any-hover:bg-orange-100 any-hover:text-orange-500 active:bg-orange-100 any-hover:bg-hex-3E352C active:bg-hex-3E352C active:text-orange-500 rounded"
                       href=`/terminal-norte-esteli/horarios-esteli-${fixNameNorth || convertCitiesNorth[index]}`
                     )
                       svg(
-                        class="fill-current group-any-hover:text-orange-500 transition-colors"
+                        class="fill-current"
                         viewBox="0 0 24 24"
                         width="24"
                         height="24"
@@ -75,7 +75,7 @@ header(
                         path(
                           d="M18 11H6V6h12m-1.5 11a1.5 1.5 0 0 1-1.5-1.5 1.5 1.5 0 0 1 1.5-1.5 1.5 1.5 0 0 1 1.5 1.5 1.5 1.5 0 0 1-1.5 1.5m-9 0A1.5 1.5 0 0 1 6 15.5 1.5 1.5 0 0 1 7.5 14 1.5 1.5 0 0 1 9 15.5 1.5 1.5 0 0 1 7.5 17M4 16a3 3 0 0 0 1 2.2V20a1 1 0 0 0 1 1h1a1 1 0 0 0 1-1v-1h8v1a1 1 0 0 0 1 1h1a1 1 0 0 0 1-1v-1.8a3 3 0 0 0 1-2.2V6c0-3.5-3.6-4-8-4s-8 .5-8 4v10Z"
                         )/
-                      span(class="group-any-hover:text-orange-500 transition-colors")= cityNorth
+                      span= cityNorth
 
                 each citySouth, index in citiesSouth
                   li(class="cities text-left hidden")
@@ -86,11 +86,11 @@ header(
                     - }
 
                     a(
-                      class="group py-2 px-4 w-full block flex gap-2 mt-2 font-semibold transition-colors active:bg-orange-100 rounded"
+                      class="py-2 px-4 w-full block flex gap-2 mt-2 font-semibold transition-colors any-hover:bg-orange-100 any-hover:text-orange-500 active:bg-orange-100 any-hover:bg-hex-3E352C active:bg-hex-3E352C active:text-orange-500 rounded"
                       href=`/terminal-sur-esteli/horarios-esteli-${fixNameSouth || convertCitiesSouth[index]}`
                     )
                       svg(
-                        class="fill-current group-any-hover:text-orange-500 transition-colors"
+                        class="fill-current"
                         viewBox="0 0 24 24"
                         width="24"
                         height="24"
@@ -98,7 +98,7 @@ header(
                         path(
                           d="M18 11H6V6h12m-1.5 11a1.5 1.5 0 0 1-1.5-1.5 1.5 1.5 0 0 1 1.5-1.5 1.5 1.5 0 0 1 1.5 1.5 1.5 1.5 0 0 1-1.5 1.5m-9 0A1.5 1.5 0 0 1 6 15.5 1.5 1.5 0 0 1 7.5 14 1.5 1.5 0 0 1 9 15.5 1.5 1.5 0 0 1 7.5 17M4 16a3 3 0 0 0 1 2.2V20a1 1 0 0 0 1 1h1a1 1 0 0 0 1-1v-1h8v1a1 1 0 0 0 1 1h1a1 1 0 0 0 1-1v-1.8a3 3 0 0 0 1-2.2V6c0-3.5-3.6-4-8-4s-8 .5-8 4v10Z"
                         )/
-                      span(class="group-any-hover:text-orange-500 transition-colors")= citySouth
+                      span= citySouth
 
                 li#unknown-city(
                   class="hidden py-2 px-4 font-semibold text-left !border-0"
