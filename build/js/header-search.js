@@ -76,17 +76,24 @@ mainSearch.addEventListener('input', e => {
 
 mainSearch.addEventListener('submit', e => e.preventDefault())
 
-/**
- * Fix Accesibility mobile navbar when keyboard is open
- */
-
+const isMobile = navigator.userAgent.match(/Android|iPhone|iPad|iPod/i)
 const navbarMobile = document.getElementById('navbar-mobile')
 
-const isMobile = navigator.userAgent.match(/Android|iPhone|iPad|iPod/i)
+/**
+ * Ocultar navbar cuándo se activa el teclado virtual
+ */
+
+if (isMobile) {
+  window.addEventListener('resize', () => {
+    navbarMobile.classList.toggle('-bottom-px')
+  })
+}
+
+/**
+ * Track use header search
+ */
 
 citiesSearch.addEventListener('focus', () => {
-  if (isMobile) navbarMobile.classList.remove('bottom-0')
-
   if (window.location.hostname === 'estelibuses.web.app') {
     const appTrackUseHeaderSearch = initializeApp(firebaseConfig)
     const analytics = getAnalytics(appTrackUseHeaderSearch)
@@ -97,9 +104,11 @@ citiesSearch.addEventListener('focus', () => {
   }
 })
 
-citiesSearch.addEventListener('blur', () => {
-  if (isMobile) navbarMobile.classList.add('bottom-0')
+/**
+ * Track not use header search
+ */
 
+citiesSearch.addEventListener('blur', () => {
   if (window.location.hostname === 'estelibuses.web.app') {
     const appTrackUseHeaderSearch = initializeApp(firebaseConfig)
     const analytics = getAnalytics(appTrackUseHeaderSearch)

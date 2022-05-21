@@ -17,7 +17,7 @@ block currentPage
 - const terminalSurMobile = `${ACTIVE_MOBILE === "terminal-sur" ? currentPage : "invisible"}`
 - const anunciosMobile = `${ACTIVE_MOBILE === "anuncios" ? currentPage : "invisible"}`
 
-section#navbar-mobile(class="sticky z-10 -bottom-px xl:hidden")
+section#navbar-mobile(class="sticky z-10 -bottom-px transition-all xl:hidden")
   nav(
     class="bg-orange-400 dark:bg-hex-180f06 grid grid-cols-4 md:gap-12 sm:gap-6 items-center justify-center"
   )
