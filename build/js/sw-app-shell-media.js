@@ -6,6 +6,9 @@ const IMAGES_APP_SHELL = [
   'https://res.cloudinary.com/fx-icaza/image/upload/q_auto:low,w_1200/v1651427365/estelibuses-ads/banner-agencia-de-viajes-tisey.avif',
   'https://res.cloudinary.com/fx-icaza/image/upload/q_auto:low,w_1200/v1651427365/estelibuses-ads/banner-agencia-de-viajes-tisey.webp',
 
+  '/sounds/switch.mp3',
+  '/sounds/switch-tap.mp3',
+
   '/img/terminal-norte-estelibuses-felix-icaza.avif',
   '/img/terminal-norte-estelibuses-felix-icaza.webp',
   '/img/terminal-norte-estelibuses-mobile-felix-icaza.avif',

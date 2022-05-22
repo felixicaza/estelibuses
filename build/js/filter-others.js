@@ -36,8 +36,14 @@ const setItemName = window.location.pathname
   .replace(/\//g, '_')
   .replace(/-/g, '_')
 
+const soundRadio = new Audio('/sounds/switch.mp3')
+
 formFilter.addEventListener('change', e => {
   if (e.target.id === 'city-one' && radioCityOne.checked) {
+    if (localStorage.getItem('sounds_enabled') === 'true') {
+      soundRadio.play()
+    }
+
     localStorage.setItem(setItemName, 'managua')
 
     cityOneBuses.forEach(cityOne => cityOne.classList.remove('hidden'))
@@ -58,6 +64,10 @@ formFilter.addEventListener('change', e => {
   }
 
   if (e.target.id === 'city-two' && radioCityTwo.checked) {
+    if (localStorage.getItem('sounds_enabled') === 'true') {
+      soundRadio.play()
+    }
+
     localStorage.setItem(setItemName, 'matagalpa')
 
     cityTwoBuses.forEach(cityTwo => cityTwo.classList.remove('hidden'))

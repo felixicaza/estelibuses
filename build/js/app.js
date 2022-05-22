@@ -29,6 +29,12 @@ if (window.location.hostname === 'estelibuses.web.app') {
 }
 
 /**
+ * Sound page click
+ */
+
+const soundPage = new Audio('/sounds/switch-tap.mp3')
+
+/**
  * Darkmode
  */
 
@@ -41,6 +47,8 @@ let darkModeState = false
 
 const lightModeText = 'Activa el modo claro (Alt+Shift D)'
 const darkModeText = 'Activa el modo oscuro (Alt+Shift D)'
+
+const soundDarkMode = new Audio('/sounds/switch.mp3')
 
 function toggleDarkMode(state) {
   document.documentElement.classList.toggle('dark', state)
@@ -58,6 +66,10 @@ toggleDarkMode(localStorage.getItem('darkmode') === 'true')
 colorSchemeDark.addListener(e => toggleDarkMode(e.matches))
 
 switchSchemeBtn.addEventListener('click', () => {
+  if (localStorage.getItem('sounds_enabled') === 'true') {
+    soundDarkMode.play()
+  }
+
   darkModeState = !darkModeState
 
   toggleDarkMode(darkModeState)
@@ -98,6 +110,10 @@ switchSchemeBtn.addEventListener('click', () => {
 
 window.addEventListener('keydown', e => {
   if (e.altKey === true && e.shiftKey === true && e.key === 'D') {
+    if (localStorage.getItem('sounds_enabled') === 'true') {
+      soundDarkMode.play()
+    }
+
     darkModeState = !darkModeState
 
     toggleDarkMode(darkModeState)
@@ -157,6 +173,10 @@ if (navigator.share) {
   shareBtn.classList.remove('hidden')
 
   shareBtn.addEventListener('click', () => {
+    if (localStorage.getItem('sounds_enabled') === 'true') {
+      soundPage.play()
+    }
+
     navigator.share(shareData)
   })
 }
@@ -198,6 +218,10 @@ if (document.getElementById('whatsapp-city')) {
     shareCity.classList.remove('hidden')
 
     shareCity.addEventListener('click', () => {
+      if (localStorage.getItem('sounds_enabled') === 'true') {
+        soundPage.play()
+      }
+
       navigator.share(shareDataCity)
     })
   }
@@ -240,6 +264,12 @@ window.addEventListener('load', () => {
       })
     }
   }
+
+  /**
+   * Set sound enabled by default
+   */
+
+  localStorage.setItem('sounds_enabled', 'true')
 })
 
 /**
@@ -398,4 +428,18 @@ installBtn.addEventListener('click', async () => {
     installBtn.classList.add('opacity-0')
     installBtn.classList.add('translate-y-18')
   }
+})
+
+/**
+ * Play sound page
+ */
+
+const pages = document.querySelectorAll('a')
+
+pages.forEach(page => {
+  page.addEventListener('click', () => {
+    if (localStorage.getItem('sounds_enabled') === 'true') {
+      soundPage.play()
+    }
+  })
 })

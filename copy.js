@@ -80,4 +80,8 @@ const cpy = require('cpy')
       console.log(data)
     }
   )
+
+  await cpy('build/sounds/*.mp3', 'public/sounds/').on('progress', data => {
+    console.log(data)
+  })
 })()
