@@ -437,23 +437,11 @@ window.addEventListener('beforeinstallprompt', e => {
   }
 
   installBtn.classList.replace('opacity-0', 'opacity-100')
-
-  setTimeout(() => {
-    if (isMobile) {
-      installBtn.classList.replace('translate-y-18', '-translate-y-18')
-    } else {
-      installBtn.classList.replace('left-0', 'right-0')
-      installBtn.classList.replace('translate-x-4', '-translate-x-8')
-      installBtn.classList.replace('translate-y-18', '-translate-y-12')
-    }
-  }, 3000)
+  installBtn.classList.replace('pointer-events-none', 'pointer-events-auto')
 })
 
 window.addEventListener('appinstalled', () => {
   deferredPrompt = null
-
-  installBtn.classList.add('opacity-0')
-  installBtn.classList.add('translate-y-18')
 
   /**
    * Track if pwa is installed
@@ -476,9 +464,6 @@ installBtn.addEventListener('click', async () => {
 
   if (outcome === 'accepted') {
     deferredPrompt = null
-
-    installBtn.classList.add('opacity-0')
-    installBtn.classList.add('translate-y-18')
   }
 })
 
