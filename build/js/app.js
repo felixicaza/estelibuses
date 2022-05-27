@@ -49,6 +49,19 @@ mobileNavBtn.addEventListener('click', () => {
     soundPage.play()
   }
 
+  /**
+   * Track open menu
+   */
+
+  if (window.location.hostname === 'estelibuses.web.app') {
+    const appTrackInstall = initializeApp(firebaseConfig)
+    const analytics = getAnalytics(appTrackInstall)
+
+    logEvent(analytics, 'open_menu', {
+      name: 'Menu abierto'
+    })
+  }
+
   bgModal.classList.replace('opacity-0', 'opacity-100')
   bgModal.classList.replace('pointer-events-none', 'pointer-events-auto')
 
@@ -69,6 +82,19 @@ mobileNavBtn.addEventListener('click', () => {
 bgModal.addEventListener('click', () => {
   if (localStorage.getItem('sounds_enabled') === 'true') {
     soundPage.play()
+  }
+
+  /**
+   * Track close menu
+   */
+
+  if (window.location.hostname === 'estelibuses.web.app') {
+    const appTrackInstall = initializeApp(firebaseConfig)
+    const analytics = getAnalytics(appTrackInstall)
+
+    logEvent(analytics, 'close_menu', {
+      name: 'Menu cerrado'
+    })
   }
 
   bgModal.classList.replace('opacity-100', 'opacity-0')
