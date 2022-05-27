@@ -311,7 +311,39 @@ window.addEventListener('load', () => {
    * Set sound enabled by default
    */
 
-  localStorage.setItem('sounds_enabled', 'true')
+  if (localStorage.getItem('sounds_enabled') !== 'false') {
+    localStorage.setItem('sounds_enabled', 'true')
+  }
+})
+
+/**
+ * Sound switch
+ */
+
+const switchSound = document.getElementById('switch-sound')
+const labelSound = document.getElementById('label-sound')
+const soundDisableIcon = document.getElementById('sound-disable')
+const soundEnableIcon = document.getElementById('sound-enable')
+
+switchSound.addEventListener('change', e => {
+  if (!e.target.checked) {
+    localStorage.setItem('sounds_enabled', 'false')
+    labelSound.textContent = 'Activar sonidos'
+    soundEnableIcon.classList.toggle('hidden')
+    soundDisableIcon.classList.toggle('hidden')
+    switchSound.checked = false
+  } else {
+    localStorage.setItem('sounds_enabled', 'true')
+
+    if (localStorage.getItem('sounds_enabled') === 'true') {
+      soundDarkMode.play()
+    }
+
+    labelSound.textContent = 'Desactivar sonidos'
+    soundEnableIcon.classList.toggle('hidden')
+    soundDisableIcon.classList.toggle('hidden')
+    switchSound.checked = true
+  }
 })
 
 /**
