@@ -48,6 +48,11 @@ body {
   -webkit-touch-callout: none;
 }
 
+.shadow-aside {
+  box-shadow: 6px 2px 12px 0px rgba(0, 0, 0, 0.3),
+    -6px -2px 15px 0px rgba(31, 31, 31, 0.35);
+}
+
 .blob {
   background: linear-gradient(
     180deg,
@@ -301,5 +306,16 @@ body#terminal-norte-pages {
   }
   to {
     transform: translateY(0);
+  }
+}
+
+/* Switch */
+input:checked + .slider:before {
+  transform: translateX(1.625rem);
+}
+
+@media (min-width: 992px) {
+  .slider {
+    transform: scaleX(-1);
   }
 }
