@@ -35,6 +35,58 @@ if (window.location.hostname === 'estelibuses.web.app') {
 const soundPage = new Audio('/sounds/switch-tap.mp3')
 
 /**
+ * Menu aside
+ */
+
+const bgModal = document.getElementById('bg-modal')
+const mobileNavBtn = document.getElementById('mobile-nav')
+const mobileNav = document.getElementById('mobile')
+const noScrollOnModal = 'overflow: hidden;'
+
+mobileNavBtn.addEventListener('click', () => {
+  if (localStorage.getItem('sounds_enabled') === 'true') {
+    soundPage.play()
+  }
+
+  bgModal.classList.replace('opacity-0', 'opacity-100')
+  bgModal.classList.replace('pointer-events-none', 'pointer-events-auto')
+
+  if (window.matchMedia('min-width: 992px')) {
+    mobileNav.classList.remove('-translate-x-full')
+    mobileNav.classList.replace('lg:translate-x-full', 'translate-x-0')
+  } else {
+    mobileNav.classList.replace('-translate-x-full', 'translate-x-0')
+  }
+  mobileNav.classList.replace('pointer-events-none', 'pointer-events-auto')
+  mobileNav.classList.replace('opacity-0', 'opacity-100')
+  mobileNav.classList.add('shadow-aside')
+
+  document.documentElement.setAttribute('style', noScrollOnModal)
+  document.body.setAttribute('style', noScrollOnModal)
+})
+
+bgModal.addEventListener('click', () => {
+  if (localStorage.getItem('sounds_enabled') === 'true') {
+    soundPage.play()
+  }
+
+  bgModal.classList.replace('opacity-100', 'opacity-0')
+  bgModal.classList.replace('pointer-events-auto', 'pointer-events-none')
+
+  if (window.matchMedia('min-width: 992px')) {
+    mobileNav.classList.replace('translate-x-0', 'lg:translate-x-full')
+  } else {
+    mobileNav.classList.replace('translate-x-0', '-translate-x-full')
+  }
+  mobileNav.classList.replace('pointer-events-auto', 'pointer-events-none')
+  mobileNav.classList.replace('opacity-100', 'opacity-0')
+  mobileNav.classList.remove('shadow-aside')
+
+  document.documentElement.removeAttribute('style', noScrollOnModal)
+  document.body.removeAttribute('style', noScrollOnModal)
+})
+
+/**
  * Darkmode
  */
 
