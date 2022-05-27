@@ -1,5 +1,6 @@
 /* eslint-disable import/extensions */
 /* eslint-disable no-param-reassign */
+/* eslint-disable no-lonely-if */
 /* eslint-disable no-undef */
 
 /**
@@ -90,22 +91,15 @@ bgModal.addEventListener('click', () => {
  * Darkmode
  */
 
-const switchSchemeBtn = document.getElementById('switch-scheme')
-const darkIcon = document.getElementById('dark-icon')
-const lightIcon = document.getElementById('light-icon')
+const switchScheme = document.getElementById('switch-scheme')
 
 const colorSchemeDark = window.matchMedia('(prefers-color-scheme: dark)')
 let darkModeState = false
-
-const lightModeText = 'Activa el modo claro (Alt+Shift D)'
-const darkModeText = 'Activa el modo oscuro (Alt+Shift D)'
 
 const soundDarkMode = new Audio('/sounds/switch.mp3')
 
 function toggleDarkMode(state) {
   document.documentElement.classList.toggle('dark', state)
-  lightIcon.classList.toggle('hidden', !state)
-  darkIcon.classList.toggle('hidden', state)
   darkModeState = state
 }
 
@@ -117,19 +111,19 @@ toggleDarkMode(localStorage.getItem('darkmode') === 'true')
 
 colorSchemeDark.addListener(e => toggleDarkMode(e.matches))
 
-switchSchemeBtn.addEventListener('click', () => {
+switchScheme.addEventListener('change', () => {
   if (localStorage.getItem('sounds_enabled') === 'true') {
     soundDarkMode.play()
   }
 
   darkModeState = !darkModeState
 
+  switchScheme.checked = darkModeState
+
   toggleDarkMode(darkModeState)
   setDarkModeLocalStorage(darkModeState)
 
   if (localStorage.getItem('darkmode') === 'true') {
-    switchSchemeBtn.setAttribute('title', lightModeText)
-
     /**
      * Track if darmode is disabled
      */
@@ -143,8 +137,6 @@ switchSchemeBtn.addEventListener('click', () => {
       })
     }
   } else {
-    switchSchemeBtn.setAttribute('title', darkModeText)
-
     /**
      * Track if darkmode is enabled
      */
@@ -168,12 +160,12 @@ window.addEventListener('keydown', e => {
 
     darkModeState = !darkModeState
 
+    switchScheme.checked = darkModeState
+
     toggleDarkMode(darkModeState)
     setDarkModeLocalStorage(darkModeState)
 
     if (localStorage.getItem('darkmode') === 'true') {
-      switchSchemeBtn.setAttribute('title', lightModeText)
-
       /**
        * Track if darmode is disabled with keyboard
        */
@@ -187,8 +179,6 @@ window.addEventListener('keydown', e => {
         })
       }
     } else {
-      switchSchemeBtn.setAttribute('title', darkModeText)
-
       /**
        * Track if darkmode is enabled
        */

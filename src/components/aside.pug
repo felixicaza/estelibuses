@@ -12,28 +12,14 @@ aside#mobile(
           class="flex gap-2 items-center lg:order-1 any-hover:text-orange-600 active:text-orange-600 transition-colors"
         )
           span(class="lg:order-1")
-            svg#dark-icon(
-              class="fill-current"
-              viewBox="0 0 24 24"
-              width="24"
-              height="24"
-            )
+            svg(class="fill-current" viewBox="0 0 24 24" width="24" height="24")
               path(
                 d="M12 3a9 9 0 1 0 8.9 7.6 5.4 5.4 0 0 1-9.8-3.1c0-1.8.9-3.4 2.3-4.4L12 3z"
               )/
-            svg#light-icon(
-              class="fill-current hidden"
-              viewBox="0 0 24 24"
-              width="24"
-              height="24"
-            )
-              path(
-                d="M3.5 18.5 5 20l1.8-1.7-1.5-1.5m5.7 5.8h2v-3h-2m1-14a6 6 0 0 0-6 6 6 6 0 0 0 6 6 6 6 0 0 0 6-6 6 6 0 0 0-6-6m8 7h3v-2h-3m-2.8 7.7L19 20l1.4-1.5-1.7-1.8m1.8-12.2L19 3l-1.8 1.8 1.5 1.5M13 .5h-2v3h2m-9 7H1v2h3m2.8-7.7L5 3 3.5 4.5l1.8 1.8 1.5-1.5Z"
-              )/
-          label(class="cursor-pointer lg:order-first" for="switch-theme") Modo oscuro
+          label(class="cursor-pointer lg:order-first" for="switch-scheme") Modo oscuro
         section(class="lg:order-first")
           div(class="relative w-12.25 h-5.75")
-            input#switch-theme(
+            input#switch-scheme(
               type="checkbox"
               class="opacity-0 w-full h-full cursor-pointer sibling:checked:bg-orange-500"
             )/
@@ -102,3 +88,8 @@ aside#mobile(
 
     div(class="pb-4")
       include installButton
+
+script.
+  if (localStorage.getItem("darkmode") === "true") {
+    document.getElementById("switch-scheme").setAttribute("checked", "checked");
+  }
