@@ -114,6 +114,173 @@ bgModal.addEventListener('click', () => {
 })
 
 /**
+ * Share aside
+ */
+
+const shareAside = document.getElementById('share-aside')
+
+const bgModalShare = document.getElementById('bg-modal-share')
+const modalShare = document.getElementById('modal-share')
+
+const modalShareLinks = document.querySelectorAll('.modal-share-link')
+
+const shareURLAside = 'https://estelibuses.web.app/'
+
+const shareDataAside = {
+  title: 'Estelí Buses',
+  text: '¡Conoce todos los horarios de las terminales de buses de la ciudad de Estelí!',
+  url: `${shareURLAside}?utm_source=shareasidebtn&utm_medium=webapp&utm_campaign=social_share&utm_content=aside`
+}
+
+if (navigator.share) {
+  shareAside.addEventListener('click', () => {
+    if (localStorage.getItem('sounds_enabled') === 'true') {
+      soundPage.play()
+    }
+
+    navigator.share(shareDataAside)
+  })
+
+  /**
+   * Track open native share
+   */
+
+  if (window.location.hostname === 'estelibuses.web.app') {
+    const appTrackInstall = initializeApp(firebaseConfig)
+    const analytics = getAnalytics(appTrackInstall)
+
+    logEvent(analytics, 'share_aside', {
+      name: 'Share nativo aside'
+    })
+  }
+} else {
+  shareAside.addEventListener('click', () => {
+    if (localStorage.getItem('sounds_enabled') === 'true') {
+      soundPage.play()
+    }
+
+    bgModal.classList.replace('opacity-100', 'opacity-0')
+    bgModal.classList.replace('pointer-events-auto', 'pointer-events-none')
+
+    if (window.matchMedia('min-width: 992px')) {
+      mobileNav.classList.replace('translate-x-0', 'lg:translate-x-full')
+    } else {
+      mobileNav.classList.replace('translate-x-0', '-translate-x-full')
+    }
+    mobileNav.classList.replace('pointer-events-auto', 'pointer-events-none')
+    mobileNav.classList.replace('opacity-100', 'opacity-0')
+    mobileNav.classList.remove('shadow-aside')
+
+    document.documentElement.removeAttribute('style', noScrollOnModal)
+    document.body.removeAttribute('style', noScrollOnModal)
+
+    setTimeout(() => {
+      bgModalShare.classList.replace('opacity-0', 'opacity-100')
+      bgModalShare.classList.replace(
+        'pointer-events-none',
+        'pointer-events-auto'
+      )
+
+      document.documentElement.setAttribute('style', noScrollOnModal)
+      document.body.setAttribute('style', noScrollOnModal)
+
+      modalShare.classList.replace('pointer-events-none', 'pointer-events-auto')
+      modalShare.classList.replace('opacity-0', 'opacity-100')
+      modalShare.classList.replace('scale-0', 'scale-100')
+    }, 800)
+
+    /**
+     * Track open custom share
+     */
+
+    if (window.location.hostname === 'estelibuses.web.app') {
+      const appTrackInstall = initializeApp(firebaseConfig)
+      const analytics = getAnalytics(appTrackInstall)
+
+      logEvent(analytics, 'custom_share_aside_open', {
+        name: 'Share aside abierto'
+      })
+    }
+  })
+
+  bgModalShare.addEventListener('click', () => {
+    if (localStorage.getItem('sounds_enabled') === 'true') {
+      soundPage.play()
+    }
+
+    bgModalShare.classList.replace('opacity-100', 'opacity-0')
+    bgModalShare.classList.replace('pointer-events-auto', 'pointer-events-none')
+
+    document.documentElement.removeAttribute('style', noScrollOnModal)
+    document.body.removeAttribute('style', noScrollOnModal)
+
+    modalShare.classList.replace('pointer-events-auto', 'pointer-events-none')
+    modalShare.classList.replace('opacity-100', 'opacity-0')
+    modalShare.classList.replace('scale-100', 'scale-0')
+
+    /**
+     * Track close custom share
+     */
+
+    if (window.location.hostname === 'estelibuses.web.app') {
+      const appTrackInstall = initializeApp(firebaseConfig)
+      const analytics = getAnalytics(appTrackInstall)
+
+      logEvent(analytics, 'custom_share_aside_close', {
+        name: 'Share aside cerrado'
+      })
+    }
+  })
+
+  modalShareLinks.forEach(link => {
+    link.addEventListener('click', () => {
+      if (localStorage.getItem('sounds_enabled') === 'true') {
+        soundPage.play()
+      }
+
+      bgModalShare.classList.replace('opacity-100', 'opacity-0')
+      bgModalShare.classList.replace(
+        'pointer-events-auto',
+        'pointer-events-none'
+      )
+
+      document.documentElement.removeAttribute('style', noScrollOnModal)
+      document.body.removeAttribute('style', noScrollOnModal)
+
+      modalShare.classList.replace('pointer-events-auto', 'pointer-events-none')
+      modalShare.classList.replace('opacity-100', 'opacity-0')
+      modalShare.classList.replace('scale-100', 'scale-0')
+
+      /**
+       * Track click on share link
+       */
+
+      if (window.location.hostname === 'estelibuses.web.app') {
+        const appTrackInstall = initializeApp(firebaseConfig)
+        const analytics = getAnalytics(appTrackInstall)
+
+        logEvent(analytics, 'custom_share_aside_click_link', {
+          name: 'Share aside click en link'
+        })
+      }
+    })
+  })
+
+  /**
+   * Track not native share
+   */
+
+  if (window.location.hostname === 'estelibuses.web.app') {
+    const appTrackInstall = initializeApp(firebaseConfig)
+    const analytics = getAnalytics(appTrackInstall)
+
+    logEvent(analytics, 'custom_share_aside', {
+      name: 'Share no nativo aside'
+    })
+  }
+}
+
+/**
  * Darkmode
  */
 
