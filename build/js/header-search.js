@@ -83,9 +83,19 @@ const navbarMobile = document.getElementById('navbar-mobile')
  * Ocultar navbar cuándo se activa el teclado virtual
  */
 
+const initialSize = window.innerHeight
+
 if (isMobile) {
   window.addEventListener('resize', () => {
-    navbarMobile.classList.toggle('-bottom-px')
+    const resizeHeight = window.innerHeight
+
+    const percent = initialSize / resizeHeight
+
+    if (percent > 1.35) {
+      navbarMobile.classList.remove('-bottom-px')
+    } else {
+      navbarMobile.classList.add('-bottom-px')
+    }
   })
 }
 

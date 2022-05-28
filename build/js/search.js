@@ -78,10 +78,32 @@ const navbarMobile = document.getElementById('navbar-mobile')
 
 const isMobile = navigator.userAgent.match(/Android|iPhone|iPad|iPod/i)
 
-search.addEventListener('focus', () => {
-  if (isMobile) navbarMobile.classList.remove('bottom-0')
+/**
+ * Ocultar navbar cuándo se activa el teclado virtual
+ */
 
+const initialSize = window.innerHeight
+
+if (isMobile) {
+  window.addEventListener('resize', () => {
+    const resizeHeight = window.innerHeight
+
+    const percent = initialSize / resizeHeight
+
+    if (percent > 1.35) {
+      navbarMobile.classList.remove('-bottom-px')
+    } else {
+      navbarMobile.classList.add('-bottom-px')
+    }
+  })
+}
+
+search.addEventListener('focus', () => {
   if (window.location.hostname === 'estelibuses.web.app') {
+    /**
+     * Track use search terminal norte
+     */
+
     if (window.location.pathname === '/terminal-norte-esteli') {
       const appTrackUseSearchNorth = initializeApp(firebaseConfig)
       const analytics = getAnalytics(appTrackUseSearchNorth)
@@ -90,6 +112,10 @@ search.addEventListener('focus', () => {
         name: 'Buscador terminal norte'
       })
     }
+
+    /**
+     * Track use search terminal sur
+     */
 
     if (window.location.pathname === '/terminal-sur-esteli') {
       const appTrackUseSearchSouth = initializeApp(firebaseConfig)
@@ -103,9 +129,11 @@ search.addEventListener('focus', () => {
 })
 
 search.addEventListener('blur', () => {
-  if (isMobile) navbarMobile.classList.add('bottom-0')
-
   if (window.location.hostname === 'estelibuses.web.app') {
+    /**
+     * Track not use search terminal norte
+     */
+
     if (window.location.pathname === '/terminal-norte-esteli') {
       const appTrackUseSearchNorth = initializeApp(firebaseConfig)
       const analytics = getAnalytics(appTrackUseSearchNorth)
@@ -114,6 +142,10 @@ search.addEventListener('blur', () => {
         name: 'Desactivado buscador terminal norte'
       })
     }
+
+    /**
+     * Track not use search terminal sur
+     */
 
     if (window.location.pathname === '/terminal-sur-esteli') {
       const appTrackUseSearchSouth = initializeApp(firebaseConfig)
