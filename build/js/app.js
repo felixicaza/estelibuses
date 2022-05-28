@@ -559,6 +559,10 @@ function showUpdateFounded(registration) {
   }, 500)
 
   reloadBtn.addEventListener('click', () => {
+    if (localStorage.getItem('sounds_enabled') === 'true') {
+      soundPage.play()
+    }
+
     if (registration.waiting) {
       registration.waiting.postMessage('SKIP_WAITING')
     }
@@ -673,6 +677,10 @@ window.addEventListener('appinstalled', () => {
 })
 
 installBtn.addEventListener('click', async () => {
+  if (localStorage.getItem('sounds_enabled') === 'true') {
+    soundPage.play()
+  }
+
   deferredPrompt.prompt()
 
   const { outcome } = await deferredPrompt.userChoice
