@@ -57,7 +57,10 @@ mixin cardTransportInfoNorth(transport, time, transportType, transportName, pric
                 else
                   strong Hora de salida
               td(class="px-3 py-2 group-hover:bg-orange-50 dark:group-hover:bg-hex-3E352C transition-colors rounded-r")
-                span(class="px-2 py-1 text-green-700 bg-green-100 rounded font-bold")= time
+                if unverifiedHour
+                  span(class="px-2 py-1 text-red-700 bg-red-100 rounded font-bold")= time
+                else
+                  span(class="px-2 py-1 text-green-700 bg-green-100 rounded font-bold")= time
 
             tr(class="group")
               td(
