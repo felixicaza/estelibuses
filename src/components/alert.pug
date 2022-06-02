@@ -1,5 +1,5 @@
 article#alert(class="py-4 px-2 bg-orange-600 text-white")
-  div(class="container mx-auto px-4 flex justify-between gap-4")
+  div(class="container mx-auto px-4 flex justify-between items-start gap-4")
     section(class="w-full")
       svg(
         class="fill-current float-left mr-4"
@@ -8,8 +8,13 @@ article#alert(class="py-4 px-2 bg-orange-600 text-white")
         height="34"
       )
         path(d="M13 14h-2V9h2m0 9h-2v-2h2M1 21h22L12 2 1 21Z")/
-      p(class="font-semibold lg:mt-1") Este sitio web aún está en desarrollo, por lo que alguna información es de prueba y puede no estar completa o verificada en su totalidad.
-    span(
-      class="font-bold text-3xl cursor-pointer -mt-0.5 any-hover:text-orange-900 active:text-orange-900 transition-colors"
-      onclick="document.getElementById('alert').style.display='none';"
+      p(class="font-semibold lg:-mt-2.5px") Debido a problemas técnicos con nuestro proveedor de alojamiento de Estelí Buses, es posible que experimentes algunos problemas en la plataforma. Recuerda que aún&nbsp;
+        strong puedes acceder de manera offline para consultar los horarios.
+    span#close-alert(
+      class="font-bold text-3xl cursor-pointer -mt-0.5 lg:-mt-8px any-hover:text-orange-900 active:text-orange-900 transition-colors"
     ) &times;
+
+script.
+  if (localStorage.getItem("hide_alert") === "true") {
+    document.getElementById("alert").classList.add("hidden");
+  }

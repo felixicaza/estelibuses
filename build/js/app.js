@@ -30,6 +30,18 @@ if (window.location.hostname === 'estelibuses.web.app') {
 }
 
 /**
+ * Alert
+ */
+
+const alert = document.getElementById('alert')
+const closeAlert = document.getElementById('close-alert')
+
+closeAlert.addEventListener('click', () => {
+  alert.classList.add('hidden')
+  localStorage.setItem('hide_alert', 'true')
+})
+
+/**
  * Sound page click
  */
 
