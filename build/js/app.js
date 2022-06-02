@@ -557,6 +557,7 @@ if (document.getElementById('whatsapp-city')) {
 /**
  * Quicklink instance
  */
+
 window.addEventListener('load', () => {
   quicklink.listen()
 
@@ -596,6 +597,14 @@ const soundEnableIcon = document.getElementById('sound-enable')
 switchSound.addEventListener('change', e => {
   if (!e.target.checked) {
     localStorage.setItem('sounds_enabled', 'false')
+
+    if (
+      'vibrate' in navigator &&
+      localStorage.getItem('sounds_enabled') === 'false'
+    ) {
+      navigator.vibrate(80)
+    }
+
     labelSound.textContent = 'Activar sonidos'
     soundEnableIcon.classList.toggle('hidden')
     soundDisableIcon.classList.toggle('hidden')

@@ -11,9 +11,9 @@ importScripts(
 workbox.setConfig({ debug: false })
 workbox.googleAnalytics.initialize()
 
-const CACHE_CORE = 'core-v2.61'
-const CACHE_MEDIA = 'media-v2.61'
-const CACHE_DYNAMIC = 'dynamic-v2.61'
+const CACHE_CORE = 'core-v2.62'
+const CACHE_MEDIA = 'media-v2.62'
+const CACHE_DYNAMIC = 'dynamic-v2.62'
 
 self.addEventListener('install', e => {
   const setCacheCore = caches
