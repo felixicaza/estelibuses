@@ -255,6 +255,10 @@ body {
   animation: page 700ms ease;
 }
 
+.up {
+  animation: page 700ms ease;
+}
+
 @keyframes page {
   from {
     transform: translateY(6%);

@@ -54,8 +54,26 @@ formFilter.addEventListener('change', e => {
       (title, index) => (title.textContent = `Horario #${index + 1}`)
     )
 
-    expressBuses.forEach(express => express.classList.remove('hidden'))
-    routedBuses.forEach(routed => routed.classList.remove('hidden'))
+    expressBuses.forEach(express => {
+      express.classList.remove('hidden')
+
+      if (express.classList.contains('up')) {
+        express.classList.remove('up')
+        window.requestAnimationFrame(() => express.classList.add('up'))
+      } else {
+        express.classList.add('up')
+      }
+    })
+    routedBuses.forEach(routed => {
+      routed.classList.remove('hidden')
+
+      if (routed.classList.contains('up')) {
+        routed.classList.remove('up')
+        window.requestAnimationFrame(() => routed.classList.add('up'))
+      } else {
+        routed.classList.add('up')
+      }
+    })
 
     /**
      * Track select all
@@ -84,8 +102,20 @@ formFilter.addEventListener('change', e => {
       expressTitles[i].textContent = `Horario Expreso #${i + 1}`
     }
 
-    expressBuses.forEach(express => express.classList.remove('hidden'))
-    routedBuses.forEach(routed => routed.classList.add('hidden'))
+    expressBuses.forEach(express => {
+      express.classList.remove('hidden')
+
+      if (express.classList.contains('up')) {
+        express.classList.remove('up')
+        window.requestAnimationFrame(() => express.classList.add('up'))
+      } else {
+        express.classList.add('up')
+      }
+    })
+    routedBuses.forEach(routed => {
+      routed.classList.add('hidden')
+      routed.classList.remove('up')
+    })
 
     /**
      * Track select expresos
@@ -114,8 +144,20 @@ formFilter.addEventListener('change', e => {
       routedTitles[i].textContent = `Horario Ruteado #${i + 1}`
     }
 
-    routedBuses.forEach(routed => routed.classList.remove('hidden'))
-    expressBuses.forEach(express => express.classList.add('hidden'))
+    routedBuses.forEach(routed => {
+      routed.classList.remove('hidden')
+
+      if (routed.classList.contains('up')) {
+        routed.classList.remove('up')
+        window.requestAnimationFrame(() => routed.classList.add('up'))
+      } else {
+        routed.classList.add('up')
+      }
+    })
+    expressBuses.forEach(express => {
+      express.classList.add('hidden')
+      express.classList.remove('up')
+    })
 
     /**
      * Track select ruteados

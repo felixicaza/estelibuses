@@ -46,8 +46,14 @@ formFilter.addEventListener('change', e => {
 
     localStorage.setItem(setItemName, 'managua')
 
-    cityOneBuses.forEach(cityOne => cityOne.classList.remove('hidden'))
-    cityTwoBuses.forEach(cityTwo => cityTwo.classList.add('hidden'))
+    cityOneBuses.forEach(cityOne => {
+      cityOne.classList.remove('hidden')
+      cityOne.classList.add('up')
+    })
+    cityTwoBuses.forEach(cityTwo => {
+      cityTwo.classList.add('hidden')
+      cityTwo.classList.remove('up')
+    })
 
     /**
      * Track select city one
@@ -70,8 +76,14 @@ formFilter.addEventListener('change', e => {
 
     localStorage.setItem(setItemName, 'matagalpa')
 
-    cityTwoBuses.forEach(cityTwo => cityTwo.classList.remove('hidden'))
-    cityOneBuses.forEach(cityOne => cityOne.classList.add('hidden'))
+    cityTwoBuses.forEach(cityTwo => {
+      cityTwo.classList.remove('hidden')
+      cityTwo.classList.add('up')
+    })
+    cityOneBuses.forEach(cityOne => {
+      cityOne.classList.add('hidden')
+      cityOne.classList.remove('up')
+    })
 
     /**
      * Track select city two
