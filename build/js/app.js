@@ -61,6 +61,13 @@ mobileNavBtn.addEventListener('click', () => {
     soundPage.play()
   }
 
+  if (
+    'vibrate' in navigator &&
+    localStorage.getItem('sounds_enabled') === 'false'
+  ) {
+    navigator.vibrate(80)
+  }
+
   /**
    * Track open menu
    */
@@ -94,6 +101,13 @@ mobileNavBtn.addEventListener('click', () => {
 bgModal.addEventListener('click', () => {
   if (localStorage.getItem('sounds_enabled') === 'true') {
     soundPage.play()
+  }
+
+  if (
+    'vibrate' in navigator &&
+    localStorage.getItem('sounds_enabled') === 'false'
+  ) {
+    navigator.vibrate(80)
   }
 
   /**
@@ -150,6 +164,13 @@ if (navigator.share) {
       soundPage.play()
     }
 
+    if (
+      'vibrate' in navigator &&
+      localStorage.getItem('sounds_enabled') === 'false'
+    ) {
+      navigator.vibrate(80)
+    }
+
     navigator.share(shareDataAside)
   })
 
@@ -169,6 +190,13 @@ if (navigator.share) {
   shareAside.addEventListener('click', () => {
     if (localStorage.getItem('sounds_enabled') === 'true') {
       soundPage.play()
+    }
+
+    if (
+      'vibrate' in navigator &&
+      localStorage.getItem('sounds_enabled') === 'false'
+    ) {
+      navigator.vibrate(80)
     }
 
     bgModal.classList.replace('opacity-100', 'opacity-0')
@@ -220,6 +248,13 @@ if (navigator.share) {
       soundPage.play()
     }
 
+    if (
+      'vibrate' in navigator &&
+      localStorage.getItem('sounds_enabled') === 'false'
+    ) {
+      navigator.vibrate(80)
+    }
+
     bgModalShare.classList.replace('opacity-100', 'opacity-0')
     bgModalShare.classList.replace('pointer-events-auto', 'pointer-events-none')
 
@@ -248,6 +283,13 @@ if (navigator.share) {
     link.addEventListener('click', () => {
       if (localStorage.getItem('sounds_enabled') === 'true') {
         soundPage.play()
+      }
+
+      if (
+        'vibrate' in navigator &&
+        localStorage.getItem('sounds_enabled') === 'false'
+      ) {
+        navigator.vibrate(80)
       }
 
       bgModalShare.classList.replace('opacity-100', 'opacity-0')
@@ -319,6 +361,13 @@ colorSchemeDark.addListener(e => toggleDarkMode(e.matches))
 switchScheme.addEventListener('change', () => {
   if (localStorage.getItem('sounds_enabled') === 'true') {
     soundDarkMode.play()
+  }
+
+  if (
+    'vibrate' in navigator &&
+    localStorage.getItem('sounds_enabled') === 'false'
+  ) {
+    navigator.vibrate(80)
   }
 
   darkModeState = !darkModeState
@@ -424,6 +473,13 @@ if (navigator.share) {
       soundPage.play()
     }
 
+    if (
+      'vibrate' in navigator &&
+      localStorage.getItem('sounds_enabled') === 'false'
+    ) {
+      navigator.vibrate(80)
+    }
+
     navigator.share(shareData)
   })
 }
@@ -467,6 +523,13 @@ if (document.getElementById('whatsapp-city')) {
     shareCity.addEventListener('click', () => {
       if (localStorage.getItem('sounds_enabled') === 'true') {
         soundPage.play()
+      }
+
+      if (
+        'vibrate' in navigator &&
+        localStorage.getItem('sounds_enabled') === 'false'
+      ) {
+        navigator.vibrate(80)
       }
 
       navigator.share(shareDataCity)
@@ -573,6 +636,13 @@ function showUpdateFounded(registration) {
   reloadBtn.addEventListener('click', () => {
     if (localStorage.getItem('sounds_enabled') === 'true') {
       soundPage.play()
+    }
+
+    if (
+      'vibrate' in navigator &&
+      localStorage.getItem('sounds_enabled') === 'false'
+    ) {
+      navigator.vibrate(80)
     }
 
     if (registration.waiting) {
@@ -693,6 +763,13 @@ installBtn.addEventListener('click', async () => {
     soundPage.play()
   }
 
+  if (
+    'vibrate' in navigator &&
+    localStorage.getItem('sounds_enabled') === 'false'
+  ) {
+    navigator.vibrate(80)
+  }
+
   deferredPrompt.prompt()
 
   const { outcome } = await deferredPrompt.userChoice
@@ -712,6 +789,12 @@ pages.forEach(page => {
   page.addEventListener('click', () => {
     if (localStorage.getItem('sounds_enabled') === 'true') {
       soundPage.play()
+    }
+    if (
+      'vibrate' in navigator &&
+      localStorage.getItem('sounds_enabled') === 'false'
+    ) {
+      navigator.vibrate(80)
     }
   })
 })

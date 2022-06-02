@@ -44,6 +44,13 @@ formFilter.addEventListener('change', e => {
       soundRadio.play()
     }
 
+    if (
+      'vibrate' in navigator &&
+      localStorage.getItem('sounds_enabled') === 'false'
+    ) {
+      navigator.vibrate(80)
+    }
+
     localStorage.setItem(setItemName, 'managua')
 
     cityOneBuses.forEach(cityOne => {
@@ -72,6 +79,13 @@ formFilter.addEventListener('change', e => {
   if (e.target.id === 'city-two' && radioCityTwo.checked) {
     if (localStorage.getItem('sounds_enabled') === 'true') {
       soundRadio.play()
+    }
+
+    if (
+      'vibrate' in navigator &&
+      localStorage.getItem('sounds_enabled') === 'false'
+    ) {
+      navigator.vibrate(80)
     }
 
     localStorage.setItem(setItemName, 'matagalpa')

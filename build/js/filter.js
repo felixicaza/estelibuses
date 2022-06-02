@@ -46,6 +46,13 @@ formFilter.addEventListener('change', e => {
       soundRadio.play()
     }
 
+    if (
+      'vibrate' in navigator &&
+      localStorage.getItem('sounds_enabled') === 'false'
+    ) {
+      navigator.vibrate(80)
+    }
+
     localStorage.setItem('managua_transport_type', 'all')
 
     // TODO: Borrar cuándo sea necesario
@@ -94,6 +101,13 @@ formFilter.addEventListener('change', e => {
       soundRadio.play()
     }
 
+    if (
+      'vibrate' in navigator &&
+      localStorage.getItem('sounds_enabled') === 'false'
+    ) {
+      navigator.vibrate(80)
+    }
+
     localStorage.setItem('managua_transport_type', 'express')
 
     // TODO: Borrar cuándo sea necesario
@@ -134,6 +148,13 @@ formFilter.addEventListener('change', e => {
   if (e.target.id === 'routed' && radioRouted.checked) {
     if (localStorage.getItem('sounds_enabled') === 'true') {
       soundRadio.play()
+    }
+
+    if (
+      'vibrate' in navigator &&
+      localStorage.getItem('sounds_enabled') === 'false'
+    ) {
+      navigator.vibrate(80)
     }
 
     localStorage.setItem('managua_transport_type', 'routed')
