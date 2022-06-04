@@ -81,6 +81,9 @@
     "ui": {
       "enabled": true,
       "port": 7500
+    },
+    "hosting": {
+      "port": 6000
     }
   }
 }
