@@ -502,308 +502,265 @@ class Component {
     }
 }
 
-function toArray(arr) {
-  return Array.prototype.slice.call(arr);
-}
+const instanceOfAny = (object, constructors) => constructors.some((c) => object instanceof c);
 
+let idbProxyableTypes;
+let cursorAdvanceMethods;
+// This is a function to prevent it throwing up in node environments.
+function getIdbProxyableTypes() {
+    return (idbProxyableTypes ||
+        (idbProxyableTypes = [
+            IDBDatabase,
+            IDBObjectStore,
+            IDBIndex,
+            IDBCursor,
+            IDBTransaction,
+        ]));
+}
+// This is a function to prevent it throwing up in node environments.
+function getCursorAdvanceMethods() {
+    return (cursorAdvanceMethods ||
+        (cursorAdvanceMethods = [
+            IDBCursor.prototype.advance,
+            IDBCursor.prototype.continue,
+            IDBCursor.prototype.continuePrimaryKey,
+        ]));
+}
+const cursorRequestMap = new WeakMap();
+const transactionDoneMap = new WeakMap();
+const transactionStoreNamesMap = new WeakMap();
+const transformCache = new WeakMap();
+const reverseTransformCache = new WeakMap();
 function promisifyRequest(request) {
-  return new Promise(function(resolve, reject) {
-    request.onsuccess = function() {
-      resolve(request.result);
-    };
-
-    request.onerror = function() {
-      reject(request.error);
-    };
-  });
-}
-
-function promisifyRequestCall(obj, method, args) {
-  var request;
-  var p = new Promise(function(resolve, reject) {
-    request = obj[method].apply(obj, args);
-    promisifyRequest(request).then(resolve, reject);
-  });
-
-  p.request = request;
-  return p;
-}
-
-function promisifyCursorRequestCall(obj, method, args) {
-  var p = promisifyRequestCall(obj, method, args);
-  return p.then(function(value) {
-    if (!value) return;
-    return new Cursor(value, p.request);
-  });
-}
-
-function proxyProperties(ProxyClass, targetProp, properties) {
-  properties.forEach(function(prop) {
-    Object.defineProperty(ProxyClass.prototype, prop, {
-      get: function() {
-        return this[targetProp][prop];
-      },
-      set: function(val) {
-        this[targetProp][prop] = val;
-      }
+    const promise = new Promise((resolve, reject) => {
+        const unlisten = () => {
+            request.removeEventListener('success', success);
+            request.removeEventListener('error', error);
+        };
+        const success = () => {
+            resolve(wrap(request.result));
+            unlisten();
+        };
+        const error = () => {
+            reject(request.error);
+            unlisten();
+        };
+        request.addEventListener('success', success);
+        request.addEventListener('error', error);
     });
-  });
-}
-
-function proxyRequestMethods(ProxyClass, targetProp, Constructor, properties) {
-  properties.forEach(function(prop) {
-    if (!(prop in Constructor.prototype)) return;
-    ProxyClass.prototype[prop] = function() {
-      return promisifyRequestCall(this[targetProp], prop, arguments);
-    };
-  });
-}
-
-function proxyMethods(ProxyClass, targetProp, Constructor, properties) {
-  properties.forEach(function(prop) {
-    if (!(prop in Constructor.prototype)) return;
-    ProxyClass.prototype[prop] = function() {
-      return this[targetProp][prop].apply(this[targetProp], arguments);
-    };
-  });
-}
-
-function proxyCursorRequestMethods(ProxyClass, targetProp, Constructor, properties) {
-  properties.forEach(function(prop) {
-    if (!(prop in Constructor.prototype)) return;
-    ProxyClass.prototype[prop] = function() {
-      return promisifyCursorRequestCall(this[targetProp], prop, arguments);
-    };
-  });
-}
-
-function Index(index) {
-  this._index = index;
-}
-
-proxyProperties(Index, '_index', [
-  'name',
-  'keyPath',
-  'multiEntry',
-  'unique'
-]);
-
-proxyRequestMethods(Index, '_index', IDBIndex, [
-  'get',
-  'getKey',
-  'getAll',
-  'getAllKeys',
-  'count'
-]);
-
-proxyCursorRequestMethods(Index, '_index', IDBIndex, [
-  'openCursor',
-  'openKeyCursor'
-]);
-
-function Cursor(cursor, request) {
-  this._cursor = cursor;
-  this._request = request;
-}
-
-proxyProperties(Cursor, '_cursor', [
-  'direction',
-  'key',
-  'primaryKey',
-  'value'
-]);
-
-proxyRequestMethods(Cursor, '_cursor', IDBCursor, [
-  'update',
-  'delete'
-]);
-
-// proxy 'next' methods
-['advance', 'continue', 'continuePrimaryKey'].forEach(function(methodName) {
-  if (!(methodName in IDBCursor.prototype)) return;
-  Cursor.prototype[methodName] = function() {
-    var cursor = this;
-    var args = arguments;
-    return Promise.resolve().then(function() {
-      cursor._cursor[methodName].apply(cursor._cursor, args);
-      return promisifyRequest(cursor._request).then(function(value) {
-        if (!value) return;
-        return new Cursor(value, cursor._request);
-      });
-    });
-  };
-});
-
-function ObjectStore(store) {
-  this._store = store;
-}
-
-ObjectStore.prototype.createIndex = function() {
-  return new Index(this._store.createIndex.apply(this._store, arguments));
-};
-
-ObjectStore.prototype.index = function() {
-  return new Index(this._store.index.apply(this._store, arguments));
-};
-
-proxyProperties(ObjectStore, '_store', [
-  'name',
-  'keyPath',
-  'indexNames',
-  'autoIncrement'
-]);
-
-proxyRequestMethods(ObjectStore, '_store', IDBObjectStore, [
-  'put',
-  'add',
-  'delete',
-  'clear',
-  'get',
-  'getAll',
-  'getKey',
-  'getAllKeys',
-  'count'
-]);
-
-proxyCursorRequestMethods(ObjectStore, '_store', IDBObjectStore, [
-  'openCursor',
-  'openKeyCursor'
-]);
-
-proxyMethods(ObjectStore, '_store', IDBObjectStore, [
-  'deleteIndex'
-]);
-
-function Transaction(idbTransaction) {
-  this._tx = idbTransaction;
-  this.complete = new Promise(function(resolve, reject) {
-    idbTransaction.oncomplete = function() {
-      resolve();
-    };
-    idbTransaction.onerror = function() {
-      reject(idbTransaction.error);
-    };
-    idbTransaction.onabort = function() {
-      reject(idbTransaction.error);
-    };
-  });
-}
-
-Transaction.prototype.objectStore = function() {
-  return new ObjectStore(this._tx.objectStore.apply(this._tx, arguments));
-};
-
-proxyProperties(Transaction, '_tx', [
-  'objectStoreNames',
-  'mode'
-]);
-
-proxyMethods(Transaction, '_tx', IDBTransaction, [
-  'abort'
-]);
-
-function UpgradeDB(db, oldVersion, transaction) {
-  this._db = db;
-  this.oldVersion = oldVersion;
-  this.transaction = new Transaction(transaction);
-}
-
-UpgradeDB.prototype.createObjectStore = function() {
-  return new ObjectStore(this._db.createObjectStore.apply(this._db, arguments));
-};
-
-proxyProperties(UpgradeDB, '_db', [
-  'name',
-  'version',
-  'objectStoreNames'
-]);
-
-proxyMethods(UpgradeDB, '_db', IDBDatabase, [
-  'deleteObjectStore',
-  'close'
-]);
-
-function DB(db) {
-  this._db = db;
-}
-
-DB.prototype.transaction = function() {
-  return new Transaction(this._db.transaction.apply(this._db, arguments));
-};
-
-proxyProperties(DB, '_db', [
-  'name',
-  'version',
-  'objectStoreNames'
-]);
-
-proxyMethods(DB, '_db', IDBDatabase, [
-  'close'
-]);
-
-// Add cursor iterators
-// TODO: remove this once browsers do the right thing with promises
-['openCursor', 'openKeyCursor'].forEach(function(funcName) {
-  [ObjectStore, Index].forEach(function(Constructor) {
-    // Don't create iterateKeyCursor if openKeyCursor doesn't exist.
-    if (!(funcName in Constructor.prototype)) return;
-
-    Constructor.prototype[funcName.replace('open', 'iterate')] = function() {
-      var args = toArray(arguments);
-      var callback = args[args.length - 1];
-      var nativeObject = this._store || this._index;
-      var request = nativeObject[funcName].apply(nativeObject, args.slice(0, -1));
-      request.onsuccess = function() {
-        callback(request.result);
-      };
-    };
-  });
-});
-
-// polyfill getAll
-[Index, ObjectStore].forEach(function(Constructor) {
-  if (Constructor.prototype.getAll) return;
-  Constructor.prototype.getAll = function(query, count) {
-    var instance = this;
-    var items = [];
-
-    return new Promise(function(resolve) {
-      instance.iterateCursor(query, function(cursor) {
-        if (!cursor) {
-          resolve(items);
-          return;
+    promise
+        .then((value) => {
+        // Since cursoring reuses the IDBRequest (*sigh*), we cache it for later retrieval
+        // (see wrapFunction).
+        if (value instanceof IDBCursor) {
+            cursorRequestMap.set(value, request);
         }
-        items.push(cursor.value);
-
-        if (count !== undefined && items.length == count) {
-          resolve(items);
-          return;
-        }
-        cursor.continue();
-      });
-    });
-  };
-});
-
-function openDb(name, version, upgradeCallback) {
-  var p = promisifyRequestCall(indexedDB, 'open', [name, version]);
-  var request = p.request;
-
-  if (request) {
-    request.onupgradeneeded = function(event) {
-      if (upgradeCallback) {
-        upgradeCallback(new UpgradeDB(request.result, event.oldVersion, request.transaction));
-      }
-    };
-  }
-
-  return p.then(function(db) {
-    return new DB(db);
-  });
+        // Catching to avoid "Uncaught Promise exceptions"
+    })
+        .catch(() => { });
+    // This mapping exists in reverseTransformCache but doesn't doesn't exist in transformCache. This
+    // is because we create many promises from a single IDBRequest.
+    reverseTransformCache.set(promise, request);
+    return promise;
 }
+function cacheDonePromiseForTransaction(tx) {
+    // Early bail if we've already created a done promise for this transaction.
+    if (transactionDoneMap.has(tx))
+        return;
+    const done = new Promise((resolve, reject) => {
+        const unlisten = () => {
+            tx.removeEventListener('complete', complete);
+            tx.removeEventListener('error', error);
+            tx.removeEventListener('abort', error);
+        };
+        const complete = () => {
+            resolve();
+            unlisten();
+        };
+        const error = () => {
+            reject(tx.error || new DOMException('AbortError', 'AbortError'));
+            unlisten();
+        };
+        tx.addEventListener('complete', complete);
+        tx.addEventListener('error', error);
+        tx.addEventListener('abort', error);
+    });
+    // Cache it for later retrieval.
+    transactionDoneMap.set(tx, done);
+}
+let idbProxyTraps = {
+    get(target, prop, receiver) {
+        if (target instanceof IDBTransaction) {
+            // Special handling for transaction.done.
+            if (prop === 'done')
+                return transactionDoneMap.get(target);
+            // Polyfill for objectStoreNames because of Edge.
+            if (prop === 'objectStoreNames') {
+                return target.objectStoreNames || transactionStoreNamesMap.get(target);
+            }
+            // Make tx.store return the only store in the transaction, or undefined if there are many.
+            if (prop === 'store') {
+                return receiver.objectStoreNames[1]
+                    ? undefined
+                    : receiver.objectStore(receiver.objectStoreNames[0]);
+            }
+        }
+        // Else transform whatever we get back.
+        return wrap(target[prop]);
+    },
+    set(target, prop, value) {
+        target[prop] = value;
+        return true;
+    },
+    has(target, prop) {
+        if (target instanceof IDBTransaction &&
+            (prop === 'done' || prop === 'store')) {
+            return true;
+        }
+        return prop in target;
+    },
+};
+function replaceTraps(callback) {
+    idbProxyTraps = callback(idbProxyTraps);
+}
+function wrapFunction(func) {
+    // Due to expected object equality (which is enforced by the caching in `wrap`), we
+    // only create one new func per func.
+    // Edge doesn't support objectStoreNames (booo), so we polyfill it here.
+    if (func === IDBDatabase.prototype.transaction &&
+        !('objectStoreNames' in IDBTransaction.prototype)) {
+        return function (storeNames, ...args) {
+            const tx = func.call(unwrap(this), storeNames, ...args);
+            transactionStoreNamesMap.set(tx, storeNames.sort ? storeNames.sort() : [storeNames]);
+            return wrap(tx);
+        };
+    }
+    // Cursor methods are special, as the behaviour is a little more different to standard IDB. In
+    // IDB, you advance the cursor and wait for a new 'success' on the IDBRequest that gave you the
+    // cursor. It's kinda like a promise that can resolve with many values. That doesn't make sense
+    // with real promises, so each advance methods returns a new promise for the cursor object, or
+    // undefined if the end of the cursor has been reached.
+    if (getCursorAdvanceMethods().includes(func)) {
+        return function (...args) {
+            // Calling the original function with the proxy as 'this' causes ILLEGAL INVOCATION, so we use
+            // the original object.
+            func.apply(unwrap(this), args);
+            return wrap(cursorRequestMap.get(this));
+        };
+    }
+    return function (...args) {
+        // Calling the original function with the proxy as 'this' causes ILLEGAL INVOCATION, so we use
+        // the original object.
+        return wrap(func.apply(unwrap(this), args));
+    };
+}
+function transformCachableValue(value) {
+    if (typeof value === 'function')
+        return wrapFunction(value);
+    // This doesn't return, it just creates a 'done' promise for the transaction,
+    // which is later returned for transaction.done (see idbObjectHandler).
+    if (value instanceof IDBTransaction)
+        cacheDonePromiseForTransaction(value);
+    if (instanceOfAny(value, getIdbProxyableTypes()))
+        return new Proxy(value, idbProxyTraps);
+    // Return the same value back if we're not going to transform it.
+    return value;
+}
+function wrap(value) {
+    // We sometimes generate multiple promises from a single IDBRequest (eg when cursoring), because
+    // IDB is weird and a single IDBRequest can yield many responses, so these can't be cached.
+    if (value instanceof IDBRequest)
+        return promisifyRequest(value);
+    // If we've already transformed this value before, reuse the transformed value.
+    // This is faster, but it also provides object equality.
+    if (transformCache.has(value))
+        return transformCache.get(value);
+    const newValue = transformCachableValue(value);
+    // Not all types are transformed.
+    // These may be primitive types, so they can't be WeakMap keys.
+    if (newValue !== value) {
+        transformCache.set(value, newValue);
+        reverseTransformCache.set(newValue, value);
+    }
+    return newValue;
+}
+const unwrap = (value) => reverseTransformCache.get(value);
+
+/**
+ * Open a database.
+ *
+ * @param name Name of the database.
+ * @param version Schema version.
+ * @param callbacks Additional callbacks.
+ */
+function openDB(name, version, { blocked, upgrade, blocking, terminated } = {}) {
+    const request = indexedDB.open(name, version);
+    const openPromise = wrap(request);
+    if (upgrade) {
+        request.addEventListener('upgradeneeded', (event) => {
+            upgrade(wrap(request.result), event.oldVersion, event.newVersion, wrap(request.transaction));
+        });
+    }
+    if (blocked)
+        request.addEventListener('blocked', () => blocked());
+    openPromise
+        .then((db) => {
+        if (terminated)
+            db.addEventListener('close', () => terminated());
+        if (blocking)
+            db.addEventListener('versionchange', () => blocking());
+    })
+        .catch(() => { });
+    return openPromise;
+}
+
+const readMethods = ['get', 'getKey', 'getAll', 'getAllKeys', 'count'];
+const writeMethods = ['put', 'add', 'delete', 'clear'];
+const cachedMethods = new Map();
+function getMethod(target, prop) {
+    if (!(target instanceof IDBDatabase &&
+        !(prop in target) &&
+        typeof prop === 'string')) {
+        return;
+    }
+    if (cachedMethods.get(prop))
+        return cachedMethods.get(prop);
+    const targetFuncName = prop.replace(/FromIndex$/, '');
+    const useIndex = prop !== targetFuncName;
+    const isWrite = writeMethods.includes(targetFuncName);
+    if (
+    // Bail if the target doesn't exist on the target. Eg, getAll isn't in Edge.
+    !(targetFuncName in (useIndex ? IDBIndex : IDBObjectStore).prototype) ||
+        !(isWrite || readMethods.includes(targetFuncName))) {
+        return;
+    }
+    const method = async function (storeName, ...args) {
+        // isWrite ? 'readwrite' : undefined gzipps better, but fails in Edge :(
+        const tx = this.transaction(storeName, isWrite ? 'readwrite' : 'readonly');
+        let target = tx.store;
+        if (useIndex)
+            target = target.index(args.shift());
+        // Must reject if op rejects.
+        // If it's a write operation, must reject if tx.done rejects.
+        // Must reject with op rejection first.
+        // Must resolve with op value.
+        // Must handle both promises (no unhandled rejections)
+        return (await Promise.all([
+            target[targetFuncName](...args),
+            isWrite && tx.done,
+        ]))[0];
+    };
+    cachedMethods.set(prop, method);
+    return method;
+}
+replaceTraps((oldTraps) => ({
+    ...oldTraps,
+    get: (target, prop, receiver) => getMethod(target, prop) || oldTraps.get(target, prop, receiver),
+    has: (target, prop) => !!getMethod(target, prop) || oldTraps.has(target, prop),
+}));
 
 const name$1 = "@firebase/installations";
-const version$1 = "0.5.5";
+const version$1 = "0.5.9";
 
 /**
  * @license
@@ -946,9 +903,19 @@ function getAuthorizationHeader(refreshToken) {
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-async function createInstallationRequest(appConfig, { fid }) {
+async function createInstallationRequest({ appConfig, heartbeatServiceProvider }, { fid }) {
     const endpoint = getInstallationsEndpoint(appConfig);
     const headers = getHeaders$1(appConfig);
+    // If heartbeat service exists, add the heartbeat string to the header.
+    const heartbeatService = heartbeatServiceProvider.getImmediate({
+        optional: true
+    });
+    if (heartbeatService) {
+        const heartbeatsHeader = await heartbeatService.getHeartbeatsHeader();
+        if (heartbeatsHeader) {
+            headers.append('x-firebase-client', heartbeatsHeader);
+        }
+    }
     const body = {
         fid,
         authVersion: INTERNAL_AUTH_VERSION,
@@ -1170,15 +1137,17 @@ const OBJECT_STORE_NAME = 'firebase-installations-store';
 let dbPromise = null;
 function getDbPromise() {
     if (!dbPromise) {
-        dbPromise = openDb(DATABASE_NAME, DATABASE_VERSION, upgradeDB => {
-            // We don't use 'break' in this switch statement, the fall-through
-            // behavior is what we want, because if there are multiple versions between
-            // the old version and the current version, we want ALL the migrations
-            // that correspond to those versions to run, not only the last one.
-            // eslint-disable-next-line default-case
-            switch (upgradeDB.oldVersion) {
-                case 0:
-                    upgradeDB.createObjectStore(OBJECT_STORE_NAME);
+        dbPromise = openDB(DATABASE_NAME, DATABASE_VERSION, {
+            upgrade: (db, oldVersion) => {
+                // We don't use 'break' in this switch statement, the fall-through
+                // behavior is what we want, because if there are multiple versions between
+                // the old version and the current version, we want ALL the migrations
+                // that correspond to those versions to run, not only the last one.
+                // eslint-disable-next-line default-case
+                switch (oldVersion) {
+                    case 0:
+                        db.createObjectStore(OBJECT_STORE_NAME);
+                }
             }
         });
     }
@@ -1190,9 +1159,9 @@ async function set(appConfig, value) {
     const db = await getDbPromise();
     const tx = db.transaction(OBJECT_STORE_NAME, 'readwrite');
     const objectStore = tx.objectStore(OBJECT_STORE_NAME);
-    const oldValue = await objectStore.get(key);
+    const oldValue = (await objectStore.get(key));
     await objectStore.put(value, key);
-    await tx.complete;
+    await tx.done;
     if (!oldValue || oldValue.fid !== value.fid) {
         fidChanged(appConfig, value.fid);
     }
@@ -1204,7 +1173,7 @@ async function remove(appConfig) {
     const db = await getDbPromise();
     const tx = db.transaction(OBJECT_STORE_NAME, 'readwrite');
     await tx.objectStore(OBJECT_STORE_NAME).delete(key);
-    await tx.complete;
+    await tx.done;
 }
 /**
  * Atomically updates a record with the result of updateFn, which gets
@@ -1217,7 +1186,7 @@ async function update(appConfig, updateFn) {
     const db = await getDbPromise();
     const tx = db.transaction(OBJECT_STORE_NAME, 'readwrite');
     const store = tx.objectStore(OBJECT_STORE_NAME);
-    const oldValue = await store.get(key);
+    const oldValue = (await store.get(key));
     const newValue = updateFn(oldValue);
     if (newValue === undefined) {
         await store.delete(key);
@@ -1225,7 +1194,7 @@ async function update(appConfig, updateFn) {
     else {
         await store.put(newValue, key);
     }
-    await tx.complete;
+    await tx.done;
     if (newValue && (!oldValue || oldValue.fid !== newValue.fid)) {
         fidChanged(appConfig, newValue.fid);
     }
@@ -1252,11 +1221,11 @@ async function update(appConfig, updateFn) {
  * Updates and returns the InstallationEntry from the database.
  * Also triggers a registration request if it is necessary and possible.
  */
-async function getInstallationEntry(appConfig) {
+async function getInstallationEntry(installations) {
     let registrationPromise;
-    const installationEntry = await update(appConfig, oldEntry => {
+    const installationEntry = await update(installations.appConfig, oldEntry => {
         const installationEntry = updateOrCreateInstallationEntry(oldEntry);
-        const entryWithPromise = triggerRegistrationIfNecessary(appConfig, installationEntry);
+        const entryWithPromise = triggerRegistrationIfNecessary(installations, installationEntry);
         registrationPromise = entryWithPromise.registrationPromise;
         return entryWithPromise.installationEntry;
     });
@@ -1287,7 +1256,7 @@ function updateOrCreateInstallationEntry(oldEntry) {
  * If registrationPromise does not exist, the installationEntry is guaranteed
  * to be registered.
  */
-function triggerRegistrationIfNecessary(appConfig, installationEntry) {
+function triggerRegistrationIfNecessary(installations, installationEntry) {
     if (installationEntry.registrationStatus === 0 /* NOT_STARTED */) {
         if (!navigator.onLine) {
             // Registration required but app is offline.
@@ -1303,13 +1272,13 @@ function triggerRegistrationIfNecessary(appConfig, installationEntry) {
             registrationStatus: 1 /* IN_PROGRESS */,
             registrationTime: Date.now()
         };
-        const registrationPromise = registerInstallation(appConfig, inProgressEntry);
+        const registrationPromise = registerInstallation(installations, inProgressEntry);
         return { installationEntry: inProgressEntry, registrationPromise };
     }
     else if (installationEntry.registrationStatus === 1 /* IN_PROGRESS */) {
         return {
             installationEntry,
-            registrationPromise: waitUntilFidRegistration(appConfig)
+            registrationPromise: waitUntilFidRegistration(installations)
         };
     }
     else {
@@ -1317,20 +1286,20 @@ function triggerRegistrationIfNecessary(appConfig, installationEntry) {
     }
 }
 /** This will be executed only once for each new Firebase Installation. */
-async function registerInstallation(appConfig, installationEntry) {
+async function registerInstallation(installations, installationEntry) {
     try {
-        const registeredInstallationEntry = await createInstallationRequest(appConfig, installationEntry);
-        return set(appConfig, registeredInstallationEntry);
+        const registeredInstallationEntry = await createInstallationRequest(installations, installationEntry);
+        return set(installations.appConfig, registeredInstallationEntry);
     }
     catch (e) {
         if (isServerError(e) && e.customData.serverCode === 409) {
             // Server returned a "FID can not be used" error.
             // Generate a new ID next time.
-            await remove(appConfig);
+            await remove(installations.appConfig);
         }
         else {
             // Registration failed. Set FID as not registered.
-            await set(appConfig, {
+            await set(installations.appConfig, {
                 fid: installationEntry.fid,
                 registrationStatus: 0 /* NOT_STARTED */
             });
@@ -1339,19 +1308,19 @@ async function registerInstallation(appConfig, installationEntry) {
     }
 }
 /** Call if FID registration is pending in another request. */
-async function waitUntilFidRegistration(appConfig) {
+async function waitUntilFidRegistration(installations) {
     // Unfortunately, there is no way of reliably observing when a value in
     // IndexedDB changes (yet, see https://github.com/WICG/indexed-db-observers),
     // so we need to poll.
-    let entry = await updateInstallationRequest(appConfig);
+    let entry = await updateInstallationRequest(installations.appConfig);
     while (entry.registrationStatus === 1 /* IN_PROGRESS */) {
         // createInstallation request still in progress.
         await sleep(100);
-        entry = await updateInstallationRequest(appConfig);
+        entry = await updateInstallationRequest(installations.appConfig);
     }
     if (entry.registrationStatus === 0 /* NOT_STARTED */) {
         // The request timed out or failed in a different call. Try again.
-        const { installationEntry, registrationPromise } = await getInstallationEntry(appConfig);
+        const { installationEntry, registrationPromise } = await getInstallationEntry(installations);
         if (registrationPromise) {
             return registrationPromise;
         }
@@ -1408,19 +1377,23 @@ function hasInstallationRequestTimedOut(installationEntry) {
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-async function generateAuthTokenRequest({ appConfig, platformLoggerProvider }, installationEntry) {
+async function generateAuthTokenRequest({ appConfig, heartbeatServiceProvider }, installationEntry) {
     const endpoint = getGenerateAuthTokenEndpoint(appConfig, installationEntry);
     const headers = getHeadersWithAuth(appConfig, installationEntry);
-    // If platform logger exists, add the platform info string to the header.
-    const platformLogger = platformLoggerProvider.getImmediate({
+    // If heartbeat service exists, add the heartbeat string to the header.
+    const heartbeatService = heartbeatServiceProvider.getImmediate({
         optional: true
     });
-    if (platformLogger) {
-        headers.append('x-firebase-client', platformLogger.getPlatformInfoString());
+    if (heartbeatService) {
+        const heartbeatsHeader = await heartbeatService.getHeartbeatsHeader();
+        if (heartbeatsHeader) {
+            headers.append('x-firebase-client', heartbeatsHeader);
+        }
     }
     const body = {
         installation: {
-            sdkVersion: PACKAGE_VERSION
+            sdkVersion: PACKAGE_VERSION,
+            appId: appConfig.appId
         }
     };
     const request = {
@@ -1612,7 +1585,7 @@ function hasAuthTokenRequestTimedOut(authToken) {
  */
 async function getId(installations) {
     const installationsImpl = installations;
-    const { installationEntry, registrationPromise } = await getInstallationEntry(installationsImpl.appConfig);
+    const { installationEntry, registrationPromise } = await getInstallationEntry(installationsImpl);
     if (registrationPromise) {
         registrationPromise.catch(console.error);
     }
@@ -1650,14 +1623,14 @@ async function getId(installations) {
  */
 async function getToken(installations, forceRefresh = false) {
     const installationsImpl = installations;
-    await completeInstallationRegistration(installationsImpl.appConfig);
+    await completeInstallationRegistration(installationsImpl);
     // At this point we either have a Registered Installation in the DB, or we've
     // already thrown an error.
     const authToken = await refreshAuthToken(installationsImpl, forceRefresh);
     return authToken.token;
 }
-async function completeInstallationRegistration(appConfig) {
-    const { registrationPromise } = await getInstallationEntry(appConfig);
+async function completeInstallationRegistration(installations) {
+    const { registrationPromise } = await getInstallationEntry(installations);
     if (registrationPromise) {
         // A createInstallation request is in progress. Wait until it finishes.
         await registrationPromise;
@@ -1733,11 +1706,11 @@ const publicFactory = (container) => {
     const app = container.getProvider('app').getImmediate();
     // Throws if app isn't configured properly.
     const appConfig = extractAppConfig(app);
-    const platformLoggerProvider = _getProvider(app, 'platform-logger');
+    const heartbeatServiceProvider = _getProvider(app, 'heartbeat');
     const installationsImpl = {
         app,
         appConfig,
-        platformLoggerProvider,
+        heartbeatServiceProvider,
         _delete: () => Promise.resolve()
     };
     return installationsImpl;
@@ -2629,6 +2602,9 @@ async function logEvent$1(gtagFunction, initializationPromise, eventName, eventP
 /**
  * Set screen_name parameter for this Google Analytics ID.
  *
+ * @deprecated Use {@link logEvent} with `eventName` as 'screen_view' and add relevant `eventParams`.
+ * See {@link https://firebase.google.com/docs/analytics/screenviews | Track Screenviews}.
+ *
  * @param gtagFunction Wrapped gtag function that waits for fid to be set before sending an event
  * @param screenName Screen name string to set.
  */
@@ -2704,7 +2680,7 @@ async function setAnalyticsCollectionEnabled$1(initializationPromise, enabled) {
  *
  * @public
  *
- * @param app - The {@link https://www.gstatic.com/firebasejs/9.6.5/firebase-app.js#FirebaseApp} to use.
+ * @param app - The {@link https://www.gstatic.com/firebasejs/9.8.2/firebase-app.js#FirebaseApp} to use.
  */
 function getAnalytics(app = getApp()) {
     app = getModularInstance(app);
@@ -2720,7 +2696,7 @@ function getAnalytics(app = getApp()) {
  *
  * @public
  *
- * @param app - The {@link https://www.gstatic.com/firebasejs/9.6.5/firebase-app.js#FirebaseApp} to use.
+ * @param app - The {@link https://www.gstatic.com/firebasejs/9.8.2/firebase-app.js#FirebaseApp} to use.
  */
 function initializeAnalytics(app, options = {}) {
     // Dependencies
@@ -2770,6 +2746,9 @@ async function isSupported() {
  * Use gtag `config` command to set `screen_name`.
  *
  * @public
+ *
+ * @deprecated Use {@link logEvent} with `eventName` as 'screen_view' and add relevant `eventParams`.
+ * See {@link https://firebase.google.com/docs/analytics/screenviews | Track Screenviews}.
  *
  * @param analyticsInstance - The {@link Analytics} instance.
  * @param screenName - Screen name to set.
@@ -2829,7 +2808,7 @@ function logEvent(analyticsInstance, eventName, eventParams, options) {
 }
 
 const name = "@firebase/analytics";
-const version = "0.7.5";
+const version = "0.7.9";
 
 /**
  * Firebase Analytics
@@ -2866,5 +2845,3 @@ function registerAnalytics() {
 registerAnalytics();
 
 export { getAnalytics, initializeAnalytics, isSupported, logEvent, setAnalyticsCollectionEnabled, setCurrentScreen, setUserId, setUserProperties, settings };
-
-//# sourceMappingURL=firebase-analytics.js.map
