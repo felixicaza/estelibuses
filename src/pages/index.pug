@@ -38,6 +38,12 @@ block append defer-scripts
     fetchpriority="highest"
     importance="highest"
   )
+  script(
+    type="module"
+    src=`${ASSETS_PATH}js/likes.js`
+    fetchpriority="low"
+    importance="low"
+  )
 
 block append content
   include ../content/header
