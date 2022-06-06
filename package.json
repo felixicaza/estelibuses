@@ -34,6 +34,7 @@
     "optimize:html": "rimraf build/**/*.html",
     "optimize:html:restore": "git restore build/google4ed26fc938fd8294.html",
     "optimize:pug": "rimraf src/pages/404.pug src/pages/acerca-de-estelibuses src/pages/anuncios src/pages/contacto src/pages/offline.pug src/pages/politica-de-privacidad src/pages/terminal-norte-esteli src/pages/terminal-sur-esteli",
+    "optimize:restore": "git restore src/pages/404.pug src/pages/acerca-de-estelibuses src/pages/anuncios src/pages/contacto src/pages/offline.pug src/pages/politica-de-privacidad src/pages/terminal-norte-esteli src/pages/terminal-sur-esteli",
     "postcss": "postcss build/**/*.css --dir public/css/ --no-map --env production",
     "postcss:windi": "postcss public/css/lib/windi.css -o public/css/lib/windi.css --no-map --env production",
     "prepare": "husky install",
