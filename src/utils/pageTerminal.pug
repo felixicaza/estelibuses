@@ -86,9 +86,15 @@ mixin pageTerminal(idHeader, title, description, location, phone, origin, ...cit
             ul(class="space-y-4 text-center")
               each city, index in cities
                 li
+                  - if (convertCityName[index] === 'tisey---la-estanzuela') {
+                  - convertCityName[index] = "tisey-la-estanzuela"
+                  - }
+                  - if (convertCityName[index] === 'santa-cruz---la-ceiba') {
+                  - convertCityName[index] = "santa-cruz-la-ceiba"
+                  - }
                   a(
                     class="text-orange-500 any-hover:underline active:underline"
-                    href=`/terminal-${origin}-esteli/horarios-esteli-${convertCityName[index] === 'tisey---la-estanzuela' ? 'tisey-la-estanzuela' : convertCityName[index]}`
+                    href=`/terminal-${origin}-esteli/horarios-esteli-${convertCityName[index]}`
                   )= city
 
   if origin === 'sur'
