@@ -6,7 +6,7 @@ block append variables
   - const ASSETS_PATH = "../"
   - const HAS_CRITICAL_CSS = false
   - const APPLICATION_NAME = "Estelí Buses"
-  - const META_DESCRIPTION = "Publicita tu negocio en la plataforma para que des a conocer ante los usuarios."
+  - const META_DESCRIPTION = "Publicita tu negocio en la plataforma para que des a conocer tu negocio ante los usuarios."
   - const META_ROBOTS = "noindex, nofollow"
   - const LANGUAGE = "es"
   - const CURRENT_URL = `${URL}/anuncios`
@@ -21,16 +21,15 @@ block append title
   title= SOCIAL_TITLE
 
 block append preconnect
-  link(crossorigin href="//pagead2.googlesyndication.com/" rel="preconnect")/
 
 block append async-scripts
-  script(
-    src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4534198821642047"
-    async
-    crossorigin
-    fetchpriority="high"
-    importance="high"
-  )
+  //- script(
+  //- src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4534198821642047"
+  //- async
+  //- crossorigin
+  //- fetchpriority="high"
+  //- importance="high"
+  //- )
 
 block append critical-css
 
@@ -52,12 +51,10 @@ block append content
     )
       h1(
         class="text-4xl sm:text-5xl font-bold mb-8 max-w-screen-lg text-hex-3b0d15 dark:text-orange-50"
-      ) Anuncios
-      p(class="text-base text-black-200 sm:text-lg dark:text-light-700") Esta es una página dedicada a mostrar&nbsp;
-        strong anuncios automatizados
-        | , para no incluir publicidad que entorpezca o vaya a ralentizar la navegación de la plataforma y tu experiencia de usuario al utilizarla.
-      p(class="text-base text-black-200 sm:text-lg dark:text-light-700") Esto me ayuda mucho a que la plataforma esté siempre disponible para todos, es una pequeña forma de demostrar tu apoyo a este proyecto y me compromete a seguir mejorándolo. Otra forma de demostrar tu apoyo es compartir la plataforma en tus redes sociales.
-      p(class="text-base text-black-200 sm:text-lg dark:text-light-700") Sin embargo, dentro de la plataforma se pueden incluir anuncios de negocios locales (de Estelí), esto con la idea de ayudarte a dar a conocer tu local o negocio ante los usuarios de la plataforma y de la ciudad de Estelí.
+      ) ¿Te gustaría anunciarte en Estelí Buses?
+      p(class="text-base text-black-200 sm:text-lg dark:text-light-700") Esta es una plataforma que está siempre disponible para todos los Estelianos y la mayor meta, es sigarla mejorando y poder ampliar los servicios y funcionalidades de la misma, por ahora, para poder hacer que esté accesible para los usuarios es incluir anuncios. Aunque con el apoyo suficiente desearía no incluir anuncios automatizados.
+      p(class="text-base text-black-200 sm:text-lg dark:text-light-700") Esto me ayuda mucho a que la plataforma esté siempre disponible para todos, es una pequeña forma de demostrar tu apoyo a este proyecto y me compromete a seguir mejorándolo. Otra forma de demostrar tu apoyo es compartir la plataforma en tus redes sociales, solamente comparte el enlace en tus redes sociales.
+      p(class="text-base text-black-200 sm:text-lg dark:text-light-700") Sin embargo, dentro de la plataforma se pueden incluir anuncios de negocios locales (de Estelí), esto con la idea de ayudarte a dar a conocer tu local o negocio ante los usuarios de la plataforma y de la ciudad de Estelí. Semanalmente Estelí Buses es visitado por al menos 800 usuarios.
 
       h2(
         class="text-3xl sm:text-4xl font-bold !mt-14 text-hex-3b0d15 dark:text-orange-50"
