@@ -1,11 +1,6 @@
 /* eslint-disable no-unused-vars */
 
 const IMAGES_APP_SHELL = [
-  'https://res.cloudinary.com/fx-icaza/image/upload/q_auto:low,w_560/v1651427365/estelibuses-ads/banner-agencia-de-viajes-tisey-mobile.avif',
-  'https://res.cloudinary.com/fx-icaza/image/upload/q_auto:low,w_560/v1651427365/estelibuses-ads/banner-agencia-de-viajes-tisey-mobile.webp',
-  'https://res.cloudinary.com/fx-icaza/image/upload/q_auto:low,w_1200/v1651427365/estelibuses-ads/banner-agencia-de-viajes-tisey.avif',
-  'https://res.cloudinary.com/fx-icaza/image/upload/q_auto:low,w_1200/v1651427365/estelibuses-ads/banner-agencia-de-viajes-tisey.webp',
-
   '/sounds/switch.mp3',
   '/sounds/switch-tap.mp3',
 
@@ -90,6 +85,9 @@ const IMAGES_APP_SHELL = [
 
   '/img/terminal-norte/horarios-esteli-yali-estelibuses-felix-icaza-card.avif',
   '/img/terminal-norte/horarios-esteli-yali-estelibuses-felix-icaza-card.webp',
+
+  '/img/terminal-norte/horarios-esteli-santa-cruz-la-ceiba-estelibuses-felix-icaza-card.avif',
+  '/img/terminal-norte/horarios-esteli-santa-cruz-la-ceiba-estelibuses-felix-icaza-card.webp',
 
   '/img/terminal-norte/horarios-esteli-san-marcos-de-colon-estelibuses-felix-icaza-card.avif',
   '/img/terminal-norte/horarios-esteli-san-marcos-de-colon-estelibuses-felix-icaza-card.webp',
