@@ -227,6 +227,44 @@ body {
   cursor: progress;
 }
 
+.bus-pic-btn {
+  background-image: repeating-linear-gradient(
+      0deg,
+      #f97316,
+      #f97316 22px,
+      transparent 22px,
+      transparent 32px,
+      #f97316 32px
+    ),
+    repeating-linear-gradient(
+      90deg,
+      #f97316,
+      #f97316 22px,
+      transparent 22px,
+      transparent 32px,
+      #f97316 32px
+    ),
+    repeating-linear-gradient(
+      180deg,
+      #f97316,
+      #f97316 22px,
+      transparent 22px,
+      transparent 32px,
+      #f97316 32px
+    ),
+    repeating-linear-gradient(
+      270deg,
+      #f97316,
+      #f97316 22px,
+      transparent 22px,
+      transparent 32px,
+      #f97316 32px
+    );
+  background-size: 3px 100%, 100% 3px, 3px 100%, 100% 3px;
+  background-position: 0 0, 0 0, 100% 0, 0 100%;
+  background-repeat: no-repeat;
+}
+
 @supports not (aspect-ratio: 1/1) {
   .card-city-img::before {
     float: left;
@@ -277,6 +315,41 @@ details[open] summary {
 @media (min-width: 768px) {
   .adsbygoogle {
     height: 17.5rem;
+  }
+}
+
+/* Hide cardTransInfo Scroll */
+@media (any-pointer: coarse) {
+  .scrolltable {
+    scrollbar-width: none;
+    overflow: scroll hidden;
+  }
+
+  .scrolltable::-webkit-scrollbar {
+    display: none;
+    overflow: scroll hidden;
+  }
+}
+
+@media (any-pointer: fine) and (max-width: 575.98px) {
+  .scrolltable {
+    overflow: scroll hidden;
+  }
+
+  .scrolltable::-webkit-scrollbar {
+    overflow: scroll hidden;
+    border-radius: 4px;
+  }
+}
+
+@media (min-width: 992px) and (max-width: 1199.98px) {
+  .scrolltable {
+    overflow: scroll hidden;
+  }
+
+  .scrolltable::-webkit-scrollbar {
+    overflow: scroll hidden;
+    border-radius: 4px;
   }
 }
 
