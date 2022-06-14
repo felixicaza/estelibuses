@@ -45,6 +45,12 @@ block append defer-scripts
     fetchpriority="high"
     importance="high"
   )
+  script(
+    type="module"
+    src=`${ASSETS_PATH}js/bus-pic.js`
+    fetchpriority="high"
+    importance="high"
+  )
 
 block append seo
   script(type="application/ld+json").
@@ -331,3 +337,5 @@ block append content
             span
               svg(class="fill-current" width="26" height="26")
                 path(d="M16 11H4v2h12v3l4-4-4-4z")/
+
+  include ../../../components/modalBusPic
