@@ -20,11 +20,13 @@ const ads = (ad, index) => {
   const observeAds = new IntersectionObserver((entries, observer) => {
     entries.forEach(entry => {
       if (entry.isIntersecting) {
-        if (index === 0) {
+        if (index === 0 && window.location.hostname === 'estelibuses.web.app') {
           document.head.appendChild(insertAdSense)
         }
 
-        adsPlaceholder[index].classList.add('hidden')
+        if (window.location.hostname === 'estelibuses.web.app') {
+          adsPlaceholder[index].classList.add('hidden')
+        }
 
         observer.unobserve(entry.target)
       }
