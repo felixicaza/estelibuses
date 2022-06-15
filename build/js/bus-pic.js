@@ -39,6 +39,26 @@ let stream
 let pic
 
 busPicBtns.forEach((busPicBtn, index) => {
+  if (!navigator.mediaDevices.getUserMedia) {
+    busPicBtn.classList.add('hidden')
+  }
+
+  window.addEventListener('offline', () => {
+    if (!navigator.onLine) {
+      busPicBtn.classList.add('hidden')
+    } else {
+      busPicBtn.classList.remove('hidden')
+    }
+  })
+
+  window.addEventListener('online', () => {
+    if (!navigator.onLine) {
+      busPicBtn.classList.add('hidden')
+    } else {
+      busPicBtn.classList.remove('hidden')
+    }
+  })
+
   busPicBtn.addEventListener('click', async () => {
     bgModalShare.classList.replace('opacity-0', 'opacity-100')
 
