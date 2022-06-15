@@ -43,6 +43,12 @@ block append defer-scripts
     fetchpriority="high"
     importance="high"
   )
+  script(
+    type="module"
+    src=`${ASSETS_PATH}js/bus-pic.js`
+    fetchpriority="high"
+    importance="high"
+  )
 
 block append content
   +pageCity('El Naranjo', 'Terminal sur', 'Información no disponible', '7 km', 'https://www.google.com/maps/embed?pb=!1m28!1m12!1m3!1d31093.812912320074!2d-86.35319829168601!3d13.053065861350323!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!4m13!3e6!4m5!1s0x8f718c13825dde4b%3A0x69c6340e0429bb84!2sCotran%20Sur%2C%20Estel%C3%AD!3m2!1d13.0762386!2d-86.3524291!4m5!1s0x8f71893901292e73%3A0xee6cb7d742bb8f8f!2sEl%20Naranjo!3m2!1d13.0291474!2d-86.320562!5e0!3m2!1ses-419!2sni!4v1650850007983!5m2!1ses-419!2sni')
@@ -153,3 +159,5 @@ block append content
             span
               svg(class="fill-current" width="26" height="26")
                 path(d="M16 11H4v2h12v3l4-4-4-4z")/
+
+  include ../../../components/modalBusPic

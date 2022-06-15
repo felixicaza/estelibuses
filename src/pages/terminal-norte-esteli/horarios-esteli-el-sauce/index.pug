@@ -38,6 +38,12 @@ block append stylesheets
 block append preload
 
 block append defer-scripts
+  script(
+    type="module"
+    src=`${ASSETS_PATH}js/bus-pic.js`
+    fetchpriority="high"
+    importance="high"
+  )
 
 block append content
   +pageCity('El Sauce', 'Terminal norte', 'Terminal de El Sauce', '46 km', 'https://www.google.com/maps/embed?pb=!1m28!1m12!1m3!1d248736.47578458625!2d-86.62606040458337!3d13.066994734934624!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!4m13!3e6!4m5!1s0x8f718c6c8f2298e7%3A0x855d282eb62cfeed!2sCotran%20Norte%2C%20Estel%C3%AD!3m2!1d13.0816363!2d-86.352126!4m5!1s0x8f719927fa97f355%3A0xbc43ffcf4a814673!2sEl%20Sauce!3m2!1d12.883435799999999!2d-86.5425921!5e0!3m2!1ses-419!2sni!4v1645813381383!5m2!1ses-419!2sni')
@@ -107,3 +113,5 @@ block append content
             span
               svg(class="fill-current" width="26" height="26")
                 path(d="M16 11H4v2h12v3l4-4-4-4z")/
+
+  include ../../../components/modalBusPic

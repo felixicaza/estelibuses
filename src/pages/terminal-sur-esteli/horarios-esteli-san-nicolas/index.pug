@@ -38,6 +38,12 @@ block append stylesheets
 block append preload
 
 block append defer-scripts
+  script(
+    type="module"
+    src=`${ASSETS_PATH}js/bus-pic.js`
+    fetchpriority="high"
+    importance="high"
+  )
 
 block append content
   +pageCity('San Nicolás', 'Terminal sur', 'Terminal de San Nicolás', '24.7 km', 'https://www.google.com/maps/embed?pb=!1m28!1m12!1m3!1d124399.81029988968!2d-86.39884790770328!3d13.004178413986123!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!4m13!3e6!4m5!1s0x8f718c13825dde4b%3A0x69c6340e0429bb84!2sCotran%20Sur%2C%20Estel%C3%AD!3m2!1d13.0762386!2d-86.3524291!4m5!1s0x8f7185db24e6dbd1%3A0x7c9d9004fb28fd11!2sSan%20Nicol%C3%A1s!3m2!1d12.933934599999999!2d-86.3465478!5e0!3m2!1ses-419!2sni!4v1645555961222!5m2!1ses-419!2sni')
@@ -111,3 +117,5 @@ block append content
             span
               svg(class="fill-current" width="26" height="26")
                 path(d="M16 11H4v2h12v3l4-4-4-4z")/
+
+  include ../../../components/modalBusPic
