@@ -148,7 +148,7 @@ body {
 }
 
 .users-comments {
-  grid-template-columns: repeat(7, 16rem);
+  grid-template-columns: repeat(8, 16rem);
 }
 
 @media (min-width: 768px) {
