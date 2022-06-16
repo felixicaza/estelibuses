@@ -38,8 +38,11 @@ const noScrollOnModal = 'overflow: hidden;'
 let stream
 let pic
 
+const supportDevices =
+  'mediaDevices' in navigator && 'getUserMedia' in navigator.mediaDevices
+
 busPicBtns.forEach((busPicBtn, index) => {
-  if (!navigator.mediaDevices.getUserMedia) {
+  if (!supportDevices) {
     busPicBtn.classList.add('hidden')
   }
 
@@ -72,8 +75,8 @@ busPicBtns.forEach((busPicBtn, index) => {
     stream = await navigator.mediaDevices.getUserMedia({
       audio: false,
       video: {
-        width: 985,
-        height: 679,
+        width: 1600,
+        height: 1103,
         facingMode: 'environment'
       }
     })
@@ -98,11 +101,11 @@ busPicBtns.forEach((busPicBtn, index) => {
     stream.getTracks()[0].stop()
 
     const canvasPic = document.createElement('canvas')
-    canvasPic.setAttribute('width', 985)
-    canvasPic.setAttribute('height', 679)
+    canvasPic.setAttribute('width', 1600)
+    canvasPic.setAttribute('height', 1103)
 
     const context = canvasPic.getContext('2d')
-    context.drawImage(busImage[index], 0, 0, canvasPic.width, canvasPic.height)
+    context.drawImage(busImage[index], 0, 0)
 
     pic = context.canvas.toDataURL()
 
@@ -166,8 +169,8 @@ busPicBtns.forEach((busPicBtn, index) => {
     stream = await navigator.mediaDevices.getUserMedia({
       audio: false,
       video: {
-        width: 985,
-        height: 679,
+        width: 1600,
+        height: 1103,
         facingMode: 'environment'
       }
     })
