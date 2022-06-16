@@ -58,12 +58,12 @@ body {
   height: 60%;
   width: 60%;
   border-radius: 30% 50% 20% 40%;
-  animation: transform 20s ease-in-out infinite both alternate,
-    translate 90s ease-in-out infinite both;
+  animation: transformBlob 12s ease-in-out infinite both alternate,
+    translateBlob 45s ease-in-out infinite both;
   opacity: 0.7;
 }
 
-@keyframes transform {
+@keyframes transformBlob {
   0%,
   100% {
     border-radius: 33% 67% 70% 30% / 30% 30% 70% 70%;
@@ -82,7 +82,7 @@ body {
   }
 }
 
-@keyframes translate {
+@keyframes translateBlob {
   0%,
   100% {
     transform: none;
