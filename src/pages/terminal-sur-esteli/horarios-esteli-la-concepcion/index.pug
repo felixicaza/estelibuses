@@ -55,27 +55,42 @@ block append content
     section(class="space-y-3 mt-6 lg:mt-0 -mb-8")
       p(class="font-semibold") Elige el bus que deseas abordar:
         form#filter(class="flex flex-col xs:flex-row gap-6")
-          section(class="group flex items-center")
-            input#city-one(
-              name="bus"
-              type="radio"
-              checked
-              class="accent-orange-600 cursor-pointer sibling:checked:text-orange-600"
-            )/
-            label(
-              class="group-any-hover:text-orange-600 transition-colors cursor-pointer"
-              for="city-one"
-            ) &nbsp;Buses de Managua
-          section(class="group flex items-center")
-            input#city-two(
-              name="bus"
-              type="radio"
-              class="accent-orange-600 cursor-pointer sibling:checked:text-orange-600"
-            )/
-            label(
-              class="group-any-hover:text-orange-600 transition-colors cursor-pointer"
-              for="city-two"
-            ) &nbsp;Buses de Matagalpa
+          style.
+            .dark input[type="radio"]:checked ~ span::after {
+              background: #fb923c;
+            }
+            input[type="radio"]:checked ~ span::after {
+              background: #ea580c;
+            }
+          section(class="group")
+            div(class="relative flex gap-1 items-center")
+              input#city-one(
+                name="bus"
+                type="radio"
+                checked
+                class="opacity-0 w-4 h-4 z-10 cursor-pointer dark:siblings:checked:text-orange-400 siblings:checked:text-orange-600"
+              )/
+              span(
+                class="absolute pointer-events-none mt-0.8 top-0 left-0 right-0 bottom-0 w-4 h-4 border border-orange-600 dark:border-orange-400 rounded-full p-2 z-0 after:absolute after:content-[''] after:w-[0.57rem] after:h-[0.57rem] after:rounded-full after:top-1/2 after:left-1/2 after:transform after:-translate-y-1/2 after:-translate-x-1/2"
+              )
+              label(
+                class="group-any-hover:text-orange-600 transition-colors cursor-pointer"
+                for="city-one"
+              ) &nbsp;Buses de Managua
+          section(class="group")
+            div(class="relative flex gap-1 items-center")
+              input#city-two(
+                name="bus"
+                type="radio"
+                class="opacity-0 w-4 h-4 z-10 cursor-pointer dark:siblings:checked:text-orange-400 siblings:checked:text-orange-600"
+              )/
+              span(
+                class="absolute pointer-events-none mt-0.8 top-0 left-0 right-0 bottom-0 w-4 h-4 border border-orange-600 dark:border-orange-400 rounded-full p-2 z-0 after:absolute after:content-[''] after:w-[0.57rem] after:h-[0.57rem] after:rounded-full after:top-1/2 after:left-1/2 after:transform after:-translate-y-1/2 after:-translate-x-1/2"
+              )
+              label(
+                class="group-any-hover:text-orange-600 transition-colors cursor-pointer"
+                for="city-two"
+              ) &nbsp;Buses de Matagalpa
 
     include managua
 
