@@ -161,6 +161,19 @@ body {
   border-radius: 4px;
 }
 
+.animate-spinner {
+  animation: spinner 1s linear infinite;
+}
+
+@keyframes spinner {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
 @media (any-pointer: coarse) {
   .users-comments {
     scrollbar-width: none;
