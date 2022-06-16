@@ -7,7 +7,9 @@ mixin cardTransportInfoNorthNote(transport, time, transportType, transportName, 
     p(class="my-3") Este bus llega a San Rafael del Norte y luego transborda hacia Jinotega.
 
     div(class="lg:hidden")
-        button(class="w-full h-87 font-semibold rounded bg-orange-100 dark:bg-hex-2c251f dark:active:bg-hex-26201b flex items-center justify-center active:bg-orange-200 transition-colors bus-pic-btn") Toma una foto del transporte
+        button(class="w-full h-87 font-semibold rounded bg-orange-100 dark:bg-hex-2c251f dark:active:bg-hex-26201b flex items-center justify-center active:bg-orange-200 transition-colors relative bus-pic-btn")
+          span Toma una foto del transporte
+          span(class="absolute top-3 left-3 text-xs text-orange-400 dark:text-orange-100 border border-orange-400 dark:border-orange-100 rounded-full px-2.3 py-0.5") Beta
         section(class="bg-orange-300 dark:bg-hex-180f06 dark:text-white fixed top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 z-20 w-full max-w-sm sm:max-w-md shadow-md rounded px-4 py-6 pointer-events-none scale-0 opacity-0 transition-all h-[85vh] flex flex-col pic-container")
           video(class="bg-orange-100 dark:bg-hex-2c251f w-full h-full rounded flex-grow bus-image" autoplay)
           section(class="mt-2")

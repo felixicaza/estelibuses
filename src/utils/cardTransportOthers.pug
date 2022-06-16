@@ -7,41 +7,6 @@ mixin cardTransportInfoOthers(transport, from, fromTime, to, toTime, time, trans
     if transportDestiny !== ''
       p(class="!mt-2") Bus que se dirige hacia #{transportDestiny}.
 
-    style.
-      @media (any-pointer: coarse) {
-        .scrolltable {
-          scrollbar-width: none;
-          overflow: scroll hidden;
-        }
-
-        .scrolltable::-webkit-scrollbar {
-          display: none;
-          overflow: scroll hidden;
-        }
-      }
-
-      @media (any-pointer: fine) and (max-width: 575.98px) {
-        .scrolltable {
-          overflow: scroll hidden;
-        }
-
-        .scrolltable::-webkit-scrollbar {
-          overflow: scroll hidden;
-          border-radius: 4px;
-        }
-      }
-
-      @media (min-width: 992px) and (max-width: 1199.98px) {
-        .scrolltable {
-          overflow: scroll hidden;
-        }
-
-        .scrolltable::-webkit-scrollbar {
-          overflow: scroll hidden;
-          border-radius: 4px;
-        }
-      }
-
     section(class="pb-2 scrolltable")
       table(class="whitespace-nowrap border-separate")
         tbody

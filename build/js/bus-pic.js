@@ -75,8 +75,8 @@ busPicBtns.forEach((busPicBtn, index) => {
     stream = await navigator.mediaDevices.getUserMedia({
       audio: false,
       video: {
-        width: 1600,
-        height: 1103,
+        width: 1200,
+        height: 827,
         facingMode: 'environment'
       }
     })
@@ -101,8 +101,8 @@ busPicBtns.forEach((busPicBtn, index) => {
     stream.getTracks()[0].stop()
 
     const canvasPic = document.createElement('canvas')
-    canvasPic.setAttribute('width', 1600)
-    canvasPic.setAttribute('height', 1103)
+    canvasPic.setAttribute('width', 1200)
+    canvasPic.setAttribute('height', 827)
 
     const context = canvasPic.getContext('2d')
     context.drawImage(busImage[index], 0, 0)
@@ -169,8 +169,8 @@ busPicBtns.forEach((busPicBtn, index) => {
     stream = await navigator.mediaDevices.getUserMedia({
       audio: false,
       video: {
-        width: 1600,
-        height: 1103,
+        width: 1200,
+        height: 827,
         facingMode: 'environment'
       }
     })

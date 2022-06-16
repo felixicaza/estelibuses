@@ -3,40 +3,6 @@ mixin cardTransportInfoWithImage(transport, time, transportType, transportName, 
 
   //- prettier-ignore
   article(class=`space-y-5 bg-light-100 dark:bg-hex-362d25 shadow rounded p-4 any-hover:shadow-md transition-shadow ${transportTypeToLowerCase}`)
-    style.
-      @media (any-pointer: coarse) {
-        .scrolltable {
-          scrollbar-width: none;
-          overflow: scroll hidden;
-        }
-
-        .scrolltable::-webkit-scrollbar {
-          display: none;
-          overflow: scroll hidden;
-        }
-      }
-
-      @media (any-pointer: fine) and (max-width: 575.98px) {
-        .scrolltable {
-          overflow: scroll hidden;
-        }
-
-        .scrolltable::-webkit-scrollbar {
-          overflow: scroll hidden;
-          border-radius: 4px;
-        }
-      }
-
-      @media (min-width: 992px) and (max-width: 1199.98px) {
-        .scrolltable {
-          overflow: scroll hidden;
-        }
-
-        .scrolltable::-webkit-scrollbar {
-          overflow: scroll hidden;
-          border-radius: 4px;
-        }
-      }
 
     section
       h2(class="titles text-3xl sm:text-4xl font-bold whitespace-nowrap mb-2")= transport
