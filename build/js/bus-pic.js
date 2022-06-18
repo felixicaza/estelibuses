@@ -1,6 +1,7 @@
 /* eslint-disable import/extensions */
 
 import { initializeApp } from './lib/firebase-app.js'
+import { getAnalytics, logEvent } from './lib/firebase-analytics.js'
 import { getStorage, ref, uploadString } from './lib/firebase-storage.js'
 
 const firebaseConfig = {
@@ -38,6 +39,8 @@ const noScrollOnModal = 'overflow: hidden;'
 let stream
 let pic
 
+const soundPage = new Audio('/sounds/switch-tap.mp3')
+
 const supportDevices =
   'mediaDevices' in navigator && 'getUserMedia' in navigator.mediaDevices
 
@@ -63,6 +66,26 @@ busPicBtns.forEach((busPicBtn, index) => {
   })
 
   busPicBtn.addEventListener('click', async () => {
+    if (localStorage.getItem('sounds_enabled') === 'true') {
+      soundPage.play()
+    }
+
+    if (
+      'vibrate' in navigator &&
+      localStorage.getItem('sounds_enabled') === 'false'
+    ) {
+      navigator.vibrate(80)
+    }
+
+    if (window.location.hostname === 'estelibuses.web.app') {
+      const appTrackInstall = initializeApp(firebaseConfig)
+      const analytics = getAnalytics(appTrackInstall)
+
+      logEvent(analytics, 'open_bus_pic', {
+        name: 'Boton foto abierto'
+      })
+    }
+
     bgModalShare.classList.replace('opacity-0', 'opacity-100')
 
     modalBusPic.classList.replace('pointer-events-none', 'pointer-events-auto')
@@ -97,6 +120,26 @@ busPicBtns.forEach((busPicBtn, index) => {
   })
 
   picBtn[index].addEventListener('click', () => {
+    if (localStorage.getItem('sounds_enabled') === 'true') {
+      soundPage.play()
+    }
+
+    if (
+      'vibrate' in navigator &&
+      localStorage.getItem('sounds_enabled') === 'false'
+    ) {
+      navigator.vibrate(80)
+    }
+
+    if (window.location.hostname === 'estelibuses.web.app') {
+      const appTrackInstall = initializeApp(firebaseConfig)
+      const analytics = getAnalytics(appTrackInstall)
+
+      logEvent(analytics, 'take_bus_pic', {
+        name: 'Foto tomada'
+      })
+    }
+
     busImage[index].pause()
     stream.getTracks()[0].stop()
 
@@ -116,6 +159,26 @@ busPicBtns.forEach((busPicBtn, index) => {
   })
 
   sendPicBtn[index].addEventListener('click', async () => {
+    if (localStorage.getItem('sounds_enabled') === 'true') {
+      soundPage.play()
+    }
+
+    if (
+      'vibrate' in navigator &&
+      localStorage.getItem('sounds_enabled') === 'false'
+    ) {
+      navigator.vibrate(80)
+    }
+
+    if (window.location.hostname === 'estelibuses.web.app') {
+      const appTrackInstall = initializeApp(firebaseConfig)
+      const analytics = getAnalytics(appTrackInstall)
+
+      logEvent(analytics, 'send_bus_pic', {
+        name: 'Foto enviada'
+      })
+    }
+
     const nameImage = `${window.location.pathname
       .replace(/\//, '')
       .replace(/\//, '-')}-${document
@@ -150,6 +213,26 @@ busPicBtns.forEach((busPicBtn, index) => {
   })
 
   cancelPicBtn[index].addEventListener('click', () => {
+    if (localStorage.getItem('sounds_enabled') === 'true') {
+      soundPage.play()
+    }
+
+    if (
+      'vibrate' in navigator &&
+      localStorage.getItem('sounds_enabled') === 'false'
+    ) {
+      navigator.vibrate(80)
+    }
+
+    if (window.location.hostname === 'estelibuses.web.app') {
+      const appTrackInstall = initializeApp(firebaseConfig)
+      const analytics = getAnalytics(appTrackInstall)
+
+      logEvent(analytics, 'cancel_bus_pic', {
+        name: 'Foto cancelada'
+      })
+    }
+
     stream.getTracks()[0].stop()
 
     picContainer[index].classList.replace(
@@ -166,6 +249,26 @@ busPicBtns.forEach((busPicBtn, index) => {
   })
 
   takePicBtn[index].addEventListener('click', async () => {
+    if (localStorage.getItem('sounds_enabled') === 'true') {
+      soundPage.play()
+    }
+
+    if (
+      'vibrate' in navigator &&
+      localStorage.getItem('sounds_enabled') === 'false'
+    ) {
+      navigator.vibrate(80)
+    }
+
+    if (window.location.hostname === 'estelibuses.web.app') {
+      const appTrackInstall = initializeApp(firebaseConfig)
+      const analytics = getAnalytics(appTrackInstall)
+
+      logEvent(analytics, 'again_bus_pic', {
+        name: 'Volver a tomar foto'
+      })
+    }
+
     stream = await navigator.mediaDevices.getUserMedia({
       audio: false,
       video: {
@@ -185,6 +288,26 @@ busPicBtns.forEach((busPicBtn, index) => {
 })
 
 recomendationPicBtn.addEventListener('click', () => {
+  if (localStorage.getItem('sounds_enabled') === 'true') {
+    soundPage.play()
+  }
+
+  if (
+    'vibrate' in navigator &&
+    localStorage.getItem('sounds_enabled') === 'false'
+  ) {
+    navigator.vibrate(80)
+  }
+
+  if (window.location.hostname === 'estelibuses.web.app') {
+    const appTrackInstall = initializeApp(firebaseConfig)
+    const analytics = getAnalytics(appTrackInstall)
+
+    logEvent(analytics, 'close_recommendation', {
+      name: 'Recomendacion cerrada'
+    })
+  }
+
   modalBusPic.classList.replace('pointer-events-auto', 'pointer-events-none')
   modalBusPic.classList.replace('opacity-100', 'opacity-0')
   modalBusPic.classList.replace('scale-100', 'scale-0')
