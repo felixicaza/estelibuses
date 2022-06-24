@@ -35,6 +35,10 @@ const cpy = require('cpy')
     console.log(data)
   })
 
+  await cpy('build/img/logo.svg', 'public/img/').on('progress', data => {
+    console.log(data)
+  })
+
   await cpy('build/img/terminal-sur/**/*.avif', 'public/img/terminal-sur/').on(
     'progress',
     data => {
@@ -42,7 +46,7 @@ const cpy = require('cpy')
     }
   )
 
-  await cpy('build/img/anuncios/**/*.avif', 'public/img/anuncios/').on(
+  await cpy('build/img/anuncios/**/*.webp', 'public/img/anuncios/').on(
     'progress',
     data => {
       console.log(data)
