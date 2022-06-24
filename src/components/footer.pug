@@ -193,12 +193,23 @@ footer(class="bg-hex-1c1611 text-white text-center")
 
     hr(class="h-px mt-12 mb-8 bg-hex-2D231B border-none")
 
-    article(class="flex flex-col lg:flex-row lg:gap-0 lg:justify-between gap-4")
+    article(
+      class="flex flex-col lg:flex-row lg:gap-0 lg:justify-between gap-4 items-center"
+    )
       p Hecho con ❤ en Estelí para todos los Estelianos.
-      p &copy; Estelí Buses 2022, desarrollado por&nbsp;
-        a(
-          class="any-hover:text-orange-500 active:text-orange-500 transition-colors"
-          href="https://felixicaza.com/?utm_source=estelibuses&utm_medium=website&utm_campaign=estelibuses_users&utm_content=footer"
-          target="_blank"
-        ) Félix Icaza
-        | .
+      div(class="flex flex-col lg:flex-row gap-4 lg:gap-2 lg:items-center")
+        p &copy; Estelí Buses 2022.
+        section(class="flex items-center gap-2")
+          p Powered by
+          a(
+            href="https://felixicaza.com/?utm_source=estelibuses&utm_medium=website&utm_campaign=estelibuses_users&utm_content=footer"
+            target="_blank"
+          )
+            img(
+              src="/img/logo.svg"
+              alt="Félix Icaza - Desarrollador Web en Nicaragua"
+              decoding="async"
+              fetchpriority="low"
+              importance="low"
+              width="150"
+            )/
