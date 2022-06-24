@@ -4,6 +4,9 @@ const IMAGES_APP_SHELL = [
   '/sounds/switch.mp3',
   '/sounds/switch-tap.mp3',
 
+  '/anuncios/felixicaza-desktop.webp',
+  '/anuncios/felixicaza-mobile.webp',
+
   '/img/terminal-norte-estelibuses-felix-icaza.avif',
   '/img/terminal-norte-estelibuses-felix-icaza.webp',
   '/img/terminal-norte-estelibuses-mobile-felix-icaza.avif',

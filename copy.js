@@ -46,7 +46,7 @@ const cpy = require('cpy')
     }
   )
 
-  await cpy('build/img/anuncios/**/*.webp', 'public/img/anuncios/').on(
+  await cpy('build/anuncios/**/*.webp', 'public/anuncios/').on(
     'progress',
     data => {
       console.log(data)
