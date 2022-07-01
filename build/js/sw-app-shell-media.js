@@ -7,6 +7,8 @@ const IMAGES_APP_SHELL = [
   '/anuncios/felixicaza-desktop.webp',
   '/anuncios/felixicaza-mobile.webp',
 
+  '/img/logo.svg',
+
   '/img/terminal-norte-estelibuses-felix-icaza.avif',
   '/img/terminal-norte-estelibuses-felix-icaza.webp',
   '/img/terminal-norte-estelibuses-mobile-felix-icaza.avif',
