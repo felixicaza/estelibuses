@@ -124,4 +124,15 @@
   })
 
   ocotal.forEach(image => console.log('Converted:', image.destinationPath))
+
+  const leon = await imagemin(['build/img/leon/*.{jpg,jpeg}'], {
+    destination: 'public/img/leon',
+    plugins: [
+      imageminMozjpeg({
+        quality: 75
+      })
+    ]
+  })
+
+  leon.forEach(image => console.log('Converted:', image.destinationPath))
 })()

@@ -146,5 +146,8 @@ const IMAGES_APP_SHELL = [
   '/img/san-juan-de-limay/transporte-el-fugitivo.webp',
 
   '/img/ocotal/transporte-gamez.avif',
-  '/img/ocotal/transporte-gamez.webp'
+  '/img/ocotal/transporte-gamez.webp',
+
+  '/img/leon/transporte-acuña.avif',
+  '/img/leon/transporte-acuña.webp'
 ]

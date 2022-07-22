@@ -67,6 +67,13 @@ const cpy = require('cpy')
     }
   )
 
+  await cpy('build/img/leon/*.avif', 'public/img/leon/').on(
+    'progress',
+    data => {
+      console.log(data)
+    }
+  )
+
   // await cpy('build/ads.txt', 'public/').on('progress', data => {
   //   console.log(data)
   // })
