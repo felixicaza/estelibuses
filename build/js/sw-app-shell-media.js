@@ -148,6 +148,6 @@ const IMAGES_APP_SHELL = [
   '/img/ocotal/transporte-gamez.avif',
   '/img/ocotal/transporte-gamez.webp',
 
-  '/img/leon/transporte-acuña.avif',
-  '/img/leon/transporte-acuña.webp'
+  '/img/leon/transporte-acuna.avif',
+  '/img/leon/transporte-acuna.webp'
 ]
