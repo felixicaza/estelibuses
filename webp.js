@@ -67,4 +67,11 @@ const env = process.env.NODE_ENV === 'production'
   sanJuanDeLimay.forEach(image =>
     console.log('Converted WEBP:', image.destinationPath)
   )
+
+  const ocotal = await imagemin(['build/img/ocotal/*.{jpg,jpeg,png}'], {
+    destination: env ? 'public/img/ocotal' : 'build/img/ocotal',
+    plugins: [imageminWebp({ quality: 75 })]
+  })
+
+  ocotal.forEach(image => console.log('Converted WEBP:', image.destinationPath))
 })()

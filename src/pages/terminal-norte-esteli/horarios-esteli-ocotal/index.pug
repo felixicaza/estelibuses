@@ -1,6 +1,7 @@
 extends ../../../templates/template.pug
 include ../../../utils/pageCity
 include ../../../utils/cardTransportInfoNorth
+include ../../../utils/cardTransportInfoWithImage
 include ../../../utils/cardCity
 
 block append variables
@@ -54,7 +55,7 @@ block append content
     +cardTransportInfoNorth('Horario #3', '08:00 am', 'Ruteado', 'El Águila del Norte', price, '1.45 horas', false, false, false)
     +cardTransportInfoNorth('Horario #4', '09:00 am', 'Ruteado', 'Mi Bus', price, '1.45 horas', false, false, false)
     +cardTransportInfoNorth('Horario #5', '10:00 am', 'Ruteado', 'Águila del Norte', price, '1.45 horas', false, false, false)
-    +cardTransportInfoNorth('Horario #6', '11:00 am', 'Ruteado', 'Gámez', price, '1.45 horas', false, false, false)
+    +cardTransportInfoWithImage('Horario #6', '11:00 am', 'Expreso', 'Gámez', price, '1.45 horas', false, false, false, '/img/ocotal/transporte-gamez', 'Transporte Gámez', '', 'NS 96', 'data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAoAAAAHCAYAAAAxrNxjAAAAAklEQVR4AewaftIAAAEQSURBVB3BvUsCYQDA4d/Jm2eKB2ZQxinUZINbQyBJR0NbS0Nb0B8UTU1NEUQkbZVEW0MeZVT4URZeEZpfqfiRSJ53Uc8jtQdDW5EFf35MEz2dZ2d3jw/jBVVVWdZWEELCMbL412h3SFwlSZydUri7pu8QGLUv9FweTdMQr+UyPnmMarPFe+kTW8isrq2zubXB9v4h2mKE+PEBIvmoMz/lZjYYRnE5OL9PkU1nuTg5ojuyuInH8QdDiAmnjWfSIjDeY9SqwKBLNDxHvf+Nqvio1atUmwZi2Dd50Es0vUVsycIlmSwuLSCcMvVKkVtPg5ASQSSzTwR8XkJuP0bqEtewRy6TodHpUXh+IxaLEpiZ5hc5THGdY78DXgAAAABJRU5ErkJggg==')
     +cardTransportInfoNorth('Horario #7', '01:00 pm', 'Ruteado', 'Arellano', price, '1.45 horas', false, false, false)
     +cardTransportInfoNorth('Horario #8', '02:00 pm', 'Ruteado', 'Ernesto José', price, '1.45 horas', false, false, false)
     +cardTransportInfoNorth('Horario #9', '02:45 pm', 'Ruteado', 'El Águila del Norte', price, '1.35 horas', false, false, false)

@@ -60,9 +60,16 @@ const cpy = require('cpy')
     console.log(data)
   })
 
-  await cpy('build/ads.txt', 'public/').on('progress', data => {
-    console.log(data)
-  })
+  await cpy('build/img/ocotal/*.avif', 'public/img/ocotal/').on(
+    'progress',
+    data => {
+      console.log(data)
+    }
+  )
+
+  // await cpy('build/ads.txt', 'public/').on('progress', data => {
+  //   console.log(data)
+  // })
 
   await cpy('build/favicons/favicon.ico', 'public/favicons/').on(
     'progress',

@@ -113,4 +113,15 @@
   sanJuanDeLimay.forEach(image =>
     console.log('Converted:', image.destinationPath)
   )
+
+  const ocotal = await imagemin(['build/img/ocotal/*.{jpg,jpeg}'], {
+    destination: 'public/img/ocotal',
+    plugins: [
+      imageminMozjpeg({
+        quality: 75
+      })
+    ]
+  })
+
+  ocotal.forEach(image => console.log('Converted:', image.destinationPath))
 })()

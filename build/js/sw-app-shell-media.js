@@ -143,5 +143,8 @@ const IMAGES_APP_SHELL = [
   '/img/terminal-sur/horarios-esteli-sebaco-estelibuses-felix-icaza-card.webp',
 
   '/img/san-juan-de-limay/transporte-el-fugitivo.avif',
-  '/img/san-juan-de-limay/transporte-el-fugitivo.webp'
+  '/img/san-juan-de-limay/transporte-el-fugitivo.webp',
+
+  '/img/ocotal/transporte-gamez.avif',
+  '/img/ocotal/transporte-gamez.webp'
 ]
