@@ -42,7 +42,7 @@ mixin pageTerminal(idHeader, title, description, location, phone, origin, ...cit
 
     div(class="wave")
 
-  include ../components/ad-banner
+  //- include ../components/ad-banner
   //- include ../components/adsense
 
   main(class="py-12 sm:py-16 md:py-20 xl:py-28")
@@ -98,7 +98,7 @@ mixin pageTerminal(idHeader, title, description, location, phone, origin, ...cit
                     href=`/terminal-${origin}-esteli/horarios-esteli-${convertCityName[index]}`
                   )= city
 
-  include ../components/adsense
+  //- include ../components/adsense
 
   if origin === 'sur'
     include others

@@ -31,8 +31,6 @@ html(class="scroll-smooth" dir="ltr" lang=`${LANG}` prefix="og: https://ogp.me/n
 
     link(crossorigin href="//www.googletagmanager.com/" rel="preconnect")/
     link(crossorigin href="//www.google-analytics.com/" rel="preconnect")/
-    link(crossorigin href="//pagead2.googlesyndication.com/" rel="preconnect")/
-    link(crossorigin href="//partner.googleadservices.com/" rel="preconnect")/
     block preconnect
 
     script.
@@ -93,12 +91,6 @@ html(class="scroll-smooth" dir="ltr" lang=`${LANG}` prefix="og: https://ogp.me/n
     script(
       type="module"
       src=`${ASSETS_PATH}js/app.js`
-      fetchpriority="low"
-      importance="low"
-    )
-    script(
-      src=`${ASSETS_PATH}js/ads-load.js`
-      defer
       fetchpriority="low"
       importance="low"
     )
