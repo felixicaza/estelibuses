@@ -10,7 +10,7 @@
   },
   "scripts": {
     "analysis": "windicss-analysis",
-    "build": "run-s -l -n pug windicss compress copyfiles minify-manifest compress:br",
+    "build": "astro build",
     "build:test": "run-s -l -n clear build serve:test analysis",
     "clear": "rimraf public",
     "compress": "run-s -l -n compress:html postcss postcss:windi compress:js compress:img",
@@ -19,6 +19,7 @@
     "compress:img": "node pngquant.js && node mozjpeg.js && cross-env NODE_ENV=production node webp.js",
     "compress:js": "node terser.mjs",
     "copyfiles": "node copy.js",
+    "dev": "astro dev",
     "format": "run-s -l -n format:all format:pug format:xml",
     "format:all": "prettier --write \"./**/*.{js,json,md,yml}\"",
     "format:pug": "prettier --write \"./**/*.pug\" --plugin @prettier/plugin-pug",
@@ -38,11 +39,13 @@
     "postcss": "postcss build/**/*.css --dir public/css/ --no-map --env production",
     "postcss:windi": "postcss public/css/lib/windi.css -o public/css/lib/windi.css --no-map --env production",
     "prepare": "husky install",
+    "preview": "astro preview",
     "pug": "pug src/pages -o public",
     "pug:dev": "pug src/pages -o build -P -w",
     "serve": "run-p -l -n pug:dev windicss:dev serve:dev",
     "serve:dev": "servor build index.html 5000 --static",
     "serve:test": "servor public index.html 7000 --static",
+    "start": "astro dev",
     "wait": "wait-on build/index.html -d 7000",
     "windicss": "windicss public/**/*.{html,js} -tmo public/css/lib/windi.css -f windi.config.js",
     "windicss:dev": "run-s -l -n wait windicss:build",
@@ -63,6 +66,7 @@
   "dependencies": {
     "@windicss/plugin-animations": "1.0.9",
     "@windicss/plugin-question-mark": "0.1.1",
+    "astro": "1.2.1",
     "windicss": "3.4.3",
     "windicss-content-visibility": "1.2.0",
     "windicss-media-interaction": "1.1.1"
