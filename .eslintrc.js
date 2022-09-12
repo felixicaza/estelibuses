@@ -1,12 +1,11 @@
 module.exports = {
   env: {
     browser: true,
-    es2021: true,
-    serviceworker: true
+    es2021: true
   },
-  extends: ['airbnb-base', 'prettier'],
+  extends: ['standard', 'prettier'],
   parserOptions: {
-    ecmaVersion: 13,
+    ecmaVersion: 'latest',
     sourceType: 'module'
   }
 }

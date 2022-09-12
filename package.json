@@ -20,16 +20,11 @@
     "compress:js": "node terser.mjs",
     "copyfiles": "node copy.js",
     "dev": "astro dev",
-    "format": "run-s -l -n format:all format:pug format:xml",
-    "format:all": "prettier --write \"./**/*.{js,json,md,yml}\"",
-    "format:pug": "prettier --write \"./**/*.pug\" --plugin @prettier/plugin-pug",
-    "format:xml": "prettier --write \"./**/*.xml\" --plugin @prettier/plugin-xml",
     "functions:deploy": "pnpm -r run deploy",
     "functions:serve": "pnpm -r run serve",
     "functions:logs": "pnpm -r run logs",
     "functions:shell": "pnpm -r run shell",
     "functions:start": "pnpm -r run start",
-    "lint": "eslint --cache --fix --ext .js ./",
     "minify-manifest": "minify-json public/manifest.json",
     "optimize": "run-s -l -n optimize:pug optimize:html optimize:html:restore",
     "optimize:html": "rimraf build/**/*.html",
@@ -52,16 +47,15 @@
     "windicss:build": "windicss build/**/*.{html,js} -tdo build/css/lib/windi.css -f windi.config.js"
   },
   "lint-staged": {
-    "./**/*.{js,mjs}": [
-      "pnpm lint",
-      "prettier --write \"./**/*.{js,mjs}\""
+    "./**/*.{js,mjs,cjs}": [
+      "eslint --cache --fix --ext .js,.mjs,.cjs ./",
+      "prettier --write \"./**/*.{js,mjs,cjs}\""
     ],
-    "./**/*.pug": "pnpm format:pug",
-    "./build/css/*.css": "prettier --write \"./build/css/*.css\"",
+    "./src/styles/*.css": "prettier --write \"./src/styles/*.css\"",
     "./**/*.json": "prettier --write \"./**/*.json\"",
-    "./**/*.xml": "pnpm format:xml",
-    "./**/*.yml": "prettier --write \"./**/*.yml\"",
-    "./**/*.md": "prettier --write \"./**/*.md\""
+    "./**/*.xml": "prettier --write \"./**/*.xml\" --plugin @prettier/plugin-xml",
+    "./**/*.md": "prettier --write \"./**/*.md\"",
+    "./**/*.{yaml,yml}": "prettier --write \"./**/*.{yaml,yml}\""
   },
   "dependencies": {
     "@windicss/plugin-animations": "1.0.9",
@@ -81,10 +75,12 @@
     "cross-env": "7.0.3",
     "cssnano": "5.1.7",
     "cssnano-preset-advanced": "5.3.3",
-    "eslint": "8.2.0",
-    "eslint-config-airbnb-base": "15.0.0",
+    "eslint": "8.0.1",
     "eslint-config-prettier": "8.4.0",
+    "eslint-config-standard": "17.0.0",
     "eslint-plugin-import": "2.25.2",
+    "eslint-plugin-n": "15.0.0",
+    "eslint-plugin-promise": "6.0.0",
     "fast-glob": "3.2.11",
     "globby": "13.1.1",
     "html-minifier-terser": "6.1.0",
