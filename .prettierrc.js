@@ -4,10 +4,18 @@ module.exports = {
   trailingComma: 'none',
   overrides: [
     {
+      files: '*.astro',
+      options: {
+        parser: 'astro'
+      }
+    },
+    {
       files: '*.{yaml,yml}',
       options: {
         tabWith: 3
       }
     }
-  ]
+  ],
+  plugins: [require.resolve('prettier-plugin-astro')],
+  astroAllowShorthand: true
 }
