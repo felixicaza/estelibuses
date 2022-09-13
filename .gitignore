@@ -248,8 +248,8 @@ $RECYCLE.BIN/
 # Windows shortcuts
 *.lnk
 
-# Public folder
-public
+# Build folder
+dist
 
 # Ignore source files
 # Generated Tailwind CSS

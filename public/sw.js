@@ -14,21 +14,21 @@ workbox.googleAnalytics.initialize()
 const CACHE_CORE = 'core-v2.77'
 const CACHE_MEDIA = 'media-v2.76'
 
-self.addEventListener('install', e => {
+self.addEventListener('install', (e) => {
   const setCacheCore = caches
     .open(CACHE_CORE)
-    .then(coreCache => coreCache.addAll(APP_SHELL))
+    .then((coreCache) => coreCache.addAll(APP_SHELL))
 
   const setCacheMedia = caches
     .open(CACHE_MEDIA)
-    .then(mediaCache => mediaCache.addAll(IMAGES_APP_SHELL))
+    .then((mediaCache) => mediaCache.addAll(IMAGES_APP_SHELL))
 
   e.waitUntil(Promise.all([setCacheCore, setCacheMedia]))
 })
 
 self.addEventListener('activate', () => {
-  caches.keys().then(keys => {
-    keys.forEach(key => {
+  caches.keys().then((keys) => {
+    keys.forEach((key) => {
       if (key !== CACHE_CORE && key.includes('core')) {
         return caches.delete(key)
       }
@@ -40,8 +40,8 @@ self.addEventListener('activate', () => {
   })
 })
 
-self.addEventListener('fetch', e => {
-  const fetchResponse = caches.match(e.request).then(response => {
+self.addEventListener('fetch', (e) => {
+  const fetchResponse = caches.match(e.request).then((response) => {
     if (response) return response
 
     return fetch(e.request).catch(() => {
@@ -54,7 +54,7 @@ self.addEventListener('fetch', e => {
   e.respondWith(fetchResponse)
 })
 
-self.addEventListener('message', e => {
+self.addEventListener('message', (e) => {
   if (e.data === 'SKIP_WAITING') {
     self.skipWaiting()
   }
