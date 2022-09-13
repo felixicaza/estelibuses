@@ -20,5 +20,19 @@ module.exports = {
       files: ['*.astro'],
       parser: 'astro-eslint-parser'
     }
-  ]
+  ],
+  settings: {
+    'import/resolver': {
+      alias: {
+        map: [
+          ['@components', './src/components'],
+          ['@layouts', './src/layouts'],
+          ['@pages', './src/pages'],
+          ['@scripts', './src/scripts'],
+          ['@styles', './src/styles']
+        ],
+        extensions: ['.astro']
+      }
+    }
+  }
 }

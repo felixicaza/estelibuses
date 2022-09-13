@@ -17,6 +17,7 @@ specifiers:
   eslint: 8.0.1
   eslint-config-prettier: 8.4.0
   eslint-config-standard: 17.0.0
+  eslint-import-resolver-alias: 1.1.2
   eslint-plugin-astro: 0.19.0
   eslint-plugin-import: 2.25.2
   eslint-plugin-jsx-a11y: 6.6.1
@@ -76,6 +77,7 @@ devDependencies:
   eslint: 8.0.1
   eslint-config-prettier: 8.4.0_eslint@8.0.1
   eslint-config-standard: 17.0.0_e6qfl5pmxsyfuxbbac4tyvigc4
+  eslint-import-resolver-alias: 1.1.2_vh5gizyt4jfjl2cpwztvw7criy
   eslint-plugin-astro: 0.19.0_eslint@8.0.1
   eslint-plugin-import: 2.25.2_eslint@8.0.1
   eslint-plugin-jsx-a11y: 6.6.1_eslint@8.0.1
@@ -3214,6 +3216,15 @@ packages:
       eslint-plugin-import: 2.25.2_eslint@8.0.1
       eslint-plugin-n: 15.0.0_eslint@8.0.1
       eslint-plugin-promise: 6.0.0_eslint@8.0.1
+    dev: true
+
+  /eslint-import-resolver-alias/1.1.2_vh5gizyt4jfjl2cpwztvw7criy:
+    resolution: {integrity: sha512-WdviM1Eu834zsfjHtcGHtGfcu+F30Od3V7I9Fi57uhBEwPkjDcii7/yW8jAT+gOhn4P/vOxxNAXbFAKsrrc15w==}
+    engines: {node: '>= 4'}
+    peerDependencies:
+      eslint-plugin-import: '>=1.4.0'
+    dependencies:
+      eslint-plugin-import: 2.25.2_eslint@8.0.1
     dev: true
 
   /eslint-import-resolver-node/0.3.6:
