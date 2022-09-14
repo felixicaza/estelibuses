@@ -1,6 +1,7 @@
 {
   "name": "estelibuses",
   "version": "0.0.0",
+  "type": "module",
   "private": true,
   "license": "GPL-3.0",
   "author": {
@@ -70,6 +71,7 @@
     "windicss-media-interaction": "1.1.1"
   },
   "devDependencies": {
+    "@astrojs/tailwind": "1.0.1",
     "@commitlint/cli": "17.1.2",
     "@commitlint/config-conventional": "17.1.0",
     "@prettier/plugin-pug": "2.0.0",
