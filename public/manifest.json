@@ -1,7 +1,7 @@
 {
   "name": "Estelí Buses",
   "short_name": "Estelí Buses",
-  "description": "Conoce todos los horarios de los buses de la Terminal Norte y de la Terminal Sur de la ciudad de Estelí",
+  "description": "Conoce todos los horarios de salida de los buses de la terminal norte y de la terminal sur de la ciudad de Estelí.",
   "id": "esteli-buses",
   "dir": "ltr",
   "start_url": "/?utm_source=web_app",
@@ -21,7 +21,7 @@
     {
       "name": "Horarios Terminal Norte",
       "short_name": "Horarios Terminal Norte",
-      "description": "Conoce todos los horarios de los buses de la Terminal Norte de la ciudad de Estelí",
+      "description": "Conoce todos los horarios de los buses de la terminal norte de la ciudad de Estelí.",
       "url": "/terminal-norte-esteli?utm_source=web_app",
       "icons": [
         {
@@ -34,7 +34,7 @@
     {
       "name": "Horarios Terminal Sur",
       "short_name": "Horarios Terminal Sur",
-      "description": "Conoce todos los horarios de los buses de la Terminal Sur de la ciudad de Estelí",
+      "description": "Conoce todos los horarios de los buses de la terminal sur de la ciudad de Estelí.",
       "url": "/terminal-sur-esteli?utm_source=web_app",
       "icons": [
         {
@@ -56,13 +56,13 @@
       "src": "/manifest/screenshot-estelibuses-terminal-norte.jpg",
       "sizes": "586x1041",
       "type": "image/jpeg",
-      "label": "Terminal norte"
+      "label": "Terminal Norte"
     },
     {
       "src": "/manifest/screenshot-estelibuses-terminal-sur.jpg",
       "sizes": "586x1041",
       "type": "image/jpeg",
-      "label": "Terminal sur"
+      "label": "Terminal Sur"
     }
   ],
   "icons": [
