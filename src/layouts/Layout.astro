@@ -1,5 +1,6 @@
 ---
 import Favicons from '@components/Favicons.astro'
+import SplashScreens from '@components/SplashScreens.astro'
 
 import '@styles/tailwind.css'
 
@@ -87,6 +88,8 @@ const { options } = Astro.props
       content="black-translucent"
     />
     <meta name="apple-mobile-web-app-capable" content="yes" />
+
+    <SplashScreens />
 
     <slot name="social-media" />
   </head>
