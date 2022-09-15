@@ -1,0 +1,164 @@
+---
+import '@styles/tailwind.css'
+
+const { options } = Astro.props
+---
+
+<html dir="ltr" lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, height=device-height, initial-scale=1.0, maximum-scale=2.0, viewport-fit=cover"
+    />
+
+    <title>{options.title}</title>
+
+    <link crossorigin href="//www.googletagmanager.com/" rel="preconnect" />
+    <link crossorigin href="//www.google-analytics.com/" rel="preconnect" />
+
+    <slot name="preconnect" />
+
+    <script is:inline>
+      if (localStorage.getItem('dark-mode') === 'true')
+        document.documentElement.classList.add('dark')
+    </script>
+
+    <script
+      src="https://www.googletagmanager.com/gtag/js"
+      async="async"
+      crossorigin="crossorigin"
+      importance="low"
+      fetchpriority="low"
+    ></script>
+
+    <slot name="async-scripts" />
+
+    <slot name="critical-css" />
+
+    <slot name="stylesheet" />
+
+    <link
+      type="image/avif"
+      as="image"
+      fetchpriority="highest"
+      href="/img/estelibuses-logo.avif"
+      rel="preload"
+      crossorigin
+    />
+    <link
+      type="image/webp"
+      as="image"
+      fetchpriority="highest"
+      href="/img/estelibuses-logo.webp"
+      rel="preload"
+      crossorigin
+    />
+
+    <slot name="preload" />
+
+    <slot name="defer-scripts" />
+
+    <meta name="robots" content={options.meta_robots} />
+    {
+      options.description && (
+        <meta name="description" content={options.description} />
+      )
+    }
+    <link href={Astro.url.href} rel="canonical" />
+    <meta name="application-name" content="Estelí Buses" />
+    <meta name="author" content="Félix Icaza - https://felixicaza.com" />
+    <meta name="generator" content={Astro.generator} />
+
+    <meta name="color-scheme" content="light dark" />
+    <meta name="theme-color" content={options.theme_color} />
+    <meta name="msapplication-TileColor" content={options.theme_color} />
+    <link href="/manifest.json" rel="manifest" />
+
+    <meta name="format-detection" content="telephone=no" />
+    <meta name="mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-title" content="Estelí Buses" />
+    <meta
+      name="apple-mobile-web-app-status-bar-style"
+      content="black-translucent"
+    />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+
+    <slot name="social-media" />
+  </head>
+  <body>
+    <slot />
+
+    <slot name="dynamic-components" />
+
+    <noscript class="fixed w-full bottom-0 left-0 z-20 bg-danger-600">
+      <article
+        class="container mx-auto text-white px-4 py-8 flex flex-col md:flex-row gap-8"
+      >
+        <section class="flex-1">
+          <svg class="fill-current" width="50" height="50">
+            <use href="/img/vector-sprites.svg#alert"></use>
+          </svg>
+        </section>
+        <section class="flex-shrink">
+          <p class="text-2xl text-white mb-2 font-semibold">
+            JavaScript está desactivado.
+          </p>
+          <p class="text-white">
+            Para usar todas las funcionalidades del sitio web es necesario tener
+            JavaScript activado. <a
+              class="text-white underline"
+              href="https://www.enable-javascript.com/es/"
+              referrerpolicy="no-referrer"
+              rel="external noopenner nofollow noreferrer"
+              target="_blank"
+              >Haz click aquí para saber cómo activar JavaScript<svg
+                class="inline ml-1 mb-[0.175rem]"
+                width="16"
+                height="16"
+                ><use href="/img/vector-sprites.svg#external"></use>
+              </svg>
+            </a>, y sigue las instrucciones en tu navegador. Si no encuentras el
+            tuyo, considera descargar uno más actualizado; recomiendo <a
+              class="text-white underline"
+              href="https://www.mozilla.org/es-ES/firefox/new/"
+              referrerpolicy="no-referrer"
+              rel="external noopenner nofollow noreferrer"
+              target="_blank"
+              >Mozilla Firefox<svg
+                class="inline ml-1 mb-[0.175rem]"
+                width="16"
+                height="16"
+                ><use href="/img/vector-sprites.svg#external"></use>
+              </svg>
+            </a>, <a
+              class="text-white underline"
+              href="https://www.google.com/intl/es/chrome/"
+              referrerpolicy="no-referrer"
+              rel="external noopenner nofollow noreferrer"
+              target="_blank"
+              >Google Chrome<svg
+                class="inline ml-1 mb-[0.175rem]"
+                width="16"
+                height="16"
+                ><use href="/img/vector-sprites.svg#external"></use>
+              </svg>
+            </a> o <a
+              class="text-white underline"
+              href="https://www.microsoft.com/es-es/edge/"
+              referrerpolicy="no-referrer"
+              rel="external noopenner nofollow noreferrer"
+              target="_blank"
+              >Microsoft Edge Chromium<svg
+                class="inline ml-1 mb-[0.175rem]"
+                width="16"
+                height="16"
+                ><use href="/img/vector-sprites.svg#external"></use>
+              </svg>
+            </a>, pero también puedes descargar el tú quieras 😉.
+          </p>
+        </section>
+      </article>
+    </noscript>
+  </body>
+</html>
