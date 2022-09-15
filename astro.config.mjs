@@ -11,5 +11,11 @@ export default defineConfig({
   server: {
     host: true
   },
-  integrations: [tailwind()]
+  integrations: [
+    tailwind({
+      config: {
+        applyBaseStyles: false
+      }
+    })
+  ]
 })

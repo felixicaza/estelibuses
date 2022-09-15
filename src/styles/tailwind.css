@@ -1,0 +1,25 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html {
+    @apply scroll-smooth;
+  }
+
+  body {
+    @apply bg-white text-neutral-800 dark:bg-[#292018] dark:text-white transition-colors duration-150;
+  }
+
+  h1 {
+    @apply text-4xl sm:text-5xl font-bold;
+  }
+
+  h2 {
+    @apply text-3xl sm:text-4xl font-bold;
+  }
+
+  h3 {
+    @apply text-2xl font-bold;
+  }
+}
