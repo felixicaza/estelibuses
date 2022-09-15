@@ -1,4 +1,6 @@
 ---
+import Favicons from '@components/Favicons.astro'
+
 import '@styles/tailwind.css'
 
 const { options } = Astro.props
@@ -69,6 +71,8 @@ const { options } = Astro.props
     <meta name="application-name" content="Estelí Buses" />
     <meta name="author" content="Félix Icaza - https://felixicaza.com" />
     <meta name="generator" content={Astro.generator} />
+
+    <Favicons />
 
     <meta name="color-scheme" content="light dark" />
     <meta name="theme-color" content={options.theme_color} />
