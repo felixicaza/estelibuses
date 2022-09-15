@@ -1,4 +1,6 @@
 ---
+import { Schema } from 'astro-seo-schema'
+
 import Favicons from '@components/Favicons.astro'
 import SplashScreens from '@components/SplashScreens.astro'
 
@@ -72,6 +74,17 @@ const { options } = Astro.props
     <meta name="application-name" content="Estelí Buses" />
     <meta name="author" content="Félix Icaza - https://felixicaza.com" />
     <meta name="generator" content={Astro.generator} />
+
+    <Schema
+      item={{
+        '@context': 'https://schema.org',
+        '@type': 'Organization',
+        name: 'Estelí Buses',
+        url: 'https://estelibuses.web.app',
+        logo: 'https://estelibuses.web.app/favicons/android-chrome-512x512.png',
+        sameAs: ['https://www.facebook.com/estelibuses']
+      }}
+    />
 
     <Favicons />
 

@@ -77,6 +77,7 @@
     "@prettier/plugin-pug": "2.0.0",
     "@prettier/plugin-xml": "2.1.0",
     "astro-eslint-parser": "0.6.1",
+    "astro-seo-schema": "1.0.3",
     "autoprefixer": "10.4.5",
     "cpy": "8.1.2",
     "cross-env": "7.0.3",
