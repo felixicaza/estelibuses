@@ -12,13 +12,38 @@ module.exports = {
     'prettier'
   ],
   parserOptions: {
-    ecmaVersion: 'latest',
-    sourceType: 'module'
+    ecmaVersion: 12,
+    sourceType: 'module',
+    ecmaFeatures: {
+      modules: true
+    }
   },
   overrides: [
     {
       files: ['*.astro'],
-      parser: 'astro-eslint-parser'
+      parser: 'astro-eslint-parser',
+      rules: {
+        'no-unused-vars': [
+          'error',
+          {
+            varsIgnorePattern: '^[A-Z]'
+          }
+        ]
+      }
+    },
+    {
+      files: ['**/*.astro/*.js', '*.astro/*.js'],
+      env: {
+        browser: true,
+        es2021: true,
+        serviceworker: true
+      },
+      parserOptions: {
+        sourceType: 'module'
+      },
+      rules: {
+        'prettier/prettier': 'off'
+      }
     }
   ],
   settings: {
