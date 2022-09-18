@@ -1,0 +1,21 @@
+---
+const { title, description, image } = Astro.props
+---
+
+<!-- Open Graph Tags -->
+<meta name="title" content={title} property="og:title" />
+<meta name="description" content={description} property="og:description" />
+<meta name="image" content={new URL(image, Astro.url)} property="og:image" />
+<meta content={title} property="og:image:alt" />
+<meta property="og:image:type" content="image/jpeg" />
+<meta content="website" property="og:type" />
+<meta content="Estelí Buses" property="og:site_name" />
+<meta content={Astro.url.href} property="og:url" />
+<meta content="es" property="og:locale" />
+
+<!-- Twitter Cards Tags -->
+<meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:title" content={title} />
+<meta name="twitter:description" content={description} />
+<meta name="twitter:image" content={image} />
+<meta name="twitter:image:alt" content={title} />
