@@ -1,0 +1,159 @@
+{
+  "station": "Terminal Norte",
+  "cities": [
+    {
+      "name": "Managua",
+      "slug": "/terminal-norte-esteli/horarios-esteli-managua",
+      "image": "/img/terminal-norte/horarios-esteli-managua-estelibuses-felix-icaza-card",
+      "lqip": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAoAAAAGCAYAAAD68A/GAAAAAklEQVR4AewaftIAAADNSURBVAXBS06DUBiA0e+HC7TAoKnVVkdNTFyGC3UJjlyCAx01OjAaY2IZ1JqGaEAriBfuw3Pk8ubVZ7GgjSeNhCiEjx/DV2cZh5AoIVaCavoBbUNEoGwsn7+GtneEQKYgCeFvcKjr54JpnhMFCvCICIEzeIHg5Zbv03O0ExT1BW0dgU8Z2jHzScw8maBHCTbo6TZXFOUOdeQ8q2JNlhv2usey5L565/gkp9F7FtkZh1NQD29blosDNts1VdWR8shsZinrmgjDbljxdDfiHzXGWeYErh0SAAAAAElFTkSuQmCC",
+      "timetables": [{}]
+    },
+    {
+      "name": "Ocotal",
+      "slug": "/terminal-norte-esteli/horarios-esteli-ocotal",
+      "image": "/img/terminal-norte/horarios-esteli-managua-estelibuses-felix-icaza-card",
+      "lqip": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAoAAAAGCAYAAAD68A/GAAAAAklEQVR4AewaftIAAADoSURBVAXBvU7CUACA0a+F0gttsQZ/B9TJweikicZXcPMhHHwOR1/GyZXEkCgSEqwhIqllMAYVSJQi5XJ76znG29c0e+kN+Hx/5XFwzPBHseQ7HK5HeEafo5NTRFGQv2v/0a7fsFZZgd8HNqdNzKzKWLu0woDdvQPqjQBzf2vGXEr6UQ8rbjCLJ1iLbz6ie4pOgVrtluurSwxv1c3Ozi8wM00Sj1BzSbnsY9s5lDbohgHPT03y1e0dkmQC2kQrSacTUBI2Vk4xGg8xChbCtsmrNCXstlALje84+J5AKY0ybdzKBjKVLIsS/66oZHYPNJRaAAAAAElFTkSuQmCC",
+      "timetables": [{}]
+    },
+    {
+      "name": "Somoto",
+      "slug": "/terminal-norte-esteli/horarios-esteli-somoto",
+      "image": "/img/terminal-norte/horarios-esteli-managua-estelibuses-felix-icaza-card",
+      "lqip": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAoAAAAGCAYAAAD68A/GAAAAAklEQVR4AewaftIAAADmSURBVAXBu07CUACA4b/llBZBgUCBYOJQ7SDxMpgoA25iHB31/XwEJwdXphodjMEL6iAmxjagUnqAnuP3GWfnW/oxf0hYPcWybKRpMplr4kTSzV5Ql31qwkb4rs80ukZGZeLSPrYQgEOnfEU9vMfOZFgyc4h07nCye0zwETAY9HCcAqrg0F5dIKouRpql5W0jtDKZjRd0/Q439ivB8wvtjTxHO3tIw6TRbKFTC5HIhLuHb5q1Cn6xAp7mYNMjiosYYoXP4Yi/8Q9i+BWSKsVlr4+bU9z+zpgKWFse8fb0znqjxERp/gGtW1S4/iR4jQAAAABJRU5ErkJggg==",
+      "timetables": [{}]
+    },
+    {
+      "name": "Jinotega",
+      "slug": "/terminal-norte-esteli/horarios-esteli-jinotega",
+      "image": "/img/terminal-norte/horarios-esteli-jinotega-estelibuses-felix-icaza-card",
+      "lqip": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAoAAAAGCAYAAAD68A/GAAAAAklEQVR4AewaftIAAADNSURBVBXBPUvDQACA4fe+rzW1taJoUBCXjs7SybWLf9fN4l/QQVTQoVYIJdhwiW3N5cTnEXcvIU1OPf8eXhvK0HI+toQt7NoOpwT7fYM+G3vey47LQ8XNZI/PqkMLsFqwbiIyRbKeQc/n9xjXo85PyI9GFMUamVq+q5qDzPL8+MT1dIq4mt2miMU7S0IRoyBJi7EWJQVeRn7R6IvhAGcc4afGOMnia0USCm08UsEuFGySQi8/3hgMM/LjHOf6bG1J0omqXlEsF2yaFmUUfx9+TTarspExAAAAAElFTkSuQmCC",
+      "timetables": [{}]
+    },
+    {
+      "name": "San Juan de Limay",
+      "slug": "/terminal-norte-esteli/horarios-esteli-san-juan-de-limay",
+      "image": "/img/terminal-norte/horarios-esteli-managua-estelibuses-felix-icaza-card",
+      "lqip": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAoAAAAGCAYAAAD68A/GAAAAAklEQVR4AewaftIAAADgSURBVAXBu0rDUACA4T85J2kuhBgMrajgVAdHB3ehCE6OToLgK/hgPkBddPEF6lZQSgVj4yVpTk5Pksbvs27urvrLyYTs/YM0Tjg7vyZNU2zLwrQdtWnJqxq5/Jvx9PhGkRkiV/Iym3N6cUsYxdSmoa4URi2QiRVxnBzxa2mcQY9q5kwf7tkITeDUNLTEm33kWtR8/SyJ/AB/4DHaHRLojG+5ptr2CMvGUQa5txOQDg8QnU3+uWC1yukCFycSFHpL4vnoUiFPxodMn18ZBSGxG1MWisovGbchntOiG4FUkn+qf1rJP6L68AAAAABJRU5ErkJggg==",
+      "timetables": [{}]
+    },
+    {
+      "name": "Pueblo Nuevo",
+      "slug": "/terminal-norte-esteli/horarios-esteli-pueblo-nuevo",
+      "image": "/img/terminal-norte/horarios-esteli-managua-estelibuses-felix-icaza-card",
+      "lqip": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAoAAAAGCAYAAAD68A/GAAAAAklEQVR4AewaftIAAADpSURBVAXBz0rCcADA8e/Wz003laVghhRJCfNSh7oIQnSs5+kVeoDepkOd8hRZBKXFbA4lM5cy0JXtj+vzkc4vL5JGfZ/T5gl/UcRV65qnbpf1rM7hXo3qrsnrm4WwRy0Sd8jCHRP4HpuVDabzDv0xTJwXjBsN2UgQ788DlK2EqB1QzGkUUgtSUYQew9QdEMo6GU9C1HIl0j6oeQlVWXHXeyQQDgflMlEc4oU+99YnIlNYoikCu99hllNpNs5ofwyZGyPktMz26oe6WUGUvC9mxW+Od3Qkxcd6uOWoapKd/OK4NvYyT7gW8w9M7l+OB2kEdwAAAABJRU5ErkJggg==",
+      "timetables": [{}]
+    },
+    {
+      "name": "Quilalí",
+      "slug": "/terminal-norte-esteli/horarios-esteli-quilali",
+      "image": "/img/terminal-norte/horarios-esteli-quilali-estelibuses-felix-icaza-card",
+      "lqip": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAoAAAAGCAYAAAD68A/GAAAAAklEQVR4AewaftIAAADdSURBVAXBS06DUABA0Vse8iuWtqiJQcPEmYk7aOLIGRtwC+7ATRiX1bk2wU/TiDYK1QIiH+GJ5wwur6772fkFzw93GBqEi5AgCNhzHVbRI00t8Q481OX9nDp7wss77ArO6oa3m1tWsmM9Nni1BFlro+5GLzifGYmlEPaSbqSh6oJqk9IvW/xfhaFroHK4zzxPyIuCtugxSx3LMok/vmibjvfJlNOjYxRTj0m2KX/VgLaRfKclbdnhOlM0odDLH7psgSqVEUNDYIgea0fBGduc+D7rTYwhBHlRE20n/AOxc2GK8ORBHgAAAABJRU5ErkJggg==",
+      "timetables": [{}]
+    },
+    {
+      "name": "Yalí",
+      "slug": "/terminal-norte-esteli/horarios-esteli-yali",
+      "image": "/img/terminal-norte/horarios-esteli-yali-estelibuses-felix-icaza-card",
+      "lqip": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAoAAAAGCAYAAAD68A/GAAAAAklEQVR4AewaftIAAADpSURBVAXBTS/DAACA4befW2W1z8QkRpYsDpwcnEn8MfED/Ag3Z4kDN4ctEXNgQWmWaYeG0ZV+bl3reYT+dT//9EXGXwme98OTkyHY93yXWoQLgSiekQQ+YqVaQ9cKbLUrpJHLdktno5lQXdis1nV22mWajTJyUSuwtiJQb1SxjTn7B5t0z3oo2YTdvSZCFpHOdWRJzMmlnIfBHZb1ysfI4PG2x/DdY73TQS0tY5ovyOcXl8yCXwY3V4yGz4y7p1hvU5I05eT4iGJNw53GSLnvHMaOwSKLUVQVy/nDnIQEooY7V3BDkSVB5h8pUWnOK09yrAAAAABJRU5ErkJggg==",
+      "timetables": [{}]
+    },
+    {
+      "name": "San Juan del Río Coco",
+      "slug": "/terminal-norte-esteli/horarios-esteli-san-juan-del-rio-coco",
+      "image": "/img/terminal-norte/horarios-esteli-san-juan-del-rio-coco-estelibuses-felix-icaza-card",
+      "lqip": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAoAAAAGCAYAAAD68A/GAAAAAklEQVR4AewaftIAAADfSURBVAXB3U6CYACA4Rf8wDKFJcjGbM3ooOVBbXU33UI30IV0WNfSBXRmJy1nP/6UKDYRBD/jk55He+59lNPRAGo+VdPgyKujlGKTZXx+jZnOIxbRAqGKLePhgF3ao9p2Gb5CqVUoSpDLkD3Lp905R//5HrIWJabjYeg2i3xJIlccdwKC7hVx8ou230Dc3d7QvbymJrfkVh31F2NZNt6hzY4KsZwwe3pA2JSk/TdcduRuA2lK3sM+j/cvNA7qWIaJpgQiOG1ycXZC02lRaAaTcIQmdHynxTpJWUVzVLbhH3kyXUe85a1tAAAAAElFTkSuQmCC",
+      "timetables": [{}]
+    },
+    {
+      "name": "San Rafael del Norte",
+      "slug": "/terminal-norte-esteli/horarios-esteli-san-rafael-del-norte",
+      "image": "/img/terminal-norte/horarios-esteli-san-rafael-del-norte-estelibuses-felix-icaza-card",
+      "lqip": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAoAAAAGCAYAAAD68A/GAAAAAklEQVR4AewaftIAAADqSURBVAXBzy7DcADA8W/bn3at/tEydCQj8Scu0jTsIi57BC/gVbwFD+Hg4gGcHGqRONlhqWIWrczqz6Ibrc9H2jw+q6aDO3xbox2ucR7XQZKxij6T21OEXDEc5cjO8gYL4RG2ZbLqaiy5NYKGxKLnoK+3eUlzyj8QW76JZQjGU4eD/V1yNcNXhkSde1aCkFKovN5cIGrJJa4uKN4HRJFC0zBIszcOW9s8jQVJDCNNoGSVeiKPv5g1TfaCHWx7jv5DgqTqDOIuH49dbG0G0WrWaXg27rxHL35GUQTD7wmdq2vSNOO3rPj5LPgHGyJPuCv6n5oAAAAASUVORK5CYII=",
+      "timetables": [{}]
+    },
+    {
+      "name": "El Regadío",
+      "slug": "/terminal-norte-esteli/horarios-esteli-el-regadio",
+      "image": "/img/terminal-norte/horarios-esteli-el-regadio-estelibuses-felix-icaza-card",
+      "lqip": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAoAAAAGCAYAAAD68A/GAAAAAklEQVR4AewaftIAAADJSURBVAXBy1LCMABA0Zukj0llKCjCdEQRkZULfoBx7f+v3LiShWOstYXSR2jiOeL1be+zp5TFcknXWqJQEYeSY/3JaARXaYLWY4JYS5SQlLnhYk9MJwOdELSNpy4l/lCRrVpkGAWUeU0iU9Qw5uPdkn85im9HYS7M5zH2bJHOCW5mmofbLZNphFIK7yKapiPUA3n1R9UcCa5nsNu+gNPcZxnGGH5MiwPaziNOluL3TPC8WhOqO+reEokFm8c1cMAJjxU9VdkTJwH/lSBWA5YqaS8AAAAASUVORK5CYII=",
+      "timetables": [{}]
+    },
+    {
+      "name": "Wiwilí",
+      "slug": "/terminal-norte-esteli/horarios-esteli-wiwili",
+      "image": "/img/terminal-norte/horarios-esteli-wiwili-estelibuses-felix-icaza-card",
+      "lqip": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAoAAAAGCAYAAAD68A/GAAAAAklEQVR4AewaftIAAADSSURBVAXBsU6EMACA4b+2gHAoiYTBOOmmiaODT+ebuLr7AI7mBl0cTuNwyUUYiCEgcIUehfp94umjcneXCfnecXMmiSQ0Dqa+Zvv9yu31PSKIUYWR7IuF4FjhBjiNYBYzTVUgwox2EaSej3K2R7cNQ61xjaOrf5m6Et38MGjLy/qLeJWinh8f6MeJ2RxIQslJHHGRjfh+RmsirNgRyByV6jVZ4lH89aRhyufGUEYBV+c1lZ4ZZwGLQ71vdtBJjJ0pk5qDtSwrj7d8C+IIbSx9NfEPRrtpT4P1VeQAAAAASUVORK5CYII=",
+      "timetables": [{}]
+    },
+    {
+      "name": "El Sauce",
+      "slug": "/terminal-norte-esteli/horarios-esteli-el-sauce",
+      "image": "/img/terminal-norte/horarios-esteli-el-sauce-estelibuses-felix-icaza-card",
+      "lqip": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAoAAAAGCAYAAAD68A/GAAAAAklEQVR4AewaftIAAADvSURBVAXBu0rDUACA4T8nx1baqJOtgl28NC6liE5O4ujmLD6Bm+/gok8g+BQiODgICg6C0KEirTakUrG5WCQnMaYxjd+nHZ1e5kKbUNQz1G+OuShAAyfQMZdmCOKcIEqQu1s1RJ6wnN1wbdWYL/yBEMTZJ6sipVPcZs4oITrtW0r4BO4zg/4de03FTn3EU+ue4UcLmbroeYx863Vp1Nf4CspM/7zSdzYo6ILCeMj5VYw0TnB9D2l1HzmzHlDKJ1Ep3uiC48MDwjDCcyK8nmIcZ8jqlIZRhhVznRfbZX+ziWO/szBbJfwe0KhUaNsT/gHJsGbwQbwbpgAAAABJRU5ErkJggg==",
+      "timetables": [{}]
+    },
+    {
+      "name": "Achuapa",
+      "slug": "/terminal-norte-esteli/horarios-esteli-achuapa",
+      "image": "/img/terminal-norte/horarios-esteli-achuapa-estelibuses-felix-icaza-card",
+      "lqip": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAoAAAAGCAYAAAD68A/GAAAAAklEQVR4AewaftIAAADrSURBVAXBTy/DYADA4V/nXdFtpQvZhUzSLHZxJxIH4uQjOfoKLuLmJuLgTyzxARyIREaWJRJ0Gm1jWGm3l3Xv63mM7yTVpYKF1oqLsyPu7m/phAFB2ENjkWnJ/u4eotV+wMgE/vMrgfdGiVnqZZuao0CNyLTB8cEh4vLknIptMUgSBv0UqfIwTDGF5m+oyIkxPt875ORIMjEpeLy6ZmV9g6JbZ2l1jXJlDu/FZ3lzC2tqBhF5Ee2bJlkY0Tht8NFLacpfulFAEPg8be8Qx18I160RF4r0px3iqEtOaWxh4sxXWawukDfH+ZEp/0lxabqfB5o8AAAAAElFTkSuQmCC",
+      "timetables": [{}]
+    },
+    {
+      "name": "La Concordia",
+      "slug": "/terminal-norte-esteli/horarios-esteli-la-concordia",
+      "image": "/img/terminal-norte/horarios-esteli-la-concordia-estelibuses-felix-icaza-card",
+      "lqip": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAoAAAAGCAYAAAD68A/GAAAAAklEQVR4AewaftIAAADNSURBVBXBsU6DUBSA4f/c3AZpHbQaTWNiE4mLjm59N5/AyYdSY7roZByAlDo02EIAKUXhHtPvk653agQUUBWMKJss42Q8RlVxzrFnFFAEQUB7onjB89Oc5fKLPRHBGIN13R89MLCW15c5njdgcn5Gmq7Z5BnXQYDv+9g4SbiaTgnDkLbZUpctxhux+20oi4ooTqjKH+zD4z13NzMuJpdsi5zh4YhV9MnH2zvr7xRPlKZrsbPglr5c0bAjr2sWcYNTx9HxEO/gFFFDUZX8A2FlY1nytebFAAAAAElFTkSuQmCC",
+      "timetables": [{}]
+    },
+    {
+      "name": "Jalapa",
+      "slug": "/terminal-norte-esteli/horarios-esteli-jalapa",
+      "image": "/img/terminal-norte/horarios-esteli-jalapa-estelibuses-felix-icaza-card",
+      "lqip": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAoAAAAGCAYAAAD68A/GAAAAAklEQVR4AewaftIAAADTSURBVAXBTU6DQACA0W+GAVKMFsKiC60/ica4MfEIHsJ4FlfezcR1141umlQtEJxYoJBhmPE98fTy6q8WC/q+5WZ5ztnFNbuioKoLVBjRDAPpcYb60yWruiQOFevNBv/+RhRIAikR0iPw9Maiup9PnPMchCSeRYzWIuOQxkxIKXGjA+FRj/e3WGOpul9GE5CnEc5ANkvQTrBvv7GTQBZ1RZbMyaee54c7UhVxebokEYLRVOybiqPAo+bznEOn2bYdq/WWctJ86Q9OgpSdLhmMpfUD/9FYZACFELC9AAAAAElFTkSuQmCC",
+      "timetables": [{}]
+    },
+    {
+      "name": "Masaya",
+      "slug": "/terminal-norte-esteli/horarios-esteli-masaya",
+      "image": "/img/terminal-norte/horarios-esteli-masaya-estelibuses-felix-icaza-card",
+      "lqip": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAoAAAAGCAYAAAD68A/GAAAAAklEQVR4AewaftIAAADQSURBVAXBS0/CQBSA0a9lLEPLoxQLMagbYog7///aFZG4RHxEQY2QQkBamtYpcz3Hefp8l6qyDLoBvvbIjkcaQYCIYKwgVjhZi3qcr9kfMpavc2aTe5Qtubu9ZnQzotDnqE4fwUWNLzp82ZzU9/CaLUwO++SHl9Uz37uC6SLFb3dRZWG4jCPqWhNGIb+rBcnbjI9tgoMhbsMhX6OUVLhi0TWHYdxjGGo2rSbJMmIyfWDQv6KXZqgsL6lhMX8FDTFgTxTGYbvbEfgVur7hzLX8A/w9ZKdir21FAAAAAElFTkSuQmCC",
+      "timetables": [{}]
+    },
+    {
+      "name": "La Pita",
+      "slug": "/terminal-norte-esteli/horarios-esteli-la-pita",
+      "image": "/img/terminal-norte/horarios-esteli-la-pita-estelibuses-felix-icaza-card",
+      "lqip": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAoAAAAGCAYAAAD68A/GAAAAAklEQVR4AewaftIAAADKSURBVAXBP0vDQByA4fdyd6TXNGm1LQhp0ZCUgA4uHQT9/otDwVFBt6JD8A9JWsvlfn0etdnWMgyByDrG6QXT2RyXLfjZvyPhhDr19P035tj9IgIOz7HpCG3DcnVgiFucU7hRwv6rw2SZI0IzcQm31YbquqLIb/hrG3avz7x9ftD/HzDl1YpyXVCuK2aXC6y1aKXIkjnb+oF0nLILL5in+0cm6ZR45AiD4JUHbRAUsXXU+R1GIozShiEI3ntEAjpoxChACAFQkC8LzjLpSSusDE+kAAAAAElFTkSuQmCC",
+      "timetables": [{}]
+    },
+    {
+      "name": "La Rica",
+      "slug": "/terminal-norte-esteli/horarios-esteli-la-rica",
+      "image": "/img/terminal-norte/horarios-esteli-estelibuses-felix-icaza-card",
+      "lqip": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAoAAAAGCAYAAAD68A/GAAAAAklEQVR4AewaftIAAADZSURBVAXBPUvDQACA4fe+kl4uNiEW4+CmiJOjg4ub7g7+RkcXB1HQwX9gKYJQirS20oI0NZVoc+fziP5kFYwSBL8h0ooid6zqhvFszvRjyuPNNd+/Lfrp/pasm3Jxdkoca9pNy2LxxaD/wvPDHePhKzLpIkwUh+1yl8vzKxJn2CtbBsMJs8+KInHUlefgaB+d90ryLGM+e0NZzbJySKnpFRmpEfjQMHofoU+OD0ndFs6lGGPQSmI7EVoKvPfsWMuyqtG2Y0FIfAgIqUAqfpo/RPCs1zVSCoSAf7nFTe15qU/xAAAAAElFTkSuQmCC",
+      "timetables": [{}]
+    },
+    {
+      "name": "Santa Cruz - La Ceiba",
+      "slug": "/terminal-norte-esteli/horarios-esteli-santa-cruz-la-ceiba",
+      "image": "/img/terminal-norte/horarios-esteli-santa-cruz-la-ceiba-estelibuses-felix-icaza-card",
+      "lqip": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAoAAAAGCAYAAAD68A/GAAAAAklEQVR4AewaftIAAADJSURBVAXBW06DQBiA0e+HmckUoVXE+ti4B1dg4gLchVvxzd3pS000RkOMJXZaCswFz5HHp+d5XTdURYlPMzFF+pPjs23ZuyPNecl1XaPe3l/4bg1h1kxBCGFi7PcoCahccB1stxE1Hh0Hl8jzHKuFbucwWvAp4X0kEyHEGSV5D35CEtSrK3yYUQJZJsSgsEbwKZCJjIQw0bnAZnPLcDAYfUZhF1zWBVW55Gc3otbLFc3NAp1brP7l4f6OanmBNpbh9MHX3yvDXPIPjPRZ97pZnBoAAAAASUVORK5CYII=",
+      "timetables": [{}]
+    },
+    {
+      "name": "San Marcos de Colón",
+      "slug": "/terminal-norte-esteli/horarios-esteli-san-marcos-de-colon",
+      "image": "/img/terminal-norte/horarios-esteli-san-marcos-de-colon-estelibuses-felix-icaza-card",
+      "lqip": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAoAAAAGCAYAAAD68A/GAAAAAklEQVR4AewaftIAAADHSURBVAXBW06DQBSA4X/OnOFSwBbTNEajUR90ea7EPbgyExIfelEstFyEMvh95u39Y/49ecZRyFeOJImZjeF6aTk3A84K52ZCy0NBHDkC9QSzcmkFI4YpymjqC9Yoi8ii290RK0KSGurKM4wXJu/pOo+q4/EhJzQL9OUuYvCer32NMTNxOtOfJqJQaJqBz+IPMYK+Pkccji1d3yMSsNkIxdBTVSOhVdZXyv1NhmYJqLPkyxW775LtvmSdpTzdxgSBw4Ut1vzwD1G/TheYziZnAAAAAElFTkSuQmCC",
+      "timetables": [{}]
+    },
+    {
+      "name": "Oro Verde",
+      "slug": "/terminal-norte-esteli/horarios-esteli-oro-verde",
+      "image": "/img/terminal-norte/horarios-esteli-estelibuses-felix-icaza-card",
+      "lqip": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAoAAAAGCAYAAAD68A/GAAAAAklEQVR4AewaftIAAADZSURBVAXBPUvDQACA4fe+kl4uNiEW4+CmiJOjg4ub7g7+RkcXB1HQwX9gKYJQirS20oI0NZVoc+fziP5kFYwSBL8h0ooid6zqhvFszvRjyuPNNd+/Lfrp/pasm3Jxdkoca9pNy2LxxaD/wvPDHePhKzLpIkwUh+1yl8vzKxJn2CtbBsMJs8+KInHUlefgaB+d90ryLGM+e0NZzbJySKnpFRmpEfjQMHofoU+OD0ndFs6lGGPQSmI7EVoKvPfsWMuyqtG2Y0FIfAgIqUAqfpo/RPCs1zVSCoSAf7nFTe15qU/xAAAAAElFTkSuQmCC",
+      "timetables": [{}]
+    }
+  ]
+}
