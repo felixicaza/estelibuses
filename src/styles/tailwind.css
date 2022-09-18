@@ -3,8 +3,41 @@
 @tailwind utilities;
 
 @layer base {
+  ::-webkit-scrollbar {
+    width: 7px;
+    height: 7px;
+    @apply bg-orange-100 transition-colors;
+  }
+
+  ::-webkit-scrollbar-thumb {
+    border-radius: 4px;
+    @apply bg-orange-300 transition-colors;
+  }
+
+  ::-webkit-scrollbar-thumb:hover {
+    @apply bg-orange-400 transition-colors;
+  }
+
+  ::selection {
+    @apply bg-orange-100 text-orange-400;
+  }
+
+  * {
+    scrollbar-color: #fdba74 #ffedd5;
+    scrollbar-width: thin;
+  }
+
   html {
     @apply scroll-smooth;
+    color-scheme: light dark;
+  }
+
+  html,
+  body {
+    scroll-padding-top: 130px;
+    overscroll-behavior-y: contain;
+    -webkit-tap-highlight-color: transparent;
+    -webkit-touch-callout: none;
   }
 
   body {
@@ -12,14 +45,22 @@
   }
 
   h1 {
-    @apply text-4xl sm:text-5xl font-bold;
+    @apply text-4xl sm:text-5xl font-bold text-[#3b0d15] dark:text-orange-50;
   }
 
   h2 {
-    @apply text-3xl sm:text-4xl font-bold;
+    @apply text-3xl sm:text-4xl font-bold text-[#3b0d15] dark:text-orange-50;
   }
 
-  h3 {
-    @apply text-2xl font-bold;
+  h3:not(footer h3) {
+    @apply text-2xl font-bold text-[#3b0d15] dark:text-orange-50;
+  }
+
+  p {
+    @apply text-base sm:text-lg;
+  }
+
+  p a {
+    @apply font-semibold underline text-orange-500 active:text-orange-600 transition-colors;
   }
 }
