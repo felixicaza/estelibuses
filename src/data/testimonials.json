@@ -1,0 +1,79 @@
+[
+  {
+    "name": "Daysi",
+    "comment": "Está app me ha sido de gran utilidad para poder organizar mi hora de salida y llegar a tiempo a mis destinos!",
+    "bg_circle": "bg-[#fde5ef]",
+    "color_icon": "text-[#f698be]",
+    "icon": "woman"
+  },
+  {
+    "name": "Marcos Blandón",
+    "comment": "Esta aplicación es perfecta, me ha servido mucho para saber horarios al viajar.",
+    "bg_circle": "bg-green-100",
+    "color_icon": "text-green-500",
+    "icon": "man"
+  },
+  {
+    "name": "Karla Molina",
+    "comment": "Me encanta la aplicación muy fácil de usar y es de mucha ayuda para saber los horarios.",
+    "bg_circle": "bg-[#ebf8ff]",
+    "color_icon": "text-[#33b8ff]",
+    "icon": "woman"
+  },
+  {
+    "name": "Lester Vallecillo",
+    "comment": "Muy útil 😁😎",
+    "bg_circle": "bg-zinc-100",
+    "color_icon": "text-zinc-500",
+    "icon": "man"
+  },
+  {
+    "name": "Gerald Hernández",
+    "comment": "Esta plataforma es excelente porque así podemos organizar mejor nuestro tiempo.",
+    "bg_circle": "bg-indigo-100",
+    "color_icon": "text-indigo-500",
+    "icon": "man"
+  },
+  {
+    "name": "Yamileth Rodríguez",
+    "comment": "Es una gran herramienta de apoyo para las y los estelianos.",
+    "bg_circle": "bg-rose-100",
+    "color_icon": "text-rose-500",
+    "icon": "woman"
+  },
+  {
+    "name": "Yadira Castillo",
+    "comment": "Excelente, ya que no había un lugar dónde encontrar esa información.",
+    "bg_circle": "bg-lime-100",
+    "color_icon": "text-lime-500",
+    "icon": "woman"
+  },
+  {
+    "name": "Francisco Morales",
+    "comment": "Es una excelente iniciativa y una plataforma muy útil.",
+    "bg_circle": "bg-teal-100",
+    "color_icon": "text-teal-500",
+    "icon": "man"
+  },
+  {
+    "name": "Steven Rodríguez",
+    "comment": "Gracias a esta iniciativa ahora es muy fácil conocer los horarios.",
+    "bg_circle": "bg-cyan-100",
+    "color_icon": "text-cyan-500",
+    "icon": "man"
+  },
+  {
+    "name": "Carlos Aguirre",
+    "comment": "Me gusta mucho esta plataforma, es muy fácil de usar.",
+    "bg_circle": "bg-orange-100",
+    "color_icon": "text-orange-500",
+    "icon": "man"
+  },
+  {
+    "name": " Maria Acuña",
+    "comment": "Me encanta que puedo acceder cuándo no tengo internet.",
+    "bg_circle": "bg-pink-100",
+    "color_icon": "text-pink-500",
+    "icon": "woman"
+  }
+]
