@@ -1,0 +1,88 @@
+---
+import testimonials from '../data/testimonials.json'
+
+/**
+ * Random sort testimonials on every build
+ * */
+const randomSortTestimonials = testimonials.sort(() => 0.5 - Math.random())
+
+const testimonialsLength = testimonials.length
+---
+
+<article class="py-10 sm:py-12 bg-[#FFFDF9] dark:bg-[#2D231B]">
+  <div class="container mx-auto px-4">
+    <section class="space-y-6 mb-10 lg:mb-16 lg:text-center">
+      <h2 class="text-center">Los Estelianos confían en Estelí Buses</h2>
+    </section>
+    <article
+      class="grid items-start gap-4 sm:gap-8 snap-mandatory snap-x overflow-x-scroll pb-4 px-4 mx-auto users-comments"
+    >
+      {
+        randomSortTestimonials.map((testimonial) => (
+          <section class="snap-center h-full bg-white dark:bg-[#30251b]/50 pt-2 pb-3 px-3 rounded shadow flex flex-col gap-2 text-center justify-start items-center">
+            <div>
+              <section
+                class={`rounded-full p-3 w-max h-max mx-auto ${testimonial.bg_circle}`}
+              >
+                <svg
+                  class={`fill-current ${testimonial.color_icon}`}
+                  viewBox="0 0 24 24"
+                  width="45"
+                  height="45"
+                >
+                  <path
+                    d={
+                      testimonial.icon === 'woman'
+                        ? 'M13.75 13a1.25 1.25 0 1 1 2.5 0 1.25 1.25 0 0 1-2.5 0M22 12v10H2V12C2 6.5 6.5 2 12 2s10 4.5 10 10M4 12a8.01 8.01 0 0 0 16 0c0-.79-.12-1.55-.33-2.26A9.97 9.97 0 0 1 9.26 5.77a10.06 10.06 0 0 1-5.21 5.37C4 11.42 4 11.71 4 12m5 2.25a1.25 1.25 0 1 0 0-2.5 1.25 1.25 0 0 0 0 2.5Z'
+                        : 'M9 11.75A1.25 1.25 0 0 0 7.75 13 1.25 1.25 0 0 0 9 14.25 1.25 1.25 0 0 0 10.25 13 1.25 1.25 0 0 0 9 11.75m6 0A1.25 1.25 0 0 0 13.75 13 1.25 1.25 0 0 0 15 14.25 1.25 1.25 0 0 0 16.25 13 1.25 1.25 0 0 0 15 11.75M12 2A10 10 0 0 0 2 12a10 10 0 0 0 10 10 10 10 0 0 0 10-10A10 10 0 0 0 12 2m0 18c-4.41 0-8-3.59-8-8 0-.29 0-.58.05-.86a10.06 10.06 0 0 0 5.21-5.37 9.97 9.97 0 0 0 10.41 3.97A7.97 7.97 0 0 1 12 20Z'
+                    }
+                  />
+                </svg>
+              </section>
+            </div>
+            <div class="space-y-1">
+              <p class="font-semibold mb-1">{testimonial.name}</p>
+              <p class="italic !text-base">{testimonial.comment}</p>
+            </div>
+          </section>
+        ))
+      }
+    </article>
+    <section class="mt-4">
+      <p class="text-right !text-sm">
+        ¿Quiéres aparecer acá?
+        <a
+          href="https://forms.gle/sYKj4pqKRaC5s4LL7"
+          rel="nofollow"
+          target="_blank"
+          >Llena este formulario
+          <svg
+            class="fill-current inline -mt-[0.125rem]"
+            viewBox="0 0 24 24"
+            width="12"
+            height="12"
+          >
+            <path
+              d="M14 3v2h3.6l-9.8 9.8 1.4 1.4L19 6.4V10h2V3m-2 16H5V5h7V3H5a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2v-7h-2v7Z"
+            ></path>
+          </svg>
+        </a>.
+      </p>
+    </section>
+  </div>
+</article>
+<style define:vars={{ items: testimonialsLength }}>
+  .users-comments {
+    grid-template-columns: repeat(var(--items), 16rem);
+  }
+
+  @media (min-width: 768px) {
+    .users-comments {
+      grid-template-columns: repeat(var(--items), 20rem);
+    }
+  }
+
+  .users-comments::-webkit-scrollbar {
+    border-radius: 4px;
+  }
+</style>

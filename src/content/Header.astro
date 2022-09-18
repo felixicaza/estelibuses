@@ -1,0 +1,171 @@
+---
+/* eslint-disable astro/jsx-a11y/label-has-associated-control */
+
+import Navbar from '@components/Navbar.astro'
+---
+
+<header
+  class="bg-gradient-to-t from-[#fff4eb] dark:from-[#2D231B] dark:to-[#2D231B] relative to-[#ffecdb]"
+>
+  <div class="mx-auto px-4 container">
+    <Navbar />
+
+    <section
+      class="items-center pb-[6.25rem] pt-[4.5rem] gap-[4.5rem] 2xl:pb-[13.5rem] grid lg:gap-0 lg:grid-cols-2 lg:pb-[8.5rem] lg:pt-28 xl:pb-44 xs:pb-36"
+    >
+      <div class="space-y-8">
+        <article class="space-y-3">
+          <h1
+            class="mb-8 text-center lg:mx-0 lg:text-left md:max-w-2xl md:mx-auto"
+          >
+            Horarios de las terminales de buses de Estelí
+          </h1>
+          <p
+            class="text-center lg:max-w-lg lg:mx-0 lg:text-left md:max-w-2xl md:mx-auto"
+          >
+            Conoce fácilmente todos los horarios de salida de los buses de las
+            terminales de la ciudad de Estelí y ¡planea con exactitud la hora de
+            tu próximo viaje!
+          </p>
+        </article>
+        <section class="mb-8 mt-8">
+          <form
+            class="space-y-3 w-full transition-colors lg:mx-0 md:max-w-md md:mx-auto"
+            id="main-search"
+            autocomplete="on"
+          >
+            <label
+              class="text-center text-xl block lg:text-left"
+              for="cities-search">Busca tu ciudad de destino:</label
+            >
+            <section class="grid-cols-[1fr,100px] grid">
+              <input
+                class="shadow-lg shadow-orange-500/[.07] px-4 py-2.5 bg-white w-full border-orange-100 rounded-r-none placeholder-opacity-50 placeholder-orange-600 outline-none duration-150 transition-colors block border caret-orange-500 dark:bg-[#292018] dark:border-orange-400 dark:placeholder-orange-100 focus:ring-4 focus:ring-opacity-50 focus:ring-orange-400 rounded"
+                id="cities-search"
+                type="search"
+                placeholder="Busca tu ciudad..."
+              />
+              <button
+                class="items-center justify-center shadow-lg shadow-orange-500/[.07] px-5 py-2.5 bg-orange-400 rounded-l-none font-semibold text-white transition-colors active:outline-none active:ring-4 active:ring-opacity-75 active:ring-orange-400 any-hover:bg-orange-500 basis-30 inline-flex rounded"
+                id="search-citities-button"
+                type="button"
+              >
+                <svg class="w-4" viewBox="0 0 512 512">
+                  <path
+                    class="fill-current"
+                    d="M505 442.7L405.3 343c-4.5-4.5-10.6-7-17-7H372c27.6-35.3 44-79.7 44-128C416 93.1 322.9 0 208 0S0 93.1 0 208s93.1 208 208 208c48.3 0 92.7-16.4 128-44v16.3c0 6.4 2.5 12.5 7 17l99.7 99.7c9.4 9.4 24.6 9.4 33.9 0l28.3-28.3c9.4-9.4 9.4-24.6.1-34zM208 336c-70.7 0-128-57.2-128-128 0-70.7 57.2-128 128-128 70.7 0 128 57.2 128 128 0 70.7-57.2 128-128 128z"
+                  ></path>
+                </svg>
+              </button>
+            </section>
+          </form>
+        </section>
+      </div>
+      <section class="overflow-hidden aspect-[752/586] relative">
+        <div class="absolute blob left-0 top-0"></div>
+        <picture>
+          <source
+            type="image/avif"
+            srcset="/img/estelibuses-horarios-de-esteli.avif"
+          />
+          <source
+            type="image/webp"
+            srcset="/img/estelibuses-horarios-de-esteli.webp"
+          />
+          <img
+            class="aspect-[752/586] relative z-10"
+            srcset="/img/estelibuses-horarios-de-esteli.png"
+            alt="Estelí Buses: Horarios de las Terminales de Buses de Estelí"
+            decoding="async"
+            fetchpriority="highest"
+          />
+        </picture>
+      </section>
+    </section>
+  </div>
+  <div class="wave"></div>
+</header>
+
+<style>
+  .blob {
+    background: linear-gradient(
+      180deg,
+      rgba(255, 210, 168, 1) 0%,
+      rgba(255, 231, 208, 1) 100%
+    );
+    height: 60%;
+    width: 60%;
+    border-radius: 30% 50% 20% 40%;
+    animation: transformBlob 12s ease-in-out infinite both alternate,
+      translateBlob 45s ease-in-out infinite both;
+    opacity: 0.7;
+  }
+
+  @keyframes transformBlob {
+    0%,
+    100% {
+      border-radius: 33% 67% 70% 30% / 30% 30% 70% 70%;
+    }
+    20% {
+      border-radius: 37% 63% 51% 49% / 37% 65% 35% 63%;
+    }
+    40% {
+      border-radius: 36% 64% 64% 36% / 64% 48% 52% 36%;
+    }
+    60% {
+      border-radius: 37% 63% 51% 49% / 30% 30% 70% 70%;
+    }
+    80% {
+      border-radius: 40% 60% 42% 58% / 41% 51% 49% 59%;
+    }
+  }
+
+  @keyframes translateBlob {
+    0%,
+    100% {
+      transform: none;
+    }
+    50% {
+      transform: translate(50%, 20%) rotateY(10deg) scale(1.2);
+    }
+  }
+
+  .wave {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    content: '';
+    width: 100%;
+    height: 250px;
+    background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1440 280'%3E%3Cpath fill='%23ffffff' fill-opacity='1' d='M0,192L48,197.3C96,203,192,213,288,229.3C384,245,480,267,576,250.7C672,235,768,181,864,181.3C960,181,1056,235,1152,234.7C1248,235,1344,181,1392,154.7L1440,128L1440,320L1392,320C1344,320,1248,320,1152,320C1056,320,960,320,864,320C768,320,672,320,576,320C480,320,384,320,288,320C192,320,96,320,48,320L0,320Z'%3E%3C/path%3E%3C/svg%3E")
+      no-repeat;
+    background-size: contain;
+    background-position-y: bottom;
+    transform: translateY(1px);
+    pointer-events: none;
+    touch-action: none;
+  }
+
+  .dark .wave {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    content: '';
+    width: 100%;
+    height: 250px;
+    background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1440 280'%3E%3Cpath fill='%23292018' fill-opacity='1' d='M0,192L48,197.3C96,203,192,213,288,229.3C384,245,480,267,576,250.7C672,235,768,181,864,181.3C960,181,1056,235,1152,234.7C1248,235,1344,181,1392,154.7L1440,128L1440,320L1392,320C1344,320,1248,320,1152,320C1056,320,960,320,864,320C768,320,672,320,576,320C480,320,384,320,288,320C192,320,96,320,48,320L0,320Z'%3E%3C/path%3E%3C/svg%3E")
+      no-repeat;
+    background-size: contain;
+    background-position-y: bottom;
+    transform: translateY(1px);
+    pointer-events: none;
+    touch-action: none;
+  }
+
+  @media (min-width: 1200px) {
+    .wave,
+    .dark .wave {
+      background-size: cover;
+    }
+  }
+</style>

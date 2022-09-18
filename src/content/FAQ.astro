@@ -1,0 +1,57 @@
+---
+import faq from '../data/faq.json'
+---
+
+<article
+  class="py-12 sm:py-16 md:py-20 xl:py-28 bg-[#FFFDF9] dark:bg-[#2D231B]"
+>
+  <div class="container mx-auto px-4">
+    <section class="my-10 lg:my-16 lg:text-center">
+      <h2 class="text-center">Preguntas frecuentes</h2>
+    </section>
+    <section class="max-w-6xl mx-auto space-y-[2px]">
+      {
+        faq.map((faq, index) => (
+          <div>
+            <button
+              class:list={[
+                'accordion flex font-semibold w-full py-3 px-4 text-left items-center justify-between any-hover:text-orange-500 transition-colors focus:text-orange-500',
+                {
+                  'bg-orange-100 dark:bg-[#34281e]': index % 2 === 0,
+                  'bg-orange-50 dark:bg-[#362d25]': index % 2 !== 0
+                }
+              ]}
+            >
+              <span>{faq.question}</span>
+              <svg
+                class="fill-current mt-[0.1625rem]"
+                viewBox="0 0 24 24"
+                width="26"
+                height="26"
+              >
+                <path d="m7.4 8.6 4.6 4.6 4.6-4.6L18 10l-6 6-6-6 1.4-1.4Z" />
+              </svg>
+            </button>
+            <div class="panel overflow-hidden max-h-0 transition-all">
+              <p class="py-3 px-4 !text-base" set:html={faq.response} />
+            </div>
+          </div>
+        ))
+      }
+    </section>
+  </div>
+</article>
+<script>
+  const accordion = document.querySelectorAll('.accordion')
+  const panel = document.querySelectorAll('.panel')
+
+  for (let i = 0; i < accordion.length; i++) {
+    accordion[i].addEventListener('click', () => {
+      if (panel[i].style.maxHeight) {
+        panel[i].style.maxHeight = null
+      } else {
+        panel[i].style.maxHeight = `${panel[i].scrollHeight}px`
+      }
+    })
+  }
+</script>

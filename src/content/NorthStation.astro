@@ -1,0 +1,34 @@
+---
+import CardCity from '@components/CardCity.astro'
+
+import northernStation from '../data/northern-station.json'
+
+const cities = northernStation.cities
+---
+
+<article class="py-12 sm:py-16 md:py-20 xl:py-28 container mx-auto px-4">
+  <section class="space-y-6 mb-10 lg:mb-16 lg:text-center">
+    <h2 class="text-center">Destinos populares de la terminal norte</h2>
+    <p class="mx-auto mt-5 text-center md:max-w-5xl lg:max-w-6xl">
+      Elige la ciudad para ver los horarios de los destinos más populares de la
+      terminal norte.
+    </p>
+  </section>
+  <article
+    class="flex flex-col gap-y-14 items-center lg:grid lg:grid-cols-2 xl:grid-cols-3 lg:gap-[5.5rem]"
+  >
+    {
+      cities.map(
+        (city, index) =>
+          index < 6 && (
+            <CardCity
+              cityName={city.name}
+              slug={city.slug}
+              imagen={city.image}
+              lqip={city.lqip}
+            />
+          )
+      )
+    }
+  </article>
+</article>

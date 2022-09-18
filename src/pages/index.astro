@@ -1,0 +1,60 @@
+---
+import Layout from '@layouts/Layout.astro'
+import SocialMedia from '@components/SocialMedia.astro'
+import Navbar from '@components/Navbar.astro'
+
+import Header from '@content/Header.astro'
+import About from '@content/About.astro'
+import Testimonials from '@content/Testimonials.astro'
+import NorthStation from '@content/NorthStation.astro'
+import SouthStation from '@content/SouthStation.astro'
+import OfflineBanner from '@content/OfflineBanner.astro'
+import FAQ from '@content/FAQ.astro'
+
+const options = {
+  title: 'Estelí Buses: Horarios de las Terminales de Buses de Estelí',
+  description:
+    'Conoce Todos los Horarios de Salida de los Buses de la Terminal Norte y de la Terminal Sur de la ciudad de Estelí.',
+  meta_robots: 'index, follow',
+  theme_color: '#fb923c'
+}
+---
+
+<Layout {options}>
+  <link
+    type="image/avif"
+    as="image"
+    fetchpriority="highest"
+    href="/img/estelibuses-horarios-de-esteli.avif"
+    rel="preload"
+    crossorigin
+    slot="preload"
+  />
+  <link
+    type="image/webp"
+    as="image"
+    fetchpriority="highest"
+    href="/img/estelibuses-horarios-de-esteli.webp"
+    rel="preload"
+    crossorigin
+    slot="preload"
+  />
+
+  <SocialMedia
+    title={options.title}
+    description={options.description}
+    image="/img/og/estelibuses.jpg"
+    slot="social-media"
+  />
+
+  <Header />
+
+  <main>
+    <About />
+    <Testimonials />
+    <NorthStation />
+    <SouthStation />
+    <OfflineBanner />
+    <FAQ />
+  </main>
+</Layout>
