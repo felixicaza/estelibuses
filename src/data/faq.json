@@ -1,0 +1,22 @@
+[
+  {
+    "question": "¿Cuál es número de teléfono de la terminal norte?",
+    "response": "Si deseas comunicarte con la <a href=\"/terminal-norte-esteli\">terminal norte</a> y obtener información más detallada, puedes hacerlo al número <a href=\"tel:27132529\">2713-2529 extensión 102</a>."
+  },
+  {
+    "question": "¿Cuál es número de teléfono para comunicarme con la terminal sur?",
+    "response": "Para comunicarte con la <a href=\"/terminal-sur-esteli\">terminal sur</a> y obtener información más detallada, puedes llamar al número de teléfono <a href=\"tel:27136162\">2713-6162</a>."
+  },
+  {
+    "question": "¿Cuáles son los horarios de Estelí hacia León?",
+    "response": "Si quieres conocer los horarios de Estelí hacia León puedes consultar los horarios de los <a href=\"/terminal-sur-esteli/horarios-esteli-leon\">buses que salen desde la terminal sur hacia León</a>. Los buses que salen desde la terminal norte no tienen hora fija de salida, por eso no están añadidos en la plataforma, estos salen desde las 06:30 am."
+  },
+  {
+    "question": "¿Por qué no encuentro mi destino en específico?",
+    "response": "Debido a que no se ha podido verificar las paradas de los buses, no existe de forma específica los horarios de algunos destinos. Pero puedes consultar los horarios de los destinos principales de la a href=\"/terminal-norte-esteli\">terminal norte</a> que son 22 y de la <a href=\"/terminal-sur-esteli\">terminal sur</a> que son 10."
+  },
+  {
+    "question": "¿Por qué no se ha añadido el precio de los pasajes?",
+    "response": "Los precios de los pasajes solamente son manejados por los transportistas y para evitar algún tipo de desacuerdo o colocar precios no verificados, de momento se ha optado por omitir esa información."
+  }
+]
