@@ -65,7 +65,7 @@ const { options } = Astro.props
 
     <slot name="defer-scripts" />
 
-    <meta name="robots" content={options.meta_robots} />
+    <meta name="robots" content={options.meta_robots || 'index, follow'} />
     {
       options.description && (
         <meta name="description" content={options.description} />
@@ -94,8 +94,11 @@ const { options } = Astro.props
     <Favicons />
 
     <meta name="color-scheme" content="light dark" />
-    <meta name="theme-color" content={options.theme_color} />
-    <meta name="msapplication-TileColor" content={options.theme_color} />
+    <meta name="theme-color" content={options.theme_color || '#fb923c'} />
+    <meta
+      name="msapplication-TileColor"
+      content={options.theme_color || '#fb923c'}
+    />
     <link href="/manifest.json" rel="manifest" />
 
     <meta name="format-detection" content="telephone=no" />
