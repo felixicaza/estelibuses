@@ -71,21 +71,25 @@ const { options } = Astro.props
         <meta name="description" content={options.description} />
       )
     }
-    <link href={Astro.url.href} rel="canonical" />
+    {options.description && <link href={Astro.url.href} rel="canonical" />}
     <meta name="application-name" content="Estelí Buses" />
     <meta name="author" content="Félix Icaza - https://felixicaza.com" />
     <meta name="generator" content={Astro.generator} />
 
-    <Schema
-      item={{
-        '@context': 'https://schema.org',
-        '@type': 'Organization',
-        name: 'Estelí Buses',
-        url: 'https://estelibuses.web.app',
-        logo: 'https://estelibuses.web.app/favicons/android-chrome-512x512.png',
-        sameAs: ['https://www.facebook.com/estelibuses']
-      }}
-    />
+    {
+      options.description && (
+        <Schema
+          item={{
+            '@context': 'https://schema.org',
+            '@type': 'Organization',
+            name: 'Estelí Buses',
+            url: 'https://estelibuses.web.app',
+            logo: 'https://estelibuses.web.app/favicons/android-chrome-512x512.png',
+            sameAs: ['https://www.facebook.com/estelibuses']
+          }}
+        />
+      )
+    }
 
     <Favicons />
 
