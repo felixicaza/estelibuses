@@ -1,0 +1,57 @@
+---
+import Layout from '@layouts/Layout.astro'
+
+import Navbar from '@components/Navbar.astro'
+
+const options = {
+  title: 'Sin conexión a internet | Estelí Buses',
+  meta_robots: 'noindex, nofollow'
+}
+---
+
+<Layout {options}>
+  <header class="container mx-auto px-4">
+    <Navbar />
+  </header>
+  <main
+    class="pt-[4.5rem] pb-[6.5rem] xs:pb-36 lg:pt-28 lg:pb-[8.5rem] xl:pb-44 2xl:pb-[13.5rem] text-center"
+  >
+    <div class="container mx-auto px-4 space-y-6">
+      <h1 class="max-w-screen-lg mx-auto">No tienes conexión a internet</h1>
+      <p>
+        Por favor vuelve cuánto tengas conexión para visualizar esta página o
+        intenta recargar manualmente si ha sido un poblema temporal.
+      </p>
+      <button
+        class="rounded font-semibold py-2.5 px-5 transition-colors any-hover:bg-orange-500 active:outline-none active:ring-4 active:ring-orange-400 active:ring-opacity-75 bg-orange-400 text-white shadow-lg shadow-orange-500/30 any-hover:shadow-orange-600/30 active:shadow-orange-600/30"
+        id="reload"
+        type="button">Recargar página</button
+      >
+      <section>
+        <picture>
+          <source type="image/avif" data-srcset="/img/offline.avif" />
+          <source type="image/webp" data-srcset="/img/offline.webp" />
+          <source type="image/jpeg" data-srcset="/img/offline.jpg" />
+          <img
+            class="object-cover object-center rounded h-auto w-full max-w-3xl aspect-[768/538] mx-auto mt-8 filter saturate-150 lazyload"
+            alt="Imágen Offline"
+            decoding="async"
+            fetchpriority="low"
+            loading="lazy"
+            srcset="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAoAAAAHCAYAAAAxrNxjAAAAAklEQVR4AewaftIAAADSSURBVDXBwU6DMACA4b9QIAwIE4wJxoMHPXrxZJbsvGf1LXwNT8boRZ3MyAYtpa3M6PcJP+PP1H9h2leOouoCuVjyTzJzeo+3Bv3+RKgMXg0M+kCYZMiyIS5qAjsZTPeJ2j4TL8/hxSK6nKhscLsDjHvwHmlVh357RABTfkZ8c42IImygmPoBPwYgBNIrDR8DDrDZDtfxy1Yp0/0Dbt0iNzkyOW0Ib+9wumP83mL6FhD4rGZaXVKu1oSLEySzIKtxMiVJK1w1gAdkTLG5IkgLjn4AiQpchdur0OAAAAAASUVORK5CYII="
+            data-srcset="/img/offline.jpg"
+          />
+        </picture>
+      </section>
+    </div>
+  </main>
+</Layout>
+<script>
+  document.getElementById('reload').addEventListener('click', () => {
+    window.location.reload()
+  })
+
+  window.addEventListener('online', () => {
+    window.location.reload()
+  })
+</script>

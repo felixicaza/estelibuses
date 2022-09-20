@@ -1,0 +1,112 @@
+---
+import Layout from '@layouts/Layout.astro'
+
+import Navbar from '@components/Navbar.astro'
+
+const options = {
+  title: 'Página no encontrada | Estelí Buses',
+  meta_robots: 'noindex, nofollow'
+}
+---
+
+<Layout {options}>
+  <header class="container mx-auto px-4">
+    <Navbar />
+  </header>
+  <main
+    class="pt-[4.5rem] pb-[6.5rem] xs:pb-36 lg:pt-28 lg:pb-[8.5rem] xl:pb-44 2xl:pb-[13.5rem] text-center"
+  >
+    <div class="container mx-auto px-4 space-y-6">
+      <h1 class="mb-8 max-w-screen-lg mx-auto">
+        Ups, la página que estás buscando no existe.
+      </h1>
+      <p>
+        Conoce los horarios de salida de los buses de las terminales de la
+        ciudad de Estelí, y planea con exactitud la hora de tu próximo viaje.
+      </p>
+      <article
+        class="flex flex-col md:flex-row items-center justify-center gap-16 text-center"
+      >
+        <section>
+          <div class="mb-4">
+            <div class="mx-auto p-3 bg-emerald-100 h-max w-max rounded-full">
+              <svg
+                class="fill-current text-emerald-400"
+                viewBox="0 0 24 24"
+                width="40"
+                height="40"
+              >
+                <path
+                  d="M18 11H6V6h12m-1.5 11a1.5 1.5 0 0 1-1.5-1.5 1.5 1.5 0 0 1 1.5-1.5 1.5 1.5 0 0 1 1.5 1.5 1.5 1.5 0 0 1-1.5 1.5m-9 0A1.5 1.5 0 0 1 6 15.5 1.5 1.5 0 0 1 7.5 14 1.5 1.5 0 0 1 9 15.5 1.5 1.5 0 0 1 7.5 17M4 16a3 3 0 0 0 1 2.2V20a1 1 0 0 0 1 1h1a1 1 0 0 0 1-1v-1h8v1a1 1 0 0 0 1 1h1a1 1 0 0 0 1-1v-1.8a3 3 0 0 0 1-2.2V6c0-3.5-3.6-4-8-4s-8 .5-8 4v10Z"
+                ></path>
+              </svg>
+            </div>
+          </div>
+          <h3 class="mb-2 font-bold text-2xl text-emerald-500">
+            Terminal norte
+          </h3>
+          <p class="mx-auto px-4 max-w-sm !text-base">
+            La terminal norte cuenta con 22 destinos principales.
+          </p>
+          <a
+            class="items-center mt-4 px-5 py-2.5 space-x-1 font-semibold text-emerald-500 transition-colors active:bg-emerald-100 active:outline-none active:text-emerald-700 any-hover:bg-emerald-100 any-hover:text-emerald-700 inline-flex mt-4 rounded"
+            href="/terminal-norte-esteli"
+          >
+            <span>Conoce los destinos</span>
+            <span>
+              <svg class="fill-current mt-[0.1625rem]" width="26" height="26">
+                <path d="m8.6 16.6 4.6-4.6-4.6-4.6L10 6l6 6-6 6-1.4-1.4Z"
+                ></path>
+              </svg>
+            </span>
+          </a>
+        </section>
+        <section>
+          <div class="mb-4">
+            <div class="mx-auto p-3 bg-amber-100 h-max w-max rounded-full p-3">
+              <svg
+                class="fill-current text-amber-400"
+                viewBox="0 0 24 24"
+                width="40"
+                height="40"
+              >
+                <path
+                  d="M18 11H6V6h12m-1.5 11a1.5 1.5 0 0 1-1.5-1.5 1.5 1.5 0 0 1 1.5-1.5 1.5 1.5 0 0 1 1.5 1.5 1.5 1.5 0 0 1-1.5 1.5m-9 0A1.5 1.5 0 0 1 6 15.5 1.5 1.5 0 0 1 7.5 14 1.5 1.5 0 0 1 9 15.5 1.5 1.5 0 0 1 7.5 17M4 16a3 3 0 0 0 1 2.2V20a1 1 0 0 0 1 1h1a1 1 0 0 0 1-1v-1h8v1a1 1 0 0 0 1 1h1a1 1 0 0 0 1-1v-1.8a3 3 0 0 0 1-2.2V6c0-3.5-3.6-4-8-4s-8 .5-8 4v10Z"
+                ></path>
+              </svg>
+            </div>
+          </div>
+          <h3 class="mb-2 font-bold text-2xl text-amber-500">Terminal sur</h3>
+          <p class="mx-auto px-4 max-w-sm !text-base">
+            La terminal sur cuenta con 10 destinos principales.
+          </p><a
+            class="items-center mt-4 px-5 py-2.5 space-x-1 font-semibold text-amber-500 transition-colors active:bg-amber-100 active:outline-none active:text-amber-700 any-hover:bg-amber-100 any-hover:text-amber-700 inline-flex rounded"
+            href="/terminal-sur-esteli"
+            ><span>Conoce los destinos</span><span>
+              <svg class="fill-current mt-[0.1625rem]" width="26" height="26">
+                <path d="m8.6 16.6 4.6-4.6-4.6-4.6L10 6l6 6-6 6-1.4-1.4Z"
+                ></path>
+              </svg>
+            </span>
+          </a>
+        </section>
+      </article>
+      <section>
+        <picture>
+          <source type="image/avif" data-srcset="/img/404.avif" />
+          <source type="image/webp" data-srcset="/img/404.webp" />
+          <source type="image/jpeg" data-srcset="/img/404.jpg" />
+          <img
+            class="object-cover object-center h-auto w-full max-w-3xl aspect-[768/515] rounded mx-auto filter saturate-150 lazyload"
+            alt="Página no encontrada"
+            decoding="async"
+            fetchpriority="low"
+            loading="lazy"
+            srcset="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAoAAAAHCAYAAAAxrNxjAAAAAklEQVR4AewaftIAAADMSURBVDXBPU4CURSA0e/9+ITR0UiisbTTxlha2LhS98AmKI3uAAujJEgyEHnDvLn3OiR4jrMBB2aKSQdmuJBwPvAvcqAlI3kDweOcR9uGkE4IxzV7noFJQdoNrukwKchuC2aYFLRk9iID0wIO7CKxeJtytr6mvcpM7p5R6fBHY7xpj3SZz9kL2+Wc9WrB9+8rsmowFUx6tGSiqcJOqep7vt6n9D8fmDeWec7p+pFqcoMLiehChPGI84cnUnOLmuJ9REom1Zf0XSaMKv4AILZvQxJLKhQAAAAASUVORK5CYII="
+            data-srcset="/img/404.jpg"
+          />
+        </picture>
+      </section>
+    </div>
+  </main>
+</Layout>

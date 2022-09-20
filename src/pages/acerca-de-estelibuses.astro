@@ -1,0 +1,87 @@
+---
+import Layout from '@layouts/Layout.astro'
+
+import Navbar from '@components/Navbar.astro'
+
+const options = {
+  title: 'Acerca de Estelí Buses - Horarios de las Terminales de Estelí',
+  description:
+    'Estelí Buses es la aplicación web dónde podrás conocer todos los horarios de la ciudad de Estelí, creada por Félix Icaza.'
+}
+---
+
+<Layout {options}>
+  <header class="container mx-auto px-4">
+    <Navbar />
+  </header>
+  <main class="container mx-auto px-4">
+    <section
+      class="pt-[4.5rem] pb-[6.5rem] xs:pb-36 lg:pt-28 lg:pb-[8.5rem] xl:pb-44 2xl:pb-[13.5rem] text-center max-w-6xl mx-auto space-y-6"
+    >
+      <h1>Conoce sobre este proyecto, Estelí Buses</h1>
+
+      <p>
+        <strong
+          >Estelí Buses es un proyecto personal y totalmente voluntario</strong
+        >, diseñado, desarrollado y mantenido completamente por el desarrollador
+        web <a
+          href="https://felixicaza.com/?utm_source=estelibuses&utm_medium=website&utm_campaign=estelibuses_users&utm_content=about_project"
+          target="_blank">Félix Icaza</a
+        >, quién no está asociado ni relacionado con ninguna cooperativa, ni con
+        ningún transportista y tampoco con las terminales de buses de Estelí.
+      </p>
+
+      <h2>¿Porqué existe este proyecto?</h2>
+      <p>
+        A lo largo de los años, <strong
+          >los Estelianos siempre hemos tenido la dificultad de conocer con
+          exactitud la hora de salida de los buses</strong
+        > de la terminal norte y de la terminal sur. La única forma es llamando por
+        teléfono directamente a las terminales, pero también algunas personas no
+        tienen el acceso a conocer el número de teléfono de cada terminal, inclusive
+        tener que ir personalmente a las terminales para solicitar dicha información.
+      </p>
+      <p>
+        Así que decidí crear este proyecto, con la idea principal <strong
+          >para intentar de solventar esa problemática o dificultad que existe
+          en relación a los horarios de las terminales de buses</strong
+        >, así, todas las personas que recidan en Estelí o cualquier turista que
+        desee viajar desde Estelí hacia el interior del país, <strong
+          >puedan conocer fácilmente los horarios y todos los destinos de dichas
+          terminales y esté accesible para todos</strong
+        >.
+      </p>
+      <p>
+        Ya que de ésta forma cualquier información que la población de Estelí
+        necesite estará a su alcance y hará mucho más fácil, conocer la
+        información relacionada a cada terminal de buses.
+      </p>
+      <p>
+        Es por eso que es importante, que <strong
+          >al conocer este proyecto lo compartas con todos tus familiares,
+          amigos y conocidos, para así ayudar a más personas</strong
+        >.
+      </p>
+
+      <h2>Agradecimientos</h2>
+      <p>
+        Por último, quiero agradecer enormemente al personal de la terminal sur,
+        por toda su amable y atenta contribución para ayudarme a recopilar la
+        información necesaria de las salidas de buses de la terminal sur (Cotrán
+        sur), ya que de otra forma hubiese sido complicada haberla obtenido por
+        mi propia cuenta.
+      </p>
+      <p>
+        También quiero agradecer al personal de la terminal norte, por
+        compartirme información actualizada sobre los horarios de salida de los
+        buses, para poder corregir la que ya había sido agregada en la
+        plataforma.
+      </p>
+    </section>
+  </main>
+</Layout>
+<style>
+  h2 {
+    @apply !mt-14;
+  }
+</style>
