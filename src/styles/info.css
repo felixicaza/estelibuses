@@ -1,0 +1,6 @@
+h2 {
+  @apply !mt-14;
+}
+a {
+  @apply break-words;
+}

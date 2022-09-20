@@ -56,6 +56,10 @@
     @apply text-2xl font-bold text-[#3b0d15] dark:text-orange-50;
   }
 
+  h4 {
+    @apply text-xl font-bold text-[#3b0d15] dark:text-orange-50;
+  }
+
   p {
     @apply text-base sm:text-lg;
   }
