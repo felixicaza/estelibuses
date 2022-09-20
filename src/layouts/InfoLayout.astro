@@ -1,0 +1,28 @@
+---
+import Layout from '@layouts/Layout.astro'
+
+import '@styles/info.css'
+
+import Navbar from '@components/Navbar.astro'
+
+const { content } = Astro.props
+
+const options = {
+  title: content.title,
+  meta_robots: content.meta_robots
+}
+---
+
+<Layout {options}>
+  <header class="container mx-auto px-4">
+    <Navbar />
+  </header>
+  <main class="container mx-auto px-4">
+    <section
+      id="content"
+      class="pt-[4.5rem] pb-[6.5rem] xs:pb-36 lg:pt-28 lg:pb-[8.5rem] xl:pb-44 2xl:pb-[13.5rem] text-center max-w-6xl mx-auto space-y-6"
+    >
+      <slot />
+    </section>
+  </main>
+</Layout>
