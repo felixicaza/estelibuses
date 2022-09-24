@@ -1,5 +1,37 @@
 {
   "station": "Terminal Norte",
+  "location": "Del Centro Comercial Erwin 30 metros hacia el sur",
+  "location_description": "La Terminal Norte o mejor conocida como <em>Cotrán Norte</em> está ubicada <a href=\"/terminal-norte-esteli#mapa\">Del Centro Comercial Erwin 30 metros hacia el sur</a>, contiguo a la Carretera Panamericana.",
+  "location_map": "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3886.2767920870906!2d-86.3543146846077!3d13.081636290783834!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8f718c6c8f2298e7%3A0x855d282eb62cfeed!2sCotran%20Norte!5e0!3m2!1ses-419!2sni!4v1645728089801!5m2!1ses-419!2sni",
+  "phone": "2713-2529",
+  "station_image": "/img/terminal-norte-estelibuses-felix-icaza",
+  "station_image_mobile": "/img/terminal-norte-estelibuses-mobile-felix-icaza",
+  "station_image_breakpoint": "600w",
+  "station_image_aspect_mobile": "aspect-[544/726]",
+  "station_image_aspect_ratio": "md:aspect-[1024/576]",
+  "station_image_lqip": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAoAAAANCAYAAACQN/8FAAAAAklEQVR4AewaftIAAAF0SURBVB3B7WoTQRSA4fecOdndfHWDSmNiqfjDO/CevQC9hP7QahEVW7ClIkQsUrMlyWaTnZ0Zic8jV4sqFXnB3u85fjzGnLD3UD1sWD5U7L3HiWGn0yNUhPtVwAdhvWlpmh2rzZrVes2+bYkebGDKQWYCMRFiR91s6XxHCpGmbqg3NXZ2/oHZdMpsOmVQKF1/SN+Ez1ffuftzx8X7d3y9+Ii9ef2WmIT5rM/pScnfZcX17S031Z56W3P/e8FROcF+Xl/y4uUrft1848v5gkFPadrISMc8a4zJeM7TyTHWHyqfLs84GuWMRyfUIRAkkGUZP6olVo4ZDrdYEzoelQVFUeCco8hzVEEV5s+f0DPHMgSsLEtUFRHBqaIKZoZTYdAvcKIIoM45/ksJSZGUAkpCRRAEEqSUMN+2HDin+AQaHV46fIgQO0JIdKHD1DlUBERwzqEkQPE+QEqoQp7nWMIhvQxECTGiPcdutyXGyMEw67Gpa/4Bo56svyUlb3MAAAAASUVORK5CYII= 600w, data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAoAAAAGCAYAAAD68A/GAAAAAklEQVR4AewaftIAAADcSURBVAXBO0vDUBiA4ffLOc0xTZOmdqlOFt0KLuLg4tDZnyoIBTcHwUFwKqgF8QJeCFpspdBc2jTn+DzykC5dwxPqusJoRacdkJcb0umMp8mE68sL/vIKfXd7Q0MJw5MjtpOAvHb8TGfcj8dcjc5ZlRmLjYeEUeJ8XzM8PWO/v0d/1/H48sV7+kvkGVylGRwP0FG3R2iE5eKbz4+M+byJ4NjptlG2pswsz2+v6MODHq1mSBwnGGPQyiPY8lEiOGfxgzVZsUbHYQtRGmstDsGJIitWCI4iz9FKUMrjH+6cVkYrr15+AAAAAElFTkSuQmCC",
+  "social_media_image": "/img/og/cotran-norte-estelibuses.jpg",
+  "theme_color": "#34d399",
+  "header_color": "bg-gradient-to-t from-[#eeffeb] to-[#dbffdc] dark:from-[#1b2d1f] dark:to-[#1b2d1f]",
+  "title_color": "text-[#0D3B12] dark:text-emerald-50",
+  "text_color": "text-emerald-500 group-active:text-emerald-600 group-any-hover:text-emerald-600",
+  "slug": "terminal-norte-esteli",
+  "title": "Horarios de la Terminal Norte de Buses de Estelí",
+  "description": "Conoce fácilmente todos los horarios de la Terminal Norte de Estelí y elige la ciudad a la que deseas viajar desde Estelí hacia el norte de Nicaragua.",
+  "schema_FAQs": [
+    {
+      "name": "¿Cuál es el número de teléfono de la Terminal Norte de Estelí?",
+      "text": "El número de teléfono de la terminal norte de Estelí es el <a href='tel:+50527132529'>2713-2529</a> extensión 102. <a href='https://estelibuses.web.app/terminal-norte-esteli?utm_source=google&utm_content=faq&utm_medium=organic&utm_campaign=faqgoogle'>Obtén más información</a>."
+    },
+    {
+      "name": "¿Dónde está ubicada la Terminal Norte de Estelí?",
+      "text": "La terminal norte o mejor conocida como cotrán norte, está ubicada del Centro Comercial Erwin 30 metros hacia el sur, contiguo a la carretera panamericana. <a href='https://estelibuses.web.app/terminal-norte-esteli?utm_source=google&utm_content=faq&utm_medium=organic&utm_campaign=faqgoogle'>Obtén más información</a>."
+    },
+    {
+      "name": "¿Cómo puedo conocer los horarios de los buses de la Terminal Norte de Estelí?",
+      "text": "Para conocer todos los horarios de la terminal norte de Estelí, puedes hacer uso de la plataforma Estelí Buses. <a href='https://estelibuses.web.app/terminal-norte-esteli?utm_source=google&utm_content=faq&utm_medium=organic&utm_campaign=faqgoogle'>Obtén más información</a>."
+    }
+  ],
   "cities": [
     {
       "name": "Managua",

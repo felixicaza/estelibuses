@@ -1,5 +1,37 @@
 {
   "station": "Terminal Sur",
+  "location": "Contiguo al déposito de Restaurantes Tip-Top, Km 148 ½ Carretera Panamericana",
+  "location_description": "La Terminal Sur o mejor conocida como <em>Cotrán Sur</em> está ubicada <a href=\"/terminal-sur-esteli#mapa\">Contiguo al déposito de Restaurantes Tip-Top, en el Kilómetro 148 ½ de la Carretera Panamericana</a> de la ciudad de Estelí.",
+  "location_map": "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3886.36184923696!2d-86.35461778460775!3d13.076238590787367!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8f718c13825dde4b%3A0x69c6340e0429bb84!2sCotran%20Sur!5e0!3m2!1ses-419!2sni!4v1645716354613!5m2!1ses-419!2sni",
+  "phone": "2713-6162",
+  "station_image": "/img/terminal-sur-estelibuses-felix-icaza",
+  "station_image_mobile": "/img/terminal-sur-estelibuses-mobile-felix-icaza",
+  "station_image_breakpoint": "912w",
+  "station_image_aspect_mobile": "aspect-[736/982]",
+  "station_image_aspect_ratio": "lg:aspect-[1024/576]",
+  "station_image_lqip": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAoAAAAGCAYAAAD68A/GAAAAAklEQVR4AewaftIAAADcSURBVAXBy07CQABA0TvTaXi0FQU1BI07oyYmhu9l48q4cKG/oHsVQ3gsxASJGMFCtTKljxnPEVGSWd+VSCkxxmCtJbeCp8jQW+Z0XmPkeICahAVN3+KVNwx/59w/r7nqT3nrdon7L3jhBwe7FdT13Q2zRY/B6IHZaIkKXVbRAkcU7GC5aLc5PDlDDW8v+f56pyE1K1PDrSQcp5+0AkhTS6s0peYfofYbAc29c3SiKf9p8izFqSvG8QZH/OClBaePHZQwCVJIgqpDUN2iKCx5vk3dZMhCU9JzJuuAfxueaDVYwy/MAAAAAElFTkSuQmCC",
+  "social_media_image": "/img/og/cotran-sur-estelibuses.jpg",
+  "theme_color": "#fbbf24",
+  "header_color": "bg-gradient-to-t from-[#feffeb] to-[#feffdb] dark:from-[#2d2d1b] dark:to-[#2d2d1b]",
+  "title_color": "text-[#3B3B0D] dark:text-amber-50",
+  "text_color": "text-amber-500 group-active:text-amber-600 group-any-hover:text-amber-600",
+  "slug": "terminal-sur-esteli",
+  "title": "Horarios de la Terminal Sur de Buses de Estelí",
+  "description": "Conoce fácilmente todos los horarios de la Terminal Sur de Estelí y elige la ciudad a la que deseas viajar desde Estelí hacia el sur de Nicaragua.",
+  "schema_FAQs": [
+    {
+      "name": "¿Cuál es el número de teléfono de la terminal sur?",
+      "text": "El número de teléfono de la terminal sur de Estelí es el <a href='tel:+50527136162'>2713-6162</a>. <a href='https://estelibuses.web.app/terminal-sur-esteli?utm_source=google&utm_content=faq&utm_medium=organic&utm_campaign=faqgoogle'>Obtén más información</a>."
+    },
+    {
+      "name": "¿Dónde está ubicada la terminal sur de Estelí?",
+      "text": "La terminal sur o mejor conocida como cotrán sur, está ubicada contiguo al déposito de Restaurantes Tip-Top, Km 148 1/2 carretera panamericana. <a href='https://estelibuses.web.app/terminal-sur-esteli?utm_source=google&utm_content=faq&utm_medium=organic&utm_campaign=faqgoogle'>Obtén más información</a>."
+    },
+    {
+      "name": "¿Cómo puedo conocer los horarios de los buses de la terminal sur de Estelí?",
+      "text": "Para conocer todos los horarios de la terminal sur de Estelí, puedes hacer uso de la plataforma Estelí Buses. <a href='https://estelibuses.web.app/terminal-sur-esteli?utm_source=google&utm_content=faq&utm_medium=organic&utm_campaign=faqgoogle'>Obtén más información</a>."
+    }
+  ],
   "cities": [
     {
       "name": "Managua",
@@ -61,7 +93,7 @@
       "name": "Murra",
       "slug": "/terminal-sur-esteli/horarios-esteli-murra",
       "image": "/img/terminal-sur/horarios-esteli-murra-estelibuses-felix-icaza-card",
-      "lqip": "image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAoAAAAGCAYAAAD68A/GAAAAAklEQVR4AewaftIAAADeSURBVAXBXUvCUACA4Xc7Bz/OJmvtxjKIJIwo+gNdd9dt/8f/Fd1HgojsQhv0YbIywbFYHnOenZ7HeRw92HgS8zQYY6oNnifY8zvc3twRhfs0G4oSiXCU7ifJDCl3BC2Hyhg224xRPKbQJV4rJPB9hMh++uWuot2JqNcFpqpwrEU1DavvV4bxPc+TIfL6/Jjfms90MKV70cWVloaqoQuNlQVrnfOSfSE9L6B3ecVpWfGWvlPqFVHUYzFfkhvLxzzDWpBCSKR0OYxC/tySA3VC++iMmUr4XKSs0xy9FfwDnJZg5vHLKqgAAAAASUVORK5CYII=",
+      "lqip": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAoAAAAGCAYAAAD68A/GAAAAAklEQVR4AewaftIAAADeSURBVAXBXUvCUACA4Xc7Bz/OJmvtxjKIJIwo+gNdd9dt/8f/Fd1HgojsQhv0YbIywbFYHnOenZ7HeRw92HgS8zQYY6oNnifY8zvc3twRhfs0G4oSiXCU7ifJDCl3BC2Hyhg224xRPKbQJV4rJPB9hMh++uWuot2JqNcFpqpwrEU1DavvV4bxPc+TIfL6/Jjfms90MKV70cWVloaqoQuNlQVrnfOSfSE9L6B3ecVpWfGWvlPqFVHUYzFfkhvLxzzDWpBCSKR0OYxC/tySA3VC++iMmUr4XKSs0xy9FfwDnJZg5vHLKqgAAAAASUVORK5CYII=",
       "timetables": [{}]
     },
     {
