@@ -1,0 +1,301 @@
+---
+/* eslint-disable astro/jsx-a11y/label-has-associated-control */
+
+import northernStation from '../data/northern-station.json'
+import southernStation from '../data/southern-station.json'
+
+import { Schema } from 'astro-seo-schema'
+
+import Layout from '@layouts/Layout.astro'
+
+import SocialMedia from '@components/SocialMedia.astro'
+import Navbar from '@components/Navbar.astro'
+import CardCity from '@components/CardCity.astro'
+
+export async function getStaticPaths() {
+  const mergeDataStations = [northernStation, southernStation]
+
+  return mergeDataStations.map((info) => ({
+    params: { terminal: info.slug },
+    props: {
+      station: info.station,
+      location: info.location,
+      locationDescription: info.location_description,
+      locationMap: info.location_map,
+      phone: info.phone,
+      stationImage: info.station_image,
+      stationImageMobile: info.station_image_mobile,
+      stationImageBreakpoint: info.station_image_breakpoint,
+      stationImageAspectMobile: info.station_image_aspect_mobile,
+      stationImageAspectRatio: info.station_image_aspect_ratio,
+      stationImageLqip: info.station_image_lqip,
+      socialMediaImage: info.social_media_image,
+      themeColor: info.theme_color,
+      headerColor: info.header_color,
+      titleColor: info.title_color,
+      textColor: info.text_color,
+      title: info.title,
+      description: info.description,
+      schemaFAQs: info.schema_FAQs,
+      cities: info.cities
+    }
+  }))
+}
+
+const { terminal } = Astro.params
+const {
+  station,
+  location,
+  locationDescription,
+  locationMap,
+  phone,
+  stationImage,
+  stationImageMobile,
+  stationImageBreakpoint,
+  stationImageAspectMobile,
+  stationImageAspectRatio,
+  stationImageLqip,
+  socialMediaImage,
+  themeColor,
+  headerColor,
+  titleColor,
+  textColor,
+  title,
+  description,
+  schemaFAQs,
+  cities
+} = Astro.props
+
+const options = {
+  title: `${title} | Estelí Buses`,
+  description,
+  theme_color: themeColor
+}
+
+const getSchemaFAQs = schemaFAQs.map((faq) => ({
+  '@type': 'Question',
+  inLanguage: 'es',
+  name: faq.name,
+  acceptedAnswer: { '@type': 'Answer', text: faq.text }
+}))
+---
+
+<Layout {options}>
+  <Schema
+    item={{
+      '@context': 'https://schema.org',
+      '@type': 'FAQPage',
+      mainEntity: getSchemaFAQs
+    }}
+    slot="schema"
+  />
+
+  <SocialMedia
+    {title}
+    {description}
+    image={socialMediaImage}
+    slot="social-media"
+  />
+
+  <header class={`relative ${headerColor}`}>
+    <div class="container mx-auto px-4">
+      <Navbar />
+
+      <section
+        class="flex flex-col justify-center items-center pt-[4.5rem] pb-[4.5rem] md:pb-[6.5rem] lg:pt-28 lg:pb-[8.5rem] xl:pb-56 text-center"
+      >
+        <h1 class={`mb-8 max-w-4xl ${titleColor}`}>{title}</h1>
+        <p class="max-w-2xl lg:max-w-4xl">
+          Conoce todos los horarios de la {station} de Estelí y elige la ciudad a
+          la que deseas viajar.
+        </p>
+
+        <section
+          class="flex flex-col md:flex-row md:items-start gap-8 justify-center mt-6 text-left max-w-xs sm:max-w-md md:max-w-xl mx-auto"
+        >
+          <section class="md:basis-3/5 group space-y-1">
+            <p class={`font-semibold ${textColor}`}>Ubicación:</p>
+            <div class="flex gap-2 items-start">
+              <div class="mt-[0.2rem]">
+                <svg
+                  class={`transition-colors fill-current ${textColor}`}
+                  viewBox="0 0 24 24"
+                  width="24"
+                  height="24"
+                >
+                  <path
+                    d="M12 11.5A2.5 2.5 0 0 1 9.5 9 2.5 2.5 0 0 1 12 6.5 2.5 2.5 0 0 1 14.5 9a2.5 2.5 0 0 1-2.5 2.5M12 2a7 7 0 0 0-7 7c0 5.3 7 13 7 13s7-7.8 7-13a7 7 0 0 0-7-7Z"
+                  ></path>
+                </svg>
+              </div>
+              <a
+                class={`transition-colors font-semibold ${textColor}`}
+                href={`${terminal}#mapa`}
+                >{location}
+              </a>
+            </div>
+          </section>
+          <section class="md:basis-2/5 group space-y-1">
+            <p class={`font-semibold ${textColor}`}>Teléfono:</p>
+            <div class="flex gap-2 items-start">
+              <svg
+                class={`transition-colors fill-current ${textColor}`}
+                viewBox="0 0 24 24"
+                width="24"
+                height="24"
+              >
+                <path
+                  d="M6.6 10.8c1.5 2.8 3.8 5.1 6.6 6.6l2.2-2.2a1 1 0 0 1 1-.3c1.2.4 2.4.6 3.6.6a1 1 0 0 1 1 1V20a1 1 0 0 1-1 1A17 17 0 0 1 3 4a1 1 0 0 1 1-1h3.5a1 1 0 0 1 1 1c0 1.3.2 2.5.6 3.6 0 .3 0 .7-.3 1l-2.2 2.2Z"
+                ></path>
+              </svg>
+              <a
+                class={`transition-colors font-semibold ${textColor}`}
+                href={`tel:${phone}`}
+                >{phone}
+              </a>
+            </div>
+          </section>
+        </section>
+      </section>
+    </div>
+    <div class="wave"></div>
+  </header>
+  <main class="py-12 sm:py-16 md:py-20 xl:py-28">
+    <div class="container mx-auto px-4">
+      <article class="text-center mb-16 md:mb-20 xl:mb-28">
+        <form
+          class="w-full max-w-xl mx-auto space-y-4"
+          id="search-form"
+          autocomplete="on"
+        >
+          <label
+            class="text-2xl text-orange-400 dark:text-orange-50 block font-semibold"
+            for="search">¿A dónde vas a viajar?</label
+          >
+          <section
+            class="grid grid-cols-[1fr,100px] shadow-lg shadow-orange-500/10 any-hover:shadow-orange-600/10"
+          >
+            <input
+              id="search"
+              type="search"
+              class="py-2.5 px-4 w-full block outline-none focus:ring-4 focus:ring-orange-400 focus:ring-opacity-50 focus:border-orange-500 rounded rounded-r-none caret-orange-500 placeholder-orange-600 dark:placeholder-orange-100 placeholder-opacity-50 bg-white dark:bg-[#292018] transition-colors"
+              placeholder="Busca tu ciudad..."
+            />
+            <button
+              id="search-button"
+              class="rounded rounded-l-none py-2.5 px-5 transition-colors any-hover:bg-orange-500 bg-orange-400 text-white inline-flex justify-center items-center active:outline-none active:ring-4 active:ring-orange-400 active:ring-opacity-75"
+              type="button"
+            >
+              <svg class="w-4" role="img" viewBox="0 0 512 512">
+                <path
+                  class="fill-current"
+                  d="M505 442.7L405.3 343c-4.5-4.5-10.6-7-17-7H372c27.6-35.3 44-79.7 44-128C416 93.1 322.9 0 208 0S0 93.1 0 208s93.1 208 208 208c48.3 0 92.7-16.4 128-44v16.3c0 6.4 2.5 12.5 7 17l99.7 99.7c9.4 9.4 24.6 9.4 33.9 0l28.3-28.3c9.4-9.4 9.4-24.6.1-34zM208 336c-70.7 0-128-57.2-128-128 0-70.7 57.2-128 128-128 70.7 0 128 57.2 128 128 0 70.7-57.2 128-128 128z"
+                ></path>
+              </svg>
+            </button>
+          </section>
+        </form>
+      </article>
+      <article class="flex flex-wrap justify-center gap-20 lg:gap-16">
+        {
+          cities.map((city) => (
+            <CardCity
+              cityName={city.name}
+              slug={city.slug}
+              imagen={city.image}
+              lqip={city.lqip}
+            />
+          ))
+        }
+      </article>
+    </div>
+  </main>
+  <article
+    class="py-12 sm:py-16 md:py-20 xl:py-28 text-center bg-[#FFFDF9] dark:bg-[#2D231B]"
+  >
+    <div class="container mx-auto px-4">
+      <h2 class="mb-8">Conoce sobre la {station} de Estelí</h2>
+      <div class="space-y-4">
+        <p
+          class="mx-auto mt-5 md:max-w-5xl lg:max-w-6xl mb-4"
+          set:html={locationDescription}
+        >
+        </p>
+        <figure>
+          <picture>
+            <source
+              type="image/avif"
+              data-srcset={`${stationImageMobile}.avif ${stationImageBreakpoint}, ${stationImage}.avif`}
+            />
+            <source
+              type="image/webp"
+              data-srcset={`${stationImageMobile}.webp ${stationImageBreakpoint}, ${stationImage}.webp`}
+            />
+            <source
+              type="image/jpeg"
+              data-srcset={`${stationImageMobile}.jpg ${stationImageBreakpoint}, ${stationImage}.jpg`}
+            />
+            <img
+              class={`w-full h-auto rounded object-cover object-center max-w-5xl mx-auto lazyload ${stationImageAspectMobile} ${stationImageAspectRatio}`}
+              alt={`${station} de la ciudad de Estelí`}
+              decoding="async"
+              fetchpriority="low"
+              loading="lazy"
+              srcset={stationImageLqip}
+              data-srcset={`${stationImageMobile}.jpg ${stationImageBreakpoint}, ${stationImage}.jpg`}
+            />
+          </picture>
+          <figcaption class="text-sm text-gray-400 dark:text-gray-200 mt-3">
+            {station} de la ciudad de Estelí.
+          </figcaption>
+        </figure>
+        <h3 class="!mt-14">Ubicación de la {station}</h3>
+        <iframe
+          class="rounded w-full max-w-5xl mx-auto !mt-14 bg-[#eee] dark:bg-[#362d25] border-0"
+          id="mapa"
+          src={locationMap}
+          allowfullscreen="allowfullscreen"
+          loading="lazy"
+          height="450"
+          fetchpriority="low"
+          title={`Ubicación de la ${station}`}></iframe>
+        <p class="text-sm text-gray-400 dark:text-gray-200 !mt-3">
+          Ubicación de la {station} de la ciudad de Estelí.
+        </p>
+      </div>
+    </div>
+  </article>
+</Layout>
+<style>
+  .wave,
+  html.dark .wave {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    content: '';
+    width: 100%;
+    height: 250px;
+    background-size: contain;
+    background-position-y: bottom !important;
+    transform: translateY(1px);
+    pointer-events: none;
+    touch-action: none;
+  }
+
+  .wave {
+    background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1440 280'%3E%3Cpath fill='%23ffffff' fill-opacity='1' d='M0,192L48,197.3C96,203,192,213,288,229.3C384,245,480,267,576,250.7C672,235,768,181,864,181.3C960,181,1056,235,1152,234.7C1248,235,1344,181,1392,154.7L1440,128L1440,320L1392,320C1344,320,1248,320,1152,320C1056,320,960,320,864,320C768,320,672,320,576,320C480,320,384,320,288,320C192,320,96,320,48,320L0,320Z'%3E%3C/path%3E%3C/svg%3E")
+      no-repeat;
+  }
+
+  html.dark .wave {
+    background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1440 280'%3E%3Cpath fill='%23292018' fill-opacity='1' d='M0,192L48,197.3C96,203,192,213,288,229.3C384,245,480,267,576,250.7C672,235,768,181,864,181.3C960,181,1056,235,1152,234.7C1248,235,1344,181,1392,154.7L1440,128L1440,320L1392,320C1344,320,1248,320,1152,320C1056,320,960,320,864,320C768,320,672,320,576,320C480,320,384,320,288,320C192,320,96,320,48,320L0,320Z'%3E%3C/path%3E%3C/svg%3E")
+      no-repeat;
+  }
+
+  @media (min-width: 1200px) {
+    .wave,
+    html.dark .wave {
+      background-size: cover;
+    }
+  }
+</style>
