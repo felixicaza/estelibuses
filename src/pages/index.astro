@@ -1,5 +1,11 @@
 ---
+import { Schema } from 'astro-seo-schema'
+
+import northernStation from '../data/northern-station.json'
+import southernStation from '../data/southern-station.json'
+
 import Layout from '@layouts/Layout.astro'
+
 import SocialMedia from '@components/SocialMedia.astro'
 
 import Header from '@content/Header.astro'
@@ -10,11 +16,22 @@ import SouthStation from '@content/SouthStation.astro'
 import OfflineBanner from '@content/OfflineBanner.astro'
 import FAQ from '@content/FAQ.astro'
 
+const mergeDataStations = [northernStation, southernStation]
+
 const options = {
   title: 'Estelí Buses: Horarios de las Terminales de Buses de Estelí',
   description:
     'Conoce Todos los Horarios de Salida de los Buses de la Terminal Norte y de la Terminal Sur de la ciudad de Estelí.'
 }
+
+const getFaqs = mergeDataStations.map((data) =>
+  data.schema_FAQs.map((faq) => ({
+    '@type': 'Question',
+    inLanguage: 'es',
+    name: faq.name,
+    acceptedAnswer: { '@type': 'Answer', text: faq.text }
+  }))
+)
 ---
 
 <Layout {options}>
@@ -35,6 +52,15 @@ const options = {
     rel="preload"
     crossorigin
     slot="preload"
+  />
+
+  <Schema
+    item={{
+      '@context': 'https://schema.org',
+      '@type': 'FAQPage',
+      mainEntity: [...getFaqs[0], ...getFaqs[1]]
+    }}
+    slot="schema"
   />
 
   <SocialMedia
