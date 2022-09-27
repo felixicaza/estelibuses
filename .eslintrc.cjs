@@ -52,6 +52,7 @@ module.exports = {
         map: [
           ['@components', './src/components'],
           ['@content', './src/content'],
+          ['@data', './src/data'],
           ['@layouts', './src/layouts'],
           ['@pages', './src/pages'],
           ['@scripts', './src/scripts'],
