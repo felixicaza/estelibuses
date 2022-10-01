@@ -34,6 +34,7 @@ export async function getStaticPaths() {
       headerColor: info.header_color,
       titleColor: info.title_color,
       textColor: info.text_color,
+      slug: info.slug,
       title: info.title,
       description: info.description,
       schemaFAQs: info.schema_FAQs,
@@ -60,6 +61,7 @@ const {
   headerColor,
   titleColor,
   textColor,
+  slug,
   title,
   description,
   schemaFAQs,
@@ -201,7 +203,7 @@ const getSchemaFAQs = schemaFAQs.map((faq) => ({
           cities.map((city) => (
             <CardCity
               cityName={city.name}
-              slug={city.slug}
+              slug={`${slug}/${city.slug}`}
               imagen={city.image}
               lqip={city.lqip}
             />
