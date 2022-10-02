@@ -30,7 +30,7 @@ const cities = southernStation.cities
             index < 6 && (
               <CardCity
                 cityName={city.name}
-                slug={city.slug}
+                slug={`${southernStation.slug}/${city.slug}`}
                 imagen={city.image}
                 lqip={city.lqip}
               />
