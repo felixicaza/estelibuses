@@ -1,0 +1,78 @@
+<section class="space-y-2.5">
+  <p class="font-semibold">Elige el tipo de transporte:</p>
+  <form class="flex gap-6" id="filter">
+    <label class="relative flex gap-1 items-center cursor-pointer">
+      <input
+        class="hidden peer"
+        id="all"
+        name="bus"
+        type="radio"
+        checked="checked"
+      />
+      <svg width="20" height="20" viewBox="0 0 34 34">
+        <circle
+          class="border"
+          cx="17"
+          cy="17"
+          r="15"
+          fill="none"
+          stroke-width="3"></circle>
+        <circle class="circle" cx="17" cy="17" r="7.1"></circle>
+      </svg>
+      <span
+        class="dark:peer-checked:text-orange-400 peer-checked:text-orange-600"
+        >Todos</span
+      >
+    </label>
+    <label class="relative flex gap-1 items-center cursor-pointer">
+      <input class="hidden peer" id="express" name="bus" type="radio" />
+      <svg width="20" height="20" viewBox="0 0 34 34">
+        <circle
+          class="border"
+          cx="17"
+          cy="17"
+          r="15"
+          fill="none"
+          stroke-width="3"></circle>
+        <circle class="circle" cx="17" cy="17" r="7.1"></circle>
+      </svg>
+      <span
+        class="dark:peer-checked:text-orange-400 peer-checked:text-orange-600"
+        ><span class="hidden sm:inline">Buses</span>Expresos</span
+      >
+    </label>
+    <label class="relative flex gap-1 items-center cursor-pointer">
+      <input class="hidden peer" id="routed" name="bus" type="radio" />
+      <svg width="20" height="20" viewBox="0 0 34 34">
+        <circle
+          class="border"
+          cx="17"
+          cy="17"
+          r="15"
+          fill="none"
+          stroke-width="3"></circle>
+        <circle class="circle" cx="17" cy="17" r="7.1"></circle>
+      </svg>
+      <span
+        class="dark:peer-checked:text-orange-400 peer-checked:text-orange-600"
+        ><span class="hidden sm:inline">Buses</span>Ruteados</span
+      >
+    </label>
+  </form>
+</section>
+<style>
+  svg .border {
+    @apply stroke-current;
+  }
+
+  svg .circle {
+    @apply fill-transparent;
+  }
+
+  input[type='radio']:checked + svg .border {
+    @apply stroke-orange-600 dark:stroke-orange-400;
+  }
+  input[type='radio']:checked + svg .circle {
+    @apply fill-orange-600 dark:fill-orange-400;
+  }
+</style>
