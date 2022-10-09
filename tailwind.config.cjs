@@ -1,6 +1,6 @@
 module.exports = {
   darkMode: 'class',
-  content: ['./src/**/*.{astro,js}', './src/data/testimonials.json'],
+  content: ['./src/**/*.{astro,js}', './src/data/*.json'],
   theme: {
     screens: {
       xs: '412px',
