@@ -20,88 +20,5267 @@
   "description": "Conoce fácilmente todos los horarios de la Terminal Sur de Estelí y elige la ciudad a la que deseas viajar desde Estelí hacia el sur de Nicaragua.",
   "schema_FAQs": [
     {
-      "name": "¿Cuál es el número de teléfono de la terminal sur?",
-      "text": "El número de teléfono de la terminal sur de Estelí es el <a href='tel:+50527136162'>2713-6162</a>. <a href='https://estelibuses.web.app/terminal-sur-esteli?utm_source=google&utm_content=faq&utm_medium=organic&utm_campaign=faqgoogle'>Obtén más información</a>."
+      "name": "¿Cuál es el número de teléfono de la Terminal Sur?",
+      "text": "El número de teléfono de la Terminal Sur de Estelí es el <a href='tel:+50527136162'>2713-6162</a>. <a href='https://estelibuses.web.app/terminal-sur-esteli?utm_source=google&utm_content=faq&utm_medium=organic&utm_campaign=faqgoogle'>Obtén más información</a>."
     },
     {
-      "name": "¿Dónde está ubicada la terminal sur de Estelí?",
-      "text": "La terminal sur o mejor conocida como cotrán sur, está ubicada contiguo al déposito de Restaurantes Tip-Top, Km 148 1/2 carretera panamericana. <a href='https://estelibuses.web.app/terminal-sur-esteli?utm_source=google&utm_content=faq&utm_medium=organic&utm_campaign=faqgoogle'>Obtén más información</a>."
+      "name": "¿Dónde está ubicada la Terminal Sur de Estelí?",
+      "text": "La Terminal Sur o mejor conocida como Cotrán Sur, está ubicada contiguo al déposito de Restaurantes Tip-Top, Km 148 1/2 carretera panamericana. <a href='https://estelibuses.web.app/terminal-sur-esteli?utm_source=google&utm_content=faq&utm_medium=organic&utm_campaign=faqgoogle'>Obtén más información</a>."
     },
     {
-      "name": "¿Cómo puedo conocer los horarios de los buses de la terminal sur de Estelí?",
-      "text": "Para conocer todos los horarios de la terminal sur de Estelí, puedes hacer uso de la plataforma Estelí Buses. <a href='https://estelibuses.web.app/terminal-sur-esteli?utm_source=google&utm_content=faq&utm_medium=organic&utm_campaign=faqgoogle'>Obtén más información</a>."
+      "name": "¿Cómo puedo conocer los horarios de los buses de la Terminal Sur de Estelí?",
+      "text": "Para conocer todos los horarios de la Terminal Sur de Estelí, puedes hacer uso de la plataforma Estelí Buses. <a href='https://estelibuses.web.app/terminal-sur-esteli?utm_source=google&utm_content=faq&utm_medium=organic&utm_campaign=faqgoogle'>Obtén más información</a>."
     }
   ],
   "cities": [
     {
       "name": "Managua",
-      "slug": "/terminal-sur-esteli/horarios-esteli-managua",
+      "slug": "horarios-esteli-managua",
       "image": "/img/terminal-sur/horarios-esteli-managua-estelibuses-felix-icaza-card",
       "lqip": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAoAAAAGCAYAAAD68A/GAAAAAklEQVR4AewaftIAAADCSURBVBXBS04CQRRA0Vu//hQtREVi4hrYsCtx4hKc6AAHJkbFmKCY0EC3bVW/ZzzHXN8lrRwY6yidEp0iQBIIBkSUrOCv6pHolcJlTgslj0LGogrBKl02NF7w+5cHhjJSVJGfWBFQbN3w7yCKG1o2LuK3TzeU5YQQIse+Z9ZEcBVNbDgJNfL9yJtY/Or+Fm8D+9bw2XYc+hFXDiyXc5L8snvviIuMX2++mE2V83nNMSkXl8pkkVhvn2l3melZ4ONV+APGylZShWU3bgAAAABJRU5ErkJggg==",
-      "timetables": [{}]
+      "social_media_image": "/img/og/horarios-esteli-managua-cotran-sur-estelibuses.jpg",
+      "title": "Horarios de los Buses de Estelí hacia Managua - Terminal Sur | Estelí Buses",
+      "description": "Conoce Todos los Horarios de los Buses EXPRESOS y RUTEADOS que salen desde Estelí hacia Managua desde la Terminal Sur.",
+      "schema_FAQs": [
+        {
+          "name": "¿Cuál es la hora del primer bus Expreso hacia Managua?",
+          "text": "El primer bus expreso hacia Managua desde la Terminal Sur sale a las 04:45 am. <a href='https://estelibuses.web.app/terminal-sur-esteli/horarios-esteli-managua?utm_source=google&utm_content=faq&utm_medium=organic&utm_campaign=faqgoogle'>Mira más horarios.</a>"
+        },
+        {
+          "name": "¿Cuánto cuesta el pasaje hacia Managua?",
+          "text": "Para viajar a Managua los buses expresos cuestan C$ 110 córdobas y los buses ruteados cuestan C$ 90 córdobas. <a href='https://estelibuses.web.app/terminal-sur-esteli/horarios-esteli-managua?utm_source=google&utm_content=faq&utm_medium=organic&utm_campaign=faqgoogle'>Obtén más información.</a>"
+        },
+        {
+          "name": "¿Cuál es la manera más barata de llegar de Estelí a Managua?",
+          "text": "La forma más barata de ir desde Estelí hacia Managua es abordando un bus ruteado que salen desde la Terminal Sur y el pasaje vale C$ 90 córdobas. <a href='https://estelibuses.web.app/terminal-sur-esteli/horarios-esteli-managua?utm_source=google&utm_content=faq&utm_medium=organic&utm_campaign=faqgoogle'>Obtén más información</a>"
+        },
+        {
+          "name": "¿Cuál es la manera más rápida de llegar desde Estelí hasta Managua?",
+          "text": "La forma más rápida de ir desde Estelí hacia Managua es abordando un bus expreso, estos salen desde la Terminal Sur y el viaje dura apróximadamente 2.4 horas. <a href='https://estelibuses.web.app/terminal-sur-esteli/horarios-esteli-managua?utm_source=google&utm_content=faq&utm_medium=organic&utm_campaign=faqgoogle'>Obtén más información</a>"
+        },
+        {
+          "name": "¿Hay un bus directo de Estelí a Managua?",
+          "text": "Sí, los buses directos que salen desde Estelí y llegan a Managua, son los buses expresos, estos salen desde la Terminal Sur y dura 2.4 horas el viaje. <a href='https://estelibuses.web.app/terminal-sur-esteli/horarios-esteli-managua?utm_source=google&utm_content=faq&utm_medium=organic&utm_campaign=faqgoogle'>Obtén más información</a>"
+        },
+        {
+          "name": "¿A cuánta distancia está Estelí de Managua?",
+          "text": "La distancia por carretera es de 141 Km. <a href='https://estelibuses.web.app/terminal-sur-esteli/horarios-esteli-managua?utm_source=google&utm_content=faq&utm_medium=organic&utm_campaign=faqgoogle'>Obtén indicaciones para viajar</a>"
+        },
+        {
+          "name": "¿Cómo viajo desde Estelí a Managua sin un coche?",
+          "text": "La mejor manera de ir desde Estelí a Managua sin un coche es abordando los buses que salen desde la Terminal Sur. <a href='https://estelibuses.web.app/terminal-sur-esteli/horarios-esteli-managua?utm_source=google&utm_content=faq&utm_medium=organic&utm_campaign=faqgoogle'>Mira los Horarios</a>"
+        },
+        {
+          "name": "¿Cuánto se tarda en llegar desde Estelí a Managua?",
+          "text": "Los buses expresos desde Estelí hacia Managua duran 2.4 horas de viaje y los buses ruteados duran 3 horas de viaje apróximadamente. <a href='https://estelibuses.web.app/terminal-sur-esteli/horarios-esteli-managua?utm_source=google&utm_content=faq&utm_medium=organic&utm_campaign=faqgoogle'>Obtén más información</a>"
+        },
+        {
+          "name": "¿Dónde tomo el bus de Estelí a Managua?",
+          "text": "Los buses que salen desde Estelí hacia Managua, se pueden abordar desde la Terminal Sur o Cotrán Sur. <a href='https://estelibuses.web.app/terminal-sur-esteli/horarios-esteli-managua?utm_source=google&utm_content=faq&utm_medium=organic&utm_campaign=faqgoogle'>Conoce los horarios</a>"
+        },
+        {
+          "name": "¿A dónde llega el autobús de Estelí a Managua?",
+          "text": "Los buses que viajan desde Estelí hacia Managua llegan a la terminal del Mercado El Mayoreo de Managua. <a href='https://estelibuses.web.app/terminal-sur-esteli/horarios-esteli-managua?utm_source=google&utm_content=faq&utm_medium=organic&utm_campaign=faqgoogle'>Obtén más información</a>"
+        }
+      ],
+      "destination": "Terminal del mercado El Mayoreo",
+      "trip_distance": "141 km",
+      "map": "https://www.google.com/maps/embed?pb=!1m28!1m12!1m3!1d498388.78471134027!2d-86.47613190174431!3d12.604488553983789!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!4m13!3e6!4m5!1s0x8f718c13825dde4b%3A0x69c6340e0429bb84!2sCotran%20Sur%2C%20Estel%C3%AD!3m2!1d13.0762386!2d-86.3524291!4m5!1s0x8f73fe9fb4b9ad8d%3A0xd5de57613e46dc8e!2sTerminal%20de%20Buses%20El%20Mayoreo%2C%20Pista%20del%20Mayoreo%2C%20Managua!3m2!1d12.133970699999999!2d-86.19335919999999!5e0!3m2!1ses-419!2sni!4v1645555468808!5m2!1ses-419!2sni",
+      "filter": true,
+      "timetables": [
+        {
+          "transport_pic": "",
+          "transport_pic_lqip": "",
+          "departure_time": "03:30",
+          "waiting_area_departure": "",
+          "return_time": "",
+          "waiting_area_return": "",
+          "transport_type": "Ruteado",
+          "transport_name": "",
+          "license_plate": "",
+          "transport_phone": "",
+          "transport_price": 90,
+          "trip_duration": "3.3 horas",
+          "stops": [
+            {
+              "name": "El Naranjo",
+              "price": 13
+            },
+            {
+              "name": "Santa Cruz",
+              "price": 15
+            },
+            {
+              "name": "Empalme San Nicolás",
+              "price": 15
+            },
+            {
+              "name": "La Concepción",
+              "price": 20
+            },
+            {
+              "name": "La Trinidad",
+              "price": 22
+            },
+            {
+              "name": "San Isidro",
+              "price": 30
+            },
+            {
+              "name": "Sébaco",
+              "price": 40
+            },
+            {
+              "name": "El Jobo",
+              "price": 45
+            },
+            {
+              "name": "Ciudad Darío",
+              "price": 45
+            },
+            {
+              "name": "Calabazas",
+              "price": 50
+            },
+            {
+              "name": "Puertas Viejas",
+              "price": 55
+            },
+            {
+              "name": "La Curva",
+              "price": 55
+            },
+            {
+              "name": "El Madroño",
+              "price": 55
+            },
+            {
+              "name": "Las Maderas",
+              "price": 75
+            },
+            {
+              "name": "San Benito",
+              "price": 80
+            },
+            {
+              "name": "Tipitapa",
+              "price": 85
+            },
+            {
+              "name": "Managua",
+              "price": 90
+            }
+          ]
+        },
+        {
+          "transport_pic": "",
+          "transport_pic_lqip": "",
+          "departure_time": "04:00",
+          "waiting_area_departure": "",
+          "return_time": "",
+          "waiting_area_return": "",
+          "transport_type": "Ruteado",
+          "transport_name": "",
+          "license_plate": "",
+          "transport_phone": "",
+          "transport_price": 90,
+          "trip_duration": "3.3 horas",
+          "stops": [
+            {
+              "name": "El Naranjo",
+              "price": 13
+            },
+            {
+              "name": "Santa Cruz",
+              "price": 15
+            },
+            {
+              "name": "Empalme San Nicolás",
+              "price": 15
+            },
+            {
+              "name": "La Concepción",
+              "price": 20
+            },
+            {
+              "name": "La Trinidad",
+              "price": 22
+            },
+            {
+              "name": "San Isidro",
+              "price": 30
+            },
+            {
+              "name": "Sébaco",
+              "price": 40
+            },
+            {
+              "name": "El Jobo",
+              "price": 45
+            },
+            {
+              "name": "Ciudad Darío",
+              "price": 45
+            },
+            {
+              "name": "Calabazas",
+              "price": 50
+            },
+            {
+              "name": "Puertas Viejas",
+              "price": 55
+            },
+            {
+              "name": "La Curva",
+              "price": 55
+            },
+            {
+              "name": "El Madroño",
+              "price": 55
+            },
+            {
+              "name": "Las Maderas",
+              "price": 75
+            },
+            {
+              "name": "San Benito",
+              "price": 80
+            },
+            {
+              "name": "Tipitapa",
+              "price": 85
+            },
+            {
+              "name": "Managua",
+              "price": 90
+            }
+          ]
+        },
+        {
+          "transport_pic": "",
+          "transport_pic_lqip": "",
+          "departure_time": "04:30",
+          "waiting_area_departure": "",
+          "return_time": "",
+          "waiting_area_return": "",
+          "transport_type": "Rutedo",
+          "transport_name": "",
+          "license_plate": "",
+          "transport_phone": "",
+          "transport_price": 90,
+          "trip_duration": "3.3 horas",
+          "stops": [
+            {
+              "name": "El Naranjo",
+              "price": 13
+            },
+            {
+              "name": "Santa Cruz",
+              "price": 15
+            },
+            {
+              "name": "Empalme San Nicolás",
+              "price": 15
+            },
+            {
+              "name": "La Concepción",
+              "price": 20
+            },
+            {
+              "name": "La Trinidad",
+              "price": 22
+            },
+            {
+              "name": "San Isidro",
+              "price": 30
+            },
+            {
+              "name": "Sébaco",
+              "price": 40
+            },
+            {
+              "name": "El Jobo",
+              "price": 45
+            },
+            {
+              "name": "Ciudad Darío",
+              "price": 45
+            },
+            {
+              "name": "Calabazas",
+              "price": 50
+            },
+            {
+              "name": "Puertas Viejas",
+              "price": 55
+            },
+            {
+              "name": "La Curva",
+              "price": 55
+            },
+            {
+              "name": "El Madroño",
+              "price": 55
+            },
+            {
+              "name": "Las Maderas",
+              "price": 75
+            },
+            {
+              "name": "San Benito",
+              "price": 80
+            },
+            {
+              "name": "Tipitapa",
+              "price": 85
+            },
+            {
+              "name": "Managua",
+              "price": 90
+            }
+          ]
+        },
+        {
+          "transport_pic": "",
+          "transport_pic_lqip": "",
+          "departure_time": "04:45",
+          "waiting_area_departure": "",
+          "return_time": "",
+          "waiting_area_return": "",
+          "transport_type": "Expreso",
+          "transport_name": "",
+          "license_plate": "",
+          "transport_phone": "",
+          "transport_price": 110,
+          "trip_duration": "2.4 horas"
+        },
+        {
+          "transport_pic": "",
+          "transport_pic_lqip": "",
+          "departure_time": "05:00",
+          "waiting_area_departure": "",
+          "return_time": "",
+          "waiting_area_return": "",
+          "transport_type": "Ruteado",
+          "transport_name": "",
+          "license_plate": "",
+          "transport_phone": "",
+          "transport_price": 90,
+          "trip_duration": "3.3",
+          "stops": [
+            {
+              "name": "El Naranjo",
+              "price": 13
+            },
+            {
+              "name": "Santa Cruz",
+              "price": 15
+            },
+            {
+              "name": "Empalme San Nicolás",
+              "price": 15
+            },
+            {
+              "name": "La Concepción",
+              "price": 20
+            },
+            {
+              "name": "La Trinidad",
+              "price": 22
+            },
+            {
+              "name": "San Isidro",
+              "price": 30
+            },
+            {
+              "name": "Sébaco",
+              "price": 40
+            },
+            {
+              "name": "El Jobo",
+              "price": 45
+            },
+            {
+              "name": "Ciudad Darío",
+              "price": 45
+            },
+            {
+              "name": "Calabazas",
+              "price": 50
+            },
+            {
+              "name": "Puertas Viejas",
+              "price": 55
+            },
+            {
+              "name": "La Curva",
+              "price": 55
+            },
+            {
+              "name": "El Madroño",
+              "price": 55
+            },
+            {
+              "name": "Las Maderas",
+              "price": 75
+            },
+            {
+              "name": "San Benito",
+              "price": 80
+            },
+            {
+              "name": "Tipitapa",
+              "price": 85
+            },
+            {
+              "name": "Managua",
+              "price": 90
+            }
+          ]
+        },
+        {
+          "transport_pic": "",
+          "transport_pic_lqip": "",
+          "departure_time": "05:30",
+          "waiting_area_departure": "",
+          "return_time": "",
+          "waiting_area_return": "",
+          "transport_type": "Ruteado",
+          "transport_name": "",
+          "license_plate": "",
+          "transport_phone": "",
+          "transport_price": 90,
+          "trip_duration": "3.3 horas",
+          "stops": [
+            {
+              "name": "El Naranjo",
+              "price": 13
+            },
+            {
+              "name": "Santa Cruz",
+              "price": 15
+            },
+            {
+              "name": "Empalme San Nicolás",
+              "price": 15
+            },
+            {
+              "name": "La Concepción",
+              "price": 20
+            },
+            {
+              "name": "La Trinidad",
+              "price": 22
+            },
+            {
+              "name": "San Isidro",
+              "price": 30
+            },
+            {
+              "name": "Sébaco",
+              "price": 40
+            },
+            {
+              "name": "El Jobo",
+              "price": 45
+            },
+            {
+              "name": "Ciudad Darío",
+              "price": 45
+            },
+            {
+              "name": "Calabazas",
+              "price": 50
+            },
+            {
+              "name": "Puertas Viejas",
+              "price": 55
+            },
+            {
+              "name": "La Curva",
+              "price": 55
+            },
+            {
+              "name": "El Madroño",
+              "price": 55
+            },
+            {
+              "name": "Las Maderas",
+              "price": 75
+            },
+            {
+              "name": "San Benito",
+              "price": 80
+            },
+            {
+              "name": "Tipitapa",
+              "price": 85
+            },
+            {
+              "name": "Managua",
+              "price": 90
+            }
+          ]
+        },
+        {
+          "transport_pic": "",
+          "transport_pic_lqip": "",
+          "departure_time": "05:45",
+          "waiting_area_departure": "",
+          "return_time": "",
+          "waiting_area_return": "",
+          "transport_type": "Expreso",
+          "transport_name": "",
+          "license_plate": "",
+          "transport_phone": "",
+          "transport_price": 110,
+          "trip_duration": "2.4 horas"
+        },
+        {
+          "transport_pic": "",
+          "transport_pic_lqip": "",
+          "departure_time": "06:00",
+          "waiting_area_departure": "",
+          "return_time": "",
+          "waiting_area_return": "",
+          "transport_type": "Ruteado",
+          "transport_name": "",
+          "license_plate": "",
+          "transport_phone": "",
+          "transport_price": 90,
+          "trip_duration": "3.3 horas",
+          "stops": [
+            {
+              "name": "El Naranjo",
+              "price": 13
+            },
+            {
+              "name": "Santa Cruz",
+              "price": 15
+            },
+            {
+              "name": "Empalme San Nicolás",
+              "price": 15
+            },
+            {
+              "name": "La Concepción",
+              "price": 20
+            },
+            {
+              "name": "La Trinidad",
+              "price": 22
+            },
+            {
+              "name": "San Isidro",
+              "price": 30
+            },
+            {
+              "name": "Sébaco",
+              "price": 40
+            },
+            {
+              "name": "El Jobo",
+              "price": 45
+            },
+            {
+              "name": "Ciudad Darío",
+              "price": 45
+            },
+            {
+              "name": "Calabazas",
+              "price": 50
+            },
+            {
+              "name": "Puertas Viejas",
+              "price": 55
+            },
+            {
+              "name": "La Curva",
+              "price": 55
+            },
+            {
+              "name": "El Madroño",
+              "price": 55
+            },
+            {
+              "name": "Las Maderas",
+              "price": 75
+            },
+            {
+              "name": "San Benito",
+              "price": 80
+            },
+            {
+              "name": "Tipitapa",
+              "price": 85
+            },
+            {
+              "name": "Managua",
+              "price": 90
+            }
+          ]
+        },
+        {
+          "transport_pic": "",
+          "transport_pic_lqip": "",
+          "departure_time": "06:30",
+          "waiting_area_departure": "",
+          "return_time": "",
+          "waiting_area_return": "",
+          "transport_type": "Ruteado",
+          "transport_name": "",
+          "license_plate": "",
+          "transport_phone": "",
+          "transport_price": 90,
+          "trip_duration": "3.3 horas",
+          "stops": [
+            {
+              "name": "El Naranjo",
+              "price": 13
+            },
+            {
+              "name": "Santa Cruz",
+              "price": 15
+            },
+            {
+              "name": "Empalme San Nicolás",
+              "price": 15
+            },
+            {
+              "name": "La Concepción",
+              "price": 20
+            },
+            {
+              "name": "La Trinidad",
+              "price": 22
+            },
+            {
+              "name": "San Isidro",
+              "price": 30
+            },
+            {
+              "name": "Sébaco",
+              "price": 40
+            },
+            {
+              "name": "El Jobo",
+              "price": 45
+            },
+            {
+              "name": "Ciudad Darío",
+              "price": 45
+            },
+            {
+              "name": "Calabazas",
+              "price": 50
+            },
+            {
+              "name": "Puertas Viejas",
+              "price": 55
+            },
+            {
+              "name": "La Curva",
+              "price": 55
+            },
+            {
+              "name": "El Madroño",
+              "price": 55
+            },
+            {
+              "name": "Las Maderas",
+              "price": 75
+            },
+            {
+              "name": "San Benito",
+              "price": 80
+            },
+            {
+              "name": "Tipitapa",
+              "price": 85
+            },
+            {
+              "name": "Managua",
+              "price": 90
+            }
+          ]
+        },
+        {
+          "transport_pic": "",
+          "transport_pic_lqip": "",
+          "departure_time": "06:45",
+          "waiting_area_departure": "",
+          "return_time": "",
+          "waiting_area_return": "",
+          "transport_type": "Expreso",
+          "transport_name": "",
+          "license_plate": "",
+          "transport_phone": "",
+          "transport_price": 110,
+          "trip_duration": "2.4 horas"
+        },
+        {
+          "transport_pic": "",
+          "transport_pic_lqip": "",
+          "departure_time": "07:00",
+          "waiting_area_departure": "",
+          "return_time": "",
+          "waiting_area_return": "",
+          "transport_type": "Ruteado",
+          "transport_name": "",
+          "license_plate": "",
+          "transport_phone": "",
+          "transport_price": 90,
+          "trip_duration": "3.3 horas",
+          "stops": [
+            {
+              "name": "El Naranjo",
+              "price": 13
+            },
+            {
+              "name": "Santa Cruz",
+              "price": 15
+            },
+            {
+              "name": "Empalme San Nicolás",
+              "price": 15
+            },
+            {
+              "name": "La Concepción",
+              "price": 20
+            },
+            {
+              "name": "La Trinidad",
+              "price": 22
+            },
+            {
+              "name": "San Isidro",
+              "price": 30
+            },
+            {
+              "name": "Sébaco",
+              "price": 40
+            },
+            {
+              "name": "El Jobo",
+              "price": 45
+            },
+            {
+              "name": "Ciudad Darío",
+              "price": 45
+            },
+            {
+              "name": "Calabazas",
+              "price": 50
+            },
+            {
+              "name": "Puertas Viejas",
+              "price": 55
+            },
+            {
+              "name": "La Curva",
+              "price": 55
+            },
+            {
+              "name": "El Madroño",
+              "price": 55
+            },
+            {
+              "name": "Las Maderas",
+              "price": 75
+            },
+            {
+              "name": "San Benito",
+              "price": 80
+            },
+            {
+              "name": "Tipitapa",
+              "price": 85
+            },
+            {
+              "name": "Managua",
+              "price": 90
+            }
+          ]
+        },
+        {
+          "transport_pic": "",
+          "transport_pic_lqip": "",
+          "departure_time": "07:15",
+          "waiting_area_departure": "",
+          "return_time": "",
+          "waiting_area_return": "",
+          "transport_type": "Expreso",
+          "transport_name": "",
+          "license_plate": "",
+          "transport_phone": "",
+          "transport_price": 110,
+          "trip_duration": "2.4 horas"
+        },
+        {
+          "transport_pic": "",
+          "transport_pic_lqip": "",
+          "departure_time": "07:30",
+          "waiting_area_departure": "",
+          "return_time": "",
+          "waiting_area_return": "",
+          "transport_type": "Ruteado",
+          "transport_name": "",
+          "license_plate": "",
+          "transport_phone": "",
+          "transport_price": 90,
+          "trip_duration": "3.3 horas",
+          "stops": [
+            {
+              "name": "El Naranjo",
+              "price": 13
+            },
+            {
+              "name": "Santa Cruz",
+              "price": 15
+            },
+            {
+              "name": "Empalme San Nicolás",
+              "price": 15
+            },
+            {
+              "name": "La Concepción",
+              "price": 20
+            },
+            {
+              "name": "La Trinidad",
+              "price": 22
+            },
+            {
+              "name": "San Isidro",
+              "price": 30
+            },
+            {
+              "name": "Sébaco",
+              "price": 40
+            },
+            {
+              "name": "El Jobo",
+              "price": 45
+            },
+            {
+              "name": "Ciudad Darío",
+              "price": 45
+            },
+            {
+              "name": "Calabazas",
+              "price": 50
+            },
+            {
+              "name": "Puertas Viejas",
+              "price": 55
+            },
+            {
+              "name": "La Curva",
+              "price": 55
+            },
+            {
+              "name": "El Madroño",
+              "price": 55
+            },
+            {
+              "name": "Las Maderas",
+              "price": 75
+            },
+            {
+              "name": "San Benito",
+              "price": 80
+            },
+            {
+              "name": "Tipitapa",
+              "price": 85
+            },
+            {
+              "name": "Managua",
+              "price": 90
+            }
+          ]
+        },
+        {
+          "transport_pic": "",
+          "transport_pic_lqip": "",
+          "departure_time": "08:00",
+          "waiting_area_departure": "",
+          "return_time": "15:00",
+          "waiting_area_return": "",
+          "transport_type": "Ruteado",
+          "transport_name": "Moreno",
+          "license_plate": "ES 268",
+          "transport_phone": "",
+          "transport_price": 90,
+          "trip_duration": "3.3 horas",
+          "stops": [
+            {
+              "name": "El Naranjo",
+              "price": 13
+            },
+            {
+              "name": "Santa Cruz",
+              "price": 15
+            },
+            {
+              "name": "Empalme San Nicolás",
+              "price": 15
+            },
+            {
+              "name": "La Concepción",
+              "price": 20
+            },
+            {
+              "name": "La Trinidad",
+              "price": 22
+            },
+            {
+              "name": "San Isidro",
+              "price": 30
+            },
+            {
+              "name": "Sébaco",
+              "price": 40
+            },
+            {
+              "name": "El Jobo",
+              "price": 45
+            },
+            {
+              "name": "Ciudad Darío",
+              "price": 45
+            },
+            {
+              "name": "Calabazas",
+              "price": 50
+            },
+            {
+              "name": "Puertas Viejas",
+              "price": 55
+            },
+            {
+              "name": "La Curva",
+              "price": 55
+            },
+            {
+              "name": "El Madroño",
+              "price": 55
+            },
+            {
+              "name": "Las Maderas",
+              "price": 75
+            },
+            {
+              "name": "San Benito",
+              "price": 80
+            },
+            {
+              "name": "Tipitapa",
+              "price": 85
+            },
+            {
+              "name": "Managua",
+              "price": 90
+            }
+          ]
+        },
+        {
+          "transport_pic": "",
+          "transport_pic_lqip": "",
+          "departure_time": "08:30",
+          "waiting_area_departure": "",
+          "return_time": "",
+          "waiting_area_return": "",
+          "transport_type": "Ruteado",
+          "transport_name": "",
+          "license_plate": "",
+          "transport_phone": "",
+          "transport_price": 90,
+          "trip_duration": "3.3 horas",
+          "stops": [
+            {
+              "name": "El Naranjo",
+              "price": 13
+            },
+            {
+              "name": "Santa Cruz",
+              "price": 15
+            },
+            {
+              "name": "Empalme San Nicolás",
+              "price": 15
+            },
+            {
+              "name": "La Concepción",
+              "price": 20
+            },
+            {
+              "name": "La Trinidad",
+              "price": 22
+            },
+            {
+              "name": "San Isidro",
+              "price": 30
+            },
+            {
+              "name": "Sébaco",
+              "price": 40
+            },
+            {
+              "name": "El Jobo",
+              "price": 45
+            },
+            {
+              "name": "Ciudad Darío",
+              "price": 45
+            },
+            {
+              "name": "Calabazas",
+              "price": 50
+            },
+            {
+              "name": "Puertas Viejas",
+              "price": 55
+            },
+            {
+              "name": "La Curva",
+              "price": 55
+            },
+            {
+              "name": "El Madroño",
+              "price": 55
+            },
+            {
+              "name": "Las Maderas",
+              "price": 75
+            },
+            {
+              "name": "San Benito",
+              "price": 80
+            },
+            {
+              "name": "Tipitapa",
+              "price": 85
+            },
+            {
+              "name": "Managua",
+              "price": 90
+            }
+          ]
+        },
+        {
+          "transport_pic": "",
+          "transport_pic_lqip": "",
+          "departure_time": "08:45",
+          "waiting_area_departure": "",
+          "return_time": "13:40",
+          "waiting_area_return": "",
+          "transport_type": "Expreso",
+          "transport_name": "Moreno",
+          "license_plate": "ES 228",
+          "transport_phone": "",
+          "transport_price": 110,
+          "trip_duration": "2.4 horas"
+        },
+        {
+          "transport_pic": "",
+          "transport_pic_lqip": "",
+          "departure_time": "09:00",
+          "waiting_area_departure": "",
+          "return_time": "",
+          "waiting_area_return": "",
+          "transport_type": "Ruteado",
+          "transport_name": "",
+          "license_plate": "",
+          "transport_phone": "",
+          "transport_price": 90,
+          "trip_duration": "3.3 horas",
+          "stops": [
+            {
+              "name": "El Naranjo",
+              "price": 13
+            },
+            {
+              "name": "Santa Cruz",
+              "price": 15
+            },
+            {
+              "name": "Empalme San Nicolás",
+              "price": 15
+            },
+            {
+              "name": "La Concepción",
+              "price": 20
+            },
+            {
+              "name": "La Trinidad",
+              "price": 22
+            },
+            {
+              "name": "San Isidro",
+              "price": 30
+            },
+            {
+              "name": "Sébaco",
+              "price": 40
+            },
+            {
+              "name": "El Jobo",
+              "price": 45
+            },
+            {
+              "name": "Ciudad Darío",
+              "price": 45
+            },
+            {
+              "name": "Calabazas",
+              "price": 50
+            },
+            {
+              "name": "Puertas Viejas",
+              "price": 55
+            },
+            {
+              "name": "La Curva",
+              "price": 55
+            },
+            {
+              "name": "El Madroño",
+              "price": 55
+            },
+            {
+              "name": "Las Maderas",
+              "price": 75
+            },
+            {
+              "name": "San Benito",
+              "price": 80
+            },
+            {
+              "name": "Tipitapa",
+              "price": 85
+            },
+            {
+              "name": "Managua",
+              "price": 90
+            }
+          ]
+        },
+        {
+          "transport_pic": "",
+          "transport_pic_lqip": "",
+          "departure_time": "09:30",
+          "waiting_area_departure": "",
+          "return_time": "",
+          "waiting_area_return": "",
+          "transport_type": "Ruteado",
+          "transport_name": "",
+          "license_plate": "",
+          "transport_phone": "",
+          "transport_price": 90,
+          "trip_duration": "3.3 horas",
+          "stops": [
+            {
+              "name": "El Naranjo",
+              "price": 13
+            },
+            {
+              "name": "Santa Cruz",
+              "price": 15
+            },
+            {
+              "name": "Empalme San Nicolás",
+              "price": 15
+            },
+            {
+              "name": "La Concepción",
+              "price": 20
+            },
+            {
+              "name": "La Trinidad",
+              "price": 22
+            },
+            {
+              "name": "San Isidro",
+              "price": 30
+            },
+            {
+              "name": "Sébaco",
+              "price": 40
+            },
+            {
+              "name": "El Jobo",
+              "price": 45
+            },
+            {
+              "name": "Ciudad Darío",
+              "price": 45
+            },
+            {
+              "name": "Calabazas",
+              "price": 50
+            },
+            {
+              "name": "Puertas Viejas",
+              "price": 55
+            },
+            {
+              "name": "La Curva",
+              "price": 55
+            },
+            {
+              "name": "El Madroño",
+              "price": 55
+            },
+            {
+              "name": "Las Maderas",
+              "price": 75
+            },
+            {
+              "name": "San Benito",
+              "price": 80
+            },
+            {
+              "name": "Tipitapa",
+              "price": 85
+            },
+            {
+              "name": "Managua",
+              "price": 90
+            }
+          ]
+        },
+        {
+          "transport_pic": "",
+          "transport_pic_lqip": "",
+          "departure_time": "09:45",
+          "waiting_area_departure": "",
+          "return_time": "",
+          "waiting_area_return": "",
+          "transport_type": "Expreso",
+          "transport_name": "",
+          "license_plate": "",
+          "transport_phone": "",
+          "transport_price": 110,
+          "trip_duration": "2.4 horas"
+        },
+        {
+          "transport_pic": "",
+          "transport_pic_lqip": "",
+          "departure_time": "10:00",
+          "waiting_area_departure": "",
+          "return_time": "",
+          "waiting_area_return": "",
+          "transport_type": "Ruteado",
+          "transport_name": "",
+          "license_plate": "",
+          "transport_phone": "",
+          "transport_price": 90,
+          "trip_duration": "3.3 horas",
+          "stops": [
+            {
+              "name": "El Naranjo",
+              "price": 13
+            },
+            {
+              "name": "Santa Cruz",
+              "price": 15
+            },
+            {
+              "name": "Empalme San Nicolás",
+              "price": 15
+            },
+            {
+              "name": "La Concepción",
+              "price": 20
+            },
+            {
+              "name": "La Trinidad",
+              "price": 22
+            },
+            {
+              "name": "San Isidro",
+              "price": 30
+            },
+            {
+              "name": "Sébaco",
+              "price": 40
+            },
+            {
+              "name": "El Jobo",
+              "price": 45
+            },
+            {
+              "name": "Ciudad Darío",
+              "price": 45
+            },
+            {
+              "name": "Calabazas",
+              "price": 50
+            },
+            {
+              "name": "Puertas Viejas",
+              "price": 55
+            },
+            {
+              "name": "La Curva",
+              "price": 55
+            },
+            {
+              "name": "El Madroño",
+              "price": 55
+            },
+            {
+              "name": "Las Maderas",
+              "price": 75
+            },
+            {
+              "name": "San Benito",
+              "price": 80
+            },
+            {
+              "name": "Tipitapa",
+              "price": 85
+            },
+            {
+              "name": "Managua",
+              "price": 90
+            }
+          ]
+        },
+        {
+          "transport_pic": "",
+          "transport_pic_lqip": "",
+          "departure_time": "10:30",
+          "waiting_area_departure": "",
+          "return_time": "",
+          "waiting_area_return": "",
+          "transport_type": "Ruteado",
+          "transport_name": "",
+          "license_plate": "",
+          "transport_phone": "",
+          "transport_price": 90,
+          "trip_duration": "3.3 horas",
+          "stops": [
+            {
+              "name": "El Naranjo",
+              "price": 13
+            },
+            {
+              "name": "Santa Cruz",
+              "price": 15
+            },
+            {
+              "name": "Empalme San Nicolás",
+              "price": 15
+            },
+            {
+              "name": "La Concepción",
+              "price": 20
+            },
+            {
+              "name": "La Trinidad",
+              "price": 22
+            },
+            {
+              "name": "San Isidro",
+              "price": 30
+            },
+            {
+              "name": "Sébaco",
+              "price": 40
+            },
+            {
+              "name": "El Jobo",
+              "price": 45
+            },
+            {
+              "name": "Ciudad Darío",
+              "price": 45
+            },
+            {
+              "name": "Calabazas",
+              "price": 50
+            },
+            {
+              "name": "Puertas Viejas",
+              "price": 55
+            },
+            {
+              "name": "La Curva",
+              "price": 55
+            },
+            {
+              "name": "El Madroño",
+              "price": 55
+            },
+            {
+              "name": "Las Maderas",
+              "price": 75
+            },
+            {
+              "name": "San Benito",
+              "price": 80
+            },
+            {
+              "name": "Tipitapa",
+              "price": 85
+            },
+            {
+              "name": "Managua",
+              "price": 90
+            }
+          ]
+        },
+        {
+          "transport_pic": "",
+          "transport_pic_lqip": "",
+          "departure_time": "11:00",
+          "waiting_area_departure": "",
+          "return_time": "",
+          "waiting_area_return": "",
+          "transport_type": "Ruteado",
+          "transport_name": "",
+          "license_plate": "",
+          "transport_phone": "",
+          "transport_price": 90,
+          "trip_duration": "3.3 horas",
+          "stops": [
+            {
+              "name": "El Naranjo",
+              "price": 13
+            },
+            {
+              "name": "Santa Cruz",
+              "price": 15
+            },
+            {
+              "name": "Empalme San Nicolás",
+              "price": 15
+            },
+            {
+              "name": "La Concepción",
+              "price": 20
+            },
+            {
+              "name": "La Trinidad",
+              "price": 22
+            },
+            {
+              "name": "San Isidro",
+              "price": 30
+            },
+            {
+              "name": "Sébaco",
+              "price": 40
+            },
+            {
+              "name": "El Jobo",
+              "price": 45
+            },
+            {
+              "name": "Ciudad Darío",
+              "price": 45
+            },
+            {
+              "name": "Calabazas",
+              "price": 50
+            },
+            {
+              "name": "Puertas Viejas",
+              "price": 55
+            },
+            {
+              "name": "La Curva",
+              "price": 55
+            },
+            {
+              "name": "El Madroño",
+              "price": 55
+            },
+            {
+              "name": "Las Maderas",
+              "price": 75
+            },
+            {
+              "name": "San Benito",
+              "price": 80
+            },
+            {
+              "name": "Tipitapa",
+              "price": 85
+            },
+            {
+              "name": "Managua",
+              "price": 90
+            }
+          ]
+        },
+        {
+          "transport_pic": "",
+          "transport_pic_lqip": "",
+          "departure_time": "11:30",
+          "waiting_area_departure": "",
+          "return_time": "",
+          "waiting_area_return": "",
+          "transport_type": "Ruteado",
+          "transport_name": "",
+          "license_plate": "",
+          "transport_phone": "",
+          "transport_price": 90,
+          "trip_duration": "3.3 horas",
+          "stops": [
+            {
+              "name": "El Naranjo",
+              "price": 13
+            },
+            {
+              "name": "Santa Cruz",
+              "price": 15
+            },
+            {
+              "name": "Empalme San Nicolás",
+              "price": 15
+            },
+            {
+              "name": "La Concepción",
+              "price": 20
+            },
+            {
+              "name": "La Trinidad",
+              "price": 22
+            },
+            {
+              "name": "San Isidro",
+              "price": 30
+            },
+            {
+              "name": "Sébaco",
+              "price": 40
+            },
+            {
+              "name": "El Jobo",
+              "price": 45
+            },
+            {
+              "name": "Ciudad Darío",
+              "price": 45
+            },
+            {
+              "name": "Calabazas",
+              "price": 50
+            },
+            {
+              "name": "Puertas Viejas",
+              "price": 55
+            },
+            {
+              "name": "La Curva",
+              "price": 55
+            },
+            {
+              "name": "El Madroño",
+              "price": 55
+            },
+            {
+              "name": "Las Maderas",
+              "price": 75
+            },
+            {
+              "name": "San Benito",
+              "price": 80
+            },
+            {
+              "name": "Tipitapa",
+              "price": 85
+            },
+            {
+              "name": "Managua",
+              "price": 90
+            }
+          ]
+        },
+        {
+          "transport_pic": "",
+          "transport_pic_lqip": "",
+          "departure_time": "12:00",
+          "waiting_area_departure": "",
+          "return_time": "",
+          "waiting_area_return": "",
+          "transport_type": "Ruteado",
+          "transport_name": "",
+          "license_plate": "",
+          "transport_phone": "",
+          "transport_price": 90,
+          "trip_duration": "3.3 horas",
+          "stops": [
+            {
+              "name": "El Naranjo",
+              "price": 13
+            },
+            {
+              "name": "Santa Cruz",
+              "price": 15
+            },
+            {
+              "name": "Empalme San Nicolás",
+              "price": 15
+            },
+            {
+              "name": "La Concepción",
+              "price": 20
+            },
+            {
+              "name": "La Trinidad",
+              "price": 22
+            },
+            {
+              "name": "San Isidro",
+              "price": 30
+            },
+            {
+              "name": "Sébaco",
+              "price": 40
+            },
+            {
+              "name": "El Jobo",
+              "price": 45
+            },
+            {
+              "name": "Ciudad Darío",
+              "price": 45
+            },
+            {
+              "name": "Calabazas",
+              "price": 50
+            },
+            {
+              "name": "Puertas Viejas",
+              "price": 55
+            },
+            {
+              "name": "La Curva",
+              "price": 55
+            },
+            {
+              "name": "El Madroño",
+              "price": 55
+            },
+            {
+              "name": "Las Maderas",
+              "price": 75
+            },
+            {
+              "name": "San Benito",
+              "price": 80
+            },
+            {
+              "name": "Tipitapa",
+              "price": 85
+            },
+            {
+              "name": "Managua",
+              "price": 90
+            }
+          ]
+        },
+        {
+          "transport_pic": "",
+          "transport_pic_lqip": "",
+          "departure_time": "12:15",
+          "waiting_area_departure": "",
+          "return_time": "",
+          "waiting_area_return": "",
+          "transport_type": "Expreso",
+          "transport_name": "",
+          "license_plate": "",
+          "transport_phone": "",
+          "transport_price": 110,
+          "trip_duration": "2.4 horas"
+        },
+        {
+          "transport_pic": "",
+          "transport_pic_lqip": "",
+          "departure_time": "12:30",
+          "waiting_area_departure": "",
+          "return_time": "",
+          "waiting_area_return": "",
+          "transport_type": "Ruteado",
+          "transport_name": "",
+          "license_plate": "",
+          "transport_phone": "",
+          "transport_price": 90,
+          "trip_duration": "3.3 horas",
+          "stops": [
+            {
+              "name": "El Naranjo",
+              "price": 13
+            },
+            {
+              "name": "Santa Cruz",
+              "price": 15
+            },
+            {
+              "name": "Empalme San Nicolás",
+              "price": 15
+            },
+            {
+              "name": "La Concepción",
+              "price": 20
+            },
+            {
+              "name": "La Trinidad",
+              "price": 22
+            },
+            {
+              "name": "San Isidro",
+              "price": 30
+            },
+            {
+              "name": "Sébaco",
+              "price": 40
+            },
+            {
+              "name": "El Jobo",
+              "price": 45
+            },
+            {
+              "name": "Ciudad Darío",
+              "price": 45
+            },
+            {
+              "name": "Calabazas",
+              "price": 50
+            },
+            {
+              "name": "Puertas Viejas",
+              "price": 55
+            },
+            {
+              "name": "La Curva",
+              "price": 55
+            },
+            {
+              "name": "El Madroño",
+              "price": 55
+            },
+            {
+              "name": "Las Maderas",
+              "price": 75
+            },
+            {
+              "name": "San Benito",
+              "price": 80
+            },
+            {
+              "name": "Tipitapa",
+              "price": 85
+            },
+            {
+              "name": "Managua",
+              "price": 90
+            }
+          ]
+        },
+        {
+          "transport_pic": "",
+          "transport_pic_lqip": "",
+          "departure_time": "13:00",
+          "waiting_area_departure": "",
+          "return_time": "",
+          "waiting_area_return": "",
+          "transport_type": "Ruteado",
+          "transport_name": "",
+          "license_plate": "",
+          "transport_phone": "",
+          "transport_price": 90,
+          "trip_duration": "3.3 horas",
+          "stops": [
+            {
+              "name": "El Naranjo",
+              "price": 13
+            },
+            {
+              "name": "Santa Cruz",
+              "price": 15
+            },
+            {
+              "name": "Empalme San Nicolás",
+              "price": 15
+            },
+            {
+              "name": "La Concepción",
+              "price": 20
+            },
+            {
+              "name": "La Trinidad",
+              "price": 22
+            },
+            {
+              "name": "San Isidro",
+              "price": 30
+            },
+            {
+              "name": "Sébaco",
+              "price": 40
+            },
+            {
+              "name": "El Jobo",
+              "price": 45
+            },
+            {
+              "name": "Ciudad Darío",
+              "price": 45
+            },
+            {
+              "name": "Calabazas",
+              "price": 50
+            },
+            {
+              "name": "Puertas Viejas",
+              "price": 55
+            },
+            {
+              "name": "La Curva",
+              "price": 55
+            },
+            {
+              "name": "El Madroño",
+              "price": 55
+            },
+            {
+              "name": "Las Maderas",
+              "price": 75
+            },
+            {
+              "name": "San Benito",
+              "price": 80
+            },
+            {
+              "name": "Tipitapa",
+              "price": 85
+            },
+            {
+              "name": "Managua",
+              "price": 90
+            }
+          ]
+        },
+        {
+          "transport_pic": "",
+          "transport_pic_lqip": "",
+          "departure_time": "13:15",
+          "waiting_area_departure": "",
+          "return_time": "",
+          "waiting_area_return": "",
+          "transport_type": "Expreso",
+          "transport_name": "",
+          "license_plate": "",
+          "transport_phone": "",
+          "transport_price": 110,
+          "trip_duration": "2.4 horas"
+        },
+        {
+          "transport_pic": "",
+          "transport_pic_lqip": "",
+          "departure_time": "13:30",
+          "waiting_area_departure": "",
+          "return_time": "",
+          "waiting_area_return": "",
+          "transport_type": "Ruteado",
+          "transport_name": "",
+          "license_plate": "",
+          "transport_phone": "",
+          "transport_price": 90,
+          "trip_duration": "3.3 horas",
+          "stops": [
+            {
+              "name": "El Naranjo",
+              "price": 13
+            },
+            {
+              "name": "Santa Cruz",
+              "price": 15
+            },
+            {
+              "name": "Empalme San Nicolás",
+              "price": 15
+            },
+            {
+              "name": "La Concepción",
+              "price": 20
+            },
+            {
+              "name": "La Trinidad",
+              "price": 22
+            },
+            {
+              "name": "San Isidro",
+              "price": 30
+            },
+            {
+              "name": "Sébaco",
+              "price": 40
+            },
+            {
+              "name": "El Jobo",
+              "price": 45
+            },
+            {
+              "name": "Ciudad Darío",
+              "price": 45
+            },
+            {
+              "name": "Calabazas",
+              "price": 50
+            },
+            {
+              "name": "Puertas Viejas",
+              "price": 55
+            },
+            {
+              "name": "La Curva",
+              "price": 55
+            },
+            {
+              "name": "El Madroño",
+              "price": 55
+            },
+            {
+              "name": "Las Maderas",
+              "price": 75
+            },
+            {
+              "name": "San Benito",
+              "price": 80
+            },
+            {
+              "name": "Tipitapa",
+              "price": 85
+            },
+            {
+              "name": "Managua",
+              "price": 90
+            }
+          ]
+        },
+        {
+          "transport_pic": "",
+          "transport_pic_lqip": "",
+          "departure_time": "14:00",
+          "waiting_area_departure": "",
+          "return_time": "",
+          "waiting_area_return": "",
+          "transport_type": "Ruteado",
+          "transport_name": "",
+          "license_plate": "",
+          "transport_phone": "",
+          "transport_price": 90,
+          "trip_duration": "3.3 horas",
+          "stops": [
+            {
+              "name": "El Naranjo",
+              "price": 13
+            },
+            {
+              "name": "Santa Cruz",
+              "price": 15
+            },
+            {
+              "name": "Empalme San Nicolás",
+              "price": 15
+            },
+            {
+              "name": "La Concepción",
+              "price": "20"
+            },
+            {
+              "name": "La Trinidad",
+              "price": 22
+            },
+            {
+              "name": "San Isidro",
+              "price": 30
+            },
+            {
+              "name": "Sébaco",
+              "price": 40
+            },
+            {
+              "name": "El Jobo",
+              "price": 45
+            },
+            {
+              "name": "Ciudad Darío",
+              "price": 45
+            },
+            {
+              "name": "Calabazas",
+              "price": 50
+            },
+            {
+              "name": "Puertas Viejas",
+              "price": 55
+            },
+            {
+              "name": "La Curva",
+              "price": 55
+            },
+            {
+              "name": "El Madroño",
+              "price": 55
+            },
+            {
+              "name": "Las Maderas",
+              "price": 75
+            },
+            {
+              "name": "San Benito",
+              "price": 80
+            },
+            {
+              "name": "Tipitapa",
+              "price": 85
+            },
+            {
+              "name": "Managua",
+              "price": 90
+            }
+          ]
+        },
+        {
+          "transport_pic": "",
+          "transport_pic_lqip": "",
+          "departure_time": "14:15",
+          "waiting_area_departure": "",
+          "return_time": "",
+          "waiting_area_return": "",
+          "transport_type": "Expreso",
+          "transport_name": "",
+          "license_plate": "",
+          "transport_phone": "",
+          "transport_price": 110,
+          "trip_duration": "2.4 horas"
+        },
+        {
+          "transport_pic": "",
+          "transport_pic_lqip": "",
+          "departure_time": "14:30",
+          "waiting_area_departure": "",
+          "return_time": "",
+          "waiting_area_return": "",
+          "transport_type": "Ruteado",
+          "transport_name": "",
+          "license_plate": "",
+          "transport_phone": "",
+          "transport_price": 90,
+          "trip_duration": "3.3 horas",
+          "stops": [
+            {
+              "name": "El Naranjo",
+              "price": 13
+            },
+            {
+              "name": "Santa Cruz",
+              "price": 15
+            },
+            {
+              "name": "Empalme San Nicolás",
+              "price": 15
+            },
+            {
+              "name": "La Concepción",
+              "price": "20"
+            },
+            {
+              "name": "La Trinidad",
+              "price": 22
+            },
+            {
+              "name": "San Isidro",
+              "price": 30
+            },
+            {
+              "name": "Sébaco",
+              "price": 40
+            },
+            {
+              "name": "El Jobo",
+              "price": 45
+            },
+            {
+              "name": "Ciudad Darío",
+              "price": 45
+            },
+            {
+              "name": "Calabazas",
+              "price": 50
+            },
+            {
+              "name": "Puertas Viejas",
+              "price": 55
+            },
+            {
+              "name": "La Curva",
+              "price": 55
+            },
+            {
+              "name": "El Madroño",
+              "price": 55
+            },
+            {
+              "name": "Las Maderas",
+              "price": 75
+            },
+            {
+              "name": "San Benito",
+              "price": 80
+            },
+            {
+              "name": "Tipitapa",
+              "price": 85
+            },
+            {
+              "name": "Managua",
+              "price": 90
+            }
+          ]
+        },
+        {
+          "transport_pic": "",
+          "transport_pic_lqip": "",
+          "departure_time": "15:00",
+          "waiting_area_departure": "",
+          "return_time": "",
+          "waiting_area_return": "",
+          "transport_type": "Ruteado",
+          "transport_name": "",
+          "license_plate": "",
+          "transport_phone": "",
+          "transport_price": 90,
+          "trip_duration": "3.3 horas",
+          "stops": [
+            {
+              "name": "El Naranjo",
+              "price": 13
+            },
+            {
+              "name": "Santa Cruz",
+              "price": 15
+            },
+            {
+              "name": "Empalme San Nicolás",
+              "price": 15
+            },
+            {
+              "name": "La Concepción",
+              "price": "20"
+            },
+            {
+              "name": "La Trinidad",
+              "price": 22
+            },
+            {
+              "name": "San Isidro",
+              "price": 30
+            },
+            {
+              "name": "Sébaco",
+              "price": 40
+            },
+            {
+              "name": "El Jobo",
+              "price": 45
+            },
+            {
+              "name": "Ciudad Darío",
+              "price": 45
+            },
+            {
+              "name": "Calabazas",
+              "price": 50
+            },
+            {
+              "name": "Puertas Viejas",
+              "price": 55
+            },
+            {
+              "name": "La Curva",
+              "price": 55
+            },
+            {
+              "name": "El Madroño",
+              "price": 55
+            },
+            {
+              "name": "Las Maderas",
+              "price": 75
+            },
+            {
+              "name": "San Benito",
+              "price": 80
+            },
+            {
+              "name": "Tipitapa",
+              "price": 85
+            },
+            {
+              "name": "Managua",
+              "price": 90
+            }
+          ]
+        },
+        {
+          "transport_pic": "",
+          "transport_pic_lqip": "",
+          "departure_time": "15:15",
+          "waiting_area_departure": "",
+          "return_time": "",
+          "waiting_area_return": "",
+          "transport_type": "Expreso",
+          "transport_name": "",
+          "license_plate": "",
+          "transport_phone": "",
+          "transport_price": 110,
+          "trip_duration": "2.4 horas"
+        },
+        {
+          "transport_pic": "",
+          "transport_pic_lqip": "",
+          "departure_time": "15:30",
+          "waiting_area_departure": "",
+          "return_time": "",
+          "waiting_area_return": "",
+          "transport_type": "Ruteado",
+          "transport_name": "",
+          "license_plate": "",
+          "transport_phone": "",
+          "transport_price": 90,
+          "trip_duration": "3.3 horas",
+          "stops": [
+            {
+              "name": "El Naranjo",
+              "price": 13
+            },
+            {
+              "name": "Santa Cruz",
+              "price": 15
+            },
+            {
+              "name": "Empalme San Nicolás",
+              "price": 15
+            },
+            {
+              "name": "La Concepción",
+              "price": "20"
+            },
+            {
+              "name": "La Trinidad",
+              "price": 22
+            },
+            {
+              "name": "San Isidro",
+              "price": 30
+            },
+            {
+              "name": "Sébaco",
+              "price": 40
+            },
+            {
+              "name": "El Jobo",
+              "price": 45
+            },
+            {
+              "name": "Ciudad Darío",
+              "price": 45
+            },
+            {
+              "name": "Calabazas",
+              "price": 50
+            },
+            {
+              "name": "Puertas Viejas",
+              "price": 55
+            },
+            {
+              "name": "La Curva",
+              "price": 55
+            },
+            {
+              "name": "El Madroño",
+              "price": 55
+            },
+            {
+              "name": "Las Maderas",
+              "price": 75
+            },
+            {
+              "name": "San Benito",
+              "price": 80
+            },
+            {
+              "name": "Tipitapa",
+              "price": 85
+            },
+            {
+              "name": "Managua",
+              "price": 90
+            }
+          ]
+        },
+        {
+          "transport_pic": "",
+          "transport_pic_lqip": "",
+          "departure_time": "16:00",
+          "waiting_area_departure": "",
+          "return_time": "",
+          "waiting_area_return": "",
+          "transport_type": "Ruteado",
+          "transport_name": "",
+          "license_plate": "",
+          "transport_phone": "",
+          "transport_price": 90,
+          "trip_duration": "3.3 horas",
+          "stops": [
+            {
+              "name": "El Naranjo",
+              "price": 13
+            },
+            {
+              "name": "Santa Cruz",
+              "price": 15
+            },
+            {
+              "name": "Empalme San Nicolás",
+              "price": 15
+            },
+            {
+              "name": "La Concepción",
+              "price": "20"
+            },
+            {
+              "name": "La Trinidad",
+              "price": 22
+            },
+            {
+              "name": "San Isidro",
+              "price": 30
+            },
+            {
+              "name": "Sébaco",
+              "price": 40
+            },
+            {
+              "name": "El Jobo",
+              "price": 45
+            },
+            {
+              "name": "Ciudad Darío",
+              "price": 45
+            },
+            {
+              "name": "Calabazas",
+              "price": 50
+            },
+            {
+              "name": "Puertas Viejas",
+              "price": 55
+            },
+            {
+              "name": "La Curva",
+              "price": 55
+            },
+            {
+              "name": "El Madroño",
+              "price": 55
+            },
+            {
+              "name": "Las Maderas",
+              "price": 75
+            },
+            {
+              "name": "San Benito",
+              "price": 80
+            },
+            {
+              "name": "Tipitapa",
+              "price": 85
+            },
+            {
+              "name": "Managua",
+              "price": 90
+            }
+          ]
+        },
+        {
+          "transport_pic": "",
+          "transport_pic_lqip": "",
+          "departure_time": "16:30",
+          "waiting_area_departure": "",
+          "return_time": "",
+          "waiting_area_return": "",
+          "transport_type": "Ruteado",
+          "transport_name": "",
+          "license_plate": "",
+          "transport_phone": "",
+          "transport_price": 90,
+          "trip_duration": "3.3 horas",
+          "stops": [
+            {
+              "name": "El Naranjo",
+              "price": 13
+            },
+            {
+              "name": "Santa Cruz",
+              "price": 15
+            },
+            {
+              "name": "Empalme San Nicolás",
+              "price": 15
+            },
+            {
+              "name": "La Concepción",
+              "price": "20"
+            },
+            {
+              "name": "La Trinidad",
+              "price": 22
+            },
+            {
+              "name": "San Isidro",
+              "price": 30
+            },
+            {
+              "name": "Sébaco",
+              "price": 40
+            },
+            {
+              "name": "El Jobo",
+              "price": 45
+            },
+            {
+              "name": "Ciudad Darío",
+              "price": 45
+            },
+            {
+              "name": "Calabazas",
+              "price": 50
+            },
+            {
+              "name": "Puertas Viejas",
+              "price": 55
+            },
+            {
+              "name": "La Curva",
+              "price": 55
+            },
+            {
+              "name": "El Madroño",
+              "price": 55
+            },
+            {
+              "name": "Las Maderas",
+              "price": 75
+            },
+            {
+              "name": "San Benito",
+              "price": 80
+            },
+            {
+              "name": "Tipitapa",
+              "price": 85
+            },
+            {
+              "name": "Managua",
+              "price": 90
+            }
+          ]
+        },
+        {
+          "transport_pic": "",
+          "transport_pic_lqip": "",
+          "departure_time": "17:00",
+          "waiting_area_departure": "",
+          "return_time": "",
+          "waiting_area_return": "",
+          "transport_type": "Ruteado",
+          "transport_name": "",
+          "license_plate": "",
+          "transport_phone": "",
+          "transport_price": 90,
+          "trip_duration": "3.3 horas",
+          "stops": [
+            {
+              "name": "El Naranjo",
+              "price": 13
+            },
+            {
+              "name": "Santa Cruz",
+              "price": 15
+            },
+            {
+              "name": "Empalme San Nicolás",
+              "price": 15
+            },
+            {
+              "name": "La Concepción",
+              "price": 20
+            },
+            {
+              "name": "La Trinidad",
+              "price": 22
+            },
+            {
+              "name": "San Isidro",
+              "price": 30
+            },
+            {
+              "name": "Sébaco",
+              "price": 40
+            },
+            {
+              "name": "El Jobo",
+              "price": 45
+            },
+            {
+              "name": "Ciudad Darío",
+              "price": 45
+            },
+            {
+              "name": "Calabazas",
+              "price": 50
+            },
+            {
+              "name": "Puertas Viejas",
+              "price": 55
+            },
+            {
+              "name": "La Curva",
+              "price": 55
+            },
+            {
+              "name": "El Madroño",
+              "price": 55
+            },
+            {
+              "name": "Las Maderas",
+              "price": 75
+            },
+            {
+              "name": "San Benito",
+              "price": 80
+            },
+            {
+              "name": "Tipitapa",
+              "price": 85
+            },
+            {
+              "name": "Managua",
+              "price": 90
+            }
+          ]
+        },
+        {
+          "transport_pic": "",
+          "transport_pic_lqip": "",
+          "departure_time": "18:00",
+          "waiting_area_departure": "",
+          "return_time": "",
+          "waiting_area_return": "",
+          "transport_type": "Ruteado",
+          "transport_name": "",
+          "license_plate": "",
+          "transport_phone": "",
+          "transport_price": 90,
+          "trip_duration": "3.3 horas",
+          "stops": [
+            {
+              "name": "El Naranjo",
+              "price": 13
+            },
+            {
+              "name": "Santa Cruz",
+              "price": 15
+            },
+            {
+              "name": "Empalme San Nicolás",
+              "price": 15
+            },
+            {
+              "name": "La Concepción",
+              "price": 20
+            },
+            {
+              "name": "La Trinidad",
+              "price": 22
+            },
+            {
+              "name": "San Isidro",
+              "price": 30
+            },
+            {
+              "name": "Sébaco",
+              "price": 40
+            },
+            {
+              "name": "El Jobo",
+              "price": 45
+            },
+            {
+              "name": "Ciudad Darío",
+              "price": 45
+            },
+            {
+              "name": "Calabazas",
+              "price": 50
+            },
+            {
+              "name": "Puertas Viejas",
+              "price": 55
+            },
+            {
+              "name": "La Curva",
+              "price": 55
+            },
+            {
+              "name": "El Madroño",
+              "price": 55
+            },
+            {
+              "name": "Las Maderas",
+              "price": 75
+            },
+            {
+              "name": "San Benito",
+              "price": 80
+            },
+            {
+              "name": "Tipitapa",
+              "price": 85
+            },
+            {
+              "name": "Managua",
+              "price": 90
+            }
+          ]
+        }
+      ]
     },
     {
       "name": "Matagalpa",
-      "slug": "/terminal-sur-esteli/horarios-esteli-matagalpa",
+      "slug": "horarios-esteli-matagalpa",
       "image": "/img/terminal-sur/horarios-esteli-matagalpa-estelibuses-felix-icaza-card",
       "lqip": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAoAAAAGCAYAAAD68A/GAAAAAklEQVR4AewaftIAAADQSURBVAXB21KCQACA4R9YKBaUlE4Yjc7Y4TV7id6il+gNumzGu2Q0R0NdGGU5LH2f9f7x2ffYSBemtxFS+pQqZ1P02EZTqTVfixXiUkA08PG6ErVf41kxwpxJQpemblCt5HU2wc5Wv2yKFse2GEoPT4AvA+5vRjymE67HVzi0iHyb8TyfciF6PFdwPpVoXVOUisNREYQRWmucqty93cURL09zjOnId3/k+yNpmvIwSRiPYlrTI7rqxCFbsPwOGIYh2+UPBpsmGaAKQdPU1ErxD8RhXNMpHuGqAAAAAElFTkSuQmCC",
-      "timetables": [{}]
+      "social_media_image": "/img/og/horarios-esteli-matagalpa-cotran-sur-estelibuses.jpg",
+      "title": "Horarios de los Buses de Estelí hacia Matagalpa | Estelí Buses",
+      "description": "Conoce todos los horarios de los buses que salen desde Estelí hacia Matagalpa.",
+      "schema_FAQs": [],
+      "destination": "Terminal de Matagalpa",
+      "trip_distance": "69.5 km",
+      "map": "https://www.google.com/maps/embed?pb=!1m28!1m12!1m3!1d124419.2712839066!2d-86.20375010804754!3d12.965309940094839!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!4m13!3e6!4m5!1s0x8f718c13825dde4b%3A0x69c6340e0429bb84!2sCotran%20Sur%2C%20Estel%C3%AD!3m2!1d13.0762386!2d-86.3524291!4m5!1s0x8f724830f9561d2f%3A0x1793a46db7ccdb99!2sMatagalpa!3m2!1d12.9290069!2d-85.9151211!5e0!3m2!1ses-419!2sni!4v1645555676814!5m2!1ses-419!2sni",
+      "timetables": [
+        {
+          "transport_pic": "",
+          "transport_pic_lqip": "",
+          "departure_time": "05:15",
+          "waiting_area_departure": "",
+          "return_time": "",
+          "waiting_area_return": "",
+          "transport_type": "Ruteado",
+          "transport_name": "",
+          "license_plate": "",
+          "transport_phone": "",
+          "transport_price": 45,
+          "trip_duration": "1.5 horas",
+          "stops": [
+            {
+              "name": "El Naranjo",
+              "price": 13
+            },
+            {
+              "name": "Santa Cruz",
+              "price": 15
+            },
+            {
+              "name": "Empalme San Nicolás",
+              "price": 15
+            },
+            {
+              "name": "La Concepción",
+              "price": 20
+            },
+            {
+              "name": "La Trinidad",
+              "price": 22
+            },
+            {
+              "name": "Las Cañas",
+              "price": 22
+            },
+            {
+              "name": "San Isidro",
+              "price": 30
+            },
+            {
+              "name": "Sébaco",
+              "price": 40
+            },
+            {
+              "name": "Chagüitillo",
+              "price": 40
+            },
+            {
+              "name": "Las Palomas",
+              "price": 40
+            },
+            {
+              "name": "Los Cardones",
+              "price": 40
+            },
+            {
+              "name": "Cerro Largo",
+              "price": 40
+            },
+            {
+              "name": "El Palacio",
+              "price": 40
+            },
+            {
+              "name": "Quebrada Honda",
+              "price": 40
+            },
+            {
+              "name": "Guayacán",
+              "price": 42
+            },
+            {
+              "name": "Las Tres M",
+              "price": 45
+            },
+            {
+              "name": "Las Tejas",
+              "price": 45
+            },
+            {
+              "name": "Matagalpa",
+              "price": 45
+            }
+          ]
+        },
+        {
+          "transport_pic": "",
+          "transport_pic_lqip": "",
+          "departure_time": "05:45",
+          "waiting_area_departure": "",
+          "return_time": "",
+          "waiting_area_return": "",
+          "transport_type": "Ruteado",
+          "transport_name": "",
+          "license_plate": "",
+          "transport_phone": "",
+          "transport_price": 45,
+          "trip_duration": "1.5 horas",
+          "stops": [
+            {
+              "name": "El Naranjo",
+              "price": 13
+            },
+            {
+              "name": "Santa Cruz",
+              "price": 15
+            },
+            {
+              "name": "Empalme San Nicolás",
+              "price": 15
+            },
+            {
+              "name": "La Concepción",
+              "price": 20
+            },
+            {
+              "name": "La Trinidad",
+              "price": 22
+            },
+            {
+              "name": "Las Cañas",
+              "price": 22
+            },
+            {
+              "name": "San Isidro",
+              "price": 30
+            },
+            {
+              "name": "Sébaco",
+              "price": 40
+            },
+            {
+              "name": "Chagüitillo",
+              "price": 40
+            },
+            {
+              "name": "Las Palomas",
+              "price": 40
+            },
+            {
+              "name": "Los Cardones",
+              "price": 40
+            },
+            {
+              "name": "Cerro Largo",
+              "price": 40
+            },
+            {
+              "name": "El Palacio",
+              "price": 40
+            },
+            {
+              "name": "Quebrada Honda",
+              "price": 40
+            },
+            {
+              "name": "Guayacán",
+              "price": 42
+            },
+            {
+              "name": "Las Tres M",
+              "price": 45
+            },
+            {
+              "name": "Las Tejas",
+              "price": 45
+            },
+            {
+              "name": "Matagalpa",
+              "price": 45
+            }
+          ]
+        },
+        {
+          "transport_pic": "",
+          "transport_pic_lqip": "",
+          "departure_time": "06:15",
+          "waiting_area_departure": "",
+          "return_time": "",
+          "waiting_area_return": "",
+          "transport_type": "Ruteado",
+          "transport_name": "",
+          "license_plate": "",
+          "transport_phone": "",
+          "transport_price": 45,
+          "trip_duration": "1.5 horas",
+          "stops": [
+            {
+              "name": "El Naranjo",
+              "price": 13
+            },
+            {
+              "name": "Santa Cruz",
+              "price": 15
+            },
+            {
+              "name": "Empalme San Nicolás",
+              "price": 15
+            },
+            {
+              "name": "La Concepción",
+              "price": 20
+            },
+            {
+              "name": "La Trinidad",
+              "price": 22
+            },
+            {
+              "name": "Las Cañas",
+              "price": 22
+            },
+            {
+              "name": "San Isidro",
+              "price": 30
+            },
+            {
+              "name": "Sébaco",
+              "price": 40
+            },
+            {
+              "name": "Chagüitillo",
+              "price": 40
+            },
+            {
+              "name": "Las Palomas",
+              "price": 40
+            },
+            {
+              "name": "Los Cardones",
+              "price": 40
+            },
+            {
+              "name": "Cerro Largo",
+              "price": 40
+            },
+            {
+              "name": "El Palacio",
+              "price": 40
+            },
+            {
+              "name": "Quebrada Honda",
+              "price": 40
+            },
+            {
+              "name": "Guayacán",
+              "price": 42
+            },
+            {
+              "name": "Las Tres M",
+              "price": 45
+            },
+            {
+              "name": "Las Tejas",
+              "price": 45
+            },
+            {
+              "name": "Matagalpa",
+              "price": 45
+            }
+          ]
+        },
+        {
+          "transport_pic": "",
+          "transport_pic_lqip": "",
+          "departure_time": "06:45",
+          "waiting_area_departure": "",
+          "return_time": "",
+          "waiting_area_return": "",
+          "transport_type": "Ruteado",
+          "transport_name": "",
+          "license_plate": "",
+          "transport_phone": "",
+          "transport_price": 45,
+          "trip_duration": "1.5 horas",
+          "stops": [
+            {
+              "name": "El Naranjo",
+              "price": 13
+            },
+            {
+              "name": "Santa Cruz",
+              "price": 15
+            },
+            {
+              "name": "Empalme San Nicolás",
+              "price": 15
+            },
+            {
+              "name": "La Concepción",
+              "price": 20
+            },
+            {
+              "name": "La Trinidad",
+              "price": 22
+            },
+            {
+              "name": "Las Cañas",
+              "price": 22
+            },
+            {
+              "name": "San Isidro",
+              "price": 30
+            },
+            {
+              "name": "Sébaco",
+              "price": 40
+            },
+            {
+              "name": "Chagüitillo",
+              "price": 40
+            },
+            {
+              "name": "Las Palomas",
+              "price": 40
+            },
+            {
+              "name": "Los Cardones",
+              "price": 40
+            },
+            {
+              "name": "Cerro Largo",
+              "price": 40
+            },
+            {
+              "name": "El Palacio",
+              "price": 40
+            },
+            {
+              "name": "Quebrada Honda",
+              "price": 40
+            },
+            {
+              "name": "Guayacán",
+              "price": 42
+            },
+            {
+              "name": "Las Tres M",
+              "price": 45
+            },
+            {
+              "name": "Las Tejas",
+              "price": 45
+            },
+            {
+              "name": "Matagalpa",
+              "price": 45
+            }
+          ]
+        },
+        {
+          "transport_pic": "",
+          "transport_pic_lqip": "",
+          "departure_time": "07:15",
+          "waiting_area_departure": "",
+          "return_time": "",
+          "waiting_area_return": "",
+          "transport_type": "Ruteado",
+          "transport_name": "",
+          "license_plate": "",
+          "transport_phone": "",
+          "transport_price": 45,
+          "trip_duration": "1.5 horas",
+          "stops": [
+            {
+              "name": "El Naranjo",
+              "price": 13
+            },
+            {
+              "name": "Santa Cruz",
+              "price": 15
+            },
+            {
+              "name": "Empalme San Nicolás",
+              "price": 15
+            },
+            {
+              "name": "La Concepción",
+              "price": 20
+            },
+            {
+              "name": "La Trinidad",
+              "price": 22
+            },
+            {
+              "name": "Las Cañas",
+              "price": 22
+            },
+            {
+              "name": "San Isidro",
+              "price": 30
+            },
+            {
+              "name": "Sébaco",
+              "price": 40
+            },
+            {
+              "name": "Chagüitillo",
+              "price": 40
+            },
+            {
+              "name": "Las Palomas",
+              "price": 40
+            },
+            {
+              "name": "Los Cardones",
+              "price": 40
+            },
+            {
+              "name": "Cerro Largo",
+              "price": 40
+            },
+            {
+              "name": "El Palacio",
+              "price": 40
+            },
+            {
+              "name": "Quebrada Honda",
+              "price": 40
+            },
+            {
+              "name": "Guayacán",
+              "price": 42
+            },
+            {
+              "name": "Las Tres M",
+              "price": 45
+            },
+            {
+              "name": "Las Tejas",
+              "price": 45
+            },
+            {
+              "name": "Matagalpa",
+              "price": 45
+            }
+          ]
+        },
+        {
+          "transport_pic": "",
+          "transport_pic_lqip": "",
+          "departure_time": "07:45",
+          "waiting_area_departure": "",
+          "return_time": "",
+          "waiting_area_return": "",
+          "transport_type": "Ruteado",
+          "transport_name": "",
+          "license_plate": "",
+          "transport_phone": "",
+          "transport_price": 45,
+          "trip_duration": "1.5 horas",
+          "stops": [
+            {
+              "name": "El Naranjo",
+              "price": 13
+            },
+            {
+              "name": "Santa Cruz",
+              "price": 15
+            },
+            {
+              "name": "Empalme San Nicolás",
+              "price": 15
+            },
+            {
+              "name": "La Concepción",
+              "price": 20
+            },
+            {
+              "name": "La Trinidad",
+              "price": 22
+            },
+            {
+              "name": "Las Cañas",
+              "price": 22
+            },
+            {
+              "name": "San Isidro",
+              "price": 30
+            },
+            {
+              "name": "Sébaco",
+              "price": 40
+            },
+            {
+              "name": "Chagüitillo",
+              "price": 40
+            },
+            {
+              "name": "Las Palomas",
+              "price": 40
+            },
+            {
+              "name": "Los Cardones",
+              "price": 40
+            },
+            {
+              "name": "Cerro Largo",
+              "price": 40
+            },
+            {
+              "name": "El Palacio",
+              "price": 40
+            },
+            {
+              "name": "Quebrada Honda",
+              "price": 40
+            },
+            {
+              "name": "Guayacán",
+              "price": 42
+            },
+            {
+              "name": "Las Tres M",
+              "price": 45
+            },
+            {
+              "name": "Las Tejas",
+              "price": 45
+            },
+            {
+              "name": "Matagalpa",
+              "price": 45
+            }
+          ]
+        },
+        {
+          "transport_pic": "",
+          "transport_pic_lqip": "",
+          "departure_time": "08:15",
+          "waiting_area_departure": "",
+          "return_time": "",
+          "waiting_area_return": "",
+          "transport_type": "Ruteado",
+          "transport_name": "",
+          "license_plate": "",
+          "transport_phone": "",
+          "transport_price": 45,
+          "trip_duration": "1.5 horas",
+          "stops": [
+            {
+              "name": "El Naranjo",
+              "price": 13
+            },
+            {
+              "name": "Santa Cruz",
+              "price": 15
+            },
+            {
+              "name": "Empalme San Nicolás",
+              "price": 15
+            },
+            {
+              "name": "La Concepción",
+              "price": 20
+            },
+            {
+              "name": "La Trinidad",
+              "price": 22
+            },
+            {
+              "name": "Las Cañas",
+              "price": 22
+            },
+            {
+              "name": "San Isidro",
+              "price": 30
+            },
+            {
+              "name": "Sébaco",
+              "price": 40
+            },
+            {
+              "name": "Chagüitillo",
+              "price": 40
+            },
+            {
+              "name": "Las Palomas",
+              "price": 40
+            },
+            {
+              "name": "Los Cardones",
+              "price": 40
+            },
+            {
+              "name": "Cerro Largo",
+              "price": 40
+            },
+            {
+              "name": "El Palacio",
+              "price": 40
+            },
+            {
+              "name": "Quebrada Honda",
+              "price": 40
+            },
+            {
+              "name": "Guayacán",
+              "price": 42
+            },
+            {
+              "name": "Las Tres M",
+              "price": 45
+            },
+            {
+              "name": "Las Tejas",
+              "price": 45
+            },
+            {
+              "name": "Matagalpa",
+              "price": 45
+            }
+          ]
+        },
+        {
+          "transport_pic": "",
+          "transport_pic_lqip": "",
+          "departure_time": "08:45",
+          "waiting_area_departure": "",
+          "return_time": "",
+          "waiting_area_return": "",
+          "transport_type": "Ruteado",
+          "transport_name": "",
+          "license_plate": "",
+          "transport_phone": "",
+          "transport_price": 45,
+          "trip_duration": "1.5 horas",
+          "stops": [
+            {
+              "name": "El Naranjo",
+              "price": 13
+            },
+            {
+              "name": "Santa Cruz",
+              "price": 15
+            },
+            {
+              "name": "Empalme San Nicolás",
+              "price": 15
+            },
+            {
+              "name": "La Concepción",
+              "price": 20
+            },
+            {
+              "name": "La Trinidad",
+              "price": 22
+            },
+            {
+              "name": "Las Cañas",
+              "price": 22
+            },
+            {
+              "name": "San Isidro",
+              "price": 30
+            },
+            {
+              "name": "Sébaco",
+              "price": 40
+            },
+            {
+              "name": "Chagüitillo",
+              "price": 40
+            },
+            {
+              "name": "Las Palomas",
+              "price": 40
+            },
+            {
+              "name": "Los Cardones",
+              "price": 40
+            },
+            {
+              "name": "Cerro Largo",
+              "price": 40
+            },
+            {
+              "name": "El Palacio",
+              "price": 40
+            },
+            {
+              "name": "Quebrada Honda",
+              "price": 40
+            },
+            {
+              "name": "Guayacán",
+              "price": 42
+            },
+            {
+              "name": "Las Tres M",
+              "price": 45
+            },
+            {
+              "name": "Las Tejas",
+              "price": 45
+            },
+            {
+              "name": "Matagalpa",
+              "price": 45
+            }
+          ]
+        },
+        {
+          "transport_pic": "",
+          "transport_pic_lqip": "",
+          "departure_time": "09:15",
+          "waiting_area_departure": "",
+          "return_time": "",
+          "waiting_area_return": "",
+          "transport_type": "Ruteado",
+          "transport_name": "",
+          "license_plate": "",
+          "transport_phone": "",
+          "transport_price": 45,
+          "trip_duration": "1.5 horas",
+          "stops": [
+            {
+              "name": "El Naranjo",
+              "price": 13
+            },
+            {
+              "name": "Santa Cruz",
+              "price": 15
+            },
+            {
+              "name": "Empalme San Nicolás",
+              "price": 15
+            },
+            {
+              "name": "La Concepción",
+              "price": 20
+            },
+            {
+              "name": "La Trinidad",
+              "price": 22
+            },
+            {
+              "name": "Las Cañas",
+              "price": 22
+            },
+            {
+              "name": "San Isidro",
+              "price": 30
+            },
+            {
+              "name": "Sébaco",
+              "price": 40
+            },
+            {
+              "name": "Chagüitillo",
+              "price": 40
+            },
+            {
+              "name": "Las Palomas",
+              "price": 40
+            },
+            {
+              "name": "Los Cardones",
+              "price": 40
+            },
+            {
+              "name": "Cerro Largo",
+              "price": 40
+            },
+            {
+              "name": "El Palacio",
+              "price": 40
+            },
+            {
+              "name": "Quebrada Honda",
+              "price": 40
+            },
+            {
+              "name": "Guayacán",
+              "price": 42
+            },
+            {
+              "name": "Las Tres M",
+              "price": 45
+            },
+            {
+              "name": "Las Tejas",
+              "price": 45
+            },
+            {
+              "name": "Matagalpa",
+              "price": 45
+            }
+          ]
+        },
+        {
+          "transport_pic": "",
+          "transport_pic_lqip": "",
+          "departure_time": "09:45",
+          "waiting_area_departure": "",
+          "return_time": "",
+          "waiting_area_return": "",
+          "transport_type": "Ruteado",
+          "transport_name": "",
+          "license_plate": "",
+          "transport_phone": "",
+          "transport_price": 45,
+          "trip_duration": "1.5 horas",
+          "stops": [
+            {
+              "name": "El Naranjo",
+              "price": 13
+            },
+            {
+              "name": "Santa Cruz",
+              "price": 15
+            },
+            {
+              "name": "Empalme San Nicolás",
+              "price": 15
+            },
+            {
+              "name": "La Concepción",
+              "price": 20
+            },
+            {
+              "name": "La Trinidad",
+              "price": 22
+            },
+            {
+              "name": "Las Cañas",
+              "price": 22
+            },
+            {
+              "name": "San Isidro",
+              "price": 30
+            },
+            {
+              "name": "Sébaco",
+              "price": 40
+            },
+            {
+              "name": "Chagüitillo",
+              "price": 40
+            },
+            {
+              "name": "Las Palomas",
+              "price": 40
+            },
+            {
+              "name": "Los Cardones",
+              "price": 40
+            },
+            {
+              "name": "Cerro Largo",
+              "price": 40
+            },
+            {
+              "name": "El Palacio",
+              "price": 40
+            },
+            {
+              "name": "Quebrada Honda",
+              "price": 40
+            },
+            {
+              "name": "Guayacán",
+              "price": 42
+            },
+            {
+              "name": "Las Tres M",
+              "price": 45
+            },
+            {
+              "name": "Las Tejas",
+              "price": 45
+            },
+            {
+              "name": "Matagalpa",
+              "price": 45
+            }
+          ]
+        },
+        {
+          "transport_pic": "",
+          "transport_pic_lqip": "",
+          "departure_time": "10:15",
+          "waiting_area_departure": "",
+          "return_time": "06:50",
+          "waiting_area_return": "",
+          "transport_type": "Ruteado",
+          "transport_name": "Moreno",
+          "license_plate": "ES 057",
+          "transport_phone": "",
+          "transport_price": 45,
+          "trip_duration": "1.5 horas",
+          "stops": [
+            {
+              "name": "El Naranjo",
+              "price": 13
+            },
+            {
+              "name": "Santa Cruz",
+              "price": 15
+            },
+            {
+              "name": "Empalme San Nicolás",
+              "price": 15
+            },
+            {
+              "name": "La Concepción",
+              "price": 20
+            },
+            {
+              "name": "La Trinidad",
+              "price": 22
+            },
+            {
+              "name": "Las Cañas",
+              "price": 22
+            },
+            {
+              "name": "San Isidro",
+              "price": 30
+            },
+            {
+              "name": "Sébaco",
+              "price": 40
+            },
+            {
+              "name": "Chagüitillo",
+              "price": 40
+            },
+            {
+              "name": "Las Palomas",
+              "price": 40
+            },
+            {
+              "name": "Los Cardones",
+              "price": 40
+            },
+            {
+              "name": "Cerro Largo",
+              "price": 40
+            },
+            {
+              "name": "El Palacio",
+              "price": 40
+            },
+            {
+              "name": "Quebrada Honda",
+              "price": 40
+            },
+            {
+              "name": "Guayacán",
+              "price": 42
+            },
+            {
+              "name": "Las Tres M",
+              "price": 45
+            },
+            {
+              "name": "Las Tejas",
+              "price": 45
+            },
+            {
+              "name": "Matagalpa",
+              "price": 45
+            }
+          ]
+        },
+        {
+          "transport_pic": "",
+          "transport_pic_lqip": "",
+          "departure_time": "10:45",
+          "waiting_area_departure": "",
+          "return_time": "",
+          "waiting_area_return": "",
+          "transport_type": "Ruteado",
+          "transport_name": "",
+          "license_plate": "",
+          "transport_phone": "",
+          "transport_price": 45,
+          "trip_duration": "1.5 horas",
+          "stops": [
+            {
+              "name": "El Naranjo",
+              "price": 13
+            },
+            {
+              "name": "Santa Cruz",
+              "price": 15
+            },
+            {
+              "name": "Empalme San Nicolás",
+              "price": 15
+            },
+            {
+              "name": "La Concepción",
+              "price": 20
+            },
+            {
+              "name": "La Trinidad",
+              "price": 22
+            },
+            {
+              "name": "Las Cañas",
+              "price": 22
+            },
+            {
+              "name": "San Isidro",
+              "price": 30
+            },
+            {
+              "name": "Sébaco",
+              "price": 40
+            },
+            {
+              "name": "Chagüitillo",
+              "price": 40
+            },
+            {
+              "name": "Las Palomas",
+              "price": 40
+            },
+            {
+              "name": "Los Cardones",
+              "price": 40
+            },
+            {
+              "name": "Cerro Largo",
+              "price": 40
+            },
+            {
+              "name": "El Palacio",
+              "price": 40
+            },
+            {
+              "name": "Quebrada Honda",
+              "price": 40
+            },
+            {
+              "name": "Guayacán",
+              "price": 42
+            },
+            {
+              "name": "Las Tres M",
+              "price": 45
+            },
+            {
+              "name": "Las Tejas",
+              "price": 45
+            },
+            {
+              "name": "Matagalpa",
+              "price": 45
+            }
+          ]
+        },
+        {
+          "transport_pic": "",
+          "transport_pic_lqip": "",
+          "departure_time": "11:15",
+          "waiting_area_departure": "",
+          "return_time": "07:50",
+          "waiting_area_return": "",
+          "transport_type": "Ruteado",
+          "transport_name": "Moreno",
+          "license_plate": "ES 222",
+          "transport_phone": "",
+          "transport_price": 45,
+          "trip_duration": "1.5 horas",
+          "stops": [
+            {
+              "name": "El Naranjo",
+              "price": 13
+            },
+            {
+              "name": "Santa Cruz",
+              "price": 15
+            },
+            {
+              "name": "Empalme San Nicolás",
+              "price": 15
+            },
+            {
+              "name": "La Concepción",
+              "price": 20
+            },
+            {
+              "name": "La Trinidad",
+              "price": 22
+            },
+            {
+              "name": "Las Cañas",
+              "price": 22
+            },
+            {
+              "name": "San Isidro",
+              "price": 30
+            },
+            {
+              "name": "Sébaco",
+              "price": 40
+            },
+            {
+              "name": "Chagüitillo",
+              "price": 40
+            },
+            {
+              "name": "Las Palomas",
+              "price": 40
+            },
+            {
+              "name": "Los Cardones",
+              "price": 40
+            },
+            {
+              "name": "Cerro Largo",
+              "price": 40
+            },
+            {
+              "name": "El Palacio",
+              "price": 40
+            },
+            {
+              "name": "Quebrada Honda",
+              "price": 40
+            },
+            {
+              "name": "Guayacán",
+              "price": 42
+            },
+            {
+              "name": "Las Tres M",
+              "price": 45
+            },
+            {
+              "name": "Las Tejas",
+              "price": 45
+            },
+            {
+              "name": "Matagalpa",
+              "price": 45
+            }
+          ]
+        },
+        {
+          "transport_pic": "",
+          "transport_pic_lqip": "",
+          "departure_time": "11:45",
+          "waiting_area_departure": "",
+          "return_time": "",
+          "waiting_area_return": "",
+          "transport_type": "Ruteado",
+          "transport_name": "",
+          "license_plate": "",
+          "transport_phone": "",
+          "transport_price": 45,
+          "trip_duration": "1.5 horas",
+          "stops": [
+            {
+              "name": "El Naranjo",
+              "price": 13
+            },
+            {
+              "name": "Santa Cruz",
+              "price": 15
+            },
+            {
+              "name": "Empalme San Nicolás",
+              "price": 15
+            },
+            {
+              "name": "La Concepción",
+              "price": 20
+            },
+            {
+              "name": "La Trinidad",
+              "price": 22
+            },
+            {
+              "name": "Las Cañas",
+              "price": 22
+            },
+            {
+              "name": "San Isidro",
+              "price": 30
+            },
+            {
+              "name": "Sébaco",
+              "price": 40
+            },
+            {
+              "name": "Chagüitillo",
+              "price": 40
+            },
+            {
+              "name": "Las Palomas",
+              "price": 40
+            },
+            {
+              "name": "Los Cardones",
+              "price": 40
+            },
+            {
+              "name": "Cerro Largo",
+              "price": 40
+            },
+            {
+              "name": "El Palacio",
+              "price": 40
+            },
+            {
+              "name": "Quebrada Honda",
+              "price": 40
+            },
+            {
+              "name": "Guayacán",
+              "price": 42
+            },
+            {
+              "name": "Las Tres M",
+              "price": 45
+            },
+            {
+              "name": "Las Tejas",
+              "price": 45
+            },
+            {
+              "name": "Matagalpa",
+              "price": 45
+            }
+          ]
+        },
+        {
+          "transport_pic": "",
+          "transport_pic_lqip": "",
+          "departure_time": "12:15",
+          "waiting_area_departure": "",
+          "return_time": "",
+          "waiting_area_return": "",
+          "transport_type": "Ruteado",
+          "transport_name": "",
+          "license_plate": "",
+          "transport_phone": "",
+          "transport_price": 45,
+          "trip_duration": "1.5 horas",
+          "stops": [
+            {
+              "name": "El Naranjo",
+              "price": 13
+            },
+            {
+              "name": "Santa Cruz",
+              "price": 15
+            },
+            {
+              "name": "Empalme San Nicolás",
+              "price": 15
+            },
+            {
+              "name": "La Concepción",
+              "price": 20
+            },
+            {
+              "name": "La Trinidad",
+              "price": 22
+            },
+            {
+              "name": "Las Cañas",
+              "price": 22
+            },
+            {
+              "name": "San Isidro",
+              "price": 30
+            },
+            {
+              "name": "Sébaco",
+              "price": 40
+            },
+            {
+              "name": "Chagüitillo",
+              "price": 40
+            },
+            {
+              "name": "Las Palomas",
+              "price": 40
+            },
+            {
+              "name": "Los Cardones",
+              "price": 40
+            },
+            {
+              "name": "Cerro Largo",
+              "price": 40
+            },
+            {
+              "name": "El Palacio",
+              "price": 40
+            },
+            {
+              "name": "Quebrada Honda",
+              "price": 40
+            },
+            {
+              "name": "Guayacán",
+              "price": 42
+            },
+            {
+              "name": "Las Tres M",
+              "price": 45
+            },
+            {
+              "name": "Las Tejas",
+              "price": 45
+            },
+            {
+              "name": "Matagalpa",
+              "price": 45
+            }
+          ]
+        },
+        {
+          "transport_pic": "",
+          "transport_pic_lqip": "",
+          "departure_time": "12:45",
+          "waiting_area_departure": "",
+          "return_time": "",
+          "waiting_area_return": "",
+          "transport_type": "Ruteado",
+          "transport_name": "",
+          "license_plate": "",
+          "transport_phone": "",
+          "transport_price": 45,
+          "trip_duration": "1.5 horas",
+          "stops": [
+            {
+              "name": "El Naranjo",
+              "price": 13
+            },
+            {
+              "name": "Santa Cruz",
+              "price": 15
+            },
+            {
+              "name": "Empalme San Nicolás",
+              "price": 15
+            },
+            {
+              "name": "La Concepción",
+              "price": 20
+            },
+            {
+              "name": "La Trinidad",
+              "price": 22
+            },
+            {
+              "name": "Las Cañas",
+              "price": 22
+            },
+            {
+              "name": "San Isidro",
+              "price": 30
+            },
+            {
+              "name": "Sébaco",
+              "price": 40
+            },
+            {
+              "name": "Chagüitillo",
+              "price": 40
+            },
+            {
+              "name": "Las Palomas",
+              "price": 40
+            },
+            {
+              "name": "Los Cardones",
+              "price": 40
+            },
+            {
+              "name": "Cerro Largo",
+              "price": 40
+            },
+            {
+              "name": "El Palacio",
+              "price": 40
+            },
+            {
+              "name": "Quebrada Honda",
+              "price": 40
+            },
+            {
+              "name": "Guayacán",
+              "price": 42
+            },
+            {
+              "name": "Las Tres M",
+              "price": 45
+            },
+            {
+              "name": "Las Tejas",
+              "price": 45
+            },
+            {
+              "name": "Matagalpa",
+              "price": 45
+            }
+          ]
+        },
+        {
+          "transport_pic": "",
+          "transport_pic_lqip": "",
+          "departure_time": "13:15",
+          "waiting_area_departure": "",
+          "return_time": "",
+          "waiting_area_return": "",
+          "transport_type": "Ruteado",
+          "transport_name": "",
+          "license_plate": "",
+          "transport_phone": "",
+          "transport_price": 45,
+          "trip_duration": "1.5 horas",
+          "stops": [
+            {
+              "name": "El Naranjo",
+              "price": 13
+            },
+            {
+              "name": "Santa Cruz",
+              "price": 15
+            },
+            {
+              "name": "Empalme San Nicolás",
+              "price": 15
+            },
+            {
+              "name": "La Concepción",
+              "price": 20
+            },
+            {
+              "name": "La Trinidad",
+              "price": 22
+            },
+            {
+              "name": "Las Cañas",
+              "price": 22
+            },
+            {
+              "name": "San Isidro",
+              "price": 30
+            },
+            {
+              "name": "Sébaco",
+              "price": 40
+            },
+            {
+              "name": "Chagüitillo",
+              "price": 40
+            },
+            {
+              "name": "Las Palomas",
+              "price": 40
+            },
+            {
+              "name": "Los Cardones",
+              "price": 40
+            },
+            {
+              "name": "Cerro Largo",
+              "price": 40
+            },
+            {
+              "name": "El Palacio",
+              "price": 40
+            },
+            {
+              "name": "Quebrada Honda",
+              "price": 40
+            },
+            {
+              "name": "Guayacán",
+              "price": 42
+            },
+            {
+              "name": "Las Tres M",
+              "price": 45
+            },
+            {
+              "name": "Las Tejas",
+              "price": 45
+            },
+            {
+              "name": "Matagalpa",
+              "price": 45
+            }
+          ]
+        },
+        {
+          "transport_pic": "",
+          "transport_pic_lqip": "",
+          "departure_time": "13:45",
+          "waiting_area_departure": "",
+          "return_time": "",
+          "waiting_area_return": "",
+          "transport_type": "Ruteado",
+          "transport_name": "",
+          "license_plate": "",
+          "transport_phone": "",
+          "transport_price": 45,
+          "trip_duration": "1.5 horas",
+          "stops": [
+            {
+              "name": "El Naranjo",
+              "price": 13
+            },
+            {
+              "name": "Santa Cruz",
+              "price": 15
+            },
+            {
+              "name": "Empalme San Nicolás",
+              "price": 15
+            },
+            {
+              "name": "La Concepción",
+              "price": 20
+            },
+            {
+              "name": "La Trinidad",
+              "price": 22
+            },
+            {
+              "name": "Las Cañas",
+              "price": 22
+            },
+            {
+              "name": "San Isidro",
+              "price": 30
+            },
+            {
+              "name": "Sébaco",
+              "price": 40
+            },
+            {
+              "name": "Chagüitillo",
+              "price": 40
+            },
+            {
+              "name": "Las Palomas",
+              "price": 40
+            },
+            {
+              "name": "Los Cardones",
+              "price": 40
+            },
+            {
+              "name": "Cerro Largo",
+              "price": 40
+            },
+            {
+              "name": "El Palacio",
+              "price": 40
+            },
+            {
+              "name": "Quebrada Honda",
+              "price": 40
+            },
+            {
+              "name": "Guayacán",
+              "price": 42
+            },
+            {
+              "name": "Las Tres M",
+              "price": 45
+            },
+            {
+              "name": "Las Tejas",
+              "price": 45
+            },
+            {
+              "name": "Matagalpa",
+              "price": 45
+            }
+          ]
+        },
+        {
+          "transport_pic": "",
+          "transport_pic_lqip": "",
+          "departure_time": "14:15",
+          "waiting_area_departure": "",
+          "return_time": "",
+          "waiting_area_return": "",
+          "transport_type": "Ruteado",
+          "transport_name": "",
+          "license_plate": "",
+          "transport_phone": "",
+          "transport_price": 45,
+          "trip_duration": "1.5 horas",
+          "stops": [
+            {
+              "name": "El Naranjo",
+              "price": 13
+            },
+            {
+              "name": "Santa Cruz",
+              "price": 15
+            },
+            {
+              "name": "Empalme San Nicolás",
+              "price": 15
+            },
+            {
+              "name": "La Concepción",
+              "price": 20
+            },
+            {
+              "name": "La Trinidad",
+              "price": 22
+            },
+            {
+              "name": "Las Cañas",
+              "price": 22
+            },
+            {
+              "name": "San Isidro",
+              "price": 30
+            },
+            {
+              "name": "Sébaco",
+              "price": 40
+            },
+            {
+              "name": "Chagüitillo",
+              "price": 40
+            },
+            {
+              "name": "Las Palomas",
+              "price": 40
+            },
+            {
+              "name": "Los Cardones",
+              "price": 40
+            },
+            {
+              "name": "Cerro Largo",
+              "price": 40
+            },
+            {
+              "name": "El Palacio",
+              "price": 40
+            },
+            {
+              "name": "Quebrada Honda",
+              "price": 40
+            },
+            {
+              "name": "Guayacán",
+              "price": 42
+            },
+            {
+              "name": "Las Tres M",
+              "price": 45
+            },
+            {
+              "name": "Las Tejas",
+              "price": 45
+            },
+            {
+              "name": "Matagalpa",
+              "price": 45
+            }
+          ]
+        },
+        {
+          "transport_pic": "",
+          "transport_pic_lqip": "",
+          "departure_time": "14:45",
+          "waiting_area_departure": "",
+          "return_time": "",
+          "waiting_area_return": "",
+          "transport_type": "Ruteado",
+          "transport_name": "",
+          "license_plate": "",
+          "transport_phone": "",
+          "transport_price": 45,
+          "trip_duration": "1.5 horas",
+          "stops": [
+            {
+              "name": "El Naranjo",
+              "price": 13
+            },
+            {
+              "name": "Santa Cruz",
+              "price": 15
+            },
+            {
+              "name": "Empalme San Nicolás",
+              "price": 15
+            },
+            {
+              "name": "La Concepción",
+              "price": 20
+            },
+            {
+              "name": "La Trinidad",
+              "price": 22
+            },
+            {
+              "name": "Las Cañas",
+              "price": 22
+            },
+            {
+              "name": "San Isidro",
+              "price": 30
+            },
+            {
+              "name": "Sébaco",
+              "price": 40
+            },
+            {
+              "name": "Chagüitillo",
+              "price": 40
+            },
+            {
+              "name": "Las Palomas",
+              "price": 40
+            },
+            {
+              "name": "Los Cardones",
+              "price": 40
+            },
+            {
+              "name": "Cerro Largo",
+              "price": 40
+            },
+            {
+              "name": "El Palacio",
+              "price": 40
+            },
+            {
+              "name": "Quebrada Honda",
+              "price": 40
+            },
+            {
+              "name": "Guayacán",
+              "price": 42
+            },
+            {
+              "name": "Las Tres M",
+              "price": 45
+            },
+            {
+              "name": "Las Tejas",
+              "price": 45
+            },
+            {
+              "name": "Matagalpa",
+              "price": 45
+            }
+          ]
+        },
+        {
+          "transport_pic": "",
+          "transport_pic_lqip": "",
+          "departure_time": "15:15",
+          "waiting_area_departure": "",
+          "return_time": "05:00",
+          "waiting_area_return": "",
+          "transport_type": "Ruteado",
+          "transport_name": "Moreno",
+          "license_plate": "ES 244",
+          "transport_phone": "",
+          "transport_price": 45,
+          "trip_duration": "1.5 horas",
+          "stops": [
+            {
+              "name": "El Naranjo",
+              "price": 13
+            },
+            {
+              "name": "Santa Cruz",
+              "price": 15
+            },
+            {
+              "name": "Empalme San Nicolás",
+              "price": 15
+            },
+            {
+              "name": "La Concepción",
+              "price": 20
+            },
+            {
+              "name": "La Trinidad",
+              "price": 22
+            },
+            {
+              "name": "Las Cañas",
+              "price": 22
+            },
+            {
+              "name": "San Isidro",
+              "price": 30
+            },
+            {
+              "name": "Sébaco",
+              "price": 40
+            },
+            {
+              "name": "Chagüitillo",
+              "price": 40
+            },
+            {
+              "name": "Las Palomas",
+              "price": 40
+            },
+            {
+              "name": "Los Cardones",
+              "price": 40
+            },
+            {
+              "name": "Cerro Largo",
+              "price": 40
+            },
+            {
+              "name": "El Palacio",
+              "price": 40
+            },
+            {
+              "name": "Quebrada Honda",
+              "price": 40
+            },
+            {
+              "name": "Guayacán",
+              "price": 42
+            },
+            {
+              "name": "Las Tres M",
+              "price": 45
+            },
+            {
+              "name": "Las Tejas",
+              "price": 45
+            },
+            {
+              "name": "Matagalpa",
+              "price": 45
+            }
+          ]
+        },
+        {
+          "transport_pic": "",
+          "transport_pic_lqip": "",
+          "departure_time": "15:45",
+          "waiting_area_departure": "",
+          "return_time": "",
+          "waiting_area_return": "",
+          "transport_type": "Ruteado",
+          "transport_name": "",
+          "license_plate": "",
+          "transport_phone": "",
+          "transport_price": 45,
+          "trip_duration": "1.5 horas",
+          "stops": [
+            {
+              "name": "El Naranjo",
+              "price": 13
+            },
+            {
+              "name": "Santa Cruz",
+              "price": 15
+            },
+            {
+              "name": "Empalme San Nicolás",
+              "price": 15
+            },
+            {
+              "name": "La Concepción",
+              "price": 20
+            },
+            {
+              "name": "La Trinidad",
+              "price": 22
+            },
+            {
+              "name": "Las Cañas",
+              "price": 22
+            },
+            {
+              "name": "San Isidro",
+              "price": 30
+            },
+            {
+              "name": "Sébaco",
+              "price": 40
+            },
+            {
+              "name": "Chagüitillo",
+              "price": 40
+            },
+            {
+              "name": "Las Palomas",
+              "price": 40
+            },
+            {
+              "name": "Los Cardones",
+              "price": 40
+            },
+            {
+              "name": "Cerro Largo",
+              "price": 40
+            },
+            {
+              "name": "El Palacio",
+              "price": 40
+            },
+            {
+              "name": "Quebrada Honda",
+              "price": 40
+            },
+            {
+              "name": "Guayacán",
+              "price": 42
+            },
+            {
+              "name": "Las Tres M",
+              "price": 45
+            },
+            {
+              "name": "Las Tejas",
+              "price": 45
+            },
+            {
+              "name": "Matagalpa",
+              "price": 45
+            }
+          ]
+        },
+        {
+          "transport_pic": "",
+          "transport_pic_lqip": "",
+          "departure_time": "16:15",
+          "waiting_area_departure": "",
+          "return_time": "12:50",
+          "waiting_area_return": "",
+          "transport_type": "Ruteado",
+          "transport_name": "Moreno",
+          "license_plate": "ES 057",
+          "transport_phone": "",
+          "transport_price": 45,
+          "trip_duration": "1.5 horas",
+          "stops": [
+            {
+              "name": "El Naranjo",
+              "price": 13
+            },
+            {
+              "name": "Santa Cruz",
+              "price": 15
+            },
+            {
+              "name": "Empalme San Nicolás",
+              "price": 15
+            },
+            {
+              "name": "La Concepción",
+              "price": 20
+            },
+            {
+              "name": "La Trinidad",
+              "price": 22
+            },
+            {
+              "name": "Las Cañas",
+              "price": 22
+            },
+            {
+              "name": "San Isidro",
+              "price": 30
+            },
+            {
+              "name": "Sébaco",
+              "price": 40
+            },
+            {
+              "name": "Chagüitillo",
+              "price": 40
+            },
+            {
+              "name": "Las Palomas",
+              "price": 40
+            },
+            {
+              "name": "Los Cardones",
+              "price": 40
+            },
+            {
+              "name": "Cerro Largo",
+              "price": 40
+            },
+            {
+              "name": "El Palacio",
+              "price": 40
+            },
+            {
+              "name": "Quebrada Honda",
+              "price": 40
+            },
+            {
+              "name": "Guayacán",
+              "price": 42
+            },
+            {
+              "name": "Las Tres M",
+              "price": 45
+            },
+            {
+              "name": "Las Tejas",
+              "price": 45
+            },
+            {
+              "name": "Matagalpa",
+              "price": 45
+            }
+          ]
+        },
+        {
+          "transport_pic": "",
+          "transport_pic_lqip": "",
+          "departure_time": "16:45",
+          "waiting_area_departure": "",
+          "return_time": "",
+          "waiting_area_return": "",
+          "transport_type": "Ruteado",
+          "transport_name": "",
+          "license_plate": "",
+          "transport_phone": "",
+          "transport_price": 45,
+          "trip_duration": "1.5 horas",
+          "stops": [
+            {
+              "name": "El Naranjo",
+              "price": 13
+            },
+            {
+              "name": "Santa Cruz",
+              "price": 15
+            },
+            {
+              "name": "Empalme San Nicolás",
+              "price": 15
+            },
+            {
+              "name": "La Concepción",
+              "price": 20
+            },
+            {
+              "name": "La Trinidad",
+              "price": 22
+            },
+            {
+              "name": "Las Cañas",
+              "price": 22
+            },
+            {
+              "name": "San Isidro",
+              "price": 30
+            },
+            {
+              "name": "Sébaco",
+              "price": 40
+            },
+            {
+              "name": "Chagüitillo",
+              "price": 40
+            },
+            {
+              "name": "Las Palomas",
+              "price": 40
+            },
+            {
+              "name": "Los Cardones",
+              "price": 40
+            },
+            {
+              "name": "Cerro Largo",
+              "price": 40
+            },
+            {
+              "name": "El Palacio",
+              "price": 40
+            },
+            {
+              "name": "Quebrada Honda",
+              "price": 40
+            },
+            {
+              "name": "Guayacán",
+              "price": 42
+            },
+            {
+              "name": "Las Tres M",
+              "price": 45
+            },
+            {
+              "name": "Las Tejas",
+              "price": 45
+            },
+            {
+              "name": "Matagalpa",
+              "price": 45
+            }
+          ]
+        },
+        {
+          "transport_pic": "",
+          "transport_pic_lqip": "",
+          "departure_time": "17:45",
+          "waiting_area_departure": "",
+          "return_time": "",
+          "waiting_area_return": "",
+          "transport_type": "Ruteado",
+          "transport_name": "",
+          "license_plate": "",
+          "transport_phone": "",
+          "transport_price": 45,
+          "trip_duration": "1.5 horas",
+          "stops": [
+            {
+              "name": "El Naranjo",
+              "price": 13
+            },
+            {
+              "name": "Santa Cruz",
+              "price": 15
+            },
+            {
+              "name": "Empalme San Nicolás",
+              "price": 15
+            },
+            {
+              "name": "La Concepción",
+              "price": 20
+            },
+            {
+              "name": "La Trinidad",
+              "price": 22
+            },
+            {
+              "name": "Las Cañas",
+              "price": 22
+            },
+            {
+              "name": "San Isidro",
+              "price": 30
+            },
+            {
+              "name": "Sébaco",
+              "price": 40
+            },
+            {
+              "name": "Chagüitillo",
+              "price": 40
+            },
+            {
+              "name": "Las Palomas",
+              "price": 40
+            },
+            {
+              "name": "Los Cardones",
+              "price": 40
+            },
+            {
+              "name": "Cerro Largo",
+              "price": 40
+            },
+            {
+              "name": "El Palacio",
+              "price": 40
+            },
+            {
+              "name": "Quebrada Honda",
+              "price": 40
+            },
+            {
+              "name": "Guayacán",
+              "price": 42
+            },
+            {
+              "name": "Las Tres M",
+              "price": 45
+            },
+            {
+              "name": "Las Tejas",
+              "price": 45
+            },
+            {
+              "name": "Matagalpa",
+              "price": 45
+            }
+          ]
+        }
+      ]
     },
     {
       "name": "León",
-      "slug": "/terminal-sur-esteli/horarios-esteli-leon",
+      "slug": "horarios-esteli-leon",
       "image": "/img/terminal-sur/horarios-esteli-leon-estelibuses-felix-icaza-card",
       "lqip": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAoAAAAGCAYAAAD68A/GAAAAAklEQVR4AewaftIAAADWSURBVAXBzVKCUACA0e8CJmg4mApZMSrTj8207kF6m3Y9TS/juGhbTi1cSF7JQQuBe8HOEU/Pr8fpqIfSGrnL4aj5UzAauERdwVf8ywEbK2hr6tWcIBiiqow2ezLRxM5d3ucfIAy60SNWOHAw9zZeo8DpG8h1wa3fYSFTzv0eCIF5UmPlOwl5idYapRRlqcgOJZ5Z0mi6JD9bTjsaIzxzGF8NSeIVD/dT3mYzbq4jlp8LxuEFQd/DtyvMu8nlSyJjtCqQmzWtlk2abrGo2SSSShV8x0v+AfDfXVGAYAnGAAAAAElFTkSuQmCC",
-      "timetables": [{}]
+      "social_media_image": "/img/og/horarios-esteli-leon-cotran-sur-estelibuses.jpg",
+      "title": "Horarios de los Buses de Estelí hacia León | Estelí Buses",
+      "description": "Conoce todos los horarios de los buses que salen desde Estelí hacia León.",
+      "schema_FAQs": [],
+      "destination": "Terminal de León",
+      "trip_distance": "141 km",
+      "map": "https://www.google.com/maps/embed?pb=!1m28!1m12!1m3!1d498079.00650867104!2d-86.80604487684067!3d12.762774543877367!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!4m13!3e6!4m5!1s0x8f718c13825dde4b%3A0x69c6340e0429bb84!2sCotran%20Sur%2C%20Estel%C3%AD!3m2!1d13.0762386!2d-86.3524291!4m5!1s0x8f711f92bb8f7a77%3A0x3ab5c06f64ea313c!2zTGXDs24!3m2!1d12.4342803!2d-86.88052189999999!5e0!3m2!1ses-419!2sni!4v1645555353275!5m2!1ses-419!2sni",
+      "filter": true,
+      "timetables": [
+        {
+          "transport_pic": "",
+          "transport_pic_lqip": "",
+          "departure_time": "05:00",
+          "waiting_area_departure": "",
+          "return_time": "",
+          "waiting_area_return": "",
+          "transport_type": "Ruteado",
+          "transport_name": "",
+          "license_plate": "",
+          "transport_phone": "",
+          "transport_price": "",
+          "trip_duration": "2.5 horas"
+        },
+        {
+          "transport_pic": "",
+          "transport_pic_lqip": "",
+          "departure_time": "05:45",
+          "waiting_area_departure": "",
+          "return_time": "",
+          "waiting_area_return": "",
+          "transport_type": "Ruteado",
+          "transport_name": "",
+          "license_plate": "",
+          "transport_phone": "",
+          "transport_price": "",
+          "trip_duration": "2.5 horas"
+        },
+        {
+          "transport_pic": "/img/leon/transporte-acuna",
+          "transport_pic_lqip": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAoAAAAHCAYAAAAxrNxjAAAAAklEQVR4AewaftIAAADlSURBVDXBsUrDQACA4f+Si5EWAmoIWkkRrUKFtpNv4OL7+CC+hrg5FhwdBMGhLqViIVRESrXYpBd6yZ3J4PeJcnhtU625ecsJ7DHubozn7+BTcnHepju/QxQKSUUAsyRnPH4i2PsgOjzFiAZrpem2BTWHmnVJf5dM3yeMnh/Qq4RcBEyST5RaU3OoGAvLny2ano+0kq+FYpuMPJsBJTVJxREunVaPzlkfXZaEByfoTcFR1EO6L4DBoWJMQTIasp9+M2h4xGrOoClg+so/ScV1BHEc8nh/i8k2mKhFuFrQv7rE2ojaHzZBWQTSnYi+AAAAAElFTkSuQmCC",
+          "departure_time": "06:45",
+          "waiting_area_departure": "",
+          "return_time": "",
+          "waiting_area_return": "",
+          "transport_type": "Expreso",
+          "transport_name": "Acuña",
+          "license_plate": "ES 29241",
+          "transport_phone": "",
+          "transport_price": "",
+          "trip_duration": "2.1 horas"
+        }
+      ]
     },
     {
       "name": "La Trinidad",
-      "slug": "/terminal-sur-esteli/horarios-esteli-la-trinidad",
+      "slug": "horarios-esteli-la-trinidad",
       "image": "/img/terminal-sur/horarios-esteli-la-trinidad-estelibuses-felix-icaza-card",
       "lqip": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAoAAAAGCAYAAAD68A/GAAAAAklEQVR4AewaftIAAADoSURBVAXB30rCUADA4d85m5abs00XKQsq6CJml1H0LEH0KD5DD9FN9AJdB1FEF0ImaZaaomDNP5WbubO+T1xdPybFdZvRWx2ZsfDLPum0zvQ7JIpCTDPLIhZoJXetkrMdvtotpJJs7fkshcaKlhBMZuTMDO/tBlrBiSv1xg1uqUi3+UT/Y8D93S2LREAc0eu8cnF5jm5kHT7VhIdYI4iHHFVfmKZ2UPMAxkOMZQ86ffTnWgtlpTg49hiLJspYpWBvkHddpKEzH8zY9gT62ckptVFI9SfgV20SWB77+RApANPG2j3E+Av5B/2XWtOuL5SIAAAAAElFTkSuQmCC",
-      "timetables": [{}]
+      "social_media_image": "/img/og/horarios-esteli-la-trinidad-cotran-sur-estelibuses.jpg",
+      "title": "Horarios de los Buses de Estelí hacia La Trinidad | Estelí Buses",
+      "description": "Conoce todos los horarios de los buses que salen desde Estelí hacia La Trinidad.",
+      "schema_FAQs": [],
+      "destination": "Terminal de La Trinidad",
+      "trip_distance": "22.7 km",
+      "map": "https://www.google.com/maps/embed?pb=!1m28!1m12!1m3!1d62195.482226028565!2d-86.32744469797157!3d13.021808100609661!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!4m13!3e6!4m5!1s0x8f718c13825dde4b%3A0x69c6340e0429bb84!2sCotran%20Sur%2C%20Estel%C3%AD!3m2!1d13.0762386!2d-86.3524291!4m5!1s0x8f7227de00646a59%3A0xeba5b9264281e0cc!2sLa%20Trinidad!3m2!1d12.9668377!2d-86.23490439999999!5e0!3m2!1ses-419!2sni!4v1645555174533!5m2!1ses-419!2sni",
+      "timetables": [
+        {
+          "transport_pic": "",
+          "transport_pic_lqip": "",
+          "departure_time": "17:15",
+          "waiting_area_departure": "",
+          "return_time": "",
+          "waiting_area_return": "",
+          "transport_type": "Ruteado",
+          "transport_name": "",
+          "license_plate": "",
+          "transport_phone": "",
+          "transport_price": "",
+          "trip_duration": "45 minutos"
+        },
+        {
+          "transport_pic": "",
+          "transport_pic_lqip": "",
+          "departure_time": "17:30",
+          "waiting_area_departure": "",
+          "return_time": "",
+          "waiting_area_return": "",
+          "transport_type": "Ruteado",
+          "transport_name": "",
+          "license_plate": "",
+          "transport_phone": "",
+          "transport_price": "",
+          "trip_duration": "45 minutos"
+        },
+        {
+          "transport_pic": "",
+          "transport_pic_lqip": "",
+          "departure_time": "18:20",
+          "waiting_area_departure": "",
+          "return_time": "",
+          "waiting_area_return": "",
+          "transport_type": "Ruteado",
+          "transport_name": "",
+          "license_plate": "",
+          "transport_phone": "",
+          "transport_price": "",
+          "trip_duration": "45 minutos"
+        },
+        {
+          "transport_pic": "",
+          "transport_pic_lqip": "",
+          "departure_time": "18:30",
+          "waiting_area_departure": "",
+          "return_time": "",
+          "waiting_area_return": "",
+          "transport_type": "Ruteado",
+          "transport_name": "",
+          "license_plate": "",
+          "transport_phone": "",
+          "transport_price": "",
+          "trip_duration": "45 minutos"
+        },
+        {
+          "transport_pic": "",
+          "transport_pic_lqip": "",
+          "departure_time": "19:00",
+          "waiting_area_departure": "",
+          "return_time": "",
+          "waiting_area_return": "",
+          "transport_type": "Ruteado",
+          "transport_name": "",
+          "license_plate": "",
+          "transport_phone": "",
+          "transport_price": "",
+          "trip_duration": "45 minutos"
+        }
+      ]
     },
     {
       "name": "San Nicolás",
-      "slug": "/terminal-sur-esteli/horarios-esteli-san-nicolas",
+      "slug": "horarios-esteli-san-nicolas",
       "image": "/img/terminal-sur/horarios-esteli-san-nicolas-estelibuses-felix-icaza-card",
       "lqip": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAoAAAAGCAYAAAD68A/GAAAAAklEQVR4AewaftIAAAD2SURBVAXBu0rDYACA0S/kDw69kBCqtqTGilKoYMVNRMVJENwEVydBxHfwKVwcxUnwgmuH4lY7OMSIuMTGViGaBlpprebiOZI4vE+StEo2DtFeauxsrzPz2+ItzmHJJn7XZ38tjzDzKoWMQnHksuKc0HoV6M9nDJaPGKbm2DKe6P1MIA6m2yh6CTVd5sFZJJYCTj98NjXBblkiGiyhiBDRaV6SjT08Mc5dW2c1eGTenOWzeYtVv0KOQzSjimwrC8delGXDbpBxLaphSL/TpfIXERglbhyJmhsjLvam+BqNcX1uY1YmafT6DKOEVE7nO5IpJAFF3vkHnNFeeDtzHrAAAAAASUVORK5CYII=",
-      "timetables": [{}]
+      "social_media_image": "/img/og/horarios-esteli-san-nicolas-cotran-sur-estelibuses.jpg",
+      "title": "Horarios de los Buses de Estelí hacia San Nicolás | Estelí Buses",
+      "description": "Conoce todos los horarios de los buses que salen desde Estelí hacia San Nicolás.",
+      "schema_FAQs": [],
+      "destination": "Terminal de San Nicolás",
+      "trip_distance": "24.7 km",
+      "map": "https://www.google.com/maps/embed?pb=!1m28!1m12!1m3!1d124399.81029988968!2d-86.39884790770328!3d13.004178413986123!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!4m13!3e6!4m5!1s0x8f718c13825dde4b%3A0x69c6340e0429bb84!2sCotran%20Sur%2C%20Estel%C3%AD!3m2!1d13.0762386!2d-86.3524291!4m5!1s0x8f7185db24e6dbd1%3A0x7c9d9004fb28fd11!2sSan%20Nicol%C3%A1s!3m2!1d12.933934599999999!2d-86.3465478!5e0!3m2!1ses-419!2sni!4v1645555961222!5m2!1ses-419!2sni",
+      "timetables": [
+        {
+          "transport_pic": "",
+          "transport_pic_lqip": "",
+          "departure_time": "07:00",
+          "waiting_area_departure": "",
+          "return_time": "",
+          "waiting_area_return": "",
+          "transport_type": "Ruteado",
+          "transport_name": "Lanuza",
+          "license_plate": "",
+          "transport_phone": "",
+          "transport_price": "20",
+          "trip_duration": "35 minutos"
+        },
+        {
+          "transport_pic": "",
+          "transport_pic_lqip": "",
+          "departure_time": "09:00",
+          "waiting_area_departure": "",
+          "return_time": "",
+          "waiting_area_return": "",
+          "transport_type": "Ruteado",
+          "transport_name": "El Rocha",
+          "license_plate": "",
+          "transport_phone": "",
+          "transport_price": "20",
+          "trip_duration": "35 minutos"
+        },
+        {
+          "transport_pic": "",
+          "transport_pic_lqip": "",
+          "departure_time": "12:00",
+          "waiting_area_departure": "",
+          "return_time": "",
+          "waiting_area_return": "",
+          "transport_type": "Ruteado",
+          "transport_name": "Molina",
+          "license_plate": "",
+          "transport_phone": "",
+          "transport_price": "20",
+          "trip_duration": "35 minutos"
+        },
+        {
+          "transport_pic": "",
+          "transport_pic_lqip": "",
+          "departure_time": "14:00",
+          "waiting_area_departure": "",
+          "return_time": "",
+          "waiting_area_return": "",
+          "transport_type": "Ruteado",
+          "transport_name": "Lanuza",
+          "license_plate": "",
+          "transport_phone": "",
+          "transport_price": "20",
+          "trip_duration": "35 minutos"
+        },
+        {
+          "transport_pic": "",
+          "transport_pic_lqip": "",
+          "departure_time": "15:00",
+          "waiting_area_departure": "",
+          "return_time": "",
+          "waiting_area_return": "",
+          "transport_type": "Ruteado",
+          "transport_name": "Martínez",
+          "license_plate": "",
+          "transport_phone": "",
+          "transport_price": "20",
+          "trip_duration": "35 minutos"
+        },
+        {
+          "transport_pic": "",
+          "transport_pic_lqip": "",
+          "departure_time": "16:30",
+          "waiting_area_departure": "",
+          "return_time": "",
+          "waiting_area_return": "",
+          "transport_type": "Ruteado",
+          "transport_name": "Molina",
+          "license_plate": "",
+          "transport_phone": "",
+          "transport_price": "20",
+          "trip_duration": "35 minutos"
+        },
+        {
+          "transport_pic": "",
+          "transport_pic_lqip": "",
+          "departure_time": "18:00",
+          "waiting_area_departure": "",
+          "return_time": "",
+          "waiting_area_return": "",
+          "transport_type": "Ruteado",
+          "transport_name": "El Rocha",
+          "license_plate": "",
+          "transport_phone": "",
+          "transport_price": "20",
+          "trip_duration": "35 minutos"
+        }
+      ]
     },
     {
       "name": "Tisey - La Estanzuela",
-      "slug": "/terminal-sur-esteli/horarios-esteli-tisey-la-estanzuela",
+      "slug": "horarios-esteli-tisey-la-estanzuela",
       "image": "/img/terminal-sur/horarios-esteli-tisey-la-estanzuela-estelibuses-felix-icaza-card",
       "lqip": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAoAAAAGCAYAAAD68A/GAAAAAklEQVR4AewaftIAAADXSURBVAXBv07CQADA4d9d25RisS1agolxYCDRgTCoz+DqG+ibOPt6DiY6OBkoCtc/lGstvfP7xOJ6Zl0sTdvQ6pa75ZzZ8p7b51eSQPCRG4aewLmaTl6+V2vOxhESiTGWKluR9z6Lmzlxl/H5/oZ4enywujtSFgWb7Y74NMSRECQxcuDQdC2qWePqes8oGSOs4VcVCMcjPY/pTY/qvvjTlmJT41bqB0dadmWNkJLLacpJMCCvtuQqYF9m9K3AHUURSncIx+MiHXI4aELfw+Dja8lRhMQTyz+4tl0rJVSFpQAAAABJRU5ErkJggg==",
-      "timetables": [{}]
+      "social_media_image": "/img/og/horarios-esteli-tisey-la-estanzuela-cotran-sur-estelibuses.jpg",
+      "title": "Horarios de los Buses de Estelí hacia Tisey - La Estanzuela | Estelí Buses",
+      "description": "Conoce todos los horarios de los buses que salen desde Estelí hacia Tisey - La Estanzuela.",
+      "schema_FAQs": [],
+      "destination": "Terminal de Tisey - La Estanzuela",
+      "trip_distance": "9.2 km",
+      "map": "https://www.google.com/maps/embed?pb=!1m28!1m12!1m3!1d31093.83691845978!2d-86.38813934196781!3d13.052875061358291!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!4m13!3e6!4m5!1s0x8f718c13825dde4b%3A0x69c6340e0429bb84!2sCotran%20Sur%2C%20Estel%C3%AD!3m2!1d13.0762386!2d-86.3524291!4m5!1s0x8f718e6a7df386a3%3A0xff3e3ead404fd2f!2sTisey%20Estanzuela%20Natural%20Reserve%2C%20La%20Rinconada!3m2!1d13.022187899999999!2d-86.3883506!5e0!3m2!1ses-419!2sni!4v1645804932011!5m2!1ses-419!2sni",
+      "timetables": [
+        {
+          "transport_pic": "",
+          "transport_pic_lqip": "",
+          "departure_time": "06:30",
+          "waiting_area_departure": "",
+          "return_time": "",
+          "waiting_area_return": "",
+          "transport_type": "Ruteado",
+          "transport_name": "",
+          "license_plate": "",
+          "transport_phone": "",
+          "transport_price": "",
+          "trip_duration": "40 minutos"
+        }
+      ]
     },
     {
       "name": "Yalí",
-      "slug": "/terminal-sur-esteli/horarios-esteli-yali",
+      "slug": "horarios-esteli-yali",
       "image": "/img/terminal-sur/horarios-esteli-yali-estelibuses-felix-icaza-card",
       "lqip": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAoAAAAGCAYAAAD68A/GAAAAAklEQVR4AewaftIAAADkSURBVAXBTUvCAACA4XdfbnOuyeZGjppFVEJBXvJWl079xs7dgsBbHYOgQ4cOXqJQiwiUGcO1SfvseYTR3W0dJzHrdUQQ9BBqEcft4jmbVEKBUPxh6E3k69EVhrIBSszLpCQOIS8VDo8H+K6IXtY01Ai559qoVkxl9dHULYKdNqusQNFrZosfzHDCNAqRl1FKlZoIiyV76hxn+5R+x2T8uqDV+EV29vGNBNl3u5wPL1GaOfePT2ThJ4V+wNnghHn+gCK2+Pr2kNu7H7zNbpAqm4ujIZpmk2QScbLC6ViM359JJY9/jYNTFOKOvXgAAAAASUVORK5CYII=",
-      "timetables": [{}]
+      "social_media_image": "/img/og/horarios-esteli-yali-cotran-sur-estelibuses.jpg",
+      "title": "Horarios de los Buses de Estelí hacia Yalí - Terminal Sur | Estelí Buses",
+      "description": "Conoce todos los horarios de los buses que salen desde Estelí hacia Yalí.",
+      "schema_FAQs": [],
+      "destination": "Terminal de Yalí",
+      "trip_distance": "62 km",
+      "map": "https://www.google.com/maps/embed?pb=!1m28!1m12!1m3!1d248556.91435966923!2d-86.39550229794321!3d13.244022110645878!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!4m13!3e6!4m5!1s0x8f718c13825dde4b%3A0x69c6340e0429bb84!2sCotran%20Sur%2C%20Estel%C3%AD!3m2!1d13.0762386!2d-86.3524291!4m5!1s0x8f721c99b5db1c39%3A0x442ab63560c952a0!2sSan%20Sebasti%C3%A1n%20de%20Yal%C3%AD!3m2!1d13.304214499999999!2d-86.18280469999999!5e0!3m2!1ses-419!2sni!4v1645554493776!5m2!1ses-419!2sni",
+      "timetables": [
+        {
+          "transport_pic": "",
+          "transport_pic_lqip": "",
+          "departure_time": "06:45",
+          "waiting_area_departure": "",
+          "return_time": "",
+          "waiting_area_return": "",
+          "transport_type": "Ruteado",
+          "transport_name": "",
+          "license_plate": "",
+          "transport_phone": "",
+          "transport_price": "",
+          "trip_duration": "2 horas"
+        }
+      ]
     },
     {
       "name": "Achuapa",
-      "slug": "/terminal-sur-esteli/horarios-esteli-achuapa",
+      "slug": "horarios-esteli-achuapa",
       "image": "/img/terminal-sur/horarios-esteli-achuapa-estelibuses-felix-icaza-card",
       "lqip": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAoAAAAGCAYAAAD68A/GAAAAAklEQVR4AewaftIAAADnSURBVAXBwUrCYADA8f/mt4xJTd3mbOVBLKFWHoogzBeI6gV6km49QpfuPUpXBYkOEXSMWqJOEm1Ot7av309p3VzKnFPDPr9FZpClK+Kne8LxF871HcqwhybniIYx5CdJyL88EAxG6KVtis4+teML0viVaPhM2XYR6XTAbOqzKryTRDpq9InlHuL3HtHljN9A4soKqlVYQ1lm6Krkaq9Np95AG3UJ3r7JKZL1fMwinCAEEm/LZOegjWeXMZqn9Lub0DojRGJtgPbRR5xUm5jmEVWrglUyyMY+7m4dKSR/ywXJfELR6/APdbRXDs70WfgAAAAASUVORK5CYII=",
-      "timetables": [{}]
+      "social_media_image": "/img/og/horarios-esteli-achuapa-cotran-sur-estelibuses.jpg",
+      "title": "Horarios de los Buses de Estelí hacia Achuapa - Terminal Sur | Estelí Buses",
+      "description": "Conoce todos los horarios de los buses que salen desde Estelí hacia Achuapa.",
+      "schema_FAQs": [],
+      "destination": "Terminal de Achuapa",
+      "trip_distance": "39.6 km",
+      "map": "https://www.google.com/maps/embed?pb=!1m28!1m12!1m3!1d124369.00580388917!2d-86.54085910715837!3d13.065470422850218!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!4m13!3e6!4m5!1s0x8f718c13825dde4b%3A0x69c6340e0429bb84!2sCotran%20Sur%2C%20Estel%C3%AD!3m2!1d13.0762386!2d-86.3524291!4m5!1s0x8f71bde4abd278bb%3A0x672fec6f92732db4!2sAchuapa!3m2!1d13.0522213!2d-86.589276!5e0!3m2!1ses-419!2sni!4v1645554988265!5m2!1ses-419!2sni",
+      "timetables": [
+        {
+          "transport_pic": "",
+          "transport_pic_lqip": "",
+          "departure_time": "07:00",
+          "waiting_area_departure": "",
+          "return_time": "",
+          "waiting_area_return": "",
+          "transport_type": "Ruteado",
+          "transport_name": "",
+          "license_plate": "",
+          "transport_phone": "",
+          "transport_price": "",
+          "trip_duration": "1.4 horas"
+        }
+      ]
     },
     {
       "name": "Murra",
-      "slug": "/terminal-sur-esteli/horarios-esteli-murra",
+      "slug": "horarios-esteli-murra",
       "image": "/img/terminal-sur/horarios-esteli-murra-estelibuses-felix-icaza-card",
       "lqip": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAoAAAAGCAYAAAD68A/GAAAAAklEQVR4AewaftIAAADeSURBVAXBXUvCUACA4Xc7Bz/OJmvtxjKIJIwo+gNdd9dt/8f/Fd1HgojsQhv0YbIywbFYHnOenZ7HeRw92HgS8zQYY6oNnifY8zvc3twRhfs0G4oSiXCU7ifJDCl3BC2Hyhg224xRPKbQJV4rJPB9hMh++uWuot2JqNcFpqpwrEU1DavvV4bxPc+TIfL6/Jjfms90MKV70cWVloaqoQuNlQVrnfOSfSE9L6B3ecVpWfGWvlPqFVHUYzFfkhvLxzzDWpBCSKR0OYxC/tySA3VC++iMmUr4XKSs0xy9FfwDnJZg5vHLKqgAAAAASUVORK5CYII=",
-      "timetables": [{}]
+      "social_media_image": "/img/og/horarios-esteli-murra-cotran-sur-estelibuses.jpg",
+      "title": "Horarios de los Buses de Estelí hacia Murra | Estelí Buses",
+      "description": "Conoce todos los horarios de los buses que salen desde Estelí hacia Murra.",
+      "schema_FAQs": [],
+      "destination": "Terminal de Murra",
+      "trip_distance": "151 km",
+      "map": "https://www.google.com/maps/embed?pb=!1m28!1m12!1m3!1d496751.0158723327!2d-86.54056717010924!3d13.420539236318264!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!4m13!3e6!4m5!1s0x8f718c13825dde4b%3A0x69c6340e0429bb84!2sCotran%20Sur%2C%20Estel%C3%AD!3m2!1d13.0762386!2d-86.3524291!4m5!1s0x8f6deea1fcb9bf79%3A0xff995dcee497cac0!2sMurra!3m2!1d13.759181!2d-86.01853489999999!5e0!3m2!1ses-419!2sni!4v1645555829134!5m2!1ses-419!2sni",
+      "timetables": [
+        {
+          "transport_pic": "",
+          "transport_pic_lqip": "",
+          "departure_time": "04:45",
+          "waiting_area_departure": "",
+          "return_time": "",
+          "waiting_area_return": "",
+          "transport_type": "Ruteado",
+          "transport_name": "",
+          "license_plate": "",
+          "transport_phone": "",
+          "transport_price": "",
+          "trip_duration": "4.5 horas"
+        }
+      ]
     },
     {
       "name": "El Espinal",
-      "slug": "/terminal-sur-esteli/horarios-esteli-el-espinal",
+      "slug": "horarios-esteli-el-espinal",
       "image": "/img/terminal-sur/horarios-esteli-el-espinal-estelibuses-felix-icaza-card",
       "lqip": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAoAAAAGCAYAAAD68A/GAAAAAklEQVR4AewaftIAAADiSURBVAXBTU+CAACA4TcgQRwM02KTZWs4qkMH19bFeerQb+jQpXM/tK+t8lBbHbQ1NmOWgHwICPQ8W+fji1pcB5QVbKsKznDI8eUNm0aLTFTIohDLPkLS5IJN8kcYluRhjjv55kD36HRtwjRnsap4eVogGSzpOxb3zzP2um3KMkHwC/x4xuPkDtGQSaIUqaggTDPauzucngxwBjaj8YjP1wfc6Rd+nJPmNdLt9RWyqlEJDfr7FoIgkgVz6nzNmXPIz3LF1PWQ9I6J9xvQMw0+3t+os5hqHaFrLXqmQVNVMJoC/44GX6/GGyjlAAAAAElFTkSuQmCC",
-      "timetables": [{}]
+      "social_media_image": "/img/og/horarios-esteli-el-espinal-cotran-sur-estelibuses.jpg",
+      "title": "Horarios de los Buses de Estelí hacia El Espinal | Estelí Buses",
+      "description": "Conoce todos los horarios de los buses que salen desde Estelí hacia El Espinal.",
+      "schema_FAQs": [],
+      "destination": "Terminal de El Espinal",
+      "trip_distance": "13.4 km",
+      "map": "https://www.google.com/maps/embed?pb=!1m28!1m12!1m3!1d31093.745169865302!2d-86.3328540919674!3d13.05360426132771!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!4m13!3e6!4m5!1s0x8f718c13825dde4b%3A0x69c6340e0429bb84!2sCotran%20Sur%2C%20Estel%C3%AD!3m2!1d13.0762386!2d-86.3524291!4m5!1s0x8f71898d5029dd4d%3A0x9a64c18f4c8e06e5!2sEl%20Espinal!3m2!1d13.0450789!2d-86.27806849999999!5e0!3m2!1ses-419!2sni!4v1645553815772!5m2!1ses-419!2sni",
+      "timetables": [
+        {
+          "transport_pic": "",
+          "transport_pic_lqip": "",
+          "departure_time": "14:00",
+          "waiting_area_departure": "",
+          "return_time": "",
+          "waiting_area_return": "",
+          "transport_type": "Ruteado",
+          "transport_name": "",
+          "license_plate": "",
+          "transport_phone": "",
+          "transport_price": "",
+          "trip_duration": "40 minutos"
+        }
+      ]
     }
   ]
 }
