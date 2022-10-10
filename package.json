@@ -66,6 +66,7 @@
     "@windicss/plugin-animations": "1.0.9",
     "@windicss/plugin-question-mark": "0.1.1",
     "astro": "1.4.6",
+    "firebase": "9.11.0",
     "windicss": "3.4.3",
     "windicss-content-visibility": "1.2.0",
     "windicss-media-interaction": "1.1.1"
