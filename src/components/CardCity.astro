@@ -7,7 +7,7 @@ const { cityName, slug, image, lqip } = Astro.props
 >
   <section class="relative">
     <a class="group overflow-hidden" href={slug}>
-      <picture>
+      <picture data-loading="lazy">
         <source type="image/avif" data-srcset={`${image}.avif`} />
         <source type="image/webp" data-srcset={`${image}.webp`} />
         <source type="image/jpeg" data-srcset={`${image}.jpg`} />

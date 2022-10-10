@@ -206,7 +206,7 @@ const getSchemaFAQs = schemaFAQs.map((faq) => ({
             <CardCity
               cityName={city.name}
               slug={`${slug}/${city.slug}`}
-              imagen={city.image}
+              image={city.image}
               lqip={city.lqip}
             />
           ))
@@ -226,7 +226,7 @@ const getSchemaFAQs = schemaFAQs.map((faq) => ({
         >
         </p>
         <figure>
-          <picture>
+          <picture data-loading="lazy">
             <source
               type="image/avif"
               data-srcset={`${stationImageMobile}.avif ${stationImageBreakpoint}, ${stationImage}.avif`}
@@ -270,3 +270,7 @@ const getSchemaFAQs = schemaFAQs.map((faq) => ({
     </div>
   </article>
 </Layout>
+
+<script>
+  import '@scripts/lazyload-img.js'
+</script>

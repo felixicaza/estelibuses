@@ -28,7 +28,7 @@ const options = {
         type="button">Recargar página</button
       >
       <section>
-        <picture>
+        <picture data-loading="lazy">
           <source type="image/avif" data-srcset="/img/offline.avif" />
           <source type="image/webp" data-srcset="/img/offline.webp" />
           <source type="image/jpeg" data-srcset="/img/offline.jpg" />
@@ -46,7 +46,9 @@ const options = {
     </div>
   </main>
 </Layout>
+
 <script>
+  import '@scripts/lazyload-img.js'
   document.getElementById('reload').addEventListener('click', () => {
     window.location.reload()
   })
