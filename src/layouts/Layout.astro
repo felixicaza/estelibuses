@@ -4,6 +4,7 @@ import { Schema } from 'astro-seo-schema'
 import Favicons from '@components/Favicons.astro'
 import SplashScreens from '@components/SplashScreens.astro'
 import Footer from '@components/Footer.astro'
+import BottomBar from '@components/BottomBar.astro'
 
 import '@styles/tailwind.css'
 
@@ -120,6 +121,8 @@ const { options } = Astro.props
     <slot />
 
     <Footer />
+
+    <BottomBar />
 
     <slot name="dynamic-components" />
 
