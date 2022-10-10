@@ -5,6 +5,8 @@ import Favicons from '@components/Favicons.astro'
 import SplashScreens from '@components/SplashScreens.astro'
 import Footer from '@components/Footer.astro'
 import BottomBar from '@components/BottomBar.astro'
+import Aside from '@components/Aside.astro'
+import ModalShare from '@components/ModalShare.astro'
 
 import '@styles/tailwind.css'
 
@@ -123,6 +125,10 @@ const { options } = Astro.props
     <Footer />
 
     <BottomBar />
+
+    <Aside />
+
+    <ModalShare />
 
     <slot name="dynamic-components" />
 

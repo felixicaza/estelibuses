@@ -1,0 +1,511 @@
+---
+/* eslint-disable astro/jsx-a11y/label-has-associated-control */
+---
+
+<div
+  class="h-full bg-black/70 w-full opacity-0 transition-opacity top-0 ease-in-out bottom-0 z-10 duration-200 fixed backdrop-blur-sm pointer-events-none"
+  id="bg-modal"
+>
+</div>
+
+<aside
+  class="bg-orange-300 dark:bg-[#180f06] dark:text-white h-full opacity-0 transform -translate-x-full transition-all top-0 ease-in-out bottom-0 w-9/12 md:w-4/9 lg:w-4/11 xl:w-3/12 z-20 duration-200 fixed pointer-events-none lg:right-0 lg:translate-x-full"
+  id="mobile"
+>
+  <section class="p-4 flex flex-col justify-between h-full">
+    <div>
+      <section class="pb-4 flex justify-between">
+        <section
+          class="flex gap-2 items-center lg:order-1 any-hover:text-orange-600 active:text-orange-600 transition-colors"
+        >
+          <span class="lg:order-1">
+            <svg
+              class="fill-current"
+              viewBox="0 0 24 24"
+              width="24"
+              height="24"
+            >
+              <path
+                d="M12 3a9 9 0 1 0 8.9 7.6 5.4 5.4 0 0 1-9.8-3.1c0-1.8.9-3.4 2.3-4.4L12 3z"
+              ></path>
+            </svg>
+          </span>
+          <label class="cursor-pointer lg:order-first" for="switch-scheme"
+            >Modo oscuro</label
+          >
+        </section>
+        <section class="lg:order-first">
+          <div class="relative w-[3.0625rem] h-[1.4375rem]">
+            <input
+              class="opacity-0 w-full h-full cursor-pointer peer"
+              id="switch-scheme"
+              type="checkbox"
+            />
+            <span
+              class="switch-toggle peer-checked:bg-orange-500 peer-checked:before:translate-x-[1.625rem]"
+            ></span>
+          </div>
+        </section>
+      </section>
+      <section class="py-4 flex justify-between">
+        <section
+          class="flex gap-2 items-center lg:order-1 any-hover:text-orange-600 active:text-orange-600 transition-colors"
+        >
+          <span class="lg:order-1">
+            <svg
+              class="fill-current"
+              id="sound-disable"
+              viewBox="0 0 24 24"
+              width="24"
+              height="24"
+            >
+              <path
+                d="m5.64 3.64 15.72 15.72-1.41 1.42L16 16.83V20l-5-5H7V9h1.17L4.22 5.05l1.42-1.41M16 4v7.17l-3.59-3.59L16 4Z"
+              ></path>
+            </svg>
+            <svg
+              class="fill-current hidden"
+              id="sound-enable"
+              viewBox="0 0 24 24"
+              width="24"
+              height="24"
+            >
+              <path
+                d="M14 3.2v2a7 7 0 0 1 0 13.5v2a9 9 0 0 0 0-17.5m2.5 8.8c0-1.8-1-3.3-2.5-4v8a4.4 4.4 0 0 0 2.5-4M3 9v6h4l5 5V4L7 9H3Z"
+              ></path>
+            </svg>
+          </span>
+          <label
+            class="cursor-pointer lg:order-first"
+            id="label-sound"
+            for="switch-sound">Desactivar sonidos</label
+          >
+        </section>
+        <section class="lg:order-first">
+          <div class="relative w-[3.0625rem] h-[1.4375rem]">
+            <input
+              class="opacity-0 w-full h-full cursor-pointer peer"
+              id="switch-sound"
+              type="checkbox"
+              checked="checked"
+            />
+            <span
+              class="switch-toggle peer-checked:bg-orange-500 peer-checked:before:translate-x-[1.625rem]"
+            ></span>
+          </div>
+        </section>
+      </section>
+      <button
+        class="focus:outline-none py-4 w-full any-hover:text-orange-600 active:text-orange-600 transition-colors flex gap-2 items-center lg:justify-end"
+        id="share-aside"
+        type="button"
+        title="¡Comparte Estelí Buses en tus redes sociales!"
+      >
+        <span class="lg:order-1">
+          <svg class="fill-current" viewBox="0 0 24 24" width="24" height="24">
+            <path
+              d="M18 16a3 3 0 0 0-2 .9l-7-4.2v-1.4l7-4.1a3 3 0 0 0 2 .8 3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3v.7L8 9.8A3 3 0 0 0 6 9a3 3 0 0 0-3 3 3 3 0 0 0 3 3 3 3 0 0 0 2-.8l7.2 4.1-.1.7a3 3 0 0 0 5.8 0 3 3 0 0 0-2.9-3Z"
+            ></path>
+          </svg>
+        </span>
+        <span class="lg:order-first">Compartir</span>
+      </button>
+      <a
+        class="py-4 w-full any-hover:text-orange-600 active:text-orange-600 transition-colors flex gap-2 items-center lg:justify-end"
+        href="/acerca-de-estelibuses"
+      >
+        <span class="lg:order-1">
+          <svg class="fill-current" viewBox="0 0 24 24" width="22" height="22">
+            <path
+              d="M13 9h-2V7h2m0 10h-2v-6h2m-1-9A10 10 0 0 0 2 12a10 10 0 0 0 10 10 10 10 0 0 0 10-10A10 10 0 0 0 12 2Z"
+            ></path>
+          </svg>
+        </span>
+        <span class="lg:order-first">Sobre Estelí Buses</span>
+      </a>
+      <a
+        class="py-4 w-full any-hover:text-orange-600 active:text-orange-600 transition-colors flex gap-2 items-center lg:justify-end"
+        href="/contacto"
+      >
+        <span class="lg:order-1">
+          <svg class="fill-current" viewBox="0 0 24 24" width="22" height="22">
+            <path
+              d="M20 20H7a2 2 0 0 1-2-2V9L2.2 5.5A1 1 0 0 1 2 5a1 1 0 0 1 1-1h17a2 2 0 0 1 2 2v12a2 2 0 0 1-2 2M8.5 7a.5.5 0 0 0-.5.5v1a.5.5 0 0 0 .5.5h10a.5.5 0 0 0 .5-.5v-1a.5.5 0 0 0-.5-.5h-10m0 4a.5.5 0 0 0-.5.5v1a.5.5 0 0 0 .5.5h10a.5.5 0 0 0 .5-.5v-1a.5.5 0 0 0-.5-.5h-10m0 4a.5.5 0 0 0-.5.5v1a.5.5 0 0 0 .5.5h5a.5.5 0 0 0 .5-.5v-1a.5.5 0 0 0-.5-.5h-5Z"
+            ></path>
+          </svg>
+        </span>
+        <span class="lg:order-first">Contacto</span>
+      </a>
+    </div>
+    <div class="pb-4">
+      <button
+        class="rounded font-semibold space-x-2.5 py-2.5 px-5 transition-colors flex items-center justify-center any-hover:bg-orange-600 active:outline-none active:ring-4 active:ring-orange-500 active:ring-opacity-75 bg-orange-500 text-white shadow-lg shadow-orange-600/30 any-hover:shadow-orange-700/30 active:shadow-orange-700/30 w-full opacity-0 pointer-events-none"
+        id="install"
+      >
+        <span class="mobile !ml-0">
+          <svg class="fill-current" viewBox="0 0 24 24" width="20" height="20">
+            <path
+              d="m18 14 5-5-1.4-1.4-2.6 2.6V3h-2v7.2l-2.6-2.6L13 9l5 5m1 2v5a2 2 0 0 1-2 2H7a2 2 0 0 1-2-2V3c0-1.1.9-2 2-2h7v4H7v14h10v-3h2Z"
+            ></path>
+          </svg>
+        </span>
+        <span class="hidden desktop !ml-0">
+          <svg class="fill-current" viewBox="0 0 24 24" width="20" height="20">
+            <path
+              d="m17 14 5-5-1.4-1.4-2.6 2.6V3h-2v7.2l-2.6-2.6L12 9l5 5m6 0v2a2 2 0 0 1-2 2h-7v2h2v2H8v-2h2v-2H3a2 2 0 0 1-2-2V4c0-1.1.9-2 2-2h9v2H3v12h18v-2h2Z"
+            ></path>
+          </svg>
+        </span>
+        <span>Instalar Estelí Buses</span>
+      </button>
+    </div>
+  </section>
+</aside>
+
+<style>
+  .switch-toggle {
+    @apply absolute z-[-1] top-0 left-0 bottom-0 right-0 bg-orange-800/50 transition-all rounded-full lg:scale-x-[-1] before:content-[''] before:absolute before:w-[0.875rem] before:h-[0.875rem] before:left-1 before:bottom-[0.29rem] before:bg-white before:transition-all before:rounded-full;
+  }
+</style>
+
+<script is:inline>
+  if (localStorage.getItem('darkmode') === 'true') {
+    document.getElementById('switch-scheme').setAttribute('checked', 'checked')
+  }
+  if (localStorage.getItem('sounds_enabled') === 'false') {
+    document.getElementById('switch-sound').removeAttribute('checked')
+    document.getElementById('label-sound').textContent = 'Activar sonidos'
+    document.getElementById('sound-disable').classList.add('hidden')
+    document.getElementById('sound-enable').classList.remove('hidden')
+  }
+</script>
+
+<script>
+  const $ = (sel) => document.getElementById(sel)
+
+  import { initializeApp } from 'firebase/app'
+  import { getAnalytics } from 'firebase/analytics'
+
+  const firebaseConfig = {
+    apiKey: 'AIzaSyAqPF5z2zeJCAXKmnAV6gfapspOK4joCEs',
+    authDomain: 'buses-esteli-d2d5e.firebaseapp.com',
+    projectId: 'buses-esteli-d2d5e',
+    storageBucket: 'buses-esteli-d2d5e.appspot.com',
+    messagingSenderId: '47347043568',
+    appId: '1:47347043568:web:e1b9a83b88c35fe1a0c635',
+    measurementId: 'G-4QFJH1D53Q'
+  }
+
+  if (window.location.hostname === 'estelibuses.web.app') {
+    const app = initializeApp(firebaseConfig)
+    getAnalytics(app)
+  }
+
+  /**
+   * Sound page on click
+   */
+
+  const soundPage = new Audio('/sounds/switch-tap.mp3')
+
+  /**
+   * Menu aside
+   */
+
+  const bgModal = $('bg-modal')
+  const mobileNavBtn = $('mobile-nav')
+  const mobileNav = $('mobile')
+  const noScrollOnModal = 'overflow: hidden'
+
+  mobileNavBtn.addEventListener('click', () => {
+    if (localStorage.getItem('sounds_enabled') === 'true') {
+      soundPage.play()
+    }
+
+    if (
+      'vibrate' in navigator &&
+      localStorage.getItem('sounds_enabled') === 'false'
+    ) {
+      navigator.vibrate(80)
+    }
+
+    bgModal.classList.replace('opacity-0', 'opacity-100')
+    bgModal.classList.replace('pointer-events-none', 'pointer-events-auto')
+
+    if (window.matchMedia('min-width: 992px')) {
+      mobileNav.classList.remove('-translate-x-full')
+      mobileNav.classList.replace('lg:translate-x-full', 'translate-x-0')
+    } else {
+      mobileNav.classList.replace('-translate-x-full', 'translate-x-0')
+    }
+
+    mobileNav.classList.replace('pointer-events-none', 'pointer-events-auto')
+    mobileNav.classList.replace('opacity-0', 'opacity-100')
+
+    document.documentElement.setAttribute('style', noScrollOnModal)
+    document.body.setAttribute('style', noScrollOnModal)
+  })
+
+  bgModal.addEventListener('click', () => {
+    if (localStorage.getItem('sounds_enabled') === 'true') {
+      soundPage.play()
+    }
+
+    if (
+      'vibrate' in navigator &&
+      localStorage.getItem('sounds_enabled') === 'false'
+    ) {
+      navigator.vibrate(80)
+    }
+
+    bgModal.classList.replace('opacity-100', 'opacity-0')
+    bgModal.classList.replace('pointer-events-auto', 'pointer-events-none')
+
+    if (window.matchMedia('min-width: 992px')) {
+      mobileNav.classList.replace('translate-x-0', 'lg:translate-x-full')
+    } else {
+      mobileNav.classList.replace('translate-x-0', '-translate-x-full')
+    }
+
+    mobileNav.classList.replace('pointer-events-auto', 'pointer-events-none')
+    mobileNav.classList.replace('opacity-100', 'opacity-0')
+
+    document.documentElement.removeAttribute('style')
+    document.body.removeAttribute('style')
+  })
+
+  /**
+   * Share aside
+   */
+
+  const shareAside = $('share-aside')
+
+  const bgModalShare = $('bg-modal-share')
+  const modalShare = $('modal-share')
+
+  const modalShareLinks = document.querySelectorAll('.modal-share-link')
+
+  const shareURLAside = 'https://estelibuses.web.app/'
+
+  const shareDataAside = {
+    title: 'Estelí Buses',
+    text: '¡Conoce todos los horarios de las terminales de buses de la ciudad de Estelí!',
+    url: `${shareURLAside}?utm_source=shareasidebtn&utm_medium=webapp&utm_campaign=social_share&utm_content=aside`
+  }
+
+  if (navigator.share) {
+    shareAside.addEventListener('click', () => {
+      if (localStorage.getItem('sounds_enabled') === 'true') {
+        soundPage.play()
+      }
+
+      if (
+        'vibrate' in navigator &&
+        localStorage.getItem('sounds_enabled') === 'false'
+      ) {
+        navigator.vibrate(80)
+      }
+
+      navigator.share(shareDataAside)
+    })
+  } else {
+    shareAside.addEventListener('click', () => {
+      if (localStorage.getItem('sounds_enabled') === 'true') {
+        soundPage.play()
+      }
+
+      if (
+        'vibrate' in navigator &&
+        localStorage.getItem('sounds_enabled') === 'false'
+      ) {
+        navigator.vibrate(80)
+      }
+
+      bgModal.classList.replace('opacity-100', 'opacity-0')
+      bgModal.classList.replace('pointer-events-auto', 'pointer-events-none')
+
+      if (window.matchMedia('min-width: 992px')) {
+        mobileNav.classList.replace('translate-x-0', 'lg:translate-x-full')
+      } else {
+        mobileNav.classList.replace('translate-x-0', '-translate-x-full')
+      }
+      mobileNav.classList.replace('pointer-events-auto', 'pointer-events-none')
+      mobileNav.classList.replace('opacity-100', 'opacity-0')
+      mobileNav.classList.remove('shadow-aside')
+
+      document.documentElement.removeAttribute('style')
+      document.body.removeAttribute('style')
+
+      setTimeout(() => {
+        bgModalShare.classList.replace('opacity-0', 'opacity-100')
+        bgModalShare.classList.replace(
+          'pointer-events-none',
+          'pointer-events-auto'
+        )
+
+        document.documentElement.setAttribute('style', noScrollOnModal)
+        document.body.setAttribute('style', noScrollOnModal)
+
+        modalShare.classList.replace(
+          'pointer-events-none',
+          'pointer-events-auto'
+        )
+        modalShare.classList.replace('opacity-0', 'opacity-100')
+        modalShare.classList.replace('scale-0', 'scale-100')
+      }, 800)
+    })
+
+    bgModalShare.addEventListener('click', () => {
+      if (localStorage.getItem('sounds_enabled') === 'true') {
+        soundPage.play()
+      }
+
+      if (
+        'vibrate' in navigator &&
+        localStorage.getItem('sounds_enabled') === 'false'
+      ) {
+        navigator.vibrate(80)
+      }
+
+      bgModalShare.classList.replace('opacity-100', 'opacity-0')
+      bgModalShare.classList.replace(
+        'pointer-events-auto',
+        'pointer-events-none'
+      )
+
+      document.documentElement.removeAttribute('style')
+      document.body.removeAttribute('style')
+
+      modalShare.classList.replace('pointer-events-auto', 'pointer-events-none')
+      modalShare.classList.replace('opacity-100', 'opacity-0')
+      modalShare.classList.replace('scale-100', 'scale-0')
+    })
+
+    modalShareLinks.forEach((link) => {
+      link.addEventListener('click', () => {
+        if (localStorage.getItem('sounds_enabled') === 'true') {
+          soundPage.play()
+        }
+
+        if (
+          'vibrate' in navigator &&
+          localStorage.getItem('sounds_enabled') === 'false'
+        ) {
+          navigator.vibrate(80)
+        }
+
+        bgModalShare.classList.replace('opacity-100', 'opacity-0')
+        bgModalShare.classList.replace(
+          'pointer-events-auto',
+          'pointer-events-none'
+        )
+
+        document.documentElement.removeAttribute('style')
+        document.body.removeAttribute('style')
+
+        modalShare.classList.replace(
+          'pointer-events-auto',
+          'pointer-events-none'
+        )
+        modalShare.classList.replace('opacity-100', 'opacity-0')
+        modalShare.classList.replace('scale-100', 'scale-0')
+      })
+    })
+  }
+
+  /**
+   * Darkmode
+   */
+
+  const switchScheme = $('switch-scheme')
+
+  const colorSchemeDark = window.matchMedia('(prefers-color-scheme: dark)')
+  let darkModeState = false
+
+  const soundDarkMode = new Audio('/sounds/switch.mp3')
+
+  function toggleDarkMode(state) {
+    document.documentElement.classList.toggle('dark', state)
+    darkModeState = state
+  }
+
+  function setDarkModeLocalStorage(state) {
+    localStorage.setItem('darkmode', state)
+  }
+
+  toggleDarkMode(localStorage.getItem('darkmode') === 'true')
+
+  colorSchemeDark.addListener((e) => toggleDarkMode(e.matches))
+
+  switchScheme.addEventListener('change', () => {
+    if (localStorage.getItem('sounds_enabled') === 'true') {
+      soundDarkMode.play()
+    }
+
+    if (
+      'vibrate' in navigator &&
+      localStorage.getItem('sounds_enabled') === 'false'
+    ) {
+      navigator.vibrate(80)
+    }
+
+    darkModeState = !darkModeState
+
+    switchScheme.checked = darkModeState
+
+    toggleDarkMode(darkModeState)
+    setDarkModeLocalStorage(darkModeState)
+  })
+
+  window.addEventListener('keydown', (e) => {
+    if (e.altKey === true && e.shiftKey === true && e.key === 'D') {
+      if (localStorage.getItem('sounds_enabled') === 'true') {
+        soundDarkMode.play()
+      }
+
+      darkModeState = !darkModeState
+
+      switchScheme.checked = darkModeState
+
+      toggleDarkMode(darkModeState)
+      setDarkModeLocalStorage(darkModeState)
+    }
+  })
+
+  /**
+   * Sound switch
+   */
+
+  const switchSound = $('switch-sound')
+  const labelSound = $('label-sound')
+  const soundDisableIcon = $('sound-disable')
+  const soundEnableIcon = $('sound-enable')
+
+  switchSound.addEventListener('change', (e) => {
+    if (!e.target.checked) {
+      localStorage.setItem('sounds_enabled', 'false')
+
+      if (
+        'vibrate' in navigator &&
+        localStorage.getItem('sounds_enabled') === 'false'
+      ) {
+        navigator.vibrate(80)
+      }
+
+      labelSound.textContent = 'Activar sonidos'
+      soundEnableIcon.classList.toggle('hidden')
+      soundDisableIcon.classList.toggle('hidden')
+      switchSound.checked = false
+    } else {
+      localStorage.setItem('sounds_enabled', 'true')
+
+      if (localStorage.getItem('sounds_enabled') === 'true') {
+        soundDarkMode.play()
+      }
+
+      labelSound.textContent = 'Desactivar sonidos'
+      soundEnableIcon.classList.toggle('hidden')
+      soundDisableIcon.classList.toggle('hidden')
+      switchSound.checked = true
+    }
+  })
+</script>
