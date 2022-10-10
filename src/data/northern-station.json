@@ -148,7 +148,7 @@
     {
       "name": "Ocotal",
       "slug": "horarios-esteli-ocotal",
-      "image": "/img/terminal-norte/horarios-esteli-managua-estelibuses-felix-icaza-card",
+      "image": "/img/terminal-norte/horarios-esteli-ocotal-estelibuses-felix-icaza-card",
       "lqip": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAoAAAAGCAYAAAD68A/GAAAAAklEQVR4AewaftIAAADoSURBVAXBvU7CUACA0a+F0gttsQZ/B9TJweikicZXcPMhHHwOR1/GyZXEkCgSEqwhIqllMAYVSJQi5XJ76znG29c0e+kN+Hx/5XFwzPBHseQ7HK5HeEafo5NTRFGQv2v/0a7fsFZZgd8HNqdNzKzKWLu0woDdvQPqjQBzf2vGXEr6UQ8rbjCLJ1iLbz6ie4pOgVrtluurSwxv1c3Ozi8wM00Sj1BzSbnsY9s5lDbohgHPT03y1e0dkmQC2kQrSacTUBI2Vk4xGg8xChbCtsmrNCXstlALje84+J5AKY0ybdzKBjKVLIsS/66oZHYPNJRaAAAAAElFTkSuQmCC",
       "social_media_image": "/img/og/horarios-esteli-ocotal-cotran-norte-estelibuses.jpg",
       "title": "Horarios de los Buses de Estelí hacia Ocotal | Estelí Buses",
@@ -332,7 +332,7 @@
     {
       "name": "Somoto",
       "slug": "horarios-esteli-somoto",
-      "image": "/img/terminal-norte/horarios-esteli-managua-estelibuses-felix-icaza-card",
+      "image": "/img/terminal-norte/horarios-esteli-somoto-estelibuses-felix-icaza-card",
       "lqip": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAoAAAAGCAYAAAD68A/GAAAAAklEQVR4AewaftIAAADmSURBVAXBu07CUACA4b/llBZBgUCBYOJQ7SDxMpgoA25iHB31/XwEJwdXphodjMEL6iAmxjagUnqAnuP3GWfnW/oxf0hYPcWybKRpMplr4kTSzV5Ql31qwkb4rs80ukZGZeLSPrYQgEOnfEU9vMfOZFgyc4h07nCye0zwETAY9HCcAqrg0F5dIKouRpql5W0jtDKZjRd0/Q439ivB8wvtjTxHO3tIw6TRbKFTC5HIhLuHb5q1Cn6xAp7mYNMjiosYYoXP4Yi/8Q9i+BWSKsVlr4+bU9z+zpgKWFse8fb0znqjxERp/gGtW1S4/iR4jQAAAABJRU5ErkJggg==",
       "social_media_image": "/img/og/horarios-esteli-somoto-cotran-norte-estelibuses.jpg",
       "title": "Horarios de los Buses de Estelí hacia Somoto | Estelí Buses",
@@ -700,7 +700,7 @@
     {
       "name": "San Juan de Limay",
       "slug": "horarios-esteli-san-juan-de-limay",
-      "image": "/img/terminal-norte/horarios-esteli-managua-estelibuses-felix-icaza-card",
+      "image": "/img/terminal-norte/horarios-esteli-san-juan-de-limay-estelibuses-felix-icaza-card",
       "lqip": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAoAAAAGCAYAAAD68A/GAAAAAklEQVR4AewaftIAAADgSURBVAXBu0rDUACA4T85J2kuhBgMrajgVAdHB3ehCE6OToLgK/hgPkBddPEF6lZQSgVj4yVpTk5Pksbvs27urvrLyYTs/YM0Tjg7vyZNU2zLwrQdtWnJqxq5/Jvx9PhGkRkiV/Iym3N6cUsYxdSmoa4URi2QiRVxnBzxa2mcQY9q5kwf7tkITeDUNLTEm33kWtR8/SyJ/AB/4DHaHRLojG+5ptr2CMvGUQa5txOQDg8QnU3+uWC1yukCFycSFHpL4vnoUiFPxodMn18ZBSGxG1MWisovGbchntOiG4FUkn+qf1rJP6L68AAAAABJRU5ErkJggg==",
       "social_media_image": "/img/og/horarios-esteli-san-juan-de-limay-cotran-norte-estelibuses.jpg",
       "title": "Horarios de los Buses de Estelí hacia San Juan de Limay | Estelí Buses",
@@ -813,7 +813,7 @@
     {
       "name": "Pueblo Nuevo",
       "slug": "horarios-esteli-pueblo-nuevo",
-      "image": "/img/terminal-norte/horarios-esteli-managua-estelibuses-felix-icaza-card",
+      "image": "/img/terminal-norte/horarios-esteli-pueblo-nuevo-estelibuses-felix-icaza-card",
       "lqip": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAoAAAAGCAYAAAD68A/GAAAAAklEQVR4AewaftIAAADpSURBVAXBz0rCcADA8e/Wz003laVghhRJCfNSh7oIQnSs5+kVeoDepkOd8hRZBKXFbA4lM5cy0JXtj+vzkc4vL5JGfZ/T5gl/UcRV65qnbpf1rM7hXo3qrsnrm4WwRy0Sd8jCHRP4HpuVDabzDv0xTJwXjBsN2UgQ788DlK2EqB1QzGkUUgtSUYQew9QdEMo6GU9C1HIl0j6oeQlVWXHXeyQQDgflMlEc4oU+99YnIlNYoikCu99hllNpNs5ofwyZGyPktMz26oe6WUGUvC9mxW+Od3Qkxcd6uOWoapKd/OK4NvYyT7gW8w9M7l+OB2kEdwAAAABJRU5ErkJggg==",
       "social_media_image": "/img/og/horarios-esteli-pueblo-nuevo-cotran-norte-estelibuses.jpg",
       "title": "Horarios de los Buses de Estelí hacia Pueblo Nuevo | Estelí Buses",
