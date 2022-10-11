@@ -211,6 +211,24 @@ const getSchemaFAQs = schemaFAQs.map((faq) => ({
             />
           ))
         }
+        <section class="hidden space-y-4" id="no-city">
+          <p class="text-xl text-[#3b0d15] dark:text-orange-50 text-center">
+            Por favor intenta otra búsqueda, lo que estás buscando no está
+            disponible.
+          </p>
+          <p class="text-center font-semibold">Ciudades disponibles:</p>
+          <nav>
+            <ul class="space-y-4 text-center">
+              {
+                cities.map((city) => (
+                  <li>
+                    <a href={`${slug}/${city.slug}`}>{city.name}</a>
+                  </li>
+                ))
+              }
+            </ul>
+          </nav>
+        </section>
       </article>
     </div>
   </main>
@@ -273,4 +291,84 @@ const getSchemaFAQs = schemaFAQs.map((faq) => ({
 
 <script>
   import '@scripts/lazyload-img.js'
+
+  const $ = (sel) => document.getElementById(sel)
+  const $$ = (sel) => document.querySelectorAll(sel)
+
+  const searchForm = $('search-form')
+  const search = $('search')
+
+  const cityName = $$('.city-name')
+  const cardCities = $$('.card-city')
+
+  const noCity = $('no-city')
+
+  searchForm.addEventListener('input', (e) => {
+    if (e.target.id === 'search') {
+      /*
+       * Sanitize user input.
+       * - Normalize text using Canonical Decomposition (NFD).
+       * - Replace Spanish letters that have accents (\u0300-\u036f) with a
+       * empty value, due NFD sanitization is used for such characters.
+       * - Replace whitespaces with middle dash.
+       */
+      const sanitizeInput = search.value
+        .toLowerCase()
+        .normalize('NFD')
+        .replace(/[\u0300-\u036f]/g, '')
+        .replace(/\s/g, '-')
+
+      for (let i = 0; i < cardCities.length; i++) {
+        const name = cityName[i].textContent || cityName[i].innerText
+        const sanitizeName = name
+          .toLowerCase()
+          .normalize('NFD')
+          .replace(/[\u0300-\u036f]/g, '')
+          .replace(/\s/g, '-')
+
+        if (sanitizeName.indexOf(sanitizeInput) > -1) {
+          cardCities[i].classList.remove('hidden')
+        } else {
+          cardCities[i].classList.add('hidden')
+        }
+      }
+
+      if ($$('.card-city.hidden').length === cardCities.length) {
+        noCity.classList.remove('hidden')
+      } else {
+        noCity.classList.add('hidden')
+      }
+
+      if (search.value === '') {
+        cardCities.forEach((cardCity) => cardCity.classList.remove('hidden'))
+      }
+    }
+  })
+
+  searchForm.addEventListener('submit', (e) => e.preventDefault())
+
+  const bottomBar = $('bottom-bar')
+
+  const isMobile = navigator.userAgent.match(/Android|iPhone|iPad|iPod/i)
+
+  /**
+   * Hide BottomBar when the virtual keyboard is open using the resize window
+   * event to detect it.
+   */
+
+  const initialSize = window.innerHeight
+
+  if (isMobile) {
+    window.addEventListener('resize', () => {
+      const resizeHeight = window.innerHeight
+
+      const percent = initialSize / resizeHeight
+
+      if (percent > 1.35) {
+        bottomBar.classList.remove('sticky')
+      } else {
+        bottomBar.classList.add('sticky')
+      }
+    })
+  }
 </script>

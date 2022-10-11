@@ -64,7 +64,8 @@
     @apply text-base sm:text-lg;
   }
 
-  p a {
+  p a,
+  li a {
     @apply font-semibold underline text-orange-500 active:text-orange-600 transition-colors;
   }
 }
