@@ -32,17 +32,18 @@ const {
   {
     transportPic !== '' ? (
       <section class="my-2">
-        <picture>
+        <picture data-loading="lazy">
           <source type="image/avif" data-srcset={`${transportPic}.avif`} />
           <source type="image/webp" data-srcset={`${transportPic}.webp`} />
+          <source type="image/jpeg" data-srcset={`${transportPic}.jpg`} />
           <img
             class="h-auto object-cover object-center w-full rounded aspect-[520/358] lazyload"
-            srcset={transportPicLqip}
-            data-srcset={`${transportPic}.jpg`}
             alt={`Transporte ${transportName}`}
             decoding="async"
-            fetchpriority="high"
+            fetchpriority="low"
             loading="lazy"
+            srcset={transportPicLqip}
+            data-srcset={`${transportPic}.jpg`}
           />
         </picture>
       </section>
@@ -369,7 +370,7 @@ const {
   {
     stops && (
       <details class="text-orange-500 dark:text-orange-400">
-        <summary class="cursor-pointer any-hover:bg-orange-100 dark:any-hover:bg-[#493A2F] px-3 py-2 rounded transition transition-colors">
+        <summary class="cursor-pointer any-hover:bg-orange-100 dark:any-hover:bg-[#493A2F] px-3 py-2 rounded transition-colors">
           Conoce las principales paradas
         </summary>
         <section class="border border-orange-100 dark:border-[#493A2F] rounded-b p-2">
