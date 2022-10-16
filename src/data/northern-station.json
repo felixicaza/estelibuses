@@ -230,7 +230,7 @@
           "trip_duration": "2 horas"
         },
         {
-          "transport_pic": "/img/ocotal/tansporte-gamez",
+          "transport_pic": "/img/ocotal/transporte-gamez",
           "transport_pic_lqip": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAoAAAAHCAYAAAAxrNxjAAAAAklEQVR4AewaftIAAAEQSURBVB3BvUsCYQDA4d/Jm2eKB2ZQxinUZINbQyBJR0NbS0Nb0B8UTU1NEUQkbZVEW0MeZVT4URZeEZpfqfiRSJ53Uc8jtQdDW5EFf35MEz2dZ2d3jw/jBVVVWdZWEELCMbL412h3SFwlSZydUri7pu8QGLUv9FweTdMQr+UyPnmMarPFe+kTW8isrq2zubXB9v4h2mKE+PEBIvmoMz/lZjYYRnE5OL9PkU1nuTg5ojuyuInH8QdDiAmnjWfSIjDeY9SqwKBLNDxHvf+Nqvio1atUmwZi2Dd50Es0vUVsycIlmSwuLSCcMvVKkVtPg5ASQSSzTwR8XkJuP0bqEtewRy6TodHpUXh+IxaLEpiZ5hc5THGdY78DXgAAAABJRU5ErkJggg==",
           "departure_time": "11:00",
           "waiting_area_departure": "",
