@@ -1,3 +1,7 @@
+---
+import '@styles/filter.css'
+---
+
 <section class="space-y-2.5">
   <p class="font-semibold">Elige el tipo de transporte:</p>
   <form class="flex gap-6" id="filter">
@@ -37,8 +41,12 @@
         <circle class="circle" cx="17" cy="17" r="7.1"></circle>
       </svg>
       <span
-        class="dark:peer-checked:text-orange-400 peer-checked:text-orange-600"
-        ><span class="hidden sm:inline">Buses</span>Expresos</span
+        class="sm:hidden dark:peer-checked:text-orange-400 peer-checked:text-orange-600"
+        >Expresos</span
+      >
+      <span
+        class="hidden sm:block dark:peer-checked:text-orange-400 peer-checked:text-orange-600"
+        >Buses Expresos</span
       >
     </label>
     <label class="relative flex gap-1 items-center cursor-pointer">
@@ -54,8 +62,12 @@
         <circle class="circle" cx="17" cy="17" r="7.1"></circle>
       </svg>
       <span
-        class="dark:peer-checked:text-orange-400 peer-checked:text-orange-600"
-        ><span class="hidden sm:inline">Buses</span>Ruteados</span
+        class="sm:hidden dark:peer-checked:text-orange-400 peer-checked:text-orange-600"
+        >Ruteados</span
+      >
+      <span
+        class="hidden sm:block dark:peer-checked:text-orange-400 peer-checked:text-orange-600"
+        >Buses Ruteados</span
       >
     </label>
   </form>
@@ -76,3 +88,135 @@
     @apply fill-orange-600 dark:fill-orange-400;
   }
 </style>
+<script>
+  const $ = (el) => document.getElementById(el)
+  const $$ = (el) => document.querySelectorAll(el)
+
+  const formFilter = $('filter')
+  const radioAll = $('all')
+  const radioExpress = $('express')
+  const radioRouted = $('routed')
+
+  const expressBuses = $$('.expreso')
+  const routedBuses = $$('.ruteado')
+
+  const transportTitles = $$('.titles')
+  const expressTitles = $$('.expreso > .titles')
+  const routedTitles = $$('.ruteado > .titles')
+
+  const soundRadioButton = new Audio('/sounds/switch.mp3')
+
+  /**
+   * TODO: Optimize code
+   */
+
+  formFilter.addEventListener('change', (e) => {
+    if (e.target.id === 'all' && radioAll.checked) {
+      if (localStorage.getItem('sounds_enabled') === 'true') {
+        soundRadioButton.play()
+      }
+
+      if (
+        'vibrate' in navigator &&
+        localStorage.getItem('sounds_enabled') === 'false'
+      ) {
+        navigator.vibrate(80)
+      }
+
+      localStorage.setItem('managua_transport_type', 'all')
+
+      transportTitles.forEach(
+        (title, index) => (title.textContent = `Horario #${index + 1}`)
+      )
+
+      expressBuses.forEach((express) => {
+        express.classList.remove('hidden')
+
+        if (express.classList.contains('up')) {
+          express.classList.remove('up')
+          window.requestAnimationFrame(() => express.classList.add('up'))
+        } else {
+          express.classList.add('up')
+        }
+      })
+      routedBuses.forEach((routed) => {
+        routed.classList.remove('hidden')
+
+        if (routed.classList.contains('up')) {
+          routed.classList.remove('up')
+          window.requestAnimationFrame(() => routed.classList.add('up'))
+        } else {
+          routed.classList.add('up')
+        }
+      })
+    }
+
+    if (e.target.id === 'express' && radioExpress.checked) {
+      if (localStorage.getItem('sounds_enabled') === 'true') {
+        soundRadioButton.play()
+      }
+
+      if (
+        'vibrate' in navigator &&
+        localStorage.getItem('sounds_enabled') === 'false'
+      ) {
+        navigator.vibrate(80)
+      }
+
+      localStorage.setItem('managua_transport_type', 'express')
+
+      for (let i = 0; i < expressTitles.length; i++) {
+        expressTitles[i].textContent = `Horario Expreso #${i + 1}`
+      }
+
+      expressBuses.forEach((express) => {
+        express.classList.remove('hidden')
+
+        if (express.classList.contains('up')) {
+          express.classList.remove('up')
+          window.requestAnimationFrame(() => express.classList.add('up'))
+        } else {
+          express.classList.add('up')
+        }
+      })
+      routedBuses.forEach((routed) => {
+        routed.classList.add('hidden')
+        routed.classList.remove('up')
+      })
+    }
+
+    if (e.target.id === 'routed' && radioRouted.checked) {
+      if (localStorage.getItem('sounds_enabled') === 'true') {
+        soundRadioButton.play()
+      }
+
+      if (
+        'vibrate' in navigator &&
+        localStorage.getItem('sounds_enabled') === 'false'
+      ) {
+        navigator.vibrate(80)
+      }
+
+      localStorage.setItem('managua_transport_type', 'routed')
+
+      for (let i = 0; i < routedTitles.length; i++) {
+        routedTitles[i].textContent = `Horario Ruteado #${i + 1}`
+      }
+
+      routedBuses.forEach((routed) => {
+        routed.classList.remove('hidden')
+
+        if (routed.classList.contains('up')) {
+          routed.classList.remove('up')
+          window.requestAnimationFrame(() => routed.classList.add('up'))
+        } else {
+          routed.classList.add('up')
+        }
+      })
+      expressBuses.forEach((express) => {
+        express.classList.add('hidden')
+        express.classList.remove('up')
+      })
+    }
+  })
+</script>

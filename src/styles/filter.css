@@ -1,0 +1,14 @@
+.up {
+  animation: up 400ms linear;
+}
+
+@keyframes up {
+  from {
+    transform: translateY(6%);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
