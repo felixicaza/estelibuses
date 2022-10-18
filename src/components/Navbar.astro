@@ -26,7 +26,17 @@
     <ul class="flex items-center space-x-4 font-medium justify-center gap-4">
       <li>
         <a
-          class="transition-colors px-6 inline-flex items-center justify-center py-2.5 space-x-1"
+          class:list={[
+            'px-6 inline-flex items-center justify-center py-2.5 space-x-1',
+            {
+              'text-emerald-500':
+                Astro.url.pathname === '/terminal-norte-esteli'
+            },
+            {
+              'any-hover:text-emerald-500 transition-colors':
+                Astro.url.pathname !== '/terminal-norte-esteli'
+            }
+          ]}
           href="/terminal-norte-esteli"
         >
           <span>
@@ -46,7 +56,16 @@
       </li>
       <li>
         <a
-          class="transition-colors px-6 inline-flex items-center justify-center py-2.5 space-x-1"
+          class:list={[
+            'px-6 inline-flex items-center justify-center py-2.5 space-x-1',
+            {
+              'text-amber-500': Astro.url.pathname === '/terminal-sur-esteli'
+            },
+            {
+              'any-hover:text-amber-500 transition-colors':
+                Astro.url.pathname !== '/terminal-sur-esteli'
+            }
+          ]}
           href="/terminal-sur-esteli"
         >
           <span>
@@ -66,7 +85,16 @@
       </li>
       <li>
         <a
-          class="transition-colors px-6 inline-flex items-center justify-center py-2.5 space-x-1"
+          class:list={[
+            'px-6 inline-flex items-center justify-center py-2.5 space-x-1',
+            {
+              'text-orange-500': Astro.url.pathname === '/acerca-de-estelibuses'
+            },
+            {
+              'any-hover:text-orange-500 transition-colors':
+                Astro.url.pathname !== '/acerca-de-estelibuses'
+            }
+          ]}
           href="/acerca-de-estelibuses"
         >
           <span>
@@ -86,7 +114,16 @@
       </li>
       <li>
         <a
-          class="transition-colors px-6 inline-flex items-center justify-center py-2.5 space-x-1"
+          class:list={[
+            'px-6 inline-flex items-center justify-center py-2.5 space-x-1',
+            {
+              'text-orange-500': Astro.url.pathname === '/contacto'
+            },
+            {
+              'any-hover:text-orange-500 transition-colors':
+                Astro.url.pathname !== '/contacto'
+            }
+          ]}
           href="/contacto"
         >
           <span>
@@ -100,7 +137,8 @@
                 d="M20 20H7a2 2 0 0 1-2-2V9L2.2 5.5A1 1 0 0 1 2 5a1 1 0 0 1 1-1h17a2 2 0 0 1 2 2v12a2 2 0 0 1-2 2M8.5 7a.5.5 0 0 0-.5.5v1a.5.5 0 0 0 .5.5h10a.5.5 0 0 0 .5-.5v-1a.5.5 0 0 0-.5-.5h-10m0 4a.5.5 0 0 0-.5.5v1a.5.5 0 0 0 .5.5h10a.5.5 0 0 0 .5-.5v-1a.5.5 0 0 0-.5-.5h-10m0 4a.5.5 0 0 0-.5.5v1a.5.5 0 0 0 .5.5h5a.5.5 0 0 0 .5-.5v-1a.5.5 0 0 0-.5-.5h-5Z"
               ></path>
             </svg>
-          </span><span>Contacto</span>
+          </span>
+          <span>Contacto</span>
         </a>
       </li>
     </ul>
