@@ -10,5 +10,12 @@ module.exports = {
       xl: '1200px',
       '2xl': '1536px'
     }
-  }
+  },
+  // Add custom plugin for suport media any-hover
+  // See: https://github.com/tailwindlabs/tailwindcss/pull/7939#issuecomment-1079387869
+  plugins: [
+    function ({ addVariant }) {
+      addVariant('any-hover', '@media (any-hover: hover) { &:hover }')
+    }
+  ]
 }
