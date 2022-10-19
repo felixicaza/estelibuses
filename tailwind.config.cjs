@@ -16,6 +16,11 @@ module.exports = {
   plugins: [
     function ({ addVariant }) {
       addVariant('any-hover', '@media (any-hover: hover) { &:hover }')
+      addVariant(
+        'group-any-hover',
+        '@media (any-hover: hover) { .group:hover & }'
+      )
+      addVariant('group-open', ':merge(.open)[open] &')
     }
   ]
 }
