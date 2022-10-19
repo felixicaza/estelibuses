@@ -1,0 +1,67 @@
+<section
+  class="bg-orange-300 dark:bg-hex-180f06 dark:text-white fixed top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 z-20 w-full max-w-sm sm:max-w-md shadow-md rounded px-4 py-6 pointer-events-none scale-0 opacity-0 transition-all h-[85vh]"
+  id="modal-bus-pic"
+>
+  <style>
+    .hide-scroll-modal {
+      scrollbar-width: none;
+    }
+    .hide-scroll-modal::-webkit-scrollbar {
+      display: none;
+    }
+  </style>
+  <section class="h-full overflow-scroll hide-scroll-modal">
+    <h3 class="text-xl font-bold text-center">
+      Recomendaciones para tomar la foto del transporte.
+    </h3>
+    <ol class="mt-4 space-y-2 list-decimal ml-6">
+      <li>
+        <strong>IMPORTANTE:&nbsp;</strong>Asegúrate que la foto que vas a tomar
+        sea precisamente del transporte en cuestión. Ya que por defecto la
+        imágen será guardada con el nombre de la ciudad y el número del horario
+        que hayas elegido.
+      </li>
+      <li>Coloca tu celular en modo horizontal.</li>
+      <li>
+        La foto debe ser de la parte frontal del transporte y enfocando un poco
+        la parte lateral (Ver ejemplo).
+      </li>
+      <li>Trata de no tomar la foto muy cerca o lejos del transporte.</li>
+      <li>
+        No te preocupes por hacer zoom o por la calidad de la imágen, ya que por
+        defecto está preparado para obtener la mejor configuración de tu cámara.
+      </li>
+      <li>
+        Si crees que no haya quedado bien la foto, puedes tomarla nuevamente.
+      </li>
+      <li>No puedes enviar fotos sin conexión a internet.</li>
+    </ol>
+    <p class="mt-4 font-semibold text-lg">¡Muchas gracias por tu ayuda! ❤</p>
+    <section class="my-4">
+      <p class="mb-2">Ejemplo de la foto de un tansporte.</p>
+      <picture>
+        <source
+          type="image/avif"
+          data-srcset="/img/san-juan-de-limay/transporte-el-fugitivo.avif"
+        />
+        <source
+          type="image/webp"
+          data-srcset="/img/san-juan-de-limay/transporte-el-fugitivo.webp"
+        /><img
+          class="h-auto object-cover object-center w-full lazyload rounded"
+          alt="Foto del transporte El Fugitivo"
+          decoding="async"
+          fetchpriority="low"
+          loading="lazy"
+          srcset="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAoAAAAHCAYAAAAxrNxjAAAAAklEQVR4AewaftIAAAEKSURBVAXBTUoCYQCA4VebSiL/vwH/hZTaGGaLWtSiE9gNWrjrFl2hrhIEtbADGCVGESoohjb+jzNojjP29Tyu27tr+fpTQ1/90umsWOrgEbsQ1hH2NlLuEVTzKJ6Zj9P4JYZ3gYjqWBNJa9wmZwsCqo+1y83H5yNK1Zny9VZlc2HjLHfQvruMjSnhYoneymIxWfJnjlCcdYZQ5ADvdIhlDNgKWPTbGo3yAzM1iT3QUKWDcpQS3D8/Ecll0eY23eGMQDJNsXRFq9nCjAdJRFWUmOrnIl+gUnmh12gSSyR472mUG3XGzTp+x0GaBhvnZyc3itvNfjbDcSHPZDSEuYlH6yOkQ1qEOMym+AeA+3fxhYE/2QAAAABJRU5ErkJggg=="
+          style="aspect-ratio: 520/358"
+          data-srcset="/img/san-juan-de-limay/transporte-el-fugitivo.jpg"
+        />
+      </picture>
+    </section>
+    <button
+      class="w-full rounded font-semibold py-2.5 px-5 transition-colors active:bg-orange-500 active:outline-none bg-orange-400 text-white recommendation-pic"
+      >Aceptar</button
+    >
+  </section>
+</section>

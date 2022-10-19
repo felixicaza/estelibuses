@@ -36,6 +36,7 @@ export async function getStaticPaths() {
       headerColor: info.header_color,
       titleColor: info.title_color,
       textColor: info.text_color,
+      linkColorGroup: info.link_color_group,
       slug: info.slug,
       title: info.title,
       description: info.description,
@@ -63,6 +64,7 @@ const {
   headerColor,
   titleColor,
   textColor,
+  linkColorGroup,
   slug,
   title,
   description,
@@ -122,7 +124,7 @@ const getSchemaFAQs = schemaFAQs.map((faq) => ({
             <div class="flex gap-2 items-start">
               <div class="mt-[0.2rem]">
                 <svg
-                  class={`transition-colors fill-current ${textColor}`}
+                  class={`fill-current ${textColor} ${linkColorGroup}`}
                   viewBox="0 0 24 24"
                   width="24"
                   height="24"
@@ -133,7 +135,7 @@ const getSchemaFAQs = schemaFAQs.map((faq) => ({
                 </svg>
               </div>
               <a
-                class={`transition-colors font-semibold ${textColor}`}
+                class={`font-semibold ${textColor} ${linkColorGroup}`}
                 href={`${terminal}#mapa`}
                 >{location}
               </a>
@@ -143,7 +145,7 @@ const getSchemaFAQs = schemaFAQs.map((faq) => ({
             <p class={`font-semibold ${textColor}`}>Teléfono:</p>
             <div class="flex gap-2 items-start">
               <svg
-                class={`transition-colors fill-current ${textColor}`}
+                class={`fill-current ${textColor} ${linkColorGroup}`}
                 viewBox="0 0 24 24"
                 width="24"
                 height="24"
@@ -153,7 +155,7 @@ const getSchemaFAQs = schemaFAQs.map((faq) => ({
                 ></path>
               </svg>
               <a
-                class={`transition-colors font-semibold ${textColor}`}
+                class={`font-semibold ${textColor} ${linkColorGroup}`}
                 href={`tel:${phone}`}
                 >{phone}
               </a>

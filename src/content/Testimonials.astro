@@ -76,6 +76,16 @@ const testimonialsLength = testimonials.length
     grid-template-columns: repeat(var(--items), 16rem);
   }
 
+  @media (any-pointer: coarse) {
+    .users-comments {
+      scrollbar-width: none;
+    }
+
+    .users-comments::-webkit-scrollbar {
+      display: none;
+    }
+  }
+
   @media (min-width: 768px) {
     .users-comments {
       grid-template-columns: repeat(var(--items), 20rem);

@@ -29,12 +29,16 @@
           class:list={[
             'px-6 inline-flex items-center justify-center py-2.5 space-x-1',
             {
-              'text-emerald-500':
-                Astro.url.pathname === '/terminal-norte-esteli'
+              /**
+               * Use includes() method to get all descending paths
+               */
+              'text-emerald-500': Astro.url.pathname.includes(
+                'terminal-norte-esteli'
+              )
             },
             {
               'any-hover:text-emerald-500 transition-colors':
-                Astro.url.pathname !== '/terminal-norte-esteli'
+                !Astro.url.pathname.includes('terminal-norte-esteli')
             }
           ]}
           href="/terminal-norte-esteli"
@@ -59,11 +63,16 @@
           class:list={[
             'px-6 inline-flex items-center justify-center py-2.5 space-x-1',
             {
-              'text-amber-500': Astro.url.pathname === '/terminal-sur-esteli'
+              /**
+               * Use includes() method to get all descending paths
+               */
+              'text-amber-500': Astro.url.pathname.includes(
+                'terminal-sur-esteli'
+              )
             },
             {
               'any-hover:text-amber-500 transition-colors':
-                Astro.url.pathname !== '/terminal-sur-esteli'
+                !Astro.url.pathname.includes('terminal-sur-esteli')
             }
           ]}
           href="/terminal-sur-esteli"

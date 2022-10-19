@@ -1,6 +1,8 @@
 ---
 /* eslint-disable astro/jsx-a11y/media-has-caption */
 
+import TakePic from '@components/TakePic.astro'
+
 const {
   index,
   note,
@@ -48,52 +50,7 @@ const {
         </picture>
       </section>
     ) : (
-      <div class="lg:hidden">
-        <button class="w-full rounded font-semibold space-x-2.5 py-2.5 px-5 transition-colors inline-flex items-center active:outline-none bg-orange-100 dark:bg-[#4c3c2e] active:bg-orange-200 text-orange-500 dark:text-orange-100 bus-pic-btn">
-          <span>
-            <svg
-              class="fill-current"
-              viewBox="0 0 24 24"
-              width="24"
-              height="24"
-            >
-              <path d="M4 4h3l2-2h6l2 2h3a2 2 0 0 1 2 2v12a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2m8 3a5 5 0 0 0-5 5 5 5 0 0 0 5 5 5 5 0 0 0 5-5 5 5 0 0 0-5-5m0 2a3 3 0 0 1 3 3 3 3 0 0 1-3 3 3 3 0 0 1-3-3 3 3 0 0 1 3-3Z" />
-            </svg>
-          </span>
-          <span>Toma una foto del transporte</span>
-        </button>
-        <section class="bg-orange-300 dark:bg-[#180f06] dark:text-white fixed top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 z-20 w-full max-w-sm sm:max-w-md shadow-md rounded px-4 py-6 pointer-events-none scale-0 opacity-0 transition-all h-[85vh] flex flex-col pic-container">
-          <video
-            class="bg-orange-100 dark:bg-hex-2c251f w-full h-full rounded flex-grow bus-image"
-            autoplay="autoplay"
-          />
-          <section class="mt-2">
-            <div class="flex gap-4 first-pic-container">
-              <button class="w-full rounded font-semibold py-2.5 px-5 transition-colors active:bg-orange-500 active:outline-none bg-orange-400 text-white pic-btn">
-                Tomar foto
-              </button>
-              <button class="w-full rounded font-semibold py-2.5 px-5 transition-colors active:text-orange-500 active:bg-orange-200 active:outline-none bg-orange-100 text-orange-400 cancel-pic-btn">
-                Cancelar
-              </button>
-            </div>
-            <div class="flex gap-4 hidden second-pic-container">
-              <button class="w-full rounded font-semibold py-2.5 px-5 transition-colors active:bg-orange-500 active:outline-none bg-orange-400 text-white send-píc-btn">
-                Enviar foto
-              </button>
-              <button class="w-full rounded font-semibold py-2.5 px-5 transition-colors active:text-orange-500 active:bg-orange-200 active:outline-none bg-orange-100 text-orange-400 take-pic-btn">
-                Tomar de nuevo
-              </button>
-            </div>
-          </section>
-        </section>
-        <section class="w-full h-87 font-semibold rounded bg-orange-100 dark:bg-hex-2c251f flex flex-col items-center justify-center text-center px-4 py-6 hidden congrats">
-          <p class="text-lg">¡Muchísimas gracias!</p>
-          <p class="px-2 mt-2">
-            Tu foto será revisada y cuándo sea aprobada se publicará en la
-            plataforma. 🥳🎉
-          </p>
-        </section>
-      </div>
+      <TakePic />
     )
   }
 
@@ -369,8 +326,8 @@ const {
 
   {
     stops && (
-      <details class="text-orange-500 dark:text-orange-400">
-        <summary class="cursor-pointer any-hover:bg-orange-100 dark:any-hover:bg-[#493A2F] px-3 py-2 rounded transition-colors">
+      <details class="text-orange-500 dark:text-orange-400 open">
+        <summary class="cursor-pointer any-hover:bg-orange-100 dark:any-hover:bg-[#493A2F] group-open:bg-orange-100 dark:group-open:bg-[#493A2F] px-3 py-2 rounded transition-colors">
           Conoce las principales paradas
         </summary>
         <section class="border border-orange-100 dark:border-[#493A2F] rounded-b p-2">
@@ -401,3 +358,27 @@ const {
     )
   }
 </section>
+
+<style>
+  @media screen and (max-width: 575.98px) {
+    .scrolltable {
+      overflow-x: scroll;
+    }
+  }
+
+  @media screen and (min-width: 992px) and (max-width: 1199.98px) {
+    .scrolltable {
+      overflow-x: scroll;
+    }
+  }
+
+  @media (any-pointer: coarse) {
+    .scrolltable {
+      scrollbar-width: none;
+    }
+
+    .scrolltable::-webkit-scrollbar {
+      display: none;
+    }
+  }
+</style>

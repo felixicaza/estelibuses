@@ -1,6 +1,6 @@
 <nav
   id="bottom-bar"
-  class="sticky z-10 bottom-0 w-full bg-orange-400 dark:bg-[#180f06] grid grid-cols-4 md:gap-12 sm:gap-6 text-center items-center lg:hidden"
+  class="sticky z-10 bottom-0 w-full bg-orange-400 dark:bg-[#180f06] grid grid-cols-4 md:gap-12 sm:gap-6 text-center items-center xl:hidden"
 >
   <a
     class:list={[
@@ -24,12 +24,16 @@
     class:list={[
       'flex flex-col items-center p-2 border-b-4',
       {
-        'text-white border-white':
-          Astro.url.pathname === '/terminal-norte-esteli'
+        /**
+         * Use includes() method to get all descending paths
+         */
+        'text-white border-white': Astro.url.pathname.includes(
+          'terminal-norte-esteli'
+        )
       },
       {
         'text-orange-900 dark:text-orange-800 active:text-white any-hover:text-white border-transparent transition-colors':
-          Astro.url.pathname !== '/terminal-norte-esteli'
+          !Astro.url.pathname.includes('terminal-norte-esteli')
       }
     ]}
     href="/terminal-norte-esteli"
@@ -51,11 +55,16 @@
     class:list={[
       'flex flex-col items-center p-2 border-b-4',
       {
-        'text-white border-white': Astro.url.pathname === '/terminal-sur-esteli'
+        /**
+         * Use includes() method to get all descending paths
+         */
+        'text-white border-white': Astro.url.pathname.includes(
+          'terminal-sur-esteli'
+        )
       },
       {
         'text-orange-900 dark:text-orange-800 active:text-white any-hover:text-white border-transparent transition-colors':
-          Astro.url.pathname !== '/terminal-sur-esteli'
+          !Astro.url.pathname.includes('terminal-sur-esteli')
       }
     ]}
     href="/terminal-sur-esteli"

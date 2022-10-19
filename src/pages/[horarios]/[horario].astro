@@ -13,6 +13,7 @@ import Navbar from '@components/Navbar.astro'
 import FilterTransport from '@components/FilterTransport.astro'
 import CardTimetables from '@components/CardTimetables.astro'
 import CardCity from '@components/CardCity.astro'
+import ModalTakePic from '@components/ModalTakePic.astro'
 
 export async function getStaticPaths() {
   const mergeDataStations = [northernStation, southernStation]
@@ -35,7 +36,9 @@ export async function getStaticPaths() {
         themeColor: info.theme_color,
         headerColor: info.header_color,
         titleColor: info.title_color,
-        textColor: info.text_color
+        textColor: info.text_color,
+        linkColor: info.link_color,
+        breadcrumbActive: info.breadcrumb_active
       }
     }))
   )
@@ -57,7 +60,9 @@ const {
   themeColor,
   headerColor,
   titleColor,
-  textColor
+  textColor,
+  linkColor,
+  breadcrumbActive
 } = Astro.props
 
 const options = {
@@ -118,14 +123,18 @@ const southernStationFilter = southernStation.cities.filter((city) =>
     slot="preconnect"
   />
 
-  <Schema
-    item={{
-      '@context': 'https://schema.org',
-      '@type': 'FAQPage',
-      mainEntity: getSchemaFAQs
-    }}
-    slot="schema"
-  />
+  {
+    getSchemaFAQs.length !== 0 && (
+      <Schema
+        item={{
+          '@context': 'https://schema.org',
+          '@type': 'FAQPage',
+          mainEntity: getSchemaFAQs
+        }}
+        slot="schema"
+      />
+    )
+  }
 
   <SocialMedia
     {title}
@@ -138,13 +147,10 @@ const southernStationFilter = southernStation.cities.filter((city) =>
     <div class="container mx-auto px-4">
       <Navbar />
       <section class="mt-6">
-        <nav
-          class={`py-2 whitespace-nowrap overflow-x-scroll ${textColor}`}
-          aria-label="breadcrumb"
-        >
+        <nav class={`py-2 whitespace-nowrap breadcrumb ${textColor}`}>
           <ul class="flex items-center space-x-2">
             <li style="width: 24px; height: 24px">
-              <a href="/" title="Inicio">
+              <a class={linkColor} href="/" title="Inicio">
                 <svg
                   fill="currentColor"
                   viewBox="0 0 24 24"
@@ -167,7 +173,7 @@ const southernStationFilter = southernStation.cities.filter((city) =>
               </svg>
             </li>
             <li>
-              <a class="atransition-colors font-medium" href={`/${horarios}`}
+              <a class={`font-medium ${linkColor}`} href={`/${horarios}`}
                 >{station}
               </a>
             </li>
@@ -182,8 +188,8 @@ const southernStationFilter = southernStation.cities.filter((city) =>
                 ></path>
               </svg>
             </li>
-            <li aria-current="page">
-              <p>{cityName}</p>
+            <li>
+              <p class={breadcrumbActive}>{cityName}</p>
             </li>
           </ul>
         </nav>
@@ -200,8 +206,7 @@ const southernStationFilter = southernStation.cities.filter((city) =>
           </p>
           <section class="flex flex-wrap justify-center items-center gap-8">
             <a
-              class="transition-colors"
-              id="whatsapp-city"
+              class={linkColor}
               href={`https://api.whatsapp.com/send?text=${shareText}${currentURL}?utm_source=whatsapp&utm_medium=webapp&utm_campaign=social_share_city&utm_content=header`}
               target="_blank"
             >
@@ -217,25 +222,7 @@ const southernStationFilter = southernStation.cities.filter((city) =>
               </svg>
             </a>
             <a
-              class="transition-colors"
-              id="telegram-city"
-              href={`https://telegram.me/share/url?url=${shareText}${currentURL}?utm_source=telegram&utm_medium=webapp&utm_campaign=social_share_city&utm_content=header`}
-              target="_blank"
-            >
-              <svg
-                class="fill-current"
-                viewBox="0 0 24 24"
-                width="30"
-                height="30"
-              >
-                <path
-                  clip-rule="evenodd"
-                  d="M24 12a12 12 0 1 1-24 0 12 12 0 0 1 24 0ZM12.4 8.9a572 572 0 0 0-7.9 3.6c0 .4.5.5 1 .7l.3.1c.6.2 1.5.5 1.9.5.4 0 .8-.2 1.3-.5a124 124 0 0 1 5.3-3.3v.2c0 .2-1.8 1.8-2.7 2.7l-.5.5-.3.3c-.6.5-1 1 0 1.6a94.2 94.2 0 0 1 2.7 1.8l.4.3c.5.4 1 .7 1.5.6.3 0 .6-.3.8-1.2a142.2 142.2 0 0 0 1.3-9.1l-.1-.3a.8.8 0 0 0-.5-.2c-.4 0-1.1.3-4.5 1.7Z"
-                  fill-rule="evenodd"></path>
-              </svg>
-            </a>
-            <a
-              class="transition-colors"
+              class={linkColor}
               href={`https://www.facebook.com/sharer/sharer.php?u=${currentURL}?utm_source=facebook&utm_medium=webapp&utm_campaign=social_share_city&utm_content=header`}
               target="_blank"
             >
@@ -251,7 +238,7 @@ const southernStationFilter = southernStation.cities.filter((city) =>
               </svg>
             </a>
             <a
-              class="transition-colors"
+              class={linkColor}
               href={`https://twitter.com/intent/tweet?url=${currentURL}?utm_source=twitter&utm_medium=webapp&utm_campaign=social_share_city&utm_content=header&text=${shareText}`}
               target="_blank"
             >
@@ -266,11 +253,24 @@ const southernStationFilter = southernStation.cities.filter((city) =>
                 ></path>
               </svg>
             </a>
-            <button
-              class="transition-colors hidden"
-              id="share-city"
-              type="button"
+            <a
+              class={linkColor}
+              href={`https://telegram.me/share/url?url=${shareText}${currentURL}?utm_source=telegram&utm_medium=webapp&utm_campaign=social_share_city&utm_content=header`}
+              target="_blank"
             >
+              <svg
+                class="fill-current"
+                viewBox="0 0 24 24"
+                width="30"
+                height="30"
+              >
+                <path
+                  clip-rule="evenodd"
+                  d="M24 12a12 12 0 1 1-24 0 12 12 0 0 1 24 0ZM12.4 8.9a572 572 0 0 0-7.9 3.6c0 .4.5.5 1 .7l.3.1c.6.2 1.5.5 1.9.5.4 0 .8-.2 1.3-.5a124 124 0 0 1 5.3-3.3v.2c0 .2-1.8 1.8-2.7 2.7l-.5.5-.3.3c-.6.5-1 1 0 1.6a94.2 94.2 0 0 1 2.7 1.8l.4.3c.5.4 1 .7 1.5.6.3 0 .6-.3.8-1.2a142.2 142.2 0 0 0 1.3-9.1l-.1-.3a.8.8 0 0 0-.5-.2c-.4 0-1.1.3-4.5 1.7Z"
+                  fill-rule="evenodd"></path>
+              </svg>
+            </a>
+            <button class={`${linkColor} hidden`} id="share-city" type="button">
               <svg
                 class="fill-current"
                 viewBox="0 0 24 24"
@@ -456,7 +456,7 @@ const southernStationFilter = southernStation.cities.filter((city) =>
                   <CardCity
                     cityName={city.name}
                     slug={`/${northernStation.slug}/${city.slug}`}
-                    imagen={city.image}
+                    image={city.image}
                     lqip={city.lqip}
                   />
                 )
@@ -491,7 +491,7 @@ const southernStationFilter = southernStation.cities.filter((city) =>
                   <CardCity
                     cityName={city.name}
                     slug={`/${southernStation.slug}/${city.slug}`}
-                    imagen={city.image}
+                    image={city.image}
                     lqip={city.lqip}
                   />
                 )
@@ -514,7 +514,27 @@ const southernStationFilter = southernStation.cities.filter((city) =>
       </section>
     </div>
   </article>
+
+  <ModalTakePic slot="dynamic-components" />
 </Layout>
+
+<style>
+  @media screen and (max-width: 767.98px) {
+    .breadcrumb {
+      overflow-x: scroll;
+    }
+  }
+
+  @media (any-pointer: coarse) {
+    .breadcrumb {
+      scrollbar-width: none;
+    }
+
+    .breadcrumb::-webkit-scrollbar {
+      display: none;
+    }
+  }
+</style>
 
 <script>
   import '@scripts/lazyload-img.js'
