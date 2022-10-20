@@ -10,9 +10,10 @@
     "url": "https://felixicaza.com/"
   },
   "scripts": {
-    "build": "astro build && pnpm compress",
+    "build": "astro build && pnpm compress && pnpm move-offline-page",
     "compress": "node imagemin.js && node webp.js && pnpm minify-json dist/manifest.json",
     "dev": "astro dev",
+    "move-offline-page": "pnpm move-file ./dist/offline/index.html ./dist/offline.html && rm -rf ./dist/offline/",
     "prepare": "husky install",
     "preview": "astro preview"
   },
@@ -61,6 +62,7 @@
     "imagemin-webp": "7.0.0",
     "lint-staged": "13.0.3",
     "minify-json": "1.0.0",
+    "move-file-cli": "3.0.0",
     "postcss": "8.4.13",
     "postcss-cli": "9.1.0",
     "postcss-momentum-scrolling": "3.14.22",
