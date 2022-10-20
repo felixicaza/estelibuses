@@ -39,7 +39,7 @@ const {
           <source type="image/webp" data-srcset={`${transportPic}.webp`} />
           <source type="image/jpeg" data-srcset={`${transportPic}.jpg`} />
           <img
-            class="h-auto object-cover object-center w-full rounded aspect-[520/358] lazyload"
+            class="lazyload aspect-[520/358] h-auto w-full rounded object-cover object-center"
             alt={`Transporte ${transportName}`}
             decoding="async"
             fetchpriority="low"
@@ -99,9 +99,9 @@ const {
         {
           waitingAreaDeparture && (
             <tr class="group">
-              <td class="px-3 py-2 flex items-center group-hover:bg-orange-50 dark:group-hover:bg-[#3E352C] transition-colors rounded-l">
+              <td class="flex items-center rounded-l px-3 py-2 transition-colors group-hover:bg-orange-50 dark:group-hover:bg-[#3E352C]">
                 <svg
-                  class="fill-current mr-2"
+                  class="mr-2 fill-current"
                   viewBox="0 0 24 24"
                   width="24"
                   height="24"
@@ -110,8 +110,8 @@ const {
                 </svg>
                 <strong>Lugar de espera</strong>
               </td>
-              <td class="px-3 py-2 group-hover:bg-orange-50 dark:group-hover:bg-[#3E352C] transition-colors rounded-r">
-                <span class="px-2 py-1 text-green-700 bg-green-100 rounded font-bold">
+              <td class="rounded-r px-3 py-2 transition-colors group-hover:bg-orange-50 dark:group-hover:bg-[#3E352C]">
+                <span class="rounded bg-green-100 px-2 py-1 font-bold text-green-700">
                   {waitingAreaDeparture}
                 </span>
               </td>
@@ -121,9 +121,9 @@ const {
         {
           returnTime && (
             <tr class="group">
-              <td class="px-3 py-2 flex items-start group-hover:bg-orange-50 dark:group-hover:bg-[#3E352C] transition-colors rounded-l">
+              <td class="flex items-start rounded-l px-3 py-2 transition-colors group-hover:bg-orange-50 dark:group-hover:bg-[#3E352C]">
                 <svg
-                  class="fill-current mr-2 mt-[3px]"
+                  class="mr-2 mt-[3px] fill-current"
                   viewBox="0 0 24 24"
                   width="24"
                   height="24"
@@ -135,8 +135,8 @@ const {
                   <small class="block">(Retorno hacia Estelí)</small>
                 </div>
               </td>
-              <td class="px-3 py-2 group-hover:bg-orange-50 dark:group-hover:bg-[#3E352C] transition-colors rounded-r">
-                <span class="px-2 py-1 text-green-700 bg-green-100 rounded font-bold">
+              <td class="rounded-r px-3 py-2 transition-colors group-hover:bg-orange-50 dark:group-hover:bg-[#3E352C]">
+                <span class="rounded bg-green-100 px-2 py-1 font-bold text-green-700">
                   {
                     // Convert hour (return_time) to AM/PM format due to the fact
                     // that in Nicaragua it's very common to use this format.
@@ -159,9 +159,9 @@ const {
         {
           waitingAreaReturn && (
             <tr class="group">
-              <td class="px-3 py-2 flex items-start group-hover:bg-orange-50 dark:group-hover:bg-[#3E352C] transition-colors rounded-l">
+              <td class="flex items-start rounded-l px-3 py-2 transition-colors group-hover:bg-orange-50 dark:group-hover:bg-[#3E352C]">
                 <svg
-                  class="fill-current mr-2 mt-[2px]"
+                  class="mr-2 mt-[2px] fill-current"
                   viewBox="0 0 24 24"
                   width="24"
                   height="24"
@@ -173,8 +173,8 @@ const {
                   <small class="block">(Retorno hacia Estelí)</small>
                 </div>
               </td>
-              <td class="px-3 py-2 group-hover:bg-orange-50 dark:group-hover:bg-[#3E352C] transition-colors rounded-r">
-                <span class="px-2 py-1 text-green-700 bg-green-100 rounded font-bold">
+              <td class="rounded-r px-3 py-2 transition-colors group-hover:bg-orange-50 dark:group-hover:bg-[#3E352C]">
+                <span class="rounded bg-green-100 px-2 py-1 font-bold text-green-700">
                   {waitingAreaReturn}
                 </span>
               </td>
@@ -210,9 +210,9 @@ const {
         {
           transportName && (
             <tr class="group">
-              <td class="px-3 py-2 flex items-center group-hover:bg-orange-50 dark:group-hover:bg-[#3E352C] transition-colors rounded-l">
+              <td class="flex items-center rounded-l px-3 py-2 transition-colors group-hover:bg-orange-50 dark:group-hover:bg-[#3E352C]">
                 <svg
-                  class="fill-current mr-2"
+                  class="mr-2 fill-current"
                   viewBox="0 0 24 24"
                   width="24"
                   height="24"
@@ -221,8 +221,8 @@ const {
                 </svg>
                 <strong>Nombre del Transporte</strong>
               </td>
-              <td class="px-3 py-2 group-hover:bg-orange-50 dark:group-hover:bg-[#3E352C] transition-colors rounded-r">
-                <span class="px-2 py-1 text-green-700 bg-green-100 rounded font-bold">
+              <td class="rounded-r px-3 py-2 transition-colors group-hover:bg-orange-50 dark:group-hover:bg-[#3E352C]">
+                <span class="rounded bg-green-100 px-2 py-1 font-bold text-green-700">
                   {transportName}
                 </span>
               </td>
@@ -232,9 +232,9 @@ const {
         {
           licensePlate && (
             <tr class="group">
-              <td class="px-3 py-2 flex items-center group-hover:bg-orange-50 dark:group-hover:bg-[#3E352C] transition-colors rounded-l">
+              <td class="flex items-center rounded-l px-3 py-2 transition-colors group-hover:bg-orange-50 dark:group-hover:bg-[#3E352C]">
                 <svg
-                  class="fill-current mr-2"
+                  class="mr-2 fill-current"
                   viewBox="0 0 24 24"
                   width="24"
                   height="24"
@@ -243,8 +243,8 @@ const {
                 </svg>
                 <strong>Placa del Transporte</strong>
               </td>
-              <td class="px-3 py-2 group-hover:bg-orange-50 dark:group-hover:bg-[#3E352C] transition-colors rounded-r">
-                <span class="px-2 py-1 text-green-700 bg-green-100 rounded font-bold">
+              <td class="rounded-r px-3 py-2 transition-colors group-hover:bg-orange-50 dark:group-hover:bg-[#3E352C]">
+                <span class="rounded bg-green-100 px-2 py-1 font-bold text-green-700">
                   {licensePlate}
                 </span>
               </td>
@@ -272,7 +272,7 @@ const {
           >
             {
               transportPrice !== '' ? (
-                <span class="px-2 py-1 text-green-700 bg-green-100 rounded font-bold">
+                <span class="rounded bg-green-100 px-2 py-1 font-bold text-green-700">
                   {new Intl.NumberFormat('es-NI', {
                     currency: 'NIO',
                     style: 'currency',
@@ -281,7 +281,7 @@ const {
                   por persona
                 </span>
               ) : (
-                <span class="px-2 py-1 text-red-700 bg-red-100 rounded font-bold">
+                <span class="rounded bg-red-100 px-2 py-1 font-bold text-red-700">
                   Información no disponible
                 </span>
               )
@@ -309,11 +309,11 @@ const {
           >
             {
               tripDuration !== '' ? (
-                <span class="px-2 py-1 text-green-700 bg-green-100 rounded font-bold">
+                <span class="rounded bg-green-100 px-2 py-1 font-bold text-green-700">
                   {tripDuration} (aproximadamente)
                 </span>
               ) : (
-                <span class="px-2 py-1 text-red-700 bg-red-100 rounded font-bold">
+                <span class="rounded bg-red-100 px-2 py-1 font-bold text-red-700">
                   Información no disponible
                 </span>
               )
@@ -326,16 +326,16 @@ const {
 
   {
     stops && (
-      <details class="text-orange-500 dark:text-orange-400 open">
-        <summary class="cursor-pointer any-hover:bg-orange-100 dark:any-hover:bg-[#493A2F] group-open:bg-orange-100 dark:group-open:bg-[#493A2F] px-3 py-2 rounded transition-colors">
+      <details class="open text-orange-500 dark:text-orange-400">
+        <summary class="cursor-pointer rounded px-3 py-2 transition-colors any-hover:bg-orange-100 group-open:bg-orange-100 dark:any-hover:bg-[#493A2F] dark:group-open:bg-[#493A2F]">
           Conoce las principales paradas
         </summary>
-        <section class="border border-orange-100 dark:border-[#493A2F] rounded-b p-2">
+        <section class="rounded-b border border-orange-100 p-2 dark:border-[#493A2F]">
           <table class="w-full">
             <thead>
               <tr>
-                <th class="text-left px-2 py-1">Destino</th>
-                <th class="text-left px-2 py-1">Pasaje</th>
+                <th class="px-2 py-1 text-left">Destino</th>
+                <th class="px-2 py-1 text-left">Pasaje</th>
               </tr>
             </thead>
             <tbody>

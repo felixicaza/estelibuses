@@ -367,7 +367,7 @@ const southernStationFilter = southernStation.cities.filter((city) =>
             map !== '' ? (
               <>
                 <iframe
-                  class="rounded w-full bg-[#eee] dark:bg-[#362d25] border-0"
+                  class="w-full rounded border-0 bg-[#eee] dark:bg-[#362d25]"
                   src={map}
                   loading="lazy"
                   allowfullscreen="allowfullscreen"
@@ -376,13 +376,13 @@ const southernStationFilter = southernStation.cities.filter((city) =>
                   height="450"
                   title={`Distancia de viaje de Estelí hacia ${cityName}`}
                 />
-                <p class="text-xs mt-3">
+                <p class="mt-3 text-xs">
                   Previsualización de mapa proporcionada por Google Maps.
                 </p>
               </>
             ) : (
               <div
-                class="rounded w-full flex items-center justify-center bg-[#eee] dark:bg-[#362d25]"
+                class="flex w-full items-center justify-center rounded bg-[#eee] dark:bg-[#362d25]"
                 style="height: 450px"
               >
                 <p class="text-lg">Vista previa del mapa no disponible</p>

@@ -23,12 +23,12 @@ const mergeDataStations = [northernStation, southernStation]
       <div class="space-y-8">
         <article class="space-y-3">
           <h1
-            class="mb-8 text-center lg:mx-0 lg:text-left md:max-w-2xl md:mx-auto"
+            class="mb-8 text-center md:max-w-2xl md:mx-auto !lg:mx-0 lg:text-left"
           >
             Horarios de las terminales de buses de Estelí
           </h1>
           <p
-            class="text-center lg:max-w-lg lg:mx-0 lg:text-left md:max-w-2xl md:mx-auto"
+            class="text-center md:max-w-2xl md:mx-auto lg:max-w-lg !lg:mx-0 lg:text-left"
           >
             Conoce fácilmente todos los horarios de salida de los buses de las
             terminales de la ciudad de Estelí y ¡planea con exactitud la hora de
@@ -75,13 +75,13 @@ const mergeDataStations = [northernStation, southernStation]
                 {
                   mergeDataStations.map((info) =>
                     info.cities.map((city) => (
-                      <li class="cities text-left hidden">
+                      <li class="cities hidden text-left">
                         <a
-                          class="py-2 px-4 w-full flex gap-2  mt-2 font-semibold transition-colors any-hover:bg-orange-100 any-hover:text-orange-500 active:bg-orange-100 active:text-orange-500 dark:any-hover:bg-[#3E352C] dark:active:bg-[#3E352C] rounded"
+                          class="mt-2 flex w-full gap-2 rounded  py-2 px-4 font-semibold transition-colors active:bg-orange-100 active:text-orange-500 any-hover:bg-orange-100 any-hover:text-orange-500 dark:active:bg-[#3E352C] dark:any-hover:bg-[#3E352C]"
                           href={`/${info.slug}/${city.slug}`}
                         >
                           <svg
-                            class="fill-current mt-[0.2125rem]"
+                            class="mt-[0.2125rem] fill-current"
                             viewBox="0 0 24 24"
                             width="24"
                             height="24"
