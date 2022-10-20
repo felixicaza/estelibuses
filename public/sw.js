@@ -9,14 +9,14 @@ importScripts('/sw-app-shell.js')
 importScripts('/sw-app-shell-media.js')
 
 importScripts(
-  'https://storage.googleapis.com/workbox-cdn/releases/6.5.3/workbox-sw.js'
+  'https://storage.googleapis.com/workbox-cdn/releases/6.5.4/workbox-sw.js'
 )
 workbox.setConfig({ debug: false })
 workbox.googleAnalytics.initialize()
 
 const CACHE_CORE = 'core-v2.80'
 const CACHE_MEDIA = 'media-v2.80'
-const CACHE_ASSETS = 'assets-v2.24'
+const CACHE_ASSETS = 'assets-v2.80'
 
 self.addEventListener('install', (e) => {
   const setCacheCore = caches
@@ -25,7 +25,7 @@ self.addEventListener('install', (e) => {
 
   const setCacheMedia = caches
     .open(CACHE_MEDIA)
-    .then((mediaCache) => mediaCache.addAll(IMAGES_APP_SHELL))
+    .then((mediaCache) => mediaCache.addAll(MEDIA_APP_SHELL))
 
   e.waitUntil(Promise.all([setCacheCore, setCacheMedia]))
 })
@@ -56,7 +56,7 @@ self.addEventListener('fetch', (e) => {
       .then((newResponse) => {
         caches.open(CACHE_ASSETS).then((cache) => {
           if (
-            e.request.headers.get('accept').includes('text/css') &&
+            e.request.headers.get('accept').includes('text/css') ||
             e.request.headers.get('accept').includes('text/javascript')
           ) {
             cache.put(e.request, newResponse)
