@@ -28,7 +28,6 @@
     ],
     "./src/styles/*.css": "prettier --write \"./src/styles/*.css\"",
     "./**/*.json": "prettier --write \"./**/*.json\"",
-    "./**/*.xml": "prettier --write \"./**/*.xml\" --plugin @prettier/plugin-xml",
     "./**/*.md": "prettier --write \"./**/*.md\"",
     "./**/*.{yaml,yml}": "prettier --write \"./**/*.{yaml,yml}\""
   },
@@ -41,8 +40,12 @@
     "@astrojs/tailwind": "2.0.1",
     "@commitlint/cli": "17.1.2",
     "@commitlint/config-conventional": "17.1.0",
+    "astro-compress": "1.0.12",
+    "astro-compressor": "0.1.2",
+    "astro-critters": "1.0.5",
     "astro-eslint-parser": "0.7.2",
     "astro-seo-schema": "1.1.0",
+    "astro-sitemap": "0.4.1",
     "autoprefixer": "10.4.5",
     "cssnano": "5.1.7",
     "cssnano-preset-advanced": "5.3.3",
@@ -73,6 +76,7 @@
     "postcss-will-change-transition": "1.2.0",
     "prettier": "2.7.1",
     "prettier-plugin-astro": "0.5.4",
+    "prettier-plugin-tailwindcss": "0.1.13",
     "tailwindcss": "3.1.8"
   },
   "engines": {

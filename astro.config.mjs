@@ -1,6 +1,10 @@
 import { defineConfig } from 'astro/config'
 
 import tailwind from '@astrojs/tailwind'
+import critters from 'astro-critters'
+import sitemap from 'astro-sitemap'
+import compress from 'astro-compress'
+import compressor from 'astro-compressor'
 
 const website = 'https://estelibuses.web.app'
 
@@ -16,6 +20,34 @@ export default defineConfig({
       config: {
         applyBaseStyles: false
       }
-    })
+    }),
+    critters(),
+    sitemap({
+      canonicalURL: website,
+      filter(page) {
+        return !/(politica-de-privacidad)/g.test(page)
+      },
+      lastmod: new Date(),
+      createLinkInHead: false,
+      xmlns: {
+        xhtml: true
+      },
+      i18n: {
+        defaultLocale: 'es',
+        locales: {
+          es: 'es'
+        }
+      },
+      serialize(item) {
+        // eslint-disable-next-line no-param-reassign
+        item.url = item.url.replace(/\/$/g, '')
+        return item
+      }
+    }),
+    compress({
+      img: false,
+      svg: false
+    }),
+    compressor()
   ]
 })
