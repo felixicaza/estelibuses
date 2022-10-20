@@ -1,0 +1,71 @@
+<button
+  class="rounded font-semibold space-x-2.5 py-2.5 px-5 transition-colors flex items-center justify-center any-hover:bg-orange-600 active:outline-none active:ring-4 active:ring-orange-500 active:ring-opacity-75 bg-orange-500 text-white shadow-lg shadow-orange-600/30 any-hover:shadow-orange-700/30 active:shadow-orange-700/30 w-full opacity-0 pointer-events-none"
+  id="install"
+  ><span class="mobile !ml-0">
+    <svg class="fill-current" viewBox="0 0 24 24" width="20" height="20">
+      <path
+        d="m18 14 5-5-1.4-1.4-2.6 2.6V3h-2v7.2l-2.6-2.6L13 9l5 5m1 2v5a2 2 0 0 1-2 2H7a2 2 0 0 1-2-2V3c0-1.1.9-2 2-2h7v4H7v14h10v-3h2Z"
+      ></path>
+    </svg>
+  </span><span class="hidden desktop !ml-0">
+    <svg class="fill-current" viewBox="0 0 24 24" width="20" height="20">
+      <path
+        d="m17 14 5-5-1.4-1.4-2.6 2.6V3h-2v7.2l-2.6-2.6L12 9l5 5m6 0v2a2 2 0 0 1-2 2h-7v2h2v2H8v-2h2v-2H3a2 2 0 0 1-2-2V4c0-1.1.9-2 2-2h9v2H3v12h18v-2h2Z"
+      ></path>
+    </svg>
+  </span>
+  <span>Instalar Estelí Buses</span>
+</button>
+
+<script>
+  const installBtn = document.getElementById('install')
+  const installBtnMobileIcon = document.querySelector('#install .mobile')
+  const installBtnDesktopIcon = document.querySelector('#install .desktop')
+  let deferredPrompt
+
+  const soundPage = new Audio('/sounds/switch-tap.mp3')
+
+  const isMobile = navigator.userAgent.match(/Android|iPhone|iPad|iPod/i)
+
+  window.addEventListener('beforeinstallprompt', (e) => {
+    /**
+     * Enable show mini bar for install PWA
+     */
+    // e.preventDefault()
+
+    deferredPrompt = e
+
+    if (!isMobile) {
+      installBtnMobileIcon.classList.add('hidden')
+      installBtnDesktopIcon.classList.remove('hidden')
+    }
+
+    installBtn.classList.replace('opacity-0', 'opacity-100')
+    installBtn.classList.replace('pointer-events-none', 'pointer-events-auto')
+  })
+
+  window.addEventListener('appinstalled', () => {
+    deferredPrompt = null
+  })
+
+  installBtn.addEventListener('click', async () => {
+    if (localStorage.getItem('sounds_enabled') === 'true') {
+      soundPage.play()
+    }
+
+    if (
+      'vibrate' in navigator &&
+      localStorage.getItem('sounds_enabled') === 'false'
+    ) {
+      navigator.vibrate(80)
+    }
+
+    deferredPrompt.prompt()
+
+    const { outcome } = await deferredPrompt.userChoice
+
+    if (outcome === 'accepted') {
+      deferredPrompt = null
+    }
+  })
+</script>

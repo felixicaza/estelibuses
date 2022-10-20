@@ -3,20 +3,6 @@
 const APP_SHELL = [
   '/manifest.json',
 
-  '/css/lib/windi.css',
-  '/css/style.css',
-
-  '/js/app.js',
-  '/js/filter-others.js',
-  '/js/filter.js',
-  '/js/polyfill-lazyload.js',
-  '/js/search.js',
-  '/js/header-search.js',
-
-  '/js/lib/quicklink.umd.js',
-  '/js/lib/firebase-app.js',
-  '/js/lib/firebase-analytics.js',
-
   '/favicons/favicon.ico',
   '/favicons/favicon-16x16.png',
   '/favicons/favicon-32x32.png',
