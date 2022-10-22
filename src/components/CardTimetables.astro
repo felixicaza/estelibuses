@@ -1,13 +1,14 @@
 ---
 /* eslint-disable astro/jsx-a11y/media-has-caption */
 
+import { Picture } from 'astro-imagetools/components'
+
 import TakePic from '@components/TakePic.astro'
 
 const {
   index,
   note,
   transportPic,
-  transportPicLqip,
   departureTime,
   waitingAreaDeparture,
   cityName,
@@ -34,20 +35,17 @@ const {
   {
     transportPic !== '' ? (
       <section class="my-2">
-        <picture data-loading="lazy">
-          <source type="image/avif" data-srcset={`${transportPic}.avif`} />
-          <source type="image/webp" data-srcset={`${transportPic}.webp`} />
-          <source type="image/jpeg" data-srcset={`${transportPic}.jpg`} />
-          <img
-            class="lazyload aspect-[520/358] h-auto w-full rounded object-cover object-center"
-            alt={`Transporte ${transportName}`}
-            decoding="async"
-            fetchpriority="low"
-            loading="lazy"
-            srcset={transportPicLqip}
-            data-srcset={`${transportPic}.jpg`}
-          />
-        </picture>
+        <Picture
+          src={transportPic}
+          alt={`Transporte ${transportName}`}
+          attributes={{
+            link: {
+              fetchpriority: 'low'
+            }
+          }}
+          loading="lazy"
+          aspect={1.452513966}
+        />
       </section>
     ) : (
       <TakePic />
