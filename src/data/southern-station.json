@@ -4,12 +4,8 @@
   "location_description": "La Terminal Sur o mejor conocida como <em>Cotrán Sur</em> está ubicada <a href=\"/terminal-sur-esteli#mapa\">Contiguo al déposito de Restaurantes Tip-Top, en el Kilómetro 148 ½ de la Carretera Panamericana</a> de la ciudad de Estelí.",
   "location_map": "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3886.36184923696!2d-86.35461778460775!3d13.076238590787367!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8f718c13825dde4b%3A0x69c6340e0429bb84!2sCotran%20Sur!5e0!3m2!1ses-419!2sni!4v1645716354613!5m2!1ses-419!2sni",
   "phone": "2713-6162",
-  "station_image": "/img/terminal-sur-estelibuses-felix-icaza",
-  "station_image_mobile": "/img/terminal-sur-estelibuses-mobile-felix-icaza",
-  "station_image_breakpoint": "912w",
-  "station_image_aspect_mobile": "aspect-[736/982]",
-  "station_image_aspect_ratio": "lg:aspect-[1024/576]",
-  "station_image_lqip": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAoAAAAGCAYAAAD68A/GAAAAAklEQVR4AewaftIAAADcSURBVAXBy07CQABA0TvTaXi0FQU1BI07oyYmhu9l48q4cKG/oHsVQ3gsxASJGMFCtTKljxnPEVGSWd+VSCkxxmCtJbeCp8jQW+Z0XmPkeICahAVN3+KVNwx/59w/r7nqT3nrdon7L3jhBwe7FdT13Q2zRY/B6IHZaIkKXVbRAkcU7GC5aLc5PDlDDW8v+f56pyE1K1PDrSQcp5+0AkhTS6s0peYfofYbAc29c3SiKf9p8izFqSvG8QZH/OClBaePHZQwCVJIgqpDUN2iKCx5vk3dZMhCU9JzJuuAfxueaDVYwy/MAAAAAElFTkSuQmCC",
+  "station_image": "/img/terminal-sur-estelibuses-felix-icaza.jpg",
+  "station_image_mobile": "/img/terminal-sur-estelibuses-mobile-felix-icaza.jpg",
   "social_media_image": "/img/og/cotran-sur-estelibuses.jpg",
   "theme_color": "#fbbf24",
   "header_color": "bg-gradient-to-t from-[#feffeb] to-[#feffdb] dark:from-[#2d2d1b] dark:to-[#2d2d1b]",
@@ -39,8 +35,7 @@
     {
       "name": "Managua",
       "slug": "horarios-esteli-managua",
-      "image": "/img/terminal-sur/horarios-esteli-managua-estelibuses-felix-icaza-card",
-      "lqip": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAoAAAAGCAYAAAD68A/GAAAAAklEQVR4AewaftIAAADCSURBVBXBS04CQRRA0Vu//hQtREVi4hrYsCtx4hKc6AAHJkbFmKCY0EC3bVW/ZzzHXN8lrRwY6yidEp0iQBIIBkSUrOCv6pHolcJlTgslj0LGogrBKl02NF7w+5cHhjJSVJGfWBFQbN3w7yCKG1o2LuK3TzeU5YQQIse+Z9ZEcBVNbDgJNfL9yJtY/Or+Fm8D+9bw2XYc+hFXDiyXc5L8snvviIuMX2++mE2V83nNMSkXl8pkkVhvn2l3melZ4ONV+APGylZShWU3bgAAAABJRU5ErkJggg==",
+      "image": "/img/terminal-sur/horarios-esteli-managua-estelibuses-felix-icaza-card.jpg",
       "social_media_image": "/img/og/horarios-esteli-managua-cotran-sur-estelibuses.jpg",
       "title": "Horarios de los Buses de Estelí hacia Managua - Terminal Sur | Estelí Buses",
       "description": "Conoce Todos los Horarios de los Buses EXPRESOS y RUTEADOS que salen desde Estelí hacia Managua desde la Terminal Sur.",
@@ -93,7 +88,6 @@
       "timetables": [
         {
           "transport_pic": "",
-          "transport_pic_lqip": "",
           "departure_time": "03:30",
           "waiting_area_departure": "",
           "return_time": "",
@@ -177,7 +171,6 @@
         },
         {
           "transport_pic": "",
-          "transport_pic_lqip": "",
           "departure_time": "04:00",
           "waiting_area_departure": "",
           "return_time": "",
@@ -261,7 +254,6 @@
         },
         {
           "transport_pic": "",
-          "transport_pic_lqip": "",
           "departure_time": "04:30",
           "waiting_area_departure": "",
           "return_time": "",
@@ -345,7 +337,6 @@
         },
         {
           "transport_pic": "",
-          "transport_pic_lqip": "",
           "departure_time": "04:45",
           "waiting_area_departure": "",
           "return_time": "",
@@ -359,7 +350,6 @@
         },
         {
           "transport_pic": "",
-          "transport_pic_lqip": "",
           "departure_time": "05:00",
           "waiting_area_departure": "",
           "return_time": "",
@@ -443,7 +433,6 @@
         },
         {
           "transport_pic": "",
-          "transport_pic_lqip": "",
           "departure_time": "05:30",
           "waiting_area_departure": "",
           "return_time": "",
@@ -527,7 +516,6 @@
         },
         {
           "transport_pic": "",
-          "transport_pic_lqip": "",
           "departure_time": "05:45",
           "waiting_area_departure": "",
           "return_time": "",
@@ -541,7 +529,6 @@
         },
         {
           "transport_pic": "",
-          "transport_pic_lqip": "",
           "departure_time": "06:00",
           "waiting_area_departure": "",
           "return_time": "",
@@ -625,7 +612,6 @@
         },
         {
           "transport_pic": "",
-          "transport_pic_lqip": "",
           "departure_time": "06:30",
           "waiting_area_departure": "",
           "return_time": "",
@@ -709,7 +695,6 @@
         },
         {
           "transport_pic": "",
-          "transport_pic_lqip": "",
           "departure_time": "06:45",
           "waiting_area_departure": "",
           "return_time": "",
@@ -723,7 +708,6 @@
         },
         {
           "transport_pic": "",
-          "transport_pic_lqip": "",
           "departure_time": "07:00",
           "waiting_area_departure": "",
           "return_time": "",
@@ -807,7 +791,6 @@
         },
         {
           "transport_pic": "",
-          "transport_pic_lqip": "",
           "departure_time": "07:15",
           "waiting_area_departure": "",
           "return_time": "",
@@ -821,7 +804,6 @@
         },
         {
           "transport_pic": "",
-          "transport_pic_lqip": "",
           "departure_time": "07:30",
           "waiting_area_departure": "",
           "return_time": "",
@@ -905,7 +887,6 @@
         },
         {
           "transport_pic": "",
-          "transport_pic_lqip": "",
           "departure_time": "08:00",
           "waiting_area_departure": "",
           "return_time": "15:00",
@@ -989,7 +970,6 @@
         },
         {
           "transport_pic": "",
-          "transport_pic_lqip": "",
           "departure_time": "08:30",
           "waiting_area_departure": "",
           "return_time": "",
@@ -1073,7 +1053,6 @@
         },
         {
           "transport_pic": "",
-          "transport_pic_lqip": "",
           "departure_time": "08:45",
           "waiting_area_departure": "",
           "return_time": "13:40",
@@ -1087,7 +1066,6 @@
         },
         {
           "transport_pic": "",
-          "transport_pic_lqip": "",
           "departure_time": "09:00",
           "waiting_area_departure": "",
           "return_time": "",
@@ -1171,7 +1149,6 @@
         },
         {
           "transport_pic": "",
-          "transport_pic_lqip": "",
           "departure_time": "09:30",
           "waiting_area_departure": "",
           "return_time": "",
@@ -1255,7 +1232,6 @@
         },
         {
           "transport_pic": "",
-          "transport_pic_lqip": "",
           "departure_time": "09:45",
           "waiting_area_departure": "",
           "return_time": "",
@@ -1269,7 +1245,6 @@
         },
         {
           "transport_pic": "",
-          "transport_pic_lqip": "",
           "departure_time": "10:00",
           "waiting_area_departure": "",
           "return_time": "",
@@ -1353,7 +1328,6 @@
         },
         {
           "transport_pic": "",
-          "transport_pic_lqip": "",
           "departure_time": "10:30",
           "waiting_area_departure": "",
           "return_time": "",
@@ -1437,7 +1411,6 @@
         },
         {
           "transport_pic": "",
-          "transport_pic_lqip": "",
           "departure_time": "11:00",
           "waiting_area_departure": "",
           "return_time": "",
@@ -1521,7 +1494,6 @@
         },
         {
           "transport_pic": "",
-          "transport_pic_lqip": "",
           "departure_time": "11:30",
           "waiting_area_departure": "",
           "return_time": "",
@@ -1605,7 +1577,6 @@
         },
         {
           "transport_pic": "",
-          "transport_pic_lqip": "",
           "departure_time": "12:00",
           "waiting_area_departure": "",
           "return_time": "",
@@ -1689,7 +1660,6 @@
         },
         {
           "transport_pic": "",
-          "transport_pic_lqip": "",
           "departure_time": "12:15",
           "waiting_area_departure": "",
           "return_time": "",
@@ -1703,7 +1673,6 @@
         },
         {
           "transport_pic": "",
-          "transport_pic_lqip": "",
           "departure_time": "12:30",
           "waiting_area_departure": "",
           "return_time": "",
@@ -1787,7 +1756,6 @@
         },
         {
           "transport_pic": "",
-          "transport_pic_lqip": "",
           "departure_time": "13:00",
           "waiting_area_departure": "",
           "return_time": "",
@@ -1871,7 +1839,6 @@
         },
         {
           "transport_pic": "",
-          "transport_pic_lqip": "",
           "departure_time": "13:15",
           "waiting_area_departure": "",
           "return_time": "",
@@ -1885,7 +1852,6 @@
         },
         {
           "transport_pic": "",
-          "transport_pic_lqip": "",
           "departure_time": "13:30",
           "waiting_area_departure": "",
           "return_time": "",
@@ -1969,7 +1935,6 @@
         },
         {
           "transport_pic": "",
-          "transport_pic_lqip": "",
           "departure_time": "14:00",
           "waiting_area_departure": "",
           "return_time": "",
@@ -2053,7 +2018,6 @@
         },
         {
           "transport_pic": "",
-          "transport_pic_lqip": "",
           "departure_time": "14:15",
           "waiting_area_departure": "",
           "return_time": "",
@@ -2067,7 +2031,6 @@
         },
         {
           "transport_pic": "",
-          "transport_pic_lqip": "",
           "departure_time": "14:30",
           "waiting_area_departure": "",
           "return_time": "",
@@ -2151,7 +2114,6 @@
         },
         {
           "transport_pic": "",
-          "transport_pic_lqip": "",
           "departure_time": "15:00",
           "waiting_area_departure": "",
           "return_time": "",
@@ -2235,7 +2197,6 @@
         },
         {
           "transport_pic": "",
-          "transport_pic_lqip": "",
           "departure_time": "15:15",
           "waiting_area_departure": "",
           "return_time": "",
@@ -2249,7 +2210,6 @@
         },
         {
           "transport_pic": "",
-          "transport_pic_lqip": "",
           "departure_time": "15:30",
           "waiting_area_departure": "",
           "return_time": "",
@@ -2333,7 +2293,6 @@
         },
         {
           "transport_pic": "",
-          "transport_pic_lqip": "",
           "departure_time": "16:00",
           "waiting_area_departure": "",
           "return_time": "",
@@ -2417,7 +2376,6 @@
         },
         {
           "transport_pic": "",
-          "transport_pic_lqip": "",
           "departure_time": "16:30",
           "waiting_area_departure": "",
           "return_time": "",
@@ -2501,7 +2459,6 @@
         },
         {
           "transport_pic": "",
-          "transport_pic_lqip": "",
           "departure_time": "17:00",
           "waiting_area_departure": "",
           "return_time": "",
@@ -2585,7 +2542,6 @@
         },
         {
           "transport_pic": "",
-          "transport_pic_lqip": "",
           "departure_time": "18:00",
           "waiting_area_departure": "",
           "return_time": "",
@@ -2672,8 +2628,7 @@
     {
       "name": "Matagalpa",
       "slug": "horarios-esteli-matagalpa",
-      "image": "/img/terminal-sur/horarios-esteli-matagalpa-estelibuses-felix-icaza-card",
-      "lqip": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAoAAAAGCAYAAAD68A/GAAAAAklEQVR4AewaftIAAADQSURBVAXB21KCQACA4R9YKBaUlE4Yjc7Y4TV7id6il+gNumzGu2Q0R0NdGGU5LH2f9f7x2ffYSBemtxFS+pQqZ1P02EZTqTVfixXiUkA08PG6ErVf41kxwpxJQpemblCt5HU2wc5Wv2yKFse2GEoPT4AvA+5vRjymE67HVzi0iHyb8TyfciF6PFdwPpVoXVOUisNREYQRWmucqty93cURL09zjOnId3/k+yNpmvIwSRiPYlrTI7rqxCFbsPwOGIYh2+UPBpsmGaAKQdPU1ErxD8RhXNMpHuGqAAAAAElFTkSuQmCC",
+      "image": "/img/terminal-sur/horarios-esteli-matagalpa-estelibuses-felix-icaza-card.jpg",
       "social_media_image": "/img/og/horarios-esteli-matagalpa-cotran-sur-estelibuses.jpg",
       "title": "Horarios de los Buses de Estelí hacia Matagalpa | Estelí Buses",
       "description": "Conoce todos los horarios de los buses que salen desde Estelí hacia Matagalpa.",
@@ -2684,7 +2639,6 @@
       "timetables": [
         {
           "transport_pic": "",
-          "transport_pic_lqip": "",
           "departure_time": "05:15",
           "waiting_area_departure": "",
           "return_time": "",
@@ -2772,7 +2726,6 @@
         },
         {
           "transport_pic": "",
-          "transport_pic_lqip": "",
           "departure_time": "05:45",
           "waiting_area_departure": "",
           "return_time": "",
@@ -2860,7 +2813,6 @@
         },
         {
           "transport_pic": "",
-          "transport_pic_lqip": "",
           "departure_time": "06:15",
           "waiting_area_departure": "",
           "return_time": "",
@@ -2948,7 +2900,6 @@
         },
         {
           "transport_pic": "",
-          "transport_pic_lqip": "",
           "departure_time": "06:45",
           "waiting_area_departure": "",
           "return_time": "",
@@ -3036,7 +2987,6 @@
         },
         {
           "transport_pic": "",
-          "transport_pic_lqip": "",
           "departure_time": "07:15",
           "waiting_area_departure": "",
           "return_time": "",
@@ -3124,7 +3074,6 @@
         },
         {
           "transport_pic": "",
-          "transport_pic_lqip": "",
           "departure_time": "07:45",
           "waiting_area_departure": "",
           "return_time": "",
@@ -3212,7 +3161,6 @@
         },
         {
           "transport_pic": "",
-          "transport_pic_lqip": "",
           "departure_time": "08:15",
           "waiting_area_departure": "",
           "return_time": "",
@@ -3300,7 +3248,6 @@
         },
         {
           "transport_pic": "",
-          "transport_pic_lqip": "",
           "departure_time": "08:45",
           "waiting_area_departure": "",
           "return_time": "",
@@ -3388,7 +3335,6 @@
         },
         {
           "transport_pic": "",
-          "transport_pic_lqip": "",
           "departure_time": "09:15",
           "waiting_area_departure": "",
           "return_time": "",
@@ -3476,7 +3422,6 @@
         },
         {
           "transport_pic": "",
-          "transport_pic_lqip": "",
           "departure_time": "09:45",
           "waiting_area_departure": "",
           "return_time": "",
@@ -3564,7 +3509,6 @@
         },
         {
           "transport_pic": "",
-          "transport_pic_lqip": "",
           "departure_time": "10:15",
           "waiting_area_departure": "",
           "return_time": "06:50",
@@ -3652,7 +3596,6 @@
         },
         {
           "transport_pic": "",
-          "transport_pic_lqip": "",
           "departure_time": "10:45",
           "waiting_area_departure": "",
           "return_time": "",
@@ -3740,7 +3683,6 @@
         },
         {
           "transport_pic": "",
-          "transport_pic_lqip": "",
           "departure_time": "11:15",
           "waiting_area_departure": "",
           "return_time": "07:50",
@@ -3828,7 +3770,6 @@
         },
         {
           "transport_pic": "",
-          "transport_pic_lqip": "",
           "departure_time": "11:45",
           "waiting_area_departure": "",
           "return_time": "",
@@ -3916,7 +3857,6 @@
         },
         {
           "transport_pic": "",
-          "transport_pic_lqip": "",
           "departure_time": "12:15",
           "waiting_area_departure": "",
           "return_time": "",
@@ -4004,7 +3944,6 @@
         },
         {
           "transport_pic": "",
-          "transport_pic_lqip": "",
           "departure_time": "12:45",
           "waiting_area_departure": "",
           "return_time": "",
@@ -4092,7 +4031,6 @@
         },
         {
           "transport_pic": "",
-          "transport_pic_lqip": "",
           "departure_time": "13:15",
           "waiting_area_departure": "",
           "return_time": "",
@@ -4180,7 +4118,6 @@
         },
         {
           "transport_pic": "",
-          "transport_pic_lqip": "",
           "departure_time": "13:45",
           "waiting_area_departure": "",
           "return_time": "",
@@ -4268,7 +4205,6 @@
         },
         {
           "transport_pic": "",
-          "transport_pic_lqip": "",
           "departure_time": "14:15",
           "waiting_area_departure": "",
           "return_time": "",
@@ -4356,7 +4292,6 @@
         },
         {
           "transport_pic": "",
-          "transport_pic_lqip": "",
           "departure_time": "14:45",
           "waiting_area_departure": "",
           "return_time": "",
@@ -4444,7 +4379,6 @@
         },
         {
           "transport_pic": "",
-          "transport_pic_lqip": "",
           "departure_time": "15:15",
           "waiting_area_departure": "",
           "return_time": "05:00",
@@ -4532,7 +4466,6 @@
         },
         {
           "transport_pic": "",
-          "transport_pic_lqip": "",
           "departure_time": "15:45",
           "waiting_area_departure": "",
           "return_time": "",
@@ -4620,7 +4553,6 @@
         },
         {
           "transport_pic": "",
-          "transport_pic_lqip": "",
           "departure_time": "16:15",
           "waiting_area_departure": "",
           "return_time": "12:50",
@@ -4708,7 +4640,6 @@
         },
         {
           "transport_pic": "",
-          "transport_pic_lqip": "",
           "departure_time": "16:45",
           "waiting_area_departure": "",
           "return_time": "",
@@ -4796,7 +4727,6 @@
         },
         {
           "transport_pic": "",
-          "transport_pic_lqip": "",
           "departure_time": "17:45",
           "waiting_area_departure": "",
           "return_time": "",
@@ -4887,8 +4817,7 @@
     {
       "name": "León",
       "slug": "horarios-esteli-leon",
-      "image": "/img/terminal-sur/horarios-esteli-leon-estelibuses-felix-icaza-card",
-      "lqip": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAoAAAAGCAYAAAD68A/GAAAAAklEQVR4AewaftIAAADWSURBVAXBzVKCUACA0e8CJmg4mApZMSrTj8207kF6m3Y9TS/juGhbTi1cSF7JQQuBe8HOEU/Pr8fpqIfSGrnL4aj5UzAauERdwVf8ywEbK2hr6tWcIBiiqow2ezLRxM5d3ucfIAy60SNWOHAw9zZeo8DpG8h1wa3fYSFTzv0eCIF5UmPlOwl5idYapRRlqcgOJZ5Z0mi6JD9bTjsaIzxzGF8NSeIVD/dT3mYzbq4jlp8LxuEFQd/DtyvMu8nlSyJjtCqQmzWtlk2abrGo2SSSShV8x0v+AfDfXVGAYAnGAAAAAElFTkSuQmCC",
+      "image": "/img/terminal-sur/horarios-esteli-leon-estelibuses-felix-icaza-card.jpg",
       "social_media_image": "/img/og/horarios-esteli-leon-cotran-sur-estelibuses.jpg",
       "title": "Horarios de los Buses de Estelí hacia León | Estelí Buses",
       "description": "Conoce todos los horarios de los buses que salen desde Estelí hacia León.",
@@ -4900,7 +4829,6 @@
       "timetables": [
         {
           "transport_pic": "",
-          "transport_pic_lqip": "",
           "departure_time": "05:00",
           "waiting_area_departure": "",
           "return_time": "",
@@ -4914,7 +4842,6 @@
         },
         {
           "transport_pic": "",
-          "transport_pic_lqip": "",
           "departure_time": "05:45",
           "waiting_area_departure": "",
           "return_time": "",
@@ -4927,8 +4854,7 @@
           "trip_duration": "2.5 horas"
         },
         {
-          "transport_pic": "/img/leon/transporte-acuna",
-          "transport_pic_lqip": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAoAAAAHCAYAAAAxrNxjAAAAAklEQVR4AewaftIAAADlSURBVDXBsUrDQACA4f+Si5EWAmoIWkkRrUKFtpNv4OL7+CC+hrg5FhwdBMGhLqViIVRESrXYpBd6yZ3J4PeJcnhtU625ecsJ7DHubozn7+BTcnHepju/QxQKSUUAsyRnPH4i2PsgOjzFiAZrpem2BTWHmnVJf5dM3yeMnh/Qq4RcBEyST5RaU3OoGAvLny2ano+0kq+FYpuMPJsBJTVJxREunVaPzlkfXZaEByfoTcFR1EO6L4DBoWJMQTIasp9+M2h4xGrOoClg+so/ScV1BHEc8nh/i8k2mKhFuFrQv7rE2ojaHzZBWQTSnYi+AAAAAElFTkSuQmCC",
+          "transport_pic": "/img/leon/transporte-acuna.jpg",
           "departure_time": "06:45",
           "waiting_area_departure": "",
           "return_time": "",
@@ -4945,8 +4871,7 @@
     {
       "name": "La Trinidad",
       "slug": "horarios-esteli-la-trinidad",
-      "image": "/img/terminal-sur/horarios-esteli-la-trinidad-estelibuses-felix-icaza-card",
-      "lqip": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAoAAAAGCAYAAAD68A/GAAAAAklEQVR4AewaftIAAADoSURBVAXB30rCUADA4d85m5abs00XKQsq6CJml1H0LEH0KD5DD9FN9AJdB1FEF0ImaZaaomDNP5WbubO+T1xdPybFdZvRWx2ZsfDLPum0zvQ7JIpCTDPLIhZoJXetkrMdvtotpJJs7fkshcaKlhBMZuTMDO/tBlrBiSv1xg1uqUi3+UT/Y8D93S2LREAc0eu8cnF5jm5kHT7VhIdYI4iHHFVfmKZ2UPMAxkOMZQ86ffTnWgtlpTg49hiLJspYpWBvkHddpKEzH8zY9gT62ckptVFI9SfgV20SWB77+RApANPG2j3E+Av5B/2XWtOuL5SIAAAAAElFTkSuQmCC",
+      "image": "/img/terminal-sur/horarios-esteli-la-trinidad-estelibuses-felix-icaza-card.jpg",
       "social_media_image": "/img/og/horarios-esteli-la-trinidad-cotran-sur-estelibuses.jpg",
       "title": "Horarios de los Buses de Estelí hacia La Trinidad | Estelí Buses",
       "description": "Conoce todos los horarios de los buses que salen desde Estelí hacia La Trinidad.",
@@ -4957,7 +4882,6 @@
       "timetables": [
         {
           "transport_pic": "",
-          "transport_pic_lqip": "",
           "departure_time": "17:15",
           "waiting_area_departure": "",
           "return_time": "",
@@ -4971,7 +4895,6 @@
         },
         {
           "transport_pic": "",
-          "transport_pic_lqip": "",
           "departure_time": "17:30",
           "waiting_area_departure": "",
           "return_time": "",
@@ -4985,7 +4908,6 @@
         },
         {
           "transport_pic": "",
-          "transport_pic_lqip": "",
           "departure_time": "18:20",
           "waiting_area_departure": "",
           "return_time": "",
@@ -4999,7 +4921,6 @@
         },
         {
           "transport_pic": "",
-          "transport_pic_lqip": "",
           "departure_time": "18:30",
           "waiting_area_departure": "",
           "return_time": "",
@@ -5013,7 +4934,6 @@
         },
         {
           "transport_pic": "",
-          "transport_pic_lqip": "",
           "departure_time": "19:00",
           "waiting_area_departure": "",
           "return_time": "",
@@ -5030,8 +4950,7 @@
     {
       "name": "San Nicolás",
       "slug": "horarios-esteli-san-nicolas",
-      "image": "/img/terminal-sur/horarios-esteli-san-nicolas-estelibuses-felix-icaza-card",
-      "lqip": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAoAAAAGCAYAAAD68A/GAAAAAklEQVR4AewaftIAAAD2SURBVAXBu0rDYACA0S/kDw69kBCqtqTGilKoYMVNRMVJENwEVydBxHfwKVwcxUnwgmuH4lY7OMSIuMTGViGaBlpprebiOZI4vE+StEo2DtFeauxsrzPz2+ItzmHJJn7XZ38tjzDzKoWMQnHksuKc0HoV6M9nDJaPGKbm2DKe6P1MIA6m2yh6CTVd5sFZJJYCTj98NjXBblkiGiyhiBDRaV6SjT08Mc5dW2c1eGTenOWzeYtVv0KOQzSjimwrC8delGXDbpBxLaphSL/TpfIXERglbhyJmhsjLvam+BqNcX1uY1YmafT6DKOEVE7nO5IpJAFF3vkHnNFeeDtzHrAAAAAASUVORK5CYII=",
+      "image": "/img/terminal-sur/horarios-esteli-san-nicolas-estelibuses-felix-icaza-card.jpg",
       "social_media_image": "/img/og/horarios-esteli-san-nicolas-cotran-sur-estelibuses.jpg",
       "title": "Horarios de los Buses de Estelí hacia San Nicolás | Estelí Buses",
       "description": "Conoce todos los horarios de los buses que salen desde Estelí hacia San Nicolás.",
@@ -5042,7 +4961,6 @@
       "timetables": [
         {
           "transport_pic": "",
-          "transport_pic_lqip": "",
           "departure_time": "07:00",
           "waiting_area_departure": "",
           "return_time": "",
@@ -5056,7 +4974,6 @@
         },
         {
           "transport_pic": "",
-          "transport_pic_lqip": "",
           "departure_time": "09:00",
           "waiting_area_departure": "",
           "return_time": "",
@@ -5070,7 +4987,6 @@
         },
         {
           "transport_pic": "",
-          "transport_pic_lqip": "",
           "departure_time": "12:00",
           "waiting_area_departure": "",
           "return_time": "",
@@ -5084,7 +5000,6 @@
         },
         {
           "transport_pic": "",
-          "transport_pic_lqip": "",
           "departure_time": "14:00",
           "waiting_area_departure": "",
           "return_time": "",
@@ -5098,7 +5013,6 @@
         },
         {
           "transport_pic": "",
-          "transport_pic_lqip": "",
           "departure_time": "15:00",
           "waiting_area_departure": "",
           "return_time": "",
@@ -5112,7 +5026,6 @@
         },
         {
           "transport_pic": "",
-          "transport_pic_lqip": "",
           "departure_time": "16:30",
           "waiting_area_departure": "",
           "return_time": "",
@@ -5126,7 +5039,6 @@
         },
         {
           "transport_pic": "",
-          "transport_pic_lqip": "",
           "departure_time": "18:00",
           "waiting_area_departure": "",
           "return_time": "",
@@ -5143,8 +5055,7 @@
     {
       "name": "Tisey - La Estanzuela",
       "slug": "horarios-esteli-tisey-la-estanzuela",
-      "image": "/img/terminal-sur/horarios-esteli-tisey-la-estanzuela-estelibuses-felix-icaza-card",
-      "lqip": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAoAAAAGCAYAAAD68A/GAAAAAklEQVR4AewaftIAAADXSURBVAXBv07CQADA4d9d25RisS1agolxYCDRgTCoz+DqG+ibOPt6DiY6OBkoCtc/lGstvfP7xOJ6Zl0sTdvQ6pa75ZzZ8p7b51eSQPCRG4aewLmaTl6+V2vOxhESiTGWKluR9z6Lmzlxl/H5/oZ4enywujtSFgWb7Y74NMSRECQxcuDQdC2qWePqes8oGSOs4VcVCMcjPY/pTY/qvvjTlmJT41bqB0dadmWNkJLLacpJMCCvtuQqYF9m9K3AHUURSncIx+MiHXI4aELfw+Dja8lRhMQTyz+4tl0rJVSFpQAAAABJRU5ErkJggg==",
+      "image": "/img/terminal-sur/horarios-esteli-tisey-la-estanzuela-estelibuses-felix-icaza-card.jpg",
       "social_media_image": "/img/og/horarios-esteli-tisey-la-estanzuela-cotran-sur-estelibuses.jpg",
       "title": "Horarios de los Buses de Estelí hacia Tisey - La Estanzuela | Estelí Buses",
       "description": "Conoce todos los horarios de los buses que salen desde Estelí hacia Tisey - La Estanzuela.",
@@ -5155,7 +5066,6 @@
       "timetables": [
         {
           "transport_pic": "",
-          "transport_pic_lqip": "",
           "departure_time": "06:30",
           "waiting_area_departure": "",
           "return_time": "",
@@ -5172,8 +5082,7 @@
     {
       "name": "Yalí",
       "slug": "horarios-esteli-yali",
-      "image": "/img/terminal-sur/horarios-esteli-yali-estelibuses-felix-icaza-card",
-      "lqip": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAoAAAAGCAYAAAD68A/GAAAAAklEQVR4AewaftIAAADkSURBVAXBTUvCAACA4XdfbnOuyeZGjppFVEJBXvJWl079xs7dgsBbHYOgQ4cOXqJQiwiUGcO1SfvseYTR3W0dJzHrdUQQ9BBqEcft4jmbVEKBUPxh6E3k69EVhrIBSszLpCQOIS8VDo8H+K6IXtY01Ai559qoVkxl9dHULYKdNqusQNFrZosfzHDCNAqRl1FKlZoIiyV76hxn+5R+x2T8uqDV+EV29vGNBNl3u5wPL1GaOfePT2ThJ4V+wNnghHn+gCK2+Pr2kNu7H7zNbpAqm4ujIZpmk2QScbLC6ViM359JJY9/jYNTFOKOvXgAAAAASUVORK5CYII=",
+      "image": "/img/terminal-sur/horarios-esteli-yali-estelibuses-felix-icaza-card.jpg",
       "social_media_image": "/img/og/horarios-esteli-yali-cotran-sur-estelibuses.jpg",
       "title": "Horarios de los Buses de Estelí hacia Yalí - Terminal Sur | Estelí Buses",
       "description": "Conoce todos los horarios de los buses que salen desde Estelí hacia Yalí.",
@@ -5184,7 +5093,6 @@
       "timetables": [
         {
           "transport_pic": "",
-          "transport_pic_lqip": "",
           "departure_time": "06:45",
           "waiting_area_departure": "",
           "return_time": "",
@@ -5201,8 +5109,7 @@
     {
       "name": "Achuapa",
       "slug": "horarios-esteli-achuapa",
-      "image": "/img/terminal-sur/horarios-esteli-achuapa-estelibuses-felix-icaza-card",
-      "lqip": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAoAAAAGCAYAAAD68A/GAAAAAklEQVR4AewaftIAAADnSURBVAXBwUrCYADA8f/mt4xJTd3mbOVBLKFWHoogzBeI6gV6km49QpfuPUpXBYkOEXSMWqJOEm1Ot7av309p3VzKnFPDPr9FZpClK+Kne8LxF871HcqwhybniIYx5CdJyL88EAxG6KVtis4+teML0viVaPhM2XYR6XTAbOqzKryTRDpq9InlHuL3HtHljN9A4soKqlVYQ1lm6Krkaq9Np95AG3UJ3r7JKZL1fMwinCAEEm/LZOegjWeXMZqn9Lub0DojRGJtgPbRR5xUm5jmEVWrglUyyMY+7m4dKSR/ywXJfELR6/APdbRXDs70WfgAAAAASUVORK5CYII=",
+      "image": "/img/terminal-sur/horarios-esteli-achuapa-estelibuses-felix-icaza-card.jpg",
       "social_media_image": "/img/og/horarios-esteli-achuapa-cotran-sur-estelibuses.jpg",
       "title": "Horarios de los Buses de Estelí hacia Achuapa - Terminal Sur | Estelí Buses",
       "description": "Conoce todos los horarios de los buses que salen desde Estelí hacia Achuapa.",
@@ -5213,7 +5120,6 @@
       "timetables": [
         {
           "transport_pic": "",
-          "transport_pic_lqip": "",
           "departure_time": "07:00",
           "waiting_area_departure": "",
           "return_time": "",
@@ -5230,8 +5136,7 @@
     {
       "name": "Murra",
       "slug": "horarios-esteli-murra",
-      "image": "/img/terminal-sur/horarios-esteli-murra-estelibuses-felix-icaza-card",
-      "lqip": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAoAAAAGCAYAAAD68A/GAAAAAklEQVR4AewaftIAAADeSURBVAXBXUvCUACA4Xc7Bz/OJmvtxjKIJIwo+gNdd9dt/8f/Fd1HgojsQhv0YbIywbFYHnOenZ7HeRw92HgS8zQYY6oNnifY8zvc3twRhfs0G4oSiXCU7ifJDCl3BC2Hyhg224xRPKbQJV4rJPB9hMh++uWuot2JqNcFpqpwrEU1DavvV4bxPc+TIfL6/Jjfms90MKV70cWVloaqoQuNlQVrnfOSfSE9L6B3ecVpWfGWvlPqFVHUYzFfkhvLxzzDWpBCSKR0OYxC/tySA3VC++iMmUr4XKSs0xy9FfwDnJZg5vHLKqgAAAAASUVORK5CYII=",
+      "image": "/img/terminal-sur/horarios-esteli-murra-estelibuses-felix-icaza-card.jpg",
       "social_media_image": "/img/og/horarios-esteli-murra-cotran-sur-estelibuses.jpg",
       "title": "Horarios de los Buses de Estelí hacia Murra | Estelí Buses",
       "description": "Conoce todos los horarios de los buses que salen desde Estelí hacia Murra.",
@@ -5242,7 +5147,6 @@
       "timetables": [
         {
           "transport_pic": "",
-          "transport_pic_lqip": "",
           "departure_time": "04:45",
           "waiting_area_departure": "",
           "return_time": "",
@@ -5259,8 +5163,7 @@
     {
       "name": "El Espinal",
       "slug": "horarios-esteli-el-espinal",
-      "image": "/img/terminal-sur/horarios-esteli-el-espinal-estelibuses-felix-icaza-card",
-      "lqip": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAoAAAAGCAYAAAD68A/GAAAAAklEQVR4AewaftIAAADiSURBVAXBTU+CAACA4TcgQRwM02KTZWs4qkMH19bFeerQb+jQpXM/tK+t8lBbHbQ1NmOWgHwICPQ8W+fji1pcB5QVbKsKznDI8eUNm0aLTFTIohDLPkLS5IJN8kcYluRhjjv55kD36HRtwjRnsap4eVogGSzpOxb3zzP2um3KMkHwC/x4xuPkDtGQSaIUqaggTDPauzucngxwBjaj8YjP1wfc6Rd+nJPmNdLt9RWyqlEJDfr7FoIgkgVz6nzNmXPIz3LF1PWQ9I6J9xvQMw0+3t+os5hqHaFrLXqmQVNVMJoC/44GX6/GGyjlAAAAAElFTkSuQmCC",
+      "image": "/img/terminal-sur/horarios-esteli-el-espinal-estelibuses-felix-icaza-card.jpg",
       "social_media_image": "/img/og/horarios-esteli-el-espinal-cotran-sur-estelibuses.jpg",
       "title": "Horarios de los Buses de Estelí hacia El Espinal | Estelí Buses",
       "description": "Conoce todos los horarios de los buses que salen desde Estelí hacia El Espinal.",
@@ -5271,7 +5174,6 @@
       "timetables": [
         {
           "transport_pic": "",
-          "transport_pic_lqip": "",
           "departure_time": "14:00",
           "waiting_area_departure": "",
           "return_time": "",
