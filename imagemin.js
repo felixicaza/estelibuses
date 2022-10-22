@@ -22,14 +22,5 @@
 
   minify('dist/favicons/*.png', 'dist/favicons')
   minify('dist/manifest/*.png', 'dist/manifest')
-  minify('dist/img/terminal-sur/*.{jpg,jpeg}', 'dist/img/terminal-sur')
-  minify('dist/img/terminal-norte/*.{jpg,jpeg}', 'dist/img/terminal-norte')
-  minify('dist/img/leon/*.{jpg,jpeg}', 'dist/img/leon')
-  minify('dist/img/ocotal/*.{jpg,jpeg}', 'dist/img/ocotal')
   minify('dist/img/og/*.{jpg,jpeg}', 'dist/img/og')
-  minify(
-    'dist/img/san-juan-de-limay/*.{jpg,jpeg}',
-    'dist/img/san-juan-de-limay'
-  )
-  minify('dist/img/*.{png,jpg,jpeg}', 'dist/img')
 })()
