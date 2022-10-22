@@ -457,7 +457,6 @@ const southernStationFilter = southernStation.cities.filter((city) =>
                     cityName={city.name}
                     slug={`/${northernStation.slug}/${city.slug}`}
                     image={city.image}
-                    lqip={city.lqip}
                   />
                 )
             )
@@ -492,7 +491,6 @@ const southernStationFilter = southernStation.cities.filter((city) =>
                     cityName={city.name}
                     slug={`/${southernStation.slug}/${city.slug}`}
                     image={city.image}
-                    lqip={city.lqip}
                   />
                 )
             )
@@ -535,7 +533,3 @@ const southernStationFilter = southernStation.cities.filter((city) =>
     }
   }
 </style>
-
-<script>
-  import '@scripts/lazyload-img.js'
-</script>

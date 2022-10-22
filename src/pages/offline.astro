@@ -1,6 +1,8 @@
 ---
 import Layout from '@layouts/Layout.astro'
 
+import { Picture } from 'astro-imagetools/components'
+
 import Navbar from '@components/Navbar.astro'
 
 const options = {
@@ -27,28 +29,24 @@ const options = {
         id="reload"
         type="button">Recargar página</button
       >
-      <section>
-        <picture data-loading="lazy">
-          <source type="image/avif" data-srcset="/img/offline.avif" />
-          <source type="image/webp" data-srcset="/img/offline.webp" />
-          <source type="image/jpeg" data-srcset="/img/offline.jpg" />
-          <img
-            class="object-cover object-center rounded h-auto w-full max-w-3xl aspect-[768/538] mx-auto mt-8 filter saturate-150 lazyload"
-            alt="Imágen Offline"
-            decoding="async"
-            fetchpriority="low"
-            loading="lazy"
-            srcset="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAoAAAAHCAYAAAAxrNxjAAAAAklEQVR4AewaftIAAADSSURBVDXBwU6DMACA4b9QIAwIE4wJxoMHPXrxZJbsvGf1LXwNT8boRZ3MyAYtpa3M6PcJP+PP1H9h2leOouoCuVjyTzJzeo+3Bv3+RKgMXg0M+kCYZMiyIS5qAjsZTPeJ2j4TL8/hxSK6nKhscLsDjHvwHmlVh357RABTfkZ8c42IImygmPoBPwYgBNIrDR8DDrDZDtfxy1Yp0/0Dbt0iNzkyOW0Ib+9wumP83mL6FhD4rGZaXVKu1oSLEySzIKtxMiVJK1w1gAdkTLG5IkgLjn4AiQpchdur0OAAAAAASUVORK5CYII="
-            data-srcset="/img/offline.jpg"
-          />
-        </picture>
+      <section class="max-w-2xl mx-auto">
+        <Picture
+          src="/img/offline.png"
+          alt="Imágen Offline"
+          attributes={{
+            link: {
+              fetchpriority: 'high'
+            }
+          }}
+          loading="eager"
+          width={672}
+        />
       </section>
     </div>
   </main>
 </Layout>
 
 <script>
-  import '@scripts/lazyload-img.js'
   document.getElementById('reload').addEventListener('click', () => {
     window.location.reload()
   })

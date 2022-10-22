@@ -1,5 +1,7 @@
 ---
-const { cityName, slug, image, lqip } = Astro.props
+import { Picture } from 'astro-imagetools/components'
+
+const { cityName, slug, image } = Astro.props
 ---
 
 <article
@@ -7,20 +9,17 @@ const { cityName, slug, image, lqip } = Astro.props
 >
   <section class="relative">
     <a class="group overflow-hidden" href={slug}>
-      <picture data-loading="lazy">
-        <source type="image/avif" data-srcset={`${image}.avif`} />
-        <source type="image/webp" data-srcset={`${image}.webp`} />
-        <source type="image/jpeg" data-srcset={`${image}.jpg`} />
-        <img
-          class="h-auto object-cover object-center w-full aspect-video lazyload"
-          alt={`Horarios de la ciudad de ${cityName}`}
-          decoding="async"
-          fetchpriority="low"
-          loading="lazy"
-          srcset={lqip}
-          data-srcset={`${image}.jpg`}
-        />
-      </picture>
+      <Picture
+        src={image}
+        alt={`Horarios de la ciudad de ${cityName}`}
+        attributes={{
+          link: {
+            fetchpriority: 'low'
+          }
+        }}
+        aspect={1.777777778}
+        loading="lazy"
+      />
     </a>
     <div
       class="absolute top-0 right-0 transform -translate-x-2 translate-y-2 hidden"

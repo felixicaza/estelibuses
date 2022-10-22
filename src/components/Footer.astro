@@ -1,3 +1,7 @@
+---
+import { Picture } from 'astro-imagetools/components'
+---
+
 <footer class="bg-[#1c1611] text-white text-center">
   <div class="container px-4 pt-12 pb-8 mx-auto">
     <section
@@ -5,26 +9,18 @@
     >
       <section class="flex flex-col gap-y-4 items-center">
         <a href="/" class="inline-block">
-          <picture>
-            <source
-              type="image/avif"
-              data-srcset="/img/estelibuses-logo.avif"
-            />
-            <source
-              type="image/webp"
-              data-srcset="/img/estelibuses-logo.webp"
-            />
-            <source type="image/png" data-srcset="/img/estelibuses-logo.png" />
-            <img
-              class="object-cover object-center mx-auto"
-              alt="Estelí Buses: Horarios de las Terminales de Buses de Estelí"
-              decoding="async"
-              fetchpriority="low"
-              srcset="/img/estelibuses-logo.png"
-              width="160"
-              height="70"
-            />
-          </picture>
+          <Picture
+            src="/img/estelibuses-logo.png"
+            alt="Estelí Buses: Horarios de las Terminales de Buses de Estelí"
+            attributes={{
+              link: {
+                fetchpriority: 'low'
+              }
+            }}
+            loading="lazy"
+            width={160}
+            height={70}
+          />
         </a>
         <div class="flex flex-col gap-y-2 items-center">
           <p class="text-sm font-bold">¡Síguenos en Facebook!</p>
@@ -47,41 +43,63 @@
           </a>
         </div>
       </section>
-      <nav>
-        <ul
-          class="flex flex-wrap gap-x-6 gap-y-4 justify-center items-center text-sm"
+      <section
+        class="flex flex-col gap-y-8 items-center xl:items-end xl:gap-y-4"
+      >
+        <nav>
+          <ul
+            class="flex flex-wrap gap-x-6 gap-y-4 justify-center items-center text-sm"
+          >
+            <li>
+              <a
+                href="/terminal-norte-esteli"
+                class="any-hover:text-orange-400 active:text-orange-400 transition-colors"
+                >Horarios Terminal Norte</a
+              >
+            </li>
+            <li>
+              <a
+                href="/terminal-sur-esteli"
+                class="any-hover:text-orange-400 active:text-orange-400 transition-colors"
+                >Horarios Terminal Sur</a
+              >
+            </li>
+            <li>
+              <a
+                href="/acerca-de-estelibuses"
+                class="any-hover:text-orange-400 active:text-orange-400 transition-colors"
+                >Acerca</a
+              >
+            </li>
+            <li>
+              <a
+                href="/politica-de-privacidad"
+                class="any-hover:text-orange-400 active:text-orange-400 transition-colors"
+                >Política de Privacidad</a
+              >
+            </li>
+          </ul>
+        </nav>
+        <a
+          href="https://github.com/Felix-Icaza/estelibuses"
+          target="_blank"
+          class="inline-block"
         >
-          <li>
-            <a
-              href="/terminal-norte-esteli"
-              class="any-hover:text-orange-400 active:text-orange-400 transition-colors"
-              >Horarios Terminal Norte</a
-            >
-          </li>
-          <li>
-            <a
-              href="/terminal-sur-esteli"
-              class="any-hover:text-orange-400 active:text-orange-400 transition-colors"
-              >Horarios Terminal Sur</a
-            >
-          </li>
-          <li>
-            <a
-              href="/acerca-de-estelibuses"
-              class="any-hover:text-orange-400 active:text-orange-400 transition-colors"
-              >Acerca</a
-            >
-          </li>
-          <li>
-            <a
-              href="/politica-de-privacidad"
-              class="any-hover:text-orange-400 active:text-orange-400 transition-colors"
-              >Política de Privacidad</a
-            >
-          </li>
-        </ul>
-      </nav>
+          <Picture
+            src="/img/github-badge.png"
+            alt="Visita el proyecto de Estelí Buses en GitHub"
+            attributes={{
+              link: {
+                fetchpriority: 'low'
+              }
+            }}
+            loading="lazy"
+            width={185}
+          />
+        </a>
+      </section>
     </section>
+
     <hr class="h-px my-8 bg-[#483323] border-none" />
     <section
       class="flex gap-y-8 flex-col xl:flex-row xl:justify-between items-center xl:items-start"
@@ -108,6 +126,7 @@
               alt="Félix Icaza - Desarrollador Web en Nicaragua"
               decoding="async"
               fetchpriority="low"
+              loading="lazy"
               width="100"
             />
           </a>

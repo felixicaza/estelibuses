@@ -6,6 +6,8 @@ import southernStation from '@data/southern-station.json'
 
 import { Schema } from 'astro-seo-schema'
 
+import { Picture } from 'astro-imagetools/components'
+
 import Layout from '@layouts/Layout.astro'
 
 import '@styles/wave.css'
@@ -27,10 +29,6 @@ export async function getStaticPaths() {
       phone: info.phone,
       stationImage: info.station_image,
       stationImageMobile: info.station_image_mobile,
-      stationImageBreakpoint: info.station_image_breakpoint,
-      stationImageAspectMobile: info.station_image_aspect_mobile,
-      stationImageAspectRatio: info.station_image_aspect_ratio,
-      stationImageLqip: info.station_image_lqip,
       socialMediaImage: info.social_media_image,
       themeColor: info.theme_color,
       headerColor: info.header_color,
@@ -55,10 +53,6 @@ const {
   phone,
   stationImage,
   stationImageMobile,
-  stationImageBreakpoint,
-  stationImageAspectMobile,
-  stationImageAspectRatio,
-  stationImageLqip,
   socialMediaImage,
   themeColor,
   headerColor,
@@ -209,7 +203,6 @@ const getSchemaFAQs = schemaFAQs.map((faq) => ({
               cityName={city.name}
               slug={`${slug}/${city.slug}`}
               image={city.image}
-              lqip={city.lqip}
             />
           ))
         }
@@ -246,29 +239,33 @@ const getSchemaFAQs = schemaFAQs.map((faq) => ({
         >
         </p>
         <figure>
-          <picture data-loading="lazy">
-            <source
-              type="image/avif"
-              data-srcset={`${stationImageMobile}.avif ${stationImageBreakpoint}, ${stationImage}.avif`}
-            />
-            <source
-              type="image/webp"
-              data-srcset={`${stationImageMobile}.webp ${stationImageBreakpoint}, ${stationImage}.webp`}
-            />
-            <source
-              type="image/jpeg"
-              data-srcset={`${stationImageMobile}.jpg ${stationImageBreakpoint}, ${stationImage}.jpg`}
-            />
-            <img
-              class={`w-full h-auto rounded object-cover object-center max-w-5xl mx-auto lazyload ${stationImageAspectMobile} ${stationImageAspectRatio}`}
-              alt={`${station} de la ciudad de Estelí`}
-              decoding="async"
-              fetchpriority="low"
-              loading="lazy"
-              srcset={stationImageLqip}
-              data-srcset={`${stationImageMobile}.jpg ${stationImageBreakpoint}, ${stationImage}.jpg`}
-            />
-          </picture>
+          <Picture
+            src={stationImage}
+            artDirectives={[
+              {
+                media:
+                  station === 'Terminal Norte'
+                    ? '(max-aspect-ratio: 544/726)'
+                    : '(max-aspect-ratio: 736/982)',
+                src: stationImageMobile,
+                breakpoints: station === 'Terminal Norte' ? [600] : [912],
+                width: station === 'Terminal Norte' ? 544 : 736,
+                height: station === 'Terminal Norte' ? 726 : 982,
+                format: ['avif'],
+                fallbackFormat: 'webp',
+                includeSourceFormat: false
+              }
+            ]}
+            alt={`${station} de la ciudad de Estelí`}
+            decoding="async"
+            attributes={{
+              link: {
+                fetchpriority: 'low'
+              }
+            }}
+            aspect={1.777777778}
+            loading="lazy"
+          />
           <figcaption class="text-sm text-gray-400 dark:text-gray-200 mt-3">
             {station} de la ciudad de Estelí.
           </figcaption>
@@ -292,8 +289,6 @@ const getSchemaFAQs = schemaFAQs.map((faq) => ({
 </Layout>
 
 <script>
-  import '@scripts/lazyload-img.js'
-
   const $ = (sel) => document.getElementById(sel)
   const $$ = (sel) => document.querySelectorAll(sel)
 

@@ -4,6 +4,8 @@
 import northernStation from '@data/northern-station.json'
 import southernStation from '@data/southern-station.json'
 
+import { Picture } from 'astro-imagetools/components'
+
 import '@styles/wave.css'
 
 import Navbar from '@components/Navbar.astro'
@@ -23,12 +25,12 @@ const mergeDataStations = [northernStation, southernStation]
       <div class="space-y-8">
         <article class="space-y-3">
           <h1
-            class="mb-8 text-center md:max-w-2xl md:mx-auto !lg:mx-0 lg:text-left"
+            class="mb-8 text-center md:max-w-2xl md:mx-auto lg:!mx-0 lg:text-left"
           >
             Horarios de las terminales de buses de Estelí
           </h1>
           <p
-            class="text-center md:max-w-2xl md:mx-auto lg:max-w-lg !lg:mx-0 lg:text-left"
+            class="text-center md:max-w-2xl md:mx-auto lg:max-w-lg lg:!mx-0 lg:text-left"
           >
             Conoce fácilmente todos los horarios de salida de los buses de las
             terminales de la ciudad de Estelí y ¡planea con exactitud la hora de
@@ -37,7 +39,7 @@ const mergeDataStations = [northernStation, southernStation]
         </article>
         <section class="mb-8 mt-8">
           <form
-            class="space-y-3 w-full transition-colors lg:mx-0 md:max-w-md md:mx-auto"
+            class="space-y-3 w-full transition-colors md:max-w-md md:mx-auto lg:!mx-0"
             id="main-search"
             autocomplete="on"
           >
@@ -116,25 +118,22 @@ const mergeDataStations = [northernStation, southernStation]
           </section>
         </section>
       </div>
-      <section class="overflow-hidden aspect-[752/586] relative">
+      <section class="overflow-hidden relative">
         <div class="absolute blob left-0 top-0"></div>
-        <picture>
-          <source
-            type="image/avif"
-            srcset="/img/estelibuses-horarios-de-esteli.avif"
-          />
-          <source
-            type="image/webp"
-            srcset="/img/estelibuses-horarios-de-esteli.webp"
-          />
-          <img
-            class="aspect-[752/586] relative z-10"
-            srcset="/img/estelibuses-horarios-de-esteli.png"
+        <section class="relative z-10">
+          <Picture
+            src="/img/estelibuses-horarios-de-esteli.png"
             alt="Estelí Buses: Horarios de las Terminales de Buses de Estelí"
-            decoding="async"
-            fetchpriority="highest"
+            attributes={{
+              link: {
+                fetchpriority: 'highest'
+              }
+            }}
+            preload="avif"
+            loading="eager"
+            width={752}
           />
-        </picture>
+        </section>
       </section>
     </section>
   </div>

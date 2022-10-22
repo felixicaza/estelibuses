@@ -48,23 +48,6 @@ const { options } = Astro.props
 
     <slot name="stylesheet" />
 
-    <link
-      type="image/avif"
-      as="image"
-      fetchpriority="highest"
-      href="/img/estelibuses-logo.avif"
-      rel="preload"
-      crossorigin
-    />
-    <link
-      type="image/webp"
-      as="image"
-      fetchpriority="highest"
-      href="/img/estelibuses-logo.webp"
-      rel="preload"
-      crossorigin
-    />
-
     <slot name="preload" />
 
     <slot name="defer-scripts" />

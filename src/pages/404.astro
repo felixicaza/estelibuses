@@ -1,6 +1,8 @@
 ---
 import Layout from '@layouts/Layout.astro'
 
+import { Picture } from 'astro-imagetools/components'
+
 import Navbar from '@components/Navbar.astro'
 
 const options = {
@@ -79,10 +81,13 @@ const options = {
           <h3 class="mb-2 font-bold text-2xl text-amber-500">Terminal sur</h3>
           <p class="mx-auto px-4 max-w-sm !text-base">
             La terminal sur cuenta con 10 destinos principales.
-          </p><a
+          </p>
+          <a
             class="items-center mt-4 px-5 py-2.5 space-x-1 font-semibold text-amber-500 transition-colors active:bg-amber-100 active:outline-none active:text-amber-700 any-hover:bg-amber-100 any-hover:text-amber-700 inline-flex rounded"
             href="/terminal-sur-esteli"
-            ><span>Conoce los destinos</span><span>
+          >
+            <span>Conoce los destinos</span>
+            <span>
               <svg class="fill-current mt-[0.1625rem]" width="26" height="26">
                 <path d="m8.6 16.6 4.6-4.6-4.6-4.6L10 6l6 6-6 6-1.4-1.4Z"
                 ></path>
@@ -91,26 +96,19 @@ const options = {
           </a>
         </section>
       </article>
-      <section>
-        <picture data-loading="lazy">
-          <source type="image/avif" data-srcset="/img/404.avif" />
-          <source type="image/webp" data-srcset="/img/404.webp" />
-          <source type="image/jpeg" data-srcset="/img/404.jpg" />
-          <img
-            class="object-cover object-center h-auto w-full max-w-3xl aspect-[768/515] rounded mx-auto filter saturate-150 lazyload"
-            alt="Página no encontrada"
-            decoding="async"
-            fetchpriority="low"
-            loading="lazy"
-            srcset="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAoAAAAHCAYAAAAxrNxjAAAAAklEQVR4AewaftIAAADMSURBVDXBPU4CURSA0e/9+ITR0UiisbTTxlha2LhS98AmKI3uAAujJEgyEHnDvLn3OiR4jrMBB2aKSQdmuJBwPvAvcqAlI3kDweOcR9uGkE4IxzV7noFJQdoNrukwKchuC2aYFLRk9iID0wIO7CKxeJtytr6mvcpM7p5R6fBHY7xpj3SZz9kL2+Wc9WrB9+8rsmowFUx6tGSiqcJOqep7vt6n9D8fmDeWec7p+pFqcoMLiehChPGI84cnUnOLmuJ9REom1Zf0XSaMKv4AILZvQxJLKhQAAAAASUVORK5CYII="
-            data-srcset="/img/404.jpg"
-          />
-        </picture>
+      <section class="max-w-2xl mx-auto">
+        <Picture
+          src="/img/404.png"
+          alt="Imágen 404"
+          attributes={{
+            link: {
+              fetchpriority: 'high'
+            }
+          }}
+          loading="eager"
+          width={672}
+        />
       </section>
     </div>
   </main>
 </Layout>
-
-<script>
-  import '@scripts/lazyload-img.js'
-</script>

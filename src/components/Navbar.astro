@@ -1,26 +1,23 @@
+---
+import { Picture } from 'astro-imagetools/components'
+---
+
 <nav class="py-2 flex justify-between items-center">
   <a class="inline-block" href="/">
-    <picture>
-      <source
-        type="image/avif"
-        fetchpriority="highest"
-        srcset="/img/estelibuses-logo.avif"
-      />
-      <source
-        type="image/webp"
-        fetchpriority="highest"
-        srcset="/img/estelibuses-logo.webp"
-      /><img
-        class="object-cover object-center"
-        alt="Estelí Buses"
-        decoding="async"
-        fetchpriority="highest"
-        srcset="/img/estelibuses-logo.webp"
-        width="150"
-        height="60"
-        srcset="/img/estelibuses-logo.png"
-      />
-    </picture>
+    <Picture
+      src="/img/estelibuses-logo.png"
+      alt="Estelí Buses: Horarios de las Terminales de Buses de Estelí"
+      decoding="async"
+      attributes={{
+        link: {
+          fetchpriority: 'highest'
+        }
+      }}
+      preload="avif"
+      loading="eager"
+      width={160}
+      height={70}
+    />
   </a>
   <section class="hidden xl:block">
     <ul class="flex items-center space-x-4 font-medium justify-center gap-4">
