@@ -44,6 +44,7 @@
     "astro-compressor": "0.1.2",
     "astro-critters": "1.0.5",
     "astro-eslint-parser": "0.7.2",
+    "astro-imagetools": "0.6.11",
     "astro-seo-schema": "1.1.0",
     "astro-sitemap": "0.4.1",
     "autoprefixer": "10.4.5",
