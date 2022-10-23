@@ -5,7 +5,7 @@ const { cityName, slug, image } = Astro.props
 ---
 
 <article
-  class="card-city bg-white dark:bg-[#362d25] rounded flex flex-col shadow transition-shadow duration-300 w-full max-w-lg lg:max-w-md overflow-hidden any-hover:shadow-md"
+  class="card-city bg-white dark:bg-[#362d25] rounded flex flex-col shadow transition-shadow duration-300 w-full max-w-[30rem] lg:max-w-md overflow-hidden any-hover:shadow-md"
 >
   <section class="relative">
     <a class="group overflow-hidden" href={slug}>
@@ -52,7 +52,7 @@ const { cityName, slug, image } = Astro.props
       </button>
     </div>
   </section>
-  <section class="p-5 flex flex-col justify-between gap-7 flex-1">
+  <section class="p-5 flex flex-col justify-between gap-y-7 flex-1">
     <article class="text-center">
       <h3 class="mb-2.5">
         <a

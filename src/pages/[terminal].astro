@@ -111,11 +111,11 @@ const getSchemaFAQs = schemaFAQs.map((faq) => ({
         </p>
 
         <section
-          class="flex flex-col md:flex-row md:items-start gap-8 justify-center mt-6 text-left max-w-xs sm:max-w-md md:max-w-xl mx-auto"
+          class="flex flex-col gap-y-8 md:flex-row md:items-start md:gap-x-8 md:gap-y-0 justify-center mt-6 text-left max-w-xs sm:max-w-md md:max-w-xl mx-auto"
         >
           <section class="md:basis-3/5 group space-y-1">
             <p class={`font-semibold ${textColor}`}>Ubicación:</p>
-            <div class="flex gap-2 items-start">
+            <div class="flex gap-x-2 items-start">
               <div class="mt-[0.2rem]">
                 <svg
                   class={`fill-current ${textColor} ${linkColorGroup}`}
@@ -137,7 +137,7 @@ const getSchemaFAQs = schemaFAQs.map((faq) => ({
           </section>
           <section class="md:basis-2/5 group space-y-1">
             <p class={`font-semibold ${textColor}`}>Teléfono:</p>
-            <div class="flex gap-2 items-start">
+            <div class="flex gap-x-2 items-start">
               <svg
                 class={`fill-current ${textColor} ${linkColorGroup}`}
                 viewBox="0 0 24 24"
@@ -196,7 +196,7 @@ const getSchemaFAQs = schemaFAQs.map((faq) => ({
           </section>
         </form>
       </article>
-      <article class="flex flex-wrap justify-center gap-20 lg:gap-16">
+      <article class="flex flex-wrap justify-center gap-y-20 lg:gap-16">
         {
           cities.map((city) => (
             <CardCity
@@ -236,8 +236,7 @@ const getSchemaFAQs = schemaFAQs.map((faq) => ({
         <p
           class="mx-auto mt-5 md:max-w-5xl lg:max-w-6xl mb-4"
           set:html={locationDescription}
-        >
-        </p>
+        />
         <figure>
           <Picture
             src={stationImage}

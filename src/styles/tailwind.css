@@ -41,15 +41,15 @@
   }
 
   body {
-    @apply bg-white text-neutral-800 dark:bg-[#292018] dark:text-white transition-colors duration-150;
+    @apply bg-white text-neutral-800 transition-colors duration-150 dark:bg-[#292018] dark:text-white;
   }
 
   h1 {
-    @apply text-4xl sm:text-5xl font-bold text-[#3b0d15] dark:text-orange-50;
+    @apply text-4xl font-bold text-[#3b0d15] dark:text-orange-50 sm:text-5xl;
   }
 
   h2 {
-    @apply text-3xl sm:text-4xl font-bold text-[#3b0d15] dark:text-orange-50;
+    @apply text-3xl font-bold text-[#3b0d15] dark:text-orange-50 sm:text-4xl;
   }
 
   h3:not(footer h3) {
@@ -66,6 +66,6 @@
 
   p a,
   #list-cities li a {
-    @apply font-semibold underline text-orange-500 active:text-orange-600 transition-colors;
+    @apply font-semibold text-orange-500 underline transition-colors active:text-orange-600;
   }
 }

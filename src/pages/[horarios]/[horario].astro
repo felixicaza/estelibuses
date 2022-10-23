@@ -148,7 +148,7 @@ const southernStationFilter = southernStation.cities.filter((city) =>
       <Navbar />
       <section class="mt-6">
         <nav class={`py-2 whitespace-nowrap breadcrumb ${textColor}`}>
-          <ul class="flex items-center space-x-2">
+          <ul class="flex items-center gap-x-2">
             <li style="width: 24px; height: 24px">
               <a class={linkColor} href="/" title="Inicio">
                 <svg
@@ -204,7 +204,7 @@ const southernStationFilter = southernStation.cities.filter((city) =>
           <p class="font-semibold">
             ¡Comparte este horario en tus redes sociales!
           </p>
-          <section class="flex flex-wrap justify-center items-center gap-8">
+          <section class="flex flex-wrap justify-center items-center gap-x-8">
             <a
               class={linkColor}
               href={`https://api.whatsapp.com/send?text=${shareText}${currentURL}?utm_source=whatsapp&utm_medium=webapp&utm_campaign=social_share_city&utm_content=header`}
@@ -289,14 +289,16 @@ const southernStationFilter = southernStation.cities.filter((city) =>
     <div class="wave"></div>
   </header>
 
-  <section class="py-12 sm:py-16 md:py-20 xl:py-28">
+  <main class="py-12 sm:py-16 md:py-20 xl:py-28">
     <div
-      class="container mx-auto px-4 flex flex-col gap-16 lg:grid lg:grid-cols-2 lg:items-start"
+      class="container mx-auto px-4 flex flex-col gap-y-20 lg:grid lg:grid-cols-2 lg:items-start lg:gap-y-0 lg:gap-x-16"
     >
-      <article class="flex flex-col gap-8 md:flex-row lg:hidden">
+      <article
+        class="flex flex-col gap-y-8 md:flex-row md:gap-y-0 md:gap-x-8 lg:hidden"
+      >
         <section class="space-y-2">
           <p class="font-bold">Lugar de destino:</p>
-          <section class="flex items-center gap-2">
+          <section class="flex items-center gap-x-2">
             <div>
               <svg
                 class="fill-current"
@@ -314,7 +316,7 @@ const southernStationFilter = southernStation.cities.filter((city) =>
         </section>
         <section class="space-y-2">
           <p class="font-bold">Distancia de viaje:</p>
-          <section class="flex items-center gap-2">
+          <section class="flex items-center gap-x-2">
             <div>
               <svg
                 class="fill-current"
@@ -337,7 +339,7 @@ const southernStationFilter = southernStation.cities.filter((city) =>
           </section>
         </section>
       </article>
-      <article class="flex flex-col gap-16 lg:sticky lg:top-8">
+      <article class="flex flex-col gap-y-20 lg:sticky lg:top-8">
         {filter && <FilterTransport />}
         {
           timetables.map((timetable, index) => (
@@ -436,7 +438,8 @@ const southernStationFilter = southernStation.cities.filter((city) =>
         </article>
       </section>
     </div>
-  </section>
+  </main>
+
   <article
     class="py-12 sm:py-16 md:py-20 xl:py-28 bg-[#FFFDF9] dark:bg-[#2D231B]"
   >
@@ -447,7 +450,7 @@ const southernStationFilter = southernStation.cities.filter((city) =>
           Horarios más populares de la Terminal Norte
         </h3>
         <article
-          class="flex flex-col gap-y-14 items-center lg:grid lg:grid-cols-2 xl:grid-cols-3 lg:gap-22"
+          class="flex flex-col gap-y-20 items-center lg:grid lg:grid-cols-2 xl:grid-cols-3 lg:gap-16"
         >
           {
             northernStationFilter.map(
@@ -481,7 +484,7 @@ const southernStationFilter = southernStation.cities.filter((city) =>
           Horarios más populares de la Terminal Sur
         </h3>
         <article
-          class="flex flex-col gap-y-14 items-center lg:grid lg:grid-cols-2 xl:grid-cols-3 lg:gap-22"
+          class="flex flex-col gap-y-20 items-center lg:grid lg:grid-cols-2 xl:grid-cols-3 lg:gap-16"
         >
           {
             southernStationFilter.map(
