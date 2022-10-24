@@ -19,7 +19,7 @@ const testimonialsLength = testimonials.length
     >
       {
         randomSortTestimonials.map((testimonial) => (
-          <section class="flex h-full snap-center flex-col items-center justify-start gap-2 rounded bg-white px-3 pt-2 pb-3 text-center shadow dark:bg-[#30251b]/50">
+          <section class="flex h-full snap-center flex-col items-center justify-start gap-y-2 rounded bg-white px-3 pt-2 pb-3 text-center shadow dark:bg-[#30251b]/50">
             <div>
               <section
                 class={`mx-auto h-max w-max rounded-full p-3 ${testimonial.bg_circle}`}
@@ -42,7 +42,9 @@ const testimonialsLength = testimonials.length
             </div>
             <div class="space-y-1">
               <p class="mb-1 font-semibold">{testimonial.name}</p>
-              <p class="!text-base italic">{testimonial.comment}</p>
+              <p class="comment h-24 overflow-y-auto !text-base">
+                {testimonial.comment}
+              </p>
             </div>
           </section>
         ))
@@ -71,17 +73,20 @@ const testimonialsLength = testimonials.length
     </section>
   </div>
 </article>
+
 <style define:vars={{ items: testimonialsLength }}>
   .users-comments {
     grid-template-columns: repeat(var(--items), 16rem);
   }
 
   @media (any-pointer: coarse) {
-    .users-comments {
+    .users-comments,
+    .comment {
       scrollbar-width: none;
     }
 
-    .users-comments::-webkit-scrollbar {
+    .users-comments::-webkit-scrollbar,
+    .comment::-webkit-scrollbar {
       display: none;
     }
   }
