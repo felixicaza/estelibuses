@@ -1,7 +1,6 @@
 {
   "name": "estelibuses",
   "version": "0.0.0",
-  "type": "module",
   "private": true,
   "license": "GPL-3.0",
   "author": {
@@ -9,6 +8,7 @@
     "email": "contacto@felixicaza.com",
     "url": "https://felixicaza.com/"
   },
+  "type": "module",
   "scripts": {
     "build": "astro build && pnpm compress && pnpm move-offline-page",
     "compress": "node imagemin.js && pnpm minify-json dist/manifest.json",
@@ -59,6 +59,7 @@
     "eslint-plugin-jsx-a11y": "6.6.1",
     "eslint-plugin-n": "15.0.0",
     "eslint-plugin-promise": "6.0.0",
+    "find-up": "6.3.0",
     "husky": "8.0.1",
     "imagemin": "8.0.1",
     "imagemin-mozjpeg": "10.0.0",
