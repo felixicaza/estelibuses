@@ -47,6 +47,27 @@ export default defineConfig({
       }
     }),
     compress({
+      html: {
+        collapseBooleanAttributes: true,
+        maxLineLength: 0,
+        removeAttributeQuotes: false,
+        removeComments: true,
+        removeEmptyAttributes: true,
+        removeOptionalTags: true,
+        removeRedundantAttributes: true,
+        useShortDoctype: true
+      },
+      js: {
+        compress: {
+          ecma: 2015
+        },
+        format: {
+          comments: false,
+          ecma: 2015
+        },
+        ecma: 2015,
+        module: true
+      },
       img: false,
       svg: false
     }),
