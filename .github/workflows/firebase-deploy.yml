@@ -38,6 +38,13 @@ jobs:
          - name: Build project
            run: pnpm build
 
+         - name: Create GSC html file verification
+           uses: 1arp/create-a-file-action@0.2
+           with:
+              path: 'dist'
+              file: 'google4ed26fc938fd8294.html'
+              content: 'google-site-verification: google4ed26fc938fd8294.html'
+
          - name: Deploy project to Firebase
            uses: FirebaseExtended/action-hosting-deploy@v0
            with:

@@ -38,7 +38,7 @@ const { options } = Astro.props
     <script
       src="https://www.googletagmanager.com/gtag/js"
       async="async"
-      crossorigin="crossorigin"
+      crossorigin="anonymous"
       importance="low"
       fetchpriority="low"
     ></script>
@@ -103,6 +103,11 @@ const { options } = Astro.props
     <SplashScreens />
 
     <slot name="social-media" />
+
+    <meta
+      name="google-site-verification"
+      content="IJH7DDHaPX1Us0he6rNkTPlC_9I5G5aktg3SKheBUNw"
+    />
   </head>
   <body>
     <slot />
