@@ -16,7 +16,7 @@ workbox.googleAnalytics.initialize()
 
 const CACHE_CORE = 'core-v2.80'
 const CACHE_MEDIA = 'media-v2.80'
-const CACHE_ASSETS = 'assets-v2.80'
+const CACHE_DYNAMIC = 'dynamic-v2.80'
 
 self.addEventListener('install', (e) => {
   const setCacheCore = caches
@@ -41,7 +41,7 @@ self.addEventListener('activate', () => {
         return caches.delete(key)
       }
 
-      if (key !== CACHE_ASSETS && key.includes('assets')) {
+      if (key !== CACHE_DYNAMIC && key.includes('dynamic')) {
         return caches.delete(key)
       }
     })
@@ -54,10 +54,12 @@ self.addEventListener('fetch', (e) => {
 
     return fetch(e.request)
       .then((newResponse) => {
-        caches.open(CACHE_ASSETS).then((cache) => {
+        caches.open(CACHE_DYNAMIC).then((cache) => {
           if (
             e.request.headers.get('accept').includes('text/css') ||
-            e.request.headers.get('accept').includes('text/javascript')
+            e.request.headers.get('accept').includes('text/javascript') ||
+            e.request.headers.get('accept').includes('image/avif') ||
+            e.request.headers.get('accept').includes('image/webp')
           ) {
             cache.put(e.request, newResponse)
           }

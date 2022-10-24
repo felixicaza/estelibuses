@@ -5,6 +5,7 @@ const APP_SHELL = [
   '/favicons/favicon-16x16.png',
   '/favicons/favicon-32x32.png',
 
+  '/',
   '/index.html',
   '/?utm_source=web_app',
   '/index.html?utm_source=web_app',
