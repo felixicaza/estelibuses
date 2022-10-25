@@ -3,7 +3,8 @@ module.exports = {
   content: ['./src/**/*.{astro,js}', './src/data/*.json'],
   theme: {
     screens: {
-      xs: '412px',
+      us: '375px',
+      xs: '411px',
       sm: '576px',
       md: '768px',
       lg: '992px',
