@@ -151,7 +151,7 @@ const getSchemaFAQs = schemaFAQs.map((faq) => ({
               <a
                 class={`font-semibold ${textColor} ${linkColorGroup}`}
                 href={`tel:${phone}`}
-                >{phone}
+                >{station === 'Terminal Norte' ? `${phone} ext. 102` : phone}
               </a>
             </div>
           </section>
