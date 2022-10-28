@@ -116,113 +116,115 @@ import '@styles/filter.css'
    * TODO: Optimize code
    */
 
-  formFilter.addEventListener('change', (e) => {
-    if (e.target.id === 'all' && radioAll.checked) {
-      if (localStorage.getItem('sounds_enabled') === 'true') {
-        soundRadioButton.play()
-      }
-
-      if (
-        'vibrate' in navigator &&
-        localStorage.getItem('sounds_enabled') === 'false'
-      ) {
-        navigator.vibrate(80)
-      }
-
-      localStorage.setItem('managua_transport_type', 'all')
-
-      transportTitles.forEach(
-        (title, index) => (title.textContent = `Horario #${index + 1}`)
-      )
-
-      expressBuses.forEach((express) => {
-        express.classList.remove('hidden')
-
-        if (express.classList.contains('up')) {
-          express.classList.remove('up')
-          window.requestAnimationFrame(() => express.classList.add('up'))
-        } else {
-          express.classList.add('up')
+  if (formFilter !== null) {
+    formFilter.addEventListener('change', (e) => {
+      if (e.target.id === 'all' && radioAll.checked) {
+        if (localStorage.getItem('sounds_enabled') === 'true') {
+          soundRadioButton.play()
         }
-      })
-      routedBuses.forEach((routed) => {
-        routed.classList.remove('hidden')
 
-        if (routed.classList.contains('up')) {
+        if (
+          'vibrate' in navigator &&
+          localStorage.getItem('sounds_enabled') === 'false'
+        ) {
+          navigator.vibrate(80)
+        }
+
+        localStorage.setItem('managua_transport_type', 'all')
+
+        transportTitles.forEach(
+          (title, index) => (title.textContent = `Horario #${index + 1}`)
+        )
+
+        expressBuses.forEach((express) => {
+          express.classList.remove('hidden')
+
+          if (express.classList.contains('up')) {
+            express.classList.remove('up')
+            window.requestAnimationFrame(() => express.classList.add('up'))
+          } else {
+            express.classList.add('up')
+          }
+        })
+        routedBuses.forEach((routed) => {
+          routed.classList.remove('hidden')
+
+          if (routed.classList.contains('up')) {
+            routed.classList.remove('up')
+            window.requestAnimationFrame(() => routed.classList.add('up'))
+          } else {
+            routed.classList.add('up')
+          }
+        })
+      }
+
+      if (e.target.id === 'express' && radioExpress.checked) {
+        if (localStorage.getItem('sounds_enabled') === 'true') {
+          soundRadioButton.play()
+        }
+
+        if (
+          'vibrate' in navigator &&
+          localStorage.getItem('sounds_enabled') === 'false'
+        ) {
+          navigator.vibrate(80)
+        }
+
+        localStorage.setItem('managua_transport_type', 'express')
+
+        for (let i = 0; i < expressTitles.length; i++) {
+          expressTitles[i].textContent = `Horario Expreso #${i + 1}`
+        }
+
+        expressBuses.forEach((express) => {
+          express.classList.remove('hidden')
+
+          if (express.classList.contains('up')) {
+            express.classList.remove('up')
+            window.requestAnimationFrame(() => express.classList.add('up'))
+          } else {
+            express.classList.add('up')
+          }
+        })
+        routedBuses.forEach((routed) => {
+          routed.classList.add('hidden')
           routed.classList.remove('up')
-          window.requestAnimationFrame(() => routed.classList.add('up'))
-        } else {
-          routed.classList.add('up')
+        })
+      }
+
+      if (e.target.id === 'routed' && radioRouted.checked) {
+        if (localStorage.getItem('sounds_enabled') === 'true') {
+          soundRadioButton.play()
         }
-      })
-    }
 
-    if (e.target.id === 'express' && radioExpress.checked) {
-      if (localStorage.getItem('sounds_enabled') === 'true') {
-        soundRadioButton.play()
-      }
+        if (
+          'vibrate' in navigator &&
+          localStorage.getItem('sounds_enabled') === 'false'
+        ) {
+          navigator.vibrate(80)
+        }
 
-      if (
-        'vibrate' in navigator &&
-        localStorage.getItem('sounds_enabled') === 'false'
-      ) {
-        navigator.vibrate(80)
-      }
+        localStorage.setItem('managua_transport_type', 'routed')
 
-      localStorage.setItem('managua_transport_type', 'express')
+        for (let i = 0; i < routedTitles.length; i++) {
+          routedTitles[i].textContent = `Horario Ruteado #${i + 1}`
+        }
 
-      for (let i = 0; i < expressTitles.length; i++) {
-        expressTitles[i].textContent = `Horario Expreso #${i + 1}`
-      }
+        routedBuses.forEach((routed) => {
+          routed.classList.remove('hidden')
 
-      expressBuses.forEach((express) => {
-        express.classList.remove('hidden')
-
-        if (express.classList.contains('up')) {
+          if (routed.classList.contains('up')) {
+            routed.classList.remove('up')
+            window.requestAnimationFrame(() => routed.classList.add('up'))
+          } else {
+            routed.classList.add('up')
+          }
+        })
+        expressBuses.forEach((express) => {
+          express.classList.add('hidden')
           express.classList.remove('up')
-          window.requestAnimationFrame(() => express.classList.add('up'))
-        } else {
-          express.classList.add('up')
-        }
-      })
-      routedBuses.forEach((routed) => {
-        routed.classList.add('hidden')
-        routed.classList.remove('up')
-      })
-    }
-
-    if (e.target.id === 'routed' && radioRouted.checked) {
-      if (localStorage.getItem('sounds_enabled') === 'true') {
-        soundRadioButton.play()
+        })
       }
-
-      if (
-        'vibrate' in navigator &&
-        localStorage.getItem('sounds_enabled') === 'false'
-      ) {
-        navigator.vibrate(80)
-      }
-
-      localStorage.setItem('managua_transport_type', 'routed')
-
-      for (let i = 0; i < routedTitles.length; i++) {
-        routedTitles[i].textContent = `Horario Ruteado #${i + 1}`
-      }
-
-      routedBuses.forEach((routed) => {
-        routed.classList.remove('hidden')
-
-        if (routed.classList.contains('up')) {
-          routed.classList.remove('up')
-          window.requestAnimationFrame(() => routed.classList.add('up'))
-        } else {
-          routed.classList.add('up')
-        }
-      })
-      expressBuses.forEach((express) => {
-        express.classList.add('hidden')
-        express.classList.remove('up')
-      })
-    }
-  })
+    })
+  }
 </script>
