@@ -44,7 +44,7 @@ import InstallPWAButton from '@components/InstallPWAButton.astro'
               type="checkbox"
             />
             <span
-              class="switch-toggle peer-checked:bg-orange-500 peer-checked:before:translate-x-[1.625rem]"
+              class="switch-toggle top-0 left-0 bottom-0 right-0 peer-checked:bg-orange-500 peer-checked:before:translate-x-[1.625rem]"
             ></span>
           </div>
         </section>
@@ -92,7 +92,7 @@ import InstallPWAButton from '@components/InstallPWAButton.astro'
               checked="checked"
             />
             <span
-              class="switch-toggle peer-checked:bg-orange-500 peer-checked:before:translate-x-[1.625rem]"
+              class="switch-toggle top-0 left-0 bottom-0 right-0 peer-checked:bg-orange-500 peer-checked:before:translate-x-[1.625rem]"
             ></span>
           </div>
         </section>
@@ -147,7 +147,7 @@ import InstallPWAButton from '@components/InstallPWAButton.astro'
 
 <style>
   .switch-toggle {
-    @apply absolute top-0 left-0 bottom-0 right-0 z-[-1] rounded-full bg-orange-800/50 transition-all before:absolute before:left-1 before:bottom-[0.29rem] before:h-[0.875rem] before:w-[0.875rem] before:rounded-full before:bg-white before:transition-all before:content-[''] lg:scale-x-[-1];
+    @apply absolute z-[-1] rounded-full bg-orange-800/50 transition-all before:absolute before:left-1 before:bottom-[0.29rem] before:h-[0.875rem] before:w-[0.875rem] before:rounded-full before:bg-white before:transition-all before:content-[''] lg:scale-x-[-1];
   }
 </style>
 

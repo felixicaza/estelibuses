@@ -6,7 +6,6 @@
  */
 
 importScripts('/sw-app-shell.js')
-importScripts('/sw-app-shell-media.js')
 
 importScripts(
   'https://storage.googleapis.com/workbox-cdn/releases/6.5.4/workbox-sw.js'
@@ -23,11 +22,7 @@ self.addEventListener('install', (e) => {
     .open(CACHE_CORE)
     .then((coreCache) => coreCache.addAll(APP_SHELL))
 
-  const setCacheMedia = caches
-    .open(CACHE_MEDIA)
-    .then((mediaCache) => mediaCache.addAll(MEDIA_APP_SHELL))
-
-  e.waitUntil(Promise.all([setCacheCore, setCacheMedia]))
+  e.waitUntil(Promise.all([setCacheCore]))
 })
 
 self.addEventListener('activate', () => {
@@ -58,6 +53,9 @@ self.addEventListener('fetch', (e) => {
           if (
             e.request.headers.get('accept').includes('text/css') ||
             e.request.headers.get('accept').includes('text/javascript') ||
+            e.request.headers
+              .get('accept')
+              .includes('application/javascript') ||
             e.request.headers.get('accept').includes('image/avif') ||
             e.request.headers.get('accept').includes('image/webp')
           ) {
