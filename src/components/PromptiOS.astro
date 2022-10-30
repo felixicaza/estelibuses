@@ -1,0 +1,73 @@
+---
+/* eslint-disable astro/jsx-a11y/alt-text */
+---
+
+<div
+  class="ios-prompt bg-orange-100 text-[#555] dark:bg-[#221b14] dark:text-white border-orange-400 transition-all dark:border-orange-900 pointer-events-none opacity-0 translate-y-full"
+>
+  <div class="flex gap-x-2 items-start">
+    <img
+      class="-mt-1"
+      src="/img/add2home.svg"
+      width="70"
+      height="70"
+      decoding="async"
+      loading="lazy"
+      fetchpriority="low"
+    />
+    <p class="text-sm">
+      Para instalar <strong>Estelí Buses</strong> en tu iPhone/iPad presiona <img
+        class="inline dark:invert dark:saturate-150 dark:contrast-200"
+        src="/img/share.svg"
+        width="20"
+        height="20"
+        decoding="async"
+        loading="lazy"
+        fetchpriority="low"
+      /> y luego en <strong>Añadir al Inicio</strong>.
+    </p>
+    <button
+      class="text-2xl leading-none -mt-0.5 font-bold text-rose-600 active:text-rose-900 transition-colors"
+      type="button">&times;</button
+    >
+  </div>
+</div>
+
+<style>
+  .ios-prompt {
+    @apply fixed left-1/2 bottom-0 z-10 w-full max-w-xs -translate-x-1/2 rounded border p-2 shadow-md;
+  }
+</style>
+
+<script>
+  /**
+   * Show prompt install for iOS
+   */
+
+  function showIosInstall() {
+    const iosPrompt = document.querySelector('.ios-prompt')
+    iosPrompt.classList.replace('translate-y-full', '-translate-y-[6.5rem]')
+    iosPrompt.classList.replace('opacity-0', 'opacity-100')
+    iosPrompt.classList.replace('pointer-events-none', 'pointer-events-auto')
+
+    iosPrompt.addEventListener('click', () => {
+      iosPrompt.classList.replace('-translate-y-[6.5rem]', 'translate-y-full')
+      iosPrompt.classList.replace('opacity-100', 'opacity-0')
+      iosPrompt.classList.replace('pointer-events-auto', 'pointer-events-none')
+    })
+  }
+
+  // Detects if device is on iOS
+  const isIos = () => {
+    const userAgent = window.navigator.userAgent.toLowerCase()
+    return /iphone|ipad|ipod/.test(userAgent)
+  }
+  // Detects if device is in standalone mode
+  const isInStandaloneMode = () =>
+    'standalone' in window.navigator && window.navigator.standalone
+
+  // Checks if should display install popup notification:
+  if (isIos() && !isInStandaloneMode()) {
+    showIosInstall()
+  }
+</script>

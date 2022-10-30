@@ -8,6 +8,7 @@ import BottomBar from '@components/BottomBar.astro'
 import Aside from '@components/Aside.astro'
 import ModalShare from '@components/ModalShare.astro'
 import UpdatePWAButton from '@components/UpdatePWAButton.astro'
+import PromptiOS from '@components/PromptiOS.astro'
 
 import '@styles/tailwind.css'
 import '@styles/flex-gap-polyfill.css'
@@ -124,6 +125,8 @@ const { options } = Astro.props
     <slot name="dynamic-components" />
 
     <UpdatePWAButton />
+
+    <PromptiOS />
 
     <noscript class="fixed w-full bottom-0 left-0 z-20 bg-danger-600">
       <article
