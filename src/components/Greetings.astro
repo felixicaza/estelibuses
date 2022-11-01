@@ -1,0 +1,51 @@
+<span class="text-3xl block text-center lg:text-left" id="greetings"
+  >Hola...</span
+>
+
+<script>
+  const greetings = document.getElementById('greetings')
+
+  const emojis = [
+    '😄',
+    '😃',
+    '😀',
+    '😊',
+    '☺',
+    '😉',
+    '😇',
+    '👋',
+    '✌️',
+    '🤘',
+    '🤙',
+    '🙌',
+    '🐶',
+    '🐱',
+    '🐹',
+    '🐰',
+    '🐻',
+    '🐼',
+    '🐯',
+    '🦁',
+    '🍀',
+    ' 🍃',
+    '🚌',
+    '🇳🇮'
+  ]
+
+  const day = new Date()
+  const hour = day.getHours()
+
+  if (hour >= 0 && hour < 12) {
+    greetings.textContent = `¡Buenos días! ${
+      emojis[Math.floor(Math.random() * emojis.length)]
+    }`
+  } else if (hour >= 12 && hour <= 17) {
+    greetings.textContent = `¡Buenas tardes! ${
+      emojis[Math.floor(Math.random() * emojis.length)]
+    }`
+  } else {
+    greetings.textContent = `¡Buenas noches! ${
+      emojis[Math.floor(Math.random() * emojis.length)]
+    }`
+  }
+</script>
