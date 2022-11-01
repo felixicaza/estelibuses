@@ -1,0 +1,506 @@
+---
+/* eslint-disable astro/jsx-a11y/alt-text */
+
+import Layout from '@layouts/Layout.astro'
+
+import { Picture } from 'astro-imagetools/components'
+
+import Navbar from '@components/Navbar.astro'
+import SocialMedia from '@components/SocialMedia.astro'
+
+const options = {
+  title: '¿Cómo instalar Estelí Buses en tu dispositivo? | Estelí Buses',
+  description:
+    'Aprende a instalar fácilmente la app de Estelí Buses en cualquier dispositivo con esta guía detallada de instalación.'
+}
+
+const currentURL = `${Astro.site}${Astro.url.pathname.replace(/\//, '')}`
+const shareText = options.description
+---
+
+<Layout {options}>
+  <SocialMedia
+    title={options.title}
+    description={options.description}
+    image="/img/og/guia-de-instalacion-de-esteli-buses.jpg"
+    slot="social-media"
+  />
+
+  <header class="container mx-auto px-4 safe-top">
+    <Navbar />
+  </header>
+  <main class="container mx-auto px-4">
+    <section
+      class="pt-[4.5rem] pb-[6.5rem] xs:pb-36 lg:pt-28 lg:pb-[8.5rem] xl:pb-44 2xl:pb-[13.5rem] text-center max-w-6xl mx-auto space-y-6"
+    >
+      <h1>¿Cómo instalar Estelí Buses en tu dispositivo?</h1>
+
+      <p>En esta guía aprenderás:</p>
+
+      <ul
+        class="list-disc space-y-4 text-left ml-8 sm:max-w-[22rem] sm:mx-auto"
+      >
+        <li><a href="#android">Cómo instalar Estelí Buses en Android</a></li>
+        <li>
+          <a href="#iphone">Cómo instalar Estelí Buses en iPhone y iPad</a>
+        </li>
+        <li><a href="#windows">Cómo instalar Estelí Buses en Windows</a></li>
+      </ul>
+
+      <p>
+        <strong
+          >Estelí Buses es una aplicación web que puede ser instalada en
+          cualquier dispositivo</strong
+        >, ya sean móviles Android, iOS y computadoras con Windows, Linux,
+        Chromebook y macOS y funcionará como una aplicación nativa, esto permite
+        que puedas seguir utilizando nuestra plataforma aún si no tienes
+        conexión a internet. En esta guía aprenderás paso a paso cómo instalar
+        de manera sencilla la app y puedas acceder fácilmente.
+      </p>
+
+      <h2 id="android">Instalar Estelí Buses en Android</h2>
+
+      <p>
+        En celulares Android hay varias maneras de instalar la app a través del
+        navegador Chrome <img
+          class="inline"
+          src="/img/chrome_24x24.png"
+          width="24"
+          height="24"
+          decoding="async"
+          loading="lazy"
+          fetchpriority="low"
+        />, es importante que te asegures de tener la última versión.
+      </p>
+
+      <h3>Instalar mediante el banner</h3>
+
+      <p>
+        Si accedes por primera vez verás un banner en la parte inferior similar
+        a este:
+      </p>
+
+      <Picture
+        src="/img/guia-de-instalacion/android-banner.png"
+        alt="Instalar Estelí Buses mediante el banner de PWA"
+        attributes={{
+          link: {
+            fetchpriority: 'low'
+          }
+        }}
+        loading="lazy"
+      />
+
+      <p>
+        Dónde solamente tendrás de hacer clic en <strong>Instalar</strong> y se descargará
+        e instalará la app en tu móvil.
+      </p>
+
+      <h3>Instalar mediante el botón personalizado</h3>
+
+      <p>
+        Hemos preparado una opción para que puedas instalar Estelí Buses en tu
+        dispositivo Android. Solamente tienes que abrir el menú lateral haciendo
+        clic en el "icono de hamburguesa" ubicado en la parte superior derecha:
+      </p>
+
+      <Picture
+        src="/img/guia-de-instalacion/android-hamburger-icon.png"
+        alt="Icono de Hamburguesa de Estelí Buses"
+        attributes={{
+          link: {
+            fetchpriority: 'low'
+          }
+        }}
+        loading="lazy"
+      />
+
+      <p>
+        Haz clic en el botón <strong>Instalar Estelí Buses</strong>.
+      </p>
+
+      <Picture
+        src="/img/guia-de-instalacion/android-custom-button.png"
+        alt="Botón personalizado para instalar Estelí Buses"
+        attributes={{
+          link: {
+            fetchpriority: 'low'
+          }
+        }}
+        loading="lazy"
+      />
+
+      <p>
+        Luego te aparecerá el banner y haz clic en <strong>Instalar</strong>.
+      </p>
+
+      <Picture
+        src="/img/guia-de-instalacion/android-banner-install.png"
+        alt="Baner de instalación de Estelí Buses"
+        attributes={{
+          link: {
+            fetchpriority: 'low'
+          }
+        }}
+        loading="lazy"
+      />
+
+      <h3>Instalar mediante las opciones del navegador</h3>
+
+      <p>
+        También puedes instalar Estelí Buses llendo a la opción <strong
+          >Instalar app</strong
+        > ubicada en el menú de opciones:
+      </p>
+
+      <Picture
+        src="/img/guia-de-instalacion/android-options.png"
+        alt="Menú de opciones de Chrome para instalar Estelí Buses"
+        attributes={{
+          link: {
+            fetchpriority: 'low'
+          }
+        }}
+        loading="lazy"
+      />
+
+      <section
+        class="bg-orange-100 dark:bg-orange-900 text-orange-500 dark:text-orange-100 rounded p-4 flex gap-x-2 items-start text-left"
+      >
+        <div>
+          <svg class="fill-current" viewBox="0 0 24 24" width="40" height="40">
+            <path
+              d="M13 9h-2V7h2m0 10h-2v-6h2m-1-9A10 10 0 0 0 2 12a10 10 0 0 0 10 10 10 10 0 0 0 10-10A10 10 0 0 0 12 2Z"
+            ></path>
+          </svg>
+        </div>
+        <p>
+          Es importante que en tu móvil Android tengas una cuenta activa de
+          Google con acceso a Google Play Store, ya que de lo contrario no se
+          descargará la app y solamente se añadirá un acceso directo de Estelí
+          Buses en tu móvil.
+        </p>
+      </section>
+
+      <Picture
+        src="/img/guia-de-instalacion/android-shortcut.png"
+        alt="Estelí Buses añadido como atajo a la pantalla principal"
+        attributes={{
+          link: {
+            fetchpriority: 'low'
+          }
+        }}
+        loading="lazy"
+      />
+      <p class="text-gray-400 text-sm !mt-2">
+        Estelí Buses añadido como acceso directo en Android.
+      </p>
+
+      <h2 id="iphone">Instalar Estelí Buses en iPhone y iPad</h2>
+
+      <p>
+        Hemos rediseñado y corregido algunos errores que se mostraban en iPhone
+        y en iPad, ahora puedes disfrutar de una mejor experiencia al utilizar
+        nuestra aplicación web desde tu dispositivo de Apple. Al ingresar verás
+        un banner como este dónde te detalla de manera rápida cómo instalar la
+        app:
+      </p>
+
+      <Picture
+        src="/img/guia-de-instalacion/ios-custom-banner.png"
+        alt="Banner personalizado de instalación de Estelí Buses en iOS"
+        attributes={{
+          link: {
+            fetchpriority: 'low'
+          }
+        }}
+        loading="lazy"
+      />
+
+      <p>
+        Pero a continuación verás de manera visual los pasos que debes seguir
+        desde tu navegador Safari <img
+          class="inline"
+          src="/img/safari-ios_24x24.png"
+          width="24"
+          height="24"
+          decoding="async"
+          loading="lazy"
+          fetchpriority="low"
+        />.
+      </p>
+
+      <h3 id="iphone1">Instalar Estelí Buses en iPhone</h3>
+
+      <p>
+        Primero haz clic en el icono <img
+          class="inline"
+          src="/img/share.svg"
+          width="24"
+          height="24"
+          decoding="async"
+          loading="lazy"
+          fetchpriority="low"
+        /> ubicado en la parte inferior de tu iPhone:
+      </p>
+
+      <Picture
+        src="/img/guia-de-instalacion/ios.png"
+        alt="Icono de compartir en iOS"
+        attributes={{
+          link: {
+            fetchpriority: 'low'
+          }
+        }}
+        loading="lazy"
+      />
+
+      <p>
+        Luego busca la opción <strong>Añadir a la Pantalla de Inicio</strong>:
+      </p>
+
+      <Picture
+        src="/img/guia-de-instalacion/ios-add-home.png"
+        alt="Banner personalizado de instalación de Estelí Buses en iOS"
+        attributes={{
+          link: {
+            fetchpriority: 'low'
+          }
+        }}
+        loading="lazy"
+      />
+
+      <p>
+        Haz clic en <strong>Añadir</strong> y ya tendrás la app de Estelí Buses en
+        tu iPhone 🥳.
+      </p>
+
+      <Picture
+        src="/img/guia-de-instalacion/ios-add.png"
+        alt="Añadir Estelí Buses en iOS"
+        attributes={{
+          link: {
+            fetchpriority: 'low'
+          }
+        }}
+        loading="lazy"
+      />
+
+      <Picture
+        src="/img/guia-de-instalacion/ios-app.png"
+        alt="App de Estelí Buses en iOS"
+        attributes={{
+          link: {
+            fetchpriority: 'low'
+          }
+        }}
+        loading="lazy"
+      />
+
+      <h3>Instalar Estelí Buses en iPad</h3>
+
+      <p>
+        En iPad el proceso es muy similar como a <a href="#iphone1"
+          >instalar Estelí Buses en iPhone</a
+        >, solamente que la ubicación del icono <img
+          class="inline"
+          src="/img/share.svg"
+          width="24"
+          height="24"
+          decoding="async"
+          loading="lazy"
+          fetchpriority="low"
+        /> se encuentra en la parte superior derecha:
+      </p>
+
+      <Picture
+        src="/img/guia-de-instalacion/ipad.png"
+        alt="Instalación de Estelí Buses en iPad"
+        attributes={{
+          link: {
+            fetchpriority: 'low'
+          }
+        }}
+        loading="lazy"
+      />
+
+      <h2 id="windows">Instalar Estelí Buses en Windows</h2>
+
+      <p>
+        Nuestra plataforma al funcionar a través de la web la hace compatible
+        con cualquier dispositivo (incluso desde Smart TV), es por eso que al
+        acceder desde tu computadora puedes seguir los siguientes pasos para
+        instalar Estelí Buses.
+      </p>
+
+      <p>
+        Al acceder desde tu navegador Chrome <img
+          class="inline"
+          src="/img/chrome_24x24.png"
+          width="24"
+          height="24"
+          decoding="async"
+          loading="lazy"
+          fetchpriority="low"
+        /> en la parte superior derecha verás una opción similar a esta:
+      </p>
+
+      <Picture
+        src="/img/guia-de-instalacion/windows-popup.png"
+        alt="Instalación de Estelí Buses en Windows"
+        attributes={{
+          link: {
+            fetchpriority: 'low'
+          }
+        }}
+        loading="lazy"
+      />
+
+      <p>Dónde solamente deberás hacer clic en <strong>Instalar</strong>.</p>
+
+      <h3>Instalar Estelí Buses desde el menú del navegador</h3>
+
+      <p>
+        También si haces clic en las opciones del navegador ubicadas en la parte
+        superior derecha verás esta opción:
+      </p>
+
+      <Picture
+        src="/img/guia-de-instalacion/windows-options.png"
+        alt="Instalación de Estelí Buses en Windows con la opciones del navegador"
+        attributes={{
+          link: {
+            fetchpriority: 'low'
+          }
+        }}
+        loading="lazy"
+      />
+
+      <p>
+        Dónde deberás hacer clic en <strong>Instalar Estelí Buses</strong> y se añadirá
+        la app en el Escritorio de tu computadora.
+      </p>
+
+      <section
+        class="bg-orange-100 dark:bg-orange-900 text-orange-500 dark:text-orange-100 rounded p-4 flex gap-x-2 items-start md:items-center text-left"
+      >
+        <div>
+          <svg class="fill-current" viewBox="0 0 24 24" width="40" height="40">
+            <path
+              d="M13 9h-2V7h2m0 10h-2v-6h2m-1-9A10 10 0 0 0 2 12a10 10 0 0 0 10 10 10 10 0 0 0 10-10A10 10 0 0 0 12 2Z"
+            ></path>
+          </svg>
+        </div>
+        <p>¡Este método también es válido en macOS y en Chromebook!</p>
+      </section>
+
+      <h3>¿Te ha resultado útil esta guía de instalación?</h3>
+
+      <p>Comparte la guía en tus redes sociales.</p>
+
+      <section class="flex flex-wrap justify-center items-center gap-x-8">
+        <a
+          class="text-orange-500 any-hover:text-orange-600 active:text-orange-600 transitions-colors"
+          href={`https://api.whatsapp.com/send?text=${shareText}${currentURL}?utm_source=whatsapp&utm_medium=webapp&utm_campaign=social_share_guide&utm_content=guide_page`}
+          target="_blank"
+        >
+          <svg class="fill-current" viewBox="0 0 24 24" width="33" height="33">
+            <path
+              d="M12 2a10 10 0 0 0-8.6 14.9L2 22l5.3-1.4A10 10 0 1 0 12 2m0 1.7A8.2 8.2 0 1 1 7.9 19l-.2-.2-3.2.8.9-3-.2-.3a8.3 8.3 0 0 1 7-12.6M8.5 7.3a1 1 0 0 0-.6.3c-.3.3-.9.9-.9 2.1 0 1.2.9 2.4 1 2.6.1.1 1.8 2.6 4.3 3.7.5.3 1 .4 1.4.5.6.2 1 .2 1.5.1.5 0 1.5-.6 1.7-1.2.2-.5.2-1 .1-1.1l-.4-.3-1.7-.8c-.3-.1-.4-.1-.6.1l-.8 1c-.1.1-.3.2-.5 0-.3 0-1-.4-2-1.2a7.6 7.6 0 0 1-1.4-1.7c-.1-.3 0-.4.1-.5l.4-.5.3-.4v-.4l-.8-1.8c-.2-.5-.4-.5-.6-.5h-.5Z"
+            ></path>
+          </svg>
+        </a>
+        <a
+          class="text-orange-500 any-hover:text-orange-600 active:text-orange-600 transitions-colors"
+          href={`https://www.facebook.com/sharer/sharer.php?u=${currentURL}?utm_source=facebook&utm_medium=webapp&utm_campaign=social_share_guide&utm_content=guide_page`}
+          target="_blank"
+        >
+          <svg class="fill-current" viewBox="0 0 24 24" width="36" height="36">
+            <path
+              d="M12 2.04a10.03 10.03 0 0 0-1.56 19.92v-7H7.9v-2.9h2.54V9.85c0-2.51 1.49-3.89 3.78-3.89 1.09 0 2.23.19 2.23.19v2.47h-1.26c-1.24 0-1.63.77-1.63 1.56v1.88h2.78l-.45 2.9h-2.33v7a10 10 0 0 0 8.44-9.9c0-5.53-4.5-10.02-10-10.02Z"
+            ></path>
+          </svg>
+        </a>
+        <a
+          class="text-orange-500 any-hover:text-orange-600 active:text-orange-600 transitions-colors"
+          href={`https://twitter.com/intent/tweet?url=${currentURL}?utm_source=twitter&utm_medium=webapp&utm_campaign=social_share_guide&utm_content=guide_page&text=${shareText}`}
+          target="_blank"
+        >
+          <svg class="fill-current" viewBox="0 0 24 24" width="33" height="33">
+            <path
+              d="M22.5 6c-.8.3-1.6.6-2.5.7.9-.5 1.6-1.4 1.9-2.4-.8.5-1.8.9-2.7 1a4.3 4.3 0 0 0-7.3 4C8.2 9 5 7.3 3 4.8a4.2 4.2 0 0 0 1.3 5.7c-.7 0-1.3-.2-2-.5 0 2.1 1.6 3.8 3.5 4.2a4.2 4.2 0 0 1-2 .1c.6 1.7 2.2 3 4 3A8.5 8.5 0 0 1 1.6 19c2 1.2 4.2 1.9 6.6 1.9 7.9 0 12.2-6.5 12.2-12.2v-.6C21.2 7.6 22 7 22.5 6Z"
+            ></path>
+          </svg>
+        </a>
+        <a
+          class="text-orange-500 any-hover:text-orange-600 active:text-orange-600 transitions-colors"
+          href={`https://telegram.me/share/url?url=${shareText}${currentURL}?utm_source=telegram&utm_medium=webapp&utm_campaign=social_share_guide&utm_content=guide_page`}
+          target="_blank"
+        >
+          <svg class="fill-current" viewBox="0 0 24 24" width="30" height="30">
+            <path
+              clip-rule="evenodd"
+              d="M24 12a12 12 0 1 1-24 0 12 12 0 0 1 24 0ZM12.4 8.9a572 572 0 0 0-7.9 3.6c0 .4.5.5 1 .7l.3.1c.6.2 1.5.5 1.9.5.4 0 .8-.2 1.3-.5a124 124 0 0 1 5.3-3.3v.2c0 .2-1.8 1.8-2.7 2.7l-.5.5-.3.3c-.6.5-1 1 0 1.6a94.2 94.2 0 0 1 2.7 1.8l.4.3c.5.4 1 .7 1.5.6.3 0 .6-.3.8-1.2a142.2 142.2 0 0 0 1.3-9.1l-.1-.3a.8.8 0 0 0-.5-.2c-.4 0-1.1.3-4.5 1.7Z"
+              fill-rule="evenodd"></path>
+          </svg>
+        </a>
+        <button
+          class="text-orange-500 any-hover:text-orange-600 active:text-orange-600 transitions-colors hidden"
+          id="share-guide"
+          type="button"
+        >
+          <svg class="fill-current" viewBox="0 0 24 24" width="33" height="33">
+            <path
+              d="M18 16a3 3 0 0 0-2 .9l-7-4.2v-1.4l7-4.1a3 3 0 0 0 2 .8 3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3v.7L8 9.8A3 3 0 0 0 6 9a3 3 0 0 0-3 3 3 3 0 0 0 3 3 3 3 0 0 0 2-.8l7.2 4.1-.1.7a3 3 0 0 0 5.8 0 3 3 0 0 0-2.9-3Z"
+            ></path>
+          </svg>
+        </button>
+      </section>
+    </section>
+  </main>
+</Layout>
+
+<style>
+  h2 {
+    @apply !mt-14;
+  }
+</style>
+
+<script define:vars={{ currentURL, shareText }}>
+  /**
+   * Sound page on click
+   */
+
+  const soundPage = new Audio('/sounds/switch-tap.mp3')
+
+  /**
+   * Share button
+   */
+
+  const shareBtn = document.getElementById('share-guide')
+
+  const shareData = {
+    title: 'Estelí Buses',
+    text: shareText,
+    url: `${currentURL}?utm_source=sharebtnguide&utm_medium=webapp&utm_campaign=social_share_guide&utm_content=guide_page`
+  }
+
+  if (navigator.share) {
+    shareBtn.classList.remove('hidden')
+
+    shareBtn.addEventListener('click', () => {
+      if (localStorage.getItem('sounds_enabled') === 'true') {
+        soundPage.play()
+      }
+
+      if (
+        'vibrate' in navigator &&
+        localStorage.getItem('sounds_enabled') === 'false'
+      ) {
+        navigator.vibrate(80)
+      }
+
+      navigator.share(shareData)
+    })
+  }
+</script>

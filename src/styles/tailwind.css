@@ -65,7 +65,8 @@
   }
 
   p a,
+  main ul li a,
   #list-cities li a {
-    @apply font-semibold text-orange-500 underline transition-colors active:text-orange-600;
+    @apply font-semibold text-orange-500 underline transition-colors active:text-orange-600 any-hover:text-orange-600;
   }
 }
