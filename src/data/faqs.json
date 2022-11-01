@@ -13,7 +13,7 @@
   },
   {
     "question": "¿Por qué no encuentro mi destino en específico?",
-    "response": "Debido a que no se ha podido verificar las paradas de los buses, no existe de forma específica los horarios de algunos destinos. Pero puedes consultar los horarios de los destinos principales de la a href=\"/terminal-norte-esteli\">terminal norte</a> que son 22 y de la <a href=\"/terminal-sur-esteli\">terminal sur</a> que son 10."
+    "response": "Debido a que no se ha podido verificar las paradas de los buses, no existe de forma específica los horarios de algunos destinos. Pero puedes consultar los horarios de los destinos principales de la <a href=\"/terminal-norte-esteli\">terminal norte</a> que son 22 y de la <a href=\"/terminal-sur-esteli\">terminal sur</a> que son 10."
   },
   {
     "question": "¿Por qué no se ha añadido el precio de los pasajes?",

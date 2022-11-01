@@ -411,39 +411,43 @@ const {
 </style>
 
 <script>
-  const $$ = (sel) => document.querySelectorAll(sel)
+  const isMobile = navigator.userAgent.match(/Android|iPhone/i)
 
-  const captions = $$('.icons-caption')
-  const expandCaptions = $$('.expand-captions')
-  const expandIcons = $$('.expand-caption-icon')
-  const expandLabels = $$('.expand-caption-label')
-  const scrolltable = $$('.scrolltable')
+  if (isMobile) {
+    const $$ = (sel) => document.querySelectorAll(sel)
 
-  setTimeout(() => {
-    captions.forEach((caption) => {
-      caption.classList.add('hide')
+    const captions = $$('.icons-caption')
+    const expandCaptions = $$('.expand-captions')
+    const expandIcons = $$('.expand-caption-icon')
+    const expandLabels = $$('.expand-caption-label')
+    const scrolltable = $$('.scrolltable')
+
+    setTimeout(() => {
+      captions.forEach((caption) => {
+        caption.classList.add('hide')
+      })
+      expandCaptions.forEach((expand) => {
+        expand.classList.add('opacity-0', 'opacity-100')
+        expand.classList.add('pointer-events-none', 'pointer-events-auto')
+      })
+    }, 4500)
+
+    expandCaptions.forEach((expand, index) => {
+      expand.addEventListener('click', () => {
+        scrolltable[index].classList.add(`index-${index}`)
+
+        $$(`.scrolltable.index-${index} .icons-caption`).forEach((caption) =>
+          caption.classList.toggle('hide')
+        )
+
+        expandIcons[index].classList.toggle('scale-x-[-1]')
+
+        if (expandLabels[index].textContent === 'Expandir') {
+          expandLabels[index].textContent = 'Contraer'
+        } else {
+          expandLabels[index].textContent = 'Expandir'
+        }
+      })
     })
-    expandCaptions.forEach((expand) => {
-      expand.classList.add('opacity-0', 'opacity-100')
-      expand.classList.add('pointer-events-none', 'pointer-events-auto')
-    })
-  }, 4500)
-
-  expandCaptions.forEach((expand, index) => {
-    expand.addEventListener('click', () => {
-      scrolltable[index].classList.add(`index-${index}`)
-
-      $$(`.scrolltable.index-${index} .icons-caption`).forEach((caption) =>
-        caption.classList.toggle('hide')
-      )
-
-      expandIcons[index].classList.toggle('scale-x-[-1]')
-
-      if (expandLabels[index].textContent === 'Expandir') {
-        expandLabels[index].textContent = 'Contraer'
-      } else {
-        expandLabels[index].textContent = 'Expandir'
-      }
-    })
-  })
+  }
 </script>
