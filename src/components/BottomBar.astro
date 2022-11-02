@@ -86,12 +86,13 @@
     class:list={[
       'flex flex-col items-center p-2 border-b-4',
       {
-        'text-white border-white':
-          Astro.url.pathname === '/acerca-de-estelibuses'
+        'text-white border-white': Astro.url.pathname.includes(
+          'acerca-de-estelibuses'
+        )
       },
       {
         'text-orange-900 dark:text-orange-800 active:text-white any-hover:text-white border-transparent transition-colors':
-          Astro.url.pathname !== '/acerca-de-estelibuses'
+          !Astro.url.pathname.includes('acerca-de-estelibuses')
       }
     ]}
     href="/acerca-de-estelibuses"
