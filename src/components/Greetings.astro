@@ -1,5 +1,9 @@
-<span class="text-3xl block text-center lg:text-left" id="greetings"
-  >Hola...</span
+<span
+  class:list={[
+    'text-3xl block',
+    { 'text-center lg:text-left': Astro.url.pathname === '/' }
+  ]}
+  id="greetings">Hola...</span
 >
 
 <script>
@@ -10,7 +14,6 @@
     '😃',
     '😀',
     '😊',
-    '☺',
     '😉',
     '😇',
     '👋',

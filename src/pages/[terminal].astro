@@ -14,6 +14,7 @@ import '@styles/wave.css'
 
 import SocialMedia from '@components/SocialMedia.astro'
 import Navbar from '@components/Navbar.astro'
+import Greetings from '@components/Greetings.astro'
 import CardCity from '@components/CardCity.astro'
 
 export async function getStaticPaths() {
@@ -104,7 +105,8 @@ const getSchemaFAQs = schemaFAQs.map((faq) => ({
       <section
         class="flex flex-col justify-center items-center pt-[4.5rem] pb-[4.5rem] md:pb-[6.5rem] lg:pt-28 lg:pb-[8.5rem] xl:pb-56 text-center"
       >
-        <h1 class={`mb-8 max-w-4xl ${titleColor}`}>{title}</h1>
+        <Greetings />
+        <h1 class={`my-4 max-w-4xl ${titleColor}`}>{title}</h1>
         <p class="max-w-2xl lg:max-w-4xl">
           Conoce todos los horarios de la {station} de Estelí y elige la ciudad a
           la que deseas viajar.
@@ -151,8 +153,10 @@ const getSchemaFAQs = schemaFAQs.map((faq) => ({
               <a
                 class={`font-semibold ${textColor} ${linkColorGroup}`}
                 href={`tel:${phone}`}
-                >{station === 'Terminal Norte' ? `${phone} ext. 102` : phone}
-              </a>
+                set:html={station === 'Terminal Norte'
+                  ? `${phone} <span class="md:hidden">extensión</span><span class="hidden md:inline">ext.</span> 102`
+                  : phone}
+              />
             </div>
           </section>
         </section>

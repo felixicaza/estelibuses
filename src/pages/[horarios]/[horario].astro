@@ -10,6 +10,7 @@ import '@styles/wave.css'
 
 import SocialMedia from '@components/SocialMedia.astro'
 import Navbar from '@components/Navbar.astro'
+import Greetings from '@components/Greetings.astro'
 import FilterTransport from '@components/FilterTransport.astro'
 import CardTimetables from '@components/CardTimetables.astro'
 import CardCity from '@components/CardCity.astro'
@@ -197,7 +198,8 @@ const southernStationFilter = southernStation.cities.filter((city) =>
       <section
         class="flex flex-col justify-center items-center pt-[4.5rem] pb-[4.5rem] md:pb-[6.5rem] lg:pt-28 lg:pb-[8.5rem] xl:pb-56 text-center"
       >
-        <h1 class={`mb-8 max-w-screen-md ${titleColor}`}>
+        <Greetings />
+        <h1 class={`my-4 max-w-screen-md ${titleColor}`}>
           Horarios de los Buses de Estelí hacia {cityName}
         </h1>
         <section class={`space-y-2 ${textColor}`}>
