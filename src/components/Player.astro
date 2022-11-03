@@ -1,0 +1,135 @@
+---
+/* eslint-disable astro/jsx-a11y/media-has-caption */
+---
+
+<p class="font-bold">Disfruta de tu viaje con música Lo-Fi 🎶</p>
+<div class="flex items-center gap-x-2">
+  <audio
+    class="hidden"
+    src="https://lfhh.radioca.st/stream"
+    preload="auto"
+    crossorigin="anonymous"></audio>
+  <button id="player" class="active:text-orange-400">
+    <svg
+      id="play"
+      class="fill-current"
+      viewBox="0 0 24 24"
+      width="24"
+      height="24"
+      ><path class="scale-[1.35] origin-center" d="M8 5v14l11-7L8 5Z"></path>
+    </svg>
+    <svg
+      id="pause"
+      class="fill-current hidden"
+      viewBox="0 0 24 24"
+      width="24"
+      height="24"
+      ><path class="scale-[1.35] origin-center" d="M14 19h4V5h-4M6 19h4V5H6v14Z"
+      ></path>
+    </svg>
+  </button>
+  <canvas class="w-full h-9"></canvas>
+</div>
+<p class="text-xs !mt-1">
+  Utiliza audífonos para una mejor experiencia. Stream proporcionado por <a
+    href="https://chillsky.com/"
+    target="_blank">Chillsky</a
+  >.
+</p>
+
+<script>
+  import { Wave } from '@foobar404/wave'
+
+  const player = document.querySelector('#player')
+  const play = document.querySelector('#player #play')
+  const pause = document.querySelector('#player #pause')
+
+  const audio = document.querySelector('audio')
+  const visualizer = document.querySelector('canvas')
+
+  const wave = new Wave(audio, visualizer)
+
+  navigator.mediaSession.setActionHandler('play', async () => {
+    await audio.play()
+    play.classList.toggle('hidden')
+    pause.classList.toggle('hidden')
+  })
+
+  navigator.mediaSession.setActionHandler('pause', () => {
+    audio.pause()
+    play.classList.toggle('hidden')
+    pause.classList.toggle('hidden')
+  })
+
+  navigator.mediaSession.setActionHandler('stop', function () {
+    audio.pause()
+
+    if (audio.paused) {
+      play.classList.remove('hidden')
+      pause.classList.add('hidden')
+    }
+  })
+
+  audio.addEventListener('play', () => {
+    navigator.mediaSession.playbackState = 'playing'
+  })
+
+  audio.addEventListener('pause', () => {
+    navigator.mediaSession.playbackState = 'paused'
+    if (audio.paused) {
+      play.classList.remove('hidden')
+      pause.classList.add('hidden')
+    }
+  })
+
+  navigator.mediaSession.metadata = new MediaMetadata({
+    title: 'Música Lo-Fi - Estelí Buses',
+    artist: 'Por Chillsky',
+    artwork: [
+      {
+        src: '/manifest/maskable-icon-96x96.png',
+        sizes: '96x96',
+        type: 'image/png'
+      },
+      {
+        src: '/manifest/maskable-icon-128x128.png',
+        sizes: '128x128',
+        type: 'image/png'
+      },
+      {
+        src: '/manifest/maskable-icon-192x192.png',
+        sizes: '192x192',
+        type: 'image/png'
+      },
+      {
+        src: '/manifest/maskable-icon-256x256.png',
+        sizes: '256x256',
+        type: 'image/png'
+      },
+      {
+        src: '/manifest/maskable-icon-384x384.png',
+        sizes: '384x384',
+        type: 'image/png'
+      },
+      {
+        src: '/manifest/maskable-icon-512x512.png',
+        sizes: '512x512',
+        type: 'image/png'
+      }
+    ]
+  })
+
+  wave.addAnimation(
+    new wave.animations.Lines({
+      count: 27,
+      lineColor: '#fb923c',
+      rounded: true
+    })
+  )
+
+  player.addEventListener('click', async () => {
+    audio.paused ? await audio.play() : audio.pause()
+    play.classList.toggle('hidden')
+    pause.classList.toggle('hidden')
+  })
+</script>

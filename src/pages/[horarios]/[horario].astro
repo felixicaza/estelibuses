@@ -6,6 +6,8 @@ import { Schema } from 'astro-seo-schema'
 
 import Layout from '@layouts/Layout.astro'
 
+import Player from '@components/Player.astro'
+
 import '@styles/wave.css'
 
 import SocialMedia from '@components/SocialMedia.astro'
@@ -299,6 +301,9 @@ const southernStationFilter = southernStation.cities.filter((city) =>
         class="flex flex-col gap-y-8 md:flex-row md:gap-y-0 md:gap-x-8 lg:hidden"
       >
         <section class="space-y-2">
+          <Player />
+        </section>
+        <section class="space-y-2">
           <p class="font-bold">Lugar de destino:</p>
           <section class="flex items-center gap-x-2">
             <div>
@@ -313,7 +318,7 @@ const southernStationFilter = southernStation.cities.filter((city) =>
                 ></path>
               </svg>
             </div>
-            <p class="font-bold">{destination}</p>
+            <p>{destination}</p>
           </section>
         </section>
         <section class="space-y-2">
@@ -331,7 +336,7 @@ const southernStationFilter = southernStation.cities.filter((city) =>
                 ></path>
               </svg>
             </div>
-            <p class="font-bold">
+            <p>
               {
                 tripDistance !== ''
                   ? `${tripDistance} (aproximadamente)`
