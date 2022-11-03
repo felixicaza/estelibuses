@@ -32,6 +32,7 @@
     "./**/*.{yaml,yml}": "prettier --write \"./**/*.{yaml,yml}\""
   },
   "dependencies": {
+    "@foobar404/wave": "2.0.3",
     "astro": "1.5.2",
     "firebase": "9.12.1",
     "quicklink": "2.3.0"

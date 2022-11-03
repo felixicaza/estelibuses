@@ -4,6 +4,7 @@ specifiers:
   '@astrojs/tailwind': 2.1.1
   '@commitlint/cli': 17.1.2
   '@commitlint/config-conventional': 17.1.0
+  '@foobar404/wave': 2.0.3
   astro: 1.5.2
   astro-compress: 1.0.12
   astro-compressor: 0.1.2
@@ -48,6 +49,7 @@ specifiers:
   tailwindcss: 3.2.1
 
 dependencies:
+  '@foobar404/wave': 2.0.3
   astro: 1.5.2
   firebase: 9.12.1
   quicklink: 2.3.0
@@ -1279,6 +1281,10 @@ packages:
 
   /@firebase/webchannel-wrapper/0.8.0:
     resolution: {integrity: sha512-Q8erQds5LuAUgNuFOt/tu/abffYUHYxN+Ogp2V5EOssfFG7Ja4ce324Sqyq41u/vB5CSr+tfYS3JzTDrDxCvdw==}
+    dev: false
+
+  /@foobar404/wave/2.0.3:
+    resolution: {integrity: sha512-12V66AHNU/gj56cJucWEAGJHbVQcev8TyEI5AFTd8ukapTIOs76HlrHe8oIt0SdIf+5MD6nZ/2R42MMWqlzQuQ==}
     dev: false
 
   /@grpc/grpc-js/1.7.3:
