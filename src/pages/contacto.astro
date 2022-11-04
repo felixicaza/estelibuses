@@ -159,11 +159,11 @@ const options = {
   const $ = (el) => document.getElementById(el)
   const $$ = (el) => document.querySelector(el)
 
-  const { form } = document.forms
+  const form = $('form') as HTMLFormElement
 
-  const name = $('name')
-  const email = $('email')
-  const message = $('message')
+  const name = $('name') as HTMLInputElement
+  const email = $('email') as HTMLInputElement
+  const message = $('message') as HTMLInputElement
   const submit = $('submit')
   const submitText = $('submitText')
   const spinner = $('spinner')
@@ -179,7 +179,7 @@ const options = {
     const limitInput = el.maxLength || limitFallback
 
     if (e.target === message) {
-      limitCaptionMessage.textContent = limitInput - el.value.length
+      limitCaptionMessage.textContent = String(limitInput - el.value.length)
     }
 
     if (e.target === el) {
@@ -252,7 +252,9 @@ const options = {
     checkValidity(email)
     checkValidity(message)
 
-    const formData = new URLSearchParams(new FormData(form))
+    const formData = new URLSearchParams(
+      new FormData(form) as unknown as string
+    )
 
     fetch(
       'https://us-central1-buses-esteli-d2d5e.cloudfunctions.net/form/enviar',
@@ -288,12 +290,12 @@ const options = {
           submit.removeAttribute('disabled')
           submit.classList.remove('cursor-progress')
           spinner.classList.add('hidden')
-          limitCaptionMessage.textContent = message.maxLength || 850
+          limitCaptionMessage.textContent = String(message.maxLength || 850)
 
           return response.json()
         }
 
-        throw new Error(response.status)
+        throw new Error(String(response.status))
       })
       .then((data) => {
         snackbarContainer.classList.replace('bg-red-500', 'bg-green-500')

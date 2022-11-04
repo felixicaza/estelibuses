@@ -296,7 +296,7 @@ const getSchemaFAQs = schemaFAQs.map((faq) => ({
   const $$ = (sel) => document.querySelectorAll(sel)
 
   const searchForm = $('search-form')
-  const search = $('search')
+  const search = $('search') as HTMLInputElement
 
   const cityName = $$('.city-name')
   const cardCities = $$('.card-city')
@@ -304,7 +304,7 @@ const getSchemaFAQs = schemaFAQs.map((faq) => ({
   const noCity = $('no-city')
 
   searchForm.addEventListener('input', (e) => {
-    if (e.target.id === 'search') {
+    if ((e.target as HTMLInputElement).id === 'search') {
       /*
        * Sanitize user input.
        * - Normalize text using Canonical Decomposition (NFD).

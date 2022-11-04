@@ -238,7 +238,9 @@ import { Picture } from 'astro-imagetools/components'
    * Get current year
    */
 
-  document.getElementById('currentyear').textContent = new Date().getFullYear()
+  document.getElementById('currentyear').textContent = String(
+    new Date().getFullYear()
+  )
 
   /**
    * Sound page on click

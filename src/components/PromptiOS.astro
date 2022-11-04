@@ -40,6 +40,11 @@
 </style>
 
 <script>
+  declare global {
+    interface Navigator {
+      readonly standalone: string
+    }
+  }
   /**
    * Show prompt install for iOS
    */

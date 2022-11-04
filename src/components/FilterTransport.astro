@@ -99,9 +99,9 @@ import '@styles/filter.css'
   const $$ = (el) => document.querySelectorAll(el)
 
   const formFilter = $('filter')
-  const radioAll = $('all')
-  const radioExpress = $('express')
-  const radioRouted = $('routed')
+  const radioAll = $('all') as HTMLInputElement
+  const radioExpress = $('express') as HTMLInputElement
+  const radioRouted = $('routed') as HTMLInputElement
 
   const expressBuses = $$('.expreso')
   const routedBuses = $$('.ruteado')
@@ -118,7 +118,7 @@ import '@styles/filter.css'
 
   if (formFilter !== null) {
     formFilter.addEventListener('change', (e) => {
-      if (e.target.id === 'all' && radioAll.checked) {
+      if ((e.target as HTMLInputElement).id === 'all' && radioAll.checked) {
         if (localStorage.getItem('sounds_enabled') === 'true') {
           soundRadioButton.play()
         }
@@ -158,7 +158,10 @@ import '@styles/filter.css'
         })
       }
 
-      if (e.target.id === 'express' && radioExpress.checked) {
+      if (
+        (e.target as HTMLInputElement).id === 'express' &&
+        radioExpress.checked
+      ) {
         if (localStorage.getItem('sounds_enabled') === 'true') {
           soundRadioButton.play()
         }
@@ -192,7 +195,10 @@ import '@styles/filter.css'
         })
       }
 
-      if (e.target.id === 'routed' && radioRouted.checked) {
+      if (
+        (e.target as HTMLInputElement).id === 'routed' &&
+        radioRouted.checked
+      ) {
         if (localStorage.getItem('sounds_enabled') === 'true') {
           soundRadioButton.play()
         }

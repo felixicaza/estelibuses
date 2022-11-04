@@ -193,7 +193,7 @@ const mergeDataStations = [northernStation, southernStation]
   const $$ = (el) => document.querySelectorAll(el)
 
   const mainSearch = $('main-search')
-  const citiesSearch = $('cities-search')
+  const citiesSearch = $('cities-search') as HTMLInputElement
 
   const containerCities = $('container-cities')
   const cities = $$('.cities')
@@ -202,7 +202,7 @@ const mergeDataStations = [northernStation, southernStation]
   const unknownCity = $('unknown-city')
 
   mainSearch.addEventListener('input', (e) => {
-    if (e.target.id === 'cities-search') {
+    if ((e.target as HTMLInputElement).id === 'cities-search') {
       containerCities.classList.replace('opacity-0', 'opacity-100')
       containerCities.classList.replace('translate-y-full', 'translate-y-0')
       containerCities.classList.replace(

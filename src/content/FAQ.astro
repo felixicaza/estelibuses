@@ -43,7 +43,7 @@ import faqs from '@data/faqs.json'
 </article>
 <script>
   const accordion = document.querySelectorAll('.accordion')
-  const panel = document.querySelectorAll('.panel')
+  const panel: NodeListOf<HTMLElement> = document.querySelectorAll('.panel')
 
   for (let i = 0; i < accordion.length; i++) {
     accordion[i].addEventListener('click', () => {

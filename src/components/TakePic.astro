@@ -82,7 +82,8 @@
 
   const busPicBtns = document.querySelectorAll('.bus-pic-btn')
   const picContainer = document.querySelectorAll('.pic-container')
-  const busImage = document.querySelectorAll('.bus-image')
+  const busImage: NodeListOf<HTMLVideoElement> =
+    document.querySelectorAll('.bus-image')
   const picBtn = document.querySelectorAll('.pic-btn')
   const sendPicBtn = document.querySelectorAll('.send-píc-btn')
   const cancelPicBtn = document.querySelectorAll('.cancel-pic-btn')

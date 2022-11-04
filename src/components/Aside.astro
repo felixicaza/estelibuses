@@ -413,7 +413,7 @@ import InstallPWAButton from '@components/InstallPWAButton.astro'
    * Darkmode
    */
 
-  const switchScheme = $('switch-scheme')
+  const switchScheme = $('switch-scheme') as HTMLInputElement
 
   const colorSchemeDark = window.matchMedia('(prefers-color-scheme: dark)')
   let darkModeState = false
@@ -472,13 +472,13 @@ import InstallPWAButton from '@components/InstallPWAButton.astro'
    * Sound switch
    */
 
-  const switchSound = $('switch-sound')
+  const switchSound = $('switch-sound') as HTMLInputElement
   const labelSound = $('label-sound')
   const soundDisableIcon = $('sound-disable')
   const soundEnableIcon = $('sound-enable')
 
   switchSound.addEventListener('change', (e) => {
-    if (!e.target.checked) {
+    if (!(e.target as HTMLInputElement).checked) {
       localStorage.setItem('sounds_enabled', 'false')
 
       if (
