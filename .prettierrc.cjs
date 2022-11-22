@@ -12,7 +12,7 @@ module.exports = {
     {
       files: '*.{yaml,yml}',
       options: {
-        tabWith: 3
+        tabWidth: 3
       }
     }
   ],
