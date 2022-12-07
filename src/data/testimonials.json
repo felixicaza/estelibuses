@@ -1,10 +1,19 @@
 [
   {
+    "name": "Alisson Machado",
+    "comment": "Me resultó una grata sorpresa encontrar una aplicación web dónde se encuentran los horarios de la terminales. El formato de la aplicación web es intuitivo, se ve precioso y es agradable ver el detalle de la radio incluída. Mis felitaciones al creador de esta plataforma.",
+    "bg_circle": "bg-purple-100",
+    "color_icon": "text-purple-500",
+    "icon": "woman",
+    "large": true
+  },
+  {
     "name": "Gissell Altamirano",
     "comment": "Me encanta la idea de esta app, me ayuda mucho a organizar mi tiempo a la hora de viajar, ojalá nunca la quiten y la sigan actualizando, sería mega genial, que también pusieran contactos de cada autobús 😊.",
     "bg_circle": "bg-blue-100",
     "color_icon": "text-blue-500",
-    "icon": "woman"
+    "icon": "woman",
+    "large": true
   },
   {
     "name": "Daysi",
