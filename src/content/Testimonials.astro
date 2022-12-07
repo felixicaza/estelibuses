@@ -9,17 +9,17 @@ const randomSortTestimonials = testimonials.sort(() => 0.5 - Math.random())
 const testimonialsLength = testimonials.length
 ---
 
-<article class="py-10 sm:py-12 bg-[#FFFDF9] dark:bg-[#2D231B]">
+<article class="bg-[#FFFDF9] py-10 dark:bg-[#2D231B] sm:py-12">
   <div class="container mx-auto px-4">
-    <section class="space-y-6 mb-10 lg:mb-16 lg:text-center">
+    <section class="mb-10 space-y-6 lg:mb-16 lg:text-center">
       <h2 class="text-center">Los Estelianos confían en Estelí Buses</h2>
     </section>
     <article
-      class="grid items-start gap-4 sm:gap-8 snap-mandatory snap-x overflow-x-scroll pb-4 px-4 mx-auto users-comments"
+      class="users-comments mx-auto grid snap-x snap-mandatory items-start gap-4 overflow-x-scroll px-4 pb-4 sm:gap-8"
     >
       {
         randomSortTestimonials.map((testimonial) => (
-          <section class="flex h-full snap-center flex-col items-center justify-start gap-y-2 rounded bg-white px-3 pt-2 pb-3 text-center shadow dark:bg-[#30251b]/50">
+          <section class="flex h-full snap-center flex-col items-center justify-start gap-y-2 rounded bg-white p-3 text-center shadow dark:bg-[#30251b]/50">
             <div>
               <section
                 class={`mx-auto h-max w-max rounded-full p-3 ${testimonial.bg_circle}`}
@@ -40,11 +40,22 @@ const testimonialsLength = testimonials.length
                 </svg>
               </section>
             </div>
-            <div class="space-y-1">
-              <p class="mb-1 font-semibold">{testimonial.name}</p>
-              <p class="comment h-24 overflow-y-auto !text-base">
+            <div class="space-y-2">
+              <p class="font-semibold">{testimonial.name}</p>
+              <p
+                class:list={[
+                  '!text-base',
+                  { 'large-comments': testimonial.large }
+                ]}
+              >
                 {testimonial.comment}
               </p>
+              {testimonial.large && (
+                <input
+                  class="expand-comments block cursor-pointer appearance-none whitespace-nowrap pl-2 text-left text-orange-500 active:text-orange-600 any-hover:text-orange-600"
+                  type="checkbox"
+                />
+              )}
             </div>
           </section>
         ))
@@ -59,7 +70,7 @@ const testimonialsLength = testimonials.length
           target="_blank"
           >Llena este formulario
           <svg
-            class="fill-current inline -mt-[0.125rem]"
+            class="-mt-[0.125rem] inline fill-current"
             viewBox="0 0 24 24"
             width="12"
             height="12"
@@ -79,14 +90,42 @@ const testimonialsLength = testimonials.length
     grid-template-columns: repeat(var(--items), 16rem);
   }
 
+  .large-comments {
+    max-height: 96px;
+    overflow: hidden;
+    position: relative;
+    transition: max-height 300ms ease;
+  }
+
+  .large-comments:has(+ .expand-comments:not(:checked))::before {
+    content: '';
+    position: absolute;
+    height: 40px;
+    width: 100%;
+    bottom: 0;
+    left: 0;
+    pointer-events: none;
+    background: linear-gradient(to bottom, transparent, white);
+  }
+
+  .large-comments:has(+ .expand-comments:checked) {
+    max-height: 500px;
+  }
+
+  .expand-comments::before {
+    content: 'Leer más';
+  }
+
+  .expand-comments:checked::before {
+    content: 'Leer menos';
+  }
+
   @media (any-pointer: coarse) {
-    .users-comments,
-    .comment {
+    .users-comments {
       scrollbar-width: none;
     }
 
-    .users-comments::-webkit-scrollbar,
-    .comment::-webkit-scrollbar {
+    .users-comments::-webkit-scrollbar {
       display: none;
     }
   }
@@ -94,6 +133,10 @@ const testimonialsLength = testimonials.length
   @media (min-width: 768px) {
     .users-comments {
       grid-template-columns: repeat(var(--items), 20rem);
+    }
+
+    .large-comments {
+      max-height: 72px;
     }
   }
 

@@ -13,7 +13,7 @@ importScripts(
 workbox.setConfig({ debug: false })
 workbox.googleAnalytics.initialize()
 
-const CACHE_CORE = 'core-v2.84'
+const CACHE_CORE = 'core-v2.85'
 const CACHE_MEDIA = 'media-v2.84'
 const CACHE_DYNAMIC = 'dynamic-v2.84'
 
