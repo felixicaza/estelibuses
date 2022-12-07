@@ -26,7 +26,7 @@ const {
 <section
   class={`space-y-2 bg-[#fcfcfc] dark:bg-[#362d25] shadow rounded p-4 any-hover:shadow-md transition-shadow ${transportType.toLowerCase()}`}
 >
-  <h2 class="titles text-3xl sm:text-4xl font-bold">
+  <h2 class="titles text-3xl font-bold sm:text-4xl">
     Horario #{index + 1}
   </h2>
 
@@ -52,12 +52,12 @@ const {
     )
   }
 
-  <div class="pb-2 scrolltable">
-    <table class="whitespace-nowrap border-collapse">
+  <div class="scrolltable pb-2">
+    <table class="border-collapse whitespace-nowrap">
       <tbody>
         <tr class="group">
           <td
-            class="px-3 py-2 gap-x-2 flex items-center group-hover:bg-orange-50 dark:group-hover:bg-[#3E352C] transition-colors rounded-l"
+            class="flex items-center gap-x-2 rounded-l px-3 py-2 transition-colors group-hover:bg-orange-50 dark:group-hover:bg-[#3E352C]"
           >
             <svg
               class="fill-current"
@@ -72,10 +72,10 @@ const {
             <strong class="icons-caption">Hora de salida de Estelí</strong>
           </td>
           <td
-            class="px-3 py-2 gap-x-2 group-hover:bg-orange-50 dark:group-hover:bg-[#3E352C] transition-colors rounded-r"
+            class="gap-x-2 rounded-r px-3 py-2 transition-colors group-hover:bg-orange-50 dark:group-hover:bg-[#3E352C]"
           >
             <span
-              class="px-2 py-1 text-green-700 bg-green-100 rounded font-bold"
+              class="rounded bg-green-100 px-2 py-1 font-bold text-green-700"
             >
               {
                 // Convert hour (departure_time) to AM/PM format due to the fact
@@ -181,7 +181,7 @@ const {
         }
         <tr class="group">
           <td
-            class="px-3 py-2 gap-x-2 flex items-center group-hover:bg-orange-50 dark:group-hover:bg-[#3E352C] transition-colors rounded-l"
+            class="flex items-center gap-x-2 rounded-l px-3 py-2 transition-colors group-hover:bg-orange-50 dark:group-hover:bg-[#3E352C]"
           >
             <svg
               class="fill-current"
@@ -196,10 +196,10 @@ const {
             <strong class="icons-caption">Tipo de transporte</strong>
           </td>
           <td
-            class="px-3 py-2 gap-x-2 group-hover:bg-orange-50 dark:group-hover:bg-[#3E352C] transition-colors rounded-r"
+            class="gap-x-2 rounded-r px-3 py-2 transition-colors group-hover:bg-orange-50 dark:group-hover:bg-[#3E352C]"
           >
             <span
-              class="px-2 py-1 text-green-700 bg-green-100 rounded font-bold"
+              class="rounded bg-green-100 px-2 py-1 font-bold text-green-700"
             >
               {transportType}
             </span>
@@ -251,7 +251,7 @@ const {
         }
         <tr class="group">
           <td
-            class="px-3 py-2 gap-x-2 flex items-center group-hover:bg-orange-50 dark:group-hover:bg-[#3E352C] transition-colors rounded-l"
+            class="flex items-center gap-x-2 rounded-l px-3 py-2 transition-colors group-hover:bg-orange-50 dark:group-hover:bg-[#3E352C]"
           >
             <svg
               class="fill-current"
@@ -266,7 +266,7 @@ const {
             <strong class="icons-caption">Precio del pasaje</strong>
           </td>
           <td
-            class="px-3 py-2 gap-x-2 group-hover:bg-orange-50 dark:group-hover:bg-[#3E352C] transition-colors rounded-r"
+            class="gap-x-2 rounded-r px-3 py-2 transition-colors group-hover:bg-orange-50 dark:group-hover:bg-[#3E352C]"
           >
             {
               transportPrice !== '' ? (
@@ -288,7 +288,7 @@ const {
         </tr>
         <tr class="group">
           <td
-            class="px-3 py-2 gap-x-2 flex items-center group-hover:bg-orange-50 dark:group-hover:bg-[#3E352C] transition-colors rounded-l"
+            class="flex items-center gap-x-2 rounded-l px-3 py-2 transition-colors group-hover:bg-orange-50 dark:group-hover:bg-[#3E352C]"
           >
             <svg
               class="fill-current"
@@ -303,7 +303,7 @@ const {
             <strong class="icons-caption">Duración del viaje</strong>
           </td>
           <td
-            class="px-3 py-2 gap-x-2 group-hover:bg-orange-50 dark:group-hover:bg-[#3E352C] transition-colors rounded-r"
+            class="gap-x-2 rounded-r px-3 py-2 transition-colors group-hover:bg-orange-50 dark:group-hover:bg-[#3E352C]"
           >
             {
               tripDuration !== '' ? (
@@ -323,14 +323,14 @@ const {
   </div>
 
   <button
-    class="expand-captions opacity-0 ml-3 transition-opacity pointer-events-none flex gap-x-2 items-center md:hidden"
+    class="expand-captions pointer-events-none ml-3 flex items-center gap-x-2 opacity-0 transition-opacity md:hidden"
     type="button"
   >
     <span
-      class="bg-orange-100 text-orange-500 dark:bg-[#493A2F] dark:text-white shadow rounded-full"
+      class="rounded-full bg-orange-100 text-orange-500 shadow dark:bg-[#493A2F] dark:text-white"
     >
       <svg
-        class="expand-caption-icon fill-current pointer-events-none"
+        class="expand-caption-icon pointer-events-none fill-current"
         width="23"
         height="23"
       >

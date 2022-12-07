@@ -4,7 +4,7 @@
 
 <div class="md:hidden">
   <button
-    class="w-full rounded font-semibold space-x-2.5 py-2.5 px-5 transition-colors inline-flex items-center active:outline-none bg-orange-100 dark:bg-[#4c3c2e] active:bg-orange-200 text-orange-500 dark:text-orange-100 bus-pic-btn"
+    class="bus-pic-btn inline-flex w-full items-center space-x-2.5 rounded bg-orange-100 py-2.5 px-5 font-semibold text-orange-500 transition-colors active:bg-orange-200 active:outline-none dark:bg-[#4c3c2e] dark:text-orange-100"
   >
     <span>
       <svg class="fill-current" viewBox="0 0 24 24" width="24" height="24">
@@ -16,32 +16,32 @@
     <span class="text-sm us:text-base">Toma una foto del transporte</span>
   </button>
   <section
-    class="bg-orange-300 dark:bg-[#180f06] dark:text-white fixed top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 z-20 w-full max-w-sm sm:max-w-md shadow-md rounded px-4 py-6 pointer-events-none scale-0 opacity-0 transition-all h-[85vh] flex flex-col pic-container"
+    class="pic-container pointer-events-none fixed top-1/2 left-1/2 z-20 flex h-[85vh] w-full max-w-sm -translate-x-1/2 -translate-y-1/2 scale-0 transform flex-col rounded bg-orange-300 px-4 py-6 opacity-0 shadow-md transition-all dark:bg-[#180f06] dark:text-white sm:max-w-md"
   >
     <video
-      class="bg-orange-100 dark:bg-[#2c251f] w-full h-full rounded flex-grow bus-image"
+      class="bus-image h-full w-full flex-grow rounded bg-orange-100 dark:bg-[#2c251f]"
       autoplay="autoplay"></video>
     <section class="mt-2">
-      <div class="flex gap-4 first-pic-container">
+      <div class="first-pic-container flex gap-4">
         <button
-          class="w-full rounded font-semibold py-2.5 px-5 transition-colors active:bg-orange-500 active:outline-none bg-orange-400 text-white pic-btn"
+          class="pic-btn w-full rounded bg-orange-400 py-2.5 px-5 font-semibold text-white transition-colors active:bg-orange-500 active:outline-none"
         >
           Tomar foto
         </button>
         <button
-          class="w-full rounded font-semibold py-2.5 px-5 transition-colors active:text-orange-500 active:bg-orange-200 active:outline-none bg-orange-100 text-orange-400 cancel-pic-btn"
+          class="cancel-pic-btn w-full rounded bg-orange-100 py-2.5 px-5 font-semibold text-orange-400 transition-colors active:bg-orange-200 active:text-orange-500 active:outline-none"
         >
           Cancelar
         </button>
       </div>
-      <div class="flex gap-4 hidden second-pic-container">
+      <div class="second-pic-container flex hidden gap-4">
         <button
-          class="w-full rounded font-semibold py-2.5 px-5 transition-colors active:bg-orange-500 active:outline-none bg-orange-400 text-white send-píc-btn"
+          class="send-píc-btn w-full rounded bg-orange-400 py-2.5 px-5 font-semibold text-white transition-colors active:bg-orange-500 active:outline-none"
         >
           Enviar foto
         </button>
         <button
-          class="w-full rounded font-semibold py-2.5 px-5 transition-colors active:text-orange-500 active:bg-orange-200 active:outline-none bg-orange-100 text-orange-400 take-pic-btn"
+          class="take-pic-btn w-full rounded bg-orange-100 py-2.5 px-5 font-semibold text-orange-400 transition-colors active:bg-orange-200 active:text-orange-500 active:outline-none"
         >
           Tomar de nuevo
         </button>
@@ -49,10 +49,10 @@
     </section>
   </section>
   <section
-    class="w-full h-87 font-semibold rounded bg-orange-100 dark:bg-[#2c251f] flex flex-col items-center justify-center text-center px-4 py-6 hidden congrats"
+    class="h-87 congrats flex hidden w-full flex-col items-center justify-center rounded bg-orange-100 px-4 py-6 text-center font-semibold dark:bg-[#2c251f]"
   >
     <p class="text-lg">¡Muchísimas gracias!</p>
-    <p class="px-2 mt-2">
+    <p class="mt-2 px-2">
       Tu foto será revisada y cuándo sea aprobada se publicará en la plataforma.
       🥳🎉
     </p>

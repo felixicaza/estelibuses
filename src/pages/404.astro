@@ -12,14 +12,14 @@ const options = {
 ---
 
 <Layout {options}>
-  <header class="container mx-auto px-4 safe-top">
+  <header class="safe-top container mx-auto px-4">
     <Navbar />
   </header>
   <main
-    class="pt-[4.5rem] pb-[6.5rem] xs:pb-36 lg:pt-28 lg:pb-[8.5rem] xl:pb-44 2xl:pb-[13.5rem] text-center"
+    class="pt-[4.5rem] pb-[6.5rem] text-center xs:pb-36 lg:pt-28 lg:pb-[8.5rem] xl:pb-44 2xl:pb-[13.5rem]"
   >
-    <div class="container mx-auto px-4 space-y-6">
-      <h1 class="mb-8 max-w-screen-lg mx-auto">
+    <div class="container mx-auto space-y-6 px-4">
+      <h1 class="mx-auto mb-8 max-w-screen-lg">
         Ups, la página que estás buscando no existe.
       </h1>
       <p>
@@ -27,11 +27,11 @@ const options = {
         ciudad de Estelí, y planea con exactitud la hora de tu próximo viaje.
       </p>
       <article
-        class="flex flex-col md:flex-row md:gap-y-0 md:gap-x-16 items-center justify-center gap-y-16 text-center"
+        class="flex flex-col items-center justify-center gap-y-16 text-center md:flex-row md:gap-y-0 md:gap-x-16"
       >
         <section>
           <div class="mb-4">
-            <div class="mx-auto p-3 bg-emerald-100 h-max w-max rounded-full">
+            <div class="mx-auto h-max w-max rounded-full bg-emerald-100 p-3">
               <svg
                 class="fill-current text-emerald-400"
                 viewBox="0 0 24 24"
@@ -44,19 +44,19 @@ const options = {
               </svg>
             </div>
           </div>
-          <h3 class="mb-2 font-bold text-2xl text-emerald-500">
+          <h3 class="mb-2 text-2xl font-bold text-emerald-500">
             Terminal norte
           </h3>
-          <p class="mx-auto px-4 max-w-sm !text-base">
+          <p class="mx-auto max-w-sm px-4 !text-base">
             La terminal norte cuenta con 22 destinos principales.
           </p>
           <a
-            class="items-center mt-4 px-5 py-2.5 space-x-1 font-semibold text-emerald-500 transition-colors active:bg-emerald-100 active:outline-none active:text-emerald-700 any-hover:bg-emerald-100 any-hover:text-emerald-700 inline-flex rounded"
+            class="mt-4 inline-flex items-center space-x-1 rounded px-5 py-2.5 font-semibold text-emerald-500 transition-colors active:bg-emerald-100 active:text-emerald-700 active:outline-none any-hover:bg-emerald-100 any-hover:text-emerald-700"
             href="/terminal-norte-esteli"
           >
             <span>Conoce los destinos</span>
             <span>
-              <svg class="fill-current mt-[0.1625rem]" width="26" height="26">
+              <svg class="mt-[0.1625rem] fill-current" width="26" height="26">
                 <path d="m8.6 16.6 4.6-4.6-4.6-4.6L10 6l6 6-6 6-1.4-1.4Z"
                 ></path>
               </svg>
@@ -65,7 +65,7 @@ const options = {
         </section>
         <section>
           <div class="mb-4">
-            <div class="mx-auto p-3 bg-amber-100 h-max w-max rounded-full">
+            <div class="mx-auto h-max w-max rounded-full bg-amber-100 p-3">
               <svg
                 class="fill-current text-amber-400"
                 viewBox="0 0 24 24"
@@ -78,17 +78,17 @@ const options = {
               </svg>
             </div>
           </div>
-          <h3 class="mb-2 font-bold text-2xl text-amber-500">Terminal sur</h3>
-          <p class="mx-auto px-4 max-w-sm !text-base">
+          <h3 class="mb-2 text-2xl font-bold text-amber-500">Terminal sur</h3>
+          <p class="mx-auto max-w-sm px-4 !text-base">
             La terminal sur cuenta con 10 destinos principales.
           </p>
           <a
-            class="items-center mt-4 px-5 py-2.5 space-x-1 font-semibold text-amber-500 transition-colors active:bg-amber-100 active:outline-none active:text-amber-700 any-hover:bg-amber-100 any-hover:text-amber-700 inline-flex rounded"
+            class="mt-4 inline-flex items-center space-x-1 rounded px-5 py-2.5 font-semibold text-amber-500 transition-colors active:bg-amber-100 active:text-amber-700 active:outline-none any-hover:bg-amber-100 any-hover:text-amber-700"
             href="/terminal-sur-esteli"
           >
             <span>Conoce los destinos</span>
             <span>
-              <svg class="fill-current mt-[0.1625rem]" width="26" height="26">
+              <svg class="mt-[0.1625rem] fill-current" width="26" height="26">
                 <path d="m8.6 16.6 4.6-4.6-4.6-4.6L10 6l6 6-6 6-1.4-1.4Z"
                 ></path>
               </svg>
@@ -96,7 +96,7 @@ const options = {
           </a>
         </section>
       </article>
-      <section class="max-w-2xl mx-auto">
+      <section class="mx-auto max-w-2xl">
         <Picture
           src="/img/404.png"
           alt="Imágen 404"

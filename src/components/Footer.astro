@@ -2,12 +2,12 @@
 import { Picture } from 'astro-imagetools/components'
 ---
 
-<footer class="bg-[#1c1611] text-white text-center">
-  <div class="container px-4 pt-12 pb-8 mx-auto">
+<footer class="bg-[#1c1611] text-center text-white">
+  <div class="container mx-auto px-4 pt-12 pb-8">
     <section
-      class="flex flex-col xl:flex-row xl:justify-between gap-y-8 xl:gap-y-0 xl:items-center"
+      class="flex flex-col gap-y-8 xl:flex-row xl:items-center xl:justify-between xl:gap-y-0"
     >
-      <section class="flex flex-col gap-y-4 items-center">
+      <section class="flex flex-col items-center gap-y-4">
         <a href="/" class="inline-block">
           <Picture
             src="/img/estelibuses-logo.png"
@@ -22,10 +22,10 @@ import { Picture } from 'astro-imagetools/components'
             height={70}
           />
         </a>
-        <div class="flex flex-col gap-y-2 items-center">
+        <div class="flex flex-col items-center gap-y-2">
           <p class="text-sm font-bold">¡Síguenos en Facebook!</p>
           <a
-            class="any-hover:text-orange-400 active:text-orange-400 transition-colors"
+            class="transition-colors active:text-orange-400 any-hover:text-orange-400"
             id="facebook"
             href="https://www.facebook.com/estelibuses"
             target="_blank"
@@ -44,44 +44,44 @@ import { Picture } from 'astro-imagetools/components'
         </div>
       </section>
       <section
-        class="flex flex-col gap-y-8 items-center xl:items-end xl:gap-y-4"
+        class="flex flex-col items-center gap-y-8 xl:items-end xl:gap-y-4"
       >
         <nav>
           <ul
-            class="flex flex-wrap gap-x-6 gap-y-4 justify-center items-center text-sm"
+            class="flex flex-wrap items-center justify-center gap-x-6 gap-y-4 text-sm"
           >
             <li>
               <a
                 href="/terminal-norte-esteli"
-                class="any-hover:text-orange-400 active:text-orange-400 transition-colors"
+                class="transition-colors active:text-orange-400 any-hover:text-orange-400"
                 >Horarios Terminal Norte</a
               >
             </li>
             <li>
               <a
                 href="/terminal-sur-esteli"
-                class="any-hover:text-orange-400 active:text-orange-400 transition-colors"
+                class="transition-colors active:text-orange-400 any-hover:text-orange-400"
                 >Horarios Terminal Sur</a
               >
             </li>
             <li>
               <a
                 href="/acerca-de-estelibuses"
-                class="any-hover:text-orange-400 active:text-orange-400 transition-colors"
+                class="transition-colors active:text-orange-400 any-hover:text-orange-400"
                 >Acerca</a
               >
             </li>
             <li>
               <a
                 href="/guia-de-instalacion"
-                class="any-hover:text-orange-400 active:text-orange-400 transition-colors"
+                class="transition-colors active:text-orange-400 any-hover:text-orange-400"
                 >Guía de Instalación</a
               >
             </li>
             <li>
               <a
                 href="/politica-de-privacidad"
-                class="any-hover:text-orange-400 active:text-orange-400 transition-colors"
+                class="transition-colors active:text-orange-400 any-hover:text-orange-400"
                 >Política de Privacidad</a
               >
             </li>
@@ -107,18 +107,18 @@ import { Picture } from 'astro-imagetools/components'
       </section>
     </section>
 
-    <hr class="h-px my-8 bg-[#483323] border-none" />
+    <hr class="my-8 h-px border-none bg-[#483323]" />
     <section
-      class="flex gap-y-8 flex-col xl:flex-row xl:justify-between items-center xl:items-start"
+      class="flex flex-col items-center gap-y-8 xl:flex-row xl:items-start xl:justify-between"
     >
       <div
-        class="order-2 xl:order-1 flex flex-col gap-y-4 xl:gap-y-0 items-center xl:items-start"
+        class="order-2 flex flex-col items-center gap-y-4 xl:order-1 xl:items-start xl:gap-y-0"
       >
         <p class="text-sm">
           &copy; <span id="currentyear"></span>
           <a
             href="/"
-            class="text-inherit no-underline any-hover:underline active:underline"
+            class="text-inherit no-underline active:underline any-hover:underline"
             >Estelí Buses</a
           >. Hecho con ❤ en Estelí para todos los Estelianos.
         </p>
@@ -139,11 +139,11 @@ import { Picture } from 'astro-imagetools/components'
           </a>
         </section>
       </div>
-      <section class="order-1 xl:order-2 flex flex-col gap-y-2 items-center">
+      <section class="order-1 flex flex-col items-center gap-y-2 xl:order-2">
         <p class="text-sm font-bold">¡Comparte Estelí Buses!</p>
-        <nav class="flex gap-x-8 items-center">
+        <nav class="flex items-center gap-x-8">
           <a
-            class="any-hover:text-orange-400 active:text-orange-400 transition-colors"
+            class="transition-colors active:text-orange-400 any-hover:text-orange-400"
             id="whatsapp"
             href="https://api.whatsapp.com/send?text=%C2%A1Conoce%20todos%20los%20horarios%20de%20las%20terminales%20de%20buses%20de%20la%20ciudad%20de%20Estel%C3%AD!%0ahttps://estelibuses.web.app/?utm_source=whatsapp&utm_medium=webapp&utm_campaign=social_share&utm_content=footer"
             target="_blank"
@@ -160,7 +160,7 @@ import { Picture } from 'astro-imagetools/components'
             </svg>
           </a>
           <a
-            class="any-hover:text-orange-400 active:text-orange-400 transition-colors"
+            class="transition-colors active:text-orange-400 any-hover:text-orange-400"
             id="facebook"
             href="https://www.facebook.com/sharer/sharer.php?u=https://estelibuses.web.app/?utm_source=facebook&utm_medium=webapp&utm_campaign=social_share&utm_content=footer"
             target="_blank"
@@ -177,7 +177,7 @@ import { Picture } from 'astro-imagetools/components'
             </svg>
           </a>
           <a
-            class="any-hover:text-orange-400 active:text-orange-400 transition-colors"
+            class="transition-colors active:text-orange-400 any-hover:text-orange-400"
             id="twitter"
             href="https://twitter.com/intent/tweet?url=https://estelibuses.web.app/?utm_source=twitter&utm_medium=webapp&utm_campaign=social_share&utm_content=footer&text=%C2%A1Conoce%20todos%20los%20horarios%20de%20las%20terminales%20de%20buses%20de%20la%20ciudad%20de%20Estel%C3%AD!"
             target="_blank"
@@ -194,7 +194,7 @@ import { Picture } from 'astro-imagetools/components'
             </svg>
           </a>
           <a
-            class="any-hover:text-orange-400 active:text-orange-400 transition-colors"
+            class="transition-colors active:text-orange-400 any-hover:text-orange-400"
             id="telegram"
             href="https://telegram.me/share/url?url=%C2%A1Conoce%20todos%20los%20horarios%20de%20las%20terminales%20de%20buses%20de%20la%20ciudad%20de%20Estel%C3%AD!%0ahttps://estelibuses.web.app/?utm_source=telegram&utm_medium=webapp&utm_campaign=social_share&utm_content=footer"
             target="_blank"
@@ -212,7 +212,7 @@ import { Picture } from 'astro-imagetools/components'
             </svg>
           </a>
           <button
-            class="any-hover:text-orange-400 active:text-orange-400 transition-colors hidden"
+            class="hidden transition-colors active:text-orange-400 any-hover:text-orange-400"
             id="share"
             type="button"
           >

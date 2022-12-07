@@ -20,25 +20,25 @@ const options = {
   </header>
   <main class="container mx-auto px-4">
     <section
-      class="pt-[4.5rem] pb-[6.5rem] xs:pb-36 lg:pt-28 lg:pb-[8.5rem] xl:pb-44 2xl:pb-[13.5rem] text-center max-w-6xl mx-auto space-y-6"
+      class="mx-auto max-w-6xl space-y-6 pt-[4.5rem] pb-[6.5rem] text-center xs:pb-36 lg:pt-28 lg:pb-[8.5rem] xl:pb-44 2xl:pb-[13.5rem]"
     >
       <h1 class="mb-8">Contacto</h1>
 
       <p>Envía un mensaje a través del siguiente formulario.</p>
 
       <form
-        class="rounded space-y-5 shadow-md shadow-orange-800/10 w-full p-8 lg:mx-auto lg:w-3/5 text-left bg-[#FFFDF9] dark:bg-[#362d25]"
+        class="w-full space-y-5 rounded bg-[#FFFDF9] p-8 text-left shadow-md shadow-orange-800/10 dark:bg-[#362d25] lg:mx-auto lg:w-3/5"
         id="form"
         name="form"
         autocomplete="off"
       >
         <section class="space-y-2">
           <label
-            class="after:content-['*'] after:ml-0.5 after:text-orange-500 block"
+            class="block after:ml-0.5 after:text-orange-500 after:content-['*']"
             for="name">Escribe tu nombre y apellido</label
           >
           <input
-            class="border border-orange-100 dark:border-orange-900 rounded outline-none w-full py-2 px-4 block caret-orange-500 dark:placeholder-orange-50 bg-white dark:bg-[#2D231B] focus:border-transparent focus:outline-none focus:ring-2 focus:ring-orange-500 dark:focus:ring-orange-400"
+            class="block w-full rounded border border-orange-100 bg-white py-2 px-4 caret-orange-500 outline-none focus:border-transparent focus:outline-none focus:ring-2 focus:ring-orange-500 dark:border-orange-900 dark:bg-[#2D231B] dark:placeholder-orange-50 dark:focus:ring-orange-400"
             id="name"
             name="name"
             type="text"
@@ -51,11 +51,11 @@ const options = {
         </section>
         <section class="space-y-2">
           <label
-            class="after:content-['*'] after:ml-0.5 after:text-orange-500 block"
+            class="block after:ml-0.5 after:text-orange-500 after:content-['*']"
             for="email">Escribe tu correo electrónico</label
           >
           <input
-            class="border border-orange-100 dark:border-orange-900 rounded outline-none w-full py-2 px-4 block caret-orange-500 dark:placeholder-orange-50 bg-white dark:bg-[#2D231B] focus:border-transparent focus:outline-none focus:ring-2 focus:ring-orange-500 dark:focus:ring-orange-400"
+            class="block w-full rounded border border-orange-100 bg-white py-2 px-4 caret-orange-500 outline-none focus:border-transparent focus:outline-none focus:ring-2 focus:ring-orange-500 dark:border-orange-900 dark:bg-[#2D231B] dark:placeholder-orange-50 dark:focus:ring-orange-400"
             id="email"
             name="email"
             type="email"
@@ -68,7 +68,7 @@ const options = {
         <section class="space-y-2">
           <label class="block" for="subject">Asunto</label>
           <select
-            class="border border-orange-100 dark:border-orange-900 rounded outline-none bg-white dark:bg-[#2D231B] w-full py-2 px-4 block focus:border-transparent focus:outline-none focus:ring-2 focus:ring-orange-500 dark:focus:ring-orange-400"
+            class="block w-full rounded border border-orange-100 bg-white py-2 px-4 outline-none focus:border-transparent focus:outline-none focus:ring-2 focus:ring-orange-500 dark:border-orange-900 dark:bg-[#2D231B] dark:focus:ring-orange-400"
             id="subject"
             name="subject"
           >
@@ -89,15 +89,15 @@ const options = {
         <section class="space-y-2">
           <section class="flex items-center justify-between">
             <label
-              class="after:content-['*'] after:ml-0.5 after:text-orange-500 block"
+              class="block after:ml-0.5 after:text-orange-500 after:content-['*']"
               for="message">Escribe tu mensaje</label
             >
-            <output class="text-xs text-gray-400 select-none" id="limit-message"
+            <output class="select-none text-xs text-gray-400" id="limit-message"
               >850</output
             >
           </section>
           <textarea
-            class="border border-orange-100 dark:border-orange-900 rounded outline-none h-80 w-full py-2 px-4 resize-none block caret-orange-500 md:h-60 bg-white dark:bg-[#2D231B] dark:placeholder-orange-50 focus:border-transparent focus:outline-none focus:ring-2 focus:ring-orange-500 dark:focus:ring-orange-400"
+            class="block h-80 w-full resize-none rounded border border-orange-100 bg-white py-2 px-4 caret-orange-500 outline-none focus:border-transparent focus:outline-none focus:ring-2 focus:ring-orange-500 dark:border-orange-900 dark:bg-[#2D231B] dark:placeholder-orange-50 dark:focus:ring-orange-400 md:h-60"
             id="message"
             name="message"
             placeholder="¡Hola!, quiero hacer una consulta..."
@@ -106,12 +106,12 @@ const options = {
             required></textarea>
         </section>
         <button
-          class="rounded flex font-semibold bg-orange-500 text-center text-white w-full py-2.5 px-5 transition-colors duration-300 items-center justify-center hover:bg-orange-600 focus:outline-none focus:ring-4 focus:ring-orange-400 focus:ring-opacity-75 disabled:bg-orange-600/50"
+          class="flex w-full items-center justify-center rounded bg-orange-500 py-2.5 px-5 text-center font-semibold text-white transition-colors duration-300 hover:bg-orange-600 focus:outline-none focus:ring-4 focus:ring-orange-400 focus:ring-opacity-75 disabled:bg-orange-600/50"
           id="submit"
           type="submit"
         >
           <svg
-            class="animate-spin hidden mr-3 text-white"
+            class="mr-3 hidden animate-spin text-white"
             id="spinner"
             fill="none"
             viewBox="0 0 24 24"
@@ -135,7 +135,7 @@ const options = {
         <p class="text-xs text-gray-500 dark:text-gray-300">
           Tu correo electrónico será tratado únicamente por Estelí Buses, con la
           finalidad de enviar información. Al envíar el formulario aceptas la <a
-            class="transition-colors text-orange-500 dark:text-orange-400 any-hover:text-orange-600 any-hover:underline dark:any-hover:text-orange-500"
+            class="text-orange-500 transition-colors any-hover:text-orange-600 any-hover:underline dark:text-orange-400 dark:any-hover:text-orange-500"
             href="/politica-de-privacidad">política de privacidad</a
           >.
         </p>
@@ -143,14 +143,14 @@ const options = {
     </section>
   </main>
   <section
-    class="fixed z-10 bottom-0 transform transition opacity-0 translate-y-full w-full select-none pointer-events-none"
+    class="pointer-events-none fixed bottom-0 z-10 w-full translate-y-full transform select-none opacity-0 transition"
     id="snackbar"
     slot="dynamic-components"
   >
     <article
-      class="mx-auto relative bg-green-500 text-white py-4 px-2 rounded shadow max-w-full w-80 xs:w-96 text-center"
+      class="relative mx-auto w-80 max-w-full rounded bg-green-500 py-4 px-2 text-center text-white shadow xs:w-96"
     >
-      <h3 class="font-bold text-lg mb-2 !text-white"></h3>
+      <h3 class="mb-2 text-lg font-bold !text-white"></h3>
       <p></p>
     </article>
   </section>

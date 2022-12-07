@@ -103,7 +103,7 @@ const getSchemaFAQs = schemaFAQs.map((faq) => ({
       <Navbar />
 
       <section
-        class="flex flex-col justify-center items-center pt-[4.5rem] pb-[4.5rem] md:pb-[6.5rem] lg:pt-28 lg:pb-[8.5rem] xl:pb-56 text-center"
+        class="flex flex-col items-center justify-center pt-[4.5rem] pb-[4.5rem] text-center md:pb-[6.5rem] lg:pt-28 lg:pb-[8.5rem] xl:pb-56"
       >
         <Greetings />
         <h1 class={`my-4 max-w-4xl ${titleColor}`}>{title}</h1>
@@ -113,11 +113,11 @@ const getSchemaFAQs = schemaFAQs.map((faq) => ({
         </p>
 
         <section
-          class="flex flex-col gap-y-8 md:flex-row md:items-start md:gap-x-8 md:gap-y-0 justify-center mt-6 text-left max-w-xs sm:max-w-md md:max-w-xl mx-auto"
+          class="mx-auto mt-6 flex max-w-xs flex-col justify-center gap-y-8 text-left sm:max-w-md md:max-w-xl md:flex-row md:items-start md:gap-x-8 md:gap-y-0"
         >
-          <section class="md:basis-3/5 group space-y-1">
+          <section class="group space-y-1 md:basis-3/5">
             <p class={`font-semibold ${textColor}`}>Ubicación:</p>
-            <div class="flex gap-x-2 items-start">
+            <div class="flex items-start gap-x-2">
               <div class="mt-[0.2rem]">
                 <svg
                   class={`fill-current ${textColor} ${linkColorGroup}`}
@@ -137,9 +137,9 @@ const getSchemaFAQs = schemaFAQs.map((faq) => ({
               </a>
             </div>
           </section>
-          <section class="md:basis-2/5 group space-y-1">
+          <section class="group space-y-1 md:basis-2/5">
             <p class={`font-semibold ${textColor}`}>Teléfono:</p>
-            <div class="flex gap-x-2 items-start">
+            <div class="flex items-start gap-x-2">
               <svg
                 class={`fill-current ${textColor} ${linkColorGroup}`}
                 viewBox="0 0 24 24"
@@ -166,14 +166,14 @@ const getSchemaFAQs = schemaFAQs.map((faq) => ({
   </header>
   <main class="py-12 sm:py-16 md:py-20 xl:py-28">
     <div class="container mx-auto px-4">
-      <article class="text-center mb-16 md:mb-20 xl:mb-28">
+      <article class="mb-16 text-center md:mb-20 xl:mb-28">
         <form
-          class="w-full max-w-xl mx-auto space-y-4"
+          class="mx-auto w-full max-w-xl space-y-4"
           id="search-form"
           autocomplete="on"
         >
           <label
-            class="text-xl text-orange-400 dark:text-orange-50 block font-semibold"
+            class="block text-xl font-semibold text-orange-400 dark:text-orange-50"
             for="search">¿A dónde vas a viajar?</label
           >
           <section
@@ -182,12 +182,12 @@ const getSchemaFAQs = schemaFAQs.map((faq) => ({
             <input
               id="search"
               type="search"
-              class="py-2.5 px-4 w-full block outline-none focus:ring-4 focus:ring-orange-400 focus:ring-opacity-50 focus:border-orange-500 rounded rounded-r-none caret-orange-500 placeholder-orange-600 dark:placeholder-orange-100 placeholder-opacity-50 bg-white dark:bg-[#292018] transition-colors"
+              class="block w-full rounded rounded-r-none bg-white py-2.5 px-4 placeholder-orange-600 placeholder-opacity-50 caret-orange-500 outline-none transition-colors focus:border-orange-500 focus:ring-4 focus:ring-orange-400 focus:ring-opacity-50 dark:bg-[#292018] dark:placeholder-orange-100"
               placeholder="Busca tu ciudad..."
             />
             <button
               id="search-button"
-              class="rounded rounded-l-none py-2.5 px-5 transition-colors any-hover:bg-orange-500 bg-orange-400 text-white inline-flex justify-center items-center active:outline-none active:ring-4 active:ring-orange-400 active:ring-opacity-75"
+              class="inline-flex items-center justify-center rounded rounded-l-none bg-orange-400 py-2.5 px-5 text-white transition-colors active:outline-none active:ring-4 active:ring-orange-400 active:ring-opacity-75 any-hover:bg-orange-500"
               type="button"
             >
               <svg class="w-4" role="img" viewBox="0 0 512 512">
@@ -211,7 +211,7 @@ const getSchemaFAQs = schemaFAQs.map((faq) => ({
           ))
         }
         <section class="hidden space-y-4" id="no-city">
-          <p class="text-xl text-[#3b0d15] dark:text-orange-50 text-center">
+          <p class="text-center text-xl text-[#3b0d15] dark:text-orange-50">
             Por favor intenta otra búsqueda, lo que estás buscando no está
             disponible.
           </p>
@@ -232,13 +232,13 @@ const getSchemaFAQs = schemaFAQs.map((faq) => ({
     </div>
   </main>
   <article
-    class="py-12 sm:py-16 md:py-20 xl:py-28 text-center bg-[#FFFDF9] dark:bg-[#2D231B]"
+    class="bg-[#FFFDF9] py-12 text-center dark:bg-[#2D231B] sm:py-16 md:py-20 xl:py-28"
   >
     <div class="container mx-auto px-4">
       <h2 class="mb-8">Conoce sobre la {station} de Estelí</h2>
       <div class="space-y-4">
         <p
-          class="mx-auto mt-5 md:max-w-5xl lg:max-w-6xl mb-4"
+          class="mx-auto mt-5 mb-4 md:max-w-5xl lg:max-w-6xl"
           set:html={locationDescription}
         />
         <figure>
@@ -269,13 +269,13 @@ const getSchemaFAQs = schemaFAQs.map((faq) => ({
             aspect={1.777777778}
             loading="lazy"
           />
-          <figcaption class="text-sm text-gray-400 dark:text-gray-200 mt-3">
+          <figcaption class="mt-3 text-sm text-gray-400 dark:text-gray-200">
             {station} de la ciudad de Estelí.
           </figcaption>
         </figure>
         <h3 class="!mt-14">Ubicación de la {station}</h3>
         <iframe
-          class="rounded w-full max-w-5xl mx-auto !mt-14 bg-[#eee] dark:bg-[#362d25] border-0"
+          class="mx-auto !mt-14 w-full max-w-5xl rounded border-0 bg-[#eee] dark:bg-[#362d25]"
           id="mapa"
           src={locationMap}
           allowfullscreen="allowfullscreen"
@@ -283,7 +283,7 @@ const getSchemaFAQs = schemaFAQs.map((faq) => ({
           height="450"
           fetchpriority="low"
           title={`Ubicación de la ${station}`}></iframe>
-        <p class="text-sm text-gray-400 dark:text-gray-200 !mt-3">
+        <p class="!mt-3 text-sm text-gray-400 dark:text-gray-200">
           Ubicación de la {station} de la ciudad de Estelí.
         </p>
       </div>

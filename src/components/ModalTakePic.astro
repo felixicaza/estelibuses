@@ -3,14 +3,14 @@ import { Picture } from 'astro-imagetools/components'
 ---
 
 <section
-  class="bg-orange-300 dark:bg-hex-180f06 dark:text-white fixed top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 z-20 w-full max-w-sm sm:max-w-md shadow-md rounded px-4 py-6 pointer-events-none scale-0 opacity-0 transition-all h-[85vh]"
+  class="dark:bg-hex-180f06 pointer-events-none fixed top-1/2 left-1/2 z-20 h-[85vh] w-full max-w-sm -translate-x-1/2 -translate-y-1/2 scale-0 transform rounded bg-orange-300 px-4 py-6 opacity-0 shadow-md transition-all dark:text-white sm:max-w-md"
   id="modal-bus-pic"
 >
-  <section class="h-full overflow-scroll hide-scroll-modal">
-    <h3 class="text-xl font-bold text-center">
+  <section class="hide-scroll-modal h-full overflow-scroll">
+    <h3 class="text-center text-xl font-bold">
       Recomendaciones para tomar la foto del transporte.
     </h3>
-    <ol class="mt-4 space-y-2 list-decimal ml-6">
+    <ol class="mt-4 ml-6 list-decimal space-y-2">
       <li>
         <strong>IMPORTANTE:&nbsp;</strong>Asegúrate que la foto que vas a tomar
         sea precisamente del transporte en cuestión. Ya que por defecto la
@@ -32,7 +32,7 @@ import { Picture } from 'astro-imagetools/components'
       </li>
       <li>No puedes enviar fotos sin conexión a internet.</li>
     </ol>
-    <p class="mt-4 font-semibold text-lg">¡Muchas gracias por tu ayuda! ❤</p>
+    <p class="mt-4 text-lg font-semibold">¡Muchas gracias por tu ayuda! ❤</p>
     <section class="my-4">
       <p class="mb-2">Ejemplo de la foto de un tansporte.</p>
       <Picture
@@ -48,7 +48,7 @@ import { Picture } from 'astro-imagetools/components'
       />
     </section>
     <button
-      class="w-full rounded font-semibold py-2.5 px-5 transition-colors active:bg-orange-500 active:outline-none bg-orange-400 text-white recommendation-pic"
+      class="recommendation-pic w-full rounded bg-orange-400 py-2.5 px-5 font-semibold text-white transition-colors active:bg-orange-500 active:outline-none"
       >Aceptar</button
     >
   </section>

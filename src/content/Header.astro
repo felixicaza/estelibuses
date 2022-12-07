@@ -15,25 +15,25 @@ const mergeDataStations = [northernStation, southernStation]
 ---
 
 <header
-  class="bg-gradient-to-t from-[#fff4eb] dark:from-[#2D231B] dark:to-[#2D231B] relative to-[#ffecdb] safe-top"
+  class="safe-top relative bg-gradient-to-t from-[#fff4eb] to-[#ffecdb] dark:from-[#2D231B] dark:to-[#2D231B]"
 >
-  <div class="mx-auto px-4 container">
+  <div class="container mx-auto px-4">
     <Navbar />
 
     <section
-      class="items-center pb-[6.25rem] pt-[4.5rem] gap-[4.5rem] 2xl:pb-[13.5rem] grid lg:gap-0 lg:grid-cols-2 lg:pb-[8.5rem] lg:pt-28 xl:pb-44 xs:pb-36"
+      class="grid items-center gap-[4.5rem] pb-[6.25rem] pt-[4.5rem] xs:pb-36 lg:grid-cols-2 lg:gap-0 lg:pb-[8.5rem] lg:pt-28 xl:pb-44 2xl:pb-[13.5rem]"
     >
       <div class="space-y-8">
         <article class="space-y-3">
           <Greetings />
 
           <h1
-            class="mb-8 text-center md:max-w-2xl md:mx-auto lg:!mx-0 lg:text-left"
+            class="mb-8 text-center md:mx-auto md:max-w-2xl lg:!mx-0 lg:text-left"
           >
             Horarios de las terminales de buses de Estelí
           </h1>
           <p
-            class="text-center md:max-w-2xl md:mx-auto lg:max-w-lg lg:!mx-0 lg:text-left"
+            class="text-center md:mx-auto md:max-w-2xl lg:!mx-0 lg:max-w-lg lg:text-left"
           >
             Conoce fácilmente todos los horarios de salida de los buses de las
             terminales de la ciudad de Estelí y ¡planea con exactitud la hora de
@@ -42,23 +42,23 @@ const mergeDataStations = [northernStation, southernStation]
         </article>
         <section class="mb-8 mt-8">
           <form
-            class="space-y-3 w-full transition-colors md:max-w-md md:mx-auto lg:!mx-0"
+            class="w-full space-y-3 transition-colors md:mx-auto md:max-w-md lg:!mx-0"
             id="main-search"
             autocomplete="on"
           >
             <label
-              class="text-center text-xl font-semibold text-orange-400 dark:text-orange-50 block lg:text-left"
+              class="block text-center text-xl font-semibold text-orange-400 dark:text-orange-50 lg:text-left"
               for="cities-search">Busca tu ciudad de destino:</label
             >
-            <section class="grid-cols-[1fr,100px] grid">
+            <section class="grid grid-cols-[1fr,100px]">
               <input
-                class="shadow-lg shadow-orange-500/[.07] px-4 py-2.5 bg-white w-full border-orange-100 rounded-r-none placeholder-opacity-50 placeholder-orange-600 outline-none duration-150 transition-colors block border caret-orange-500 dark:bg-[#292018] dark:border-orange-400 dark:placeholder-orange-100 focus:ring-4 focus:ring-opacity-50 focus:ring-orange-400 rounded"
+                class="block w-full rounded rounded-r-none border border-orange-100 bg-white px-4 py-2.5 placeholder-orange-600 placeholder-opacity-50 caret-orange-500 shadow-lg shadow-orange-500/[.07] outline-none transition-colors duration-150 focus:ring-4 focus:ring-orange-400 focus:ring-opacity-50 dark:border-orange-400 dark:bg-[#292018] dark:placeholder-orange-100"
                 id="cities-search"
                 type="search"
                 placeholder="Busca tu ciudad..."
               />
               <button
-                class="items-center justify-center shadow-lg shadow-orange-500/[.07] px-5 py-2.5 bg-orange-400 rounded-l-none font-semibold text-white transition-colors active:outline-none active:ring-4 active:ring-opacity-75 active:ring-orange-400 any-hover:bg-orange-500 basis-30 inline-flex rounded"
+                class="basis-30 inline-flex items-center justify-center rounded rounded-l-none bg-orange-400 px-5 py-2.5 font-semibold text-white shadow-lg shadow-orange-500/[.07] transition-colors active:outline-none active:ring-4 active:ring-orange-400 active:ring-opacity-75 any-hover:bg-orange-500"
                 id="search-citities-button"
                 type="button"
               >
@@ -71,12 +71,12 @@ const mergeDataStations = [northernStation, southernStation]
               </button>
             </section>
           </form>
-          <section class="relative w-full h-[1px]">
+          <section class="relative h-[1px] w-full">
             <nav
-              class="absolute rounded-b top-0 bg-white transform transition-all translate-y-full opacity-0 pointer-events-none shadow-md w-full max-w-md mx-auto dark:bg-[#362d25] z-20"
+              class="pointer-events-none absolute top-0 z-20 mx-auto w-full max-w-md translate-y-full transform rounded-b bg-white opacity-0 shadow-md transition-all dark:bg-[#362d25]"
               id="container-cities"
             >
-              <ul class="space-y-2 pb-2 px-4">
+              <ul class="space-y-2 px-4 pb-2">
                 {
                   mergeDataStations.map((info) =>
                     info.cities.map((city) => (
@@ -111,7 +111,7 @@ const mergeDataStations = [northernStation, southernStation]
                   )
                 }
                 <li
-                  class="hidden py-2 px-4 font-semibold text-left !border-0"
+                  class="hidden !border-0 py-2 px-4 text-left font-semibold"
                   id="unknown-city"
                 >
                   No está disponible tu búsqueda 😔
@@ -121,8 +121,8 @@ const mergeDataStations = [northernStation, southernStation]
           </section>
         </section>
       </div>
-      <section class="overflow-hidden relative">
-        <div class="absolute blob left-0 top-0"></div>
+      <section class="relative overflow-hidden">
+        <div class="blob absolute left-0 top-0"></div>
         <section class="relative z-10">
           <Picture
             src="/img/estelibuses-horarios-de-esteli.png"

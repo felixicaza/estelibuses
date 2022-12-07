@@ -6,10 +6,10 @@ import '@styles/filter.css'
   <p class="font-bold">Elige el tipo de transporte:</p>
   <form class="flex gap-x-6" id="filter">
     <label
-      class="relative flex gap-x-1 items-center cursor-pointer any-hover:text-orange-600 transition-colors"
+      class="relative flex cursor-pointer items-center gap-x-1 transition-colors any-hover:text-orange-600"
     >
       <input
-        class="hidden peer"
+        class="peer hidden"
         id="all"
         name="bus"
         type="radio"
@@ -26,14 +26,14 @@ import '@styles/filter.css'
         <circle class="circle" cx="17" cy="17" r="7.1"></circle>
       </svg>
       <span
-        class="dark:peer-checked:text-orange-400 peer-checked:text-orange-600"
+        class="peer-checked:text-orange-600 dark:peer-checked:text-orange-400"
         >Todos</span
       >
     </label>
     <label
-      class="relative flex gap-x-1 items-center cursor-pointer any-hover:text-orange-600 transition-colors"
+      class="relative flex cursor-pointer items-center gap-x-1 transition-colors any-hover:text-orange-600"
     >
-      <input class="hidden peer" id="express" name="bus" type="radio" />
+      <input class="peer hidden" id="express" name="bus" type="radio" />
       <svg width="20" height="20" viewBox="0 0 34 34">
         <circle
           class="border"
@@ -45,18 +45,18 @@ import '@styles/filter.css'
         <circle class="circle" cx="17" cy="17" r="7.1"></circle>
       </svg>
       <span
-        class="sm:hidden dark:peer-checked:text-orange-400 peer-checked:text-orange-600"
+        class="peer-checked:text-orange-600 dark:peer-checked:text-orange-400 sm:hidden"
         >Expresos</span
       >
       <span
-        class="hidden sm:block dark:peer-checked:text-orange-400 peer-checked:text-orange-600"
+        class="hidden peer-checked:text-orange-600 dark:peer-checked:text-orange-400 sm:block"
         >Buses Expresos</span
       >
     </label>
     <label
-      class="relative flex gap-x-1 items-center cursor-pointer any-hover:text-orange-600 transition-colors"
+      class="relative flex cursor-pointer items-center gap-x-1 transition-colors any-hover:text-orange-600"
     >
-      <input class="hidden peer" id="routed" name="bus" type="radio" />
+      <input class="peer hidden" id="routed" name="bus" type="radio" />
       <svg width="20" height="20" viewBox="0 0 34 34">
         <circle
           class="border"
@@ -68,11 +68,11 @@ import '@styles/filter.css'
         <circle class="circle" cx="17" cy="17" r="7.1"></circle>
       </svg>
       <span
-        class="sm:hidden dark:peer-checked:text-orange-400 peer-checked:text-orange-600"
+        class="peer-checked:text-orange-600 dark:peer-checked:text-orange-400 sm:hidden"
         >Ruteados</span
       >
       <span
-        class="hidden sm:block dark:peer-checked:text-orange-400 peer-checked:text-orange-600"
+        class="hidden peer-checked:text-orange-600 dark:peer-checked:text-orange-400 sm:block"
         >Buses Ruteados</span
       >
     </label>

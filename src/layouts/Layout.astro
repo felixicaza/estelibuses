@@ -128,9 +128,9 @@ const { options } = Astro.props
 
     <PromptiOS />
 
-    <noscript class="fixed w-full bottom-0 left-0 z-20 bg-danger-600">
+    <noscript class="bg-danger-600 fixed bottom-0 left-0 z-20 w-full">
       <article
-        class="container mx-auto text-white px-4 py-8 flex flex-col md:flex-row gap-8"
+        class="container mx-auto flex flex-col gap-8 px-4 py-8 text-white md:flex-row"
       >
         <section class="flex-1">
           <svg class="fill-current" width="50" height="50">
@@ -138,7 +138,7 @@ const { options } = Astro.props
           </svg>
         </section>
         <section class="flex-shrink">
-          <p class="text-2xl text-white mb-2 font-semibold">
+          <p class="mb-2 text-2xl font-semibold text-white">
             JavaScript está desactivado.
           </p>
           <p class="text-white">
@@ -150,7 +150,7 @@ const { options } = Astro.props
               rel="external noopenner nofollow noreferrer"
               target="_blank"
               >Haz click aquí para saber cómo activar JavaScript<svg
-                class="inline ml-1 mb-[0.175rem]"
+                class="ml-1 mb-[0.175rem] inline"
                 width="16"
                 height="16"
                 ><use href="/img/vector-sprites.svg#external"></use>
@@ -163,7 +163,7 @@ const { options } = Astro.props
               rel="external noopenner nofollow noreferrer"
               target="_blank"
               >Mozilla Firefox<svg
-                class="inline ml-1 mb-[0.175rem]"
+                class="ml-1 mb-[0.175rem] inline"
                 width="16"
                 height="16"
                 ><use href="/img/vector-sprites.svg#external"></use>
@@ -175,7 +175,7 @@ const { options } = Astro.props
               rel="external noopenner nofollow noreferrer"
               target="_blank"
               >Google Chrome<svg
-                class="inline ml-1 mb-[0.175rem]"
+                class="ml-1 mb-[0.175rem] inline"
                 width="16"
                 height="16"
                 ><use href="/img/vector-sprites.svg#external"></use>
@@ -187,7 +187,7 @@ const { options } = Astro.props
               rel="external noopenner nofollow noreferrer"
               target="_blank"
               >Microsoft Edge Chromium<svg
-                class="inline ml-1 mb-[0.175rem]"
+                class="ml-1 mb-[0.175rem] inline"
                 width="16"
                 height="16"
                 ><use href="/img/vector-sprites.svg#external"></use>

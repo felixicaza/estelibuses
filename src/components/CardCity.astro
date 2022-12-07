@@ -5,7 +5,7 @@ const { cityName, slug, image } = Astro.props
 ---
 
 <article
-  class="card-city bg-white dark:bg-[#362d25] rounded flex flex-col shadow transition-shadow duration-300 w-full max-w-[30rem] lg:max-w-md overflow-hidden any-hover:shadow-md"
+  class="card-city flex w-full max-w-[30rem] flex-col overflow-hidden rounded bg-white shadow transition-shadow duration-300 any-hover:shadow-md dark:bg-[#362d25] lg:max-w-md"
 >
   <section class="relative">
     <a class="group overflow-hidden" href={slug}>
@@ -22,13 +22,13 @@ const { cityName, slug, image } = Astro.props
       />
     </a>
     <div
-      class="absolute top-0 right-0 transform -translate-x-2 translate-y-2 hidden"
+      class="absolute top-0 right-0 hidden -translate-x-2 translate-y-2 transform"
     >
       <button
-        class="bg-white px-2 py-1 rounded-full inline-flex gap-1 items-center group like"
+        class="like group inline-flex items-center gap-1 rounded-full bg-white px-2 py-1"
         type="button"
         ><span
-          class="p-0.8 rounded-full group-any-hover:bg-red-100 group-any-hover:text-red-500 transition-colors"
+          class="p-0.8 rounded-full transition-colors group-any-hover:bg-red-100 group-any-hover:text-red-500"
         >
           <svg class="fill-current" viewBox="0 0 24 24" width="22" height="22">
             <path
@@ -36,7 +36,7 @@ const { cityName, slug, image } = Astro.props
             ></path>
           </svg>
           <svg
-            class="fill-current hidden"
+            class="hidden fill-current"
             viewBox="0 0 24 24"
             width="22"
             height="22"
@@ -46,34 +46,34 @@ const { cityName, slug, image } = Astro.props
             ></path>
           </svg>
         </span><span
-          class="font-bold text-xs group-any-hover:text-red-500 transition-colors"
+          class="text-xs font-bold transition-colors group-any-hover:text-red-500"
           >100</span
         >
       </button>
     </div>
   </section>
-  <section class="p-5 flex flex-col justify-between gap-y-7 flex-1">
+  <section class="flex flex-1 flex-col justify-between gap-y-7 p-5">
     <article class="text-center">
       <h3 class="mb-2.5">
         <a
-          class="city-name any-hover:text-orange-400 active:text-orange-400 transition-colors"
+          class="city-name transition-colors active:text-orange-400 any-hover:text-orange-400"
           href={slug}
           >{cityName}
         </a>
       </h3>
       <p class="!text-base">
         Conoce todos los horarios de los buses que viajan
-        <span class="underline font-semibold">
+        <span class="font-semibold underline">
           desde Estelí hacia {cityName}
         </span>.
       </p>
     </article>
     <a
-      class="rounded font-semibold space-x-1 py-2.5 px-5 inline-flex items-center justify-center text-orange-400 any-hover:bg-orange-100 any-hover:text-orange-500 active:bg-orange-100 active:text-orange-500 transition-colors focus:outline-none"
+      class="inline-flex items-center justify-center space-x-1 rounded py-2.5 px-5 font-semibold text-orange-400 transition-colors focus:outline-none active:bg-orange-100 active:text-orange-500 any-hover:bg-orange-100 any-hover:text-orange-500"
       href={slug}
     >
       <span>Mira los horarios</span><span>
-        <svg class="fill-current mt-[0.1625rem]" width="26" height="26">
+        <svg class="mt-[0.1625rem] fill-current" width="26" height="26">
           <path d="m8.6 16.6 4.6-4.6-4.6-4.6L10 6l6 6-6 6-1.4-1.4Z"></path>
         </svg>
       </span>

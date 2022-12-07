@@ -2,7 +2,7 @@
 import { Picture } from 'astro-imagetools/components'
 ---
 
-<nav class="py-2 flex justify-between items-center">
+<nav class="flex items-center justify-between py-2">
   <a class="inline-block" href="/">
     <Picture
       src="/img/estelibuses-logo.png"
@@ -20,7 +20,7 @@ import { Picture } from 'astro-imagetools/components'
     />
   </a>
   <section class="hidden xl:block">
-    <ul class="flex items-center space-x-4 font-medium justify-center gap-4">
+    <ul class="flex items-center justify-center gap-4 space-x-4 font-medium">
       <li>
         <a
           class:list={[
@@ -150,17 +150,17 @@ import { Picture } from 'astro-imagetools/components'
     </ul>
   </section>
   <section>
-    <button class="text-orange-500 relative" id="mobile-nav" type="button">
+    <button class="relative text-orange-500" id="mobile-nav" type="button">
       <svg class="fill-current" viewBox="0 0 24 24" width="33" height="33">
         <path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2Z"></path>
       </svg>
       <span
-        class="flex h-3 w-3 absolute top-0 left-0 -translate-x-1 -translate-y-1 scale-[0.65]"
+        class="absolute top-0 left-0 flex h-3 w-3 -translate-x-1 -translate-y-1 scale-[0.65]"
       >
         <span
-          class="animate-ping absolute inline-flex h-full w-full rounded-full bg-orange-400 opacity-90"
+          class="absolute inline-flex h-full w-full animate-ping rounded-full bg-orange-400 opacity-90"
         ></span>
-        <span class="relative inline-flex rounded-full h-3 w-3 bg-orange-500"
+        <span class="relative inline-flex h-3 w-3 rounded-full bg-orange-500"
         ></span>
       </span>
     </button>

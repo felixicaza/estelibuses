@@ -26,19 +26,19 @@ const shareText = options.description
     slot="social-media"
   />
 
-  <header class="container mx-auto px-4 safe-top">
+  <header class="safe-top container mx-auto px-4">
     <Navbar />
   </header>
   <main class="container mx-auto px-4">
     <section
-      class="pt-[4.5rem] pb-[6.5rem] xs:pb-36 lg:pt-28 lg:pb-[8.5rem] xl:pb-44 2xl:pb-[13.5rem] text-center max-w-6xl mx-auto space-y-6"
+      class="mx-auto max-w-6xl space-y-6 pt-[4.5rem] pb-[6.5rem] text-center xs:pb-36 lg:pt-28 lg:pb-[8.5rem] xl:pb-44 2xl:pb-[13.5rem]"
     >
       <h1>¿Cómo instalar Estelí Buses en tu dispositivo?</h1>
 
       <p>En esta guía aprenderás:</p>
 
       <ul
-        class="list-disc space-y-4 text-left ml-8 sm:max-w-[22rem] sm:mx-auto"
+        class="ml-8 list-disc space-y-4 text-left sm:mx-auto sm:max-w-[22rem]"
       >
         <li><a href="#android">Cómo instalar Estelí Buses en Android</a></li>
         <li>
@@ -165,7 +165,7 @@ const shareText = options.description
       />
 
       <section
-        class="bg-orange-100 dark:bg-orange-900 text-orange-500 dark:text-orange-100 rounded p-4 flex gap-x-2 items-start text-left"
+        class="flex items-start gap-x-2 rounded bg-orange-100 p-4 text-left text-orange-500 dark:bg-orange-900 dark:text-orange-100"
       >
         <div>
           <svg class="fill-current" viewBox="0 0 24 24" width="40" height="40">
@@ -192,7 +192,7 @@ const shareText = options.description
         }}
         loading="lazy"
       />
-      <p class="text-gray-400 text-sm !mt-2">
+      <p class="!mt-2 text-sm text-gray-400">
         Estelí Buses añadido como acceso directo en Android.
       </p>
 
@@ -382,7 +382,7 @@ const shareText = options.description
       </p>
 
       <section
-        class="bg-orange-100 dark:bg-orange-900 text-orange-500 dark:text-orange-100 rounded p-4 flex gap-x-2 items-start md:items-center text-left"
+        class="flex items-start gap-x-2 rounded bg-orange-100 p-4 text-left text-orange-500 dark:bg-orange-900 dark:text-orange-100 md:items-center"
       >
         <div>
           <svg class="fill-current" viewBox="0 0 24 24" width="40" height="40">
@@ -398,9 +398,9 @@ const shareText = options.description
 
       <p>Comparte la guía en tus redes sociales.</p>
 
-      <section class="flex flex-wrap justify-center items-center gap-x-8">
+      <section class="flex flex-wrap items-center justify-center gap-x-8">
         <a
-          class="text-orange-500 any-hover:text-orange-600 active:text-orange-600 transitions-colors"
+          class="transitions-colors text-orange-500 active:text-orange-600 any-hover:text-orange-600"
           href={`https://api.whatsapp.com/send?text=${shareText}${currentURL}?utm_source=whatsapp&utm_medium=webapp&utm_campaign=social_share_guide&utm_content=guide_page`}
           target="_blank"
         >
@@ -411,7 +411,7 @@ const shareText = options.description
           </svg>
         </a>
         <a
-          class="text-orange-500 any-hover:text-orange-600 active:text-orange-600 transitions-colors"
+          class="transitions-colors text-orange-500 active:text-orange-600 any-hover:text-orange-600"
           href={`https://www.facebook.com/sharer/sharer.php?u=${currentURL}?utm_source=facebook&utm_medium=webapp&utm_campaign=social_share_guide&utm_content=guide_page`}
           target="_blank"
         >
@@ -422,7 +422,7 @@ const shareText = options.description
           </svg>
         </a>
         <a
-          class="text-orange-500 any-hover:text-orange-600 active:text-orange-600 transitions-colors"
+          class="transitions-colors text-orange-500 active:text-orange-600 any-hover:text-orange-600"
           href={`https://twitter.com/intent/tweet?url=${currentURL}?utm_source=twitter&utm_medium=webapp&utm_campaign=social_share_guide&utm_content=guide_page&text=${shareText}`}
           target="_blank"
         >
@@ -433,7 +433,7 @@ const shareText = options.description
           </svg>
         </a>
         <a
-          class="text-orange-500 any-hover:text-orange-600 active:text-orange-600 transitions-colors"
+          class="transitions-colors text-orange-500 active:text-orange-600 any-hover:text-orange-600"
           href={`https://telegram.me/share/url?url=${shareText}${currentURL}?utm_source=telegram&utm_medium=webapp&utm_campaign=social_share_guide&utm_content=guide_page`}
           target="_blank"
         >
@@ -445,7 +445,7 @@ const shareText = options.description
           </svg>
         </a>
         <button
-          class="text-orange-500 any-hover:text-orange-600 active:text-orange-600 transitions-colors hidden"
+          class="transitions-colors hidden text-orange-500 active:text-orange-600 any-hover:text-orange-600"
           id="share-guide"
           type="button"
         >

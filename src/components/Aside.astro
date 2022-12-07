@@ -5,20 +5,20 @@ import InstallPWAButton from '@components/InstallPWAButton.astro'
 ---
 
 <div
-  class="h-full bg-black/70 w-full opacity-0 transition-opacity top-0 ease-in-out bottom-0 z-20 duration-200 fixed backdrop-blur-sm pointer-events-none"
+  class="pointer-events-none fixed top-0 bottom-0 z-20 h-full w-full bg-black/70 opacity-0 backdrop-blur-sm transition-opacity duration-200 ease-in-out"
   id="bg-modal"
 >
 </div>
 
 <aside
-  class="bg-orange-300 dark:bg-[#180f06] dark:text-white h-full opacity-0 transform -translate-x-full transition-all top-0 ease-in-out bottom-0 w-9/12 md:w-4/9 lg:w-4/11 xl:w-3/12 z-30 duration-200 fixed pointer-events-none lg:right-0 lg:translate-x-full safe-top"
+  class="md:w-4/9 lg:w-4/11 safe-top pointer-events-none fixed top-0 bottom-0 z-30 h-full w-9/12 -translate-x-full transform bg-orange-300 opacity-0 transition-all duration-200 ease-in-out dark:bg-[#180f06] dark:text-white lg:right-0 lg:translate-x-full xl:w-3/12"
   id="mobile"
 >
-  <section class="p-4 flex flex-col justify-between h-full">
+  <section class="flex h-full flex-col justify-between p-4">
     <div>
-      <section class="pb-4 flex justify-between">
+      <section class="flex justify-between pb-4">
         <section
-          class="flex gap-x-2 items-center lg:order-1 any-hover:text-orange-600 active:text-orange-600 transition-colors"
+          class="flex items-center gap-x-2 transition-colors active:text-orange-600 any-hover:text-orange-600 lg:order-1"
         >
           <span class="lg:order-1">
             <svg
@@ -37,9 +37,9 @@ import InstallPWAButton from '@components/InstallPWAButton.astro'
           >
         </section>
         <section class="lg:order-first">
-          <div class="relative w-[3.0625rem] h-[1.4375rem]">
+          <div class="relative h-[1.4375rem] w-[3.0625rem]">
             <input
-              class="opacity-0 w-full h-full cursor-pointer peer"
+              class="peer h-full w-full cursor-pointer opacity-0"
               id="switch-scheme"
               type="checkbox"
             />
@@ -49,9 +49,9 @@ import InstallPWAButton from '@components/InstallPWAButton.astro'
           </div>
         </section>
       </section>
-      <section class="py-4 flex justify-between">
+      <section class="flex justify-between py-4">
         <section
-          class="flex gap-x-2 items-center lg:order-1 any-hover:text-orange-600 active:text-orange-600 transition-colors"
+          class="flex items-center gap-x-2 transition-colors active:text-orange-600 any-hover:text-orange-600 lg:order-1"
         >
           <span class="lg:order-1">
             <svg
@@ -66,7 +66,7 @@ import InstallPWAButton from '@components/InstallPWAButton.astro'
               ></path>
             </svg>
             <svg
-              class="fill-current hidden"
+              class="hidden fill-current"
               id="sound-enable"
               viewBox="0 0 24 24"
               width="24"
@@ -84,9 +84,9 @@ import InstallPWAButton from '@components/InstallPWAButton.astro'
           >
         </section>
         <section class="lg:order-first">
-          <div class="relative w-[3.0625rem] h-[1.4375rem]">
+          <div class="relative h-[1.4375rem] w-[3.0625rem]">
             <input
-              class="opacity-0 w-full h-full cursor-pointer peer"
+              class="peer h-full w-full cursor-pointer opacity-0"
               id="switch-sound"
               type="checkbox"
               checked="checked"
@@ -98,7 +98,7 @@ import InstallPWAButton from '@components/InstallPWAButton.astro'
         </section>
       </section>
       <button
-        class="focus:outline-none py-4 w-full any-hover:text-orange-600 active:text-orange-600 transition-colors flex gap-x-2 items-center lg:justify-end"
+        class="flex w-full items-center gap-x-2 py-4 transition-colors focus:outline-none active:text-orange-600 any-hover:text-orange-600 lg:justify-end"
         id="share-aside"
         type="button"
         title="¡Comparte Estelí Buses en tus redes sociales!"
@@ -113,7 +113,7 @@ import InstallPWAButton from '@components/InstallPWAButton.astro'
         <span class="lg:order-first">Compartir</span>
       </button>
       <a
-        class="py-4 w-full any-hover:text-orange-600 active:text-orange-600 transition-colors flex gap-x-2 items-center lg:justify-end"
+        class="flex w-full items-center gap-x-2 py-4 transition-colors active:text-orange-600 any-hover:text-orange-600 lg:justify-end"
         href="/acerca-de-estelibuses"
       >
         <span class="lg:order-1">
@@ -126,7 +126,7 @@ import InstallPWAButton from '@components/InstallPWAButton.astro'
         <span class="lg:order-first">Sobre Estelí Buses</span>
       </a>
       <a
-        class="py-4 w-full any-hover:text-orange-600 active:text-orange-600 transition-colors flex gap-x-2 items-center lg:justify-end"
+        class="flex w-full items-center gap-x-2 py-4 transition-colors active:text-orange-600 any-hover:text-orange-600 lg:justify-end"
         href="/guia-de-instalacion"
       >
         <span class="lg:order-1">
@@ -143,22 +143,22 @@ import InstallPWAButton from '@components/InstallPWAButton.astro'
             ></path>
           </svg>
         </span>
-        <span class="lg:order-first relative"
+        <span class="relative lg:order-first"
           >Guía de Instalación
           <span
-            class="flex h-3 w-3 absolute top-0 right-0 lg:right-auto lg:left-0 translate-x-2 lg:-translate-x-3 -translate-y-1 scale-75"
+            class="absolute top-0 right-0 flex h-3 w-3 translate-x-2 -translate-y-1 scale-75 lg:right-auto lg:left-0 lg:-translate-x-3"
           >
             <span
-              class="animate-ping absolute inline-flex h-full w-full rounded-full bg-orange-400 opacity-90"
+              class="absolute inline-flex h-full w-full animate-ping rounded-full bg-orange-400 opacity-90"
             ></span>
             <span
-              class="relative inline-flex rounded-full h-3 w-3 bg-orange-500"
+              class="relative inline-flex h-3 w-3 rounded-full bg-orange-500"
             ></span>
           </span>
         </span>
       </a>
       <a
-        class="py-4 w-full any-hover:text-orange-600 active:text-orange-600 transition-colors flex gap-x-2 items-center lg:justify-end"
+        class="flex w-full items-center gap-x-2 py-4 transition-colors active:text-orange-600 any-hover:text-orange-600 lg:justify-end"
         href="/contacto"
       >
         <span class="lg:order-1">
