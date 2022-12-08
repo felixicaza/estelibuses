@@ -14,7 +14,6 @@ workbox.setConfig({ debug: false })
 workbox.googleAnalytics.initialize()
 
 const CACHE_CORE = 'core-v2.85'
-const CACHE_MEDIA = 'media-v2.84'
 const CACHE_DYNAMIC = 'dynamic-v2.84'
 
 self.addEventListener('install', (e) => {
@@ -29,10 +28,6 @@ self.addEventListener('activate', () => {
   caches.keys().then((keys) => {
     keys.forEach((key) => {
       if (key !== CACHE_CORE && key.includes('core')) {
-        return caches.delete(key)
-      }
-
-      if (key !== CACHE_MEDIA && key.includes('media')) {
         return caches.delete(key)
       }
 
