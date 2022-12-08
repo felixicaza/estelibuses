@@ -153,7 +153,7 @@ const southernStationFilter = southernStation.cities.filter((city) =>
         <nav class={`py-2 whitespace-nowrap breadcrumb ${textColor}`}>
           <ul class="flex items-center gap-x-2">
             <li style="width: 24px; height: 24px">
-              <a class={linkColor} href="/" title="Inicio">
+              <a class={linkColor} href="/" aria-label="Inicio" title="Inicio">
                 <svg
                   fill="currentColor"
                   viewBox="0 0 24 24"
@@ -213,6 +213,8 @@ const southernStationFilter = southernStation.cities.filter((city) =>
               class={linkColor}
               href={`https://api.whatsapp.com/send?text=${shareText}${currentURL}?utm_source=whatsapp&utm_medium=webapp&utm_campaign=social_share_city&utm_content=header`}
               target="_blank"
+              aria-label={`¡Comparte los horarios de los Buses de Estelí hacia ${cityName} a tus contactos en WhatsApp!`}
+              title={`¡Comparte los horarios de los Buses de Estelí hacia ${cityName} a tus contactos en WhatsApp!`}
             >
               <svg
                 class="fill-current"
@@ -229,6 +231,8 @@ const southernStationFilter = southernStation.cities.filter((city) =>
               class={linkColor}
               href={`https://www.facebook.com/sharer/sharer.php?u=${currentURL}?utm_source=facebook&utm_medium=webapp&utm_campaign=social_share_city&utm_content=header`}
               target="_blank"
+              aria-label={`¡Comparte los horarios de los Buses de Estelí hacia ${cityName} a tus amigos en Facebook!`}
+              title={`¡Comparte los horarios de los Buses de Estelí hacia ${cityName} a tus amigos en Facebook!`}
             >
               <svg
                 class="fill-current"
@@ -245,6 +249,8 @@ const southernStationFilter = southernStation.cities.filter((city) =>
               class={linkColor}
               href={`https://twitter.com/intent/tweet?url=${currentURL}?utm_source=twitter&utm_medium=webapp&utm_campaign=social_share_city&utm_content=header&text=${shareText}`}
               target="_blank"
+              aria-label={`¡Comparte los horarios de los Buses de Estelí hacia ${cityName} a tus contactos en Twitter!`}
+              title={`¡Comparte los horarios de los Buses de Estelí hacia ${cityName} a tus contactos en Twitter!`}
             >
               <svg
                 class="fill-current"
@@ -261,6 +267,8 @@ const southernStationFilter = southernStation.cities.filter((city) =>
               class={linkColor}
               href={`https://telegram.me/share/url?url=${shareText}${currentURL}?utm_source=telegram&utm_medium=webapp&utm_campaign=social_share_city&utm_content=header`}
               target="_blank"
+              aria-label={`¡Comparte los horarios de los Buses de Estelí hacia ${cityName} a tus contactos en Telegram!`}
+              title={`¡Comparte los horarios de los Buses de Estelí hacia ${cityName} a tus contactos en Telegram!`}
             >
               <svg
                 class="fill-current"
@@ -274,7 +282,13 @@ const southernStationFilter = southernStation.cities.filter((city) =>
                   fill-rule="evenodd"></path>
               </svg>
             </a>
-            <button class={`${linkColor} hidden`} id="share-city" type="button">
+            <button
+              class={`${linkColor} hidden`}
+              id="share-city"
+              type="button"
+              aria-label={`¡Comparte los horarios de los Buses de Estelí hacia ${cityName} a tus amigos!`}
+              title={`¡Comparte los horarios de los Buses de Estelí hacia ${cityName} a tus amigos!`}
+            >
               <svg
                 class="fill-current"
                 viewBox="0 0 24 24"

@@ -26,9 +26,10 @@ import { Picture } from 'astro-imagetools/components'
           <p class="text-sm font-bold">¡Síguenos en Facebook!</p>
           <a
             class="transition-colors active:text-orange-400 any-hover:text-orange-400"
-            id="facebook"
             href="https://www.facebook.com/estelibuses"
             target="_blank"
+            aria-label="¡Sigue la página de Estelí Buses en Facebook!"
+            title="¡Sigue la página de Estelí Buses en Facebook!"
           >
             <svg
               class="fill-current"
@@ -108,6 +109,7 @@ import { Picture } from 'astro-imagetools/components'
     </section>
 
     <hr class="my-8 h-px border-none bg-[#483323]" />
+
     <section
       class="flex flex-col items-center gap-y-8 xl:flex-row xl:items-start xl:justify-between"
     >
@@ -135,6 +137,8 @@ import { Picture } from 'astro-imagetools/components'
               fetchpriority="low"
               loading="lazy"
               width="100"
+              height="37"
+              style="aspect-ratio: 100/37"
             />
           </a>
         </section>
@@ -147,6 +151,8 @@ import { Picture } from 'astro-imagetools/components'
             id="whatsapp"
             href="https://api.whatsapp.com/send?text=%C2%A1Conoce%20todos%20los%20horarios%20de%20las%20terminales%20de%20buses%20de%20la%20ciudad%20de%20Estel%C3%AD!%0ahttps://estelibuses.web.app/?utm_source=whatsapp&utm_medium=webapp&utm_campaign=social_share&utm_content=footer"
             target="_blank"
+            aria-label="¡Comparte Estelí Buses a tus contactos en WhatsApp!"
+            title="¡Comparte Estelí Buses a tus contactos en WhatsApp!"
           >
             <svg
               class="fill-current"
@@ -164,6 +170,8 @@ import { Picture } from 'astro-imagetools/components'
             id="facebook"
             href="https://www.facebook.com/sharer/sharer.php?u=https://estelibuses.web.app/?utm_source=facebook&utm_medium=webapp&utm_campaign=social_share&utm_content=footer"
             target="_blank"
+            aria-label="¡Comparte Estelí Buses a tus amigos en Facebook!"
+            title="¡Comparte Estelí Buses a tus amigos en Facebook!"
           >
             <svg
               class="fill-current"
@@ -181,6 +189,8 @@ import { Picture } from 'astro-imagetools/components'
             id="twitter"
             href="https://twitter.com/intent/tweet?url=https://estelibuses.web.app/?utm_source=twitter&utm_medium=webapp&utm_campaign=social_share&utm_content=footer&text=%C2%A1Conoce%20todos%20los%20horarios%20de%20las%20terminales%20de%20buses%20de%20la%20ciudad%20de%20Estel%C3%AD!"
             target="_blank"
+            aria-label="¡Comparte Estelí Buses a tus contactos en Twitter!"
+            title="¡Comparte Estelí Buses a tus contactos en Twitter!"
           >
             <svg
               class="fill-current"
@@ -198,6 +208,8 @@ import { Picture } from 'astro-imagetools/components'
             id="telegram"
             href="https://telegram.me/share/url?url=%C2%A1Conoce%20todos%20los%20horarios%20de%20las%20terminales%20de%20buses%20de%20la%20ciudad%20de%20Estel%C3%AD!%0ahttps://estelibuses.web.app/?utm_source=telegram&utm_medium=webapp&utm_campaign=social_share&utm_content=footer"
             target="_blank"
+            aria-label="¡Comparte Estelí Buses a tus contactos en Telegram!"
+            title="¡Comparte Estelí Buses a tus contactos en Telegram!"
           >
             <svg
               class="fill-current"
@@ -215,6 +227,8 @@ import { Picture } from 'astro-imagetools/components'
             class="hidden transition-colors active:text-orange-400 any-hover:text-orange-400"
             id="share"
             type="button"
+            aria-label="¡Comparte Estelí Buses a tus amigos!"
+            title="¡Comparte Estelí Buses a tus amigos!"
           >
             <svg
               class="fill-current"

@@ -189,6 +189,8 @@ const getSchemaFAQs = schemaFAQs.map((faq) => ({
               id="search-button"
               class="inline-flex items-center justify-center rounded rounded-l-none bg-orange-400 py-2.5 px-5 text-white transition-colors active:outline-none active:ring-4 active:ring-orange-400 active:ring-opacity-75 any-hover:bg-orange-500"
               type="button"
+              aria-label={`Buscar ciudades de la ${station}`}
+              title={`Buscar ciudades de la ${station}`}
             >
               <svg class="w-4" role="img" viewBox="0 0 512 512">
                 <path
