@@ -28,10 +28,10 @@ jobs:
          # Use npm to install packages due to using pnpm causes error on build.
          # Commit: efed4d0
          - name: Install dependencies
-           run: npm install
+           run: npm i
 
          - name: Build project
-           run: npm run build
+           run: pnpm build
 
          - name: Create GSC html file verification
            uses: 1arp/create-a-file-action@0.2
