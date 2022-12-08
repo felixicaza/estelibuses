@@ -15,11 +15,11 @@ const testimonialsLength = testimonials.length
       <h2 class="text-center">Los Estelianos confían en Estelí Buses</h2>
     </section>
     <article
-      class="users-comments mx-auto grid snap-x snap-mandatory items-start gap-4 overflow-x-scroll px-4 pb-4 sm:gap-8"
+      class="users-comments scroll-snap-slider scroll-smooth mx-auto grid snap-x snap-mandatory items-start gap-4 overflow-x-scroll px-4 pb-4 sm:gap-8"
     >
       {
         randomSortTestimonials.map((testimonial) => (
-          <section class="flex h-full snap-center flex-col items-center justify-start gap-y-2 rounded bg-white p-3 text-center shadow dark:bg-[#30251b]/50">
+          <section class="comments scroll-snap-slide flex h-full snap-center snap-always flex-col items-center justify-start gap-y-2 rounded bg-white p-3 text-center shadow dark:bg-[#30251b]/50">
             <div>
               <section
                 class={`mx-auto h-max w-max rounded-full p-3 ${testimonial.bg_circle}`}
@@ -144,3 +144,15 @@ const testimonialsLength = testimonials.length
     border-radius: 4px;
   }
 </style>
+
+<script>
+  import { ScrollSnapSlider } from 'scroll-snap-slider/src/ScrollSnapSlider.js'
+  import { ScrollSnapAutoplay } from 'scroll-snap-slider/src/ScrollSnapAutoplay.js'
+  import { ScrollSnapDraggable } from 'scroll-snap-slider/src/ScrollSnapDraggable.js'
+
+  const sliderElement = document.querySelector('.scroll-snap-slider')
+  new ScrollSnapSlider(sliderElement, true, [
+    new ScrollSnapAutoplay(4000),
+    new ScrollSnapDraggable()
+  ])
+</script>
