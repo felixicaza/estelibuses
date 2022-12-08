@@ -46,7 +46,6 @@ specifiers:
   prettier-plugin-astro: 0.7.0
   prettier-plugin-tailwindcss: 0.2.0
   quicklink: 2.3.0
-  scroll-snap-slider: github:barthy-koeln/scroll-snap-slider
   tailwindcss: 3.2.4
 
 dependencies:
@@ -54,7 +53,6 @@ dependencies:
   astro: 1.6.13
   firebase: 9.14.0
   quicklink: 2.3.0
-  scroll-snap-slider: github.com/barthy-koeln/scroll-snap-slider/7b17e96709f6d6cb0808415e9ec146bde3da04b6
 
 devDependencies:
   '@astrojs/tailwind': 2.1.3_tailwindcss@3.2.4
@@ -9894,10 +9892,3 @@ packages:
 
   /zwitch/2.0.4:
     resolution: {integrity: sha512-bXE4cR/kVZhKZX/RjPEflHaKVhUVl85noU3v6b8apfQEc1x4A+zBxjZ4lN8LqGd6WZ3dl98pY4o717VFmoPp+A==}
-
-  github.com/barthy-koeln/scroll-snap-slider/7b17e96709f6d6cb0808415e9ec146bde3da04b6:
-    resolution: {tarball: https://codeload.github.com/barthy-koeln/scroll-snap-slider/tar.gz/7b17e96709f6d6cb0808415e9ec146bde3da04b6}
-    name: scroll-snap-slider
-    version: 2.5.1
-    requiresBuild: true
-    dev: false

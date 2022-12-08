@@ -35,8 +35,7 @@
     "@foobar404/wave": "2.0.3",
     "astro": "1.6.13",
     "firebase": "9.14.0",
-    "quicklink": "2.3.0",
-    "scroll-snap-slider": "github:barthy-koeln/scroll-snap-slider"
+    "quicklink": "2.3.0"
   },
   "devDependencies": {
     "@astrojs/tailwind": "2.1.3",
