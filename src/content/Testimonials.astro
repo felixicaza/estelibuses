@@ -109,6 +109,10 @@ const testimonialsLength = testimonials.length
     background: linear-gradient(to bottom, transparent, white);
   }
 
+  html.dark .large-comments:has(+ .expand-comments:not(:checked))::before {
+    background: linear-gradient(to bottom, transparent, #2d231b);
+  }
+
   .large-comments:has(+ .expand-comments:checked) {
     max-height: 500px;
   }
