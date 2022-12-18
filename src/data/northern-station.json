@@ -1009,14 +1009,14 @@
         },
         {
           "note": "Este bus llega a Yalí y luego transborda hacia <a href=\"/terminal-norte-esteli/horarios-esteli-la-rica\">La Rica</a>.",
-          "transport_pic": "",
+          "transport_pic": "/img/terminal-norte/transporte-centeno.jpg",
           "departure_time": "06:15",
           "waiting_area_departure": "",
           "return_time": "",
           "waiting_area_return": "",
           "transport_type": "Ruteado",
           "transport_name": "Centeno",
-          "license_plate": "",
+          "license_plate": "ES 242",
           "transport_phone": "",
           "transport_price": "",
           "trip_duration": "3 horas"
@@ -1748,14 +1748,14 @@
           "trip_duration": "5 horas"
         },
         {
-          "transport_pic": "",
+          "transport_pic": "/img/terminal-norte/transporte-centeno.jpg",
           "departure_time": "06:15",
           "waiting_area_departure": "",
           "return_time": "",
           "waiting_area_return": "",
           "transport_type": "Ruteado",
           "transport_name": "Centeno",
-          "license_plate": "",
+          "license_plate": "ES 242",
           "transport_phone": "",
           "transport_price": "",
           "trip_duration": "5 horas"
