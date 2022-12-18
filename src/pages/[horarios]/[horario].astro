@@ -307,13 +307,31 @@ const southernStationFilter = southernStation.cities.filter((city) =>
     <div class="wave"></div>
   </header>
 
-  <main class="py-12 sm:py-16 md:py-20 xl:py-28">
+  <main class="space-y-8 py-12 sm:py-16 md:py-20 lg:space-y-16 xl:py-28">
+    <div class="mx-auto max-w-2xl px-4">
+      <section
+        class="rounded bg-orange-100 py-2.5 px-5 font-semibold text-orange-500 dark:bg-[#4c3c2e] dark:text-orange-100"
+      >
+        <svg
+          class="float-left mr-2 fill-current"
+          viewBox="0 0 24 24"
+          width="48"
+        >
+          <path
+            d="M13 9h-2V7h2m0 10h-2v-6h2m-1-9A10 10 0 0 0 2 12a10 10 0 0 0 10 10 10 10 0 0 0 10-10A10 10 0 0 0 12 2Z"
+          ></path>
+        </svg>
+        <p>
+          Debido a las festividades de fin de año, este 25 de Diciembre y 1 de
+          Enero, no habrá servicio de transporte por parte de la {station}.
+          ¡Feliz Navidad y Próspero 2023!
+        </p>
+      </section>
+    </div>
     <div
       class="container mx-auto flex flex-col gap-y-20 px-4 lg:grid lg:grid-cols-2 lg:items-start lg:gap-y-0 lg:gap-x-16"
     >
-      <article
-        class="flex flex-col gap-y-8 md:flex-row md:gap-y-0 md:gap-x-8 lg:hidden"
-      >
+      <article class="flex flex-col gap-y-8 md:gap-x-8 lg:hidden">
         <section class="space-y-2">
           <Player />
         </section>
