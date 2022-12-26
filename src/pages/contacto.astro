@@ -24,122 +24,39 @@ const options = {
     >
       <h1 class="mb-8">Contacto</h1>
 
-      <p>Envía un mensaje a través del siguiente formulario.</p>
-
-      <form
-        class="w-full space-y-5 rounded bg-[#FFFDF9] p-8 text-left shadow-md shadow-orange-800/10 dark:bg-[#362d25] lg:mx-auto lg:w-3/5"
-        id="form"
-        name="form"
-        autocomplete="off"
-      >
-        <section class="space-y-2">
-          <label
-            class="block after:ml-0.5 after:text-orange-500 after:content-['*']"
-            for="name">Escribe tu nombre y apellido</label
-          >
-          <input
-            class="block w-full rounded border border-orange-100 bg-white py-2 px-4 caret-orange-500 outline-none focus:border-transparent focus:outline-none focus:ring-2 focus:ring-orange-500 dark:border-orange-900 dark:bg-[#2D231B] dark:placeholder-orange-50 dark:focus:ring-orange-400"
-            id="name"
-            name="name"
-            type="text"
-            placeholder="Juan Peréz"
-            maxlength="50"
-            minlength="4"
-            pattern="[A-z?ÁáÉéÍíÓóÚúÑñ\\s]+"
-            required
-          />
-        </section>
-        <section class="space-y-2">
-          <label
-            class="block after:ml-0.5 after:text-orange-500 after:content-['*']"
-            for="email">Escribe tu correo electrónico</label
-          >
-          <input
-            class="block w-full rounded border border-orange-100 bg-white py-2 px-4 caret-orange-500 outline-none focus:border-transparent focus:outline-none focus:ring-2 focus:ring-orange-500 dark:border-orange-900 dark:bg-[#2D231B] dark:placeholder-orange-50 dark:focus:ring-orange-400"
-            id="email"
-            name="email"
-            type="email"
-            placeholder="ejemplo@correo.com"
-            maxlength="60"
-            minlength="4"
-            required
-          />
-        </section>
-        <section class="space-y-2">
-          <label class="block" for="subject">Asunto</label>
-          <select
-            class="block w-full rounded border border-orange-100 bg-white py-2 px-4 outline-none focus:border-transparent focus:outline-none focus:ring-2 focus:ring-orange-500 dark:border-orange-900 dark:bg-[#2D231B] dark:focus:ring-orange-400"
-            id="subject"
-            name="subject"
-          >
-            <option>Selecciona una opción</option>
-            <optgroup label="Planes publicitarios">
-              <option value="Plan patrocinador">Plan patrocinador</option>
-              <option value="Plan básico">Plan básico</option>
-              <option value="Plan intermedio">Plan intermedio</option>
-              <option value="Plan avanzado">Plan avanzado</option>
-            </optgroup>
-            <optgroup label="Otras opciones">
-              <option value="Consulta">Consulta</option>
-              <option value="Recomendación">Recomendación</option>
-              <option value="Otro">Otro</option>
-            </optgroup>
-          </select>
-        </section>
-        <section class="space-y-2">
-          <section class="flex items-center justify-between">
-            <label
-              class="block after:ml-0.5 after:text-orange-500 after:content-['*']"
-              for="message">Escribe tu mensaje</label
-            >
-            <output class="select-none text-xs text-gray-400" id="limit-message"
-              >850</output
-            >
-          </section>
-          <textarea
-            class="block h-80 w-full resize-none rounded border border-orange-100 bg-white py-2 px-4 caret-orange-500 outline-none focus:border-transparent focus:outline-none focus:ring-2 focus:ring-orange-500 dark:border-orange-900 dark:bg-[#2D231B] dark:placeholder-orange-50 dark:focus:ring-orange-400 md:h-60"
-            id="message"
-            name="message"
-            placeholder="¡Hola!, quiero hacer una consulta..."
-            maxlength="850"
-            minlength="20"
-            required></textarea>
-        </section>
-        <button
-          class="flex w-full items-center justify-center rounded bg-orange-500 py-2.5 px-5 text-center font-semibold text-white transition-colors duration-300 hover:bg-orange-600 focus:outline-none focus:ring-4 focus:ring-orange-400 focus:ring-opacity-75 disabled:bg-orange-600/50"
-          id="submit"
-          type="submit"
-        >
-          <svg
-            class="mr-3 hidden animate-spin text-white"
-            id="spinner"
-            fill="none"
-            viewBox="0 0 24 24"
-            width="16"
-            height="16"
-          >
-            <circle
-              class="opacity-25"
-              cx="12"
-              cy="12"
-              r="10"
-              stroke="currentColor"
-              stroke-width="4"></circle>
-            <path
-              class="opacity-75"
-              d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z"
-              fill="currentColor"></path>
-          </svg>
-          <span id="submitText">Enviar mensaje</span>
-        </button>
-        <p class="text-xs text-gray-500 dark:text-gray-300">
-          Tu correo electrónico será tratado únicamente por Estelí Buses, con la
-          finalidad de enviar información. Al envíar el formulario aceptas la <a
-            class="text-orange-500 transition-colors any-hover:text-orange-600 any-hover:underline dark:text-orange-400 dark:any-hover:text-orange-500"
-            href="/politica-de-privacidad">política de privacidad</a
-          >.
-        </p>
-      </form>
+      <p>
+        Si deseas obtener información más detallada recuerda que puedes ponerte
+        en contacto con las terminales de buses del municipio de Estelí. <strong
+          >Estelí Buses no está asociado con las terminales de buses, ni con los
+          transportistas y ni con las cooperativas</strong
+        >, por lo que <strong>Estelí Buses no gestiona</strong> reserva de asientos
+        y/o de pasajes, información sobre encomiendas, información detallada sobre
+        los destinos de los transportes, información en cambios de horarios o cualquier
+        otro dato relacionado con el funcionamiento o la organización de dichas entidades.
+      </p>
+      <p>
+        Si deseas contactarnos puedes hacerlo a través de <a
+          href="https://www.facebook.com/estelibuses"
+          target="_blank">nuestra página en Facebook</a
+        >, y trataremos de ayudarte a la medida de nuestras capacidades. Si eres
+        parte de una cooperativa de transporte y deseas contribuir con Estelí
+        Buses, no dudes en envíarnos un mensaje, cualquier información que sirva
+        para ser añadida a la plataforma será de mucha utilidad para los
+        usuarios que diariamiente consultan sobre los horarios de salida de los
+        autobuses interlocales a través de Estelí Buses.
+      </p>
+      <p>
+        Para comunicarte con la <strong>Terminal Norte</strong> puedes hacerlo llamando
+        al número <a href="tel:2713-2529">2713-2529 extensión 102</a>.
+      </p>
+      <p>
+        Para comunicarte con la <strong>Terminal Sur</strong> puedes hacerlo llamando
+        al número <a href="tel:2713-6162">2713-6162</a>.
+      </p>
+      <p>
+        Recuerda planear con antelación tu próximo viaje. ¡Muchas gracias por
+        utilizar Estelí Buses!
+      </p>
     </section>
   </main>
   <section
@@ -155,181 +72,3 @@ const options = {
     </article>
   </section>
 </Layout>
-<script>
-  const $ = (el) => document.getElementById(el)
-  const $$ = (el) => document.querySelector(el)
-
-  const form = $('form') as HTMLFormElement
-
-  const name = $('name') as HTMLInputElement
-  const email = $('email') as HTMLInputElement
-  const message = $('message') as HTMLInputElement
-  const submit = $('submit')
-  const submitText = $('submitText')
-  const spinner = $('spinner')
-
-  const snackbar = $('snackbar')
-  const snackbarContainer = $$('#snackbar > article')
-  const snackbarTitle = $$('#snackbar > article > h3')
-  const snackbarText = $$('#snackbar > article > p')
-
-  const limitCaptionMessage = $('limit-message')
-
-  function validateInput(e, el, limitFallback) {
-    const limitInput = el.maxLength || limitFallback
-
-    if (e.target === message) {
-      limitCaptionMessage.textContent = String(limitInput - el.value.length)
-    }
-
-    if (e.target === el) {
-      if (el.value.length >= limitInput) {
-        e.preventDefault()
-      }
-
-      if (e.target.validity.valid) {
-        el.classList.add('border-green-500', 'focus:ring-green-500')
-        el.classList.remove('border-red-500', 'focus:ring-red-500')
-      } else {
-        el.classList.add('border-red-500', 'focus:ring-red-500')
-        el.classList.remove('border-green-500', 'focus:ring-green-500')
-      }
-    }
-  }
-
-  form.addEventListener('input', (e) => {
-    validateInput(e, name, 50)
-    validateInput(e, email, 60)
-    validateInput(e, message, 850)
-  })
-
-  function checkValidity(el) {
-    if (el.validity.valid) {
-      el.classList.add('border-green-500', 'focus:ring-green-500')
-      el.classList.remove('border-red-500', 'focus:ring-red-500')
-    } else {
-      el.classList.add('border-red-500', 'focus:ring-red-500')
-      el.classList.remove('border-green-500', 'focus:ring-green-500')
-    }
-  }
-
-  function errorMessages(error, status, title, description) {
-    if (error.message === status) {
-      submitText.textContent = 'Enviar Mensaje'
-      submit.removeAttribute('disabled')
-      submit.classList.remove('cursor-progress')
-      spinner.classList.add('hidden')
-
-      if (status === '422') {
-        name.classList.add('border-red-500')
-        email.classList.add('border-red-500')
-        message.classList.add('border-red-500')
-      }
-
-      snackbarTitle.textContent = title
-      snackbarText.textContent = description
-      snackbar.classList.replace('translate-y-full', '-translate-y-[4.5rem]')
-      snackbarContainer.classList.replace('bg-green-500', 'bg-red-500')
-      snackbar.classList.replace('opacity-0', 'opacity-100')
-      setTimeout(() => {
-        snackbar.classList.replace('-translate-y-[4.5rem]', 'translate-y-full')
-        snackbar.classList.replace('opacity-100', 'opacity-0')
-      }, 6000)
-    }
-  }
-
-  form.addEventListener('submit', (e) => {
-    e.preventDefault()
-
-    if (name.validity.valid && email.validity.valid && message.validity.valid) {
-      submitText.textContent = 'Enviando...'
-      submit.setAttribute('disabled', 'true')
-      submit.classList.add('cursor-progress')
-      spinner.classList.remove('hidden')
-    }
-
-    checkValidity(name)
-    checkValidity(email)
-    checkValidity(message)
-
-    const formData = new URLSearchParams(
-      new FormData(form) as unknown as string
-    )
-
-    fetch(
-      'https://us-central1-buses-esteli-d2d5e.cloudfunctions.net/form/enviar',
-      {
-        method: 'POST',
-        body: formData
-      }
-    )
-      .then((response) => {
-        if (response.ok) {
-          form.reset()
-
-          name.classList.remove(
-            'border-green-500',
-            'focus:ring-green-500',
-            'border-red-500',
-            'focus:ring-red-500'
-          )
-          email.classList.remove(
-            'border-green-500',
-            'focus:ring-green-500',
-            'border-red-500',
-            'focus:ring-red-500'
-          )
-          message.classList.remove(
-            'border-green-500',
-            'focus:ring-green-500',
-            'border-red-500',
-            'focus:ring-red-500'
-          )
-
-          submitText.textContent = 'Enviar Mensaje'
-          submit.removeAttribute('disabled')
-          submit.classList.remove('cursor-progress')
-          spinner.classList.add('hidden')
-          limitCaptionMessage.textContent = String(message.maxLength || 850)
-
-          return response.json()
-        }
-
-        throw new Error(String(response.status))
-      })
-      .then((data) => {
-        snackbarContainer.classList.replace('bg-red-500', 'bg-green-500')
-        snackbarTitle.textContent = data.title
-        snackbarText.textContent = data.message
-        snackbar.classList.replace('translate-y-full', '-translate-y-[4.5rem]')
-        snackbar.classList.replace('opacity-0', 'opacity-100')
-        setTimeout(() => {
-          snackbar.classList.replace(
-            '-translate-y-[4.5rem]',
-            'translate-y-full'
-          )
-          snackbar.classList.replace('opacity-100', 'opacity-0')
-        }, 6000)
-      })
-      .catch((error) => {
-        errorMessages(
-          error,
-          '408',
-          'El mensaje no se ha podido enviar',
-          'Disculpa las molestias pero por favor, intenta enviar nuevamente tu mensaje.'
-        )
-        errorMessages(
-          error,
-          '500',
-          'El mensaje no se ha podido enviar',
-          'Disculpa las molestias pero por favor, intenta enviar nuevamente tu mensaje.'
-        )
-        errorMessages(
-          error,
-          '422',
-          'Error en el formulario',
-          'Por favor verifica que has completado correctamente el campo de nombre, email y de mensaje.'
-        )
-      })
-  })
-</script>
