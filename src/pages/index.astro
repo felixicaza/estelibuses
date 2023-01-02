@@ -7,7 +7,6 @@ import southernStation from '@data/southern-station.json'
 import Layout from '@layouts/Layout.astro'
 
 import SocialMedia from '@components/SocialMedia.astro'
-import Notification from '@components/Notification.astro'
 
 import Header from '@content/Header.astro'
 import About from '@content/About.astro'
@@ -61,6 +60,5 @@ const getFaqs = mergeDataStations.map((data) =>
     <SouthStation />
     <OfflineBanner />
     <FAQ />
-    <Notification slot="dynamic-components" />
   </main>
 </Layout>
