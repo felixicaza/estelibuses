@@ -1,5 +1,12 @@
 [
   {
+    "name": "Marelis",
+    "comment": "Excelente sitio, ayuda muchísimo a organizar los viajes.",
+    "bg_circle": "bg-pink-100",
+    "color_icon": "text-pink-500",
+    "icon": "woman"
+  },
+  {
     "name": "Alisson Machado",
     "comment": "Me resultó una grata sorpresa encontrar una aplicación web dónde se encuentran los horarios de la terminales. El formato de la aplicación web es intuitivo, se ve precioso y es agradable ver el detalle de la radio incluída. Mis felitaciones al creador de esta plataforma.",
     "bg_circle": "bg-purple-100",
@@ -19,7 +26,7 @@
     "name": "Daysi",
     "comment": "Está app me ha sido de gran utilidad para poder organizar mi hora de salida y llegar a tiempo a mis destinos!",
     "bg_circle": "bg-[#fde5ef]",
-    "color_icon": "text-[#f698be]",
+    "color_icon": "text-[#f17aaa]",
     "icon": "woman"
   },
   {
@@ -86,7 +93,7 @@
     "icon": "man"
   },
   {
-    "name": " Maria Acuña",
+    "name": "Maria Acuña",
     "comment": "Me encanta que puedo acceder cuándo no tengo internet.",
     "bg_circle": "bg-pink-100",
     "color_icon": "text-pink-500",
