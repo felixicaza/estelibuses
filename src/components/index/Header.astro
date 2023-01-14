@@ -127,11 +127,14 @@ const mergeDataStations = [northernStation, southernStation]
         <div class="blob absolute left-0 top-0"></div>
         <section class="relative z-10">
           <Picture
-            src="/img/estelibuses-horarios-de-esteli.png"
+            src="/src/img/estelibuses-horarios-de-esteli.png"
             alt="Estelí Buses: Horarios de las Terminales de Buses de Estelí"
             attributes={{
+              img: {
+                fetchpriority: 'high'
+              },
               link: {
-                fetchpriority: 'highest'
+                fetchpriority: 'high'
               }
             }}
             preload="avif"

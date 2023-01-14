@@ -228,70 +228,70 @@ const { options } = Astro.props
       window.addEventListener('load', async () => {
         listen()
 
-        const reloadBtn = document.getElementById('reload')
+        // const reloadBtn = document.getElementById('reload')
 
-        function showUpdateFounded(registration) {
-          reloadBtn.classList.replace('opacity-0', 'opacity-100')
+        // function showUpdateFounded(registration) {
+        //   reloadBtn.classList.replace('opacity-0', 'opacity-100')
 
-          setTimeout(() => {
-            if (isMobile) {
-              reloadBtn.classList.replace('translate-y-20', '-translate-y-20')
-            } else {
-              reloadBtn.classList.replace('right-0', 'left-0')
-              reloadBtn.classList.replace('-translate-x-4', 'translate-x-8')
-              reloadBtn.classList.replace('translate-y-20', '-translate-y-12')
-            }
-          }, 500)
+        //   setTimeout(() => {
+        //     if (isMobile) {
+        //       reloadBtn.classList.replace('translate-y-20', '-translate-y-20')
+        //     } else {
+        //       reloadBtn.classList.replace('right-0', 'left-0')
+        //       reloadBtn.classList.replace('-translate-x-4', 'translate-x-8')
+        //       reloadBtn.classList.replace('translate-y-20', '-translate-y-12')
+        //     }
+        //   }, 500)
 
-          reloadBtn.addEventListener('click', () => {
-            if (localStorage.getItem('sounds_enabled') === 'true') {
-              soundPage.play()
-            }
+        //   reloadBtn.addEventListener('click', () => {
+        //     if (localStorage.getItem('sounds_enabled') === 'true') {
+        //       soundPage.play()
+        //     }
 
-            if (
-              'vibrate' in navigator &&
-              localStorage.getItem('sounds_enabled') === 'false'
-            ) {
-              navigator.vibrate(80)
-            }
+        //     if (
+        //       'vibrate' in navigator &&
+        //       localStorage.getItem('sounds_enabled') === 'false'
+        //     ) {
+        //       navigator.vibrate(80)
+        //     }
 
-            if (registration.waiting) {
-              registration.waiting.postMessage('SKIP_WAITING')
-            }
-          })
-        }
+        //     if (registration.waiting) {
+        //       registration.waiting.postMessage('SKIP_WAITING')
+        //     }
+        //   })
+        // }
 
-        const registration = await navigator.serviceWorker.register('/sw.js')
+        // const registration = await navigator.serviceWorker.register('/sw.js')
 
-        if (registration.waiting) {
-          showUpdateFounded(registration)
-        }
+        // if (registration.waiting) {
+        //   showUpdateFounded(registration)
+        // }
 
-        registration.addEventListener('updatefound', () => {
-          if (registration.installing) {
-            registration.installing.addEventListener('statechange', () => {
-              if (registration.waiting) {
-                if (navigator.serviceWorker.controller) {
-                  showUpdateFounded(registration)
-                }
-              }
-            })
-          }
-        })
+        // registration.addEventListener('updatefound', () => {
+        //   if (registration.installing) {
+        //     registration.installing.addEventListener('statechange', () => {
+        //       if (registration.waiting) {
+        //         if (navigator.serviceWorker.controller) {
+        //           showUpdateFounded(registration)
+        //         }
+        //       }
+        //     })
+        //   }
+        // })
       })
 
       /**
        * Update PWA
        */
 
-      let refreshing
+      // let refreshing
 
-      navigator.serviceWorker.addEventListener('controllerchange', () => {
-        if (!refreshing) {
-          window.location.reload()
-          refreshing = true
-        }
-      })
+      // navigator.serviceWorker.addEventListener('controllerchange', () => {
+      //   if (!refreshing) {
+      //     window.location.reload()
+      //     refreshing = true
+      //   }
+      // })
     </script>
   </body>
 </html>

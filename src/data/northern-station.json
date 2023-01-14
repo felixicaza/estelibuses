@@ -4,8 +4,8 @@
   "location_description": "La Terminal Norte o mejor conocida como <em>Cotrán Norte</em> está ubicada <a href=\"/terminal-norte-esteli#mapa\">Del Centro Comercial Erwin 30 metros hacia el sur</a>, contiguo a la Carretera Panamericana.",
   "location_map": "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3886.2767920870906!2d-86.3543146846077!3d13.081636290783834!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8f718c6c8f2298e7%3A0x855d282eb62cfeed!2sCotran%20Norte!5e0!3m2!1ses-419!2sni!4v1645728089801!5m2!1ses-419!2sni",
   "phone": "2713-2529",
-  "station_image": "/img/terminal-norte-estelibuses-felix-icaza.jpg",
-  "station_image_mobile": "/img/terminal-norte-estelibuses-mobile-felix-icaza.jpg",
+  "station_image": "/src/img/terminal-norte-estelibuses-felix-icaza.jpg",
+  "station_image_mobile": "/src/img/terminal-norte-estelibuses-mobile-felix-icaza.jpg",
   "social_media_image": "/img/og/cotran-norte-estelibuses.jpg",
   "theme_color": "#34d399",
   "header_color": "bg-gradient-to-t from-[#eeffeb] to-[#dbffdc] dark:from-[#1b2d1f] dark:to-[#1b2d1f]",
@@ -35,7 +35,7 @@
     {
       "name": "Managua",
       "slug": "horarios-esteli-managua",
-      "image": "/img/terminal-norte/horarios-esteli-managua-estelibuses-felix-icaza-card.jpg",
+      "image": "/src/img/terminal-norte/horarios-esteli-managua-estelibuses-felix-icaza-card.jpg",
       "social_media_image": "/img/og/horarios-esteli-managua-cotran-norte-estelibuses.jpg",
       "title": "Horarios de los Buses de Estelí hacia Managua - Terminal Norte | Estelí Buses",
       "description": "Conoce Todos los Horarios de los Buses EXPRESOS que salen desde Estelí hacia Managua desde la Terminal Norte.",
@@ -142,7 +142,7 @@
     {
       "name": "Ocotal",
       "slug": "horarios-esteli-ocotal",
-      "image": "/img/terminal-norte/horarios-esteli-ocotal-estelibuses-felix-icaza-card.jpg",
+      "image": "/src/img/terminal-norte/horarios-esteli-ocotal-estelibuses-felix-icaza-card.jpg",
       "social_media_image": "/img/og/horarios-esteli-ocotal-cotran-norte-estelibuses.jpg",
       "title": "Horarios de los Buses de Estelí hacia Ocotal | Estelí Buses",
       "description": "Conoce todos los horarios de los buses que salen desde Estelí hacia Ocotal.",
@@ -218,7 +218,7 @@
           "trip_duration": "2 horas"
         },
         {
-          "transport_pic": "/img/ocotal/transporte-gamez.jpg",
+          "transport_pic": "/src/img/ocotal/transporte-gamez.jpg",
           "departure_time": "11:00",
           "waiting_area_departure": "",
           "return_time": "",
@@ -313,7 +313,7 @@
     {
       "name": "Somoto",
       "slug": "horarios-esteli-somoto",
-      "image": "/img/terminal-norte/horarios-esteli-somoto-estelibuses-felix-icaza-card.jpg",
+      "image": "/src/img/terminal-norte/horarios-esteli-somoto-estelibuses-felix-icaza-card.jpg",
       "social_media_image": "/img/og/horarios-esteli-somoto-cotran-norte-estelibuses.jpg",
       "title": "Horarios de los Buses de Estelí hacia Somoto | Estelí Buses",
       "description": "Conoce Todos los Horarios de los Buses EXPRESOS y RUTEADOS que salen desde Estelí hacia Somoto desde la Terminal Norte.",
@@ -549,7 +549,7 @@
     {
       "name": "Jinotega",
       "slug": "horarios-esteli-jinotega",
-      "image": "/img/terminal-norte/horarios-esteli-jinotega-estelibuses-felix-icaza-card.jpg",
+      "image": "/src/img/terminal-norte/horarios-esteli-jinotega-estelibuses-felix-icaza-card.jpg",
       "social_media_image": "/img/og/horarios-esteli-jinotega-cotran-norte-estelibuses.jpg",
       "title": "Horarios de los Buses de Estelí hacia Jinotega | Estelí Buses",
       "description": "Conoce todos los horarios de los buses que salen desde Estelí hacia Jinotega.",
@@ -655,7 +655,7 @@
     {
       "name": "San Juan de Limay",
       "slug": "horarios-esteli-san-juan-de-limay",
-      "image": "/img/terminal-norte/horarios-esteli-san-juan-de-limay-estelibuses-felix-icaza-card.jpg",
+      "image": "/src/img/terminal-norte/horarios-esteli-san-juan-de-limay-estelibuses-felix-icaza-card.jpg",
       "social_media_image": "/img/og/horarios-esteli-san-juan-de-limay-cotran-norte-estelibuses.jpg",
       "title": "Horarios de los Buses de Estelí hacia San Juan de Limay | Estelí Buses",
       "description": "Conoce todos los horarios de los buses que salen desde Estelí hacia San Juan de Limay.",
@@ -691,7 +691,7 @@
           "trip_duration": "2 horas"
         },
         {
-          "transport_pic": "/img/san-juan-de-limay/transporte-el-fugitivo.jpg",
+          "transport_pic": "/src/img/san-juan-de-limay/transporte-el-fugitivo.jpg",
           "departure_time": "10:00",
           "waiting_area_departure": "",
           "return_time": "",
@@ -760,7 +760,7 @@
     {
       "name": "Pueblo Nuevo",
       "slug": "horarios-esteli-pueblo-nuevo",
-      "image": "/img/terminal-norte/horarios-esteli-pueblo-nuevo-estelibuses-felix-icaza-card.jpg",
+      "image": "/src/img/terminal-norte/horarios-esteli-pueblo-nuevo-estelibuses-felix-icaza-card.jpg",
       "social_media_image": "/img/og/horarios-esteli-pueblo-nuevo-cotran-norte-estelibuses.jpg",
       "title": "Horarios de los Buses de Estelí hacia Pueblo Nuevo | Estelí Buses",
       "description": "Conoce todos los horarios de los buses que salen desde Estelí hacia Pueblo Nuevo.",
@@ -891,7 +891,7 @@
     {
       "name": "Quilalí",
       "slug": "horarios-esteli-quilali",
-      "image": "/img/terminal-norte/horarios-esteli-quilali-estelibuses-felix-icaza-card.jpg",
+      "image": "/src/img/terminal-norte/horarios-esteli-quilali-estelibuses-felix-icaza-card.jpg",
       "social_media_image": "/img/og/horarios-esteli-quilali-cotran-norte-estelibuses.jpg",
       "title": "Horarios de los Buses de Estelí hacia Quilalí | Estelí Buses",
       "description": "Conoce todos los horarios de los buses que salen desde Estelí hacia Quilalí.",
@@ -957,7 +957,7 @@
     {
       "name": "Yalí",
       "slug": "horarios-esteli-yali",
-      "image": "/img/terminal-norte/horarios-esteli-yali-estelibuses-felix-icaza-card.jpg",
+      "image": "/src/img/terminal-norte/horarios-esteli-yali-estelibuses-felix-icaza-card.jpg",
       "social_media_image": "/img/og/horarios-esteli-yali-cotran-norte-estelibuses.jpg",
       "title": "Horarios de los Buses de Estelí hacia Yalí - Terminal Norte | Estelí Buses",
       "description": "Conoce todos los horarios de los buses que salen desde Estelí hacia Yalí.",
@@ -1009,7 +1009,7 @@
         },
         {
           "note": "Este bus llega a Yalí y luego transborda hacia <a href=\"/terminal-norte-esteli/horarios-esteli-la-rica\">La Rica</a>.",
-          "transport_pic": "/img/terminal-norte/transporte-centeno.jpg",
+          "transport_pic": "/src/img/terminal-norte/transporte-centeno.jpg",
           "departure_time": "06:15",
           "waiting_area_departure": "",
           "return_time": "",
@@ -1175,7 +1175,7 @@
     {
       "name": "San Juan del Río Coco",
       "slug": "horarios-esteli-san-juan-del-rio-coco",
-      "image": "/img/terminal-norte/horarios-esteli-san-juan-del-rio-coco-estelibuses-felix-icaza-card.jpg",
+      "image": "/src/img/terminal-norte/horarios-esteli-san-juan-del-rio-coco-estelibuses-felix-icaza-card.jpg",
       "social_media_image": "/img/og/horarios-esteli-san-juan-del-rio-coco-cotran-norte-estelibuses.jpg",
       "title": "Horarios de los Buses de Estelí hacia San Juan del Río Coco | Estelí Buses",
       "description": "Conoce todos los horarios de los buses que salen desde Estelí hacia San Juan del Río Coco.",
@@ -1228,7 +1228,7 @@
     {
       "name": "San Rafael del Norte",
       "slug": "horarios-esteli-san-rafael-del-norte",
-      "image": "/img/terminal-norte/horarios-esteli-san-rafael-del-norte-estelibuses-felix-icaza-card.jpg",
+      "image": "/src/img/terminal-norte/horarios-esteli-san-rafael-del-norte-estelibuses-felix-icaza-card.jpg",
       "social_media_image": "/img/og/horarios-esteli-san-rafael-del-norte-cotran-norte-estelibuses.jpg",
       "title": "Horarios de los Buses de Estelí hacia San Rafael del Norte | Estelí Buses",
       "description": "Conoce todos los horarios de los buses que salen desde Estelí hacia San Rafael del Norte.",
@@ -1270,7 +1270,7 @@
     {
       "name": "El Regadío",
       "slug": "horarios-esteli-el-regadio",
-      "image": "/img/terminal-norte/horarios-esteli-el-regadio-estelibuses-felix-icaza-card.jpg",
+      "image": "/src/img/terminal-norte/horarios-esteli-el-regadio-estelibuses-felix-icaza-card.jpg",
       "social_media_image": "/img/og/horarios-esteli-el-regadio-cotran-norte-estelibuses.jpg",
       "title": "Horarios de los Buses de Estelí hacia El Regadío | Estelí Buses",
       "description": "Conoce todos los horarios de los buses que salen desde Estelí hacia El Regadío.",
@@ -1310,7 +1310,7 @@
     {
       "name": "Wiwilí",
       "slug": "horarios-esteli-wiwili",
-      "image": "/img/terminal-norte/horarios-esteli-wiwili-estelibuses-felix-icaza-card.jpg",
+      "image": "/src/img/terminal-norte/horarios-esteli-wiwili-estelibuses-felix-icaza-card.jpg",
       "social_media_image": "/img/og/horarios-esteli-wiwili-cotran-norte-estelibuses.jpg",
       "title": "Horarios de los Buses de Estelí hacia Wiwilí | Estelí Buses",
       "description": "Conoce todos los horarios de los buses que salen desde Estelí hacia Wiwilí.",
@@ -1443,7 +1443,7 @@
     {
       "name": "El Sauce",
       "slug": "horarios-esteli-el-sauce",
-      "image": "/img/terminal-norte/horarios-esteli-el-sauce-estelibuses-felix-icaza-card.jpg",
+      "image": "/src/img/terminal-norte/horarios-esteli-el-sauce-estelibuses-felix-icaza-card.jpg",
       "social_media_image": "/img/og/horarios-esteli-el-sauce-cotran-norte-estelibuses.jpg",
       "title": "Horarios de los Buses de Estelí hacia El Sauce | Estelí Buses",
       "description": "Conoce todos los horarios de los buses que salen desde Estelí hacia El Sauce.",
@@ -1496,7 +1496,7 @@
     {
       "name": "Achuapa",
       "slug": "horarios-esteli-achuapa",
-      "image": "/img/terminal-norte/horarios-esteli-achuapa-estelibuses-felix-icaza-card.jpg",
+      "image": "/src/img/terminal-norte/horarios-esteli-achuapa-estelibuses-felix-icaza-card.jpg",
       "social_media_image": "/img/og/horarios-esteli-achuapa-cotran-norte-estelibuses.jpg",
       "title": "Horarios de los Buses de Estelí hacia Achuapa - Terminal Norte | Estelí Buses",
       "description": "Conoce todos los horarios de los buses que salen desde Estelí hacia Achuapa.",
@@ -1552,7 +1552,7 @@
     {
       "name": "La Concordia",
       "slug": "horarios-esteli-la-concordia",
-      "image": "/img/terminal-norte/horarios-esteli-la-concordia-estelibuses-felix-icaza-card.jpg",
+      "image": "/src/img/terminal-norte/horarios-esteli-la-concordia-estelibuses-felix-icaza-card.jpg",
       "social_media_image": "/img/og/horarios-esteli-la-concordia-cotran-norte-estelibuses.jpg",
       "title": "Horarios de los Buses de Estelí hacia La Concordia | Estelí Buses",
       "description": "Conoce todos los horarios de los buses que salen desde Estelí hacia La Concordia.",
@@ -1605,7 +1605,7 @@
     {
       "name": "Jalapa",
       "slug": "horarios-esteli-jalapa",
-      "image": "/img/terminal-norte/horarios-esteli-jalapa-estelibuses-felix-icaza-card.jpg",
+      "image": "/src/img/terminal-norte/horarios-esteli-jalapa-estelibuses-felix-icaza-card.jpg",
       "social_media_image": "/img/og/horarios-esteli-jalapa-cotran-norte-estelibuses.jpg",
       "title": "Horarios de los Buses de Estelí hacia Jalapa | Estelí Buses",
       "description": "Conoce todos los horarios de los buses que salen desde Estelí hacia Jalapa.",
@@ -1645,7 +1645,7 @@
     {
       "name": "Masaya",
       "slug": "horarios-esteli-masaya",
-      "image": "/img/terminal-norte/horarios-esteli-masaya-estelibuses-felix-icaza-card.jpg",
+      "image": "/src/img/terminal-norte/horarios-esteli-masaya-estelibuses-felix-icaza-card.jpg",
       "social_media_image": "/img/og/horarios-esteli-masaya-cotran-norte-estelibuses.jpg",
       "title": "Horarios de los Buses de Estelí hacia Masaya | Estelí Buses",
       "description": "Conoce todos los horarios de los buses que salen desde Estelí hacia Masaya.",
@@ -1685,7 +1685,7 @@
     {
       "name": "La Pita",
       "slug": "horarios-esteli-la-pita",
-      "image": "/img/terminal-norte/horarios-esteli-la-pita-estelibuses-felix-icaza-card.jpg",
+      "image": "/src/img/terminal-norte/horarios-esteli-la-pita-estelibuses-felix-icaza-card.jpg",
       "social_media_image": "/img/og/horarios-esteli-la-pita-cotran-norte-estelibuses.jpg",
       "title": "Horarios de los Buses de Estelí hacia La Pita | Estelí Buses",
       "description": "Conoce todos los horarios de los buses que salen desde Estelí hacia La Pita.",
@@ -1725,7 +1725,7 @@
     {
       "name": "La Rica",
       "slug": "horarios-esteli-la-rica",
-      "image": "/img/terminal-norte/horarios-esteli-estelibuses-felix-icaza-card.jpg",
+      "image": "/src/img/terminal-norte/horarios-esteli-estelibuses-felix-icaza-card.jpg",
       "social_media_image": "/img/og/horarios-esteli-la-rica-cotran-norte-estelibuses.jpg",
       "title": "Horarios de los Buses de Estelí hacia La Rica | Estelí Buses",
       "description": "Conoce todos los horarios de los buses que salen desde Estelí hacia La Rica.",
@@ -1748,7 +1748,7 @@
           "trip_duration": "5 horas"
         },
         {
-          "transport_pic": "/img/terminal-norte/transporte-centeno.jpg",
+          "transport_pic": "/src/img/terminal-norte/transporte-centeno.jpg",
           "departure_time": "06:15",
           "waiting_area_departure": "",
           "return_time": "",
@@ -1805,7 +1805,7 @@
     {
       "name": "Santa Cruz - La Ceiba",
       "slug": "horarios-esteli-santa-cruz-la-ceiba",
-      "image": "/img/terminal-norte/horarios-esteli-santa-cruz-la-ceiba-estelibuses-felix-icaza-card.jpg",
+      "image": "/src/img/terminal-norte/horarios-esteli-santa-cruz-la-ceiba-estelibuses-felix-icaza-card.jpg",
       "social_media_image": "/img/og/horarios-esteli-santa-cruz-la-ceiba-cotran-norte-estelibuses.jpg",
       "title": "Horarios de los Buses de Estelí hacia Santa Cruz - La Ceiba | Estelí Buses",
       "description": "Conoce todos los horarios de los buses que salen desde Estelí hacia Santa Cruz - La Ceiba.",
@@ -1871,7 +1871,7 @@
     {
       "name": "San Marcos de Colón",
       "slug": "horarios-esteli-san-marcos-de-colon",
-      "image": "/img/terminal-norte/horarios-esteli-san-marcos-de-colon-estelibuses-felix-icaza-card.jpg",
+      "image": "/src/img/terminal-norte/horarios-esteli-san-marcos-de-colon-estelibuses-felix-icaza-card.jpg",
       "social_media_image": "/img/og/horarios-esteli-san-marcos-de-colon-cotran-norte-estelibuses.jpg",
       "title": "Horarios de los Buses de Estelí hacia San Marcos de Colón | Estelí Buses",
       "description": "Conoce todos los horarios de los buses que salen desde Estelí hacia San Marcos de Colón.",
@@ -1898,7 +1898,7 @@
     {
       "name": "Oro Verde",
       "slug": "horarios-esteli-oro-verde",
-      "image": "/img/terminal-norte/horarios-esteli-estelibuses-felix-icaza-card.jpg",
+      "image": "/src/img/terminal-norte/horarios-esteli-estelibuses-felix-icaza-card.jpg",
       "social_media_image": "/img/og/horarios-esteli-oro-verde-cotran-norte-estelibuses.jpg",
       "title": "Horarios de los Buses de Estelí hacia Oro Verde | Estelí Buses",
       "description": "Conoce todos los horarios de los buses que salen desde Estelí hacia Oro Verde.",

@@ -13,12 +13,12 @@ const { cityName, slug, image } = Astro.props
         src={image}
         alt={`Horarios de la ciudad de ${cityName}`}
         attributes={{
-          link: {
-            fetchpriority: 'low'
+          img: {
+            fetchpriority: Astro.url.pathname !== '/' ? 'high' : 'low'
           }
         }}
         aspect={1.777777778}
-        loading="lazy"
+        loading={Astro.url.pathname !== '/' ? 'eager' : 'lazy'}
       />
     </a>
     <div
