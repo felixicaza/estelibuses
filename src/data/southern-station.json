@@ -4,8 +4,8 @@
   "location_description": "La Terminal Sur o mejor conocida como <em>Cotrán Sur</em> está ubicada <a href=\"/terminal-sur-esteli#mapa\">Contiguo al déposito de Restaurantes Tip-Top, en el Kilómetro 148 ½ de la Carretera Panamericana</a> de la ciudad de Estelí.",
   "location_map": "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3886.36184923696!2d-86.35461778460775!3d13.076238590787367!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8f718c13825dde4b%3A0x69c6340e0429bb84!2sCotran%20Sur!5e0!3m2!1ses-419!2sni!4v1645716354613!5m2!1ses-419!2sni",
   "phone": "2713-6162",
-  "station_image": "/img/terminal-sur-estelibuses-felix-icaza.jpg",
-  "station_image_mobile": "/img/terminal-sur-estelibuses-mobile-felix-icaza.jpg",
+  "station_image": "/src/img/terminal-sur-estelibuses-felix-icaza.jpg",
+  "station_image_mobile": "/src/img/terminal-sur-estelibuses-mobile-felix-icaza.jpg",
   "social_media_image": "/img/og/cotran-sur-estelibuses.jpg",
   "theme_color": "#fbbf24",
   "header_color": "bg-gradient-to-t from-[#feffeb] to-[#feffdb] dark:from-[#2d2d1b] dark:to-[#2d2d1b]",
@@ -35,7 +35,7 @@
     {
       "name": "Managua",
       "slug": "horarios-esteli-managua",
-      "image": "/img/terminal-sur/horarios-esteli-managua-estelibuses-felix-icaza-card.jpg",
+      "image": "/src/img/terminal-sur/horarios-esteli-managua-estelibuses-felix-icaza-card.jpg",
       "social_media_image": "/img/og/horarios-esteli-managua-cotran-sur-estelibuses.jpg",
       "title": "Horarios de los Buses de Estelí hacia Managua - Terminal Sur | Estelí Buses",
       "description": "Conoce Todos los Horarios de los Buses EXPRESOS y RUTEADOS que salen desde Estelí hacia Managua desde la Terminal Sur.",
@@ -2628,7 +2628,7 @@
     {
       "name": "Matagalpa",
       "slug": "horarios-esteli-matagalpa",
-      "image": "/img/terminal-sur/horarios-esteli-matagalpa-estelibuses-felix-icaza-card.jpg",
+      "image": "/src/img/terminal-sur/horarios-esteli-matagalpa-estelibuses-felix-icaza-card.jpg",
       "social_media_image": "/img/og/horarios-esteli-matagalpa-cotran-sur-estelibuses.jpg",
       "title": "Horarios de los Buses de Estelí hacia Matagalpa | Estelí Buses",
       "description": "Conoce todos los horarios de los buses que salen desde Estelí hacia Matagalpa.",
@@ -4817,7 +4817,7 @@
     {
       "name": "León",
       "slug": "horarios-esteli-leon",
-      "image": "/img/terminal-sur/horarios-esteli-leon-estelibuses-felix-icaza-card.jpg",
+      "image": "/src/img/terminal-sur/horarios-esteli-leon-estelibuses-felix-icaza-card.jpg",
       "social_media_image": "/img/og/horarios-esteli-leon-cotran-sur-estelibuses.jpg",
       "title": "Horarios de los Buses de Estelí hacia León | Estelí Buses",
       "description": "Conoce todos los horarios de los buses que salen desde Estelí hacia León.",
@@ -4854,7 +4854,7 @@
           "trip_duration": "2.5 horas"
         },
         {
-          "transport_pic": "/img/leon/transporte-acuna.jpg",
+          "transport_pic": "/src/img/leon/transporte-acuna.jpg",
           "departure_time": "06:45",
           "waiting_area_departure": "",
           "return_time": "",
@@ -4871,7 +4871,7 @@
     {
       "name": "La Trinidad",
       "slug": "horarios-esteli-la-trinidad",
-      "image": "/img/terminal-sur/horarios-esteli-la-trinidad-estelibuses-felix-icaza-card.jpg",
+      "image": "/src/img/terminal-sur/horarios-esteli-la-trinidad-estelibuses-felix-icaza-card.jpg",
       "social_media_image": "/img/og/horarios-esteli-la-trinidad-cotran-sur-estelibuses.jpg",
       "title": "Horarios de los Buses de Estelí hacia La Trinidad | Estelí Buses",
       "description": "Conoce todos los horarios de los buses que salen desde Estelí hacia La Trinidad.",
@@ -4950,7 +4950,7 @@
     {
       "name": "San Nicolás",
       "slug": "horarios-esteli-san-nicolas",
-      "image": "/img/terminal-sur/horarios-esteli-san-nicolas-estelibuses-felix-icaza-card.jpg",
+      "image": "/src/img/terminal-sur/horarios-esteli-san-nicolas-estelibuses-felix-icaza-card.jpg",
       "social_media_image": "/img/og/horarios-esteli-san-nicolas-cotran-sur-estelibuses.jpg",
       "title": "Horarios de los Buses de Estelí hacia San Nicolás | Estelí Buses",
       "description": "Conoce todos los horarios de los buses que salen desde Estelí hacia San Nicolás.",
@@ -5055,7 +5055,7 @@
     {
       "name": "Tisey - La Estanzuela",
       "slug": "horarios-esteli-tisey-la-estanzuela",
-      "image": "/img/terminal-sur/horarios-esteli-tisey-la-estanzuela-estelibuses-felix-icaza-card.jpg",
+      "image": "/src/img/terminal-sur/horarios-esteli-tisey-la-estanzuela-estelibuses-felix-icaza-card.jpg",
       "social_media_image": "/img/og/horarios-esteli-tisey-la-estanzuela-cotran-sur-estelibuses.jpg",
       "title": "Horarios de los Buses de Estelí hacia Tisey - La Estanzuela | Estelí Buses",
       "description": "Conoce todos los horarios de los buses que salen desde Estelí hacia Tisey - La Estanzuela.",
@@ -5082,7 +5082,7 @@
     {
       "name": "Yalí",
       "slug": "horarios-esteli-yali",
-      "image": "/img/terminal-sur/horarios-esteli-yali-estelibuses-felix-icaza-card.jpg",
+      "image": "/src/img/terminal-sur/horarios-esteli-yali-estelibuses-felix-icaza-card.jpg",
       "social_media_image": "/img/og/horarios-esteli-yali-cotran-sur-estelibuses.jpg",
       "title": "Horarios de los Buses de Estelí hacia Yalí - Terminal Sur | Estelí Buses",
       "description": "Conoce todos los horarios de los buses que salen desde Estelí hacia Yalí.",
@@ -5109,7 +5109,7 @@
     {
       "name": "Achuapa",
       "slug": "horarios-esteli-achuapa",
-      "image": "/img/terminal-sur/horarios-esteli-achuapa-estelibuses-felix-icaza-card.jpg",
+      "image": "/src/img/terminal-sur/horarios-esteli-achuapa-estelibuses-felix-icaza-card.jpg",
       "social_media_image": "/img/og/horarios-esteli-achuapa-cotran-sur-estelibuses.jpg",
       "title": "Horarios de los Buses de Estelí hacia Achuapa - Terminal Sur | Estelí Buses",
       "description": "Conoce todos los horarios de los buses que salen desde Estelí hacia Achuapa.",
@@ -5136,7 +5136,7 @@
     {
       "name": "Murra",
       "slug": "horarios-esteli-murra",
-      "image": "/img/terminal-sur/horarios-esteli-murra-estelibuses-felix-icaza-card.jpg",
+      "image": "/src/img/terminal-sur/horarios-esteli-murra-estelibuses-felix-icaza-card.jpg",
       "social_media_image": "/img/og/horarios-esteli-murra-cotran-sur-estelibuses.jpg",
       "title": "Horarios de los Buses de Estelí hacia Murra | Estelí Buses",
       "description": "Conoce todos los horarios de los buses que salen desde Estelí hacia Murra.",
@@ -5163,7 +5163,7 @@
     {
       "name": "El Espinal",
       "slug": "horarios-esteli-el-espinal",
-      "image": "/img/terminal-sur/horarios-esteli-el-espinal-estelibuses-felix-icaza-card.jpg",
+      "image": "/src/img/terminal-sur/horarios-esteli-el-espinal-estelibuses-felix-icaza-card.jpg",
       "social_media_image": "/img/og/horarios-esteli-el-espinal-cotran-sur-estelibuses.jpg",
       "title": "Horarios de los Buses de Estelí hacia El Espinal | Estelí Buses",
       "description": "Conoce todos los horarios de los buses que salen desde Estelí hacia El Espinal.",

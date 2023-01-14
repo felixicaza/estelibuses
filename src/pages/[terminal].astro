@@ -255,16 +255,13 @@ const getSchemaFAQs = schemaFAQs.map((faq) => ({
                 src: stationImageMobile,
                 breakpoints: station === 'Terminal Norte' ? [600] : [912],
                 width: station === 'Terminal Norte' ? 544 : 736,
-                height: station === 'Terminal Norte' ? 726 : 982,
-                format: ['avif'],
-                fallbackFormat: 'webp',
-                includeSourceFormat: false
+                height: station === 'Terminal Norte' ? 726 : 982
               }
             ]}
             alt={`${station} de la ciudad de Estelí`}
             decoding="async"
             attributes={{
-              link: {
+              img: {
                 fetchpriority: 'low'
               }
             }}

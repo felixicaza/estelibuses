@@ -5,12 +5,15 @@ import { Picture } from 'astro-imagetools/components'
 <nav class="flex items-center justify-between py-2">
   <a class="inline-block" href="/">
     <Picture
-      src="/img/estelibuses-logo.png"
+      src="/src/img/estelibuses-logo.png"
       alt="Estelí Buses: Horarios de las Terminales de Buses de Estelí"
       decoding="async"
       attributes={{
+        img: {
+          fetchpriority: 'high'
+        },
         link: {
-          fetchpriority: 'highest'
+          fetchpriority: 'high'
         }
       }}
       preload="avif"
