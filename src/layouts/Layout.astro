@@ -37,14 +37,6 @@ const { options } = Astro.props
         document.documentElement.classList.add('dark')
     </script>
 
-    <script
-      src="https://www.googletagmanager.com/gtag/js"
-      async="async"
-      crossorigin="anonymous"
-      importance="low"
-      fetchpriority="low"
-    ></script>
-
     <slot name="async-scripts" />
 
     <slot name="critical-css" />
