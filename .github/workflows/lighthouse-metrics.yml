@@ -1,0 +1,43 @@
+name: Lighthouse Performance Badges
+
+'on':
+   push:
+      branches: [dev]
+
+jobs:
+   lighthouseci:
+      runs-on: ubuntu-latest
+
+      strategy:
+         matrix:
+            node-version: [18.x]
+
+      steps:
+         - uses: actions/checkout@v3.1.0
+
+         - name: Using Node.js ${{ matrix.node-version }}
+           uses: actions/setup-node@v3.5.1
+           with:
+              node-version: ${{ matrix.node-version }}
+
+         - name: Install pnpm
+           uses: pnpm/action-setup@v2.2.4
+           with:
+              version: latest
+
+         - uses: browser-actions/setup-chrome@v0.0.0
+         - run: chrome --version
+
+         - name: Generate Badges
+           run: pnpx lighthouse-badges -u https://estelibuses.web.app/ -o ./public/performance
+
+         - name: Commit changes
+           uses: EndBug/add-and-commit@v7
+           with:
+              author_name: estelibuses-bot
+              author_email: contacto@felixicaza.com
+              message: 'chore: update lighthouse peformance badges [ci]'
+              add: 'public/performance'
+              push: true
+              branch: dev
+              token: ${{ secrets.GITHUB_TOKEN }}

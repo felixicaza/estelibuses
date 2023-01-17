@@ -1,4 +1,14 @@
-![](public/img/estelibuses-logo.png)
+<div align="center">
+
+![Estelí Buses](./public/img/estelibuses-logo.png)
+
+[![Lighthouse Performance Badge](./public/performance/lighthouse_performance.svg)](https://github.com/Felix-Icaza/estelibuses)
+[![Lighthouse Accessibility Badge](./public/performance/lighthouse_accessibility.svg)](https://github.com/Felix-Icaza/estelibuses)
+[![Lighthouse Best Practices Badge](./public/performance/lighthouse_best-practices.svg)](https://github.com/Felix-Icaza/estelibuses)
+[![Lighthouse SEO Badge](./public/performance/lighthouse_seo.svg)](https://github.com/Felix-Icaza/estelibuses)
+[![Lighthouse PWA Badge](./public/performance/lighthouse_pwa.svg)](https://github.com/Felix-Icaza/estelibuses)
+
+</div>
 
 Estelí Buses es la primer plataforma para conocer los horarios de las terminales de buses del municipio de Estelí - Nicaragua.
 
