@@ -32,19 +32,24 @@
     "./**/*.{yaml,yml}": "prettier --write \"./**/*.{yaml,yml}\""
   },
   "dependencies": {
+    "@astrojs/react": "1.2.2",
     "@foobar404/wave": "2.0.4",
+    "@types/react": "^18.0.21",
+    "@types/react-dom": "^18.0.6",
     "astro": "1.9.2",
     "firebase": "9.15.0",
-    "quicklink": "2.3.0"
+    "quicklink": "2.3.0",
+    "react": "18.2.0",
+    "react-dom": "18.2.0"
   },
   "devDependencies": {
     "@astrojs/tailwind": "2.1.3",
     "@commitlint/cli": "17.4.2",
     "@commitlint/config-conventional": "17.4.2",
-    "astro-compress": "1.1.25",
+    "astro-compress": "1.1.27",
     "astro-compressor": "0.2.2",
-    "astro-critters": "1.1.25",
-    "astro-eslint-parser": "0.9.4",
+    "astro-critters": "1.1.26",
+    "astro-eslint-parser": "0.9.5",
     "astro-imagetools": "0.6.16",
     "astro-seo-schema": "1.2.2",
     "astro-sitemap": "0.4.2",
@@ -76,7 +81,7 @@
     "postcss-sort-media-queries": "4.3.0",
     "postcss-urlrev": "3.0.1",
     "postcss-will-change-transition": "1.2.0",
-    "prettier": "2.8.2",
+    "prettier": "2.8.3",
     "prettier-plugin-astro": "0.7.2",
     "prettier-plugin-tailwindcss": "0.2.1",
     "tailwindcss": "3.2.4"
