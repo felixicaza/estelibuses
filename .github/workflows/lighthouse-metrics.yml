@@ -2,7 +2,7 @@ name: Lighthouse Performance Badges
 
 'on':
    push:
-      branches: [dev]
+      branches: [main]
 
 jobs:
    lighthouseci:
@@ -32,12 +32,12 @@ jobs:
            run: pnpx lighthouse-badges -u https://estelibuses.web.app/ -o ./public/performance
 
          - name: Commit changes
-           uses: EndBug/add-and-commit@v7
+           uses: EndBug/add-and-commit@v9.1.1
            with:
-              author_name: estelibuses-bot
-              author_email: contacto@felixicaza.com
-              message: 'chore: update lighthouse peformance badges [ci]'
+              author_name: github-actions[bot]
+              author_email: github-actions[bot]@users.noreply.github.com
+              message: 'ci: update lighthouse peformance badges'
               add: 'public/performance'
               push: true
-              branch: dev
+              branch: main
               token: ${{ secrets.GITHUB_TOKEN }}
