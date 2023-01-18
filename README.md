@@ -1,6 +1,6 @@
 <div align="center">
 
-![Estelí Buses](./public/img/estelibuses-logo.png)
+[![Estelí Buses](./src/img/estelibuses-logo.png)](https://estelibuses.web.app)
 
 [![Lighthouse Performance Badge](./public/performance/lighthouse_performance.svg)](https://github.com/Felix-Icaza/estelibuses)
 [![Lighthouse Accessibility Badge](./public/performance/lighthouse_accessibility.svg)](https://github.com/Felix-Icaza/estelibuses)
@@ -10,7 +10,7 @@
 
 </div>
 
-Estelí Buses es la primer plataforma para conocer los horarios de las terminales de buses del municipio de Estelí - Nicaragua.
+[Estelí Buses](https://estelibuses.web.app) es la primer plataforma para conocer los horarios de las terminales de buses del municipio de Estelí - Nicaragua.
 
 ## Motivación
 
@@ -49,6 +49,8 @@ El proyecto está organizado siguiendo la [estructura recomendada por Astro](htt
   - [`components`](src/components): Componentes que son reutilizados a lo largo del proyecto.
 
   - [`content`](src/content): En esta carpeta se encuentra los componentes utilizados en el archivo [`index.astro`](https://github.com/Felix-Icaza/estelibuses/blob/main/src/pages/index.astro).
+
+  - [`img`](src/content): Aquí se encuentran todas las imágenes utilizadas, que serán optimizadas en producción.
 
   - [`data`](src/data): Aquí se encuentran todos los datos de los horarios de los autobuses de las terminales y otros datos útiles para el proyecto.
 
