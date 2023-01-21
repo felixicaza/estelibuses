@@ -8,7 +8,11 @@ import { Picture } from 'astro-imagetools/components'
       class="flex flex-col gap-y-8 xl:flex-row xl:items-center xl:justify-between xl:gap-y-0"
     >
       <section class="flex flex-col items-center gap-y-4">
-        <a href="/" class="inline-block">
+        <a
+          href="/"
+          class="inline-block"
+          rel={Astro.url.pathname !== '/' && 'preload'}
+        >
           <Picture
             src="/src/img/estelibuses-logo.png"
             alt="Estelí Buses: Horarios de las Terminales de Buses de Estelí"
@@ -55,13 +59,15 @@ import { Picture } from 'astro-imagetools/components'
               <a
                 href="/terminal-norte-esteli"
                 class="transition-colors active:text-orange-400 any-hover:text-orange-400"
-                >Horarios Terminal Norte</a
+                rel={Astro.url.pathname !== '/terminal-norte-esteli' &&
+                  'preload'}>Horarios Terminal Norte</a
               >
             </li>
             <li>
               <a
                 href="/terminal-sur-esteli"
                 class="transition-colors active:text-orange-400 any-hover:text-orange-400"
+                rel={Astro.url.pathname !== '/terminal-sur-esteli' && 'preload'}
                 >Horarios Terminal Sur</a
               >
             </li>
@@ -76,6 +82,7 @@ import { Picture } from 'astro-imagetools/components'
               <a
                 href="/guia-de-instalacion"
                 class="transition-colors active:text-orange-400 any-hover:text-orange-400"
+                rel={Astro.url.pathname !== '/guia-de-instalacion' && 'preload'}
                 >Guía de Instalación</a
               >
             </li>

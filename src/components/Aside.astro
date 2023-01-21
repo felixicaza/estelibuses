@@ -128,6 +128,7 @@ import InstallPWAButton from '@components/InstallPWAButton.astro'
       <a
         class="flex w-full items-center gap-x-2 py-4 transition-colors active:text-orange-600 any-hover:text-orange-600 lg:justify-end"
         href="/guia-de-instalacion"
+        rel={Astro.url.pathname !== '/guia-de-instalacion' && 'preload'}
       >
         <span class="lg:order-1">
           <svg

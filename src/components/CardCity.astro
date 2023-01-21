@@ -8,7 +8,7 @@ const { cityName, slug, image } = Astro.props
   class="card-city flex w-full max-w-[30rem] flex-col overflow-hidden rounded bg-white shadow transition-shadow duration-300 any-hover:shadow-md dark:bg-[#362d25] lg:max-w-md"
 >
   <section class="relative">
-    <a class="group overflow-hidden" href={slug}>
+    <a class="group overflow-hidden" href={slug} rel="preload">
       <Picture
         src={image}
         alt={`Horarios de la ciudad de ${cityName}`}
@@ -58,6 +58,7 @@ const { cityName, slug, image } = Astro.props
         <a
           class="city-name transition-colors active:text-orange-400 any-hover:text-orange-400"
           href={slug}
+          rel="preload"
           >{cityName}
         </a>
       </h2>
@@ -71,6 +72,7 @@ const { cityName, slug, image } = Astro.props
     <a
       class="inline-flex items-center justify-center space-x-1 rounded py-2.5 px-5 font-semibold text-orange-400 transition-colors focus:outline-none active:bg-orange-100 active:text-orange-500 any-hover:bg-orange-100 any-hover:text-orange-500"
       href={slug}
+      rel="preload"
     >
       <span>Mira los horarios</span><span>
         <svg class="mt-[0.1625rem] fill-current" width="26" height="26">

@@ -3,7 +3,11 @@ import { Picture } from 'astro-imagetools/components'
 ---
 
 <nav class="flex items-center justify-between py-2">
-  <a class="inline-block" href="/">
+  <a
+    class="inline-block"
+    href="/"
+    rel={Astro.url.pathname !== '/' && 'preload'}
+  >
     <Picture
       src="/src/img/estelibuses-logo.png"
       alt="Estelí Buses: Horarios de las Terminales de Buses de Estelí"
@@ -42,6 +46,7 @@ import { Picture } from 'astro-imagetools/components'
             }
           ]}
           href="/terminal-norte-esteli"
+          rel={Astro.url.pathname !== '/terminal-norte-esteli' && 'preload'}
         >
           <span>
             <svg
@@ -76,6 +81,7 @@ import { Picture } from 'astro-imagetools/components'
             }
           ]}
           href="/terminal-sur-esteli"
+          rel={Astro.url.pathname !== '/terminal-sur-esteli' && 'preload'}
         >
           <span>
             <svg
