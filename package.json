@@ -26,6 +26,10 @@
       "eslint --cache --ext .astro ./src/ --fix",
       "prettier --write \"./src/**/*.astro\" --plugin-search-dir=."
     ],
+    "./src/**/*.{jsx,tsx}": [
+      "eslint --cache --ext .jsx,.tsx ./src/ --fix",
+      "prettier --write \"./src/**/*.{jsx,tsx}\" --plugin-search-dir=."
+    ],
     "./src/styles/*.css": "prettier --write \"./src/styles/*.css\"",
     "./**/*.json": "prettier --write \"./**/*.json\"",
     "./**/*.md": "prettier --write \"./**/*.md\"",
