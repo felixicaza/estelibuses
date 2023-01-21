@@ -192,7 +192,6 @@ const { options } = Astro.props
     <script>
       import { initializeApp } from 'firebase/app'
       import { getAnalytics } from 'firebase/analytics'
-      import { listen } from 'quicklink/dist/quicklink.mjs'
       import '@scripts/logger.js'
 
       const soundPage = new Audio('/sounds/switch-tap.mp3')
@@ -218,8 +217,6 @@ const { options } = Astro.props
       ;(window.dataLayer = window.dataLayer || []), gtag('js', new Date())
 
       window.addEventListener('load', async () => {
-        listen()
-
         const reloadBtn = document.getElementById('reload')
 
         function showUpdateFounded(registration) {
