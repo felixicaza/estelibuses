@@ -70,3 +70,17 @@
     @apply font-semibold text-orange-500 underline transition-colors active:text-orange-600 any-hover:text-orange-600;
   }
 }
+@layer utilities {
+  .content-visible {
+    content-visibility: visible;
+    contain: style layout paint;
+  }
+
+  .content-hidden {
+    content-visibility: hidden;
+  }
+
+  .content-auto {
+    content-visibility: auto;
+  }
+}

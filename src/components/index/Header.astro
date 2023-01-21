@@ -75,50 +75,45 @@ const mergeDataStations = [northernStation, southernStation]
           </form>
           <section class="relative h-[1px] w-full">
             <nav
-              class="pointer-events-none absolute top-0 z-20 mx-auto w-full max-w-md translate-y-full transform rounded-b bg-white opacity-0 shadow-md transition-all dark:bg-[#362d25]"
+              class="content-hidden pointer-events-none absolute top-0 z-20 mx-auto w-full max-w-md translate-y-full transform space-y-2 rounded-b bg-white px-4 pb-2 text-left opacity-0 shadow-md transition-all dark:bg-[#362d25]"
               id="container-cities"
             >
-              <ul class="space-y-2 px-4 pb-2">
-                {
-                  mergeDataStations.map((info) =>
-                    info.cities.map((city) => (
-                      <li class="cities hidden text-left">
-                        <a
-                          class="mt-2 flex w-full gap-2 rounded  py-2 px-4 font-semibold transition-colors active:bg-orange-100 active:text-orange-500 any-hover:bg-orange-100 any-hover:text-orange-500 dark:active:bg-[#3E352C] dark:any-hover:bg-[#3E352C]"
-                          href={`/${info.slug}/${city.slug}`}
+              {
+                mergeDataStations.map((info) =>
+                  info.cities.map((city) => (
+                    <a
+                      class="cities mt-2 flex w-full gap-2 rounded  py-2 px-4 font-semibold transition-colors active:bg-orange-100 active:text-orange-500 any-hover:bg-orange-100 any-hover:text-orange-500 dark:active:bg-[#3E352C] dark:any-hover:bg-[#3E352C]"
+                      href={`/${info.slug}/${city.slug}`}
+                    >
+                      <svg
+                        class="mt-[0.2125rem] fill-current"
+                        width="24"
+                        height="24"
+                      >
+                        <use href="/img/bus.svg#bus" />
+                      </svg>
+                      <span class="flex flex-col">
+                        <span
+                          class="city-name-search"
+                          data-cityname={city.slug.replace(
+                            'horarios-esteli-',
+                            ''
+                          )}
                         >
-                          <svg
-                            class="mt-[0.2125rem] fill-current"
-                            viewBox="0 0 24 24"
-                            width="24"
-                            height="24"
-                          >
-                            <path d="M18 11H6V6h12m-1.5 11a1.5 1.5 0 0 1-1.5-1.5 1.5 1.5 0 0 1 1.5-1.5 1.5 1.5 0 0 1 1.5 1.5 1.5 1.5 0 0 1-1.5 1.5m-9 0A1.5 1.5 0 0 1 6 15.5 1.5 1.5 0 0 1 7.5 14 1.5 1.5 0 0 1 9 15.5 1.5 1.5 0 0 1 7.5 17M4 16a3 3 0 0 0 1 2.2V20a1 1 0 0 0 1 1h1a1 1 0 0 0 1-1v-1h8v1a1 1 0 0 0 1 1h1a1 1 0 0 0 1-1v-1.8a3 3 0 0 0 1-2.2V6c0-3.5-3.6-4-8-4s-8 .5-8 4v10Z" />
-                          </svg>
-                          <span class="flex flex-col">
-                            <span
-                              class="city-name-search"
-                              data-cityname={city.slug.replace(
-                                'horarios-esteli-',
-                                ''
-                              )}
-                            >
-                              {city.name}
-                            </span>
-                            <span class="text-xs">{info.station}</span>
-                          </span>
-                        </a>
-                      </li>
-                    ))
-                  )
-                }
-                <li
-                  class="hidden !border-0 py-2 px-4 text-left font-semibold"
-                  id="unknown-city"
-                >
-                  No está disponible tu búsqueda 😔
-                </li>
-              </ul>
+                          {city.name}
+                        </span>
+                        <span class="text-xs">{info.station}</span>
+                      </span>
+                    </a>
+                  ))
+                )
+              }
+              <p
+                class="hidden !border-0 py-2 px-4 text-left font-semibold"
+                id="unknown-city"
+              >
+                No está disponible tu búsqueda 😔
+              </p>
             </nav>
           </section>
         </section>
@@ -210,6 +205,7 @@ const mergeDataStations = [northernStation, southernStation]
     if ((e.target as HTMLInputElement).id === 'cities-search') {
       containerCities.classList.replace('opacity-0', 'opacity-100')
       containerCities.classList.replace('translate-y-full', 'translate-y-0')
+      containerCities.classList.replace('content-hidden', 'content-visible')
       containerCities.classList.replace(
         'pointer-events-none',
         'pointer-events-auto'
@@ -248,6 +244,7 @@ const mergeDataStations = [northernStation, southernStation]
       if (citiesSearch.value === '') {
         containerCities.classList.replace('opacity-100', 'opacity-0')
         containerCities.classList.replace('translate-y-0', 'translate-y-full')
+        containerCities.classList.replace('content-visible', 'content-hidden')
         containerCities.classList.replace(
           'pointer-events-auto',
           'pointer-events-none'
