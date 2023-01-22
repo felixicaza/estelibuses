@@ -5,6 +5,8 @@ import { Picture } from 'astro-imagetools/components'
 
 import TakePic from '@components/TakePic.astro'
 
+import ShowBusAvailability from '@components/ShowBusAvailability.astro'
+
 const {
   index,
   note,
@@ -24,7 +26,8 @@ const {
 ---
 
 <section
-  class={`space-y-2 bg-[#fcfcfc] dark:bg-[#362d25] shadow rounded p-4 any-hover:shadow-md transition-shadow ${transportType.toLowerCase()}`}
+  id={`horario-${index + 1}`}
+  class={`space-y-4 bg-[#fcfcfc] dark:bg-[#362d25] shadow rounded p-4 any-hover:shadow-md transition-shadow ${transportType.toLowerCase()}`}
 >
   <h2 class="titles text-3xl font-bold sm:text-4xl">
     Horario #{index + 1}
@@ -51,6 +54,8 @@ const {
       <TakePic />
     )
   }
+
+  <ShowBusAvailability hour={departureTime} {index} />
 
   <div class="scrolltable pb-2">
     <table class="border-collapse whitespace-nowrap">

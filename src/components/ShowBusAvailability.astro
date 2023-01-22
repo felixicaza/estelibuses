@@ -1,0 +1,49 @@
+---
+const { hour, index } = Astro.props
+---
+
+<p
+  class="availability content-hidden flex items-center gap-1.5 rounded font-bold"
+>
+  <span>
+    <svg class="fill-current" width="22" height="22" viewBox="0 0 24 24">
+      <path
+        d="M12 2c5.5 0 10 4.5 10 10s-4.5 10-10 10S2 17.5 2 12 6.5 2 12 2m0 2c-1.9 0-3.6.6-4.9 1.7l11.2 11.2c1-1.4 1.7-3.1 1.7-4.9a8 8 0 0 0-8-8m4.9 14.3L5.7 7.1a8 8 0 0 0 11.2 11.2Z"
+      ></path>
+    </svg>
+  </span>
+  <span class="label"></span>
+</p>
+
+<script define:vars={{ hour, index }}>
+  const availabilityContainers = document.querySelectorAll('.availability')
+  const labels = document.querySelectorAll('.label')
+
+  const createDate = new Date()
+  const today = new Date(
+    createDate.getFullYear(),
+    createDate.getMonth(),
+    createDate.getDate(),
+    0,
+    0,
+    0
+  )
+  const formatHour = hour.split(':')
+  const departureTimestamp = today.setHours(formatHour[0], formatHour[1])
+
+  setInterval(() => {
+    if (departureTimestamp < Date.now()) {
+      availabilityContainers[index].classList.replace(
+        'content-hidden',
+        'content-visible'
+      )
+      availabilityContainers[index].classList.add(
+        'bg-red-100',
+        'text-red-700',
+        'px-2',
+        'py-1'
+      )
+      labels[index].textContent = 'Transporte no disponible por hoy'
+    }
+  }, 1000)
+</script>
