@@ -29,7 +29,7 @@
 
   html {
     @apply scroll-smooth;
-    color-scheme: light dark;
+    color-scheme: dark light;
   }
 
   html,
