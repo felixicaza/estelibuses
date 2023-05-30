@@ -1,5 +1,12 @@
 [
   {
+    "name": "Karelia Velásquez",
+    "comment": "Estoy super contenta de encontrar una App con la información de horarios de buses, me ha sido muy útil.",
+    "bg_circle": "bg-green-100",
+    "color_icon": "text-green-500",
+    "icon": "woman"
+  },
+  {
     "name": "Marelis",
     "comment": "Excelente sitio, ayuda muchísimo a organizar los viajes.",
     "bg_circle": "bg-pink-100",
