@@ -4,7 +4,7 @@ import testimonials from '@data/testimonials.json'
 /**
  * Random sort testimonials on every build
  * */
-const randomSortTestimonials = testimonials.sort(() => 0.5 - Math.random())
+// const randomSortTestimonials = testimonials.sort(() => 0.5 - Math.random())
 
 const testimonialsLength = testimonials.length
 ---
@@ -18,7 +18,7 @@ const testimonialsLength = testimonials.length
       class="users-comments scroll-snap-slider mx-auto grid snap-x snap-mandatory items-start gap-4 overflow-x-scroll scroll-smooth px-4 pb-4 sm:gap-8"
     >
       {
-        randomSortTestimonials.map((testimonial) => (
+        testimonials.map((testimonial) => (
           <section class="comments scroll-snap-slide flex h-full snap-center snap-always flex-col items-center justify-start gap-y-2 rounded bg-white p-3 text-center shadow dark:bg-[#30251b]/50">
             <div>
               <section

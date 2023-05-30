@@ -103,7 +103,7 @@ const getSchemaFAQs = schemaFAQs.map((faq) => ({
       <Navbar />
 
       <section
-        class="flex flex-col items-center justify-center pt-[4.5rem] pb-[4.5rem] text-center md:pb-[6.5rem] lg:pt-28 lg:pb-[8.5rem] xl:pb-56"
+        class="flex flex-col items-center justify-center pb-[4.5rem] pt-[4.5rem] text-center md:pb-[6.5rem] lg:pb-[8.5rem] lg:pt-28 xl:pb-56"
       >
         <Greetings />
         <h1 class={`my-4 max-w-4xl ${titleColor}`}>{title}</h1>
@@ -182,12 +182,12 @@ const getSchemaFAQs = schemaFAQs.map((faq) => ({
             <input
               id="search"
               type="search"
-              class="block w-full rounded rounded-r-none bg-white py-2.5 px-4 placeholder-orange-600 placeholder-opacity-50 caret-orange-500 outline-none transition-colors focus:border-orange-500 focus:ring-4 focus:ring-orange-400 focus:ring-opacity-50 dark:bg-[#292018] dark:placeholder-orange-100"
+              class="block w-full rounded rounded-r-none bg-white px-4 py-2.5 placeholder-orange-600 placeholder-opacity-50 caret-orange-500 outline-none transition-colors focus:border-orange-500 focus:ring-4 focus:ring-orange-400 focus:ring-opacity-50 dark:bg-[#292018] dark:placeholder-orange-100"
               placeholder="Busca tu ciudad..."
             />
             <button
               id="search-button"
-              class="inline-flex items-center justify-center rounded rounded-l-none bg-orange-400 py-2.5 px-5 text-white transition-colors active:outline-none active:ring-4 active:ring-orange-400 active:ring-opacity-75 any-hover:bg-orange-500"
+              class="inline-flex items-center justify-center rounded rounded-l-none bg-orange-400 px-5 py-2.5 text-white transition-colors active:outline-none active:ring-4 active:ring-orange-400 active:ring-opacity-75 any-hover:bg-orange-500"
               type="button"
               aria-label={`Buscar ciudades de la ${station}`}
               title={`Buscar ciudades de la ${station}`}
@@ -240,7 +240,7 @@ const getSchemaFAQs = schemaFAQs.map((faq) => ({
       <h2 class="mb-8">Conoce sobre la {station} de Estelí</h2>
       <div class="space-y-4">
         <p
-          class="mx-auto mt-5 mb-4 md:max-w-5xl lg:max-w-6xl"
+          class="mx-auto mb-4 mt-5 md:max-w-5xl lg:max-w-6xl"
           set:html={locationDescription}
         />
         <figure>

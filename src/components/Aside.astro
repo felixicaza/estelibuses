@@ -5,13 +5,13 @@ import InstallPWAButton from '@components/InstallPWAButton.astro'
 ---
 
 <div
-  class="pointer-events-none fixed top-0 bottom-0 z-20 h-full w-full bg-black/70 opacity-0 backdrop-blur-sm transition-opacity duration-200 ease-in-out"
+  class="pointer-events-none fixed bottom-0 top-0 z-20 h-full w-full bg-black/70 opacity-0 backdrop-blur-sm transition-opacity duration-200 ease-in-out"
   id="bg-modal"
 >
 </div>
 
 <aside
-  class="md:w-4/9 lg:w-4/11 safe-top pointer-events-none fixed top-0 bottom-0 z-30 h-full w-9/12 -translate-x-full transform bg-orange-300 opacity-0 transition-all duration-200 ease-in-out dark:bg-[#180f06] dark:text-white lg:right-0 lg:translate-x-full xl:w-3/12"
+  class="md:w-4/9 lg:w-4/11 safe-top pointer-events-none fixed bottom-0 top-0 z-30 h-full w-9/12 -translate-x-full transform bg-orange-300 opacity-0 transition-all duration-200 ease-in-out dark:bg-[#180f06] dark:text-white lg:right-0 lg:translate-x-full xl:w-3/12"
   id="mobile"
 >
   <section class="flex h-full flex-col justify-between p-4">
@@ -44,7 +44,7 @@ import InstallPWAButton from '@components/InstallPWAButton.astro'
               type="checkbox"
             />
             <span
-              class="switch-toggle top-0 left-0 bottom-0 right-0 peer-checked:bg-orange-500 peer-checked:before:translate-x-[1.625rem]"
+              class="switch-toggle bottom-0 left-0 right-0 top-0 peer-checked:bg-orange-500 peer-checked:before:translate-x-[1.625rem]"
             ></span>
           </div>
         </section>
@@ -92,7 +92,7 @@ import InstallPWAButton from '@components/InstallPWAButton.astro'
               checked="checked"
             />
             <span
-              class="switch-toggle top-0 left-0 bottom-0 right-0 peer-checked:bg-orange-500 peer-checked:before:translate-x-[1.625rem]"
+              class="switch-toggle bottom-0 left-0 right-0 top-0 peer-checked:bg-orange-500 peer-checked:before:translate-x-[1.625rem]"
             ></span>
           </div>
         </section>
@@ -147,7 +147,7 @@ import InstallPWAButton from '@components/InstallPWAButton.astro'
         <span class="relative lg:order-first"
           >Guía de Instalación
           <span
-            class="absolute top-0 right-0 flex h-3 w-3 translate-x-2 -translate-y-1 scale-75 lg:right-auto lg:left-0 lg:-translate-x-3"
+            class="absolute right-0 top-0 flex h-3 w-3 -translate-y-1 translate-x-2 scale-75 lg:left-0 lg:right-auto lg:-translate-x-3"
           >
             <span
               class="absolute inline-flex h-full w-full animate-ping rounded-full bg-orange-400 opacity-90"
@@ -180,7 +180,7 @@ import InstallPWAButton from '@components/InstallPWAButton.astro'
 
 <style>
   .switch-toggle {
-    @apply absolute z-[-1] rounded-full bg-orange-800/50 transition-all before:absolute before:left-1 before:bottom-[0.29rem] before:h-[0.875rem] before:w-[0.875rem] before:rounded-full before:bg-white before:transition-all before:content-[''] lg:scale-x-[-1];
+    @apply absolute z-[-1] rounded-full bg-orange-800/50 transition-all before:absolute before:bottom-[0.29rem] before:left-1 before:h-[0.875rem] before:w-[0.875rem] before:rounded-full before:bg-white before:transition-all before:content-[''] lg:scale-x-[-1];
   }
 </style>
 

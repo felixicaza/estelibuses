@@ -82,7 +82,7 @@ const mergeDataStations = [northernStation, southernStation]
                 mergeDataStations.map((info) =>
                   info.cities.map((city) => (
                     <a
-                      class="cities mt-2 flex w-full gap-2 rounded  py-2 px-4 font-semibold transition-colors active:bg-orange-100 active:text-orange-500 any-hover:bg-orange-100 any-hover:text-orange-500 dark:active:bg-[#3E352C] dark:any-hover:bg-[#3E352C]"
+                      class="cities mt-2 flex w-full gap-2 rounded  px-4 py-2 font-semibold transition-colors active:bg-orange-100 active:text-orange-500 any-hover:bg-orange-100 any-hover:text-orange-500 dark:active:bg-[#3E352C] dark:any-hover:bg-[#3E352C]"
                       href={`/${info.slug}/${city.slug}`}
                     >
                       <svg
@@ -109,7 +109,7 @@ const mergeDataStations = [northernStation, southernStation]
                 )
               }
               <p
-                class="hidden !border-0 py-2 px-4 text-left font-semibold"
+                class="hidden !border-0 px-4 py-2 text-left font-semibold"
                 id="unknown-city"
               >
                 No está disponible tu búsqueda 😔
