@@ -968,14 +968,14 @@
       "timetables": [
         {
           "note": "Este bus llega a Yalí y luego transborda hacia <a href=\"/terminal-norte-esteli/horarios-esteli-la-rica\">La Rica</a>.",
-          "transport_pic": "",
+          "transport_pic": "/src/img/terminal-norte/transporte-lanuza.jpg",
           "departure_time": "04:15",
           "waiting_area_departure": "",
           "return_time": "",
           "waiting_area_return": "",
           "transport_type": "Ruteado",
           "transport_name": "Lanuza",
-          "license_plate": "",
+          "license_plate": "ES 088",
           "transport_phone": "",
           "transport_price": "",
           "trip_duration": "3 horas"
@@ -1158,14 +1158,14 @@
           "trip_duration": "3 horas"
         },
         {
-          "transport_pic": "",
+          "transport_pic": "/src/img/terminal-norte/transporte-el-chavalo-del-norte.jpg",
           "departure_time": "16:30",
           "waiting_area_departure": "",
           "return_time": "",
           "waiting_area_return": "",
           "transport_type": "Ruteado",
           "transport_name": "El Chavalo del Norte",
-          "license_plate": "",
+          "license_plate": "ES 261",
           "transport_phone": "",
           "transport_price": "",
           "trip_duration": "3 horas"
@@ -1735,7 +1735,7 @@
       "map": "https://www.google.com/maps/embed?pb=!1m28!1m12!1m3!1d248554.1585172447!2d-86.36061169784129!3d13.246720953426426!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!4m13!3e6!4m5!1s0x8f718c6c8f2298e7%3A0x855d282eb62cfeed!2sCotran%20Norte%2C%20Estel%C3%AD!3m2!1d13.0816363!2d-86.352126!4m5!1s0x8f720ecf5bb2aa3d%3A0x6f436df05e49751b!2sLa%20Rica!3m2!1d13.407271699999999!2d-86.0414878!5e0!3m2!1ses-419!2sni!4v1645809377704!5m2!1ses-419!2sni",
       "timetables": [
         {
-          "transport_pic": "",
+          "transport_pic": "/src/img/terminal-norte/transporte-lanuza.jpg",
           "departure_time": "04:15",
           "waiting_area_departure": "",
           "return_time": "",
