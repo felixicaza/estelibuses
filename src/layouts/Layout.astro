@@ -5,7 +5,7 @@ import Favicons from '@components/Favicons.astro'
 import SplashScreens from '@components/SplashScreens.astro'
 import Footer from '@components/Footer.astro'
 import BottomBar from '@components/BottomBar.astro'
-import Aside from '@components/Aside.astro'
+import Aside from '@components/Aside/index.astro'
 import ModalShare from '@components/ModalShare.astro'
 import UpdatePWAButton from '@components/UpdatePWAButton.astro'
 import PromptiOS from '@components/PromptiOS.astro'
@@ -33,16 +33,16 @@ const { options } = Astro.props
     <slot name="preconnect" />
 
     <script is:inline>
-      if (
-        localStorage.getItem('darkmode') === 'true' ||
-        window.matchMedia('(prefers-color-scheme: dark)').matches
-      ) {
-        document.documentElement.classList.add('dark')
-        localStorage.setItem('darkmode', true)
-      } else {
-        document.documentElement.classList.remove('dark')
-        localStorage.setItem('darkmode', false)
+      function getPreference() {
+        if (localStorage.getItem('darkmode')) {
+          return localStorage.getItem('darkmode') === 'true'
+        } else {
+          return window.matchMedia('(prefers-color-scheme: dark)').matches
+        }
       }
+
+      if (getPreference()) document.documentElement.classList.add('dark')
+      else document.documentElement.classList.remove('dark')
     </script>
 
     <slot name="async-scripts" />
