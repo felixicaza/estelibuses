@@ -1,0 +1,160 @@
+<button
+  class="flex w-full items-center gap-x-2 py-4 transition-colors focus:outline-none active:text-orange-600 any-hover:text-orange-600 lg:justify-end"
+  id="share-aside"
+  type="button"
+  title="¡Comparte Estelí Buses en tus redes sociales!"
+>
+  <span class="lg:order-1">
+    <svg class="fill-current" viewBox="0 0 24 24" width="24" height="24">
+      <path
+        d="M18 16a3 3 0 0 0-2 .9l-7-4.2v-1.4l7-4.1a3 3 0 0 0 2 .8 3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3v.7L8 9.8A3 3 0 0 0 6 9a3 3 0 0 0-3 3 3 3 0 0 0 3 3 3 3 0 0 0 2-.8l7.2 4.1-.1.7a3 3 0 0 0 5.8 0 3 3 0 0 0-2.9-3Z"
+      ></path>
+    </svg>
+  </span>
+  <span class="lg:order-first">Compartir</span>
+</button>
+
+<script>
+  const $ = (sel: string) => document.querySelector(sel)
+
+  const shareAside = $('#share-aside')
+
+  const bgModalShare = $('#bg-modal-share')
+  const modalShare = $('#modal-share')
+  const bgModal = $('#bg-modal')
+  const mobileNav = $('#mobile')
+
+  const noScrollOnModal = 'overflow: hidden'
+
+  const modalShareLinks = document.querySelectorAll('.modal-share-link')
+
+  const soundPage = new Audio('/sounds/switch-tap.mp3')
+
+  const shareURLAside = 'https://estelibuses.web.app/'
+
+  const shareDataAside = {
+    title: 'Estelí Buses',
+    text: '¡Conoce todos los horarios de las terminales de buses de la ciudad de Estelí!',
+    url: `${shareURLAside}?utm_source=shareasidebtn&utm_medium=webapp&utm_campaign=social_share&utm_content=aside`
+  }
+
+  if (navigator.share) {
+    shareAside.addEventListener('click', () => {
+      if (localStorage.getItem('sounds_enabled') === 'true') {
+        soundPage.play()
+      }
+
+      if (
+        'vibrate' in navigator &&
+        localStorage.getItem('sounds_enabled') === 'false'
+      ) {
+        navigator.vibrate(80)
+      }
+
+      navigator.share(shareDataAside)
+    })
+  } else {
+    shareAside.addEventListener('click', () => {
+      if (localStorage.getItem('sounds_enabled') === 'true') {
+        soundPage.play()
+      }
+
+      if (
+        'vibrate' in navigator &&
+        localStorage.getItem('sounds_enabled') === 'false'
+      ) {
+        navigator.vibrate(80)
+      }
+
+      bgModal.classList.replace('opacity-100', 'opacity-0')
+      bgModal.classList.replace('pointer-events-auto', 'pointer-events-none')
+
+      if (window.matchMedia('min-width: 992px')) {
+        mobileNav.classList.replace('translate-x-0', 'lg:translate-x-full')
+      } else {
+        mobileNav.classList.replace('translate-x-0', '-translate-x-full')
+      }
+      mobileNav.classList.replace('pointer-events-auto', 'pointer-events-none')
+      mobileNav.classList.replace('opacity-100', 'opacity-0')
+      mobileNav.classList.remove('shadow-aside')
+
+      document.documentElement.removeAttribute('style')
+      document.body.removeAttribute('style')
+
+      setTimeout(() => {
+        bgModalShare.classList.replace('opacity-0', 'opacity-100')
+        bgModalShare.classList.replace(
+          'pointer-events-none',
+          'pointer-events-auto'
+        )
+
+        document.documentElement.setAttribute('style', noScrollOnModal)
+        document.body.setAttribute('style', noScrollOnModal)
+
+        modalShare.classList.replace(
+          'pointer-events-none',
+          'pointer-events-auto'
+        )
+        modalShare.classList.replace('opacity-0', 'opacity-100')
+        modalShare.classList.replace('scale-0', 'scale-100')
+      }, 800)
+    })
+
+    bgModalShare.addEventListener('click', () => {
+      if (localStorage.getItem('sounds_enabled') === 'true') {
+        soundPage.play()
+      }
+
+      if (
+        'vibrate' in navigator &&
+        localStorage.getItem('sounds_enabled') === 'false'
+      ) {
+        navigator.vibrate(80)
+      }
+
+      bgModalShare.classList.replace('opacity-100', 'opacity-0')
+      bgModalShare.classList.replace(
+        'pointer-events-auto',
+        'pointer-events-none'
+      )
+
+      document.documentElement.removeAttribute('style')
+      document.body.removeAttribute('style')
+
+      modalShare.classList.replace('pointer-events-auto', 'pointer-events-none')
+      modalShare.classList.replace('opacity-100', 'opacity-0')
+      modalShare.classList.replace('scale-100', 'scale-0')
+    })
+
+    modalShareLinks.forEach((link) => {
+      link.addEventListener('click', () => {
+        if (localStorage.getItem('sounds_enabled') === 'true') {
+          soundPage.play()
+        }
+
+        if (
+          'vibrate' in navigator &&
+          localStorage.getItem('sounds_enabled') === 'false'
+        ) {
+          navigator.vibrate(80)
+        }
+
+        bgModalShare.classList.replace('opacity-100', 'opacity-0')
+        bgModalShare.classList.replace(
+          'pointer-events-auto',
+          'pointer-events-none'
+        )
+
+        document.documentElement.removeAttribute('style')
+        document.body.removeAttribute('style')
+
+        modalShare.classList.replace(
+          'pointer-events-auto',
+          'pointer-events-none'
+        )
+        modalShare.classList.replace('opacity-100', 'opacity-0')
+        modalShare.classList.replace('scale-100', 'scale-0')
+      })
+    })
+  }
+</script>

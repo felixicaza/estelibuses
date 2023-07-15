@@ -1,0 +1,125 @@
+---
+/* eslint-disable astro/jsx-a11y/label-has-associated-control */
+
+import InstallPWAButton from '@components/InstallPWAButton.astro'
+
+import DarkmodeToggle from './DarkmodeToggle.astro'
+import SoundToggle from './SoundToggle.astro'
+import ShareButton from './ShareButton.astro'
+import AboutLink from './AboutLink.astro'
+import InstallLink from './InstallLink.astro'
+import ContactLink from './ContactLink.astro'
+---
+
+<div
+  class="pointer-events-none fixed bottom-0 top-0 z-20 h-full w-full bg-black/70 opacity-0 backdrop-blur-sm transition-opacity duration-200 ease-in-out"
+  id="bg-modal"
+>
+</div>
+
+<aside
+  class="md:w-4/9 lg:w-4/11 safe-top pointer-events-none fixed bottom-0 top-0 z-30 h-full w-9/12 -translate-x-full transform bg-orange-300 opacity-0 transition-all duration-200 ease-in-out dark:bg-[#180f06] dark:text-white lg:right-0 lg:translate-x-full xl:w-3/12"
+  id="mobile"
+>
+  <section class="flex h-full flex-col justify-between p-4">
+    <div>
+      <DarkmodeToggle />
+      <SoundToggle />
+      <ShareButton />
+      <AboutLink />
+      <InstallLink />
+      <ContactLink />
+    </div>
+    <div class="pb-4">
+      <InstallPWAButton />
+    </div>
+  </section>
+</aside>
+
+<script is:inline>
+  if (localStorage.getItem('darkmode') === 'true') {
+    document.getElementById('switch-scheme').setAttribute('checked', 'checked')
+  }
+  if (localStorage.getItem('sounds_enabled') === 'false') {
+    document.getElementById('switch-sound').removeAttribute('checked')
+    document.getElementById('label-sound').textContent = 'Activar sonidos'
+    document.getElementById('sound-disable').classList.add('hidden')
+    document.getElementById('sound-enable').classList.remove('hidden')
+  }
+</script>
+
+<script>
+  const $ = (sel: string) => document.querySelector(sel)
+
+  /**
+   * Sound page on click
+   */
+
+  const soundPage = new Audio('/sounds/switch-tap.mp3')
+
+  /**
+   * Menu aside
+   */
+
+  const bgModal = $('#bg-modal')
+  const mobileNavBtn = $('#mobile-nav')
+  const mobileNav = $('#mobile')
+  const noScrollOnModal = 'overflow: hidden'
+
+  mobileNavBtn.addEventListener('click', () => {
+    if (localStorage.getItem('sounds_enabled') === 'true') {
+      soundPage.play()
+    }
+
+    if (
+      'vibrate' in navigator &&
+      localStorage.getItem('sounds_enabled') === 'false'
+    ) {
+      navigator.vibrate(80)
+    }
+
+    bgModal.classList.replace('opacity-0', 'opacity-100')
+    bgModal.classList.replace('pointer-events-none', 'pointer-events-auto')
+
+    if (window.matchMedia('min-width: 992px')) {
+      mobileNav.classList.remove('-translate-x-full')
+      mobileNav.classList.replace('lg:translate-x-full', 'translate-x-0')
+    } else {
+      mobileNav.classList.replace('-translate-x-full', 'translate-x-0')
+    }
+
+    mobileNav.classList.replace('pointer-events-none', 'pointer-events-auto')
+    mobileNav.classList.replace('opacity-0', 'opacity-100')
+
+    document.documentElement.setAttribute('style', noScrollOnModal)
+    document.body.setAttribute('style', noScrollOnModal)
+  })
+
+  bgModal.addEventListener('click', () => {
+    if (localStorage.getItem('sounds_enabled') === 'true') {
+      soundPage.play()
+    }
+
+    if (
+      'vibrate' in navigator &&
+      localStorage.getItem('sounds_enabled') === 'false'
+    ) {
+      navigator.vibrate(80)
+    }
+
+    bgModal.classList.replace('opacity-100', 'opacity-0')
+    bgModal.classList.replace('pointer-events-auto', 'pointer-events-none')
+
+    if (window.matchMedia('min-width: 992px')) {
+      mobileNav.classList.replace('translate-x-0', 'lg:translate-x-full')
+    } else {
+      mobileNav.classList.replace('translate-x-0', '-translate-x-full')
+    }
+
+    mobileNav.classList.replace('pointer-events-auto', 'pointer-events-none')
+    mobileNav.classList.replace('opacity-100', 'opacity-0')
+
+    document.documentElement.removeAttribute('style')
+    document.body.removeAttribute('style')
+  })
+</script>

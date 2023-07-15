@@ -1,0 +1,97 @@
+---
+import Switch from '@components/Switch.astro'
+---
+
+<section class="flex justify-between pb-4">
+  <section
+    class="flex items-center gap-x-2 transition-colors active:text-orange-600 any-hover:text-orange-600 lg:order-1"
+  >
+    <span class="lg:order-1">
+      <svg class="fill-current" viewBox="0 0 24 24" width="24" height="24">
+        <path
+          d="M12 3a9 9 0 1 0 8.9 7.6 5.4 5.4 0 0 1-9.8-3.1c0-1.8.9-3.4 2.3-4.4L12 3z"
+        ></path>
+      </svg>
+    </span>
+    <label class="cursor-pointer lg:order-first" for="switch-scheme"
+      >Modo oscuro</label
+    >
+  </section>
+  <Switch id="switch-scheme" />
+</section>
+
+<script>
+  const switchScheme = document.querySelector(
+    '#switch-scheme'
+  ) as HTMLInputElement
+
+  const isColorSchemeDark = window.matchMedia('(prefers-color-scheme: dark)')
+  let darkModeState: boolean
+
+  const soundDarkMode = new Audio('/sounds/switch.mp3')
+
+  function toggleDarkMode(state: boolean) {
+    document.documentElement.classList.toggle('dark', state)
+    darkModeState = state
+  }
+
+  function setDarkModeLocalStorage(state: string) {
+    localStorage.setItem('darkmode', state)
+  }
+
+  isColorSchemeDark.addEventListener('change', (e) => {
+    darkModeState = e.matches
+
+    toggleDarkMode(darkModeState)
+    setDarkModeLocalStorage(String(darkModeState))
+  })
+
+  switchScheme.addEventListener('change', () => {
+    if (localStorage.getItem('sounds_enabled') === 'true') {
+      soundDarkMode.play()
+    }
+
+    if (
+      'vibrate' in navigator &&
+      localStorage.getItem('sounds_enabled') === 'false'
+    ) {
+      navigator.vibrate(80)
+    }
+
+    darkModeState = !darkModeState
+
+    switchScheme.checked = darkModeState
+
+    toggleDarkMode(darkModeState)
+    setDarkModeLocalStorage(String(darkModeState))
+  })
+
+  window.addEventListener('DOMContentLoaded', () => {
+    switchScheme.checked = getPreference()
+  })
+
+  window.addEventListener('keydown', (e) => {
+    if (e.altKey === true && e.shiftKey === true && e.key === 'D') {
+      if (localStorage.getItem('sounds_enabled') === 'true') {
+        soundDarkMode.play()
+      }
+
+      darkModeState = !darkModeState
+
+      switchScheme.checked = darkModeState
+
+      toggleDarkMode(darkModeState)
+      setDarkModeLocalStorage(String(darkModeState))
+    }
+  })
+
+  function getPreference() {
+    if (localStorage.getItem('darkmode')) {
+      return localStorage.getItem('darkmode') === 'true'
+    } else {
+      return isColorSchemeDark.matches
+    }
+  }
+
+  toggleDarkMode(getPreference())
+</script>
