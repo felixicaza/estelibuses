@@ -198,13 +198,12 @@ const { options } = Astro.props
       </article>
     </noscript>
     <script>
+      const isProd = import.meta.env.PROD
+
       import { initializeApp } from 'firebase/app'
       import { getAnalytics } from 'firebase/analytics'
-      import '@scripts/logger.js'
 
-      const soundPage = new Audio('/sounds/switch-tap.mp3')
-
-      const isMobile = navigator.userAgent.match(/Android|iPhone|iPad|iPod/i)
+      isProd && import('@scripts/logger.js')
 
       const firebaseConfig = {
         apiKey: 'AIzaSyAqPF5z2zeJCAXKmnAV6gfapspOK4joCEs',
@@ -216,79 +215,88 @@ const { options } = Astro.props
         measurementId: 'G-4QFJH1D53Q'
       }
 
-      const app = initializeApp(firebaseConfig)
-      getAnalytics(app)
+      if (isProd) {
+        const app = initializeApp(firebaseConfig)
+        getAnalytics(app)
 
-      function gtag() {
-        dataLayer.push(arguments)
-      }
-      ;(window.dataLayer = window.dataLayer || []), gtag('js', new Date())
-
-      window.addEventListener('load', async () => {
-        const reloadBtn = document.getElementById('reload')
-
-        function showUpdateFounded(registration) {
-          reloadBtn.classList.replace('opacity-0', 'opacity-100')
-
-          setTimeout(() => {
-            if (isMobile) {
-              reloadBtn.classList.replace('translate-y-20', '-translate-y-20')
-            } else {
-              reloadBtn.classList.replace('right-0', 'left-0')
-              reloadBtn.classList.replace('-translate-x-4', 'translate-x-8')
-              reloadBtn.classList.replace('translate-y-20', '-translate-y-12')
-            }
-          }, 500)
-
-          reloadBtn.addEventListener('click', () => {
-            if (localStorage.getItem('sounds_enabled') === 'true') {
-              soundPage.play()
-            }
-
-            if (
-              'vibrate' in navigator &&
-              localStorage.getItem('sounds_enabled') === 'false'
-            ) {
-              navigator.vibrate(80)
-            }
-
-            if (registration.waiting) {
-              registration.waiting.postMessage('SKIP_WAITING')
-            }
-          })
+        function gtag() {
+          dataLayer.push(arguments)
         }
+        ;(window.dataLayer = window.dataLayer || []), gtag('js', new Date())
 
-        const registration = await navigator.serviceWorker.register('/sw.js')
+        /**
+         * Service Worker script
+         */
 
-        if (registration.waiting) {
-          showUpdateFounded(registration)
-        }
+        const soundPage = new Audio('/sounds/switch-tap.mp3')
+        const isMobile = navigator.userAgent.match(/Android|iPhone|iPad|iPod/i)
 
-        registration.addEventListener('updatefound', () => {
-          if (registration.installing) {
-            registration.installing.addEventListener('statechange', () => {
+        window.addEventListener('load', async () => {
+          const reloadBtn = document.getElementById('reload')
+
+          function showUpdateFounded(registration) {
+            reloadBtn.classList.replace('opacity-0', 'opacity-100')
+
+            setTimeout(() => {
+              if (isMobile) {
+                reloadBtn.classList.replace('translate-y-20', '-translate-y-20')
+              } else {
+                reloadBtn.classList.replace('right-0', 'left-0')
+                reloadBtn.classList.replace('-translate-x-4', 'translate-x-8')
+                reloadBtn.classList.replace('translate-y-20', '-translate-y-12')
+              }
+            }, 500)
+
+            reloadBtn.addEventListener('click', () => {
+              if (localStorage.getItem('sounds_enabled') === 'true') {
+                soundPage.play()
+              }
+
+              if (
+                'vibrate' in navigator &&
+                localStorage.getItem('sounds_enabled') === 'false'
+              ) {
+                navigator.vibrate(80)
+              }
+
               if (registration.waiting) {
-                if (navigator.serviceWorker.controller) {
-                  showUpdateFounded(registration)
-                }
+                registration.waiting.postMessage('SKIP_WAITING')
               }
             })
           }
+
+          const registration = await navigator.serviceWorker.register('/sw.js')
+
+          if (registration.waiting) {
+            showUpdateFounded(registration)
+          }
+
+          registration.addEventListener('updatefound', () => {
+            if (registration.installing) {
+              registration.installing.addEventListener('statechange', () => {
+                if (registration.waiting) {
+                  if (navigator.serviceWorker.controller) {
+                    showUpdateFounded(registration)
+                  }
+                }
+              })
+            }
+          })
         })
-      })
 
-      /**
-       * Update PWA
-       */
+        /**
+         * Update PWA
+         */
 
-      let refreshing
+        let refreshing
 
-      navigator.serviceWorker.addEventListener('controllerchange', () => {
-        if (!refreshing) {
-          window.location.reload()
-          refreshing = true
-        }
-      })
+        navigator.serviceWorker.addEventListener('controllerchange', () => {
+          if (!refreshing) {
+            window.location.reload()
+            refreshing = true
+          }
+        })
+      }
     </script>
   </body>
 </html>
