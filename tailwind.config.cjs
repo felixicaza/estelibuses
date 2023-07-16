@@ -1,6 +1,10 @@
 module.exports = {
   darkMode: 'class',
-  content: ['./src/**/*.{astro,js,jsx}', './src/data/*.json'],
+  content: [
+    './src/**/*.{astro,js,jsx}',
+    './src/data/*.json',
+    './node_modules/flowbite/**/*.js'
+  ],
   theme: {
     screens: {
       us: '375px',
@@ -15,6 +19,7 @@ module.exports = {
   // Add custom plugin for suport media any-hover
   // See: https://github.com/tailwindlabs/tailwindcss/pull/7939#issuecomment-1079387869
   plugins: [
+    require('flowbite/plugin'),
     function ({ addVariant }) {
       addVariant('any-hover', '@media (any-hover: hover) { &:hover }')
       addVariant(
