@@ -10,7 +10,7 @@
           },
           {
             "key": "Content-Security-Policy",
-            "value": "default-src 'self'; script-src 'self' 'unsafe-inline' https://www.google.com https://www.googletagmanager.com https://www.gstatic.com https://pagead2.googlesyndication.com/ https://partner.googleadservices.com/ https://adservice.google.com.ni/ https://tpc.googlesyndication.com/ https://adservice.google.com/ https://storage.googleapis.com/; style-src 'self' data: 'unsafe-inline'; img-src 'self' data: https://www.google.com.ni https://www.googletagmanager.com https://pagead2.googlesyndication.com/ https://res.cloudinary.com/; font-src 'self'; frame-ancestors 'none'; base-uri 'none'; manifest-src 'self'; frame-src https://www.google.com https://googleads.g.doubleclick.net/ https://tpc.googlesyndication.com/; connect-src 'self' https://www.google-analytics.com https://analytics.google.com https://stats.g.doubleclick.net https://www.google.com.ni *; prefetch-src 'self'; worker-src 'self'; media-src 'self' https://lfhh.radioca.st/"
+            "value": "default-src 'self'; script-src 'self' 'unsafe-inline' https://www.google.com https://www.googletagmanager.com https://www.gstatic.com https://storage.googleapis.com/; style-src 'self' data: 'unsafe-inline'; img-src 'self' data: https://www.google.com.ni https://www.googletagmanager.com https://res.cloudinary.com/; font-src 'self'; frame-ancestors 'none'; base-uri 'none'; manifest-src 'self'; frame-src https://www.google.com; connect-src 'self' https://www.google-analytics.com https://analytics.google.com https://www.google.com.ni; worker-src 'self'; media-src 'self' https://lfhh.radioca.st/"
           },
           {
             "key": "Referrer-Policy",
