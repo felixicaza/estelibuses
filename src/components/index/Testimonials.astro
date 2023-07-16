@@ -1,12 +1,5 @@
 ---
 import testimonials from '@data/testimonials.json'
-
-/**
- * Random sort testimonials on every build
- * */
-// const randomSortTestimonials = testimonials.sort(() => 0.5 - Math.random())
-
-const testimonialsLength = testimonials.length
 ---
 
 <article class="bg-[#FFFDF9] py-10 dark:bg-[#2D231B] sm:py-12">
@@ -15,55 +8,103 @@ const testimonialsLength = testimonials.length
       <h2 class="text-center">Los Estelianos confían en Estelí Buses</h2>
     </section>
     <article
-      class="users-comments scroll-snap-slider mx-auto grid snap-x snap-mandatory items-start gap-4 overflow-x-scroll scroll-smooth px-4 pb-4 sm:gap-8"
+      id="controls-carousel"
+      class="mx-auto grid grid-cols-[40px,1fr,40px] items-center justify-center gap-2 sm:max-w-lg md:gap-8 xl:max-w-xl"
+      data-carousel="static"
     >
-      {
-        testimonials.map((testimonial) => (
-          <section class="comments scroll-snap-slide flex h-full snap-center snap-always flex-col items-center justify-start gap-y-2 rounded bg-white p-3 text-center shadow dark:bg-[#30251b]/50">
-            <div>
-              <section
-                class={`mx-auto h-max w-max rounded-full p-3 ${testimonial.bg_circle}`}
-              >
-                <svg
-                  class={`fill-current ${testimonial.color_icon}`}
-                  viewBox="0 0 24 24"
-                  width="45"
-                  height="45"
-                >
-                  <path
-                    d={
-                      testimonial.icon === 'woman'
-                        ? 'M13.75 13a1.25 1.25 0 1 1 2.5 0 1.25 1.25 0 0 1-2.5 0M22 12v10H2V12C2 6.5 6.5 2 12 2s10 4.5 10 10M4 12a8.01 8.01 0 0 0 16 0c0-.79-.12-1.55-.33-2.26A9.97 9.97 0 0 1 9.26 5.77a10.06 10.06 0 0 1-5.21 5.37C4 11.42 4 11.71 4 12m5 2.25a1.25 1.25 0 1 0 0-2.5 1.25 1.25 0 0 0 0 2.5Z'
-                        : 'M9 11.75A1.25 1.25 0 0 0 7.75 13 1.25 1.25 0 0 0 9 14.25 1.25 1.25 0 0 0 10.25 13 1.25 1.25 0 0 0 9 11.75m6 0A1.25 1.25 0 0 0 13.75 13 1.25 1.25 0 0 0 15 14.25 1.25 1.25 0 0 0 16.25 13 1.25 1.25 0 0 0 15 11.75M12 2A10 10 0 0 0 2 12a10 10 0 0 0 10 10 10 10 0 0 0 10-10A10 10 0 0 0 12 2m0 18c-4.41 0-8-3.59-8-8 0-.29 0-.58.05-.86a10.06 10.06 0 0 0 5.21-5.37 9.97 9.97 0 0 0 10.41 3.97A7.97 7.97 0 0 1 12 20Z'
-                    }
-                  />
-                </svg>
+      <!-- Slider Control Prev -->
+      <button
+        id="carousel-prev"
+        type="button"
+        class="cursor-pointer rounded-full bg-white shadow transition-colors focus:outline-none focus:ring-4 focus:ring-orange-100 active:bg-orange-50 any-hover:bg-orange-50 dark:bg-[#35291e] dark:focus:ring-[#4e3925] active:dark:bg-[#3f3022] any-hover:dark:bg-[#3f3022]"
+        data-carousel-prev
+      >
+        <span class="inline-flex h-10 w-10 items-center justify-center">
+          <svg
+            class="h-4 w-4 text-orange-400 dark:text-orange-100"
+            aria-hidden="true"
+            fill="none"
+            viewBox="0 0 6 10"
+          >
+            <path
+              stroke="currentColor"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              stroke-width="2"
+              d="M5 1 1 5l4 4"></path>
+          </svg>
+          <span class="sr-only">Previous</span>
+        </span>
+      </button>
+
+      <!-- Carousel wrapper -->
+      <div class="relative h-[380px] overflow-x-hidden md:h-[290px]">
+        {
+          testimonials.map((testimonial, index) => (
+            <div
+              id={`carousel-item-${index}`}
+              class="top-1/2 !z-0 hidden h-max -translate-y-1/2 px-1 duration-700 ease-in-out"
+              data-carousel-item
+            >
+              <section class="flex flex-col items-center justify-start gap-y-2 rounded bg-white p-3 text-center shadow dark:bg-[#35291e]">
+                <div>
+                  <section
+                    class={`mx-auto w-max rounded-full p-3 ${testimonial.bg_circle}`}
+                  >
+                    <svg
+                      class={`fill-current ${testimonial.color_icon}`}
+                      viewBox="0 0 24 24"
+                      width="45"
+                      height="45"
+                    >
+                      <path
+                        d={
+                          testimonial.icon === 'woman'
+                            ? 'M13.75 13a1.25 1.25 0 1 1 2.5 0 1.25 1.25 0 0 1-2.5 0M22 12v10H2V12C2 6.5 6.5 2 12 2s10 4.5 10 10M4 12a8.01 8.01 0 0 0 16 0c0-.79-.12-1.55-.33-2.26A9.97 9.97 0 0 1 9.26 5.77a10.06 10.06 0 0 1-5.21 5.37C4 11.42 4 11.71 4 12m5 2.25a1.25 1.25 0 1 0 0-2.5 1.25 1.25 0 0 0 0 2.5Z'
+                            : 'M9 11.75A1.25 1.25 0 0 0 7.75 13 1.25 1.25 0 0 0 9 14.25 1.25 1.25 0 0 0 10.25 13 1.25 1.25 0 0 0 9 11.75m6 0A1.25 1.25 0 0 0 13.75 13 1.25 1.25 0 0 0 15 14.25 1.25 1.25 0 0 0 16.25 13 1.25 1.25 0 0 0 15 11.75M12 2A10 10 0 0 0 2 12a10 10 0 0 0 10 10 10 10 0 0 0 10-10A10 10 0 0 0 12 2m0 18c-4.41 0-8-3.59-8-8 0-.29 0-.58.05-.86a10.06 10.06 0 0 0 5.21-5.37 9.97 9.97 0 0 0 10.41 3.97A7.97 7.97 0 0 1 12 20Z'
+                        }
+                      />
+                    </svg>
+                  </section>
+                </div>
+                <div class="space-y-2">
+                  <p class="font-semibold">{testimonial.name}</p>
+                  <p class="!text-base">{testimonial.comment}</p>
+                </div>
               </section>
             </div>
-            <div class="space-y-2">
-              <p class="font-semibold">{testimonial.name}</p>
-              <p
-                class:list={[
-                  '!text-base',
-                  { 'large-comments': testimonial.large }
-                ]}
-              >
-                {testimonial.comment}
-              </p>
-              {testimonial.large && (
-                <input
-                  class="expand-comments block cursor-pointer appearance-none whitespace-nowrap pl-2 text-left text-orange-500 active:text-orange-600 any-hover:text-orange-600"
-                  type="checkbox"
-                  aria-label="Leer más"
-                />
-              )}
-            </div>
-          </section>
-        ))
-      }
+          ))
+        }
+      </div>
+
+      <!-- Slider control Next -->
+      <button
+        id="carousel-next"
+        type="button"
+        class="cursor-pointer rounded-full bg-white shadow transition-colors focus:outline-none focus:ring-4 focus:ring-orange-100 active:bg-orange-50 any-hover:bg-orange-50 dark:bg-[#35291e] dark:focus:ring-[#4e3925] active:dark:bg-[#3f3022] any-hover:dark:bg-[#3f3022]"
+        data-carousel-next
+      >
+        <span class="inline-flex h-10 w-10 items-center justify-center">
+          <svg
+            class="h-4 w-4 text-orange-400 dark:text-orange-100"
+            aria-hidden="true"
+            xmlns="http://www.w3.org/2000/svg"
+            fill="none"
+            viewBox="0 0 6 10"
+          >
+            <path
+              stroke="currentColor"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              stroke-width="2"
+              d="m1 9 4-4-4-4"></path>
+          </svg>
+          <span class="sr-only">Next</span>
+        </span>
+      </button>
     </article>
     <section class="mt-4">
-      <p class="text-right !text-sm">
+      <p class="text-center !text-sm">
         ¿Quiéres aparecer acá?
         <a
           href="https://forms.gle/sYKj4pqKRaC5s4LL7"
@@ -86,78 +127,21 @@ const testimonialsLength = testimonials.length
   </div>
 </article>
 
-<style define:vars={{ items: testimonialsLength }}>
-  .users-comments {
-    grid-template-columns: repeat(var(--items), 16rem);
-  }
-
-  .large-comments {
-    max-height: 96px;
-    overflow: hidden;
-    position: relative;
-    transition: max-height 300ms ease;
-  }
-
-  .large-comments:has(+ .expand-comments:not(:checked))::before {
-    content: '';
-    position: absolute;
-    height: 40px;
-    width: 100%;
-    bottom: 0;
-    left: 0;
-    pointer-events: none;
-    background: linear-gradient(to bottom, transparent, white);
-  }
-
-  html.dark .large-comments:has(+ .expand-comments:not(:checked))::before {
-    background: linear-gradient(to bottom, transparent, #2d231b);
-  }
-
-  .large-comments:has(+ .expand-comments:checked) {
-    max-height: 500px;
-  }
-
-  .expand-comments::before {
-    content: 'Leer más';
-  }
-
-  .expand-comments:checked::before {
-    content: 'Leer menos';
-  }
-
-  @media (any-pointer: coarse) {
-    .users-comments {
-      scrollbar-width: none;
-    }
-
-    .users-comments::-webkit-scrollbar {
-      display: none;
-    }
-  }
-
-  @media (min-width: 768px) {
-    .users-comments {
-      grid-template-columns: repeat(var(--items), 20rem);
-    }
-
-    .large-comments {
-      max-height: 72px;
-    }
-  }
-
-  .users-comments::-webkit-scrollbar {
-    border-radius: 4px;
-  }
-</style>
-
 <script>
-  import { ScrollSnapSlider } from '@scripts/ScrollSnapSlider.js'
-  import { ScrollSnapAutoplay } from '@scripts/ScrollSnapAutoplay.js'
-  import { ScrollSnapDraggable } from '@scripts/ScrollSnapDraggable.js'
+  import { Carousel } from 'flowbite'
+  import type { CarouselItem, CarouselInterface } from 'flowbite'
+  import testimonials from '@data/testimonials.json'
 
-  const sliderElement = document.querySelector('.scroll-snap-slider')
-  new ScrollSnapSlider(sliderElement, true, [
-    new ScrollSnapAutoplay(4000),
-    new ScrollSnapDraggable()
-  ])
+  const items: CarouselItem[] = testimonials.map((_, index) => ({
+    position: index,
+    el: document.querySelector(`#carousel-item-${index}`)
+  }))
+
+  const options = {
+    defaultPosition: 6,
+    interval: 5500
+  }
+
+  const carousel: CarouselInterface = new Carousel(items, options)
+  carousel.cycle()
 </script>
