@@ -92,6 +92,42 @@ const { options } = Astro.props
     />
     <link href="/manifest.json" rel="manifest" />
 
+    <script is:inline>
+      const themeColor = document.querySelector('meta[name="theme-color"]')
+
+      if (getPreference()) {
+        if (window.location.pathname.includes('terminal-norte-esteli')) {
+          themeColor.setAttribute('content', '#1b664b')
+        }
+
+        if (window.location.pathname.includes('terminal-sur-esteli')) {
+          themeColor.setAttribute('content', '#8a670f')
+        }
+
+        if (
+          !window.location.pathname.includes('terminal-norte-esteli') &&
+          !window.location.pathname.includes('terminal-sur-esteli')
+        ) {
+          themeColor.setAttribute('content', '#ad6830')
+        }
+      } else {
+        if (window.location.pathname.includes('terminal-norte-esteli')) {
+          themeColor.setAttribute('content', '#34d399')
+        }
+
+        if (window.location.pathname.includes('terminal-sur-esteli')) {
+          themeColor.setAttribute('content', '#fbbf24')
+        }
+
+        if (
+          !window.location.pathname.includes('terminal-norte-esteli') &&
+          !window.location.pathname.includes('terminal-sur-esteli')
+        ) {
+          themeColor.setAttribute('content', '#fb923c')
+        }
+      }
+    </script>
+
     <meta
       name="apple-mobile-web-app-status-bar-style"
       content="black-translucent"

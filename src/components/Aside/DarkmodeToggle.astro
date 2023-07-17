@@ -24,6 +24,9 @@ import Switch from '@components/Switch.astro'
   const switchScheme = document.querySelector(
     '#switch-scheme'
   ) as HTMLInputElement
+  const themeColor = document.querySelector(
+    'meta[name="theme-color"]'
+  ) as HTMLMetaElement
 
   const isColorSchemeDark = window.matchMedia('(prefers-color-scheme: dark)')
   let darkModeState: boolean
@@ -33,6 +36,38 @@ import Switch from '@components/Switch.astro'
   function toggleDarkMode(state: boolean) {
     document.documentElement.classList.toggle('dark', state)
     darkModeState = state
+
+    if (state) {
+      if (window.location.pathname.includes('terminal-norte-esteli')) {
+        themeColor.setAttribute('content', '#1b664b')
+      }
+
+      if (window.location.pathname.includes('terminal-sur-esteli')) {
+        themeColor.setAttribute('content', '#8a670f')
+      }
+
+      if (
+        !window.location.pathname.includes('terminal-norte-esteli') &&
+        !window.location.pathname.includes('terminal-sur-esteli')
+      ) {
+        themeColor.setAttribute('content', '#ad6830')
+      }
+    } else {
+      if (window.location.pathname.includes('terminal-norte-esteli')) {
+        themeColor.setAttribute('content', '#34d399')
+      }
+
+      if (window.location.pathname.includes('terminal-sur-esteli')) {
+        themeColor.setAttribute('content', '#fbbf24')
+      }
+
+      if (
+        !window.location.pathname.includes('terminal-norte-esteli') &&
+        !window.location.pathname.includes('terminal-sur-esteli')
+      ) {
+        themeColor.setAttribute('content', '#fb923c')
+      }
+    }
   }
 
   function setDarkModeLocalStorage(state: string) {
