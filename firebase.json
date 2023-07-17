@@ -10,7 +10,7 @@
           },
           {
             "key": "Content-Security-Policy",
-            "value": "default-src 'self'; script-src 'self' 'unsafe-inline' https://www.google.com https://www.googletagmanager.com https://www.gstatic.com https://storage.googleapis.com/; style-src 'self' data: 'unsafe-inline'; img-src 'self' data: https://www.google.com.ni https://www.googletagmanager.com https://res.cloudinary.com/; font-src 'self'; frame-ancestors 'none'; base-uri 'none'; manifest-src 'self'; frame-src https://www.google.com; connect-src 'self' https://www.google-analytics.com https://analytics.google.com https://www.google.com.ni https://firebase.googleapis.com/; worker-src 'self'; media-src 'self' https://lfhh.radioca.st/"
+            "value": "default-src 'self'; script-src 'self' 'unsafe-inline' https://www.google.com https://www.googletagmanager.com https://www.gstatic.com https://storage.googleapis.com/; style-src 'self' data: 'unsafe-inline'; img-src 'self' data: https://www.google.com.ni https://www.googletagmanager.com https://res.cloudinary.com/; font-src 'self'; frame-ancestors 'none'; base-uri 'none'; manifest-src 'self'; frame-src https://www.google.com; connect-src 'self' https://www.google-analytics.com https://analytics.google.com https://www.google.com.ni https://firebase.googleapis.com/ https://firebaseinstallations.googleapis.com/; worker-src 'self'; media-src 'self' https://lfhh.radioca.st/"
           },
           {
             "key": "Referrer-Policy",
