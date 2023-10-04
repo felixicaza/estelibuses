@@ -6,7 +6,7 @@ import prefetch from '@astrojs/prefetch'
 import { astroImageTools } from 'astro-imagetools'
 import critters from 'astro-critters'
 import sitemap from 'astro-sitemap'
-import compress from 'astro-compress'
+import Compress from 'astro-compress'
 import compressor from 'astro-compressor'
 
 const website = 'https://estelibuses.web.app'
@@ -15,14 +15,14 @@ const website = 'https://estelibuses.web.app'
 export default defineConfig({
   site: website,
   trailingSlash: 'never',
+  scopedStyleStrategy: 'where',
+  compressHTML: false,
   server: {
     host: true
   },
   integrations: [
     tailwind({
-      config: {
-        applyBaseStyles: false
-      }
+      applyBaseStyles: false
     }),
     react(),
     prefetch(),
@@ -50,8 +50,8 @@ export default defineConfig({
         return item
       }
     }),
-    compress({
-      html: {
+    Compress({
+      HTML: {
         collapseBooleanAttributes: true,
         maxLineLength: 0,
         removeAttributeQuotes: false,
@@ -61,7 +61,7 @@ export default defineConfig({
         removeRedundantAttributes: true,
         useShortDoctype: true
       },
-      js: {
+      JavaScript: {
         compress: {
           ecma: 2015
         },
@@ -72,8 +72,8 @@ export default defineConfig({
         ecma: 2015,
         module: true
       },
-      img: false,
-      svg: false
+      Image: false,
+      SVG: false
     }),
     compressor()
   ]
