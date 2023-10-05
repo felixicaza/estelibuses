@@ -21,7 +21,7 @@ import ModalTakePic from '@components/ModalTakePic.astro'
 export async function getStaticPaths() {
   const mergeDataStations = [northernStation, southernStation]
 
-  return mergeDataStations.map((info) =>
+  return mergeDataStations.flatMap((info) =>
     info.cities.map((city) => ({
       params: { horarios: info.slug, horario: city.slug },
       props: {
@@ -557,40 +557,40 @@ const southernStationFilter = southernStation.cities.filter((city) =>
 </style>
 
 <script define:vars={{ title, currentURL }}>
-  /**
-   * Sound page on click
-   */
+/**
+ * Sound page on click
+ */
 
-  const soundPage = new Audio('/sounds/switch-tap.mp3')
+const soundPage = new Audio('/sounds/switch-tap.mp3')
 
-  /**
-   * Share button
-   */
+/**
+ * Share button
+ */
 
-  const shareBtn = document.getElementById('share-city')
+const shareBtn = document.getElementById('share-city')
 
-  const shareData = {
-    title: 'Estelí Buses',
-    text: `¡Conoce todos los ${title}!`,
-    url: `${currentURL}?utm_source=sharebtncity&utm_medium=webapp&utm_campaign=social_share_city&utm_content=header`
-  }
+const shareData = {
+  title: 'Estelí Buses',
+  text: `¡Conoce todos los ${title}!`,
+  url: `${currentURL}?utm_source=sharebtncity&utm_medium=webapp&utm_campaign=social_share_city&utm_content=header`
+}
 
-  if (navigator.share) {
-    shareBtn.classList.remove('hidden')
+if (navigator.share) {
+  shareBtn.classList.remove('hidden')
 
-    shareBtn.addEventListener('click', () => {
-      if (localStorage.getItem('sounds_enabled') === 'true') {
-        soundPage.play()
-      }
+  shareBtn.addEventListener('click', () => {
+    if (localStorage.getItem('sounds_enabled') === 'true') {
+      soundPage.play()
+    }
 
-      if (
-        'vibrate' in navigator &&
-        localStorage.getItem('sounds_enabled') === 'false'
-      ) {
-        navigator.vibrate(80)
-      }
+    if (
+      'vibrate' in navigator &&
+      localStorage.getItem('sounds_enabled') === 'false'
+    ) {
+      navigator.vibrate(80)
+    }
 
-      navigator.share(shareData)
-    })
-  }
+    navigator.share(shareData)
+  })
+}
 </script>
