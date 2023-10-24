@@ -1,5 +1,12 @@
 [
   {
+    "name": "Steven Rubio",
+    "comment": "Esta plataforma es verdaderamente excepcional. La presentación elegante de horarios y tiempos de llegada demuestra precisión y fiabilidad. Su interfaz intuitiva y fácil navegación la convierten en una herramienta indispensable para viajeros. ¡Increíblemente útil!",
+    "bg_circle": "bg-gray-400 dark:bg-white/40",
+    "color_icon": "text-white",
+    "icon": "man"
+  },
+  {
     "name": "Daniel Ortíz",
     "comment": "Me encanta la aplicación es muy útil y muy fácil de usar.",
     "bg_circle": "bg-green-100",
