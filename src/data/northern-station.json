@@ -981,14 +981,14 @@
           "trip_duration": "3 horas"
         },
         {
-          "transport_pic": "",
+          "transport_pic": "/src/img/terminal-norte/transporte-davila.jpg",
           "departure_time": "05:15",
           "waiting_area_departure": "",
           "return_time": "",
           "waiting_area_return": "",
           "transport_type": "Ruteado",
           "transport_name": "Dávila",
-          "license_plate": "",
+          "license_plate": "ES 133",
           "transport_phone": "",
           "transport_price": "",
           "trip_duration": "3 horas"
