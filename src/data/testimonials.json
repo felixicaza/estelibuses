@@ -21,6 +21,13 @@
     "icon": "woman"
   },
   {
+    "name": "Yadira Castillo",
+    "comment": "Excelente, ya que no había un lugar dónde encontrar esa información.",
+    "bg_circle": "bg-lime-100",
+    "color_icon": "text-lime-500",
+    "icon": "woman"
+  },
+  {
     "name": "Marelis",
     "comment": "Excelente plataforma, me ayuda muchísimo a organizar los viajes 🫶🏼.",
     "bg_circle": "bg-pink-100",
@@ -28,25 +35,11 @@
     "icon": "woman"
   },
   {
-    "name": "Alisson Machado",
-    "comment": "Me resultó una grata sorpresa encontrar una aplicación web dónde se encuentran los horarios de la terminales. El formato de la aplicación web es intuitivo, se ve precioso y es agradable ver el detalle de la radio incluída. Mis felitaciones al creador de esta plataforma.",
-    "bg_circle": "bg-purple-100",
-    "color_icon": "text-purple-500",
-    "icon": "woman"
-  },
-  {
-    "name": "Gissell Altamirano",
-    "comment": "Me encanta la idea de esta app, me ayuda mucho a organizar mi tiempo a la hora de viajar, ojalá nunca la quiten y la sigan actualizando, sería mega genial, que también pusieran contactos de cada autobús 😊.",
-    "bg_circle": "bg-blue-100",
-    "color_icon": "text-blue-500",
-    "icon": "woman"
-  },
-  {
-    "name": "Daysi",
-    "comment": "Está app me ha sido de gran utilidad para poder organizar mi hora de salida y llegar a tiempo a mis destinos!",
-    "bg_circle": "bg-[#fde5ef]",
-    "color_icon": "text-[#f17aaa]",
-    "icon": "woman"
+    "name": "Steven Rodríguez",
+    "comment": "Gracias a esta iniciativa ahora es muy fácil conocer los horarios.",
+    "bg_circle": "bg-cyan-100",
+    "color_icon": "text-cyan-500",
+    "icon": "man"
   },
   {
     "name": "Marcos Blandón",
@@ -70,6 +63,13 @@
     "icon": "man"
   },
   {
+    "name": "Alisson Machado",
+    "comment": "Me resultó una grata sorpresa encontrar una aplicación web dónde se encuentran los horarios de la terminales. El formato de la aplicación web es intuitivo, se ve precioso y es agradable ver el detalle de la radio incluída. Mis felitaciones al creador de esta plataforma.",
+    "bg_circle": "bg-purple-100",
+    "color_icon": "text-purple-500",
+    "icon": "woman"
+  },
+  {
     "name": "Gerald Hernández",
     "comment": "Esta plataforma es excelente porque así podemos organizar mejor nuestro tiempo.",
     "bg_circle": "bg-indigo-100",
@@ -84,10 +84,10 @@
     "icon": "woman"
   },
   {
-    "name": "Yadira Castillo",
-    "comment": "Excelente, ya que no había un lugar dónde encontrar esa información.",
-    "bg_circle": "bg-lime-100",
-    "color_icon": "text-lime-500",
+    "name": "Daysi",
+    "comment": "Está app me ha sido de gran utilidad para poder organizar mi hora de salida y llegar a tiempo a mis destinos!",
+    "bg_circle": "bg-[#fde5ef]",
+    "color_icon": "text-[#f17aaa]",
     "icon": "woman"
   },
   {
@@ -98,11 +98,11 @@
     "icon": "man"
   },
   {
-    "name": "Steven Rodríguez",
-    "comment": "Gracias a esta iniciativa ahora es muy fácil conocer los horarios.",
-    "bg_circle": "bg-cyan-100",
-    "color_icon": "text-cyan-500",
-    "icon": "man"
+    "name": "Gissell Altamirano",
+    "comment": "Me encanta la idea de esta app, me ayuda mucho a organizar mi tiempo a la hora de viajar, ojalá nunca la quiten y la sigan actualizando, sería mega genial, que también pusieran contactos de cada autobús 😊.",
+    "bg_circle": "bg-blue-100",
+    "color_icon": "text-blue-500",
+    "icon": "woman"
   },
   {
     "name": "Carlos Aguirre",

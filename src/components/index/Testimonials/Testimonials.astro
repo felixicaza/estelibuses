@@ -1,0 +1,113 @@
+---
+import testimonials from '@data/testimonials.json'
+
+import TestimonialsComments from './TestimonialsComments.astro'
+
+const firstMiddleTestimonials = testimonials.slice(
+  0,
+  Math.ceil(testimonials.length / 2)
+)
+const lastMiddleTestimonials = testimonials.slice(
+  Math.ceil(testimonials.length / 2)
+)
+---
+
+<article class="bg-[#FFFDF9] py-10 dark:bg-[#2D231B] sm:py-12">
+  <div class="container mx-auto px-4">
+    <section class="mb-10 space-y-6 lg:mb-16 lg:text-center">
+      <h2 class="text-center">Los Estelianos confían en Estelí Buses</h2>
+    </section>
+    <article
+      class="users-comments-container space-y-8 overflow-hidden px-4 pb-4"
+    >
+      <div class="users-comments flex w-max gap-8">
+        {
+          firstMiddleTestimonials.map((comments) => (
+            <TestimonialsComments comments={comments} />
+          ))
+        }
+      </div>
+      <div class="users-comments flex w-max gap-8" data-direction="right">
+        {
+          lastMiddleTestimonials.map((comments) => (
+            <TestimonialsComments comments={comments} />
+          ))
+        }
+      </div>
+    </article>
+    <section class="mt-4">
+      <p class="text-right !text-sm">
+        ¿Quiéres aparecer acá?
+        <a
+          href="https://forms.gle/sYKj4pqKRaC5s4LL7"
+          rel="nofollow"
+          target="_blank"
+          >Llena este formulario
+          <svg
+            class="-mt-[0.125rem] inline fill-current"
+            viewBox="0 0 24 24"
+            width="12"
+            height="12"
+          >
+            <path
+              d="M14 3v2h3.6l-9.8 9.8 1.4 1.4L19 6.4V10h2V3m-2 16H5V5h7V3H5a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2v-7h-2v7Z"
+            ></path>
+          </svg>
+        </a>.
+      </p>
+    </section>
+  </div>
+</article>
+
+<style>
+  .users-comments-container {
+    mask: linear-gradient(
+      90deg,
+      transparent,
+      white 20%,
+      white 80%,
+      transparent
+    );
+  }
+
+  .users-comments {
+    animation: scroll 80s var(--animation-direction, forwards) linear infinite
+      2s;
+  }
+
+  .users-comments[data-direction='right'] {
+    --animation-direction: reverse;
+  }
+
+  @media (any-hover: hover) {
+    .users-comments:hover {
+      animation-play-state: paused;
+    }
+  }
+
+  @keyframes scroll {
+    to {
+      transform: translateX(calc(-50% - 0.5rem));
+    }
+  }
+</style>
+
+<script>
+  if (!window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+    addAnimation()
+  }
+
+  function addAnimation() {
+    const userComments = document.querySelectorAll('.users-comments')
+
+    userComments.forEach((userComment) => {
+      const commentsContent = Array.from(userComment.children)
+
+      commentsContent.forEach((item) => {
+        const duplicatedItem = item.cloneNode(true) as HTMLDivElement
+        duplicatedItem.setAttribute('aria-hidden', 'true')
+        userComment.appendChild(duplicatedItem)
+      })
+    })
+  }
+</script>
