@@ -4,12 +4,12 @@
 >
   <a
     class:list={[
-      'flex flex-col items-center p-2 border-b-4',
+      'flex flex-col items-center border-b-4 p-2',
       {
-        'text-white border-white': Astro.url.pathname === '/'
+        'border-white text-white': Astro.url.pathname === '/'
       },
       {
-        'text-orange-900 dark:text-orange-800 active:text-white any-hover:text-white border-transparent transition-colors':
+        'border-transparent text-orange-900 transition-colors active:text-white any-hover:text-white dark:text-orange-800':
           Astro.url.pathname !== '/'
       }
     ]}
@@ -23,17 +23,17 @@
   </a>
   <a
     class:list={[
-      'flex flex-col items-center p-2 border-b-4',
+      'flex flex-col items-center border-b-4 p-2',
       {
         /**
          * Use includes() method to get all descending paths
          */
-        'text-white border-white': Astro.url.pathname.includes(
+        'border-white text-white': Astro.url.pathname.includes(
           'terminal-norte-esteli'
         )
       },
       {
-        'text-orange-900 dark:text-orange-800 active:text-white any-hover:text-white border-transparent transition-colors':
+        'border-transparent text-orange-900 transition-colors active:text-white any-hover:text-white dark:text-orange-800':
           !Astro.url.pathname.includes('terminal-norte-esteli')
       }
     ]}
@@ -51,17 +51,17 @@
   </a>
   <a
     class:list={[
-      'flex flex-col items-center p-2 border-b-4',
+      'flex flex-col items-center border-b-4 p-2',
       {
         /**
          * Use includes() method to get all descending paths
          */
-        'text-white border-white': Astro.url.pathname.includes(
+        'border-white text-white': Astro.url.pathname.includes(
           'terminal-sur-esteli'
         )
       },
       {
-        'text-orange-900 dark:text-orange-800 active:text-white any-hover:text-white border-transparent transition-colors':
+        'border-transparent text-orange-900 transition-colors active:text-white any-hover:text-white dark:text-orange-800':
           !Astro.url.pathname.includes('terminal-sur-esteli')
       }
     ]}
@@ -79,14 +79,14 @@
   </a>
   <a
     class:list={[
-      'flex flex-col items-center p-2 border-b-4',
+      'flex flex-col items-center border-b-4 p-2',
       {
-        'text-white border-white': Astro.url.pathname.includes(
+        'border-white text-white': Astro.url.pathname.includes(
           'acerca-de-estelibuses'
         )
       },
       {
-        'text-orange-900 dark:text-orange-800 active:text-white any-hover:text-white border-transparent transition-colors':
+        'border-transparent text-orange-900 transition-colors active:text-white any-hover:text-white dark:text-orange-800':
           !Astro.url.pathname.includes('acerca-de-estelibuses')
       }
     ]}

@@ -31,7 +31,7 @@ import { Picture } from 'astro-imagetools/components'
       <li>
         <a
           class:list={[
-            'px-6 inline-flex items-center justify-center py-2.5 space-x-1',
+            'inline-flex items-center justify-center space-x-1 px-6 py-2.5',
             {
               /**
                * Use includes() method to get all descending paths
@@ -41,7 +41,7 @@ import { Picture } from 'astro-imagetools/components'
               )
             },
             {
-              'any-hover:text-emerald-500 transition-colors':
+              'transition-colors any-hover:text-emerald-500':
                 !Astro.url.pathname.includes('terminal-norte-esteli')
             }
           ]}
@@ -66,7 +66,7 @@ import { Picture } from 'astro-imagetools/components'
       <li>
         <a
           class:list={[
-            'px-6 inline-flex items-center justify-center py-2.5 space-x-1',
+            'inline-flex items-center justify-center space-x-1 px-6 py-2.5',
             {
               /**
                * Use includes() method to get all descending paths
@@ -76,7 +76,7 @@ import { Picture } from 'astro-imagetools/components'
               )
             },
             {
-              'any-hover:text-amber-500 transition-colors':
+              'transition-colors any-hover:text-amber-500':
                 !Astro.url.pathname.includes('terminal-sur-esteli')
             }
           ]}
@@ -101,12 +101,12 @@ import { Picture } from 'astro-imagetools/components'
       <li>
         <a
           class:list={[
-            'px-6 inline-flex items-center justify-center py-2.5 space-x-1',
+            'inline-flex items-center justify-center space-x-1 px-6 py-2.5',
             {
               'text-orange-500': Astro.url.pathname === '/acerca-de-estelibuses'
             },
             {
-              'any-hover:text-orange-500 transition-colors':
+              'transition-colors any-hover:text-orange-500':
                 Astro.url.pathname !== '/acerca-de-estelibuses'
             }
           ]}
@@ -130,12 +130,12 @@ import { Picture } from 'astro-imagetools/components'
       <li>
         <a
           class:list={[
-            'px-6 inline-flex items-center justify-center py-2.5 space-x-1',
+            'inline-flex items-center justify-center space-x-1 px-6 py-2.5',
             {
               'text-orange-500': Astro.url.pathname === '/contacto'
             },
             {
-              'any-hover:text-orange-500 transition-colors':
+              'transition-colors any-hover:text-orange-500':
                 Astro.url.pathname !== '/contacto'
             }
           ]}
