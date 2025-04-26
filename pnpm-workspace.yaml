@@ -1,0 +1,6 @@
+onlyBuiltDependencies:
+   - esbuild
+   - mozjpeg
+   - pngquant-bin
+   - protobufjs
+   - sharp
