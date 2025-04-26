@@ -18,9 +18,9 @@
     "preview": "astro preview"
   },
   "simple-git-hooks": {
-    "pre-commit": "pnpm lint-staged"
+    "pre-commit": "nano-staged"
   },
-  "lint-staged": {
+  "nano-staged": {
     "./**/*.{js,mjs,cjs}": [
       "eslint --cache --fix --ext .js,.mjs,.cjs ./",
       "prettier --write \"./**/*.{js,mjs,cjs}\""
@@ -79,9 +79,9 @@
     "imagemin": "8.0.1",
     "imagemin-mozjpeg": "10.0.0",
     "imagemin-pngquant": "9.0.2",
-    "lint-staged": "15.1.0",
     "minify-json": "1.0.0",
     "move-file-cli": "3.0.0",
+    "nano-staged": "0.8.0",
     "postcss": "8.4.31",
     "postcss-cli": "10.1.0",
     "postcss-momentum-scrolling": "3.14.22",
