@@ -10,7 +10,7 @@
   },
   "type": "module",
   "scripts": {
-    "build": "astro build && pnpm compress && pnpm move-offline-page",
+    "build": "astro check && astro build && pnpm compress && pnpm move-offline-page",
     "compress": "node imagemin.js && pnpm minify-json dist/manifest.json",
     "dev": "astro dev",
     "move-offline-page": "pnpm move-file ./dist/offline/index.html ./dist/offline.html && rm -rf ./dist/offline/",
