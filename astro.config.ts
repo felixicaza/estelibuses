@@ -1,6 +1,7 @@
 import { defineConfig } from 'astro/config'
 
-import tailwind from '@astrojs/tailwind'
+import tailwindcss from "@tailwindcss/vite";
+
 import { astroImageTools } from 'astro-imagetools'
 import playformCompress from '@playform/compress'
 import playformInline from '@playform/inline'
@@ -20,10 +21,10 @@ export default defineConfig({
   server: {
     host: true
   },
+  vite: {
+    plugins: [tailwindcss()],
+  },
   integrations: [
-    tailwind({
-      applyBaseStyles: false
-    }),
     astroImageTools,
     playformInline(),
     sitemap({
