@@ -22,6 +22,9 @@ export default defineConfig({
     host: true
   },
   vite: {
+    css: {
+      transformer: "lightningcss",
+    },
     plugins: [tailwindcss()],
   },
   build: {
