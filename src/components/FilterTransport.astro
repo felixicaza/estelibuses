@@ -78,22 +78,33 @@ import '@styles/filter.css'
     </label>
   </form>
 </section>
+
 <style>
   svg .border {
-    @apply stroke-current;
+    stroke: currentColor;
   }
 
   svg .circle {
-    @apply fill-transparent;
+    fill: transparent;
   }
 
   input[type='radio']:checked + svg .border {
-    @apply stroke-orange-600 dark:stroke-orange-400;
+    stroke: var(--color-orange-600);
+
+    html.dark & {
+      stroke: var(--color-orange-400);
+    }
   }
+
   input[type='radio']:checked + svg .circle {
-    @apply fill-orange-600 dark:fill-orange-400;
+    fill: var(--color-orange-600);
+
+    html.dark & {
+      fill: var(--color-orange-400);
+    }
   }
 </style>
+
 <script>
   const $ = (el) => document.getElementById(el)
   const $$ = (el) => document.querySelectorAll(el)
