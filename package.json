@@ -17,25 +17,26 @@
     "preview": "astro preview"
   },
   "simple-git-hooks": {
-    "pre-commit": "pnpm nano-staged"
+    "pre-commit": "pnpm nano-staged",
+    "commit-msg": "pnpm commitlint --edit ${1}"
   },
   "nano-staged": {
     "*.{js,mjs,cjs}": [
       "eslint --cache --fix --ext .js,.mjs,.cjs ./",
-      "prettier --write \"./**/*.{js,mjs,cjs}\""
+      "prettier --write ./**/*.{js,mjs,cjs}"
     ],
     "*.astro": [
       "eslint --cache --ext .astro ./src/ --fix",
-      "prettier --write \"./src/**/*.astro\" --plugin-search-dir=."
+      "prettier --write ./src/**/*.astro --plugin-search-dir=."
     ],
     "*.{jsx,tsx}": [
       "eslint --cache --ext .jsx,.tsx ./src/ --fix",
-      "prettier --write \"./src/**/*.{jsx,tsx}\" --plugin-search-dir=."
+      "prettier --write ./src/**/*.{jsx,tsx} --plugin-search-dir=."
     ],
-    "*.css": "prettier --write \"./src/styles/*.css\"",
-    "*.json": "prettier --write \"./**/*.json\"",
-    "*.md": "prettier --write \"./**/*.md\"",
-    "*.{yaml,yml}": "prettier --write \"./**/*.{yaml,yml}\""
+    "*.css": "prettier --write ./src/styles/*.css",
+    "*.json": "prettier --write ./**/*.json",
+    "*.md": "prettier --write ./**/*.md",
+    "*.{yaml,yml}": "prettier --write ./**/*.{yaml,yml}"
   },
   "dependencies": {
     "@foobar404/wave": "2.0.4",
