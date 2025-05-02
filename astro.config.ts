@@ -24,6 +24,9 @@ export default defineConfig({
   vite: {
     plugins: [tailwindcss()],
   },
+  build: {
+    format: 'preserve',
+  },
   integrations: [
     astroImageTools,
     playformInline(),
