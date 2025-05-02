@@ -10,10 +10,9 @@
   },
   "type": "module",
   "scripts": {
-    "build": "astro check && astro build && pnpm compress && pnpm move-offline-page",
+    "build": "astro build && pnpm compress",
     "compress": "node imagemin.js && pnpm minify-json dist/manifest.json",
     "dev": "astro dev",
-    "move-offline-page": "pnpm move-file ./dist/offline/index.html ./dist/offline.html && rm -rf ./dist/offline/",
     "prepare": "simple-git-hooks",
     "preview": "astro preview"
   },
@@ -72,7 +71,6 @@
     "imagemin-mozjpeg": "10.0.0",
     "imagemin-pngquant": "9.0.2",
     "minify-json": "1.0.0",
-    "move-file-cli": "3.0.0",
     "nano-staged": "0.8.0",
     "postcss": "8.4.31",
     "postcss-cli": "10.1.0",
