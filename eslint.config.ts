@@ -8,6 +8,7 @@ import pluginJsonc from 'eslint-plugin-jsonc'
 import pluginPackageJson from 'eslint-plugin-package-json'
 import pluginYml from 'eslint-plugin-yml'
 import neostandard, { plugins, resolveIgnoresFromGitignore } from 'neostandard'
+import pluginReadableTailwind from 'eslint-plugin-readable-tailwind'
 
 export default defineConfig([
   globalIgnores(resolveIgnoresFromGitignore()),
@@ -37,6 +38,11 @@ export default defineConfig([
     }
   },
   {
+    plugins: {
+      'readable-tailwind': pluginReadableTailwind
+    }
+  },
+  {
     rules: {
       '@stylistic/brace-style': ['error', '1tbs', { allowSingleLine: true }],
       '@stylistic/arrow-parens': ['error', 'always'],
@@ -47,7 +53,19 @@ export default defineConfig([
       'astro/jsx-a11y/anchor-is-valid': 'warn',
 
       'yml/indent': ['error', 3, { indicatorValueIndent: 2 }],
-      'yml/quotes': ['error', { prefer: 'double' }]
+      'yml/quotes': ['error', { prefer: 'double' }],
+
+      'readable-tailwind/multiline': ['error', { printWidth: 100, preferSingleLine: true }],
+      'readable-tailwind/no-unnecessary-whitespace': 'error',
+      'readable-tailwind/sort-classes': ['error', { order: 'official' }],
+      'readable-tailwind/no-duplicate-classes': 'error'
+    }
+  },
+  {
+    settings: {
+      'readable-tailwind': {
+        entryPoint: 'src/styles/tailwind.css'
+      }
     }
   }
 ]) as Linter.Config
