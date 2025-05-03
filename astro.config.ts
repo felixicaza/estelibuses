@@ -14,7 +14,7 @@ const website = 'https://estelibuses.web.app'
 export default defineConfig({
   site: website,
   prefetch: {
-    prefetchAll: true,
+    defaultStrategy: 'viewport'
   },
   trailingSlash: 'never',
   compressHTML: false,
