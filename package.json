@@ -22,21 +22,14 @@
   },
   "nano-staged": {
     "*.{js,mjs,cjs}": [
-      "eslint --cache --fix --ext .js,.mjs,.cjs ./",
-      "prettier --write ./**/*.{js,mjs,cjs}"
+      "eslint --cache --fix --ext .js,.mjs,.cjs ./"
     ],
     "*.astro": [
-      "eslint --cache --ext .astro ./src/ --fix",
-      "prettier --write ./src/**/*.astro --plugin-search-dir=."
+      "eslint --cache --ext .astro ./src/ --fix"
     ],
     "*.{jsx,tsx}": [
-      "eslint --cache --ext .jsx,.tsx ./src/ --fix",
-      "prettier --write ./src/**/*.{jsx,tsx} --plugin-search-dir=."
-    ],
-    "*.css": "prettier --write ./src/styles/*.css",
-    "*.json": "prettier --write ./**/*.json",
-    "*.md": "prettier --write ./**/*.md",
-    "*.{yaml,yml}": "prettier --write ./**/*.{yaml,yml}"
+      "eslint --cache --ext .jsx,.tsx ./src/ --fix"
+    ]
   },
   "dependencies": {
     "@foobar404/wave": "2.0.4",
@@ -70,9 +63,6 @@
     "imagemin-pngquant": "9.0.2",
     "minify-json": "1.0.0",
     "nano-staged": "0.8.0",
-    "prettier": "3.0.3",
-    "prettier-plugin-astro": "0.12.1",
-    "prettier-plugin-tailwindcss": "0.5.7",
     "simple-git-hooks": "2.13.0",
     "typescript": "5.2.2"
   }
