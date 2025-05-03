@@ -1,6 +1,4 @@
 ---
-/* eslint-disable astro/jsx-a11y/label-has-associated-control */
-
 import northernStation from '@data/northern-station.json'
 import southernStation from '@data/southern-station.json'
 
@@ -15,50 +13,76 @@ const mergeDataStations = [northernStation, southernStation]
 ---
 
 <header
-  class="safe-top relative bg-gradient-to-t from-[#fff4eb] to-[#ffecdb] dark:from-[#2D231B] dark:to-[#2D231B]"
+  class={`
+    safe-top relative bg-gradient-to-t from-[#fff4eb] to-[#ffecdb]
+    dark:from-[#2D231B] dark:to-[#2D231B]
+  `}
 >
   <div class="container mx-auto px-4">
     <Navbar />
 
     <section
-      class="grid items-center gap-[4.5rem] pb-[6.25rem] pt-[4.5rem] xs:pb-36 lg:grid-cols-2 lg:gap-0 lg:pb-[8.5rem] lg:pt-28 xl:pb-44 2xl:pb-[13.5rem]"
+      class={`
+        grid items-center gap-[4.5rem] pt-[4.5rem] pb-[6.25rem]
+        xs:pb-36
+        lg:grid-cols-2 lg:gap-0 lg:pt-28 lg:pb-[8.5rem]
+        xl:pb-44
+        2xl:pb-[13.5rem]
+      `}
     >
       <div class="space-y-8">
         <article class="space-y-3">
           <Greetings />
 
-          <h1
-            class="mb-8 text-center md:mx-auto md:max-w-2xl lg:!mx-0 lg:text-left"
-          >
+          <h1 class="mb-8 text-center md:mx-auto md:max-w-2xl lg:!mx-0 lg:text-left">
             Horarios de las terminales de buses de Estelí
           </h1>
-          <p
-            class="text-center md:mx-auto md:max-w-2xl lg:!mx-0 lg:max-w-lg lg:text-left"
-          >
+          <p class="text-center md:mx-auto md:max-w-2xl lg:!mx-0 lg:max-w-lg lg:text-left">
             Conoce fácilmente todos los horarios de salida de los buses de las
             terminales de la ciudad de Estelí y ¡planea con exactitud la hora de
             tu próximo viaje!
           </p>
         </article>
-        <section class="mb-8 mt-8">
+        <section class="mt-8 mb-8">
           <form
             class="w-full space-y-3 transition-colors md:mx-auto md:max-w-md lg:!mx-0"
             id="main-search"
             autocomplete="on"
           >
             <label
-              class="block text-center text-xl font-semibold text-orange-400 dark:text-orange-50 lg:text-left"
-              for="cities-search">Busca tu ciudad de destino:</label
+              class={`
+                block text-center text-xl font-semibold text-orange-400
+                lg:text-left
+                dark:text-orange-50
+              `}
+              for="cities-search"
+            >Busca tu ciudad de destino:
+            </label
             >
             <section class="grid grid-cols-[1fr_100px]">
               <input
-                class="block w-full rounded rounded-r-none border border-orange-100 bg-white px-4 py-2.5 placeholder-orange-600 placeholder-opacity-50 caret-orange-500 !shadow-lg !shadow-orange-500/[.07] outline-none transition-colors duration-150 focus:ring-4 focus:ring-orange-400 focus:ring-opacity-50 dark:border-orange-400 dark:bg-[#292018] dark:placeholder-orange-100"
+                class={`
+                  placeholder-opacity-50
+                  focus:ring-opacity-50
+                  block w-full rounded rounded-r-none border border-orange-100 bg-white px-4 py-2.5
+                  placeholder-orange-600 caret-orange-500 !shadow-lg !shadow-orange-500/[.07]
+                  transition-colors duration-150 outline-none
+                  focus:ring-4 focus:ring-orange-400
+                  dark:border-orange-400 dark:bg-[#292018] dark:placeholder-orange-100
+                `}
                 id="cities-search"
                 type="search"
                 placeholder="Busca tu ciudad..."
               />
               <button
-                class="basis-30 inline-flex items-center justify-center rounded rounded-l-none bg-orange-400 px-5 py-2.5 font-semibold text-white !shadow-lg !shadow-orange-500/[.07] transition-colors active:outline-none active:ring-4 active:ring-orange-400 active:ring-opacity-75 any-hover:bg-orange-500"
+                class={`
+                  active:ring-opacity-75
+                  inline-flex basis-30 items-center justify-center rounded rounded-l-none
+                  bg-orange-400 px-5 py-2.5 font-semibold text-white !shadow-lg
+                  !shadow-orange-500/[.07] transition-colors
+                  active:ring-4 active:ring-orange-400 active:outline-none
+                  any-hover:bg-orange-500
+                `}
                 id="search-citities-button"
                 type="button"
                 aria-label="Buscar ciudades"
@@ -68,21 +92,34 @@ const mergeDataStations = [northernStation, southernStation]
                   <path
                     class="fill-current"
                     d="M505 442.7L405.3 343c-4.5-4.5-10.6-7-17-7H372c27.6-35.3 44-79.7 44-128C416 93.1 322.9 0 208 0S0 93.1 0 208s93.1 208 208 208c48.3 0 92.7-16.4 128-44v16.3c0 6.4 2.5 12.5 7 17l99.7 99.7c9.4 9.4 24.6 9.4 33.9 0l28.3-28.3c9.4-9.4 9.4-24.6.1-34zM208 336c-70.7 0-128-57.2-128-128 0-70.7 57.2-128 128-128 70.7 0 128 57.2 128 128 0 70.7-57.2 128-128 128z"
-                  ></path>
+                  >
+                  </path>
                 </svg>
               </button>
             </section>
           </form>
           <section class="relative h-[1px] w-full">
             <nav
-              class="content-hidden pointer-events-none absolute top-0 z-20 mx-auto w-full max-w-md translate-y-full transform space-y-2 rounded-b bg-white px-4 pb-2 text-left opacity-0 shadow-md transition-all dark:bg-[#362d25]"
+              class={`
+                content-hidden pointer-events-none absolute top-0 z-20 mx-auto w-full max-w-md
+                translate-y-full transform space-y-2 rounded-b bg-white px-4 pb-2 text-left
+                opacity-0 shadow-md transition-all
+                dark:bg-[#362d25]
+              `}
               id="container-cities"
             >
               {
                 mergeDataStations.map((info) =>
                   info.cities.map((city) => (
                     <a
-                      class="cities mt-2 flex w-full gap-2 rounded  px-4 py-2 font-semibold transition-colors active:bg-orange-100 active:text-orange-500 any-hover:bg-orange-100 any-hover:text-orange-500 dark:active:bg-[#3E352C] dark:any-hover:bg-[#3E352C]"
+                      class={`
+                        cities mt-2 flex w-full gap-2 rounded px-4 py-2 font-semibold
+                        transition-colors
+                        active:bg-orange-100 active:text-orange-500
+                        dark:active:bg-[#3E352C]
+                        any-hover:bg-orange-100 any-hover:text-orange-500
+                        dark:any-hover:bg-[#3E352C]
+                      `}
                       href={`/${info.slug}/${city.slug}`}
                     >
                       <svg
@@ -119,7 +156,7 @@ const mergeDataStations = [northernStation, southernStation]
         </section>
       </div>
       <section class="relative overflow-hidden">
-        <div class="blob absolute left-0 top-0"></div>
+        <div class="blob absolute top-0 left-0"></div>
         <section class="relative z-10">
           <Picture
             src="/src/img/estelibuses-horarios-de-esteli.png"
@@ -207,10 +244,7 @@ const mergeDataStations = [northernStation, southernStation]
       containerCities.classList.replace('opacity-0', 'opacity-100')
       containerCities.classList.replace('translate-y-full', 'translate-y-0')
       containerCities.classList.replace('content-hidden', 'content-visible')
-      containerCities.classList.replace(
-        'pointer-events-none',
-        'pointer-events-auto'
-      )
+      containerCities.classList.replace('pointer-events-none', 'pointer-events-auto')
 
       /*
        * Sanitize user input.
@@ -246,10 +280,7 @@ const mergeDataStations = [northernStation, southernStation]
         containerCities.classList.replace('opacity-100', 'opacity-0')
         containerCities.classList.replace('translate-y-0', 'translate-y-full')
         containerCities.classList.replace('content-visible', 'content-hidden')
-        containerCities.classList.replace(
-          'pointer-events-auto',
-          'pointer-events-none'
-        )
+        containerCities.classList.replace('pointer-events-auto', 'pointer-events-none')
       }
     }
   })

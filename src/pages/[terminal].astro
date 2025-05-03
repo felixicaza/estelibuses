@@ -1,6 +1,4 @@
 ---
-/* eslint-disable astro/jsx-a11y/label-has-associated-control */
-
 import northernStation from '@data/northern-station.json'
 import southernStation from '@data/southern-station.json'
 
@@ -103,7 +101,12 @@ const getSchemaFAQs = schemaFAQs.map((faq) => ({
       <Navbar />
 
       <section
-        class="flex flex-col items-center justify-center pb-[4.5rem] pt-[4.5rem] text-center md:pb-[6.5rem] lg:pb-[8.5rem] lg:pt-28 xl:pb-56"
+        class={`
+          flex flex-col items-center justify-center pt-[4.5rem] pb-[4.5rem] text-center
+          md:pb-[6.5rem]
+          lg:pt-28 lg:pb-[8.5rem]
+          xl:pb-56
+        `}
       >
         <Greetings />
         <h1 class={`my-4 max-w-4xl ${titleColor}`}>{title}</h1>
@@ -113,45 +116,39 @@ const getSchemaFAQs = schemaFAQs.map((faq) => ({
         </p>
 
         <section
-          class="mx-auto mt-6 flex max-w-xs flex-col justify-center gap-y-8 text-left sm:max-w-md md:max-w-xl md:flex-row md:items-start md:gap-x-8 md:gap-y-0"
+          class={`
+            mx-auto mt-6 flex max-w-xs flex-col justify-center gap-y-8 text-left
+            sm:max-w-md
+            md:max-w-xl md:flex-row md:items-start md:gap-x-8 md:gap-y-0
+          `}
         >
           <section class="group space-y-1 md:basis-3/5">
             <p class={`font-semibold ${textColor}`}>Ubicación:</p>
             <div class="flex items-start gap-x-2">
               <div class="mt-[0.2rem]">
-                <svg
-                  class={`fill-current ${textColor} ${linkColorGroup}`}
-                  viewBox="0 0 24 24"
-                  width="24"
-                  height="24"
-                >
+                <svg class={`fill-current ${textColor}${linkColorGroup}`} viewBox="0 0 24 24" width="24" height="24">
                   <path
                     d="M12 11.5A2.5 2.5 0 0 1 9.5 9 2.5 2.5 0 0 1 12 6.5 2.5 2.5 0 0 1 14.5 9a2.5 2.5 0 0 1-2.5 2.5M12 2a7 7 0 0 0-7 7c0 5.3 7 13 7 13s7-7.8 7-13a7 7 0 0 0-7-7Z"
-                  ></path>
+                  >
+                  </path>
                 </svg>
               </div>
-              <a
-                class={`font-semibold ${textColor} ${linkColorGroup}`}
-                href={`${terminal}#mapa`}
-                >{location}
+              <a class={`font-semibold ${textColor}${linkColorGroup}`} href={`${terminal}#mapa`}>
+                {location}
               </a>
             </div>
           </section>
           <section class="group space-y-1 md:basis-2/5">
             <p class={`font-semibold ${textColor}`}>Teléfono:</p>
             <div class="flex items-start gap-x-2">
-              <svg
-                class={`fill-current ${textColor} ${linkColorGroup}`}
-                viewBox="0 0 24 24"
-                width="24"
-                height="24"
-              >
+              <svg class={`fill-current ${textColor}${linkColorGroup}`} viewBox="0 0 24 24" width="24" height="24">
                 <path
                   d="M6.6 10.8c1.5 2.8 3.8 5.1 6.6 6.6l2.2-2.2a1 1 0 0 1 1-.3c1.2.4 2.4.6 3.6.6a1 1 0 0 1 1 1V20a1 1 0 0 1-1 1A17 17 0 0 1 3 4a1 1 0 0 1 1-1h3.5a1 1 0 0 1 1 1c0 1.3.2 2.5.6 3.6 0 .3 0 .7-.3 1l-2.2 2.2Z"
-                ></path>
+                >
+                </path>
               </svg>
               <a
-                class={`font-semibold ${textColor} ${linkColorGroup}`}
+                class={`font-semibold ${textColor}${linkColorGroup}`}
                 href={`tel:${phone}`}
                 set:html={station === 'Terminal Norte'
                   ? `${phone} <span class="md:hidden">extensión</span><span class="hidden md:inline">ext.</span> 102`
@@ -167,27 +164,41 @@ const getSchemaFAQs = schemaFAQs.map((faq) => ({
   <main class="py-12 sm:py-16 md:py-20 xl:py-28">
     <div class="container mx-auto px-4">
       <article class="mb-16 text-center md:mb-20 xl:mb-28">
-        <form
-          class="mx-auto w-full max-w-xl space-y-4"
-          id="search-form"
-          autocomplete="on"
-        >
+        <form class="mx-auto w-full max-w-xl space-y-4" id="search-form" autocomplete="on">
           <label
             class="block text-xl font-semibold text-orange-400 dark:text-orange-50"
-            for="search">¿A dónde vas a viajar?</label
+            for="search"
           >
+            ¿A dónde vas a viajar?
+          </label>
           <section
-            class="grid grid-cols-[1fr_100px] !shadow-lg !shadow-orange-500/10 any-hover:!shadow-orange-600/10"
+            class={`
+              grid grid-cols-[1fr_100px] !shadow-lg !shadow-orange-500/10
+              any-hover:!shadow-orange-600/10
+            `}
           >
             <input
               id="search"
               type="search"
-              class="block w-full rounded rounded-r-none bg-white px-4 py-2.5 placeholder-orange-600 placeholder-opacity-50 caret-orange-500 outline-none transition-colors focus:border-orange-500 focus:ring-4 focus:ring-orange-400 focus:ring-opacity-50 dark:bg-[#292018] dark:placeholder-orange-100 border border-orange-400"
+              class={`
+                placeholder-opacity-50
+                focus:ring-opacity-50
+                block w-full rounded rounded-r-none border border-orange-400 bg-white px-4 py-2.5
+                placeholder-orange-600 caret-orange-500 transition-colors outline-none
+                focus:border-orange-500 focus:ring-4 focus:ring-orange-400
+                dark:bg-[#292018] dark:placeholder-orange-100
+              `}
               placeholder="Busca tu ciudad..."
             />
             <button
               id="search-button"
-              class="inline-flex items-center justify-center rounded rounded-l-none bg-orange-400 px-5 py-2.5 text-white transition-colors active:outline-none active:ring-4 active:ring-orange-400 active:ring-opacity-75 any-hover:bg-orange-500"
+              class={`
+                active:ring-opacity-75
+                inline-flex items-center justify-center rounded rounded-l-none bg-orange-400 px-5
+                py-2.5 text-white transition-colors
+                active:ring-4 active:ring-orange-400 active:outline-none
+                any-hover:bg-orange-500
+              `}
               type="button"
               aria-label={`Buscar ciudades de la ${station}`}
               title={`Buscar ciudades de la ${station}`}
@@ -196,7 +207,8 @@ const getSchemaFAQs = schemaFAQs.map((faq) => ({
                 <path
                   class="fill-current"
                   d="M505 442.7L405.3 343c-4.5-4.5-10.6-7-17-7H372c27.6-35.3 44-79.7 44-128C416 93.1 322.9 0 208 0S0 93.1 0 208s93.1 208 208 208c48.3 0 92.7-16.4 128-44v16.3c0 6.4 2.5 12.5 7 17l99.7 99.7c9.4 9.4 24.6 9.4 33.9 0l28.3-28.3c9.4-9.4 9.4-24.6.1-34zM208 336c-70.7 0-128-57.2-128-128 0-70.7 57.2-128 128-128 70.7 0 128 57.2 128 128 0 70.7-57.2 128-128 128z"
-                ></path>
+                >
+                </path>
               </svg>
             </button>
           </section>
@@ -233,16 +245,11 @@ const getSchemaFAQs = schemaFAQs.map((faq) => ({
       </article>
     </div>
   </main>
-  <article
-    class="bg-[#FFFDF9] py-12 text-center dark:bg-[#2D231B] sm:py-16 md:py-20 xl:py-28"
-  >
+  <article class="bg-[#FFFDF9] py-12 text-center sm:py-16 md:py-20 xl:py-28 dark:bg-[#2D231B]">
     <div class="container mx-auto px-4">
       <h2 class="mb-8">Conoce sobre la {station} de Estelí</h2>
       <div class="space-y-4">
-        <p
-          class="mx-auto mb-4 mt-5 md:max-w-5xl lg:max-w-6xl"
-          set:html={locationDescription}
-        />
+        <p class="mx-auto mt-5 mb-4 md:max-w-5xl lg:max-w-6xl" set:html={locationDescription} />
         <figure>
           <Picture
             src={stationImage}
@@ -281,7 +288,9 @@ const getSchemaFAQs = schemaFAQs.map((faq) => ({
           loading="lazy"
           height="450"
           fetchpriority="low"
-          title={`Ubicación de la ${station}`}></iframe>
+          title={`Ubicación de la ${station}`}
+        >
+        </iframe>
         <p class="!mt-3 text-sm text-gray-400 dark:text-gray-200">
           Ubicación de la {station} de la ciudad de Estelí.
         </p>

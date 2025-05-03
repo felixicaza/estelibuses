@@ -1,8 +1,8 @@
 onlyBuiltDependencies:
-  - esbuild
-  - mozjpeg
-  - pngquant-bin
-  - protobufjs
-  - sharp
-  - simple-git-hooks
-  - unrs-resolver
+   - esbuild
+   - mozjpeg
+   - pngquant-bin
+   - protobufjs
+   - sharp
+   - simple-git-hooks
+   - unrs-resolver

@@ -4,29 +4,31 @@ import Switch from '@components/Switch.astro'
 
 <section class="flex justify-between pb-4">
   <section
-    class="flex items-center gap-x-2 transition-colors active:text-orange-600 any-hover:text-orange-600 lg:order-1"
+    class={`
+      flex items-center gap-x-2 transition-colors
+      active:text-orange-600
+      lg:order-1
+      any-hover:text-orange-600
+    `}
   >
     <span class="lg:order-1">
       <svg class="fill-current" viewBox="0 0 24 24" width="24" height="24">
-        <path
-          d="M12 3a9 9 0 1 0 8.9 7.6 5.4 5.4 0 0 1-9.8-3.1c0-1.8.9-3.4 2.3-4.4L12 3z"
-        ></path>
+        <path d="M12 3a9 9 0 1 0 8.9 7.6 5.4 5.4 0 0 1-9.8-3.1c0-1.8.9-3.4 2.3-4.4L12 3z"></path>
       </svg>
     </span>
-    <label class="cursor-pointer lg:order-first" for="switch-scheme"
-      >Modo oscuro</label
+    <label
+      class="cursor-pointer lg:order-first"
+      for="switch-scheme"
     >
+      Modo oscuro
+    </label>
   </section>
   <Switch id="switch-scheme" />
 </section>
 
 <script>
-  const switchScheme = document.querySelector(
-    '#switch-scheme'
-  ) as HTMLInputElement
-  const themeColor = document.querySelector(
-    'meta[name="theme-color"]'
-  ) as HTMLMetaElement
+  const switchScheme = document.querySelector('#switch-scheme') as HTMLInputElement
+  const themeColor = document.querySelector('meta[name="theme-color"]') as HTMLMetaElement
 
   const isColorSchemeDark = window.matchMedia('(prefers-color-scheme: dark)')
   let darkModeState: boolean
@@ -47,8 +49,8 @@ import Switch from '@components/Switch.astro'
       }
 
       if (
-        !window.location.pathname.includes('terminal-norte-esteli') &&
-        !window.location.pathname.includes('terminal-sur-esteli')
+        !window.location.pathname.includes('terminal-norte-esteli')
+        && !window.location.pathname.includes('terminal-sur-esteli')
       ) {
         themeColor.setAttribute('content', '#ad6830')
       }
@@ -62,8 +64,8 @@ import Switch from '@components/Switch.astro'
       }
 
       if (
-        !window.location.pathname.includes('terminal-norte-esteli') &&
-        !window.location.pathname.includes('terminal-sur-esteli')
+        !window.location.pathname.includes('terminal-norte-esteli')
+        && !window.location.pathname.includes('terminal-sur-esteli')
       ) {
         themeColor.setAttribute('content', '#fb923c')
       }
@@ -86,10 +88,7 @@ import Switch from '@components/Switch.astro'
       soundDarkMode.play()
     }
 
-    if (
-      'vibrate' in navigator &&
-      localStorage.getItem('sounds_enabled') === 'false'
-    ) {
+    if ('vibrate' in navigator && localStorage.getItem('sounds_enabled') === 'false') {
       navigator.vibrate(80)
     }
 

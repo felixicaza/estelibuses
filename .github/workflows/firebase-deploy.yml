@@ -1,6 +1,6 @@
 name: Deploy project
 
-'on':
+"on":
    push:
       branches: [main]
 
@@ -25,8 +25,6 @@ jobs:
            with:
               version: latest
 
-         # Use npm to install packages due to using pnpm causes error on build.
-         # Commit: efed4d0
          - name: Install dependencies
            run: npm i
 
@@ -36,14 +34,14 @@ jobs:
          - name: Create GSC html file verification
            uses: 1arp/create-a-file-action@0.2
            with:
-              path: 'dist'
-              file: 'google4ed26fc938fd8294.html'
-              content: 'google-site-verification: google4ed26fc938fd8294.html'
+              path: "dist"
+              file: "google4ed26fc938fd8294.html"
+              content: "google-site-verification: google4ed26fc938fd8294.html"
 
          - name: Deploy project to Firebase
            uses: FirebaseExtended/action-hosting-deploy@v0
            with:
-              repoToken: '${{ secrets.GITHUB_TOKEN }}'
-              firebaseServiceAccount: '${{ secrets.FIREBASE_SERVICE_ACCOUNT_BUSES_ESTELI_D2D5E }}'
+              repoToken: "${{ secrets.GITHUB_TOKEN }}"
+              firebaseServiceAccount: "${{ secrets.FIREBASE_SERVICE_ACCOUNT_BUSES_ESTELI_D2D5E }}"
               channelId: live
               projectId: buses-esteli-d2d5e

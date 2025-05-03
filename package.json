@@ -2,6 +2,7 @@
   "name": "estelibuses",
   "version": "0.0.0",
   "private": true,
+  "description": "La primer plataforma para conocer los horarios de las terminales de buses del municipio de Estelí - Nicaragua.",
   "license": "GPL-3.0",
   "author": {
     "name": "Felix Icaza",

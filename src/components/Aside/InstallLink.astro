@@ -1,7 +1,11 @@
 <a
-  class="flex w-full items-center gap-x-2 py-4 transition-colors active:text-orange-600 any-hover:text-orange-600 lg:justify-end"
+  class={`
+    flex w-full items-center gap-x-2 py-4 transition-colors
+    active:text-orange-600
+    lg:justify-end
+    any-hover:text-orange-600
+  `}
   href="/guia-de-instalacion"
-  rel={Astro.url.pathname !== '/guia-de-instalacion' && 'preload'}
 >
   <span class="lg:order-1">
     <svg
@@ -12,21 +16,25 @@
       stroke-width="2"
       stroke-linecap="square"
       stroke-linejoin="arcs"
-      ><path
-        d="M3 15v4c0 1.1.9 2 2 2h14a2 2 0 0 0 2-2v-4M17 9l-5 5-5-5M12 12.8V2.5"
-      ></path>
+    >
+      <path d="M3 15v4c0 1.1.9 2 2 2h14a2 2 0 0 0 2-2v-4M17 9l-5 5-5-5M12 12.8V2.5"></path>
     </svg>
   </span>
-  <span class="relative lg:order-first"
-    >Guía de Instalación
+  <span class="relative lg:order-first">
+    Guía de Instalación
     <span
-      class="absolute right-0 top-0 flex h-3 w-3 -translate-y-1 translate-x-2 scale-75 lg:left-0 lg:right-auto lg:-translate-x-3"
+      class={`
+        absolute top-0 right-0 flex h-3 w-3 translate-x-2 -translate-y-1 scale-75
+        lg:right-auto lg:left-0 lg:-translate-x-3
+      `}
     >
       <span
-        class="absolute inline-flex h-full w-full animate-ping rounded-full bg-orange-400 opacity-90"
-      ></span>
-      <span class="relative inline-flex h-3 w-3 rounded-full bg-orange-500"
-      ></span>
+        class={`
+          absolute inline-flex h-full w-full animate-ping rounded-full bg-orange-400 opacity-90
+        `}
+      >
+      </span>
+      <span class="relative inline-flex h-3 w-3 rounded-full bg-orange-500"></span>
     </span>
   </span>
 </a>

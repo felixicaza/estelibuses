@@ -5,10 +5,16 @@ const { cityName, slug, image } = Astro.props
 ---
 
 <article
-  class="card-city flex w-full max-w-[30rem] flex-col overflow-hidden rounded bg-white shadow transition-shadow duration-300 any-hover:shadow-md dark:bg-[#362d25] lg:max-w-md"
+  class={`
+    card-city flex w-full max-w-[30rem] flex-col overflow-hidden rounded bg-white shadow
+    transition-shadow duration-300
+    lg:max-w-md
+    dark:bg-[#362d25]
+    any-hover:shadow-md
+  `}
 >
   <section class="relative">
-    <a class="group overflow-hidden" href={slug} rel="preload">
+    <a class="group overflow-hidden" href={slug}>
       <Picture
         src={image}
         alt={`Horarios de la ciudad de ${cityName}`}
@@ -59,22 +65,32 @@ const { cityName, slug, image } = Astro.props
           class="city-name transition-colors active:text-orange-400 any-hover:text-orange-400"
           href={slug}
           rel="preload"
-          >{cityName}
+        >
+          {cityName}
         </a>
       </h2>
       <p class="!text-base">
         Conoce todos los horarios de los buses que viajan
         <span class="font-semibold underline">
           desde Estelí hacia {cityName}
-        </span>.
+        </span>
+        .
       </p>
     </article>
     <a
-      class="inline-flex items-center justify-center space-x-1 rounded px-5 py-2.5 font-semibold text-orange-400 transition-colors focus:outline-none active:bg-orange-100 active:text-orange-500 any-hover:bg-orange-100 any-hover:text-orange-500 dark:active:bg-[#5c4c3f] dark:any-hover:bg-[#5c4c3f]"
+      class={`
+        inline-flex items-center justify-center space-x-1 rounded px-5 py-2.5 font-semibold
+        text-orange-400 transition-colors
+        focus:outline-none
+        active:bg-orange-100 active:text-orange-500
+        dark:active:bg-[#5c4c3f]
+        any-hover:bg-orange-100 any-hover:text-orange-500
+        dark:any-hover:bg-[#5c4c3f]
+      `}
       href={slug}
-      rel="preload"
     >
-      <span>Mira los horarios</span><span>
+      <span>Mira los horarios</span>
+      <span>
         <svg class="mt-[0.1625rem] fill-current" width="26" height="26">
           <path d="m8.6 16.6 4.6-4.6-4.6-4.6L10 6l6 6-6 6-1.4-1.4Z"></path>
         </svg>

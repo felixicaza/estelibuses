@@ -16,7 +16,13 @@ const options = {
     <Navbar />
   </header>
   <main
-    class="pb-[6.5rem] pt-[4.5rem] text-center xs:pb-36 lg:pb-[8.5rem] lg:pt-28 xl:pb-44 2xl:pb-[13.5rem]"
+    class={`
+      pt-[4.5rem] pb-[6.5rem] text-center
+      xs:pb-36
+      lg:pt-28 lg:pb-[8.5rem]
+      xl:pb-44
+      2xl:pb-[13.5rem]
+    `}
   >
     <div class="container mx-auto space-y-6 px-4">
       <h1 class="mx-auto mb-8 max-w-screen-lg">
@@ -26,21 +32,19 @@ const options = {
         Conoce los horarios de salida de los buses de las terminales de la
         ciudad de Estelí, y planea con exactitud la hora de tu próximo viaje.
       </p>
-      <article
-        class="flex flex-col items-center justify-center gap-y-16 text-center md:flex-row md:gap-x-16 md:gap-y-0"
+      <article class={`
+        flex flex-col items-center justify-center gap-y-16 text-center
+        md:flex-row md:gap-x-16 md:gap-y-0
+      `}
       >
         <section>
           <div class="mb-4">
             <div class="mx-auto h-max w-max rounded-full bg-emerald-100 p-3">
-              <svg
-                class="fill-current text-emerald-400"
-                viewBox="0 0 24 24"
-                width="40"
-                height="40"
-              >
+              <svg class="fill-current text-emerald-400" viewBox="0 0 24 24" width="40" height="40">
                 <path
                   d="M18 11H6V6h12m-1.5 11a1.5 1.5 0 0 1-1.5-1.5 1.5 1.5 0 0 1 1.5-1.5 1.5 1.5 0 0 1 1.5 1.5 1.5 1.5 0 0 1-1.5 1.5m-9 0A1.5 1.5 0 0 1 6 15.5 1.5 1.5 0 0 1 7.5 14 1.5 1.5 0 0 1 9 15.5 1.5 1.5 0 0 1 7.5 17M4 16a3 3 0 0 0 1 2.2V20a1 1 0 0 0 1 1h1a1 1 0 0 0 1-1v-1h8v1a1 1 0 0 0 1 1h1a1 1 0 0 0 1-1v-1.8a3 3 0 0 0 1-2.2V6c0-3.5-3.6-4-8-4s-8 .5-8 4v10Z"
-                ></path>
+                >
+                </path>
               </svg>
             </div>
           </div>
@@ -51,14 +55,18 @@ const options = {
             La terminal norte cuenta con 22 destinos principales.
           </p>
           <a
-            class="mt-4 inline-flex items-center space-x-1 rounded px-5 py-2.5 font-semibold text-emerald-500 transition-colors active:bg-emerald-100 active:text-emerald-700 active:outline-none any-hover:bg-emerald-100 any-hover:text-emerald-700"
+            class={`
+              mt-4 inline-flex items-center space-x-1 rounded px-5 py-2.5 font-semibold
+              text-emerald-500 transition-colors
+              active:bg-emerald-100 active:text-emerald-700 active:outline-none
+              any-hover:bg-emerald-100 any-hover:text-emerald-700
+            `}
             href="/terminal-norte-esteli"
           >
             <span>Conoce los destinos</span>
             <span>
               <svg class="mt-[0.1625rem] fill-current" width="26" height="26">
-                <path d="m8.6 16.6 4.6-4.6-4.6-4.6L10 6l6 6-6 6-1.4-1.4Z"
-                ></path>
+                <path d="m8.6 16.6 4.6-4.6-4.6-4.6L10 6l6 6-6 6-1.4-1.4Z"></path>
               </svg>
             </span>
           </a>
@@ -66,15 +74,11 @@ const options = {
         <section>
           <div class="mb-4">
             <div class="mx-auto h-max w-max rounded-full bg-amber-100 p-3">
-              <svg
-                class="fill-current text-amber-400"
-                viewBox="0 0 24 24"
-                width="40"
-                height="40"
-              >
+              <svg class="fill-current text-amber-400" viewBox="0 0 24 24" width="40" height="40">
                 <path
                   d="M18 11H6V6h12m-1.5 11a1.5 1.5 0 0 1-1.5-1.5 1.5 1.5 0 0 1 1.5-1.5 1.5 1.5 0 0 1 1.5 1.5 1.5 1.5 0 0 1-1.5 1.5m-9 0A1.5 1.5 0 0 1 6 15.5 1.5 1.5 0 0 1 7.5 14 1.5 1.5 0 0 1 9 15.5 1.5 1.5 0 0 1 7.5 17M4 16a3 3 0 0 0 1 2.2V20a1 1 0 0 0 1 1h1a1 1 0 0 0 1-1v-1h8v1a1 1 0 0 0 1 1h1a1 1 0 0 0 1-1v-1.8a3 3 0 0 0 1-2.2V6c0-3.5-3.6-4-8-4s-8 .5-8 4v10Z"
-                ></path>
+                >
+                </path>
               </svg>
             </div>
           </div>
@@ -83,14 +87,18 @@ const options = {
             La terminal sur cuenta con 10 destinos principales.
           </p>
           <a
-            class="mt-4 inline-flex items-center space-x-1 rounded px-5 py-2.5 font-semibold text-amber-500 transition-colors active:bg-amber-100 active:text-amber-700 active:outline-none any-hover:bg-amber-100 any-hover:text-amber-700"
+            class={`
+              mt-4 inline-flex items-center space-x-1 rounded px-5 py-2.5 font-semibold
+              text-amber-500 transition-colors
+              active:bg-amber-100 active:text-amber-700 active:outline-none
+              any-hover:bg-amber-100 any-hover:text-amber-700
+            `}
             href="/terminal-sur-esteli"
           >
             <span>Conoce los destinos</span>
             <span>
               <svg class="mt-[0.1625rem] fill-current" width="26" height="26">
-                <path d="m8.6 16.6 4.6-4.6-4.6-4.6L10 6l6 6-6 6-1.4-1.4Z"
-                ></path>
+                <path d="m8.6 16.6 4.6-4.6-4.6-4.6L10 6l6 6-6 6-1.4-1.4Z"></path>
               </svg>
             </span>
           </a>

@@ -1,9 +1,14 @@
 ---
-/* eslint-disable astro/jsx-a11y/alt-text */
+
 ---
 
 <div
-  class="ios-prompt fixed bottom-0 left-1/2 z-10 w-full max-w-xs -translate-x-1/2 rounded border p-2 shadow-md pointer-events-none translate-y-full border-orange-400 bg-orange-100 text-[#555] opacity-0 transition-all dark:border-orange-900 dark:bg-[#221b14] dark:text-white"
+  class={`
+    ios-prompt pointer-events-none fixed bottom-0 left-1/2 z-10 w-full max-w-xs -translate-x-1/2
+    translate-y-full rounded border border-orange-400 bg-orange-100 p-2 text-[#555] opacity-0
+    shadow-md transition-all
+    dark:border-orange-900 dark:bg-[#221b14] dark:text-white
+  `}
 >
   <div class="flex items-start gap-x-2">
     <img
@@ -17,7 +22,10 @@
       alt="Añadir a la pantalla de inicio"
     />
     <p class="text-sm">
-      Para instalar <strong>Estelí Buses</strong> en tu iPhone/iPad presiona <img
+      Para instalar
+      <strong>Estelí Buses</strong>
+      en tu iPhone/iPad presiona
+      <img
         class="inline dark:contrast-200 dark:invert dark:saturate-150"
         src="/img/share.svg"
         width="20"
@@ -26,12 +34,20 @@
         loading="lazy"
         fetchpriority="low"
         alt="Compartir Estelí Buses"
-      /> y luego en <strong>Añadir al Inicio</strong>.
+      />
+      y luego en
+      <strong>Añadir al Inicio</strong>
+      .
     </p>
     <button
-      class="-mt-0.5 text-2xl font-bold leading-none text-rose-600 transition-colors active:text-rose-900"
-      type="button">&times;</button
+      class={`
+        -mt-0.5 text-2xl leading-none font-bold text-rose-600 transition-colors
+        active:text-rose-900
+      `}
+      type="button"
     >
+      &times;
+    </button>
   </div>
 </div>
 
@@ -64,8 +80,7 @@
     return /iphone|ipad|ipod/.test(userAgent)
   }
   // Detects if device is in standalone mode
-  const isInStandaloneMode = () =>
-    'standalone' in window.navigator && window.navigator.standalone
+  const isInStandaloneMode = () => 'standalone' in window.navigator && window.navigator.standalone
 
   // Checks if should display install popup notification:
   if (isIos() && !isInStandaloneMode()) {

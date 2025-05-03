@@ -4,7 +4,12 @@ import Switch from '@components/Switch.astro'
 
 <section class="flex justify-between py-4">
   <section
-    class="flex items-center gap-x-2 transition-colors active:text-orange-600 any-hover:text-orange-600 lg:order-1"
+    class={`
+      flex items-center gap-x-2 transition-colors
+      active:text-orange-600
+      lg:order-1
+      any-hover:text-orange-600
+    `}
   >
     <span class="lg:order-1">
       <svg
@@ -16,7 +21,8 @@ import Switch from '@components/Switch.astro'
       >
         <path
           d="m5.64 3.64 15.72 15.72-1.41 1.42L16 16.83V20l-5-5H7V9h1.17L4.22 5.05l1.42-1.41M16 4v7.17l-3.59-3.59L16 4Z"
-        ></path>
+        >
+        </path>
       </svg>
       <svg
         class="hidden fill-current"
@@ -27,14 +33,17 @@ import Switch from '@components/Switch.astro'
       >
         <path
           d="M14 3.2v2a7 7 0 0 1 0 13.5v2a9 9 0 0 0 0-17.5m2.5 8.8c0-1.8-1-3.3-2.5-4v8a4.4 4.4 0 0 0 2.5-4M3 9v6h4l5 5V4L7 9H3Z"
-        ></path>
+        >
+        </path>
       </svg>
     </span>
     <label
       class="cursor-pointer lg:order-first"
       id="label-sound"
-      for="switch-sound">Desactivar sonidos</label
+      for="switch-sound"
     >
+      Desactivar sonidos
+    </label>
   </section>
   <Switch id="switch-sound" checked={true} />
 </section>
@@ -54,8 +63,8 @@ import Switch from '@components/Switch.astro'
       localStorage.setItem('sounds_enabled', 'false')
 
       if (
-        'vibrate' in navigator &&
-        localStorage.getItem('sounds_enabled') === 'false'
+        'vibrate' in navigator
+        && localStorage.getItem('sounds_enabled') === 'false'
       ) {
         navigator.vibrate(80)
       }

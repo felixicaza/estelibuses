@@ -1,6 +1,4 @@
 ---
-/* eslint-disable astro/jsx-a11y/label-has-associated-control */
-
 import InstallPWAButton from '@components/InstallPWAButton.astro'
 
 import DarkmodeToggle from './DarkmodeToggle.astro'
@@ -12,13 +10,23 @@ import ContactLink from './ContactLink.astro'
 ---
 
 <div
-  class="pointer-events-none fixed bottom-0 top-0 z-20 h-full w-full bg-black/70 opacity-0 backdrop-blur-sm transition-opacity duration-200 ease-in-out"
+  class={`
+    pointer-events-none fixed top-0 bottom-0 z-20 h-full w-full bg-black/70 opacity-0
+    backdrop-blur-sm transition-opacity duration-200 ease-in-out
+  `}
   id="bg-modal"
 >
 </div>
 
 <aside
-  class="md:w-4/9 lg:w-4/11 safe-top pointer-events-none fixed bottom-0 top-0 z-30 h-full w-9/12 -translate-x-full transform bg-orange-300 opacity-0 transition-all duration-200 ease-in-out dark:bg-[#180f06] dark:text-white lg:right-0 lg:translate-x-full xl:w-3/12"
+  class={`
+    safe-top pointer-events-none fixed top-0 bottom-0 z-30 h-full w-9/12 -translate-x-full transform
+    bg-orange-300 opacity-0 transition-all duration-200 ease-in-out
+    md:w-4/9
+    lg:right-0 lg:w-4/11 lg:translate-x-full
+    xl:w-3/12
+    dark:bg-[#180f06] dark:text-white
+  `}
   id="mobile"
 >
   <section class="flex h-full flex-col justify-between p-4">
@@ -72,8 +80,8 @@ import ContactLink from './ContactLink.astro'
     }
 
     if (
-      'vibrate' in navigator &&
-      localStorage.getItem('sounds_enabled') === 'false'
+      'vibrate' in navigator
+      && localStorage.getItem('sounds_enabled') === 'false'
     ) {
       navigator.vibrate(80)
     }
@@ -100,10 +108,7 @@ import ContactLink from './ContactLink.astro'
       soundPage.play()
     }
 
-    if (
-      'vibrate' in navigator &&
-      localStorage.getItem('sounds_enabled') === 'false'
-    ) {
+    if ('vibrate' in navigator && localStorage.getItem('sounds_enabled') === 'false') {
       navigator.vibrate(80)
     }
 

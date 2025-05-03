@@ -1,5 +1,12 @@
 <button
-  class="fixed bottom-0 right-0 z-20 inline-flex -translate-x-4 translate-y-20 transform items-center space-x-2 rounded-full bg-orange-500 px-5 py-2.5 font-semibold text-white opacity-0 shadow-lg shadow-orange-600/30 transition-all active:shadow-orange-700/30 active:outline-none active:ring-4 active:ring-orange-500 active:ring-opacity-75 any-hover:bg-orange-600 any-hover:shadow-orange-700/30"
+  class={`
+    active:ring-opacity-75
+    fixed right-0 bottom-0 z-20 inline-flex -translate-x-4 translate-y-20 transform items-center
+    space-x-2 rounded-full bg-orange-500 px-5 py-2.5 font-semibold text-white opacity-0 shadow-lg
+    shadow-orange-600/30 transition-all
+    active:ring-4 active:shadow-orange-700/30 active:ring-orange-500 active:outline-none
+    any-hover:bg-orange-600 any-hover:shadow-orange-700/30
+  `}
   id="reload"
 >
   <span class="!ml-0">
@@ -11,7 +18,8 @@
     >
       <path
         d="M2 12c0 5 4 9 9 9 2.4 0 4.7-1 6.4-2.6l-1.5-1.5A6.7 6.7 0 0 1 11 19a7 7 0 1 1 7-7h-3l4 4h.1l3.9-4h-3a9 9 0 0 0-18 0Z"
-      ></path>
+      >
+      </path>
     </svg>
   </span>
   <span>¡Actualizar App!</span>

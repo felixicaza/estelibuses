@@ -6,12 +6,21 @@ const { id, checked } = Astro.props
   <div class="relative h-[1.4375rem] w-[3.0625rem]">
     <input
       class="peer h-full w-full cursor-pointer opacity-0"
-      {id}
       type="checkbox"
+      {id}
       {checked}
     />
     <span
-      class="absolute z-[-1] rounded-full bg-orange-800/50 transition-all before:absolute before:bottom-[0.29rem] before:left-1 before:h-[0.875rem] before:w-[0.875rem] before:rounded-full before:bg-white before:transition-all before:content-[''] lg:scale-x-[-1] bottom-0 left-0 right-0 top-0 peer-checked:bg-orange-500 peer-checked:before:translate-x-[1.625rem]"
-    ></span>
+      class={`
+        absolute top-0 right-0 bottom-0 left-0 z-[-1] rounded-full bg-orange-800/50 transition-all
+        peer-checked:bg-orange-500
+        before:absolute before:bottom-[0.29rem] before:left-1 before:h-[0.875rem]
+        before:w-[0.875rem] before:rounded-full before:bg-white before:transition-all
+        before:content-['']
+        peer-checked:before:translate-x-[1.625rem]
+        lg:scale-x-[-1]
+      `}
+    >
+    </span>
   </div>
 </section>

@@ -1,6 +1,6 @@
 name: Lighthouse Performance Badges
 
-'on':
+"on":
    push:
       branches: [main]
 
@@ -36,8 +36,8 @@ jobs:
            with:
               author_name: github-actions[bot]
               author_email: github-actions[bot]@users.noreply.github.com
-              message: 'ci: update lighthouse peformance badges'
-              add: 'public/performance'
+              message: "ci: update lighthouse peformance badges"
+              add: "public/performance"
               push: true
               branch: main
               token: ${{ secrets.GITHUB_TOKEN }}

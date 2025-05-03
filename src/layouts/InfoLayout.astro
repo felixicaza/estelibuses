@@ -18,7 +18,13 @@ const options = {
   <main class="container mx-auto px-4">
     <section
       id="content"
-      class="mx-auto max-w-6xl space-y-6 pb-[6.5rem] pt-[4.5rem] text-center xs:pb-36 lg:pb-[8.5rem] lg:pt-28 xl:pb-44 2xl:pb-[13.5rem]"
+      class={`
+        mx-auto max-w-6xl space-y-6 pt-[4.5rem] pb-[6.5rem] text-center
+        xs:pb-36
+        lg:pt-28 lg:pb-[8.5rem]
+        xl:pb-44
+        2xl:pb-[13.5rem]
+      `}
     >
       <slot />
     </section>

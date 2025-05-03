@@ -1,6 +1,6 @@
 import { defineConfig } from 'astro/config'
 
-import tailwindcss from "@tailwindcss/vite";
+import tailwindcss from '@tailwindcss/vite'
 
 import { astroImageTools } from 'astro-imagetools'
 import playformCompress from '@playform/compress'
@@ -23,12 +23,12 @@ export default defineConfig({
   },
   vite: {
     css: {
-      transformer: "lightningcss",
+      transformer: 'lightningcss'
     },
-    plugins: [tailwindcss()],
+    plugins: [tailwindcss()]
   },
   build: {
-    format: 'preserve',
+    format: 'preserve'
   },
   integrations: [
     astroImageTools,

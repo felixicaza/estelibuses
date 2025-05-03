@@ -1,5 +1,5 @@
 ---
-/* eslint-disable astro/jsx-a11y/label-has-associated-control, astro/jsx-a11y/heading-has-content */
+/* eslint-disable astro/jsx-a11y/heading-has-content */
 
 import Layout from '@layouts/Layout.astro'
 
@@ -20,26 +20,40 @@ const options = {
   </header>
   <main class="container mx-auto px-4">
     <section
-      class="mx-auto max-w-6xl space-y-6 pb-[6.5rem] pt-[4.5rem] text-center xs:pb-36 lg:pb-[8.5rem] lg:pt-28 xl:pb-44 2xl:pb-[13.5rem]"
+      class={`
+        mx-auto max-w-6xl space-y-6 pt-[4.5rem] pb-[6.5rem] text-center
+        xs:pb-36
+        lg:pt-28 lg:pb-[8.5rem]
+        xl:pb-44
+        2xl:pb-[13.5rem]
+      `}
     >
       <h1 class="mb-8">Contacto</h1>
 
       <p>
         Si deseas obtener información más detallada recuerda que puedes ponerte
-        en contacto con las terminales de buses del municipio de Estelí. <strong
-          >Estelí Buses no está asociado con las terminales de buses, ni con los
-          transportistas y ni con las cooperativas</strong
-        >, por lo que <strong>Estelí Buses no gestiona</strong> reserva de
+        en contacto con las terminales de buses del municipio de Estelí.
+        <strong>
+          Estelí Buses no está asociado con las terminales de buses, ni con los
+          transportistas y ni con las cooperativas
+        </strong>
+        , por lo que
+        <strong>Estelí Buses no gestiona</strong>
+        reserva de
         asientos y/o de pasajes, información sobre encomiendas, información
         detallada sobre los destinos de los transportes, información en cambios
         de horarios o cualquier otro dato relacionado con el funcionamiento o la
         organización de dichas entidades.
       </p>
       <p>
-        Si deseas contactarnos puedes hacerlo a través de <a
+        Si deseas contactarnos puedes hacerlo a través de
+        <a
           href="https://www.facebook.com/estelibuses"
-          target="_blank">nuestra página en Facebook</a
-        >, y trataremos de ayudarte a la medida de nuestras capacidades. Si eres
+          target="_blank"
+        >
+          nuestra página en Facebook
+        </a>
+        , y trataremos de ayudarte a la medida de nuestras capacidades. Si eres
         parte de una cooperativa de transporte y deseas contribuir con Estelí
         Buses, no dudes en envíarnos un mensaje, cualquier información que sirva
         para ser añadida a la plataforma será de mucha utilidad para los
@@ -47,12 +61,20 @@ const options = {
         autobuses interlocales a través de Estelí Buses.
       </p>
       <p>
-        Para comunicarte con la <strong>Terminal Norte</strong> puedes hacerlo
-        llamando al número <a href="tel:2713-2529">2713-2529 extensión 102</a>.
+        Para comunicarte con la
+        <strong>Terminal Norte</strong>
+        puedes hacerlo
+        llamando al número
+        <a href="tel:2713-2529">2713-2529 extensión 102</a>
+        .
       </p>
       <p>
-        Para comunicarte con la <strong>Terminal Sur</strong> puedes hacerlo
-        llamando al número <a href="tel:2713-6162">2713-6162</a>.
+        Para comunicarte con la
+        <strong>Terminal Sur</strong>
+        puedes hacerlo
+        llamando al número
+        <a href="tel:2713-6162">2713-6162</a>
+        .
       </p>
       <p>
         Recuerda planear con antelación tu próximo viaje. ¡Muchas gracias por
@@ -61,12 +83,19 @@ const options = {
     </section>
   </main>
   <section
-    class="pointer-events-none fixed bottom-0 z-10 w-full translate-y-full transform select-none opacity-0 transition"
+    class={`
+      pointer-events-none fixed bottom-0 z-10 w-full translate-y-full transform opacity-0 transition
+      select-none
+    `}
     id="snackbar"
     slot="dynamic-components"
   >
     <article
-      class="relative mx-auto w-80 max-w-full rounded bg-green-500 px-2 py-4 text-center text-white shadow xs:w-96"
+      class={`
+        relative mx-auto w-80 max-w-full rounded bg-green-500 px-2 py-4 text-center text-white
+        shadow
+        xs:w-96
+      `}
     >
       <h3 class="mb-2 text-lg font-bold !text-white"></h3>
       <p></p>

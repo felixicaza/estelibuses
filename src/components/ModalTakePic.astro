@@ -3,16 +3,24 @@ import { Picture } from 'astro-imagetools/components'
 ---
 
 <section
-  class="dark:bg-hex-180f06 pointer-events-none fixed left-1/2 top-1/2 z-20 h-[85vh] w-full max-w-sm -translate-x-1/2 -translate-y-1/2 scale-0 transform rounded bg-orange-300 px-4 py-6 opacity-0 shadow-md transition-all dark:text-white sm:max-w-md"
   id="modal-bus-pic"
+  class={`
+    dark:bg-hex-180f06
+    pointer-events-none fixed top-1/2 left-1/2 z-20 h-[85vh] w-full max-w-sm -translate-x-1/2
+    -translate-y-1/2 scale-0 transform rounded bg-orange-300 px-4 py-6 opacity-0 shadow-md
+    transition-all
+    sm:max-w-md
+    dark:text-white
+  `}
 >
   <section class="hide-scroll-modal h-full overflow-scroll">
     <h3 class="text-center text-xl font-bold">
       Recomendaciones para tomar la foto del transporte.
     </h3>
-    <ol class="ml-6 mt-4 list-decimal space-y-2">
+    <ol class="mt-4 ml-6 list-decimal space-y-2">
       <li>
-        <strong>IMPORTANTE:&nbsp;</strong>Asegúrate que la foto que vas a tomar
+        <strong>IMPORTANTE:&nbsp;</strong>
+        Asegúrate que la foto que vas a tomar
         sea precisamente del transporte en cuestión. Ya que por defecto la
         imágen será guardada con el nombre de la ciudad y el número del horario
         que hayas elegido.
@@ -48,9 +56,14 @@ import { Picture } from 'astro-imagetools/components'
       />
     </section>
     <button
-      class="recommendation-pic w-full rounded bg-orange-400 px-5 py-2.5 font-semibold text-white transition-colors active:bg-orange-500 active:outline-none"
-      >Aceptar</button
+      class={`
+        recommendation-pic w-full rounded bg-orange-400 px-5 py-2.5 font-semibold text-white
+        transition-colors
+        active:bg-orange-500 active:outline-none
+      `}
     >
+      Aceptar
+    </button>
   </section>
 </section>
 

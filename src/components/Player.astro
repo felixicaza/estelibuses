@@ -1,45 +1,26 @@
----
-/* eslint-disable astro/jsx-a11y/media-has-caption */
----
-
 <p class="font-bold">Disfruta de tu viaje con música Lo-Fi 🎶</p>
 <div class="flex items-center gap-x-2">
-  <audio
-    class="hidden"
-    src="https://lfhh.radioca.st/stream"
-    preload="auto"
-    crossorigin="anonymous"></audio>
-  <button
-    id="player"
-    class="active:text-orange-400"
-    aria-label="Reproducir radio"
-    title="Reproducir radio"
-  >
-    <svg
-      id="play"
-      class="fill-current"
-      viewBox="0 0 24 24"
-      width="24"
-      height="24"
-      ><path class="origin-center scale-[1.35]" d="M8 5v14l11-7L8 5Z"></path>
+  <audio class="hidden" src="https://lfhh.radioca.st/stream" preload="auto" crossorigin="anonymous"></audio>
+  <button id="player" class="active:text-orange-400" aria-label="Reproducir radio" title="Reproducir radio">
+    <svg id="play" class="fill-current" viewBox="0 0 24 24" width="24" height="24">
+      <path class="origin-center scale-[1.35]" d="M8 5v14l11-7L8 5Z"></path>
     </svg>
-    <svg
-      id="pause"
-      class="hidden fill-current"
-      viewBox="0 0 24 24"
-      width="24"
-      height="24"
-      ><path class="origin-center scale-[1.35]" d="M14 19h4V5h-4M6 19h4V5H6v14Z"
-      ></path>
+    <svg id="pause" class="hidden fill-current" viewBox="0 0 24 24" width="24" height="24">
+      <path class="origin-center scale-[1.35]" d="M14 19h4V5h-4M6 19h4V5H6v14Z">
+      </path>
     </svg>
   </button>
   <canvas class="h-9 w-full"></canvas>
 </div>
 <p class="!mt-1 text-xs">
-  Utiliza audífonos para una mejor experiencia. Stream proporcionado por <a
+  Utiliza audífonos para una mejor experiencia. Stream proporcionado por
+  <a
     href="https://chillsky.com/"
-    target="_blank">Chillsky</a
-  >.
+    target="_blank"
+  >
+    Chillsky
+  </a>
+  .
 </p>
 
 <script>

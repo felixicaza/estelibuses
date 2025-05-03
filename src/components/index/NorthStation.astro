@@ -14,8 +14,11 @@ const cities = northernStation.cities
       terminal norte.
     </p>
   </section>
-  <article
-    class="flex flex-col items-center gap-y-20 lg:grid lg:grid-cols-2 lg:gap-16 xl:grid-cols-3"
+  <article class={`
+    flex flex-col items-center gap-y-20
+    lg:grid lg:grid-cols-2 lg:gap-16
+    xl:grid-cols-3
+  `}
   >
     {
       cities.map(
@@ -32,7 +35,13 @@ const cities = northernStation.cities
   </article>
   <section class="mt-20 text-center">
     <a
-      class="inline-flex items-center space-x-2.5 rounded bg-orange-400 px-5 py-2.5 font-semibold text-white shadow-lg shadow-orange-500/30 transition-colors active:shadow-orange-600/30 active:outline-none active:ring-4 active:ring-orange-400 active:ring-opacity-75 any-hover:bg-orange-500 any-hover:shadow-orange-600/30"
+      class={`
+        active:ring-opacity-75
+        inline-flex items-center space-x-2.5 rounded bg-orange-400 px-5 py-2.5 font-semibold
+        text-white shadow-lg shadow-orange-500/30 transition-colors
+        active:ring-4 active:shadow-orange-600/30 active:ring-orange-400 active:outline-none
+        any-hover:bg-orange-500 any-hover:shadow-orange-600/30
+      `}
       href={`/${northernStation.slug}`}
     >
       <span>Mira todos los destinos</span>

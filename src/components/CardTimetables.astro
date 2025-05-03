@@ -1,5 +1,4 @@
 ---
-/* eslint-disable astro/jsx-a11y/media-has-caption */
 
 import { Picture } from 'astro-imagetools/components'
 
@@ -27,7 +26,12 @@ const {
 
 <section
   id={`horario-${index + 1}`}
-  class={`space-y-4 bg-[#fcfcfc] dark:bg-[#362d25] shadow rounded p-4 any-hover:shadow-md transition-shadow ${transportType.toLowerCase()}`}
+  class={`
+    space-y-4 rounded bg-[#fcfcfc] p-4 shadow transition-shadow
+    dark:bg-[#362d25]
+    any-hover:shadow-md
+    ${transportType.toLowerCase()}
+  `}
 >
   <h2 class="titles text-3xl font-bold sm:text-4xl">
     Horario #{index + 1}
@@ -36,24 +40,26 @@ const {
   {note && <p set:html={note} />}
 
   {
-    transportPic !== '' ? (
-      <section class="my-2">
-        <Picture
-          src={transportPic}
-          alt={`Transporte ${transportName}`}
-          attributes={{
-            img: {
-              fetchpriority: 'low',
-              class: 'rounded'
-            }
-          }}
-          loading="lazy"
-          aspect={1.452513966}
-        />
-      </section>
-    ) : (
-      <TakePic />
-    )
+    transportPic !== ''
+      ? (
+          <section class="my-2">
+            <Picture
+              src={transportPic}
+              alt={`Transporte ${transportName}`}
+              attributes={{
+                img: {
+                  fetchpriority: 'low',
+                  class: 'rounded'
+                }
+              }}
+              loading="lazy"
+              aspect={1.452513966}
+            />
+          </section>
+        )
+      : (
+          <TakePic />
+        )
   }
 
   <ShowBusAvailability hour={departureTime} {index} />
@@ -63,26 +69,28 @@ const {
       <tbody>
         <tr class="group">
           <td
-            class="flex items-center gap-x-2 rounded-l px-3 py-2 transition-colors group-hover:bg-orange-50 dark:group-hover:bg-[#3E352C]"
+            class={`
+              flex items-center gap-x-2 rounded-l px-3 py-2 transition-colors
+              group-hover:bg-orange-50
+              dark:group-hover:bg-[#3E352C]
+            `}
           >
-            <svg
-              class="fill-current"
-              viewBox="0 0 24 24"
-              width="24"
-              height="24"
-            >
+            <svg class="fill-current" viewBox="0 0 24 24" width="24" height="24">
               <path
                 d="M12 2A10 10 0 0 0 2 12a10 10 0 0 0 10 10 10 10 0 0 0 10-10A10 10 0 0 0 12 2m4.2 14.2L11 13V7h1.5v5.2l4.5 2.7-.8 1.3Z"
-              ></path>
+              >
+              </path>
             </svg>
             <strong class="icons-caption">Hora de salida de Estelí</strong>
           </td>
           <td
-            class="gap-x-2 rounded-r px-3 py-2 transition-colors group-hover:bg-orange-50 dark:group-hover:bg-[#3E352C]"
+            class={`
+              gap-x-2 rounded-r px-3 py-2 transition-colors
+              group-hover:bg-orange-50
+              dark:group-hover:bg-[#3E352C]
+            `}
           >
-            <span
-              class="rounded bg-green-100 px-2 py-1 font-bold text-green-700"
-            >
+            <span class="rounded bg-green-100 px-2 py-1 font-bold text-green-700">
               {
                 // Convert hour (departure_time) to AM/PM format due to the fact
                 // that in Nicaragua it's very common to use this format.
@@ -103,18 +111,28 @@ const {
         {
           waitingAreaDeparture && (
             <tr class="group">
-              <td class="flex items-center gap-x-2 rounded-l px-3 py-2 transition-colors group-hover:bg-orange-50 dark:group-hover:bg-[#3E352C]">
-                <svg
-                  class="fill-current"
-                  viewBox="0 0 24 24"
-                  width="24"
-                  height="24"
-                >
-                  <path d="M22 7v9c0 .71-.38 1.36-1 1.72v1.53c0 .41-.34.75-.75.75h-.5a.76.76 0 0 1-.75-.75V18h-7v1.25c0 .41-.34.75-.75.75h-.5a.76.76 0 0 1-.75-.75v-1.53A2 2 0 0 1 9 16V7c0-3 3-3 6.5-3S22 4 22 7m-9 8c0-.55-.45-1-1-1s-1 .45-1 1 .45 1 1 1 1-.45 1-1m7 0c0-.55-.45-1-1-1s-1 .45-1 1 .45 1 1 1 1-.45 1-1m0-8h-9v4h9V7M7 9.5A2.5 2.5 0 1 0 4 12v8h1v-8c1.18-.24 2-1.29 2-2.5Z" />
+              <td
+                class={`
+                  flex items-center gap-x-2 rounded-l px-3 py-2 transition-colors
+                  group-hover:bg-orange-50
+                  dark:group-hover:bg-[#3E352C]
+                `}
+              >
+                <svg class="fill-current" viewBox="0 0 24 24" width="24" height="24">
+                  <path
+                    d="M22 7v9c0 .71-.38 1.36-1 1.72v1.53c0 .41-.34.75-.75.75h-.5a.76.76 0 0 1-.75-.75V18h-7v1.25c0 .41-.34.75-.75.75h-.5a.76.76 0 0 1-.75-.75v-1.53A2 2 0 0 1 9 16V7c0-3 3-3 6.5-3S22 4 22 7m-9 8c0-.55-.45-1-1-1s-1 .45-1 1 .45 1 1 1 1-.45 1-1m7 0c0-.55-.45-1-1-1s-1 .45-1 1 .45 1 1 1 1-.45 1-1m0-8h-9v4h9V7M7 9.5A2.5 2.5 0 1 0 4 12v8h1v-8c1.18-.24 2-1.29 2-2.5Z"
+                  >
+                  </path>
                 </svg>
                 <strong class="icons-caption">Lugar de espera</strong>
               </td>
-              <td class="gap-x-2 rounded-r px-3 py-2 transition-colors group-hover:bg-orange-50 dark:group-hover:bg-[#3E352C]">
+              <td
+                class={`
+                  gap-x-2 rounded-r px-3 py-2 transition-colors
+                  group-hover:bg-orange-50
+                  dark:group-hover:bg-[#3E352C]
+                `}
+              >
                 <span class="rounded bg-green-100 px-2 py-1 font-bold text-green-700">
                   {waitingAreaDeparture}
                 </span>
@@ -125,21 +143,31 @@ const {
         {
           returnTime && (
             <tr class="group">
-              <td class="flex items-start gap-x-2 rounded-l px-3 py-2 transition-colors group-hover:bg-orange-50 dark:group-hover:bg-[#3E352C]">
-                <svg
-                  class="mt-[3px] fill-current"
-                  viewBox="0 0 24 24"
-                  width="24"
-                  height="24"
-                >
-                  <path d="M12 2A10 10 0 0 0 2 12a10 10 0 0 0 10 10 10 10 0 0 0 10-10A10 10 0 0 0 12 2m4.2 14.2L11 13V7h1.5v5.2l4.5 2.7-.8 1.3Z" />
+              <td
+                class={`
+                  flex items-start gap-x-2 rounded-l px-3 py-2 transition-colors
+                  group-hover:bg-orange-50
+                  dark:group-hover:bg-[#3E352C]
+                `}
+              >
+                <svg class="mt-[3px] fill-current" viewBox="0 0 24 24" width="24" height="24">
+                  <path
+                    d="M12 2A10 10 0 0 0 2 12a10 10 0 0 0 10 10 10 10 0 0 0 10-10A10 10 0 0 0 12 2m4.2 14.2L11 13V7h1.5v5.2l4.5 2.7-.8 1.3Z"
+                  >
+                  </path>
                 </svg>
                 <div class="icons-caption">
                   <strong class="block">Hora de salida de {cityName}</strong>
                   <small class="block">(Retorno hacia Estelí)</small>
                 </div>
               </td>
-              <td class="gap-x-2 rounded-r px-3 py-2 transition-colors group-hover:bg-orange-50 dark:group-hover:bg-[#3E352C]">
+              <td
+                class={`
+                  gap-x-2 rounded-r px-3 py-2 transition-colors
+                  group-hover:bg-orange-50
+                  dark:group-hover:bg-[#3E352C]
+                `}
+              >
                 <span class="rounded bg-green-100 px-2 py-1 font-bold text-green-700">
                   {
                     // Convert hour (return_time) to AM/PM format due to the fact
@@ -163,21 +191,31 @@ const {
         {
           waitingAreaReturn && (
             <tr class="group">
-              <td class="flex items-start gap-x-2 rounded-l px-3 py-2 transition-colors group-hover:bg-orange-50 dark:group-hover:bg-[#3E352C]">
-                <svg
-                  class="mt-[2px] fill-current"
-                  viewBox="0 0 24 24"
-                  width="24"
-                  height="24"
-                >
-                  <path d="M22 7v9c0 .71-.38 1.36-1 1.72v1.53c0 .41-.34.75-.75.75h-.5a.76.76 0 0 1-.75-.75V18h-7v1.25c0 .41-.34.75-.75.75h-.5a.76.76 0 0 1-.75-.75v-1.53A2 2 0 0 1 9 16V7c0-3 3-3 6.5-3S22 4 22 7m-9 8c0-.55-.45-1-1-1s-1 .45-1 1 .45 1 1 1 1-.45 1-1m7 0c0-.55-.45-1-1-1s-1 .45-1 1 .45 1 1 1 1-.45 1-1m0-8h-9v4h9V7M7 9.5A2.5 2.5 0 1 0 4 12v8h1v-8c1.18-.24 2-1.29 2-2.5Z" />
+              <td
+                class={`
+                  flex items-start gap-x-2 rounded-l px-3 py-2 transition-colors
+                  group-hover:bg-orange-50
+                  dark:group-hover:bg-[#3E352C]
+                `}
+              >
+                <svg class="mt-[2px] fill-current" viewBox="0 0 24 24" width="24" height="24">
+                  <path
+                    d="M22 7v9c0 .71-.38 1.36-1 1.72v1.53c0 .41-.34.75-.75.75h-.5a.76.76 0 0 1-.75-.75V18h-7v1.25c0 .41-.34.75-.75.75h-.5a.76.76 0 0 1-.75-.75v-1.53A2 2 0 0 1 9 16V7c0-3 3-3 6.5-3S22 4 22 7m-9 8c0-.55-.45-1-1-1s-1 .45-1 1 .45 1 1 1 1-.45 1-1m7 0c0-.55-.45-1-1-1s-1 .45-1 1 .45 1 1 1 1-.45 1-1m0-8h-9v4h9V7M7 9.5A2.5 2.5 0 1 0 4 12v8h1v-8c1.18-.24 2-1.29 2-2.5Z"
+                  >
+                  </path>
                 </svg>
                 <div class="icons-caption">
                   <strong class="block">Lugar de espera</strong>
                   <small class="block">(Retorno hacia Estelí)</small>
                 </div>
               </td>
-              <td class="gap-x-2 rounded-r px-3 py-2 transition-colors group-hover:bg-orange-50 dark:group-hover:bg-[#3E352C]">
+              <td
+                class={`
+                  gap-x-2 rounded-r px-3 py-2 transition-colors
+                  group-hover:bg-orange-50
+                  dark:group-hover:bg-[#3E352C]
+                `}
+              >
                 <span class="rounded bg-green-100 px-2 py-1 font-bold text-green-700">
                   {waitingAreaReturn}
                 </span>
@@ -187,26 +225,28 @@ const {
         }
         <tr class="group">
           <td
-            class="flex items-center gap-x-2 rounded-l px-3 py-2 transition-colors group-hover:bg-orange-50 dark:group-hover:bg-[#3E352C]"
+            class={`
+              flex items-center gap-x-2 rounded-l px-3 py-2 transition-colors
+              group-hover:bg-orange-50
+              dark:group-hover:bg-[#3E352C]
+            `}
           >
-            <svg
-              class="fill-current"
-              viewBox="0 0 24 24"
-              width="24"
-              height="24"
-            >
+            <svg class="fill-current" viewBox="0 0 24 24" width="24" height="24">
               <path
                 d="M18 11H6V6h12m-1.5 11a1.5 1.5 0 0 1-1.5-1.5 1.5 1.5 0 0 1 1.5-1.5 1.5 1.5 0 0 1 1.5 1.5 1.5 1.5 0 0 1-1.5 1.5m-9 0A1.5 1.5 0 0 1 6 15.5 1.5 1.5 0 0 1 7.5 14 1.5 1.5 0 0 1 9 15.5 1.5 1.5 0 0 1 7.5 17M4 16a3 3 0 0 0 1 2.2V20a1 1 0 0 0 1 1h1a1 1 0 0 0 1-1v-1h8v1a1 1 0 0 0 1 1h1a1 1 0 0 0 1-1v-1.8a3 3 0 0 0 1-2.2V6c0-3.5-3.6-4-8-4s-8 .5-8 4v10Z"
-              ></path>
+              >
+              </path>
             </svg>
             <strong class="icons-caption">Tipo de transporte</strong>
           </td>
           <td
-            class="gap-x-2 rounded-r px-3 py-2 transition-colors group-hover:bg-orange-50 dark:group-hover:bg-[#3E352C]"
+            class={`
+              gap-x-2 rounded-r px-3 py-2 transition-colors
+              group-hover:bg-orange-50
+              dark:group-hover:bg-[#3E352C]
+            `}
           >
-            <span
-              class="rounded bg-green-100 px-2 py-1 font-bold text-green-700"
-            >
+            <span class="rounded bg-green-100 px-2 py-1 font-bold text-green-700">
               {transportType}
             </span>
           </td>
@@ -214,18 +254,28 @@ const {
         {
           transportName && (
             <tr class="group">
-              <td class="flex items-center gap-x-2 rounded-l px-3 py-2 transition-colors group-hover:bg-orange-50 dark:group-hover:bg-[#3E352C]">
-                <svg
-                  class="fill-current"
-                  viewBox="0 0 24 24"
-                  width="24"
-                  height="24"
-                >
-                  <path d="M3 6a2 2 0 0 0-2 2v7h2a3 3 0 0 0 3 3 3 3 0 0 0 3-3h6a3 3 0 0 0 3 3 3 3 0 0 0 3-3h2V8a2 2 0 0 0-2-2H3m-.5 1.5h4V10h-4V7.5m5.5 0h4V10H8V7.5m5.5 0h4V10h-4V7.5m5.5 0h2.5V13L19 11V7.5m-13 6A1.5 1.5 0 0 1 7.5 15 1.5 1.5 0 0 1 6 16.5 1.5 1.5 0 0 1 4.5 15 1.5 1.5 0 0 1 6 13.5m12 0a1.5 1.5 0 0 1 1.5 1.5 1.5 1.5 0 0 1-1.5 1.5 1.5 1.5 0 0 1-1.5-1.5 1.5 1.5 0 0 1 1.5-1.5Z" />
+              <td
+                class={`
+                  flex items-center gap-x-2 rounded-l px-3 py-2 transition-colors
+                  group-hover:bg-orange-50
+                  dark:group-hover:bg-[#3E352C]
+                `}
+              >
+                <svg class="fill-current" viewBox="0 0 24 24" width="24" height="24">
+                  <path
+                    d="M3 6a2 2 0 0 0-2 2v7h2a3 3 0 0 0 3 3 3 3 0 0 0 3-3h6a3 3 0 0 0 3 3 3 3 0 0 0 3-3h2V8a2 2 0 0 0-2-2H3m-.5 1.5h4V10h-4V7.5m5.5 0h4V10H8V7.5m5.5 0h4V10h-4V7.5m5.5 0h2.5V13L19 11V7.5m-13 6A1.5 1.5 0 0 1 7.5 15 1.5 1.5 0 0 1 6 16.5 1.5 1.5 0 0 1 4.5 15 1.5 1.5 0 0 1 6 13.5m12 0a1.5 1.5 0 0 1 1.5 1.5 1.5 1.5 0 0 1-1.5 1.5 1.5 1.5 0 0 1-1.5-1.5 1.5 1.5 0 0 1 1.5-1.5Z"
+                  >
+                  </path>
                 </svg>
                 <strong class="icons-caption">Nombre del Transporte</strong>
               </td>
-              <td class="gap-x-2 rounded-r px-3 py-2 transition-colors group-hover:bg-orange-50 dark:group-hover:bg-[#3E352C]">
+              <td
+                class={`
+                  gap-x-2 rounded-r px-3 py-2 transition-colors
+                  group-hover:bg-orange-50
+                  dark:group-hover:bg-[#3E352C]
+                `}
+              >
                 <span class="rounded bg-green-100 px-2 py-1 font-bold text-green-700">
                   {transportName}
                 </span>
@@ -236,18 +286,28 @@ const {
         {
           licensePlate && (
             <tr class="group">
-              <td class="flex items-center gap-x-2 rounded-l px-3 py-2 transition-colors group-hover:bg-orange-50 dark:group-hover:bg-[#3E352C]">
-                <svg
-                  class="fill-current"
-                  viewBox="0 0 24 24"
-                  width="24"
-                  height="24"
-                >
-                  <path d="M20 4a2 2 0 0 1 2 2v12a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2h16m-9 9H9v2h2v-2m8 0h-6v2h6v-2M7 9H5v2h2V9m12 0H9v2h10V9Z" />
+              <td
+                class={`
+                  flex items-center gap-x-2 rounded-l px-3 py-2 transition-colors
+                  group-hover:bg-orange-50
+                  dark:group-hover:bg-[#3E352C]
+                `}
+              >
+                <svg class="fill-current" viewBox="0 0 24 24" width="24" height="24">
+                  <path
+                    d="M20 4a2 2 0 0 1 2 2v12a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2h16m-9 9H9v2h2v-2m8 0h-6v2h6v-2M7 9H5v2h2V9m12 0H9v2h10V9Z"
+                  >
+                  </path>
                 </svg>
                 <strong class="icons-caption">Placa del Transporte</strong>
               </td>
-              <td class="gap-x-2 rounded-r px-3 py-2 transition-colors group-hover:bg-orange-50 dark:group-hover:bg-[#3E352C]">
+              <td
+                class={`
+                  gap-x-2 rounded-r px-3 py-2 transition-colors
+                  group-hover:bg-orange-50
+                  dark:group-hover:bg-[#3E352C]
+                `}
+              >
                 <span class="rounded bg-green-100 px-2 py-1 font-bold text-green-700">
                   {licensePlate}
                 </span>
@@ -257,70 +317,82 @@ const {
         }
         <tr class="group">
           <td
-            class="flex items-center gap-x-2 rounded-l px-3 py-2 transition-colors group-hover:bg-orange-50 dark:group-hover:bg-[#3E352C]"
+            class={`
+              flex items-center gap-x-2 rounded-l px-3 py-2 transition-colors
+              group-hover:bg-orange-50
+              dark:group-hover:bg-[#3E352C]
+            `}
           >
-            <svg
-              class="fill-current"
-              viewBox="0 0 24 24"
-              width="24"
-              height="24"
-            >
+            <svg class="fill-current" viewBox="0 0 24 24" width="24" height="24">
               <path
                 d="M11 8a4 4 0 1 1-8 0 4 4 0 0 1 8 0m0 6.7V20H0v-2c0-2.2 3.1-4 7-4 1.5 0 2.9.3 4 .7M24 20H13V3h11v17m-8-8.5a2.5 2.5 0 1 1 5 0 2.5 2.5 0 0 1-5 0M22 7a2 2 0 0 1-2-2h-3a2 2 0 0 1-2 2v9a2 2 0 0 1 2 2h3c0-1.1.9-2 2-2V7Z"
-              ></path>
+              >
+              </path>
             </svg>
             <strong class="icons-caption">Precio del pasaje</strong>
           </td>
           <td
-            class="gap-x-2 rounded-r px-3 py-2 transition-colors group-hover:bg-orange-50 dark:group-hover:bg-[#3E352C]"
+            class={`
+              gap-x-2 rounded-r px-3 py-2 transition-colors
+              group-hover:bg-orange-50
+              dark:group-hover:bg-[#3E352C]
+            `}
           >
             {
-              transportPrice !== '' ? (
-                <span class="rounded bg-green-100 px-2 py-1 font-bold text-green-700">
-                  {new Intl.NumberFormat('es-NI', {
-                    currency: 'NIO',
-                    style: 'currency',
-                    maximumSignificantDigits: 2
-                  }).format(transportPrice)}{' '}
-                  por persona
-                </span>
-              ) : (
-                <span class="rounded bg-red-100 px-2 py-1 font-bold text-red-700">
-                  Información no disponible
-                </span>
-              )
+              transportPrice !== ''
+                ? (
+                    <span class="rounded bg-green-100 px-2 py-1 font-bold text-green-700">
+                      {new Intl.NumberFormat('es-NI', {
+                        currency: 'NIO',
+                        style: 'currency',
+                        maximumSignificantDigits: 2
+                      }).format(transportPrice)}{' '}
+                      por persona
+                    </span>
+                  )
+                : (
+                    <span class="rounded bg-red-100 px-2 py-1 font-bold text-red-700">
+                      Información no disponible
+                    </span>
+                  )
             }
           </td>
         </tr>
         <tr class="group">
           <td
-            class="flex items-center gap-x-2 rounded-l px-3 py-2 transition-colors group-hover:bg-orange-50 dark:group-hover:bg-[#3E352C]"
+            class={`
+              flex items-center gap-x-2 rounded-l px-3 py-2 transition-colors
+              group-hover:bg-orange-50
+              dark:group-hover:bg-[#3E352C]
+            `}
           >
-            <svg
-              class="fill-current"
-              viewBox="0 0 24 24"
-              width="24"
-              height="24"
-            >
+            <svg class="fill-current" viewBox="0 0 24 24" width="24" height="24">
               <path
                 d="M16.5 4v4.3l2.9 1.6-.8 1.3L15 9V4h1.5m-.5 9c1.4 0 2.5-.5 3.5-1.5S21 9.4 21 8s-.5-2.5-1.5-3.5S17.4 3 16 3s-2.6.5-3.5 1.5c-1 1-1.5 2.1-1.5 3.5s.5 2.6 1.5 3.5c1 1 2.1 1.5 3.5 1.5m-2.5 6c.4 0 .8-.2 1-.5.4-.3.5-.6.5-1s-.1-.8-.4-1c-.3-.4-.7-.5-1.1-.5-.4 0-.8.1-1 .4-.4.3-.5.7-.5 1.1 0 .4.1.7.4 1 .3.3.7.5 1.1.5M3 13h8.1A6.6 6.6 0 0 1 9 8H3v5m1.5 6c.4 0 .8-.2 1-.5.4-.3.5-.6.5-1s-.1-.8-.4-1c-.3-.4-.7-.5-1.1-.5-.4 0-.8.1-1 .4-.4.3-.5.7-.5 1.1 0 .4.1.7.4 1 .3.3.7.5 1.1.5M16 1c2 0 3.6.7 5 2 1.3 1.4 2 3 2 5a7 7 0 0 1-6 7v3a3 3 0 0 1-1 2.2V22c0 .3-.1.5-.3.7a1 1 0 0 1-.7.3h-1a1 1 0 0 1-.7-.3 1 1 0 0 1-.3-.7v-1H5v1c0 .3 0 .5-.3.7a1 1 0 0 1-.7.3H3a1 1 0 0 1-.7-.3A1 1 0 0 1 2 22v-1.8A3 3 0 0 1 1 18V8c0-1.6.7-2.7 2-3.2A17 17 0 0 1 9 4h1.2c1.4-2 3.4-3 5.8-3Z"
-              ></path>
+              >
+              </path>
             </svg>
             <strong class="icons-caption">Duración del viaje</strong>
           </td>
           <td
-            class="gap-x-2 rounded-r px-3 py-2 transition-colors group-hover:bg-orange-50 dark:group-hover:bg-[#3E352C]"
+            class={`
+              gap-x-2 rounded-r px-3 py-2 transition-colors
+              group-hover:bg-orange-50
+              dark:group-hover:bg-[#3E352C]
+            `}
           >
             {
-              tripDuration !== '' ? (
-                <span class="rounded bg-green-100 px-2 py-1 font-bold text-green-700">
-                  {tripDuration} (aproximadamente)
-                </span>
-              ) : (
-                <span class="rounded bg-red-100 px-2 py-1 font-bold text-red-700">
-                  Información no disponible
-                </span>
-              )
+              tripDuration !== ''
+                ? (
+                    <span class="rounded bg-green-100 px-2 py-1 font-bold text-green-700">
+                      {tripDuration} (aproximadamente)
+                    </span>
+                  )
+                : (
+                    <span class="rounded bg-red-100 px-2 py-1 font-bold text-red-700">
+                      Información no disponible
+                    </span>
+                  )
             }
           </td>
         </tr>
@@ -329,17 +401,17 @@ const {
   </div>
 
   <button
-    class="expand-captions pointer-events-none ml-3 flex items-center gap-x-2 opacity-0 transition-opacity md:hidden"
+    class={`
+      expand-captions pointer-events-none ml-3 flex items-center gap-x-2 opacity-0
+      transition-opacity
+      md:hidden
+    `}
     type="button"
   >
     <span
       class="rounded-full bg-orange-100 text-orange-500 shadow dark:bg-[#493A2F] dark:text-white"
     >
-      <svg
-        class="expand-caption-icon pointer-events-none fill-current"
-        width="23"
-        height="23"
-      >
+      <svg class="expand-caption-icon pointer-events-none fill-current" width="23" height="23">
         <path d="m8.6 16.6 4.6-4.6-4.6-4.6L10 6l6 6-6 6-1.4-1.4Z"></path>
       </svg>
     </span>
@@ -349,7 +421,14 @@ const {
   {
     stops && (
       <details class="open text-orange-500 dark:text-orange-400">
-        <summary class="cursor-pointer gap-x-2 rounded px-3 py-2 transition-colors any-hover:bg-orange-100 group-open:bg-orange-100 dark:any-hover:bg-[#493A2F] dark:group-open:bg-[#493A2F]">
+        <summary class={`
+          cursor-pointer gap-x-2 rounded px-3 py-2 transition-colors
+          any-hover:bg-orange-100
+          dark:any-hover:bg-[#493A2F]
+          group-open:bg-orange-100
+          dark:group-open:bg-[#493A2F]
+        `}
+        >
           Conoce las principales paradas
         </summary>
         <section class="rounded-b border border-orange-100 p-2 dark:border-[#493A2F]">
