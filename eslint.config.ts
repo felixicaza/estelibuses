@@ -51,6 +51,7 @@ export default defineConfig([
       '@stylistic/no-multi-spaces': ['error', { ignoreEOLComments: false }],
 
       'astro/jsx-a11y/anchor-is-valid': 'warn',
+      'astro/jsx-a11y/media-has-caption': 'off',
 
       'yml/indent': ['error', 3, { indicatorValueIndent: 2 }],
       'yml/quotes': ['error', { prefer: 'double' }],
