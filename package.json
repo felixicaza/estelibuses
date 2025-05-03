@@ -10,9 +10,12 @@
   },
   "type": "module",
   "scripts": {
+    "astro": "astro",
     "build": "astro build && pnpm compress",
     "compress": "node imagemin.js && pnpm minify-json dist/manifest.json",
     "dev": "astro dev",
+    "lint": "eslint --cache ./",
+    "lint:fix": "eslint --cache --fix ./",
     "prepare": "simple-git-hooks",
     "preview": "astro preview"
   },
@@ -21,15 +24,7 @@
     "commit-msg": "pnpm commitlint --edit ${1}"
   },
   "nano-staged": {
-    "*.{js,mjs,cjs}": [
-      "eslint --cache --fix --ext .js,.mjs,.cjs ./"
-    ],
-    "*.astro": [
-      "eslint --cache --ext .astro ./src/ --fix"
-    ],
-    "*.{jsx,tsx}": [
-      "eslint --cache --ext .jsx,.tsx ./src/ --fix"
-    ]
+    "*": "pnpm lint:fix"
   },
   "dependencies": {
     "@foobar404/wave": "2.0.4",
@@ -47,22 +42,21 @@
   "devDependencies": {
     "@commitlint/cli": "18.4.1",
     "@commitlint/config-conventional": "18.4.0",
-    "astro-eslint-parser": "0.16.0",
     "astro-sitemap": "1.0.0",
-    "eslint": "8.0.1",
-    "eslint-config-prettier": "9.0.0",
-    "eslint-config-standard": "17.1.0",
-    "eslint-import-resolver-alias": "1.1.2",
-    "eslint-plugin-astro": "0.29.1",
-    "eslint-plugin-import": "2.25.2",
-    "eslint-plugin-jsx-a11y": "6.8.0",
-    "eslint-plugin-n": "15.0.0",
-    "eslint-plugin-promise": "6.0.0",
+    "eslint": "9.26.0",
+    "eslint-plugin-astro": "1.3.1",
+    "eslint-plugin-jsonc": "2.20.0",
+    "eslint-plugin-jsx-a11y": "6.10.2",
+    "eslint-plugin-package-json": "0.31.0",
+    "eslint-plugin-yml": "1.18.0",
+    "globals": "16.0.0",
     "imagemin": "8.0.1",
     "imagemin-mozjpeg": "10.0.0",
     "imagemin-pngquant": "9.0.2",
+    "jiti": "2.4.2",
     "minify-json": "1.0.0",
     "nano-staged": "0.8.0",
+    "neostandard": "0.12.1",
     "simple-git-hooks": "2.13.0",
     "typescript": "5.2.2"
   }
