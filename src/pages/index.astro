@@ -1,8 +1,9 @@
 ---
-import { Schema } from 'astro-seo-schema'
-
 import northernStation from '@data/northern-station.json'
 import southernStation from '@data/southern-station.json'
+
+import type { Question } from 'schema-dts'
+import { Schema } from 'astro-seo-schema'
 
 import Layout from '@layouts/Layout.astro'
 
@@ -24,7 +25,7 @@ const options = {
     'Conoce Todos los Horarios de Salida de los Buses de la Terminal Norte y de la Terminal Sur de la ciudad de Estelí.'
 }
 
-const getFaqs = mergeDataStations.map((data) =>
+const getFaqs: Question[][] = mergeDataStations.map((data) =>
   data.schema_FAQs.map((faq) => ({
     '@type': 'Question',
     inLanguage: 'es',

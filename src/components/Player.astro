@@ -30,29 +30,29 @@
   const play = document.querySelector('#player #play')
   const pause = document.querySelector('#player #pause')
 
-  const audio = document.querySelector('audio')
-  const visualizer = document.querySelector('canvas')
+  const audio = document.querySelector('audio') as HTMLAudioElement
+  const visualizer = document.querySelector('canvas') as HTMLCanvasElement
 
   const wave = new Wave(audio, visualizer)
 
   navigator.mediaSession.setActionHandler('play', async () => {
     await audio.play()
-    play.classList.toggle('hidden')
-    pause.classList.toggle('hidden')
+    play?.classList.toggle('hidden')
+    pause?.classList.toggle('hidden')
   })
 
   navigator.mediaSession.setActionHandler('pause', () => {
     audio.pause()
-    play.classList.toggle('hidden')
-    pause.classList.toggle('hidden')
+    play?.classList.toggle('hidden')
+    pause?.classList.toggle('hidden')
   })
 
   navigator.mediaSession.setActionHandler('stop', function () {
     audio.pause()
 
     if (audio.paused) {
-      play.classList.remove('hidden')
-      pause.classList.add('hidden')
+      play?.classList.remove('hidden')
+      pause?.classList.add('hidden')
     }
   })
 
@@ -63,8 +63,8 @@
   audio.addEventListener('pause', () => {
     navigator.mediaSession.playbackState = 'paused'
     if (audio.paused) {
-      play.classList.remove('hidden')
-      pause.classList.add('hidden')
+      play?.classList.remove('hidden')
+      pause?.classList.add('hidden')
     }
   })
 
@@ -113,9 +113,9 @@
     })
   )
 
-  player.addEventListener('click', async () => {
-    audio.paused ? await audio.play() : audio.pause()
-    play.classList.toggle('hidden')
-    pause.classList.toggle('hidden')
+  player?.addEventListener('click', async () => {
+    audio?.paused ? await audio.play() : audio?.pause()
+    play?.classList.toggle('hidden')
+    pause?.classList.toggle('hidden')
   })
 </script>

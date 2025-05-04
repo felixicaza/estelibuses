@@ -28,51 +28,63 @@
 </button>
 
 <script>
-  const installBtn = document.getElementById('install')
-  const installBtnMobileIcon = document.querySelector('#install .mobile')
-  const installBtnDesktopIcon = document.querySelector('#install .desktop')
-  let deferredPrompt
+interface BeforeInstallPromptEvent extends Event {
+  readonly platforms: Array<string>
+  readonly userChoice: {
+    outcome: 'accepted' | 'dismissed'
+    platform: string
+  }
+  prompt(): Promise<void>
 
-  const soundPage = new Audio('/sounds/switch-tap.mp3')
+}
 
-  const isMobile = navigator.userAgent.match(/Android|iPhone|iPad|iPod/i)
+const installBtn = document.getElementById('install')
+const installBtnMobileIcon = document.querySelector('#install .mobile')
+const installBtnDesktopIcon = document.querySelector('#install .desktop')
+let deferredPrompt: BeforeInstallPromptEvent | null = null
 
-  window.addEventListener('beforeinstallprompt', (e) => {
-    /**
-     * Enable show mini bar for install PWA
-     */
-    // e.preventDefault()
+const soundPage = new Audio('/sounds/switch-tap.mp3')
 
-    deferredPrompt = e
+const isMobile = navigator.userAgent.match(/Android|iPhone|iPad|iPod/i)
 
-    if (!isMobile) {
-      installBtnMobileIcon.classList.add('hidden')
-      installBtnDesktopIcon.classList.remove('hidden')
-    }
+window.addEventListener('beforeinstallprompt', (e) => {
+  /**
+       * Enable show mini bar for install PWA
+       */
+  // e.preventDefault()
 
-    installBtn.classList.replace('opacity-0', 'opacity-100')
-    installBtn.classList.replace('pointer-events-none', 'pointer-events-auto')
-  })
+  deferredPrompt = e as BeforeInstallPromptEvent
 
-  window.addEventListener('appinstalled', () => {
-    deferredPrompt = null
-  })
+  if (!isMobile) {
+    installBtnMobileIcon?.classList.add('hidden')
+    installBtnDesktopIcon?.classList.remove('hidden')
+  }
 
-  installBtn.addEventListener('click', async () => {
-    if (localStorage.getItem('sounds_enabled') === 'true') {
-      soundPage.play()
-    }
+  installBtn?.classList.replace('opacity-0', 'opacity-100')
+  installBtn?.classList.replace('pointer-events-none', 'pointer-events-auto')
+})
 
-    if ('vibrate' in navigator && localStorage.getItem('sounds_enabled') === 'false') {
-      navigator.vibrate(80)
-    }
+window.addEventListener('appinstalled', () => {
+  deferredPrompt = null
+})
 
-    deferredPrompt.prompt()
+installBtn?.addEventListener('click', () => {
+  if (localStorage.getItem('sounds_enabled') === 'true') {
+    soundPage.play()
+  }
 
-    const { outcome } = await deferredPrompt.userChoice
+  if ('vibrate' in navigator && localStorage.getItem('sounds_enabled') === 'false') {
+    navigator.vibrate(80)
+  }
+
+  deferredPrompt?.prompt()
+
+  if (deferredPrompt?.userChoice) {
+    const { outcome } = deferredPrompt.userChoice
 
     if (outcome === 'accepted') {
       deferredPrompt = null
     }
-  })
+  }
+})
 </script>

@@ -231,43 +231,46 @@ import { Picture } from 'astro-imagetools/components'
 </footer>
 
 <script>
-  /**
+/**
    * Get current year
    */
 
-  document.getElementById('currentyear').textContent = String(new Date().getFullYear())
+const currentYearElement = document.getElementById('currentyear')
+if (currentYearElement) {
+  currentYearElement.textContent = String(new Date().getFullYear())
+}
 
-  /**
+/**
    * Sound page on click
    */
 
-  const soundPage = new Audio('/sounds/switch-tap.mp3')
+const soundPage = new Audio('/sounds/switch-tap.mp3')
 
-  /**
+/**
    * Share button
    */
 
-  const shareBtn = document.getElementById('share')
+const shareBtn = document.getElementById('share')
 
-  const shareData = {
-    title: 'Estelí Buses',
-    text: '¡Conoce todos los horarios de las terminales de buses de la ciudad de Estelí!',
-    url: 'https://estelibuses.web.app/?utm_source=sharebtn&utm_medium=webapp&utm_campaign=social_share&utm_content=footer'
-  }
+const shareData = {
+  title: 'Estelí Buses',
+  text: '¡Conoce todos los horarios de las terminales de buses de la ciudad de Estelí!',
+  url: 'https://estelibuses.web.app/?utm_source=sharebtn&utm_medium=webapp&utm_campaign=social_share&utm_content=footer'
+}
 
-  if (navigator.share) {
-    shareBtn.classList.remove('hidden')
+if (navigator.share) {
+  shareBtn?.classList.remove('hidden')
 
-    shareBtn.addEventListener('click', () => {
-      if (localStorage.getItem('sounds_enabled') === 'true') {
-        soundPage.play()
-      }
+  shareBtn?.addEventListener('click', () => {
+    if (localStorage.getItem('sounds_enabled') === 'true') {
+      soundPage.play()
+    }
 
-      if ('vibrate' in navigator && localStorage.getItem('sounds_enabled') === 'false') {
-        navigator.vibrate(80)
-      }
+    if ('vibrate' in navigator && localStorage.getItem('sounds_enabled') === 'false') {
+      navigator.vibrate(80)
+    }
 
-      navigator.share(shareData)
-    })
-  }
+    navigator.share(shareData)
+  })
+}
 </script>

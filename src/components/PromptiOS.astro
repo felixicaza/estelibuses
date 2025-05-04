@@ -63,11 +63,11 @@
 
   function showIosInstall() {
     const iosPrompt = document.querySelector('.ios-prompt')
-    iosPrompt.classList.replace('translate-y-full', '-translate-y-[6.5rem]')
-    iosPrompt.classList.replace('opacity-0', 'opacity-100')
-    iosPrompt.classList.replace('pointer-events-none', 'pointer-events-auto')
+    iosPrompt?.classList.replace('translate-y-full', '-translate-y-[6.5rem]')
+    iosPrompt?.classList.replace('opacity-0', 'opacity-100')
+    iosPrompt?.classList.replace('pointer-events-none', 'pointer-events-auto')
 
-    iosPrompt.addEventListener('click', () => {
+    iosPrompt?.addEventListener('click', () => {
       iosPrompt.classList.replace('-translate-y-[6.5rem]', 'translate-y-full')
       iosPrompt.classList.replace('opacity-100', 'opacity-0')
       iosPrompt.classList.replace('pointer-events-auto', 'pointer-events-none')

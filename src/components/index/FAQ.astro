@@ -46,7 +46,7 @@ import faqs from '@data/faqs.json'
   for (let i = 0; i < accordion.length; i++) {
     accordion[i].addEventListener('click', () => {
       if (panel[i].style.maxHeight) {
-        panel[i].style.maxHeight = null
+        panel[i].style.maxHeight = ''
       } else {
         panel[i].style.maxHeight = `${panel[i].scrollHeight}px`
       }

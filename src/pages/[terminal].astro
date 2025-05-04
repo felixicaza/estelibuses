@@ -2,6 +2,7 @@
 import northernStation from '@data/northern-station.json'
 import southernStation from '@data/southern-station.json'
 
+import type { Question } from 'schema-dts'
 import { Schema } from 'astro-seo-schema'
 
 import { Picture } from 'astro-imagetools/components'
@@ -71,7 +72,7 @@ const options = {
   theme_color: themeColor
 }
 
-const getSchemaFAQs = schemaFAQs.map((faq) => ({
+const getSchemaFAQs: Question[] = schemaFAQs.map((faq) => ({
   '@type': 'Question',
   inLanguage: 'es',
   name: faq.name,
@@ -79,7 +80,7 @@ const getSchemaFAQs = schemaFAQs.map((faq) => ({
 }))
 ---
 
-<Layout {options}>
+<Layout options={options}>
   <Schema
     item={{
       '@context': 'https://schema.org',
@@ -300,18 +301,18 @@ const getSchemaFAQs = schemaFAQs.map((faq) => ({
 </Layout>
 
 <script>
-  const $ = (sel) => document.getElementById(sel)
-  const $$ = (sel) => document.querySelectorAll(sel)
+  const $ = (sel: string) => document.getElementById(sel)
+  const $$ = (sel: string) => document.querySelectorAll(sel)
 
   const searchForm = $('search-form')
   const search = $('search') as HTMLInputElement
 
-  const cityName = $$('.city-name')
+  const cityName = $$('.city-name') as NodeListOf<HTMLElement>
   const cardCities = $$('.card-city')
 
   const noCity = $('no-city')
 
-  searchForm.addEventListener('input', (e) => {
+  searchForm?.addEventListener('input', (e) => {
     if ((e.target as HTMLInputElement).id === 'search') {
       /*
        * Sanitize user input.
@@ -342,9 +343,9 @@ const getSchemaFAQs = schemaFAQs.map((faq) => ({
       }
 
       if ($$('.card-city.hidden').length === cardCities.length) {
-        noCity.classList.remove('hidden')
+        noCity?.classList.remove('hidden')
       } else {
-        noCity.classList.add('hidden')
+        noCity?.classList.add('hidden')
       }
 
       if (search.value === '') {
@@ -353,7 +354,7 @@ const getSchemaFAQs = schemaFAQs.map((faq) => ({
     }
   })
 
-  searchForm.addEventListener('submit', (e) => e.preventDefault())
+  searchForm?.addEventListener('submit', (e) => e.preventDefault())
 
   const bottomBar = $('bottom-bar')
 
@@ -373,9 +374,9 @@ const getSchemaFAQs = schemaFAQs.map((faq) => ({
       const percent = initialSize / resizeHeight
 
       if (percent > 1.35) {
-        bottomBar.classList.remove('sticky')
+        bottomBar?.classList.remove('sticky')
       } else {
-        bottomBar.classList.add('sticky')
+        bottomBar?.classList.add('sticky')
       }
     })
   }

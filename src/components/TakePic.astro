@@ -128,8 +128,8 @@
   const recomendationPicBtn = document.querySelector('.recommendation-pic')
   const noScrollOnModal = 'overflow: hidden;'
 
-  let stream
-  let pic
+  let stream: MediaStream
+  let pic: string
 
   const soundPage = new Audio('/sounds/switch-tap.mp3')
 
@@ -168,11 +168,11 @@
         navigator.vibrate(80)
       }
 
-      bgModalShare.classList.replace('opacity-0', 'opacity-100')
+      bgModalShare?.classList.replace('opacity-0', 'opacity-100')
 
-      modalBusPic.classList.replace('pointer-events-none', 'pointer-events-auto')
-      modalBusPic.classList.replace('opacity-0', 'opacity-100')
-      modalBusPic.classList.replace('scale-0', 'scale-100')
+      modalBusPic?.classList.replace('pointer-events-none', 'pointer-events-auto')
+      modalBusPic?.classList.replace('opacity-0', 'opacity-100')
+      modalBusPic?.classList.replace('scale-0', 'scale-100')
 
       document.documentElement.setAttribute('style', noScrollOnModal)
       document.body.setAttribute('style', noScrollOnModal)
@@ -192,7 +192,7 @@
       picContainer[index].classList.replace('opacity-0', 'opacity-100')
       picContainer[index].classList.replace('scale-0', 'scale-100')
 
-      bgModalShare.classList.replace('opacity-0', 'opacity-100')
+      bgModalShare?.classList.replace('opacity-0', 'opacity-100')
 
       document.documentElement.setAttribute('style', noScrollOnModal)
       document.body.setAttribute('style', noScrollOnModal)
@@ -215,9 +215,9 @@
       canvasPic.setAttribute('height', '827')
 
       const context = canvasPic.getContext('2d')
-      context.drawImage(busImage[index], 0, 0)
+      context?.drawImage(busImage[index], 0, 0)
 
-      pic = context.canvas.toDataURL()
+      pic = context?.canvas.toDataURL() || ''
 
       firstPicContainer[index].classList.add('hidden')
 
@@ -239,7 +239,7 @@
           .replace(/\//, '')
           .replace(/\//, '-')}-${
         document
-          .querySelectorAll('.titles')[index].textContent.toLowerCase()
+          .querySelectorAll('.titles')[index]?.textContent?.toLowerCase() || ''
           .replace(' ', '')
           .replace('#', '-')}`
       const storageRef = ref(storage, nameImage)
@@ -250,7 +250,7 @@
       picContainer[index].classList.replace('opacity-100', 'opacity-0')
       picContainer[index].classList.replace('scale-100', 'scale-0')
 
-      bgModalShare.classList.replace('opacity-100', 'opacity-0')
+      bgModalShare?.classList.replace('opacity-100', 'opacity-0')
 
       document.documentElement.removeAttribute('style')
       document.body.removeAttribute('style')
@@ -280,7 +280,7 @@
       picContainer[index].classList.replace('opacity-100', 'opacity-0')
       picContainer[index].classList.replace('scale-100', 'scale-0')
 
-      bgModalShare.classList.replace('opacity-100', 'opacity-0')
+      bgModalShare?.classList.replace('opacity-100', 'opacity-0')
 
       document.documentElement.removeAttribute('style')
       document.body.removeAttribute('style')
@@ -313,7 +313,7 @@
     })
   })
 
-  recomendationPicBtn.addEventListener('click', () => {
+  recomendationPicBtn?.addEventListener('click', () => {
     if (localStorage.getItem('sounds_enabled') === 'true') {
       soundPage.play()
     }
@@ -322,8 +322,8 @@
       navigator.vibrate(80)
     }
 
-    modalBusPic.classList.replace('pointer-events-auto', 'pointer-events-none')
-    modalBusPic.classList.replace('opacity-100', 'opacity-0')
-    modalBusPic.classList.replace('scale-100', 'scale-0')
+    modalBusPic?.classList.replace('pointer-events-auto', 'pointer-events-none')
+    modalBusPic?.classList.replace('opacity-100', 'opacity-0')
+    modalBusPic?.classList.replace('scale-100', 'scale-0')
   })
 </script>

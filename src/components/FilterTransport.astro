@@ -84,8 +84,8 @@ import '@styles/filter.css'
 </style>
 
 <script>
-  const $ = (el) => document.getElementById(el)
-  const $$ = (el) => document.querySelectorAll(el)
+  const $ = (el: string) => document.getElementById(el)
+  const $$ = (el: string) => document.querySelectorAll(el)
 
   const formFilter = $('filter')
   const radioAll = $('all') as HTMLInputElement

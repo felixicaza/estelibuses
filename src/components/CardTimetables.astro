@@ -440,7 +440,7 @@ const {
               </tr>
             </thead>
             <tbody>
-              {stops.map((stop) => (
+              {stops.map((stop: { name: string, price: number }) => (
                 <tr class="odd:bg-orange-50 odd:dark:bg-[#493A2F]">
                   <td class="px-2 py-1">{stop.name}</td>
                   <td class="px-2 py-1">
@@ -499,7 +499,7 @@ const {
   const isMobile = navigator.userAgent.match(/Android|iPhone/i)
 
   if (isMobile) {
-    const $$ = (sel) => document.querySelectorAll(sel)
+    const $$ = (sel: string) => document.querySelectorAll(sel)
 
     const captions = $$('.icons-caption')
     const expandCaptions = $$('.expand-captions')

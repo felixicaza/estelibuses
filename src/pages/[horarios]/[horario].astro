@@ -2,6 +2,7 @@
 import northernStation from '@data/northern-station.json'
 import southernStation from '@data/southern-station.json'
 
+import type { Question } from 'schema-dts'
 import { Schema } from 'astro-seo-schema'
 
 import Layout from '@layouts/Layout.astro'
@@ -74,7 +75,7 @@ const options = {
   theme_color: themeColor
 }
 
-const getSchemaFAQs = schemaFAQs.map((faq) => ({
+const getSchemaFAQs: Question[] = schemaFAQs.map((faq) => ({
   '@type': 'Question',
   inLanguage: 'es',
   name: faq.name,
@@ -90,7 +91,7 @@ const shareText = `%C2%A1Conoce todos los horarios de los buses de Estel%C3%AD h
 const currentURL = `${Astro.site}${horarios}/${horario}`
 
 // Hide the CardCity if the current page it's equal
-function citiesFilter(city, station) {
+function citiesFilter(city: { slug: string }, station: { slug: string }) {
   if (station.slug === horarios) {
     return city.slug !== horario
   }
@@ -106,7 +107,7 @@ const southernStationFilter = southernStation.cities.filter((city) =>
 )
 ---
 
-<Layout {options}>
+<Layout options={options}>
   <link crossorigin href="//www.google.com/" rel="preconnect" slot="preconnect" />
   <link crossorigin href="//maps.googleapis.com/" rel="preconnect" slot="preconnect" />
   <link crossorigin href="//maps.gstatic.com/" rel="preconnect" slot="preconnect" />
@@ -312,13 +313,11 @@ const southernStationFilter = southernStation.cities.filter((city) =>
         {
           timetables.map((timetable, index) => (
             <CardTimetables
-              {index}
-              note={timetable.note}
+              index={index}
               transportPic={timetable.transport_pic}
-              transportPicLqip={timetable.transport_pic_lqip}
               departureTime={timetable.departure_time}
               waitingAreaDeparture={timetable.waiting_area_departure}
-              {cityName}
+              cityName={cityName}
               returnTime={timetable.return_time}
               waitingAreaReturn={timetable.waiting_area_return}
               transportType={timetable.transport_type}
@@ -326,7 +325,6 @@ const southernStationFilter = southernStation.cities.filter((city) =>
               licensePlate={timetable.license_plate}
               transportPrice={timetable.transport_price}
               tripDuration={timetable.trip_duration}
-              stops={timetable.stops}
             />
           ))
         }
@@ -520,7 +518,7 @@ const southernStationFilter = southernStation.cities.filter((city) =>
   }
 </style>
 
-<script define:vars={{ title, currentURL }}>
+<script is:inline define:vars={{ title, currentURL }}>
   /**
    * Sound page on click
    */

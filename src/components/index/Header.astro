@@ -227,24 +227,24 @@ const mergeDataStations = [northernStation, southernStation]
 </style>
 
 <script>
-  const $ = (el) => document.getElementById(el)
-  const $$ = (el) => document.querySelectorAll(el)
+  const $ = (el: string) => document.getElementById(el)
+  const $$ = (el: string) => document.querySelectorAll(el)
 
   const mainSearch = $('main-search')
   const citiesSearch = $('cities-search') as HTMLInputElement
 
   const containerCities = $('container-cities')
   const cities = $$('.cities')
-  const citiesName = $$('.city-name-search')
+  const citiesName = $$('.city-name-search') as NodeListOf<HTMLSpanElement>
 
   const unknownCity = $('unknown-city')
 
-  mainSearch.addEventListener('input', (e) => {
+  mainSearch?.addEventListener('input', (e) => {
     if ((e.target as HTMLInputElement).id === 'cities-search') {
-      containerCities.classList.replace('opacity-0', 'opacity-100')
-      containerCities.classList.replace('translate-y-full', 'translate-y-0')
-      containerCities.classList.replace('content-hidden', 'content-visible')
-      containerCities.classList.replace('pointer-events-none', 'pointer-events-auto')
+      containerCities?.classList.replace('opacity-0', 'opacity-100')
+      containerCities?.classList.replace('translate-y-full', 'translate-y-0')
+      containerCities?.classList.replace('content-hidden', 'content-visible')
+      containerCities?.classList.replace('pointer-events-none', 'pointer-events-auto')
 
       /*
        * Sanitize user input.
@@ -261,7 +261,7 @@ const mergeDataStations = [northernStation, southernStation]
         .replace(/\s/g, '-')
 
       for (let i = 0; i < citiesName.length; i++) {
-        const name = citiesName[i].dataset.cityname
+        const name = citiesName[i].dataset.cityname as string
 
         if (name.indexOf(sanitizeInput) > -1) {
           cities[i].classList.remove('hidden')
@@ -271,21 +271,21 @@ const mergeDataStations = [northernStation, southernStation]
       }
 
       if ($$('.cities.hidden').length === cities.length) {
-        unknownCity.classList.remove('hidden')
+        unknownCity?.classList.remove('hidden')
       } else {
-        unknownCity.classList.add('hidden')
+        unknownCity?.classList.add('hidden')
       }
 
       if (citiesSearch.value === '') {
-        containerCities.classList.replace('opacity-100', 'opacity-0')
-        containerCities.classList.replace('translate-y-0', 'translate-y-full')
-        containerCities.classList.replace('content-visible', 'content-hidden')
-        containerCities.classList.replace('pointer-events-auto', 'pointer-events-none')
+        containerCities?.classList.replace('opacity-100', 'opacity-0')
+        containerCities?.classList.replace('translate-y-0', 'translate-y-full')
+        containerCities?.classList.replace('content-visible', 'content-hidden')
+        containerCities?.classList.replace('pointer-events-auto', 'pointer-events-none')
       }
     }
   })
 
-  mainSearch.addEventListener('submit', (e) => e.preventDefault())
+  mainSearch?.addEventListener('submit', (e) => e.preventDefault())
 
   const bottomBar = $('bottom-bar')
   const isMobile = navigator.userAgent.match(/Android|iPhone|iPad|iPod/i)
@@ -304,9 +304,9 @@ const mergeDataStations = [northernStation, southernStation]
       const percent = initialSize / resizeHeight
 
       if (percent > 1.35) {
-        bottomBar.classList.remove('sticky')
+        bottomBar?.classList.remove('sticky')
       } else {
-        bottomBar.classList.add('sticky')
+        bottomBar?.classList.add('sticky')
       }
     })
   }

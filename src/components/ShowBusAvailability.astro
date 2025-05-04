@@ -14,7 +14,7 @@ const { hour, index } = Astro.props
   <span class="label"></span>
 </p>
 
-<script define:vars={{ hour, index }}>
+<script is:inline define:vars={{ hour, index }}>
   const availabilityContainers = document.querySelectorAll('.availability')
   const labels = document.querySelectorAll('.label')
 

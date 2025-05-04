@@ -265,6 +265,14 @@ const { options } = Astro.props
   import { initializeApp } from 'firebase/app'
   import { getAnalytics } from 'firebase/analytics'
 
+  declare global {
+    interface Window {
+      dataLayer: any
+    }
+  }
+
+  const isProd = import.meta.env.PROD
+
   const firebaseConfig = {
     apiKey: 'AIzaSyAqPF5z2zeJCAXKmnAV6gfapspOK4joCEs',
     authDomain: 'buses-esteli-d2d5e.firebaseapp.com',
@@ -279,11 +287,14 @@ const { options } = Astro.props
     const app = initializeApp(firebaseConfig)
     getAnalytics(app)
 
-    function gtag() {
-      dataLayer.push(arguments)
+    const dataLayer = window.dataLayer || []
+
+    function gtag(...args: any[]) {
+      dataLayer.push(...args)
     }
-    // eslint-disable-next-line @typescript-eslint/no-unused-expressions, no-sequences
-    ;(window.dataLayer = window.dataLayer || []), gtag('js', new Date())
+
+    window.dataLayer = window.dataLayer || []
+    gtag('js', new Date())
 
     /**
      * Service Worker script
@@ -295,20 +306,20 @@ const { options } = Astro.props
     window.addEventListener('load', async () => {
       const reloadBtn = document.getElementById('reload')
 
-      function showUpdateFounded(registration) {
-        reloadBtn.classList.replace('opacity-0', 'opacity-100')
+      function showUpdateFounded(registration: ServiceWorkerRegistration) {
+        reloadBtn?.classList.replace('opacity-0', 'opacity-100')
 
         setTimeout(() => {
           if (isMobile) {
-            reloadBtn.classList.replace('translate-y-20', '-translate-y-20')
+            reloadBtn?.classList.replace('translate-y-20', '-translate-y-20')
           } else {
-            reloadBtn.classList.replace('right-0', 'left-0')
-            reloadBtn.classList.replace('-translate-x-4', 'translate-x-8')
-            reloadBtn.classList.replace('translate-y-20', '-translate-y-12')
+            reloadBtn?.classList.replace('right-0', 'left-0')
+            reloadBtn?.classList.replace('-translate-x-4', 'translate-x-8')
+            reloadBtn?.classList.replace('translate-y-20', '-translate-y-12')
           }
         }, 500)
 
-        reloadBtn.addEventListener('click', () => {
+        reloadBtn?.addEventListener('click', () => {
           if (localStorage.getItem('sounds_enabled') === 'true') {
             soundPage.play()
           }
@@ -346,10 +357,10 @@ const { options } = Astro.props
     })
 
     /**
-           * Update PWA
-           */
+             * Update PWA
+             */
 
-    let refreshing
+    let refreshing: boolean
 
     navigator.serviceWorker.addEventListener('controllerchange', () => {
       if (!refreshing) {
