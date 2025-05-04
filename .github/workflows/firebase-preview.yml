@@ -8,20 +8,16 @@ jobs:
    build_preview:
       runs-on: ubuntu-latest
 
-      strategy:
-         matrix:
-            node-version: [18.x]
-
       steps:
-         - uses: actions/checkout@v3.1.0
+         - uses: actions/checkout@v4
 
-         - name: Using Node.js ${{ matrix.node-version }}
-           uses: actions/setup-node@v3.5.1
+         - name: Install node.js
+           uses: actions/setup-node@v4
            with:
-              node-version: ${{ matrix.node-version }}
+              node-version: lts/*
 
          - name: Install pnpm
-           uses: pnpm/action-setup@v2.2.4
+           uses: pnpm/action-setup@v4
            with:
               version: latest
 
@@ -29,7 +25,7 @@ jobs:
            run: pnpm install
 
          - name: Cache pnpm modules
-           uses: actions/cache@v3.0.11
+           uses: actions/cache@v4
            with:
               path: ~/.pnpm-store
               key: ${{ runner.os }}-${{ hashFiles('**/pnpm-lock.yaml') }}
@@ -50,9 +46,9 @@ jobs:
               FIREBASE_CLI_PREVIEWS: hostingchannels
 
          - name: Delete older preview runed workflows
-           uses: Mattraks/delete-workflow-runs@v2.0.3
+           uses: Mattraks/delete-workflow-runs@v2
            with:
               token: ${{ secrets.GITHUB_TOKEN }}
-              repository: "Felix-Icaza/estelibuses"
+              repository: "felixicaza/estelibuses"
               retain_days: 1
               keep_minimum_runs: 3

@@ -8,20 +8,16 @@ jobs:
    build_deploy:
       runs-on: ubuntu-latest
 
-      strategy:
-         matrix:
-            node-version: [18.x]
-
       steps:
          - uses: actions/checkout@v3.1.0
 
-         - name: Using Node.js ${{ matrix.node-version }}
-           uses: actions/setup-node@v3.5.1
+         - name: Install node.js
+           uses: actions/setup-node@v4
            with:
-              node-version: ${{ matrix.node-version }}
+              node-version: lts/*
 
          - name: Install pnpm
-           uses: pnpm/action-setup@v2.2.4
+           uses: pnpm/action-setup@v4
            with:
               version: latest
 
@@ -29,7 +25,7 @@ jobs:
            run: pnpm install
 
          - name: Cache pnpm modules
-           uses: actions/cache@v3.0.11
+           uses: actions/cache@v4
            with:
               path: ~/.pnpm-store
               key: ${{ runner.os }}-${{ hashFiles('**/pnpm-lock.yaml') }}
@@ -39,7 +35,7 @@ jobs:
            run: pnpm build
 
          - name: Create GSC html file verification
-           uses: 1arp/create-a-file-action@0.2
+           uses: 1arp/create-a-file-action@0.4
            with:
               path: "dist"
               file: "google4ed26fc938fd8294.html"
