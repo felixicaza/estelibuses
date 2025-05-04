@@ -26,7 +26,14 @@ jobs:
               version: latest
 
          - name: Install dependencies
-           run: npm i
+           run: pnpm install
+
+         - name: Cache pnpm modules
+           uses: actions/cache@v3.0.11
+           with:
+              path: ~/.pnpm-store
+              key: ${{ runner.os }}-${{ hashFiles('**/pnpm-lock.yaml') }}
+              restore-keys: ${{ runner.os }}-
 
          - name: Build project
            run: pnpm build
