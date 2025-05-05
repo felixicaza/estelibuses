@@ -27,9 +27,6 @@ export default defineConfig({
     },
     plugins: [tailwindcss()]
   },
-  build: {
-    format: 'preserve'
-  },
   integrations: [
     astroImageTools,
     playformInline(),
