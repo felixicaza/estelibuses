@@ -108,9 +108,9 @@ const southernStationFilter = southernStation.cities.filter((city) =>
 ---
 
 <Layout options={options}>
-  <link crossorigin href="//www.google.com/" rel="preconnect" slot="preconnect" />
-  <link crossorigin href="//maps.googleapis.com/" rel="preconnect" slot="preconnect" />
-  <link crossorigin href="//maps.gstatic.com/" rel="preconnect" slot="preconnect" />
+  <link crossorigin href="//www.google.com/" rel="preconnect" slot="head" />
+  <link crossorigin href="//maps.googleapis.com/" rel="preconnect" slot="head" />
+  <link crossorigin href="//maps.gstatic.com/" rel="preconnect" slot="head" />
 
   {
     getSchemaFAQs.length !== 0 && (
@@ -120,7 +120,7 @@ const southernStationFilter = southernStation.cities.filter((city) =>
           '@type': 'FAQPage',
           mainEntity: getSchemaFAQs
         }}
-        slot="schema"
+        slot="head"
       />
     )
   }
@@ -129,7 +129,7 @@ const southernStationFilter = southernStation.cities.filter((city) =>
     title={title}
     description={description}
     image={socialMediaImage}
-    slot="social-media"
+    slot="head"
   />
 
   <header class={`relative ${headerColor} safe-top`}>
@@ -497,7 +497,7 @@ const southernStationFilter = southernStation.cities.filter((city) =>
     </div>
   </article>
 
-  <ModalTakePic slot="dynamic-components" />
+  <ModalTakePic slot="components" />
 </Layout>
 
 <style>

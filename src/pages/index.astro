@@ -42,14 +42,14 @@ const getFaqs: Question[][] = mergeDataStations.map((data) =>
       '@type': 'FAQPage',
       mainEntity: [...getFaqs[0], ...getFaqs[1]]
     }}
-    slot="schema"
+    slot="head"
   />
 
   <SocialMedia
     title={options.title}
     description={options.description}
     image="/img/og/estelibuses.jpg"
-    slot="social-media"
+    slot="head"
   />
 
   <Header />

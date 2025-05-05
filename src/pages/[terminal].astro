@@ -87,14 +87,14 @@ const getSchemaFAQs: Question[] = schemaFAQs.map((faq) => ({
       '@type': 'FAQPage',
       mainEntity: getSchemaFAQs
     }}
-    slot="schema"
+    slot="head"
   />
 
   <SocialMedia
     {title}
     {description}
     image={socialMediaImage}
-    slot="social-media"
+    slot="head"
   />
 
   <header class={`relative ${headerColor} safe-top`}>

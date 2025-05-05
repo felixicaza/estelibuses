@@ -1,5 +1,6 @@
 ---
 import { Schema } from 'astro-seo-schema'
+import { Head } from 'astro-capo'
 
 import Favicons from '@components/Favicons.astro'
 import SplashScreens from '@components/SplashScreens.astro'
@@ -17,7 +18,7 @@ const { options } = Astro.props
 ---
 
 <html class="dark" dir="ltr" lang="es">
-  <head>
+  <Head>
     <meta charset="UTF-8" />
     <meta
       name="viewport"
@@ -28,8 +29,6 @@ const { options } = Astro.props
 
     <link crossorigin href="//www.googletagmanager.com/" rel="preconnect" />
     <link crossorigin href="//www.google-analytics.com/" rel="preconnect" />
-
-    <slot name="preconnect" />
 
     <script is:inline>
       function getPreference() {
@@ -43,10 +42,6 @@ const { options } = Astro.props
       if (getPreference()) document.documentElement.classList.add('dark')
       else document.documentElement.classList.remove('dark')
     </script>
-
-    <slot name="async-scripts" />
-
-    <slot name="critical-css" />
 
     <style is:inline>
       body::-webkit-scrollbar {
@@ -76,18 +71,8 @@ const { options } = Astro.props
       }
     </style>
 
-    <slot name="stylesheet" />
-
-    <slot name="preload" />
-
-    <slot name="defer-scripts" />
-
     <meta name="robots" content={options.meta_robots || 'index, follow'} />
-    {
-      options.description && (
-        <meta name="description" content={options.description} />
-      )
-    }
+    {options.description && <meta name="description" content={options.description} />}
     {options.description && <link href={Astro.url.href} rel="canonical" />}
     <meta name="author" content="Félix Icaza - https://felixicaza.com" />
     <meta name="generator" content={Astro.generator} />
@@ -107,52 +92,47 @@ const { options } = Astro.props
       )
     }
 
-    <slot name="schema" />
-
     <Favicons />
 
     <meta name="color-scheme" content="dark light" />
     <meta name="theme-color" content={options.theme_color || '#fb923c'} />
-    <meta
-      name="msapplication-TileColor"
-      content={options.theme_color || '#fb923c'}
-    />
+    <meta name="msapplication-TileColor" content={options.theme_color || '#fb923c'} />
     <link href="/manifest.json" rel="manifest" />
 
     <script is:inline>
-    const themeColor = document.querySelector('meta[name="theme-color"]')
+      const themeColor = document.querySelector('meta[name="theme-color"]')
 
-    if (getPreference()) {
-      if (window.location.pathname.includes('terminal-norte-esteli')) {
-        themeColor.setAttribute('content', '#1b664b')
-      }
+      if (getPreference()) {
+        if (window.location.pathname.includes('terminal-norte-esteli')) {
+          themeColor.setAttribute('content', '#1b664b')
+        }
 
-      if (window.location.pathname.includes('terminal-sur-esteli')) {
-        themeColor.setAttribute('content', '#8a670f')
-      }
+        if (window.location.pathname.includes('terminal-sur-esteli')) {
+          themeColor.setAttribute('content', '#8a670f')
+        }
 
-      if (
-        !window.location.pathname.includes('terminal-norte-esteli')
-        && !window.location.pathname.includes('terminal-sur-esteli')
-      ) {
-        themeColor.setAttribute('content', '#ad6830')
-      }
-    } else {
-      if (window.location.pathname.includes('terminal-norte-esteli')) {
-        themeColor.setAttribute('content', '#34d399')
-      }
+        if (
+          !window.location.pathname.includes('terminal-norte-esteli')
+          && !window.location.pathname.includes('terminal-sur-esteli')
+        ) {
+          themeColor.setAttribute('content', '#ad6830')
+        }
+      } else {
+        if (window.location.pathname.includes('terminal-norte-esteli')) {
+          themeColor.setAttribute('content', '#34d399')
+        }
 
-      if (window.location.pathname.includes('terminal-sur-esteli')) {
-        themeColor.setAttribute('content', '#fbbf24')
-      }
+        if (window.location.pathname.includes('terminal-sur-esteli')) {
+          themeColor.setAttribute('content', '#fbbf24')
+        }
 
-      if (
-        !window.location.pathname.includes('terminal-norte-esteli')
-        && !window.location.pathname.includes('terminal-sur-esteli')
-      ) {
-        themeColor.setAttribute('content', '#fb923c')
+        if (
+          !window.location.pathname.includes('terminal-norte-esteli')
+          && !window.location.pathname.includes('terminal-sur-esteli')
+        ) {
+          themeColor.setAttribute('content', '#fb923c')
+        }
       }
-    }
     </script>
 
     <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
@@ -164,10 +144,10 @@ const { options } = Astro.props
 
     <SplashScreens />
 
-    <slot name="social-media" />
+    <slot name="head" />
 
     <meta name="google-site-verification" content="IJH7DDHaPX1Us0he6rNkTPlC_9I5G5aktg3SKheBUNw" />
-  </head>
+  </Head>
   <body>
     <slot />
 
@@ -179,7 +159,7 @@ const { options } = Astro.props
 
     <ModalShare />
 
-    <slot name="dynamic-components" />
+    <slot name="components" />
 
     <UpdatePWAButton />
 
