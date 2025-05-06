@@ -99,6 +99,20 @@ const { options } = Astro.props
     <meta name="msapplication-TileColor" content={options.theme_color || '#fb923c'} />
     <link href="/manifest.json" rel="manifest" />
 
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+    <meta name="apple-touch-fullscreen" content="yes" />
+    <meta name="apple-mobile-web-app-title" content="Estelí Buses" />
+    <meta name="application-name" content="Estelí Buses" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="mobile-web-app-capable" content="yes" />
+
+    <SplashScreens />
+
+    <slot name="head" />
+
+    <meta name="google-site-verification" content="IJH7DDHaPX1Us0he6rNkTPlC_9I5G5aktg3SKheBUNw" />
+  </Head>
+  <body>
     <script is:inline>
       const themeColor = document.querySelector('meta[name="theme-color"]')
 
@@ -135,20 +149,6 @@ const { options } = Astro.props
       }
     </script>
 
-    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
-    <meta name="apple-touch-fullscreen" content="yes" />
-    <meta name="apple-mobile-web-app-title" content="Estelí Buses" />
-    <meta name="application-name" content="Estelí Buses" />
-    <meta name="apple-mobile-web-app-capable" content="yes" />
-    <meta name="mobile-web-app-capable" content="yes" />
-
-    <SplashScreens />
-
-    <slot name="head" />
-
-    <meta name="google-site-verification" content="IJH7DDHaPX1Us0he6rNkTPlC_9I5G5aktg3SKheBUNw" />
-  </Head>
-  <body>
     <slot />
 
     <Footer />
