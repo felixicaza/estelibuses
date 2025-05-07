@@ -4,7 +4,6 @@ import tailwindcss from '@tailwindcss/vite'
 
 import { astroImageTools } from 'astro-imagetools'
 import playformCompress from '@playform/compress'
-import playformInline from '@playform/inline'
 import sitemap from 'astro-sitemap'
 import compressor from 'astro-compressor'
 
@@ -29,7 +28,6 @@ export default defineConfig({
   },
   integrations: [
     astroImageTools,
-    playformInline(),
     sitemap({
       canonicalURL: website,
       filter(page) {
