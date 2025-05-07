@@ -10,7 +10,13 @@ const APP_SHELL = [
   '/?utm_source=web_app',
   '/index.html?utm_source=web_app',
 
-  '/offline.html',
+  '/offline/index.html',
+
+  '/acerca-de-estelibuses',
+  '/acerca-de-estelibuses/index.html',
+
+  '/contacto',
+  '/contacto/index.html',
 
   '/terminal-norte-esteli',
   '/terminal-norte-esteli/index.html',
