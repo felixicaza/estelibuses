@@ -75,6 +75,9 @@ const APP_SHELL = [
   '/terminal-norte-esteli/horarios-esteli-san-rafael-del-norte',
   '/terminal-norte-esteli/horarios-esteli-san-rafael-del-norte/index.html',
 
+  '/terminal-norte-esteli/horarios-esteli-santa-cruz-la-ceiba',
+  '/terminal-norte-esteli/horarios-esteli-santa-cruz-la-ceiba/index.html',
+
   '/terminal-norte-esteli/horarios-esteli-somoto',
   '/terminal-norte-esteli/horarios-esteli-somoto/index.html',
 
