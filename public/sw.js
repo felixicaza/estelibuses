@@ -16,25 +16,46 @@ const CACHE_CORE = 'core-v3.00'
 self.addEventListener('install', (e) => {
   self.skipWaiting()
 
-  const setCacheCore = caches
-    .open(CACHE_CORE)
-    .then((coreCache) => coreCache.addAll(APP_SHELL))
+  const setCacheCore = async () => {
+    const coreCache = await caches.open(CACHE_CORE)
+    await coreCache.addAll(APP_SHELL)
+  }
 
-  e.waitUntil(Promise.all([setCacheCore]))
+  e.waitUntil(setCacheCore())
 })
 
 self.addEventListener('activate', (e) => {
-  // eslint-disable-next-line promise/always-return
-  const clearOldVersionCache = caches.keys().then((keys) => {
-    keys.forEach((key) => {
-      if (key !== CACHE_CORE) {
-        return caches.delete(key)
-      }
-    })
-  })
+  const clearOldVersionCache = async () => {
+    const keys = await caches.keys()
 
-  e.waitUntil(clearOldVersionCache)
+    for (const key of keys) {
+      if (key !== CACHE_CORE) {
+        await caches.delete(key)
+      }
+    }
+  }
+
+  e.waitUntil(clearOldVersionCache())
 })
+
+async function handleFetchRequest(req) {
+  const cache = await caches.open(CACHE_CORE)
+  const cachedResponse = await cache.match(req)
+
+  if (cachedResponse) {
+    return cachedResponse
+  }
+
+  const response = await fetch(req)
+
+  if (!response || response.status !== 200 || response.type !== 'basic') {
+    return response
+  }
+
+  await cache.put(req, response.clone())
+
+  return response
+}
 
 self.addEventListener('fetch', (e) => {
   const req = e.request
@@ -45,26 +66,7 @@ self.addEventListener('fetch', (e) => {
   const filesToCache = /\.(html|css|js|svg|jpeg|jpg|png|webp|avif|json|mp3)$/i.test(url.pathname)
 
   if (filesToCache) {
-    e.respondWith(
-      caches.open(CACHE_CORE).then((cache) => {
-        return cache.match(req).then((cachedResponse) => {
-          if (cachedResponse) {
-            return cachedResponse
-          }
-
-          // eslint-disable-next-line promise/no-nesting
-          return fetch(req).then((response) => {
-            if (!response || response.status !== 200 || response.type !== 'basic') {
-              return response
-            }
-
-            cache.put(req, response.clone())
-
-            return response
-          })
-        })
-      })
-    )
+    e.respondWith(handleFetchRequest(req))
   } else {
     e.respondWith(caches.match(e.request))
   }
