@@ -1,5 +1,5 @@
 ---
-import { Picture } from 'astro-imagetools/components'
+import { Picture } from 'astro-lqip/components'
 
 const { cityName, slug, image } = Astro.props
 ---
@@ -18,13 +18,12 @@ const { cityName, slug, image } = Astro.props
       <Picture
         src={image}
         alt={`Horarios de la ciudad de ${cityName}`}
-        attributes={{
-          img: {
-            fetchpriority: Astro.url.pathname !== '/' ? 'high' : 'low'
-          }
-        }}
-        aspect={1.777777778}
+        width={448}
+        height={269}
         loading={Astro.url.pathname !== '/' ? 'eager' : 'lazy'}
+        fetchpriority={Astro.url.pathname !== '/' ? 'high' : 'low'}
+        formats={['avif', 'webp']}
+        fallbackFormat="webp"
       />
     </a>
     <!-- <div

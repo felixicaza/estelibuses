@@ -2,7 +2,6 @@ import { defineConfig } from 'astro/config'
 
 import tailwindcss from '@tailwindcss/vite'
 
-import { astroImageTools } from 'astro-imagetools'
 import playformCompress from '@playform/compress'
 import sitemap from 'astro-sitemap'
 import compressor from 'astro-compressor'
@@ -27,7 +26,6 @@ export default defineConfig({
     plugins: [tailwindcss()]
   },
   integrations: [
-    astroImageTools,
     sitemap({
       canonicalURL: website,
       filter(page) {

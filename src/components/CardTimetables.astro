@@ -1,6 +1,6 @@
 ---
 
-import { Picture } from 'astro-imagetools/components'
+import { Picture } from 'astro-lqip/components'
 
 import TakePic from '@components/TakePic.astro'
 
@@ -44,16 +44,13 @@ const {
       ? (
           <section class="my-2">
             <Picture
+              class="rounded"
               src={transportPic}
               alt={`Transporte ${transportName}`}
-              attributes={{
-                img: {
-                  fetchpriority: 'low',
-                  class: 'rounded'
-                }
-              }}
-              loading="lazy"
-              aspect={1.452513966}
+              width={688}
+              height={474}
+              formats={['avif', 'webp']}
+              fallbackFormat="webp"
             />
           </section>
         )
