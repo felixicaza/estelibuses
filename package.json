@@ -33,6 +33,7 @@
     "@playform/compress": "0.1.9",
     "@playform/inline": "0.1.2",
     "@tailwindcss/vite": "4.1.4",
+    "@vite-pwa/astro": "1.2.0",
     "astro": "5.7.8",
     "astro-capo": "0.0.1",
     "astro-compressor": "1.0.0",
