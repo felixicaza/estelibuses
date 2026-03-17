@@ -1,7 +1,7 @@
 ---
 import Layout from '@layouts/Layout.astro'
 
-import { Picture } from 'astro-imagetools/components'
+import { Picture } from 'astro-lqip/components'
 
 import Navbar from '@components/Navbar.astro'
 
@@ -108,13 +108,10 @@ const options = {
         <Picture
           src="/src/img/404.png"
           alt="Imágen 404"
-          attributes={{
-            img: {
-              fetchpriority: 'high'
-            }
-          }}
-          loading="eager"
           width={672}
+          height={588}
+          formats={['avif', 'webp']}
+          fallbackFormat="webp"
         />
       </section>
     </div>

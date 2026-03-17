@@ -1,5 +1,5 @@
 ---
-import { Picture } from 'astro-imagetools/components'
+import { Picture } from 'astro-lqip/components'
 ---
 
 <section class="py-12 sm:py-16 md:py-20 xl:py-28">
@@ -9,12 +9,10 @@ import { Picture } from 'astro-imagetools/components'
         <Picture
           src="/src/img/estelibuses-offline.png"
           alt="Soporte Offline de Estelí Buses"
-          attributes={{
-            img: {
-              fetchpriority: 'low'
-            }
-          }}
-          loading="lazy"
+          width={724}
+          height={555}
+          formats={['avif', 'webp']}
+          fallbackFormat="webp"
         />
       </section>
       <section class="space-y-7 lg:sticky lg:top-8">

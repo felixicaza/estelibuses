@@ -1,5 +1,5 @@
 ---
-import { Picture } from 'astro-imagetools/components'
+import { Picture } from 'astro-lqip/components'
 ---
 
 <footer class="bg-[#1c1611] text-center text-white">
@@ -10,14 +10,10 @@ import { Picture } from 'astro-imagetools/components'
           <Picture
             src="/src/img/estelibuses-logo.png"
             alt="Estelí Buses: Horarios de las Terminales de Buses de Estelí"
-            attributes={{
-              img: {
-                fetchpriority: 'low'
-              }
-            }}
-            loading="lazy"
             width={160}
             height={70}
+            formats={['avif', 'webp']}
+            fallbackFormat="webp"
           />
         </a>
         <div class="flex flex-col items-center gap-y-2">
@@ -87,13 +83,10 @@ import { Picture } from 'astro-imagetools/components'
           <Picture
             src="/src/img/github-badge.png"
             alt="Visita el proyecto de Estelí Buses en GitHub"
-            attributes={{
-              img: {
-                fetchpriority: 'low'
-              }
-            }}
-            loading="lazy"
             width={185}
+            height={55}
+            formats={['avif', 'webp']}
+            fallbackFormat="webp"
           />
         </a>
       </section>

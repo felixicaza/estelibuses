@@ -5,7 +5,7 @@ import southernStation from '@data/southern-station.json'
 import type { Question } from 'schema-dts'
 import { Schema } from 'astro-seo-schema'
 
-import { Picture } from 'astro-imagetools/components'
+import { Picture } from 'astro-lqip/components'
 
 import Layout from '@layouts/Layout.astro'
 
@@ -52,7 +52,6 @@ const {
   locationMap,
   phone,
   stationImage,
-  stationImageMobile,
   socialMediaImage,
   themeColor,
   headerColor,
@@ -253,28 +252,13 @@ const getSchemaFAQs: Question[] = schemaFAQs.map((faq) => ({
         <p class="mx-auto mt-5 mb-4 md:max-w-5xl lg:max-w-6xl" set:html={locationDescription} />
         <figure>
           <Picture
+            class="rounded"
             src={stationImage}
-            artDirectives={[
-              {
-                media:
-                  station === 'Terminal Norte'
-                    ? '(max-aspect-ratio: 544/726)'
-                    : '(max-aspect-ratio: 736/982)',
-                src: stationImageMobile,
-                breakpoints: station === 'Terminal Norte' ? [600] : [912],
-                width: station === 'Terminal Norte' ? 544 : 736,
-                height: station === 'Terminal Norte' ? 726 : 982
-              }
-            ]}
             alt={`${station} de la ciudad de Estelí`}
-            decoding="async"
-            attributes={{
-              img: {
-                fetchpriority: 'low'
-              }
-            }}
-            aspect={1.777777778}
-            loading="lazy"
+            width={1098}
+            height={617}
+            formats={['avif', 'webp']}
+            fallbackFormat="webp"
           />
           <figcaption class="mt-3 text-sm text-gray-400 dark:text-gray-200">
             {station} de la ciudad de Estelí.

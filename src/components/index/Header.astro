@@ -2,7 +2,7 @@
 import northernStation from '@data/northern-station.json'
 import southernStation from '@data/southern-station.json'
 
-import { Picture } from 'astro-imagetools/components'
+import { Picture } from 'astro-lqip/components'
 
 import '@styles/wave.css'
 
@@ -161,17 +161,11 @@ const mergeDataStations = [northernStation, southernStation]
           <Picture
             src="/src/img/estelibuses-horarios-de-esteli.png"
             alt="Estelí Buses: Horarios de las Terminales de Buses de Estelí"
-            attributes={{
-              img: {
-                fetchpriority: 'high'
-              },
-              link: {
-                fetchpriority: 'high'
-              }
-            }}
-            preload="avif"
-            loading="eager"
             width={752}
+            height={586}
+            formats={['avif', 'webp']}
+            fallbackFormat="webp"
+            fetchpriority="high"
           />
         </section>
       </section>

@@ -1,5 +1,5 @@
 ---
-import { Picture } from 'astro-imagetools/components'
+import { Picture } from 'astro-lqip/components'
 ---
 
 <nav class="flex items-center justify-between py-2">
@@ -10,19 +10,12 @@ import { Picture } from 'astro-imagetools/components'
     <Picture
       src="/src/img/estelibuses-logo.png"
       alt="Estelí Buses: Horarios de las Terminales de Buses de Estelí"
-      decoding="async"
-      attributes={{
-        img: {
-          fetchpriority: 'high'
-        },
-        link: {
-          fetchpriority: 'high'
-        }
-      }}
-      preload="avif"
-      loading="eager"
       width={160}
       height={70}
+      formats={['avif', 'webp']}
+      fallbackFormat="webp"
+      loading="eager"
+      fetchpriority="high"
     />
   </a>
   <section class="hidden xl:block">
